@@ -62,7 +62,7 @@ const id = import.meta.env.PUBLIC_GA_ID as string | undefined;
       if (link?.href.startsWith('https://github.com/akitaonrails')) {
         gtag('event', 'github_click', { link_url: link.href, link_text: link.textContent?.trim().slice(0, 60) });
       } else if (el.closest('[data-copy]')) {
-        gtag('event', 'copy_command', { page_path: location.pathname, block: el.closest('[data-code]')?.querySelector('.term-bar span:not(.bars)')?.textContent });
+        gtag('event', 'copy_command', { page_path: location.pathname, block: el.closest('[data-code]')?.querySelector('.term-bar span:not(.dot)')?.textContent });
       }
     });
   }

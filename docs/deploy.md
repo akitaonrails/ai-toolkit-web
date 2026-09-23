@@ -24,7 +24,13 @@ The site launched as Akita's AI Toolkit at `aitoolkit.akitaonrails.com`. `netlif
 
 ## Analytics (optional)
 
-Set `PUBLIC_GA_ID` in Netlify's environment variables to turn on Google Analytics 4 with Consent Mode (the same component as the sister sites). Without it, no analytics script is loaded.
+Google Analytics 4 with Consent Mode v2 (`src/components/Analytics.astro`, the same component as the sister sites). Nothing loads unless the build sees `PUBLIC_GA_ID`:
+
+1. In Google Analytics, create a Web data stream for `https://ailair.akitaonrails.com` and copy its Measurement ID (`G-...`).
+2. Netlify, the project, Project configuration, Environment variables, Add a variable: key `PUBLIC_GA_ID`, value the Measurement ID, scope Builds. The ID is public (it ends up in the page), so it does not need to be secret.
+3. Deploys, Trigger deploy.
+
+Visitors see a consent notice in their language. Until they accept, GA gets cookieless pings only; Global Privacy Control and Do Not Track count as a refusal. Besides page views and GA's enhanced measurement (scrolls, outbound clicks), the site sends two events: `github_click` for links to the owner's GitHub and `copy_command` when someone copies a code block. The Content Security Policy in `netlify.toml` already allows Google's hosts.
 
 ## Before pushing
 
