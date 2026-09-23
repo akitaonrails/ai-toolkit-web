@@ -7,6 +7,7 @@ import FeatureGrid from '@/components/FeatureGrid.astro';
 import CodeBlock from '@/components/CodeBlock.astro';
 import Stats from '@/components/Stats.astro';
 import Callout from '@/components/Callout.astro';
+import PullQuote from '@/components/PullQuote.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { repoUrl } from '@/data/site';
@@ -62,6 +63,7 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
       { n: totals.issues, label: t('numbers.issues') },
       { n: throughput.trackedRepos, label: t('numbers.repos') },
     ]} />
+    <div class="mt-16"><PullQuote {...raw<{ text: string }>('numbers.quote')} /></div>
   </Section>
 
   <Section title={t('links.title')} lede={t('links.lede')} hue="violet">

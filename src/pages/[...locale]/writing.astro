@@ -5,13 +5,14 @@ import Section from '@/components/Section.astro';
 import Benchmark from '@/components/Benchmark.astro';
 import ArticleList from '@/components/ArticleList.astro';
 import Callout from '@/components/Callout.astro';
+import PullQuote from '@/components/PullQuote.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { site } from '@/data/site';
 import { pick, type ArticleId } from '@/data/articles';
 import { localePaths, useI18n } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t } = useI18n(Astro, 'writing');
+const { t, raw } = useI18n(Astro, 'writing');
 // Which posts go under which heading. Adding a post: data in src/data/articles.ts, words in articles.json.
 const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: ArticleId[] }[] = [
   { id: 'benchmarks', hue: 'rose', posts: ['benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
@@ -30,6 +31,7 @@ const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: Ar
 
   {groups.map((g, i) => (
     <Section title={t(`sections.${g.id}.title`)} lede={t(`sections.${g.id}.lede`)} hue={g.hue} tint={i % 2 === 1} id={g.id}>
+      {g.id === 'opinions' && <div class="mb-12"><PullQuote {...raw<{ text: string }>('sections.opinions.quote')} /></div>}
       <ArticleList items={pick(...g.posts)} />
     </Section>
   ))}

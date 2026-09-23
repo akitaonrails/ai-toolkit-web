@@ -39,7 +39,10 @@
     "lede": "Skills do the heavy lifting. I read their reports, decide, and supervise.",
     "alt": "A clockwise loop: See what is pending, Audit, Resolve, Release, around a central ai-memory wiki connected to every step.",
     "caption": "ghpending shows the queue, the audit skills check every pull request and issue, github-resolution turns the approved ones into merged code, and the release skill cuts a version when I ask for one.",
-    "link": "How the pipeline works"
+    "link": "How the pipeline works",
+    "quote": {
+      "text": "Ship first, fix later. AI made fixing faster and cheaper."
+    }
   },
   "switch": {
     "title": "Out of quota? Change agents, keep the context",
@@ -111,39 +114,24 @@
     "title": "Learning in the open",
     "lede": "Everything I try with AI ends up on my blog, with the numbers, the bills and the failures. That is also how I decide which model to use for what.",
     "more": "More writing",
-    "postsTitle": "A few posts that show how I work"
+    "postsTitle": "A few posts that show how I work",
+    "quote": {
+      "text": "Your excitement about AI is inversely proportional to your knowledge of AI.",
+      "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
+    }
   },
   "newsletter": {
     "title": "And every Monday, a newsletter",
     "text": "The M.Akita Chronicles is a weekly tech newsletter and podcast in Portuguese, curated by me and commented on by M.Arvin, a very depressed robot. The whole pipeline is AI-assisted.",
     "link": "How it is made"
   },
-  "quotes": {
-    "title": "Things I keep saying",
-    "lede": "If you have heard me on a podcast or read me on X, you have probably heard these.",
-    "items": [
-      {
-        "text": "Your excitement about AI is inversely proportional to your knowledge of AI.",
-        "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
-      },
-      {
-        "text": "AI is a mirror. If you are good, it makes you ten times faster. If you are bad, it also makes you ten times faster, at producing slop."
-      },
-      {
-        "text": "Ship first, fix later. AI made fixing faster and cheaper."
-      },
-      {
-        "text": "I prefer to apologize than to ask for permission."
-      },
-      {
-        "text": "I only believe in voluntary trade for mutual benefit.",
-        "cite": "After Ayn Rand"
-      }
-    ]
-  },
   "independence": {
     "title": "Nobody pays me to say any of this",
-    "text": "I am not a paid content creator. I take no sponsorships, have no Patreon and no paid subscriptions, and I do not make money from views. I am self-sustained, and I do all of this for my own pleasure. When I recommend a tool or a model, it is because I use it."
+    "text": "I am not a paid content creator. I take no sponsorships, have no Patreon and no paid subscriptions, and I do not make money from views. I am self-sustained, and I do all of this for my own pleasure. When I recommend a tool or a model, it is because I use it.",
+    "quote": {
+      "text": "I only believe in voluntary trade for mutual benefit.",
+      "cite": "After Ayn Rand"
+    }
   },
   "podcasts": {
     "title": "Five long conversations, on video",

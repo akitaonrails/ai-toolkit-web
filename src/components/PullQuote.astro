@@ -1,0 +1,20 @@
+---
+// One of the phrases I am known for, placed next to the subject it is about. `original` shows the Portuguese
+// wording under the English one. Takes the surrounding data-hue for its bar.
+interface Props { text: string; original?: string; cite?: string; large?: boolean }
+const { text, original, cite, large } = Astro.props;
+---
+<figure class:list={['pq', large && 'pq-large']} data-reveal>
+  <blockquote><p class="pq-text">{text}</p></blockquote>
+  {original && <p class="pq-orig" lang="pt-BR">{original}</p>}
+  {cite && <figcaption class="pq-cite">{cite}</figcaption>}
+</figure>
+<style>
+  .pq { position: relative; padding-inline-start: 1.5rem; max-width: 44rem; }
+  .pq::before { content: ''; position: absolute; inset-inline-start: 0; inset-block: 0.3rem; inline-size: 4px; border-radius: 99px; background: var(--hue-vivid, var(--v-green)); box-shadow: 0 0 16px var(--hue-vivid, var(--v-green)); }
+  .pq-text { font-family: var(--font-display); font-weight: 750; font-stretch: 108%; font-size: var(--text-xl); line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
+  .pq-large { max-width: 56rem; }
+  .pq-large .pq-text { font-size: var(--text-2xl); line-height: 1.15; }
+  .pq-orig { margin-block-start: 0.7rem; color: var(--muted); font-style: italic; }
+  .pq-cite { margin-block-start: 0.6rem; color: var(--muted); font-family: var(--font-mono); font-size: var(--text-sm); }
+</style>

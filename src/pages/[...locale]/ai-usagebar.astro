@@ -24,7 +24,10 @@ export const getStaticPaths = localePaths;
 
 const { t, raw, href } = useI18n(Astro, 'usagebar');
 type Text = { title: string; text: string };
-const surfaces = withText([{ src: tui }, { src: mac, tall: true }, { src: win }, { src: kde }], raw<(Text & { alt: string })[]>('surfaces.items'));
+const [tuiSurface, ...trays] = withText([{ src: tui }, { src: mac }, { src: win }, { src: kde }], raw<(Text & { alt: string })[]>('surfaces.items'));
+// The tray captures are cropped at card boundaries (docs/sources.md, section 7). Column widths follow each image's
+// aspect ratio, so the three frames come out exactly the same height.
+const trayCols = trays.map((s) => `${(s.src.width / s.src.height).toFixed(3)}fr`).join(' ');
 const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'blue' as const }));
 const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'amber', href: '/ghpending/' }, { hue: 'red', href: '/clock-tui/' }] as const, raw<Text[]>('next'));
 const info = await repo('usagebar');
@@ -46,10 +49,13 @@ const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.descripti
   </Section>
 
   <Section title={t('surfaces.title')} lede={t('surfaces.lede')} hue="blue" tint>
-    <div class="grid gap-x-10 gap-y-14 md:grid-cols-2">
-      {surfaces.map((s) => (
+    <Shot src={tuiSurface.src} alt={tuiSurface.alt} />
+    <h3 class="text-xl mt-6">{tuiSurface.title}</h3>
+    <p class="mt-2 text-muted max-w-[40em]" set:html={tuiSurface.text} />
+    <div class="trays mt-16" style={`--tray-cols:${trayCols}`}>
+      {trays.map((s) => (
         <div>
-          <Shot src={s.src} alt={s.alt} tall={s.tall} sizes="(min-width: 768px) 36rem, 94vw" />
+          <Shot src={s.src} alt={s.alt} sizes="(min-width: 768px) 26rem, 94vw" />
           <h3 class="text-xl mt-6">{s.title}</h3>
           <p class="mt-2 text-muted" set:html={s.text} />
         </div>
@@ -83,3 +89,8 @@ const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.descripti
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />
 </Base>
+
+<style>
+  .trays { display: grid; gap: 2.5rem 1.5rem; }
+  @media (min-width: 48rem) { .trays { grid-template-columns: var(--tray-cols); } }
+</style>

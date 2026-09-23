@@ -26,10 +26,25 @@
     "chartCaption": "Cost against score for the Tier A models with a real dollar cost, from Part 2. Up and to the left is better; smaller bubbles finished faster."
   },
   "sections": {
-    "benchmarks": { "title": "Benchmarks", "lede": "The data behind my model choices, and how the method changed when the old tests saturated." },
-    "agents": { "title": "How I work with agents", "lede": "The process, the skills and the safety nets that let one person maintain this many projects." },
-    "experiments": { "title": "Experiments and tools", "lede": "Things I built or tried, including the ones that did not work." },
-    "opinions": { "title": "Opinions", "lede": "Where I push back on the hype. Expect strong words." }
+    "benchmarks": {
+      "title": "Benchmarks",
+      "lede": "The data behind my model choices, and how the method changed when the old tests saturated."
+    },
+    "agents": {
+      "title": "How I work with agents",
+      "lede": "The process, the skills and the safety nets that let one person maintain this many projects."
+    },
+    "experiments": {
+      "title": "Experiments and tools",
+      "lede": "Things I built or tried, including the ones that did not work."
+    },
+    "opinions": {
+      "title": "Opinions",
+      "lede": "Where I push back on the hype. Expect strong words.",
+      "quote": {
+        "text": "I prefer to apologize than to ask for permission."
+      }
+    }
   },
   "more": {
     "title": "There is a lot more",

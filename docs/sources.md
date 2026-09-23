@@ -76,7 +76,7 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 
 | Source | Lands in |
 |---|---|
-| Owner's instructions (2026-09-23): social networks and what each is for; the phrases he is known for; "not a paid content creator, no sponsorship, no Patreon, no subscriptions, no monetized views, self-sustained, does it for leisure" | `common.json` `social`, `home.json` `quotes` and `independence`, `common.json` `footer.about` |
+| Owner's instructions (2026-09-23): social networks and what each is for; the phrases he is known for; "not a paid content creator, no sponsorship, no Patreon, no subscriptions, no monetized views, self-sustained, does it for leisure" | `common.json` `social` and `footer.about`; `home.json` `independence`. The phrases are spread, one per place: "excitement is inversely proportional" in `home.json` `writing.quote`, "ship first, fix later" in `home.json` `loop.quote`, "voluntary trade" in `home.json` `independence.quote`, "AI is a mirror" in `workflow.json` `numbers.quote`, "apologize rather than ask permission" in `writing.json` `sections.opinions.quote` |
 | Sister sites' designs: `~/Projects/ai-jail-web`, `~/Projects/ai-memory-web` | The component set, the scripts and the rules in `docs/design-system.md` |
 
 ## 7. Images
@@ -85,7 +85,7 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 |---|---|
 | `src/assets/img/gen/*.webp` | Generated with Gemini from `scripts/prompts/`. See `docs/images.md` |
 | `src/assets/img/og.png` | Generated from `scripts/prompts/og.txt`, cropped to 1200x630 |
-| `src/assets/img/shots/omarchy-quattro-panel*.png`, `tui-openai.png`, `macos-tray-dashboard.png`, `windows-tray-dashboard.png`, `kde-plasmoid.png` | `~/Projects/ai-usagebar/screenshots/` (the `-crop` version is a crop of the Quattro panel) |
+| `src/assets/img/shots/omarchy-quattro-panel*.png`, `tui-openai.png`, `macos-tray-dashboard.png`, `windows-tray-dashboard.png`, `kde-plasmoid.png` | `~/Projects/ai-usagebar/screenshots/`, cropped: the Quattro panel to the open panel (`-crop`), the TUI to its top 1250 px, and the trays at card boundaries (macOS 640x550, Windows 488x556 from x=13, KDE 515x408) so they line up in one row |
 | `ghpending-digest.png` | `~/Projects/github-pending/docs/screenshot.png` |
 | `tclock-nerv.png`, `tclock-evangelion.png`, `public/media/tclock-*.mp4` | `~/Projects/clock-tui/assets/` (GIFs converted with ffmpeg, see `docs/images.md`) |
 | `games-menu.jpg` | `~/Projects/omarchy-games-menu/screenshot.jpg` |
@@ -97,7 +97,7 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 
 | Page | Built from |
 |---|---|
-| `/` | Blog post on skills (desk, loop), ai-memory README (switch), the three tool repos (tool blocks), sister sites, benchmark posts, blog highlights, owner's words (quotes, independence, social) |
+| `/` | Blog post on skills (desk, loop), ai-memory README (switch), the three tool repos (tool blocks), sister sites, benchmark posts, blog highlights, owner's words (phrases next to the loop, the writing and the independence note; social) |
 | `/workflow/` | my-skills repo, skills blog post, ai-memory README |
 | `/ai-usagebar/` | ai-usagebar repo |
 | `/ghpending/` | ghpending repo |

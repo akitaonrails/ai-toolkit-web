@@ -57,7 +57,7 @@ Hubot Sans for headlines (800, width 112%; the home h1 goes to 118%), Mona Sans 
 | `Stats` | Numbers that count up. Props: `items[{n,label,prefix,suffix}]`. Numbers come from `src/data`. |
 | `Benchmark` | The LLM Benchmark v4 feature (home and writing). |
 | `ArticleList` | Blog posts as cells. Props: `items` from `pick()` in `src/data/articles.ts`. |
-| `Quotes` | The phrases band on the home page. |
+| `PullQuote` | One of the owner's known phrases, placed next to the subject it is about. Props: `text`, `original` (Portuguese wording), `cite`, `large`. Use each phrase once, never as a gallery. |
 | `Social` | Where to follow, one cell per network. |
 | `CodeBlock` | A terminal with a copy button. Lines starting with `#` dim. |
 | `Tabs` | Panels are slots named `"0"`, `"1"`... Write the slots out; Astro cannot name slots inside a `.map()`. |

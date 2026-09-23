@@ -8,7 +8,7 @@ import ToolBlock from '@/components/ToolBlock.astro';
 import Benchmark from '@/components/Benchmark.astro';
 import ArticleList from '@/components/ArticleList.astro';
 import Social from '@/components/Social.astro';
-import Quotes from '@/components/Quotes.astro';
+import PullQuote from '@/components/PullQuote.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import CodeBlock from '@/components/CodeBlock.astro';
 import desk from '@/assets/img/shots/desk-second-monitor.png';
@@ -22,6 +22,7 @@ export const getStaticPaths = localePaths;
 
 const { t, raw, href } = useI18n(Astro, 'home');
 type Text = { title: string; text: string };
+type Quote = { text: string; original?: string; cite?: string };
 type Tool = { tagline: string; text: string; points: string[]; shotAlt: string };
 
 const steps = withText([{ hue: 'red' }, { hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }] as const, raw<Text[]>('desk.steps'));
@@ -74,7 +75,10 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 
   <Section title={t('loop.title')} lede={t('loop.lede')} hue="violet" tint>
     <Figure name="home-loop" alt={t('loop.alt')} caption={t('loop.caption')} />
-    <a href={href('/workflow/')} class="btn btn-ghost">{t('loop.link')}</a>
+    <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+      <div data-hue="rose"><PullQuote {...raw<Quote>('loop.quote')} /></div>
+      <a href={href('/workflow/')} class="btn btn-ghost justify-self-start">{t('loop.link')}</a>
+    </div>
   </Section>
 
   <Section title={t('switch.title')} lede={t('switch.lede')} hue="teal">
@@ -99,13 +103,12 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   </Section>
 
   <Section title={t('writing.title')} lede={t('writing.lede')} hue="rose" id="writing" tint>
+    <div class="mb-20"><PullQuote {...raw<Quote>('writing.quote')} large /></div>
     <Benchmark />
     <h3 class="text-2xl mt-24 mb-8">{t('writing.postsTitle')}</h3>
     <ArticleList items={posts} />
     <a href={href('/writing/')} class="btn btn-ghost mt-10">{t('writing.more')}</a>
   </Section>
-
-  <Quotes title={t('quotes.title')} lede={t('quotes.lede')} items={raw('quotes.items')} />
 
   <section class="wrap my-16 grid gap-6 md:grid-cols-2">
     <div data-hue="rose" class="pair cell !p-8">
@@ -129,6 +132,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
       <div>
         <h3 class="text-xl">{t('independence.title')}</h3>
         <p class="mt-2 text-muted max-w-[46em]">{t('independence.text')}</p>
+        <div class="mt-6"><PullQuote {...raw<Quote>('independence.quote')} /></div>
       </div>
     </aside>
   </Section>
