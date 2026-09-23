@@ -12,7 +12,7 @@ node scripts/gen-image.mjs home-loop --aspect 4:3        # also 1:1, 21:9, 3:2
 node scripts/gen-image.mjs tclock-widgets --ref ~/Projects/clock-tui/assets/screenshot-clock-widgets.png
 ```
 
-Every request gets `scripts/prompts/_style.txt` appended: the graphite ground, which hue belongs to which tool, green only for flow and status, short off-white labels. The site has no logo, so there is no default reference image; `--ref` attaches a real screenshot when a drawing should echo a tool's interface.
+Every request gets `scripts/prompts/_style.txt` appended: the dark purple ground, which hue belongs to which tool, green only for flow and status, short off-white labels. The site has no logo, so there is no default reference image; `--ref` attaches a real screenshot when a drawing should echo a tool's interface.
 
 Writing a prompt that works:
 

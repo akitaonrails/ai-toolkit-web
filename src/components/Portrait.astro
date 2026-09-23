@@ -15,7 +15,7 @@ const { alt } = Astro.props;
 <style>
   .portrait { position: relative; inline-size: min(30rem, 84vw); margin-inline: auto; }
   /* The disc is a square's inscribed circle; the clip is a little taller than the disc. Mix in OKLab: in OKLCH the
-     violet-to-graphite mix takes the short way round the hue wheel and passes through red. */
+     violet-to-ground mix takes the short way round the hue wheel and passes through red. */
   .disc { position: absolute; inset-inline: 0; bottom: 0; aspect-ratio: 1; border-radius: 50%;
     background: radial-gradient(circle at 50% 30%, color-mix(in oklab, var(--v-violet) 26%, var(--surface)) 0%, var(--surface) 72%); }
   .disc::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; background: conic-gradient(from 200deg in oklch, var(--v-red), var(--v-amber), var(--v-teal), var(--v-blue), var(--v-violet), var(--v-rose), var(--v-red));

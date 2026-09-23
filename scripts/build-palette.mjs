@@ -7,9 +7,9 @@ import { clampChroma } from 'culori';
 
 // One hue per subject, sampled from the terminal colors of the tools themselves (tclock's red digits, ghpending's
 // amber repo headers, the Omarchy panel's blue, and so on). Green is not a subject: it is the one action color.
-export const hues = { red: 27, orange: 52, amber: 80, teal: 190, blue: 252, violet: 300, rose: 350 };
-const ACTION = 150; // tclock's "all systems healthy" dot: phosphor green
-const NEUTRAL = 60; // warm graphite, the terminal ground in the tclock screenshots
+export const hues = { red: 27, orange: 52, amber: 80, teal: 190, blue: 250, violet: 288, rose: 350 };
+const ACTION = 150; // phosphor green: tclock's "all systems healthy" dot, and Evangelion Unit-01's green on its purple
+const NEUTRAL = 310; // dark aubergine purple. ai-memory's ground is indigo (282), ai-jail's is maroon (355); this sits between
 
 const fit = (l, c, h) => { const k = clampChroma({ mode: 'oklch', l, c, h }, 'oklch'); return `oklch(${l} ${Math.min(c, k.c).toFixed(3)} ${h})`; };
 const roles = {
@@ -20,8 +20,8 @@ const roles = {
 const vivid = { red: [0.65, 0.23], orange: [0.74, 0.18], amber: [0.84, 0.17], teal: [0.8, 0.13], blue: [0.7, 0.17], violet: [0.57, 0.22], rose: [0.7, 0.2] };
 
 const neutrals = {
-  light: { bg: [0.984, 0.004], surface: [1, 0], tint: [0.958, 0.008], line: [0.885, 0.012], text: [0.2, 0.012], muted: [0.45, 0.014] },
-  dark: { bg: [0.16, 0.008], surface: [0.2, 0.01], tint: [0.235, 0.011], line: [0.34, 0.012], text: [0.955, 0.006], muted: [0.76, 0.012] },
+  light: { bg: [0.983, 0.008], surface: [1, 0], tint: [0.955, 0.016], line: [0.88, 0.028], text: [0.2, 0.045], muted: [0.45, 0.045] },
+  dark: { bg: [0.16, 0.05], surface: [0.205, 0.055], tint: [0.24, 0.058], line: [0.35, 0.06], text: [0.96, 0.012], muted: [0.78, 0.035] },
 };
 
 function theme(name) {
@@ -35,10 +35,10 @@ function theme(name) {
 }
 const shared = [
   ...Object.entries(hues).map(([k, h]) => `  --v-${k}: ${fit(...vivid[k], h)};`),
-  `  --ink: ${fit(0.16, 0.008, NEUTRAL)};`, `  --ink-raised: ${fit(0.21, 0.01, NEUTRAL)};`, `  --ink-line: ${fit(0.34, 0.012, NEUTRAL)};`,
-  `  --on-ink: ${fit(0.955, 0.006, NEUTRAL)};`, `  --on-ink-muted: ${fit(0.76, 0.012, NEUTRAL)};`,
-  `  --veil: oklch(0.16 0.008 ${NEUTRAL} / 0.6);`, `  --shade: oklch(0 0 0 / 0.15);`,
-  // Phosphor green is the complement of the rose and violet end, and nothing decorative uses it,
+  `  --ink: ${fit(0.16, 0.05, NEUTRAL)};`, `  --ink-raised: ${fit(0.21, 0.055, NEUTRAL)};`, `  --ink-line: ${fit(0.35, 0.06, NEUTRAL)};`,
+  `  --on-ink: ${fit(0.96, 0.012, NEUTRAL)};`, `  --on-ink-muted: ${fit(0.78, 0.035, NEUTRAL)};`,
+  `  --veil: oklch(0.16 0.05 ${NEUTRAL} / 0.6);`, `  --shade: oklch(0 0 0 / 0.15);`,
+  // Phosphor green is roughly the complement of the purple ground, and nothing decorative uses it,
   // so a single green button is the loudest thing on a page.
   `  --v-green: ${fit(0.85, 0.2, ACTION)};`,
   `  --action: ${fit(0.85, 0.2, ACTION)};`, `  --action-hi: ${fit(0.91, 0.17, ACTION)};`, `  --on-action: ${fit(0.22, 0.05, ACTION + 10)};`,

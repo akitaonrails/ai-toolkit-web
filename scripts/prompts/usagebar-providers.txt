@@ -1,6 +1,6 @@
 A left-to-right funnel diagram.
 
-LEFT: a loose column of seven small rounded chips in raised graphite with a blue (#48A2FF) dot each, labelled "Claude", "Codex", "Copilot", "Z.AI", "OpenRouter", "Kimi", "DeepSeek". Below them three faint dots meaning "and more".
+LEFT: a loose column of seven small rounded chips in raised dark purple with a blue (#48A2FF) dot each, labelled "Claude", "Codex", "Copilot", "Z.AI", "OpenRouter", "Kimi", "DeepSeek". Below them three faint dots meaning "and more".
 
 MIDDLE: thin blue lines from every chip converge into one sleek horizontal desktop top bar, labelled "One bar". In that bar sits one compact usage gauge.
 

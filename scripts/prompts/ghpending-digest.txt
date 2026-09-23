@@ -1,6 +1,6 @@
 A left-to-right diagram.
 
-LEFT: a scattered grid of about twelve small repository boxes (folder icons with a small branch symbol) in raised graphite, each with a tiny amber (#FFBE3D) dot, labelled as a group "Your repos". A few boxes glow more than others, meaning they have open work.
+LEFT: a scattered grid of about twelve small repository boxes (folder icons with a small branch symbol) in raised dark purple, each with a tiny amber (#FFBE3D) dot, labelled as a group "Your repos". A few boxes glow more than others, meaning they have open work.
 
 MIDDLE: amber lines from the glowing boxes converge into a single terminal window.
 

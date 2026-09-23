@@ -4,7 +4,7 @@ How pages on aitoolkit.akitaonrails.com are put together. Read this before addin
 
 ## The idea
 
-This site is an umbrella: many small tools, one person, one workflow. There is no logo. The identity comes from the tools' own screens.
+This site is an umbrella: many small tools, one person, one workflow. There is no logo; the portrait is the face. The identity is a dark purple ground with phosphor green actions (Evangelion Unit-01, the NERV look of the tools' own terminals).
 
 1. One hue per subject, taken from the tool's own terminal colors, kept everywhere that subject appears.
 2. Phosphor green means go: the primary button, focus, the status dot on a code block. Nothing else is green.
