@@ -133,14 +133,14 @@
     "tools": "Tools",
     "more": "More",
     "sisters": "Sister sites",
-    "by": "Made by",
     "theme": {
       "system": "System",
       "light": "Light",
       "dark": "Dark"
     },
     "cookieSettings": "Cookie settings",
-    "contact": "Contact"
+    "contact": "Contact",
+    "rights": "All rights reserved. Each tool keeps its own open source license."
   },
   "notfound": {
     "title": "Nothing pending here",

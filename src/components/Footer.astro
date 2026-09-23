@@ -28,7 +28,7 @@ const languages = languageLinks(Astro.url.pathname);
     </div>
   </div>
   <div class="wrap pb-10 flex flex-wrap gap-x-6 gap-y-3 items-center text-sm text-muted">
-    <span>{t('footer.by')} <a class="link" href={site.authorUrl}>{site.author}</a></span>
+    <span>© {new Date().getFullYear()} <a class="link" href={site.authorUrl}>{site.author}</a>. {t('footer.rights')}</span>
     <a href="#" data-consent-open class="hover:text-text">{t('footer.cookieSettings')}</a>
     {languages.length > 1 && (
       <span class="flex flex-wrap gap-x-3 gap-y-1">
