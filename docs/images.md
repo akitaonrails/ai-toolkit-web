@@ -59,3 +59,13 @@ ffmpeg -i public/media/name.mp4 -frames:v 1 -update 1 public/media/name.jpg
 ## Video thumbnails
 
 `node scripts/refresh-videos.mjs` downloads a thumbnail for every video in `src/data/videos.config.json` into `src/assets/img/video/`. The page never loads images from YouTube.
+
+## Portrait
+
+`src/assets/img/portrait/akita.png` is the home page portrait, transparent, 1600x1600. The source is the 200x200 newsletter avatar `~/Projects/akitando-news/docs/images/akita.jpg`.
+
+1. `node scripts/upscale-portrait.mjs <akita.jpg> <out.png>` asks Gemini to redraw the same illustration at 2048x2048 on flat white (same face, pose, colors and line style; only sharper). Run it two or three times and keep the one closest to the original.
+2. Remove the background with rembg's illustration model: `uvx --python 3.12 --from 'rembg[cli,cpu]' rembg i -m isnet-anime in.png out.png`. BiRefNet was tried and left a light halo around the outline.
+3. `magick out.png -trim +repage -resize '1600x1600>' src/assets/img/portrait/akita.png`.
+
+Plain flood fill does not work on this image: the white shirt touches the edge and would be removed with the background.

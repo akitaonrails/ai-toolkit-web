@@ -9,7 +9,8 @@
     "primary": "See the workflow",
     "secondary": "Where to follow me",
     "shotAlt": "My second monitor: tclock showing 16:10:22 in large red digits, a GitHub pending widget listing open pull requests and issues for ai-memory and ai-usagebar, a Google Calendar widget and a system health strip.",
-    "shotCaption": "My second monitor on a normal Thursday. 43 repositories checked, 6 with something waiting."
+    "shotCaption": "My second monitor on a normal Thursday. 43 repositories checked, 6 with something waiting.",
+    "portraitAlt": "Illustrated portrait of Fabio Akita: grey hair, round glasses, white shirt and a dark tie, looking up with a confident half smile."
   },
   "desk": {
     "title": "One desk, two monitors, many agents",

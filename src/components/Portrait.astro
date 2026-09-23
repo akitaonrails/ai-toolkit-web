@@ -1,0 +1,26 @@
+---
+// The home page portrait: the illustration over a disc with a thin spectrum ring. The clip's lower arc matches the
+// disc, so the shoulders end on the circle. The source is transparent (docs/images.md, "Portrait").
+import { Image } from 'astro:assets';
+import portrait from '@/assets/img/portrait/akita.png';
+interface Props { alt: string }
+const { alt } = Astro.props;
+---
+<div class="portrait" data-parallax="0.05">
+  <div class="disc" aria-hidden="true"></div>
+  <div class="clip">
+    <Image src={portrait} alt={alt} widths={[360, 540, 720, 1080]} sizes="(min-width: 1024px) 30rem, 80vw" loading="eager" fetchpriority="high" class="face" />
+  </div>
+</div>
+<style>
+  .portrait { position: relative; inline-size: min(30rem, 84vw); margin-inline: auto; }
+  /* The disc is a square's inscribed circle; the clip is a little taller than the disc. Mix in OKLab: in OKLCH the
+     violet-to-graphite mix takes the short way round the hue wheel and passes through red. */
+  .disc { position: absolute; inset-inline: 0; bottom: 0; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle at 50% 30%, color-mix(in oklab, var(--v-violet) 26%, var(--surface)) 0%, var(--surface) 72%); }
+  .disc::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; background: conic-gradient(from 200deg in oklch, var(--v-red), var(--v-amber), var(--v-teal), var(--v-blue), var(--v-violet), var(--v-rose), var(--v-red));
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black calc(100% - 3px)); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black calc(100% - 3px)); }
+  .disc::after { content: ''; position: absolute; inset: 8%; border-radius: 50%; background: var(--spectrum); filter: blur(70px); opacity: 0.22; z-index: -1; }
+  .clip { position: relative; aspect-ratio: 1 / 1.16; overflow: hidden; border-radius: 0 0 50% 50% / 0 0 43.1% 43.1%; display: flex; align-items: flex-end; justify-content: center; }
+  .face { inline-size: 112%; max-inline-size: none; block-size: auto; filter: drop-shadow(0 18px 30px var(--shade)); }
+</style>

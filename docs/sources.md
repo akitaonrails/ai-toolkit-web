@@ -110,6 +110,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `games-menu.jpg` | `~/Projects/omarchy-games-menu/screenshot.jpg` |
 | `desk-second-monitor.png`, `benchmark-v4-cost-*.png` | The blog's S3 bucket, from the posts in section 3 |
 | `newsletter-home.png`, `newsletter-blog.png` | Screenshots of the live sites, 1440 px wide, cropped |
+| `src/assets/img/portrait/akita.png` | `~/Projects/akitando-news/docs/images/akita.jpg`, redrawn and cut out (docs/images.md, "Portrait") |
 | `src/assets/img/video/*.jpg` | YouTube thumbnails, downloaded by `scripts/refresh-videos.mjs` |
 
 ## 8. Page by page

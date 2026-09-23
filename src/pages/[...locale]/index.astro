@@ -11,6 +11,7 @@ import Social from '@/components/Social.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import CodeBlock from '@/components/CodeBlock.astro';
+import Portrait from '@/components/Portrait.astro';
 import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
@@ -40,7 +41,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 ---
 <Base description={t('meta.description')}>
   <section class="hero" data-exit>
-    <div class="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] pt-32 pb-16 md:pt-40 md:pb-24">
+    <div class="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] pt-32 pb-16 md:pt-40 md:pb-24">
       <div>
         <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{t('hero.kicker')}</div>
         <h1 class="text-4xl hero-title" data-reveal>{t('hero.title')}</h1>
@@ -51,14 +52,14 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
           <a href="#follow" class="btn btn-ghost">{t('hero.secondary')}</a>
         </div>
       </div>
-      <div class="relative" data-parallax="0.06">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <div class="relative"><Shot src={desk} alt={t('hero.shotAlt')} caption={t('hero.shotCaption')} eager zoom={false} sizes="(min-width: 1024px) 36rem, 94vw" /></div>
+      <div class="justify-self-center lg:justify-self-end">
+        <Portrait alt={t('hero.portraitAlt')} />
       </div>
     </div>
   </section>
 
   <Section title={t('desk.title')} lede={t('desk.lede')} hue="violet" fill>
+    <Shot src={desk} alt={t('hero.shotAlt')} caption={t('hero.shotCaption')} />
     <Figure name="home-desk" alt={t('desk.alt')} />
     <ol class="desk-steps" data-focus-list>
       {steps.map((s, i) => (
@@ -153,7 +154,6 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 <style>
   .hero { background: var(--bg); transform-origin: 50% 100%; }
   .hero-title { font-stretch: 118%; letter-spacing: -0.03em; }
-  .hero-glow { position: absolute; inset: 6%; background: var(--spectrum); filter: blur(90px); opacity: 0.28; border-radius: 50%; }
 
   .desk-steps { display: grid; gap: 2.5rem 3rem; margin-block-start: 1rem; }
   @media (min-width: 48rem) { .desk-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
