@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "tclock: a terminal clock with command widgets",
+    "description": "tclock, a maintained fork of clock-tui: terminal clock, timer, stopwatch and countdown, with command widgets and Evangelion and NERV themes. Prebuilt for Linux."
+  },
+  "hero": {
+    "title": "A clock that is also a dashboard",
+    "lede": "tclock is my maintained fork of clock-tui: a terminal clock with timer, stopwatch and countdown modes. Its widgets run any command on a schedule and show the output under the clock, which turns my second monitor into a status board.",
+    "primary": "Install",
+    "evaAlt": "tclock with the Evangelion theme: large pixel digits, a GitHub pending widget, a Google Calendar widget and a system health strip.",
+    "nervAlt": "tclock with the NERV theme: 17:34:24 in large red pixel digits over a dark sky, with GitHub pending, Google Calendar and system health widgets.",
+    "caption": "The same dashboard in two of the three built-in themes. Shift+T cycles them, and the widgets follow."
+  },
+  "widgets": {
+    "title": "Any command becomes a widget",
+    "lede": "A widget runs a command, captures its output with the ANSI colors intact, and refreshes on its own schedule. If it prints something useful and exits, it can live under the clock.",
+    "alt": "A terminal with a red pixel clock on top and three widget panels below, amber, teal and green, each fed by a dashed line from a command box: ghpending, calendar and system health. Labelled Any command. Three theme swatches: default, evangelion, nerv."
+  },
+  "config": {
+    "title": "My second monitor, as configuration",
+    "lede": "This is the actual file behind the screenshot, trimmed. The system health script ships with tclock as an example widget.",
+    "codeTitle": "~/.config/tclock/config.toml"
+  },
+  "features": {
+    "title": "What I added to the fork",
+    "items": [
+      { "title": "Command widgets", "text": "Up to six side by side on ultra-wide terminals, or a full-width band at the bottom sized to its output." },
+      { "title": "Themes", "text": "<code>default</code>, <code>evangelion</code> and <code>nerv</code>. The theme name is passed to every widget as <code>TCLOCK_WIDGET_THEME</code> so they can match." },
+      { "title": "Groups", "text": "Put widgets in groups and swap the whole set with <code>g</code>. Hidden widgets do not run." },
+      { "title": "Popups", "text": "Bind a key to a detail view: the widget's command with extra arguments, shown over the clock." },
+      { "title": "Clock-only mode", "text": "<code>z</code> hides every widget and centers the clock. Press it again to bring them back." },
+      { "title": "Packaging", "text": "Updated dependencies, release binaries for x86_64 and aarch64, an AUR package and shell completions." }
+    ]
+  },
+  "modes": {
+    "title": "It is still a good clock",
+    "lede": "Clock, timer, stopwatch and countdown. Timers can chain durations and run a command when time is up.",
+    "clockLabel": "tclock in clock mode, digits ticking over.",
+    "timerLabel": "tclock in timer mode, counting down.",
+    "codeTitle": "a few examples"
+  },
+  "install": {
+    "title": "Install",
+    "tabs": ["Arch", "Cargo", "Binary"],
+    "binary": "Download the tarball for your architecture from the releases page and put tclock on your PATH.",
+    "credit": "tclock is a fork of <a href=\"https://github.com/race604/clock-tui\">race604/clock-tui</a>, which paused a long time ago. The idea is theirs; the widgets, themes and packaging are mine."
+  },
+  "next": [
+    { "title": "ghpending", "text": "The widget I look at most." },
+    { "title": "The workflow", "text": "What the dashboard feeds into." },
+    { "title": "ai-usagebar", "text": "The gauge in the top bar of the other monitor." }
+  ]
+}

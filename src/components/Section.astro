@@ -1,0 +1,16 @@
+---
+// A band with an h2. `fill` lights the lede word by word as it crosses the viewport (one per page).
+import type { Hue } from '@/data/site';
+interface Props { title: string; lede?: string; hue?: Hue; id?: string; tint?: boolean; narrow?: boolean; fill?: boolean; ink?: boolean }
+const { title, lede, hue, id, tint, narrow, fill, ink } = Astro.props;
+---
+<section id={id} data-hue={hue} class:list={['band scroll-mt-16', tint && 'bg-tint', ink && 'on-ink']}>
+  <div class={narrow ? 'wrap-narrow' : 'wrap'}>
+    <h2 class="text-3xl max-w-[18em]">{title}</h2>
+    {lede && <p class:list={['mt-6', fill ? 'fill-lede' : 'lede']} data-fill={fill ? '' : undefined} set:html={lede} />}
+    <div class="mt-10"><slot /></div>
+  </div>
+</section>
+<style is:global>
+  .fill-lede { font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl); line-height: 1.25; letter-spacing: -0.015em; max-width: 26em; }
+</style>

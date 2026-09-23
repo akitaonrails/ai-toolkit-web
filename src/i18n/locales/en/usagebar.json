@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "ai-usagebar: AI plan usage in your top bar",
+    "description": "ai-usagebar shows quota, balance and reset times for Claude, Codex, Copilot, Z.AI, OpenRouter and 19 more AI providers in Waybar, Omarchy, GNOME, KDE, macOS and Windows."
+  },
+  "hero": {
+    "title": "Know how much AI you have left, before it runs out",
+    "lede": "ai-usagebar reads each plan's usage from the provider and shows it where you already look: the top bar, a terminal UI or the system tray. It began as a Rust port of claudebar and now covers 24 providers.",
+    "primary": "Install",
+    "shotAlt": "The ai-usagebar panel open under the Omarchy top bar: Z.AI GLM Coding Pro with session, weekly and monthly MCP quotas at 1%, their reset times, and tabs for Claude, Codex, Z.AI, OpenRouter and Kimi."
+  },
+  "why": {
+    "title": "Why I built it",
+    "lede": "I pay for several coding plans and each one meters differently: a 5-hour window here, a weekly cap there, a prepaid balance somewhere else. Opening five dashboards to decide which agent gets the next task was silly. Now one glance at the bar tells me.",
+    "alt": "Seven provider chips, Claude, Codex, Copilot, Z.AI, OpenRouter, Kimi and DeepSeek, feed one bar with a gauge. The zoomed panel shows three meters, the first nearly full with a red marker labelled Alert at 97%, and a Resets in clock.",
+    "link": "How it fits my workflow"
+  },
+  "surfaces": {
+    "title": "Wherever you work",
+    "lede": "The same Rust core feeds every front end, so the numbers match everywhere.",
+    "items": [
+      { "title": "Terminal UI", "text": "<code>ai-usagebar-tui</code>: a tab per provider, refreshed every 60 seconds, with a settings overlay.", "alt": "The ai-usagebar TUI on the OpenAI tab: Codex 5-hour window at 6% and weekly at 1%, with reset times and pace, and a credits section." },
+      { "title": "macOS menu bar", "text": "A native popover with every enabled provider, pace markers and reset times.", "alt": "The macOS tray popover listing Claude Max, Codex, Cursor, SuperGrok and Antigravity, each with usage bars, percentage used and reset times." },
+      { "title": "Windows tray", "text": "A notification-area icon with a WebView2 popover. Installs with Scoop.", "alt": "The Windows tray dashboard with provider usage bars." },
+      { "title": "KDE Plasma 6", "text": "A plasmoid with provider tabs. Each applet instance can follow a different provider.", "alt": "The KDE Plasma 6 plasmoid showing provider tabs and usage bars." }
+    ]
+  },
+  "features": {
+    "title": "What it does for you",
+    "items": [
+      { "title": "Alerts before the wall", "text": "A desktop notification when a quota window crosses 97%, a critical one at 100%, and a warning 48 hours before banked reset credits expire. The threshold is yours to change." },
+      { "title": "Finds your accounts", "text": "<code>ai-usagebar detect</code> turns on every provider that already has a credential on the machine. It reads local files and keychains, never the network." },
+      { "title": "Keeps showing the last good number", "text": "Network failures keep the previous data on screen. A provider that answers HTTP 429 is left alone for five minutes." },
+      { "title": "Several accounts", "text": "Named Claude, Codex and OpenRouter accounts side by side, each with its own entry." },
+      { "title": "Drop-in for claudebar", "text": "Same Waybar JSON, flags, Pango tooltip, Omarchy theme detection and locked OAuth refresh." },
+      { "title": "Scriptable", "text": "<code>ai-usagebar usage --json</code> prints every provider's quota and reset time as one document." }
+    ]
+  },
+  "providers": {
+    "title": "24 providers",
+    "lede": "The command line and the TUI support all of them. Desktop coverage varies by integration; the README has the table."
+  },
+  "install": {
+    "title": "Install",
+    "lede": "Pick your platform. On Omarchy Quattro you need both the binary and the plugin.",
+    "tabs": ["Omarchy", "Arch", "Linux or macOS", "Nix", "Windows"],
+    "then": "Then turn on what you already use and look:",
+    "readme": "Everything else is in the README"
+  },
+  "next": [
+    { "title": "The workflow", "text": "Where the quota gauge decides which agent gets the next task." },
+    { "title": "ghpending", "text": "The other thing I look at every morning." },
+    { "title": "tclock", "text": "The clock that hosts the dashboard on my second monitor." }
+  ]
+}

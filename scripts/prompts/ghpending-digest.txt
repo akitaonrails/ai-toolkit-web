@@ -1,0 +1,11 @@
+A left-to-right diagram.
+
+LEFT: a scattered grid of about twelve small repository boxes (folder icons with a small branch symbol) in raised graphite, each with a tiny amber (#FFBE3D) dot, labelled as a group "Your repos". A few boxes glow more than others, meaning they have open work.
+
+MIDDLE: amber lines from the glowing boxes converge into a single terminal window.
+
+RIGHT: the terminal window, enlarged, shows one tidy list, labelled "One digest" above it. The list has rows grouped under short amber header rules, each row starting with a small colored pill (no text in the pills: violet pills for pull requests, amber pills for issues, and two signal red (#FD3A37) pills at the top of one group for security alerts, with the small label "SEC" next to them).
+
+BOTTOM LEFT corner, a small side note: a forked-branch icon labelled "Fork" with a thin arrow pointing to a larger repository icon labelled "Upstream", meaning the digest follows your pull requests on the original project.
+
+Only these labels: "Your repos", "One digest", "SEC", "Fork", "Upstream".

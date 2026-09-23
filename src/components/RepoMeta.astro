@@ -1,0 +1,20 @@
+---
+// Stars and the latest release of one repository, read at build time (snapshot fallback), plus its GitHub link.
+import { repo } from '@/data/github';
+import { repoUrl, type RepoId } from '@/data/site';
+import { useI18n } from '@/i18n';
+interface Props { id: RepoId }
+const { id } = Astro.props;
+const { t, number } = useI18n(Astro);
+const info = await repo(id);
+---
+<ul class="repo-meta">
+  <li><a href={repoUrl(id)} class="link">{t('repo.github')}</a></li>
+  <li>{t('repo.stars', { n: number(info.stars) })}</li>
+  {info.release && <li><a href={`${repoUrl(id)}/releases/latest`} class="hover:text-text">{t('repo.release', { tag: info.release.tag })}</a></li>}
+</ul>
+<style>
+  .repo-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: var(--text-sm); color: var(--muted); font-family: var(--font-mono); }
+  .repo-meta li { display: inline-flex; align-items: center; gap: 0.45rem; }
+  .repo-meta li::before { content: ''; inline-size: 0.4rem; block-size: 0.4rem; border-radius: 99px; background: var(--hue-vivid, var(--v-green)); }
+</style>

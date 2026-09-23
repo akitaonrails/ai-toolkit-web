@@ -1,0 +1,25 @@
+---
+// Two to six short points. An item with href becomes a clickable cell; without, an open block under a short rule.
+import type { Hue } from '@/data/site';
+import { useI18n } from '@/i18n';
+interface Item { title: string; text: string; hue?: Hue; href?: string; link?: string }
+interface Props { items: Item[]; cols?: 2 | 3 }
+const { items, cols = 3 } = Astro.props;
+const { href } = useI18n(Astro);
+---
+<div class:list={['grid gap-x-8 gap-y-10', cols === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2']} data-reveal="children">
+  {items.map((it) => it.href ? (
+    <a href={href(it.href)} data-hue={it.hue} class="cell" rel={it.href.startsWith('http') ? 'noopener' : undefined}>
+      <span class="rule mb-4 block" aria-hidden="true"></span>
+      <h3 class="text-xl" set:html={it.title} />
+      <p class="mt-2 text-muted" set:html={it.text} />
+      {it.link && <span class="mt-4 inline-block font-semibold" style="color:var(--hue)">{it.link}</span>}
+    </a>
+  ) : (
+    <div data-hue={it.hue}>
+      <span class="rule mb-4 block" aria-hidden="true"></span>
+      <h3 class="text-xl" set:html={it.title} />
+      <p class="mt-2 text-muted" set:html={it.text} />
+    </div>
+  ))}
+</div>

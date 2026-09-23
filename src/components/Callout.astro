@@ -1,0 +1,10 @@
+---
+// Limits and caveats.
+import type { Hue } from '@/data/site';
+interface Props { title: string; hue?: Hue }
+const { title, hue = 'red' } = Astro.props;
+---
+<aside data-hue={hue} class="rounded-[1.25rem] p-6 md:p-8 my-8" style="background:var(--hue-soft)">
+  <h3 class="text-xl" style="color:var(--hue)">{title}</h3>
+  <div class="mt-3 prose-site"><slot /></div>
+</aside>

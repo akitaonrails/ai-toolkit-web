@@ -1,0 +1,22 @@
+---
+// A short looping screen recording (converted from the project's GIF to MP4, see docs/images.md). Plays muted and
+// inline, loads nothing until it is near the viewport, and shows its poster frame under reduced motion.
+interface Props { src: string; poster: string; label: string; width: number; height: number; caption?: string }
+const { src, poster, label, width, height, caption } = Astro.props;
+---
+<figure>
+  <video class="clip" data-clip src={src} poster={poster} width={width} height={height} muted loop playsinline preload="none" aria-label={label}></video>
+  {caption && <figcaption class="mt-3 text-muted text-[0.95rem]">{caption}</figcaption>}
+</figure>
+<style>
+  .clip { display: block; inline-size: 100%; block-size: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--ink); }
+</style>
+<script>
+  // Play only while visible, and never under reduced motion.
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    const v = e.target as HTMLVideoElement;
+    if (e.isIntersecting && !still) v.play().catch(() => {}); else v.pause();
+  }), { rootMargin: '200px' });
+  document.querySelectorAll<HTMLVideoElement>('[data-clip]').forEach((v) => io.observe(v));
+</script>

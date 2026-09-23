@@ -1,0 +1,35 @@
+---
+// The phrases I am known for, on the dark ground. The first one is large and also shows the Portuguese original.
+// Each quote takes the next subject hue for its mark, so the band reads as the whole spectrum.
+interface Quote { text: string; original?: string; cite?: string }
+interface Props { title: string; lede?: string; items: Quote[] }
+const { title, lede, items } = Astro.props;
+const hues = ['rose', 'violet', 'blue', 'teal', 'amber', 'red'];
+---
+<section class="on-ink band quotes">
+  <div class="wrap">
+    <h2 class="text-3xl">{title}</h2>
+    {lede && <p class="lede mt-5">{lede}</p>}
+    <ul class="qgrid mt-14" data-reveal="children">
+      {items.map((q, i) => (
+        <li data-hue={hues[i % hues.length]} class:list={['q', i === 0 && 'q-lead']}>
+          <blockquote>
+            <p class="q-text">{q.text}</p>
+            {q.original && <p class="q-orig" lang="pt-BR">{q.original}</p>}
+          </blockquote>
+          {q.cite && <p class="q-cite">{q.cite}</p>}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<style>
+  .qgrid { display: grid; gap: 3rem 3.5rem; }
+  @media (min-width: 48rem) { .qgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .q-lead { grid-column: 1 / -1; } }
+  .q { position: relative; padding-inline-start: 1.6rem; }
+  .q::before { content: ''; position: absolute; inset-inline-start: 0; inset-block: 0.35rem; inline-size: 4px; border-radius: 99px; background: var(--hue-vivid); box-shadow: 0 0 18px var(--hue-vivid); }
+  .q-text { font-family: var(--font-display); font-weight: 750; font-stretch: 108%; font-size: var(--text-xl); line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
+  .q-lead .q-text { font-size: var(--text-3xl); line-height: 1.08; max-width: 22em; }
+  .q-orig { margin-block-start: 0.9rem; color: var(--on-ink-muted); font-size: var(--text-lg); font-style: italic; }
+  .q-cite { margin-block-start: 0.7rem; color: var(--on-ink-muted); font-family: var(--font-mono); font-size: var(--text-sm); }
+</style>

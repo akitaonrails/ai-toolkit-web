@@ -1,0 +1,12 @@
+A wide horizontal pipeline diagram, read left to right, made of rounded station boxes joined by phosphor green (#52F184) arrows.
+
+1. Far left, amber (#FFBE3D): a stack of cards with small tag pills, labelled "Open PRs and issues".
+2. Then the flow splits into two parallel violet (#A86BFD) stations stacked vertically: a lens over a pull-request icon labelled "pr-audit" (monospace), and a lens over a bug icon labelled "iss-audit" (monospace).
+3. Both merge into one brighter violet station with a wrench and a test-tube icon, labelled "github-resolution" (monospace).
+4. Then a violet station with a shield and a checklist, labelled "pr-post-audit" (monospace).
+5. Far right, rose (#F45FB0): a tag with a package box, labelled "release" (monospace).
+
+Between the audits and github-resolution, a small green status dot with the word "Approved" under the arrow.
+Beneath the whole pipeline, a thin teal (#2FD8D0) bar spanning the full width, labelled "ai-memory".
+
+Only these labels: "Open PRs and issues", "pr-audit", "iss-audit", "Approved", "github-resolution", "pr-post-audit", "release", "ai-memory".

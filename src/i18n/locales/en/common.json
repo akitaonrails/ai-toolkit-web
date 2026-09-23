@@ -1,0 +1,137 @@
+{
+  "site": {
+    "tagline": "The tools, workflow and writing behind how I work with AI",
+    "description": "Fabio Akita's open source AI toolkit: ai-usagebar, ghpending, tclock, my agent skills and ai-memory, plus the LLM benchmark and the writing that documents it all.",
+    "ogAlt": "Akita's AI Toolkit: tools, workflow and writing. A small dashboard with a red pixel clock, an amber list, a blue gauge and a violet chip."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "Akita's AI Toolkit home",
+    "mainNav": "Main",
+    "language": "Language",
+    "toggleTheme": "Switch between light and dark",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "external": "opens another site",
+    "chooseOne": "Choose one"
+  },
+  "nav": {
+    "workflow": {
+      "label": "Workflow",
+      "note": "Skills, tmux and the daily loop"
+    },
+    "usagebar": {
+      "label": "ai-usagebar",
+      "note": "Quota and reset times for 24 AI providers"
+    },
+    "ghpending": {
+      "label": "ghpending",
+      "note": "Every open PR and issue in one list"
+    },
+    "tclock": {
+      "label": "tclock",
+      "note": "A terminal clock with command widgets"
+    },
+    "writing": {
+      "label": "Writing",
+      "note": "The blog and the LLM benchmark"
+    },
+    "newsletter": {
+      "label": "Newsletter",
+      "note": "The M.Akita Chronicles, every Monday"
+    },
+    "podcasts": {
+      "label": "Podcasts",
+      "note": "Long conversations about AI, on video"
+    },
+    "games": {
+      "label": "Games",
+      "note": "My emulator setup, as code"
+    },
+    "follow": {
+      "label": "Follow"
+    }
+  },
+  "kicker": {
+    "workflow": "Workflow",
+    "usagebar": "ai-usagebar",
+    "ghpending": "ghpending",
+    "tclock": "tclock",
+    "writing": "Writing",
+    "newsletter": "Newsletter",
+    "podcasts": "Podcasts",
+    "games": "After hours"
+  },
+  "code": {
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "repo": {
+    "stars": "{n} stars on GitHub",
+    "release": "Latest release {tag}",
+    "github": "Source on GitHub",
+    "readme": "Read the README"
+  },
+  "next": {
+    "title": "Keep going"
+  },
+  "cta": {
+    "title": "Everything here is open source",
+    "text": "The tools, the skills and the benchmark are public repositories. Read them, fork them, and build the version that fits the way you work.",
+    "github": "See all my repositories",
+    "blog": "Read the blog"
+  },
+  "social": {
+    "title": "Where to follow me",
+    "lede": "Each place gets a different side of me. Pick the one that matches what you want to hear about.",
+    "x": {
+      "name": "X",
+      "text": "Where I am the most unfiltered. Hot takes, bait, arguments and the first reaction to whatever happened today. The account is protected, so request to follow."
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "text": "The more formal side. Mostly my new blog posts and the industry news worth your time."
+    },
+    "instagram": {
+      "name": "Instagram",
+      "text": "Entertainment only: games, retro consoles, device reviews and the fun stuff. No AI arguments here."
+    },
+    "youtube": {
+      "name": "YouTube: Akitando",
+      "text": "I no longer publish videos, but the archive holds up, and every new blog post gets shared in the community tab, which is surprisingly active."
+    },
+    "blog": {
+      "name": "Blog",
+      "text": "Where everything is written down in full, in English and Portuguese. If you only follow one thing, follow this."
+    },
+    "github": {
+      "name": "GitHub",
+      "text": "Every tool on this site, and a few dozen more side projects."
+    }
+  },
+  "footer": {
+    "about": "The tools I built and the way I use them. No sponsors, no ads, no paid subscriptions: I do this for my own pleasure.",
+    "tools": "Tools",
+    "more": "More",
+    "sisters": "Sister sites",
+    "by": "Made by",
+    "theme": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "cookieSettings": "Cookie settings"
+  },
+  "notfound": {
+    "title": "Nothing pending here",
+    "text": "That address does not exist. The home page does.",
+    "home": "Go to the home page"
+  },
+  "consent": {
+    "label": "Analytics consent",
+    "text": "This site uses Google Analytics to count visits. It shows no ads and does not follow you to other sites. Is that okay?",
+    "decline": "Decline",
+    "accept": "Accept"
+  }
+}

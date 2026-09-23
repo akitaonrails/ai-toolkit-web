@@ -1,0 +1,26 @@
+---
+// The page's questions as an accordion, fed by the same list as its faqPage() structured data.
+import type { Hue } from '@/data/site';
+import type { Faq } from '@/lib/schema';
+interface Props { items: Faq[]; title: string; hue?: Hue }
+const { items, title, hue } = Astro.props;
+---
+<section class="band" data-hue={hue}>
+  <div class="wrap-narrow">
+    <h2 class="text-3xl">{title}</h2>
+    <div class="mt-8 border-t border-line">
+      {items.map((f) => (
+        <details class="faq border-b border-line">
+          <summary><span>{f.q}</span><span class="bars" aria-hidden="true"><i></i></span></summary>
+          <div class="pb-6 text-muted prose-site" set:html={f.a} />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+<style is:global>
+  .faq summary { display: flex; justify-content: space-between; gap: 1.5rem; align-items: center; padding-block: 1.25rem; cursor: pointer; list-style: none; font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq .bars { block-size: 1.1rem; gap: 0.3rem; flex-shrink: 0; transition: transform 0.3s; }
+  .faq[open] .bars { transform: rotate(90deg); }
+</style>

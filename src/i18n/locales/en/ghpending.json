@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "ghpending: open PRs and issues across your GitHub repos",
+    "description": "ghpending is a Rust CLI that lists open pull requests, issues and security alerts across every GitHub repository you track, in one sorted digest for your terminal."
+  },
+  "hero": {
+    "title": "Every open pull request and issue, in one list",
+    "lede": "ghpending fetches every repository you track at once and prints what is waiting, with the work that needs you first. It is the first widget on my second monitor and the reason I know which projects need a morning.",
+    "primary": "Install",
+    "shotAlt": "ghpending output in a terminal. Under akitaonrails/FrankMD: five Dependabot pull requests and three issues. Under akitaonrails/FrankMega: six Dependabot pull requests. FrankClaw and FrankSherlock show nothing pending."
+  },
+  "what": {
+    "title": "Forty repositories, one glance",
+    "lede": "GitHub's notifications mix everything with everything. ghpending asks one question per repository, what is open right now, and answers it for all of them in a few seconds.",
+    "alt": "Twelve repository folders, five glowing. Amber lines from the glowing ones converge into one digest list with red SEC alerts at the top, violet pull requests and amber issues. In the corner, a Fork arrow points to Upstream."
+  },
+  "features": {
+    "title": "Details that save the morning",
+    "items": [
+      { "title": "Forks follow upstream", "text": "When a tracked repo is a fork, you see your pull requests on the original project instead of the fork's own empty queue. Detected automatically and cached." },
+      { "title": "Security alerts first", "text": "For repos you own: Dependabot, secret scanning and code scanning alerts, tagged SEC or QUA and sorted by severity ahead of everything else." },
+      { "title": "Your items step back", "text": "Pull requests you opened are dimmed and listed last, marked \"by you\". They wait on other people, not on you." },
+      { "title": "Feedback stands out", "text": "Comment counts and review decisions show wherever the API has them, highlighted when there is something to read." },
+      { "title": "Sort by what matters today", "text": "Most recent activity, name, most open items, or the most neglected repository first. <code>--limit</code> caps the list fairly across repos." },
+      { "title": "Fast with a token", "text": "With <code>GITHUB_TOKEN</code>, all repos come in one batched GraphQL request, private ones included. Without it, public repos still work." }
+    ]
+  },
+  "usage": {
+    "title": "Use it",
+    "lede": "Pick the repositories once. After that it is one word.",
+    "codeTitle": "ghpending"
+  },
+  "install": {
+    "title": "Install",
+    "tabs": ["Homebrew", "Arch", "Cargo", "mise"],
+    "readme": "Configuration, proxy and all flags in the README"
+  },
+  "widget": {
+    "title": "It was made to live under a clock",
+    "text": "Run it as a tclock widget and it follows the clock's theme through <code>TCLOCK_WIDGET_THEME</code>, including the NERV and Evangelion palettes.",
+    "link": "See tclock"
+  },
+  "next": [
+    { "title": "tclock", "text": "The clock that shows ghpending on my second monitor." },
+    { "title": "The workflow", "text": "What happens after ghpending shows the queue." },
+    { "title": "ai-usagebar", "text": "The other gauge I check before starting." }
+  ]
+}

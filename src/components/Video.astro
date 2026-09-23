@@ -1,0 +1,36 @@
+---
+// A YouTube video that loads nothing from YouTube until the visitor presses play: a local thumbnail and a button.
+// On click the button becomes a youtube-nocookie.com iframe. Without JavaScript it is a plain link to YouTube.
+import { Image } from 'astro:assets';
+interface Props { id: string; title: string; play: string; sizes?: string }
+const { id, title, play, sizes = '(min-width: 1024px) 40rem, 94vw' } = Astro.props;
+const thumbs = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/video/*.jpg', { eager: true });
+const thumb = thumbs[`/src/assets/img/video/${id}.jpg`]?.default;
+if (!thumb) throw new Error(`Video: no thumbnail for ${id}; run node scripts/refresh-videos.mjs`);
+---
+<a class="yt on-ink" href={`https://www.youtube.com/watch?v=${id}`} data-yt={id} data-title={title} aria-label={`${play}: ${title}`}>
+  <Image src={thumb} alt="" widths={[320, 480, 800, 1280].filter((w) => w <= thumb.width)} sizes={sizes} quality={78} class="yt-img" />
+  <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
+</a>
+<style is:global>
+  .yt { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--ink); }
+  .yt-img { inline-size: 100%; block-size: 100%; object-fit: cover; transition: transform 0.4s, opacity 0.3s; }
+  .yt:hover .yt-img { transform: scale(1.03); opacity: 0.85; }
+  .yt-play { position: absolute; inset: 0; margin: auto; display: grid; place-items: center; inline-size: 4rem; block-size: 4rem; border-radius: 99px; background: var(--action); color: var(--on-action); box-shadow: var(--shadow); transition: transform 0.2s; }
+  .yt:hover .yt-play { transform: scale(1.08); }
+  .yt iframe { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; border: 0; }
+</style>
+<script>
+  document.addEventListener('click', (e) => {
+    const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('[data-yt]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${a.dataset.yt}?autoplay=1&rel=0`;
+    f.title = a.dataset.title ?? '';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    a.replaceChildren(f);
+    a.removeAttribute('href');
+  });
+</script>

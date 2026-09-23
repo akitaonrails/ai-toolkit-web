@@ -1,0 +1,41 @@
+---
+// The LLM Benchmark v4 feature: what it measures, the numbers, and the cost-against-score chart from the Part 2 post.
+import Shot from './Shot.astro';
+import { benchmark, articles, articleUrl } from '@/data/articles';
+import chart from '@/assets/img/shots/benchmark-v4-cost-en.png';
+import { useI18n } from '@/i18n';
+const { t, number, date } = useI18n(Astro, 'writing');
+const facts = [
+  { n: benchmark.models, label: t('benchmark.facts.models') },
+  { n: benchmark.sabotages, label: t('benchmark.facts.sabotages') },
+  { n: benchmark.sprints, label: t('benchmark.facts.sprints') },
+  { n: benchmark.costUsd, label: t('benchmark.facts.cost', { days: benchmark.days }), prefix: '$', suffix: '+' },
+];
+---
+<div data-hue="rose" class="grid gap-12 lg:grid-cols-[1fr_1.1fr] items-start">
+  <div>
+    <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('benchmark.kicker')}</div>
+    <h3 class="text-2xl mt-4">{t('benchmark.title')}</h3>
+    <p class="mt-4 text-muted" set:html={t('benchmark.text')} />
+    <p class="mt-4 text-muted" set:html={t('benchmark.current', { n: benchmark.latestRound.models, date: date(benchmark.latestRound.date) })} />
+    <dl class="bfacts mt-8">
+      {facts.map((f) => (
+        <div>
+          <dd class="text-3xl">{f.prefix}<span data-count={f.n}>{number(f.n)}</span>{f.suffix}</dd>
+          <dt>{f.label}</dt>
+        </div>
+      ))}
+    </dl>
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a href={articleUrl({ id: 'benchmarkPart2', ...articles.benchmarkPart2 })} class="btn btn-primary">{t('benchmark.results')}</a>
+      <a href={benchmark.repo} class="btn btn-ghost">{t('benchmark.repo')}</a>
+    </div>
+  </div>
+  <Shot src={chart} alt={t('benchmark.chartAlt')} caption={t('benchmark.chartCaption')} sizes="(min-width: 1024px) 38rem, 94vw" />
+</div>
+<style>
+  .bfacts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 1.5rem; }
+  .bfacts > div { border-block-start: 3px solid var(--hue-vivid); padding-block-start: 0.8rem; }
+  .bfacts dd { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; color: var(--hue); line-height: 1; font-variant-numeric: tabular-nums; }
+  .bfacts dt { margin-block-start: 0.45rem; color: var(--muted); font-size: var(--text-sm); }
+</style>

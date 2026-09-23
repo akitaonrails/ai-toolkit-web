@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Podcasts and talks",
+    "description": "Fabio Akita on the Flow Podcast, Inteligência Ltda, Fernando Ulrich and Tropical on Rails: long conversations about AI, programming jobs and the hype, newest first."
+  },
+  "hero": {
+    "title": "Long conversations about AI",
+    "lede": "I no longer make videos, but I still accept a few long-form invitations. These are the ones worth your hours, newest first. They are in Brazilian Portuguese; YouTube's auto-translated captions do a decent job.",
+    "primary": "Start with the newest",
+    "secondary": "Jump to the Flow cuts"
+  },
+  "play": "Play",
+  "kind": { "podcast": "Podcast", "talk": "Conference talk" },
+  "views": "{n} views",
+  "watch": "Watch on YouTube",
+  "items": {
+    "U3bZavG8qQY": "Lessons from 37 days of full immersion in vibe coding: 653 commits, about 144,000 lines and 8 projects in production. What agents can and cannot do, which business models make sense, and why the one-shot prompt is a myth.",
+    "4c7pbOxYn_A": "Almost five hours on how AI changed in a year: the tipping point, what the owners of the biggest models do not say, why dumb questions burn more tokens, jobs, and which AI is best for programmers.",
+    "9aWa-eCmWYE": "The end of the hype era. Why excitement about AI is inversely proportional to knowing how it works, and how I used frontier models to multiply my output on seven real projects without replacing the engineer.",
+    "_Hl9wiLkns4": "With writer Ricardo Cavallini and astrophysicist Roberta Duarte: will superintelligence arrive, what a GPT really does, and a long detour through quantum physics and quantum computers.",
+    "sf4Gxf0LiKo": "My first long conversation about AI on Flow: what it really does today, its limits, its history back to the 1960s, and what nobody tells you about quantum computers."
+  },
+  "cuts": {
+    "title": "Cortes do Flow",
+    "lede": "The Flow team cut both episodes into short clips on their Cortes do Flow channel. If four hours is too much, start here.",
+    "episode": {
+      "4c7pbOxYn_A": "From Flow #588, April 2026",
+      "sf4Gxf0LiKo": "From the June 2025 episode"
+    },
+    "channel": "The Cortes do Flow channel",
+    "note": "View counts as of {date}."
+  }
+}

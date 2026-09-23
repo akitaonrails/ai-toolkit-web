@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "description": "The tools, skills and memory I use to run AI coding agents across 40+ repositories: ai-usagebar, ghpending, tclock, my-skills and ai-memory, plus my LLM benchmark."
+  },
+  "hero": {
+    "kicker": "Fabio Akita, in the open",
+    "title": "Akita's AI Toolkit",
+    "lede": "I maintain more than 40 open source repositories with AI agents doing most of the typing. These are the tools I built to keep that manageable, the workflow that ties them together, and the writing where I document what I learn.",
+    "primary": "See the workflow",
+    "secondary": "Where to follow me",
+    "shotAlt": "My second monitor: tclock showing 16:10:22 in large red digits, a GitHub pending widget listing open pull requests and issues for ai-memory and ai-usagebar, a Google Calendar widget and a system health strip.",
+    "shotCaption": "My second monitor on a normal Thursday. 43 repositories checked, 6 with something waiting."
+  },
+  "desk": {
+    "title": "One desk, two monitors, many agents",
+    "lede": "The second monitor tells me what needs attention. The first one runs one agent per project. A shared memory sits under all of them, and a gauge in the top bar tells me when to change providers.",
+    "alt": "Two monitors on a desk. Monitor 2 shows a red pixel clock and a ghpending list. Monitor 1 shows tmux split into four agent panes, with ai-usagebar in the top bar. A teal slab labelled ai-memory under the desk feeds all four panes.",
+    "steps": [
+      {
+        "title": "Monitor 2: the queue",
+        "text": "<a href=\"/clock-tui/\">tclock</a> shows the time, my calendar, system health, and a <a href=\"/ghpending/\">ghpending</a> widget with every open pull request and issue across the repositories I track."
+      },
+      {
+        "title": "Monitor 1: tmux, one agent per project",
+        "text": "Each tmux window is a project. I start the agent with <code>ai-memory run</code> and give it one line: <code>run pr-audit and iss-audit, then run github-resolution</code>. The <a href=\"/workflow/\">skills</a> do the rest."
+      },
+      {
+        "title": "Under everything: ai-memory",
+        "text": "Every project keeps its own memory of decisions and traps. A new session starts where the last one stopped, whichever agent runs it."
+      },
+      {
+        "title": "In the top bar: ai-usagebar",
+        "text": "<a href=\"/ai-usagebar/\">ai-usagebar</a> shows how much of each plan's 5-hour and weekly quota I have used, and when it resets. When one runs dry, I move the work to another agent."
+      }
+    ]
+  },
+  "loop": {
+    "title": "The daily loop",
+    "lede": "Skills do the heavy lifting. I read their reports, decide, and supervise.",
+    "alt": "A clockwise loop: See what is pending, Audit, Resolve, Release, around a central ai-memory wiki connected to every step.",
+    "caption": "ghpending shows the queue, the audit skills check every pull request and issue, github-resolution turns the approved ones into merged code, and the release skill cuts a version when I ask for one.",
+    "link": "How the pipeline works"
+  },
+  "switch": {
+    "title": "Out of quota? Change agents, keep the context",
+    "lede": "The memory lives outside the agent, so moving a task from Claude Code to Codex or OpenCode costs one command. The new agent reads the same wiki the previous one wrote.",
+    "alt": "Three terminals: Claude Code, Codex and OpenCode. Claude Code's quota gauge is full and red. A green arrow labelled Switch moves the work to Codex. All three sit on one slab labelled Same memory.",
+    "memory": "How ai-memory does it",
+    "usagebar": "How I watch the quotas",
+    "codeTitle": "one project, two agents"
+  },
+  "tools": {
+    "title": "Three small tools I use every day",
+    "lede": "In order of how much I depend on them. All three are written in Rust, MIT licensed, and install with one command.",
+    "more": "Everything about {name}",
+    "items": [
+      {
+        "tagline": "Know how much AI you have left",
+        "text": "A top-bar widget, a terminal UI and native tray apps that show quota, balance and reset time for Claude, Codex, GitHub Copilot, Z.AI, OpenRouter and 19 more providers.",
+        "points": [
+          "Omarchy Quattro, Waybar, GNOME, KDE Plasma 6, macOS and Windows",
+          "A desktop alert when a quota window crosses 97%",
+          "One bar item can cycle through every provider you pay for"
+        ],
+        "shotAlt": "The ai-usagebar panel open in the Omarchy top bar, showing Z.AI GLM Coding Pro usage: session, weekly and monthly MCP tools, each with its reset time, and tabs for Claude, Codex, Z.AI, OpenRouter and Kimi."
+      },
+      {
+        "tagline": "Every open PR and issue, in one list",
+        "text": "A Rust CLI that fetches every repository you track at once and prints what is waiting. Your own items drop to the bottom, since they wait on other people. Forks show your pull requests on the upstream project instead.",
+        "points": [
+          "Dependabot, secret scanning and code scanning alerts for repos you own",
+          "Sort by activity, name, count or the most neglected",
+          "Doubles as a tclock widget, with matching themes"
+        ],
+        "shotAlt": "ghpending output in a terminal: repositories FrankClaw, FrankMD, FrankMega and FrankSherlock, each with its open pull requests and issues, number, title, age and author."
+      },
+      {
+        "tagline": "A clock for the second monitor",
+        "text": "My maintained fork of clock-tui: a terminal clock, timer, stopwatch and countdown. Widgets run any command and show its output under the clock, so the clock becomes a dashboard.",
+        "points": [
+          "Evangelion and NERV themes, cycled with Shift+T",
+          "Widgets refresh on their own schedule and can open detail popups",
+          "Prebuilt binaries for x86_64 and aarch64"
+        ],
+        "shotAlt": "tclock with the NERV theme: 17:34:24 in large red pixel digits over a dark sky, a GitHub pending widget, a Google Calendar widget and a system health strip."
+      }
+    ]
+  },
+  "sisters": {
+    "title": "The bigger pieces",
+    "lede": "Two of my tools grew large enough for their own sites. The third is the set of prompts that drives the whole pipeline.",
+    "items": [
+      {
+        "title": "ai-memory",
+        "text": "Long-term memory for coding agents: a git-backed wiki of plain Markdown that captures sessions, consolidates decisions and hands work from one agent to another.",
+        "link": "Visit the ai-memory site"
+      },
+      {
+        "title": "ai-jail",
+        "text": "An OS sandbox for AI coding agents on Linux and macOS. The project stays writable. Your keys, tokens and home directory stay out of reach.",
+        "link": "Visit aijail.io"
+      },
+      {
+        "title": "my-skills",
+        "text": "About two dozen agent skills, from pr-audit to release. Published so you can read the reasoning and write your own.",
+        "link": "See how I use them"
+      }
+    ]
+  },
+  "writing": {
+    "title": "Learning in the open",
+    "lede": "Everything I try with AI ends up on my blog, with the numbers, the bills and the failures. That is also how I decide which model to use for what.",
+    "more": "More writing",
+    "postsTitle": "A few posts that show how I work"
+  },
+  "newsletter": {
+    "title": "And every Monday, a newsletter",
+    "text": "The M.Akita Chronicles is a weekly tech newsletter and podcast in Portuguese, curated by me and commented on by M.Arvin, a very depressed robot. The whole pipeline is AI-assisted.",
+    "link": "How it is made"
+  },
+  "quotes": {
+    "title": "Things I keep saying",
+    "lede": "If you have heard me on a podcast or read me on X, you have probably heard these.",
+    "items": [
+      {
+        "text": "Your excitement about AI is inversely proportional to your knowledge of AI.",
+        "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
+      },
+      {
+        "text": "AI is a mirror. If you are good, it makes you ten times faster. If you are bad, it also makes you ten times faster, at producing slop."
+      },
+      {
+        "text": "Ship first, fix later. AI made fixing faster and cheaper."
+      },
+      {
+        "text": "I prefer to apologize than to ask for permission."
+      },
+      {
+        "text": "I only believe in voluntary trade for mutual benefit.",
+        "cite": "After Ayn Rand"
+      }
+    ]
+  },
+  "independence": {
+    "title": "Nobody pays me to say any of this",
+    "text": "I am not a paid content creator. I take no sponsorships, have no Patreon and no paid subscriptions, and I do not make money from views. I am self-sustained, and I do all of this for my own pleasure. When I recommend a tool or a model, it is because I use it."
+  },
+  "podcasts": {
+    "title": "Five long conversations, on video",
+    "text": "Flow, Inteligência Ltda, Fernando Ulrich and a Tropical on Rails talk: hours about AI, programming jobs and the hype, plus the short cuts if you are in a hurry.",
+    "link": "Watch them"
+  }
+}

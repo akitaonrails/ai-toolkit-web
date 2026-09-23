@@ -1,0 +1,22 @@
+---
+// The closing call to action. The one centered thing on the site.
+import { site } from '@/data/site';
+import { useI18n } from '@/i18n';
+interface Props { title?: string; text?: string }
+const { t } = useI18n(Astro);
+const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
+---
+<section class="on-ink band text-center relative overflow-hidden">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="wrap-narrow relative">
+    <h2 class="text-3xl mx-auto max-w-[16em]">{title}</h2>
+    <p class="lede mx-auto mt-5">{text}</p>
+    <div class="mt-9 flex flex-wrap justify-center gap-3">
+      <a href={site.github} class="btn btn-primary">{t('cta.github')}</a>
+      <a href={site.blogEn + '/'} class="btn btn-ghost">{t('cta.blog')}</a>
+    </div>
+  </div>
+</section>
+<style>
+  .cta-glow { position: absolute; inset-inline: 10%; bottom: -60%; height: 100%; background: var(--spectrum); filter: blur(120px); opacity: 0.25; border-radius: 50%; }
+</style>

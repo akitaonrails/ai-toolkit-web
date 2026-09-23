@@ -1,0 +1,75 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Figure from '@/components/Figure.astro';
+import Shot from '@/components/Shot.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import Stats from '@/components/Stats.astro';
+import Callout from '@/components/Callout.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import home from '@/assets/img/shots/newsletter-home.png';
+import blog from '@/assets/img/shots/newsletter-blog.png';
+import { newsletter } from '@/data/site';
+import { chronicles } from '@/data/newsletter';
+import { articles, articleUrl } from '@/data/articles';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, date } = useI18n(Astro, 'newsletter');
+type Text = { title: string; text: string };
+const steps = raw<Text[]>('pipeline.steps');
+const stack = raw<Text[]>('stack.items').map((s) => ({ ...s, title: `<code>${s.title}</code>`, hue: 'rose' as const }));
+const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href: '/workflow/' }] as const, raw<Text[]>('next'));
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="rose" kicker={t('kicker.newsletter')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href={newsletter.url} class="btn btn-primary">{t('hero.primary')}</a>
+    <a href={newsletter.blog} class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+  <div class="wrap" data-hue="rose">
+    <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr] items-center">
+      <Shot src={home} alt={t('hero.shotAlt')} eager zoom={false} sizes="(min-width: 1024px) 42rem, 94vw" />
+      <div>
+        <Stats items={[{ n: chronicles.subscribers, label: t('numbers.subscribers') }, { n: chronicles.issues, label: t('numbers.issues') }]} />
+        <p class="mt-5 text-sm text-muted">{t('numbers.note', { date: date(chronicles.readOn) })}</p>
+      </div>
+    </div>
+  </div>
+
+  <Section title={t('pipeline.title')} lede={t('pipeline.lede')} hue="rose" fill>
+    <Figure name="newsletter-pipeline" alt={t('pipeline.alt')} />
+    <ol class="nl-steps" data-focus-list>
+      {steps.map((s, i) => (
+        <li>
+          <span class="num" aria-hidden="true">{i + 1}</span>
+          <div><h3 class="text-xl">{s.title}</h3><p class="mt-2 text-muted">{s.text}</p></div>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section title={t('stack.title')} lede={t('stack.lede')} hue="rose" tint>
+    <FeatureGrid items={stack} cols={2} />
+    <div class="mt-14"><Shot src={blog} alt={t('blogShotAlt')} /></div>
+  </Section>
+
+  <section class="wrap">
+    <Callout title={t('story.title')} hue="rose">
+      <p>{t('story.text')}</p>
+      <p><a class="link" href={articleUrl({ id: 'chronicles', ...articles.chronicles })}>{t('story.link')}</a></p>
+    </Callout>
+  </section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>
+
+<style>
+  .nl-steps { display: grid; gap: 2.2rem 3rem; }
+  @media (min-width: 48rem) { .nl-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .nl-steps > li { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; transition: opacity 0.4s; }
+  .nl-steps .num { display: grid; place-items: center; inline-size: 2.4rem; block-size: 2.4rem; border-radius: 99px; font-family: var(--font-mono); font-weight: 700; background: var(--hue-soft); color: var(--hue); box-shadow: 0 0 0 1.5px var(--hue-vivid); }
+  .nl-steps[data-focus-ready] > li[data-state='ahead'] { opacity: 0.45; }
+</style>

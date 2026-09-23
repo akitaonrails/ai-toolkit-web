@@ -1,0 +1,44 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Benchmark from '@/components/Benchmark.astro';
+import ArticleList from '@/components/ArticleList.astro';
+import Callout from '@/components/Callout.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { site } from '@/data/site';
+import { pick, type ArticleId } from '@/data/articles';
+import { localePaths, useI18n } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t } = useI18n(Astro, 'writing');
+// Which posts go under which heading. Adding a post: data in src/data/articles.ts, words in articles.json.
+const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: ArticleId[] }[] = [
+  { id: 'benchmarks', hue: 'rose', posts: ['benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
+  { id: 'agents', hue: 'violet', posts: ['skills', 'shipMore', 'openSourceAi', 'bestPractices', 'cleanCode', 'protect'] },
+  { id: 'experiments', hue: 'orange', posts: ['nesToSms', 'dayToDay', 'aiMemory2', 'chronicles'] },
+  { id: 'opinions', hue: 'red', posts: ['hotTake', 'aiKilled'] },
+];
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="rose" kicker={t('kicker.writing')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href={site.blogEn + '/'} class="btn btn-primary">{t('hero.primary')}</a>
+    <a href="#benchmark" class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+
+  <section id="benchmark" class="band bg-tint scroll-mt-16"><div class="wrap"><Benchmark /></div></section>
+
+  {groups.map((g, i) => (
+    <Section title={t(`sections.${g.id}.title`)} lede={t(`sections.${g.id}.lede`)} hue={g.hue} tint={i % 2 === 1} id={g.id}>
+      <ArticleList items={pick(...g.posts)} />
+    </Section>
+  ))}
+
+  <section class="wrap pb-16">
+    <Callout title={t('more.title')} hue="rose">
+      <p>{t('more.text')}</p>
+      <p><a class="link" href={site.blogEn + '/archives/'}>{t('more.archive')}</a></p>
+    </Callout>
+  </section>
+  <CtaBand />
+</Base>

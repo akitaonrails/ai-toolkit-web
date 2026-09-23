@@ -1,0 +1,100 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Figure from '@/components/Figure.astro';
+import Shot from '@/components/Shot.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import CodeBlock from '@/components/CodeBlock.astro';
+import Tabs from '@/components/Tabs.astro';
+import Clip from '@/components/Clip.astro';
+import RepoMeta from '@/components/RepoMeta.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import eva from '@/assets/img/shots/tclock-evangelion.png';
+import nerv from '@/assets/img/shots/tclock-nerv.png';
+import { repoUrl, site } from '@/data/site';
+import { repo } from '@/data/github';
+import { softwareApp } from '@/lib/schema';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw } = useI18n(Astro, 'tclock');
+type Text = { title: string; text: string };
+const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'red' as const }));
+const next = withText([{ hue: 'amber', href: '/ghpending/' }, { hue: 'violet', href: '/workflow/' }, { hue: 'blue', href: '/ai-usagebar/' }] as const, raw<Text[]>('next'));
+// The owner's real config, trimmed (mount exclusions removed). Keep in step with docs/sources.md.
+const config = `[clock]
+widget_themes = ["nerv", "evangelion", "default"]
+
+[[clock.widgets]]
+title = "GitHub pending"
+command = "ghpending"
+refresh_secs = 900
+
+[[clock.widgets]]
+title = "Google Calendar"
+command = "google-calendar-tui"
+refresh_secs = 3600
+
+[[clock.widgets]]
+title = ""  # the script draws its own header
+command = ["tclock-system-health", "--snapshots",
+  "--timer", "backups:restic-backup:26:restic"]
+refresh_secs = 300
+position = "bottom"
+
+[[clock.widgets.popup_actions]]
+label = "details"
+args = ["--details"]`;
+const examples = 'tclock --theme nerv\ntclock timer -d 25m 5m -T Focus Break\ntclock countdown -t 20:00 -T Dinner\ntclock stopwatch --no-millis';
+const install = ['yay -S clock-tui-bin', 'cargo install --git https://github.com/akitaonrails/clock-tui --package clock-tui'];
+const info = await repo('tclock');
+const schema = softwareApp({ name: 'tclock (clock-tui)', description: t('meta.description'), repo: repoUrl('tclock'), os: 'Linux', version: info.release?.tag, home: new URL('/', site.url).href });
+---
+<Base title={t('meta.title')} description={t('meta.description')} schema={[schema]}>
+  <PageHero hue="red" kicker={t('kicker.tclock')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#install" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href={repoUrl('tclock')} class="btn btn-ghost">GitHub</a>
+  </PageHero>
+  <div class="wrap" data-hue="red">
+    <RepoMeta id="tclock" />
+    <div class="grid gap-6 md:grid-cols-2 mt-10">
+      <Shot src={eva} alt={t('hero.evaAlt')} eager zoom={false} sizes="(min-width: 768px) 38rem, 94vw" />
+      <Shot src={nerv} alt={t('hero.nervAlt')} eager zoom={false} sizes="(min-width: 768px) 38rem, 94vw" />
+    </div>
+    <p class="mt-4 text-muted text-[0.95rem]">{t('hero.caption')}</p>
+  </div>
+
+  <Section title={t('widgets.title')} lede={t('widgets.lede')} hue="red" fill>
+    <Figure name="tclock-widgets" alt={t('widgets.alt')} />
+  </Section>
+
+  <Section title={t('config.title')} lede={t('config.lede')} hue="red" tint>
+    <div class="max-w-3xl"><CodeBlock title={t('config.codeTitle')} code={config} /></div>
+  </Section>
+
+  <Section title={t('features.title')} hue="red">
+    <FeatureGrid items={features} />
+  </Section>
+
+  <Section title={t('modes.title')} lede={t('modes.lede')} hue="red" tint>
+    <div class="grid gap-8 md:grid-cols-2">
+      <Clip src="/media/tclock-clock.mp4" poster="/media/tclock-clock.jpg" width={1714} height={876} label={t('modes.clockLabel')} />
+      <Clip src="/media/tclock-timer.mp4" poster="/media/tclock-timer.jpg" width={1714} height={876} label={t('modes.timerLabel')} />
+    </div>
+    <div class="max-w-3xl mt-10"><CodeBlock title={t('modes.codeTitle')} code={examples} /></div>
+  </Section>
+
+  <Section title={t('install.title')} hue="red" id="install">
+    <Tabs id="tclock-install" labels={raw<string[]>('install.tabs')}>
+      <div slot="0" class="max-w-3xl"><CodeBlock code={install[0]} /></div>
+      <div slot="1" class="max-w-3xl"><CodeBlock code={install[1]} /></div>
+      <div slot="2" class="max-w-3xl"><p class="text-muted"><a class="link" href={`${repoUrl('tclock')}/releases`}>{t('install.binary')}</a></p></div>
+    </Tabs>
+    <p class="mt-10 text-muted max-w-[40em] prose-site" set:html={t('install.credit')} />
+  </Section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>

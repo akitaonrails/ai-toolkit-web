@@ -1,0 +1,9 @@
+A left-to-right funnel diagram.
+
+LEFT: a loose column of seven small rounded chips in raised graphite with a blue (#48A2FF) dot each, labelled "Claude", "Codex", "Copilot", "Z.AI", "OpenRouter", "Kimi", "DeepSeek". Below them three faint dots meaning "and more".
+
+MIDDLE: thin blue lines from every chip converge into one sleek horizontal desktop top bar, labelled "One bar". In that bar sits one compact usage gauge.
+
+RIGHT: the gauge is shown enlarged, like a zoomed-in panel with three horizontal meters. The top meter is nearly full, and a vertical marker line near its end glows signal red (#FD3A37), labelled "Alert at 97%". The other two meters are partly filled in blue. Under the meters, a small clock icon labelled "Resets in".
+
+Only these labels: "Claude", "Codex", "Copilot", "Z.AI", "OpenRouter", "Kimi", "DeepSeek", "One bar", "Alert at 97%", "Resets in".

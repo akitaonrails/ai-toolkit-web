@@ -1,0 +1,9 @@
+An isometric illustration of a developer's desk seen slightly from above, with two monitors side by side and nothing else on the desk.
+
+LEFT MONITOR, labelled "Monitor 2" on a small tag under it: a dashboard. At the top, a very large blocky digital clock in signal red (#FD3A37) made of square pixels, showing a time like a stadium scoreboard (draw it as abstract pixel blocks, not readable digits). Below it, a panel with an amber (#FFBE3D) header dot, labelled "ghpending", holding a short list of lines with small "PR" and "ISS" like tags drawn as tiny colored pills (no text inside them).
+
+RIGHT MONITOR, labelled "Monitor 1" on a small tag under it: a terminal split into four equal panes in a 2x2 grid, labelled "tmux" on the terminal's top bar. Each pane has a small glowing violet (#A86BFD) chip icon (an AI agent) and a few abstract lines of text. Along the very top edge of this monitor, a thin status bar with a small blue (#48A2FF) gauge, labelled "ai-usagebar".
+
+UNDER BOTH MONITORS, spanning the full width of the desk, a glowing teal (#2FD8D0) slab like a shared foundation, labelled "ai-memory", with thin teal lines rising from it into each of the four tmux panes.
+
+Only these labels: "Monitor 2", "Monitor 1", "ghpending", "tmux", "ai-usagebar", "ai-memory".

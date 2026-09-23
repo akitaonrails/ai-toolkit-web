@@ -1,0 +1,14 @@
+---
+import Base from '@/layouts/Base.astro';
+import { localePaths, useI18n } from '@/i18n';
+export const getStaticPaths = localePaths;
+const { t, href } = useI18n(Astro);
+---
+<Base title={t('notfound.title')} noindex>
+  <section class="wrap pt-44 pb-32" data-hue="amber">
+    <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>404</div>
+    <h1 class="text-4xl">{t('notfound.title')}</h1>
+    <p class="lede mt-6">{t('notfound.text')}</p>
+    <a href={href('/')} class="btn btn-primary mt-8">{t('notfound.home')}</a>
+  </section>
+</Base>

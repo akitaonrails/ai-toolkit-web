@@ -1,0 +1,21 @@
+---
+// A strip of numbers that count up once. Numbers come from src/data, never typed into a page.
+interface Item { n: number; label: string; prefix?: string; suffix?: string }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+---
+<dl class="stats" style={`--cols:${items.length}`} data-reveal="children">
+  {items.map((f) => (
+    <div>
+      <dd class="text-4xl">{f.prefix}<span data-count={f.n}>{f.n.toLocaleString('en')}</span>{f.suffix}</dd>
+      <dt>{f.label}</dt>
+    </div>
+  ))}
+</dl>
+<style>
+  .stats { display: grid; gap: 2.2rem 2rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 48rem) { .stats { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
+  .stats > div { border-block-start: 3px solid var(--hue-vivid, var(--v-green)); padding-block-start: 1rem; }
+  .stats dd { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; }
+  .stats dt { margin-block-start: 0.6rem; color: var(--muted); }
+</style>

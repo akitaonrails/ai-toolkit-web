@@ -1,0 +1,19 @@
+---
+// Where to follow, one cell per network, each with what I post there.
+import { social } from '@/data/site';
+import { useI18n } from '@/i18n';
+const { t } = useI18n(Astro);
+---
+<ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
+  {social.map((s) => (
+    <li>
+      <a href={s.url} data-hue={s.hue} class="cell h-full" rel="me noopener">
+        <span class="flex items-baseline justify-between gap-3">
+          <span class="font-display font-bold text-xl" style="font-stretch:110%">{t(`social.${s.id}.name`)}</span>
+          <span class="font-mono text-sm" style="color:var(--hue)">{s.handle}</span>
+        </span>
+        <p class="mt-3 text-muted">{t(`social.${s.id}.text`)}</p>
+      </a>
+    </li>
+  ))}
+</ul>

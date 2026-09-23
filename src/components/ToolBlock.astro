@@ -1,0 +1,35 @@
+---
+// One tool on the home page: screenshot on one side, what it does and how to install it on the other.
+// Alternate `flip` between consecutive blocks.
+import Shot from './Shot.astro';
+import CodeBlock from './CodeBlock.astro';
+import RepoMeta from './RepoMeta.astro';
+import type { Hue, RepoId } from '@/data/site';
+import { useI18n } from '@/i18n';
+interface Props {
+  id: RepoId; name: string; hue: Hue; href: string; install: string; shot: ImageMetadata; flip?: boolean;
+  tagline: string; text: string; points: string[]; shotAlt: string; more: string;
+}
+const { id, name, hue, href: page, install, shot, flip, tagline, text, points, shotAlt, more } = Astro.props;
+const { href } = useI18n(Astro);
+---
+<article data-hue={hue} class:list={['tool grid gap-10 lg:gap-16 items-center lg:grid-cols-[1.15fr_1fr]', flip && 'flip']}>
+  <div class="tool-shot"><Shot src={shot} alt={shotAlt} sizes="(min-width: 1024px) 40rem, 94vw" /></div>
+  <div>
+    <div class="kicker"><span class="dot" aria-hidden="true"></span>{name}</div>
+    <h3 class="text-2xl mt-4">{tagline}</h3>
+    <p class="mt-4 text-muted">{text}</p>
+    <ul class="ticks mt-6">{points.map((p) => <li set:html={p} />)}</ul>
+    <div class="mt-7"><CodeBlock code={install} /></div>
+    <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+      <a href={href(page)} class="btn btn-ghost">{more}</a>
+      <RepoMeta id={id} />
+    </div>
+  </div>
+</article>
+<style>
+  @media (min-width: 64rem) {
+    .tool.flip { grid-template-columns: 1fr 1.15fr; }
+    .tool.flip .tool-shot { order: 2; }
+  }
+</style>

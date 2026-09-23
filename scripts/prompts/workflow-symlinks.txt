@@ -1,0 +1,9 @@
+A hub diagram. In the CENTER, a large violet (#A86BFD) folder icon labelled "my-skills" (monospace), with several small document cards fanned out of it.
+
+Around it on a circle, five terminal-window icons in raised graphite with a violet top bar dot, labelled (monospace) "Claude Code", "Codex", "OpenCode", "Kimi", "~/.agents".
+
+From the center folder, five thin glowing violet lines with small chain-link symbols (symbolic links) run out to each terminal.
+
+Under the center folder, a small phosphor green (#52F184) status dot and the label "One edit reaches all".
+
+Only these labels: "my-skills", "Claude Code", "Codex", "OpenCode", "Kimi", "~/.agents", "One edit reaches all".

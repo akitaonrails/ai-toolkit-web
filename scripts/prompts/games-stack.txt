@@ -1,0 +1,7 @@
+A layered stack diagram, read bottom to top.
+
+BOTTOM layer: a wide flat slab in raised graphite labelled "Host".
+MIDDLE layer: a large translucent orange (#FF8527) container box sitting on the host, labelled "distrobox", with a small monospace tag "gaming" on its side. Inside the box, two groups of small icons: retro game console and handheld silhouettes labelled "Emulators", and small game cartridge and disc icons labelled "PC ports". A small scroll or recipe icon on the container wall labelled "Ansible".
+TOP layer, floating above the container: a fullscreen grid of colorful rectangular game cover cards (abstract art, no text, no real game characters), like a store library, labelled "Launcher". Thin phosphor green (#52F184) lines connect the grid down into the container.
+
+Only these labels: "Host", "distrobox", "gaming", "Emulators", "PC ports", "Ansible", "Launcher".

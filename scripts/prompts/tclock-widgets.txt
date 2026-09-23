@@ -1,0 +1,9 @@
+An exploded-view diagram of a terminal dashboard, read top to bottom.
+
+TOP: a wide terminal window. Its upper half holds a very large blocky pixel clock in signal red (#FD3A37), drawn as abstract square pixel blocks (no readable digits). Its lower half holds three widget panels side by side, each with a glowing status dot in its header: an amber (#FFBE3D) dot panel, a teal (#2FD8D0) dot panel, a phosphor green (#52F184) dot panel. The panels contain only abstract lines.
+
+BELOW the terminal, three small command boxes (monospace), each connected by a thin dashed line up into one widget panel: "ghpending", "calendar", "system health". A small label between them and the terminal: "Any command".
+
+BOTTOM RIGHT: three small color swatch circles in a row, labelled "default", "evangelion", "nerv". The evangelion swatch is violet (#A86BFD) and green, the nerv swatch is orange (#FF8527) and red, the default swatch is neutral grey.
+
+Only these labels: "Any command", "ghpending", "calendar", "system health", "default", "evangelion", "nerv".

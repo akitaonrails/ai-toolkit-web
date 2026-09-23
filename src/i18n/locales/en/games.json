@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "My retro gaming setup, as code",
+    "description": "How Fabio Akita documents his game collection as code: Ansible playbooks for an Arch distrobox full of emulators and PC ports, and a fullscreen launcher for Omarchy."
+  },
+  "hero": {
+    "title": "My game collection, as code",
+    "lede": "Not everything I build with AI is about AI. My emulators, PC ports and mods live in a container that Ansible can rebuild from scratch, and a launcher of my own puts all of it one key away.",
+    "primary": "distrobox-gaming",
+    "secondary": "omarchy-games-menu",
+    "shotAlt": "The Omarchy games menu: a fullscreen grid of 52 game covers including Banjo-Kazooie, OutRun, several Colin McRae Rally titles, Donkey Kong Country and DOOM 3, with filter chips and sort buttons on top."
+  },
+  "stack": {
+    "title": "How it is layered",
+    "lede": "The host stays clean. Everything game-related lives in one Arch Linux container named gaming, and the launcher reads what is installed there.",
+    "alt": "Three layers: a Host slab at the bottom, an orange distrobox container labelled gaming holding Emulators and PC ports with an Ansible recipe on its wall, and a Launcher grid of cover art floating on top."
+  },
+  "distrobox": {
+    "title": "distrobox-gaming",
+    "text": "Ansible playbooks that build the whole setup and can reset, back up and restore it. Every emulator, config and mod set is written down, which makes the playbooks the real catalog of my collection.",
+    "points": [
+      "ES-DE and standalone emulators: shadPS4, Dolphin, PCSX2, DuckStation, Flycast, xemu, RPCS3, PPSSPP, Azahar, Eden, Cemu, RetroArch and Supermodel",
+      "Native recompilations and ports such as Ship of Harkinian, Starship, SpaghettiKart and Unleashed Recompiled",
+      "Wine-managed PC games and reproducible NexusMods mod sets per game",
+      "Per-game optimization configs, and batch installers for DLC and patches"
+    ],
+    "codeTitle": "from the ansible/ folder"
+  },
+  "menu": {
+    "title": "omarchy-games-menu",
+    "text": "A Steam-like fullscreen launcher for Omarchy and Hyprland. A Rust CLI, ogm, owns the logic; a QuickShell overlay draws the grid.",
+    "points": [
+      "Scans installed games and emulators, and groups them into Games, Emulators and Tools",
+      "Cover art and metadata from SteamGridDB, and new release checks on GitHub",
+      "Sorts by most played, name, date added or release date; type anywhere to filter",
+      "Opens with one keybinding, for example Super+G"
+    ]
+  },
+  "note": {
+    "title": "Why it is on this site",
+    "text": "Both repositories were written with the same agents and skills as everything else here, and they are the best example I have of the rule I apply everywhere: if a machine's setup is not code, it is not documented."
+  },
+  "next": [
+    { "title": "The workflow", "text": "The agents and skills that wrote these playbooks." },
+    { "title": "tclock", "text": "Another small tool that grew out of my own desk." }
+  ]
+}

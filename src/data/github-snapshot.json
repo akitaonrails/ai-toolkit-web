@@ -1,0 +1,77 @@
+{
+  "fetchedAt": "2026-09-23T19:20:52.662Z",
+  "repos": {
+    "usagebar": {
+      "stars": 549,
+      "language": "Rust",
+      "license": "MIT",
+      "release": {
+        "tag": "v1.22.0",
+        "date": "2026-09-23T18:20:04Z"
+      }
+    },
+    "ghpending": {
+      "stars": 44,
+      "language": "Rust",
+      "license": "MIT",
+      "release": {
+        "tag": "v0.9.0",
+        "date": "2026-09-20T13:34:06Z"
+      }
+    },
+    "tclock": {
+      "stars": 70,
+      "language": "Rust",
+      "license": "MIT",
+      "release": {
+        "tag": "v0.15.0",
+        "date": "2026-09-21T21:43:13Z"
+      }
+    },
+    "skills": {
+      "stars": 123,
+      "language": "Python",
+      "license": null,
+      "release": null
+    },
+    "memory": {
+      "stars": 8197,
+      "language": "Rust",
+      "license": "MIT",
+      "release": {
+        "tag": "v2.4.0",
+        "date": "2026-09-21T23:45:13Z"
+      }
+    },
+    "jail": {
+      "stars": 1280,
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "release": {
+        "tag": "v2.1.0",
+        "date": "2026-09-23T17:17:29Z"
+      }
+    },
+    "benchmark": {
+      "stars": 335,
+      "language": "Python",
+      "license": null,
+      "release": null
+    },
+    "distrobox": {
+      "stars": 311,
+      "language": "Shell",
+      "license": null,
+      "release": null
+    },
+    "gamesMenu": {
+      "stars": 16,
+      "language": "Rust",
+      "license": "MIT",
+      "release": {
+        "tag": "v0.1.7",
+        "date": "2026-09-23T04:40:09Z"
+      }
+    }
+  }
+}

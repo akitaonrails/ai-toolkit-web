@@ -1,0 +1,18 @@
+---
+// A real screenshot, framed like a window on the dark ground so light and dark captures sit the same way in both
+// themes. `tall` limits the height of portrait captures. Generated diagrams use Figure instead.
+import { Image } from 'astro:assets';
+interface Props { src: ImageMetadata; alt: string; caption?: string; tall?: boolean; eager?: boolean; zoom?: boolean; sizes?: string }
+const { src, alt, caption, tall, eager, zoom = true, sizes = '(min-width: 1280px) 1216px, 94vw' } = Astro.props;
+---
+<figure class="shot" data-tall={tall ? '' : undefined}>
+  <div class="shot-frame on-ink" dir="ltr" data-zoom={zoom ? '' : undefined}>
+    <Image src={src} alt={alt} widths={[480, 800, 1200, 1600, 2000].filter((w) => w <= src.width)} sizes={sizes} quality={84} class="w-full h-auto block" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} />
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+<style>
+  .shot-frame { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); will-change: transform; }
+  .shot[data-tall] .shot-frame { max-inline-size: 24rem; margin-inline: auto; }
+  figcaption { margin-top: 0.9rem; color: var(--muted); font-size: 0.95rem; max-width: 46em; }
+</style>

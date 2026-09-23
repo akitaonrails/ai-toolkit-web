@@ -1,0 +1,49 @@
+{
+  "_comment": "Edit this list, then run `node scripts/refresh-videos.mjs` to refresh titles, dates, views and thumbnails into src/data/videos.json. How the cuts were found: docs/sources.md.",
+  "appearances": [
+    "U3bZavG8qQY",
+    "4c7pbOxYn_A",
+    "9aWa-eCmWYE",
+    "_Hl9wiLkns4",
+    "sf4Gxf0LiKo"
+  ],
+  "cuts": {
+    "4c7pbOxYn_A": [
+      "-HIrbrd-O5A",
+      "Coi2-MBtkH8",
+      "fwYzEDPtdA0",
+      "5nKAHOSSgqY",
+      "xIjInGjJLFE",
+      "JmmrjgHFErQ",
+      "UJrT-KieiiQ",
+      "hJ2hqU0Cvmo",
+      "9ArApZStyzI",
+      "7dAKzagCklo",
+      "U_-g8zGu6wM",
+      "jaL7rXRcj1o",
+      "7YRNS4Q6kb0",
+      "yBBkP2k0lKg",
+      "aA5nQJnOUxc",
+      "PWpUC8wEUY0",
+      "LhjqBaEuezg",
+      "v9xg3A_eiIA",
+      "8dANZrq-z1I",
+      "ojCPRYw-AZ8",
+      "kJePoWn-DPk",
+      "xEh2xdW5Sus"
+    ],
+    "sf4Gxf0LiKo": [
+      "hyBaNlPJQjg",
+      "ZplyjiCon4M",
+      "PsNun0DABL8",
+      "1_9xn-_ExVI",
+      "uUKUa8_TdYo",
+      "3kheUdwa3ro",
+      "x8XFQA6fNQU",
+      "3ss_RUZqS4E",
+      "exfagaBE8kQ",
+      "5qD5Do_HriQ",
+      "q_hZY_1QcoU"
+    ]
+  }
+}

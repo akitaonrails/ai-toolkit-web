@@ -1,0 +1,11 @@
+A left-to-right diagram about switching AI coding tools when a usage quota runs out, without losing context.
+
+Three terminal windows stand side by side, equal size, each with a violet (#A86BFD) chip icon in it. Their title bars read "Claude Code", "Codex" and "OpenCode" (left to right).
+
+Above each terminal, a horizontal usage gauge in blue (#48A2FF). The LEFT gauge is completely full and its end glows signal red (#FD3A37), with the small label "Quota reached" above it. The MIDDLE and RIGHT gauges are mostly empty.
+
+A thick phosphor green (#52F184) arrow goes from the left terminal to the middle terminal, labelled "Switch".
+
+Under all three terminals, one continuous glowing teal (#2FD8D0) slab spans the whole width, labelled "Same memory". Thin teal lines rise from the slab into all three terminals, so they visibly share it.
+
+Only these labels: "Claude Code", "Codex", "OpenCode", "Quota reached", "Switch", "Same memory".

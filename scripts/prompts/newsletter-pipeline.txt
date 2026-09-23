@@ -1,0 +1,9 @@
+A wide horizontal pipeline over one week, read left to right, joined by phosphor green (#52F184) arrows.
+
+1. Left, rose (#F45FB0): a stream of small link cards and chat bubbles flowing in, labelled "Links".
+2. A rose station where the cards pass through a glowing lens and come out as neat summary cards with a small illustration thumbnail each, labelled "Summaries".
+3. Above station 2, a small, sad-looking, droopy rectangular robot head in outline (a mascot, deliberately gloomy), labelled "M.Arvin".
+4. A station shaped like a calendar page with a stack of sections being assembled, labelled "Sunday".
+5. The flow fans out on the right into three outputs, all under a small calendar tag labelled "Monday": an envelope icon labelled "Email", a microphone with sound waves labelled "Podcast", and a web page icon labelled "Blog".
+
+Only these labels: "Links", "Summaries", "M.Arvin", "Sunday", "Monday", "Email", "Podcast", "Blog".

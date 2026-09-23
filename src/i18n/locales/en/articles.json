@@ -1,0 +1,21 @@
+{
+  "readOn": "Read on akitaonrails.com",
+  "items": {
+    "benchmarkLatest": { "title": "LLM Benchmark v4: Opus 5.5, GPT 6 Sol and Luna, MiMo 2.6, Grok 4.7", "summary": "Five new models go into the v4 table. Is upgrading worth it, and why Grok 4.7 regresses against its own predecessor." },
+    "benchmarkPart1": { "title": "New LLM Benchmark v4, Part 1: the process", "summary": "Why I threw away a whole version, how the sabotaged Rails app works, and what it cost: over $4,000 in nine days." },
+    "benchmarkPart2": { "title": "New LLM Benchmark v4, Part 2: 39 models ranked", "summary": "The full table, ranked by vigilance. Six ties at the top, a free model beating half of Claude, and cost against score." },
+    "shipMore": { "title": "Stop making excuses and ship more", "summary": "With frontier models making fewer mistakes than most developers, review bureaucracy is the last excuse to hold a deploy. My numbers since February." },
+    "skills": { "title": "Talking a bit about my AI skills", "summary": "Skills are prompts in text files. Mine closed over a thousand PRs and issues. Read them, then write your own." },
+    "nesToSms": { "title": "AI challenge: converting NES ROMs to the Master System", "summary": "Frontier models against 6502 to Z80 translation, with the emulator as the feedback oracle, and where the mappers stall everything." },
+    "aiMemory2": { "title": "ai-memory 2.0", "summary": "The open OKF format, local embeddings by default, and teams working in parallel, compared with the alternatives." },
+    "hotTake": { "title": "Hot take: harness, loop and graph engineering are bullshit", "summary": "Thirty public repos, a benchmark and an AI marathon, none of them needing a new discipline with a consulting price tag." },
+    "dayToDay": { "title": "Using AI to solve my little day-to-day problems", "summary": "A desk clock with widgets, manga readers, email, typing practice, karaoke: small tools born from small annoyances." },
+    "protect": { "title": "How I stop my agents from deleting my stuff", "summary": "Five months in YOLO mode without an accident, and still no trust: BTRFS snapshots, restic backups, a sandbox and discipline." },
+    "openSourceAi": { "title": "AI contributions to open source projects: my take", "summary": "AI pull requests are here to stay, slop included. Automate triage and auditing, and keep the final decision human." },
+    "bestPractices": { "title": "Open source best practices with LLMs: the minimum", "summary": "Simple installs, reliable tests and CI, and documentation about the problem. Standard releases make automation predictable." },
+    "cleanCode": { "title": "Clean Code for AI agents", "summary": "When an agent is the main reader: small code, greppable names, provenance, headless tests and explicit rules." },
+    "multiModel": { "title": "LLM benchmarks: is it worth mixing models in one project?", "summary": "Seven combinations across Claude Code, opencode and Codex, and why a single strong model stayed the default." },
+    "chronicles": { "title": "Vibe code: from zero to production in 6 days", "summary": "How the newsletter, blog, podcast and Discord bot of The M.Akita Chronicles went live in six days and 201 commits." },
+    "aiKilled": { "title": "Rant: did AI kill programmers?", "summary": "Why AI will not replace experienced programmers, the S-curve ceiling of current LLMs, and what changes for engineers." }
+  }
+}

@@ -1,0 +1,22 @@
+---
+// A terminal with a copy button. Lines starting with "#" dim as comments. Always dark, always left to right.
+import { useI18n } from '@/i18n';
+interface Props { code: string; title?: string }
+const { code, title = 'terminal' } = Astro.props;
+const { t } = useI18n(Astro);
+const lines = code.trim().split('\n');
+---
+<div class="term on-ink" dir="ltr" data-code>
+  <div class="term-bar">
+    <span class="dot !size-2.5" style="--hue-vivid:var(--v-green)" aria-hidden="true"></span>
+    <span class="text-sm" style="color:var(--on-ink-muted)">{title}</span>
+    <button type="button" class="ms-auto text-sm font-semibold hover:underline" data-copy><span data-copy-label data-copied={t('code.copied')}>{t('code.copy')}</span></button>
+  </div>
+  <pre><code>{lines.map((l) => <span class:list={['block', l.trimStart().startsWith('#') && 'c']}>{l || ' '}</span>)}</code></pre>
+</div>
+<style is:global>
+  .term { border-radius: 1rem; border: 1.5px solid var(--ink-line); overflow: hidden; text-align: left; }
+  .term-bar { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 1rem; background: var(--ink-raised); border-block-end: 1px solid var(--ink-line); }
+  .term pre { padding: 1.1rem 1.2rem; overflow-x: auto; font-size: 0.93rem; line-height: 1.7; }
+  .term .c { color: var(--on-ink-muted); }
+</style>

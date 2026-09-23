@@ -1,0 +1,11 @@
+{
+  "usagebar": "akitaonrails/ai-usagebar",
+  "ghpending": "akitaonrails/ghpending",
+  "tclock": "akitaonrails/clock-tui",
+  "skills": "akitaonrails/my-skills",
+  "memory": "akitaonrails/ai-memory",
+  "jail": "akitaonrails/ai-jail",
+  "benchmark": "akitaonrails/llm-coding-benchmark",
+  "distrobox": "akitaonrails/distrobox-gaming",
+  "gamesMenu": "akitaonrails/omarchy-games-menu"
+}

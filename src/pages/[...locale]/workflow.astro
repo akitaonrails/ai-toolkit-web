@@ -1,0 +1,89 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Figure from '@/components/Figure.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import CodeBlock from '@/components/CodeBlock.astro';
+import Stats from '@/components/Stats.astro';
+import Callout from '@/components/Callout.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { repoUrl } from '@/data/site';
+import { articles, articleUrl } from '@/data/articles';
+import { totals, throughput, skillIds } from '@/data/workflow';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, href } = useI18n(Astro, 'workflow');
+type Text = { title: string; text: string };
+const prompts = raw<{ code: string; text: string }[]>('start.items');
+const skills = withText(skillIds.map((id) => ({ hue: id === 'release' ? 'rose' : id === 'pr-bump' ? 'amber' : 'violet', href: `${repoUrl('skills')}/tree/master/${id}` })) as { hue: 'violet' | 'rose' | 'amber'; href: string }[], raw<Text[]>('skills.items'))
+  .map((s) => ({ ...s, title: `<code>${s.title}</code>` }));
+const knowledge = withText([{ hue: 'teal' }, { hue: 'violet' }, { hue: 'amber' }, { hue: 'rose' }] as const, raw<Text[]>('knowledge.items'));
+const next = withText([{ hue: 'blue', href: '/ai-usagebar/' }, { hue: 'amber', href: '/ghpending/' }, { hue: 'rose', href: '/writing/' }] as const, raw<Text[]>('next'));
+const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="violet" kicker={t('kicker.workflow')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href={repoUrl('skills')} class="btn btn-primary">{t('hero.primary')}</a>
+    <a href="#copy" class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+
+  <Section title={t('start.title')} lede={t('start.lede')} hue="violet" fill>
+    <div class="grid gap-10 lg:grid-cols-2 items-start">
+      <CodeBlock title={t('start.codeTitle')} code={'cd ~/Projects/ai-usagebar\nai-memory run claude\n# quota gone? same workstream, another agent\nai-memory run codex --yolo'} />
+      <div>
+        <p class="text-muted">{t('start.prompts')}</p>
+        <ul class="grid gap-5 mt-5">
+          {prompts.map((p) => (
+            <li class="prompt">
+              <code class="block">{p.code}</code>
+              <p class="mt-2 text-muted text-[0.97rem]">{p.text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Section title={t('pipeline.title')} lede={t('pipeline.lede')} hue="violet" tint>
+    <Figure name="workflow-pipeline" alt={t('pipeline.alt')} caption={t('pipeline.caption')} />
+  </Section>
+
+  <Section title={t('skills.title')} lede={t('skills.lede')} hue="violet" id="skills">
+    <FeatureGrid items={skills} />
+    <a href={repoUrl('skills')} class="btn btn-ghost mt-10">{t('skills.link')}</a>
+  </Section>
+
+  <Section title={t('numbers.title')} lede={t('numbers.lede')} hue="violet" tint>
+    <Stats items={[
+      { n: totals.prs, label: t('numbers.prs') },
+      { n: totals.issues, label: t('numbers.issues') },
+      { n: throughput.trackedRepos, label: t('numbers.repos') },
+    ]} />
+  </Section>
+
+  <Section title={t('links.title')} lede={t('links.lede')} hue="violet">
+    <Figure name="workflow-symlinks" alt={t('links.alt')} />
+    <div class="max-w-2xl"><CodeBlock title={t('links.codeTitle')} code={'mkdir ~/Projects/my-skills/<name>   # add a SKILL.md\nfor h in ~/.claude/skills ~/.agents/skills ~/.codex/skills; do\n  ln -s ~/Projects/my-skills/<name> "$h/<name>"\ndone'} /></div>
+  </Section>
+
+  <section class="wrap" id="copy">
+    <Callout title={t('copy.title')} hue="red">
+      <p>{t('copy.text')}</p>
+      <p><a class="link" href={skillsPost}>{t('copy.link')}</a></p>
+    </Callout>
+  </section>
+
+  <Section title={t('knowledge.title')} lede={t('knowledge.lede')} hue="teal">
+    <FeatureGrid items={knowledge} cols={2} />
+  </Section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>
+
+<style>
+  .prompt code { font-size: 0.95rem; color: var(--violet); background: var(--violet-soft); border: 0; padding: 0.55rem 0.8rem; border-radius: 0.6rem; overflow-wrap: anywhere; }
+</style>

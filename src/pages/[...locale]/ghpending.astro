@@ -1,0 +1,70 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Figure from '@/components/Figure.astro';
+import Shot from '@/components/Shot.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import CodeBlock from '@/components/CodeBlock.astro';
+import Tabs from '@/components/Tabs.astro';
+import Callout from '@/components/Callout.astro';
+import RepoMeta from '@/components/RepoMeta.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import digest from '@/assets/img/shots/ghpending-digest.png';
+import { repoUrl, site } from '@/data/site';
+import { repo } from '@/data/github';
+import { softwareApp } from '@/lib/schema';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, href } = useI18n(Astro, 'ghpending');
+type Text = { title: string; text: string };
+const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'amber' as const }));
+const next = withText([{ hue: 'red', href: '/clock-tui/' }, { hue: 'violet', href: '/workflow/' }, { hue: 'blue', href: '/ai-usagebar/' }] as const, raw<Text[]>('next'));
+// Commands from the README's Usage and Install sections.
+const usage = 'ghpending add                 # pick repos to track\nghpending                     # print the digest\nghpending --sort stale        # most neglected repo first\nghpending --subscribed        # only what you follow\nGITHUB_TOKEN=$(gh auth token) ghpending';
+const install = ['brew tap akitaonrails/tap && brew install ghpending', 'yay -S ghpending-bin', 'cargo install ghpending', 'mise use -g github:akitaonrails/ghpending'];
+const info = await repo('ghpending');
+const schema = softwareApp({ name: 'ghpending', description: t('meta.description'), repo: repoUrl('ghpending'), os: 'Linux, macOS', version: info.release?.tag, home: new URL('/', site.url).href });
+---
+<Base title={t('meta.title')} description={t('meta.description')} schema={[schema]}>
+  <PageHero hue="amber" kicker={t('kicker.ghpending')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#install" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href={repoUrl('ghpending')} class="btn btn-ghost">GitHub</a>
+  </PageHero>
+  <div class="wrap" data-hue="amber">
+    <RepoMeta id="ghpending" />
+    <div class="mt-10"><Shot src={digest} alt={t('hero.shotAlt')} eager zoom={false} /></div>
+  </div>
+
+  <Section title={t('what.title')} lede={t('what.lede')} hue="amber" fill>
+    <Figure name="ghpending-digest" alt={t('what.alt')} />
+  </Section>
+
+  <Section title={t('features.title')} hue="amber" tint>
+    <FeatureGrid items={features} />
+  </Section>
+
+  <Section title={t('usage.title')} lede={t('usage.lede')} hue="amber" id="install">
+    <div class="max-w-3xl"><CodeBlock title={t('usage.codeTitle')} code={usage} /></div>
+    <h3 class="text-2xl mt-16 mb-6">{t('install.title')}</h3>
+    <Tabs id="ghpending-install" labels={raw<string[]>('install.tabs')}>
+      <div slot="0" class="max-w-3xl"><CodeBlock code={install[0]} /></div>
+      <div slot="1" class="max-w-3xl"><CodeBlock code={install[1]} /></div>
+      <div slot="2" class="max-w-3xl"><CodeBlock code={install[2]} /></div>
+      <div slot="3" class="max-w-3xl"><CodeBlock code={install[3]} /></div>
+    </Tabs>
+    <a href={`${repoUrl('ghpending')}#readme`} class="btn btn-ghost mt-8">{t('install.readme')}</a>
+  </Section>
+
+  <section class="wrap">
+    <Callout title={t('widget.title')} hue="red">
+      <p set:html={t('widget.text')} />
+      <p><a class="link" href={href('/clock-tui/')}>{t('widget.link')}</a></p>
+    </Callout>
+  </section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>

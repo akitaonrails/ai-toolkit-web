@@ -1,0 +1,34 @@
+{
+  "name": "ai-toolkit-web",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Akita's AI Toolkit: Fabio Akita's open source AI tools, workflow and writing, in one place: https://aitoolkit.akitaonrails.com",
+  "author": "Fabio Akita",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:colors": "node scripts/check-contrast.mjs",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "i18n:stamp": "node scripts/check-i18n.mjs --stamp",
+    "colors:build": "node scripts/build-palette.mjs --write",
+    "snapshot:github": "node scripts/snapshot-github.mjs",
+    "videos:refresh": "node scripts/refresh-videos.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/hubot-sans": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/mona-sans": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.4",
+    "gsap": "^3.15.0",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "culori": "^4.0.2"
+  }
+}

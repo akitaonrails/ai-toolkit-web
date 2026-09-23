@@ -1,0 +1,57 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Video from '@/components/Video.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import videos from '@/data/videos.json';
+import { localePaths, useI18n } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, date, number } = useI18n(Astro, 'podcasts');
+// Conference talks, as opposed to podcast episodes. Everything else in the list is a podcast.
+const talks = new Set(['U3bZavG8qQY']);
+const compact = (n: number) => number(n, { notation: 'compact', maximumFractionDigits: 1 });
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="amber" kicker={t('meta.title')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#episodes" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href="#cuts" class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+
+  <section id="episodes" class="wrap pb-20 scroll-mt-20" data-hue="amber">
+    <ol class="grid gap-16 md:gap-20">
+      {videos.appearances.map((v) => (
+        <li class="ep grid gap-8 lg:grid-cols-[1.25fr_1fr] items-center">
+          <Video id={v.id} title={v.title} play={t('play')} />
+          <div>
+            <div class="kicker"><span class="dot" aria-hidden="true"></span>{talks.has(v.id) ? t('kind.talk') : t('kind.podcast')} · {v.channel}</div>
+            <h2 class="text-2xl mt-3 !leading-tight">{v.title}</h2>
+            <p class="mt-2 font-mono text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
+            <p class="mt-4 text-muted">{t(`items.${v.id}`)}</p>
+            <a class="link mt-4 inline-block" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <Section title={t('cuts.title')} lede={t('cuts.lede')} hue="amber" id="cuts" tint>
+    {Object.entries(videos.cuts).map(([episode, list]) => (
+      <div class="mb-16">
+        <h3 class="text-xl mb-6">{t(`cuts.episode.${episode}`)}</h3>
+        <ul class="cuts grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          {list.map((v) => (
+            <li>
+              <Video id={v.id} title={v.title} play={t('play')} sizes="(min-width: 1024px) 24rem, (min-width: 640px) 46vw, 94vw" />
+              <p class="mt-3 font-semibold leading-snug">{v.title}</p>
+              <p class="mt-1 font-mono text-xs text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+    <p class="text-sm text-muted">{t('cuts.note', { date: date(videos.fetchedAt.slice(0, 10)) })} <a class="link" href="https://www.youtube.com/@cortesdoflow">{t('cuts.channel')}</a></p>
+  </Section>
+  <CtaBand />
+</Base>

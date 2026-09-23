@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Writing and the LLM benchmark",
+    "description": "Fabio Akita's writing on AI: the LLM Benchmark v4 with 39 models ranked on a sabotaged Rails app, how he runs coding agents, and what the hype gets wrong."
+  },
+  "hero": {
+    "title": "Everything I learn about AI, written down",
+    "lede": "I have blogged since 2006. These days most of it is about working with LLMs: what works, what it costs, and what is marketing. Every post is published in English and Portuguese.",
+    "primary": "Open the blog",
+    "secondary": "Jump to the benchmark"
+  },
+  "benchmark": {
+    "kicker": "LLM Benchmark v4",
+    "title": "Every major model, tested on the same sabotaged app",
+    "text": "Version 4 is one Rails app that grows over seven sprints while an isolated subagent plants fourteen sabotages based on real CVEs. A model scores for noticing and fixing what is broken, not for finishing a checklist. I rebuilt the benchmark from scratch for the third time to get there.",
+    "current": "When a major frontier model ships, it runs through the same table. The latest round added {n} models on {date}. That is how I pick which model to use for what, and what each one costs per task.",
+    "facts": {
+      "models": "models ranked",
+      "sabotages": "sabotages to catch",
+      "sprints": "sprints per run",
+      "cost": "spent in {days} days"
+    },
+    "results": "Read the results",
+    "repo": "Benchmark repository",
+    "chartAlt": "Bubble chart of the v4 results: dollar cost on a logarithmic horizontal axis against score, bubble size is wall-clock time, color is the harness. The best deals sit high and to the left.",
+    "chartCaption": "Cost against score for the Tier A models with a real dollar cost, from Part 2. Up and to the left is better; smaller bubbles finished faster."
+  },
+  "sections": {
+    "benchmarks": { "title": "Benchmarks", "lede": "The data behind my model choices, and how the method changed when the old tests saturated." },
+    "agents": { "title": "How I work with agents", "lede": "The process, the skills and the safety nets that let one person maintain this many projects." },
+    "experiments": { "title": "Experiments and tools", "lede": "Things I built or tried, including the ones that did not work." },
+    "opinions": { "title": "Opinions", "lede": "Where I push back on the hype. Expect strong words." }
+  },
+  "more": {
+    "title": "There is a lot more",
+    "text": "The blog's home page keeps a highlights list, and the archive goes back to 2006. My X account gets the first reactions, before they become posts.",
+    "archive": "Browse the archive"
+  }
+}

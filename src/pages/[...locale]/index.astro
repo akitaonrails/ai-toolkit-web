@@ -1,0 +1,155 @@
+---
+import Base from '@/layouts/Base.astro';
+import Section from '@/components/Section.astro';
+import Figure from '@/components/Figure.astro';
+import Shot from '@/components/Shot.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import ToolBlock from '@/components/ToolBlock.astro';
+import Benchmark from '@/components/Benchmark.astro';
+import ArticleList from '@/components/ArticleList.astro';
+import Social from '@/components/Social.astro';
+import Quotes from '@/components/Quotes.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import CodeBlock from '@/components/CodeBlock.astro';
+import desk from '@/assets/img/shots/desk-second-monitor.png';
+import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
+import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
+import tclockShot from '@/assets/img/shots/tclock-nerv.png';
+import { sisters } from '@/data/site';
+import { pick } from '@/data/articles';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, href } = useI18n(Astro, 'home');
+type Text = { title: string; text: string };
+type Tool = { tagline: string; text: string; points: string[]; shotAlt: string };
+
+const steps = withText([{ hue: 'red' }, { hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }] as const, raw<Text[]>('desk.steps'));
+const tools = withText([
+  { id: 'usagebar', name: 'ai-usagebar', hue: 'blue', href: '/ai-usagebar/', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo binstall ai-usagebar' },
+  { id: 'ghpending', name: 'ghpending', hue: 'amber', href: '/ghpending/', shot: ghpendingShot, install: 'brew tap akitaonrails/tap && brew install ghpending\nghpending add' },
+  { id: 'tclock', name: 'tclock', hue: 'red', href: '/clock-tui/', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
+] as const, raw<Tool[]>('tools.items'));
+const bigger = withText([
+  { hue: sisters.memory.hue, href: sisters.memory.url },
+  { hue: sisters.jail.hue, href: sisters.jail.url },
+  { hue: 'violet', href: '/workflow/' },
+] as const, raw<(Text & { link: string })[]>('sisters.items'));
+const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cleanCode');
+---
+<Base description={t('meta.description')}>
+  <section class="hero" data-exit>
+    <div class="wrap grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] pt-32 pb-16 md:pt-40 md:pb-24">
+      <div>
+        <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{t('hero.kicker')}</div>
+        <h1 class="text-4xl hero-title" data-reveal>{t('hero.title')}</h1>
+        <div class="spectrum-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
+        <p class="lede mt-7 !text-[1.3rem]">{t('hero.lede')}</p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href={href('/workflow/')} class="btn btn-primary">{t('hero.primary')}</a>
+          <a href="#follow" class="btn btn-ghost">{t('hero.secondary')}</a>
+        </div>
+      </div>
+      <div class="relative" data-parallax="0.06">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="relative"><Shot src={desk} alt={t('hero.shotAlt')} caption={t('hero.shotCaption')} eager zoom={false} sizes="(min-width: 1024px) 36rem, 94vw" /></div>
+      </div>
+    </div>
+  </section>
+
+  <Section title={t('desk.title')} lede={t('desk.lede')} hue="violet" fill>
+    <Figure name="home-desk" alt={t('desk.alt')} />
+    <ol class="desk-steps" data-focus-list>
+      {steps.map((s, i) => (
+        <li data-hue={s.hue}>
+          <span class="num" aria-hidden="true">{i + 1}</span>
+          <div>
+            <h3 class="text-xl">{s.title}</h3>
+            <p class="mt-2 text-muted" set:html={s.text} />
+          </div>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section title={t('loop.title')} lede={t('loop.lede')} hue="violet" tint>
+    <Figure name="home-loop" alt={t('loop.alt')} caption={t('loop.caption')} />
+    <a href={href('/workflow/')} class="btn btn-ghost">{t('loop.link')}</a>
+  </Section>
+
+  <Section title={t('switch.title')} lede={t('switch.lede')} hue="teal">
+    <Figure name="home-switch" alt={t('switch.alt')} />
+    <div class="max-w-2xl mb-8"><CodeBlock title={t('switch.codeTitle')} code={'ai-memory run claude\n# quota gone: same workstream, different agent\nai-memory run codex --yolo'} /></div>
+    <div class="flex flex-wrap gap-3">
+      <a href={sisters.memory.url} class="btn btn-ghost">{t('switch.memory')}</a>
+      <a href={href('/ai-usagebar/')} class="btn btn-ghost">{t('switch.usagebar')}</a>
+    </div>
+  </Section>
+
+  <Section title={t('tools.title')} lede={t('tools.lede')} id="tools" tint>
+    <div class="grid gap-24 md:gap-32">
+      {tools.map((tool, i) => (
+        <ToolBlock {...tool} flip={i % 2 === 1} more={t('tools.more', { name: tool.name })} />
+      ))}
+    </div>
+  </Section>
+
+  <Section title={t('sisters.title')} lede={t('sisters.lede')}>
+    <FeatureGrid items={bigger} />
+  </Section>
+
+  <Section title={t('writing.title')} lede={t('writing.lede')} hue="rose" id="writing" tint>
+    <Benchmark />
+    <h3 class="text-2xl mt-24 mb-8">{t('writing.postsTitle')}</h3>
+    <ArticleList items={posts} />
+    <a href={href('/writing/')} class="btn btn-ghost mt-10">{t('writing.more')}</a>
+  </Section>
+
+  <Quotes title={t('quotes.title')} lede={t('quotes.lede')} items={raw('quotes.items')} />
+
+  <section class="wrap my-16 grid gap-6 md:grid-cols-2">
+    <div data-hue="rose" class="pair cell !p-8">
+      <div class="kicker"><span class="dot" aria-hidden="true"></span>The M.Akita Chronicles</div>
+      <h2 class="text-2xl mt-3">{t('newsletter.title')}</h2>
+      <p class="mt-3 text-muted">{t('newsletter.text')}</p>
+      <a href={href('/newsletter/')} class="btn btn-ghost mt-6">{t('newsletter.link')}</a>
+    </div>
+    <div data-hue="amber" class="pair cell !p-8">
+      <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('kicker.podcasts')}</div>
+      <h2 class="text-2xl mt-3">{t('podcasts.title')}</h2>
+      <p class="mt-3 text-muted">{t('podcasts.text')}</p>
+      <a href={href('/podcasts/')} class="btn btn-ghost mt-6">{t('podcasts.link')}</a>
+    </div>
+  </section>
+
+  <Section title={t('social.title')} lede={t('social.lede')} id="follow">
+    <Social />
+    <aside class="indie mt-14" data-hue="teal">
+      <span class="dot" aria-hidden="true"></span>
+      <div>
+        <h3 class="text-xl">{t('independence.title')}</h3>
+        <p class="mt-2 text-muted max-w-[46em]">{t('independence.text')}</p>
+      </div>
+    </aside>
+  </Section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .hero { background: var(--bg); transform-origin: 50% 100%; }
+  .hero-title { font-stretch: 118%; letter-spacing: -0.03em; }
+  .hero-glow { position: absolute; inset: 6%; background: var(--spectrum); filter: blur(90px); opacity: 0.28; border-radius: 50%; }
+
+  .desk-steps { display: grid; gap: 2.5rem 3rem; margin-block-start: 1rem; }
+  @media (min-width: 48rem) { .desk-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .desk-steps > li { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; transition: opacity 0.4s; }
+  .desk-steps .num { display: grid; place-items: center; inline-size: 2.4rem; block-size: 2.4rem; border-radius: 99px; font-family: var(--font-mono); font-weight: 700; background: var(--hue-soft); color: var(--hue); box-shadow: 0 0 0 1.5px var(--hue-vivid); }
+  .desk-steps :global(a) { color: var(--hue); text-decoration: underline; text-underline-offset: 0.2em; }
+  .desk-steps[data-focus-ready] > li[data-state='ahead'] { opacity: 0.45; }
+  .indie { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; padding: 1.6rem; border-radius: var(--radius); background: var(--hue-soft); }
+  .indie .dot { margin-block-start: 0.45rem; }
+  .pair { border-color: color-mix(in oklch, var(--hue-vivid) 45%, var(--line)); display: flex; flex-direction: column; align-items: flex-start; }
+  .pair .btn { margin-block-start: auto; }
+  .pair p { margin-block-end: 1.5rem; }
+</style>

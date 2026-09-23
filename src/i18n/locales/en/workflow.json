@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "My AI coding workflow",
+    "description": "How Fabio Akita runs AI coding agents across 40+ repositories: tmux, one line per project, audit skills for every PR and issue, and ai-memory under every harness."
+  },
+  "hero": {
+    "title": "How one person keeps 40 repositories moving",
+    "lede": "Every morning I open one agent per project in tmux, give it a single line, and review what comes back. The heavy lifting lives in skills: plain text prompts I keep refining.",
+    "primary": "Read the skills",
+    "secondary": "Why not copy them"
+  },
+  "start": {
+    "title": "One line to start the day",
+    "lede": "Each tmux window is one project. I launch the agent through ai-memory, so it arrives with that project's memory and its hooks already wired.",
+    "codeTitle": "a tmux window, every morning",
+    "prompts": "Then I type one of three lines, depending on what the queue looks like:",
+    "items": [
+      { "code": "run pr-audit and iss-audit, then run github-resolution", "text": "The normal day: audit everything open, then fix what the audits approved." },
+      { "code": "... then run the release skill", "text": "Appended when enough has landed for a version." },
+      { "code": "run pr-bump and release", "text": "Days when the only queue is Dependabot." }
+    ]
+  },
+  "pipeline": {
+    "title": "The pipeline",
+    "lede": "Nothing a contributor writes is taken as true. Every claim gets checked, every approved fix gets a test first, and nothing is tagged without green CI on that exact commit.",
+    "alt": "A left to right pipeline: Open PRs and issues split into pr-audit and iss-audit, which merge after an Approved check into github-resolution, then pr-post-audit, then release. An ai-memory bar runs under all of it.",
+    "caption": "pr-post-audit runs when a session resolved more than three tickets. The release skill runs only when I ask for one."
+  },
+  "skills": {
+    "title": "The skills that do the work",
+    "lede": "Each one is a SKILL.md file: a name, a description, and a long, specific prompt. The agent loads the body only when it decides to use the skill.",
+    "items": [
+      { "title": "pr-audit", "text": "Evidence over narrative. Checks every claim in a pull request, looks for hidden executable bits, homoglyphs, unpinned actions, typosquatted dependencies and prompt injection, and gates semver." },
+      { "title": "iss-audit", "text": "The same distrust for issues. Never runs a command copied from an issue, separates what was observed from the reporter's diagnosis, and reproduces with synthetic data in a sandbox." },
+      { "title": "github-resolution", "text": "Turns approved tickets into merged code, one at a time, each with a regression test written before the fix. No speculative abstractions, no drive-by refactors." },
+      { "title": "security-audit", "text": "A threat model and audit for a codebase, a commit range or a pull request: injection, auth bypass, secrets, supply chain, CI compromise, denial of service." },
+      { "title": "pr-bump", "text": "The fast path for Dependabot. Batches every bump into one verification pass, with a supply-chain floor that sends anything odd to a full audit." },
+      { "title": "release", "text": "The version comes from the changelog: fixes are a patch, additions a minor, breaking changes a major. Tags only on green CI, and never rewrites a published tag." }
+    ],
+    "link": "All skills on GitHub"
+  },
+  "numbers": {
+    "title": "What that adds up to",
+    "lede": "Counted on September 17, 2026, across three of my projects: ai-memory, ai-usagebar and ai-jail. Nearly all of it went through these skills, with me reading the reports and making the calls.",
+    "prs": "merged pull requests",
+    "issues": "closed issues",
+    "repos": "repositories I track with ghpending"
+  },
+  "links": {
+    "title": "One folder, every agent",
+    "lede": "The skills live in one repository. Each agent's skills folder holds symbolic links into it, so an edit reaches Claude Code, Codex, OpenCode and Kimi at once.",
+    "alt": "A central my-skills folder linked by chain symbols to five agent folders: Claude Code, Codex, OpenCode, Kimi and ~/.agents. One edit reaches all.",
+    "codeTitle": "adding a skill"
+  },
+  "copy": {
+    "title": "Please do not copy my skills",
+    "text": "They are molded around my projects, my languages and my level of supply-chain paranoia. Running someone else's skill blind means installing their instructions with your permissions, on your repositories, with your tokens. Read mine for the structure and the reasoning, then ask your own agent to write yours.",
+    "link": "The post where I explain this"
+  },
+  "knowledge": {
+    "title": "Skills are small. Knowledge is large.",
+    "lede": "Skills cover procedures that repeat the same way. Everything else lives in plain text the agents can read.",
+    "items": [
+      { "title": "A memory per project", "text": "ai-memory keeps each project's decisions, traps and handoffs. A new session, in any agent, starts from there." },
+      { "title": "AGENTS.md everywhere", "text": "Every repository has its own instructions: the commands, the invariants, the mistakes not to repeat." },
+      { "title": "Point at a living example", "text": "\"Make an AUR workflow like the one in ai-memory\" beats a skill about AUR packaging, because the example is always current." },
+      { "title": "Write down what did not become code", "text": "Research, rejected alternatives, the reason behind a decision. Every hour of agent research becomes a document I can reuse." }
+    ]
+  },
+  "next": [
+    { "title": "ai-usagebar", "text": "The quota gauge that tells me when to switch agents." },
+    { "title": "ghpending", "text": "The list that tells me which projects need a morning." },
+    { "title": "Writing", "text": "The benchmark and the posts behind these choices." }
+  ]
+}

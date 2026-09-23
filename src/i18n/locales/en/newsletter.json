@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "The M.Akita Chronicles: a weekly AI-assisted newsletter",
+    "description": "The M.Akita Chronicles is Fabio Akita's weekly tech newsletter and podcast in Portuguese, curated by him and assembled by an AI pipeline with a gloomy robot co-host."
+  },
+  "hero": {
+    "title": "A weekly newsletter, built like a newsroom of agents",
+    "lede": "The M.Akita Chronicles lands every Monday morning: the links I found worth reading that week, with my comments, sarcastic remarks from M.Arvin, a very depressed robot, and a podcast of the two of us. It is written in Portuguese.",
+    "primary": "Subscribe",
+    "secondary": "Read past issues",
+    "shotAlt": "The M.Akita Chronicles subscription page: the title between cartoon avatars of M.Akita and M.Arvin, a line saying join 16,054 active subscribers, and an email sign-up form."
+  },
+  "numbers": {
+    "subscribers": "subscribers",
+    "issues": "weekly issues so far",
+    "note": "Counted on {date}."
+  },
+  "pipeline": {
+    "title": "From links to your inbox",
+    "lede": "I post links and comments during the week. The pipeline does the rest, and nothing ships without passing an approval check.",
+    "alt": "A week-long pipeline: Links flow into a lens that turns them into Summaries with illustrations, watched by a gloomy robot labelled M.Arvin. On Sunday the sections are assembled. On Monday the flow fans out to Email, Podcast and Blog.",
+    "steps": [
+      { "title": "During the week", "text": "I drop links and comments in a Discord channel, and my posts on X are collected every 30 minutes. Each article is fetched, summarized and illustrated. Suspicious stories get a credibility check." },
+      { "title": "Sunday afternoon", "text": "The recurring sections are written: the most discussed dev stories, finance, YouTube picks, markets, world events, history and geek history, holidays, a book, and the closing remarks." },
+      { "title": "Sunday night", "text": "The issue is assembled and linted. If the check is clean, it is approved and the podcast script is written and voiced, in my cloned voice and M.Arvin's." },
+      { "title": "Monday, 7 a.m. in São Paulo", "text": "The issue goes out by email, the blog publishes it with the podcast, and the week starts again." }
+    ]
+  },
+  "stack": {
+    "title": "How it is built",
+    "lede": "The code is private, but the shape is simple: two Rails apps that talk through plain files, and a static blog.",
+    "items": [
+      { "title": "marvin-bot", "text": "A Rails app with the Discord bot, article ingestion, AI summaries and images, the weekly sections and the podcast." },
+      { "title": "newsletter", "text": "A second Rails app that assembles the issue, runs the approval gate, manages subscribers and sends the email." },
+      { "title": "blog", "text": "Hugo, deployed to Netlify, with every issue and a transcript of every podcast episode." },
+      { "title": "content/", "text": "Markdown files with YAML headers. The apps read and write the same folder, so most integration is just files." }
+    ]
+  },
+  "story": {
+    "title": "Built in six days, running every week since",
+    "text": "I wrote about taking the newsletter, blog, podcast and bot from zero to production in six days and 201 commits, and why it only became reliable after tests, deploys and refactoring.",
+    "link": "Read the story"
+  },
+  "blogShotAlt": "The newsletter blog listing issues 33 to 29, each with its date and the week's headline topics.",
+  "next": [
+    { "title": "Writing", "text": "The blog, where the longer thoughts go." },
+    { "title": "The workflow", "text": "The same agents and skills maintain this project." }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+// Top of every detail page. Slot: one or two buttons.
+import type { Hue } from '@/data/site';
+interface Props { hue: Hue; kicker: string; title: string; lede: string }
+const { hue, kicker, title, lede } = Astro.props;
+---
+<section data-hue={hue} class="pt-36 pb-10 md:pt-44">
+  <div class="wrap">
+    <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{kicker}</div>
+    <h1 class="text-4xl max-w-[15em]" data-reveal>{title}</h1>
+    <p class="lede mt-7 !text-[1.35rem]">{lede}</p>
+    {Astro.slots.has('default') && <div class="mt-9 flex flex-wrap gap-3"><slot /></div>}
+  </div>
+</section>

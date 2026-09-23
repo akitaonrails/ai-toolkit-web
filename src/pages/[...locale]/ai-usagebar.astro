@@ -1,0 +1,85 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Figure from '@/components/Figure.astro';
+import Shot from '@/components/Shot.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import CodeBlock from '@/components/CodeBlock.astro';
+import Tabs from '@/components/Tabs.astro';
+import RepoMeta from '@/components/RepoMeta.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import panel from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
+import tui from '@/assets/img/shots/tui-openai.png';
+import mac from '@/assets/img/shots/macos-tray-dashboard.png';
+import win from '@/assets/img/shots/windows-tray-dashboard.png';
+import kde from '@/assets/img/shots/kde-plasmoid.png';
+import { repoUrl, site } from '@/data/site';
+import { repo } from '@/data/github';
+import { providers, install, quickstart } from '@/data/usagebar';
+import { softwareApp } from '@/lib/schema';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, href } = useI18n(Astro, 'usagebar');
+type Text = { title: string; text: string };
+const surfaces = withText([{ src: tui }, { src: mac, tall: true }, { src: win }, { src: kde }], raw<(Text & { alt: string })[]>('surfaces.items'));
+const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'blue' as const }));
+const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'amber', href: '/ghpending/' }, { hue: 'red', href: '/clock-tui/' }] as const, raw<Text[]>('next'));
+const info = await repo('usagebar');
+const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.description'), repo: repoUrl('usagebar'), os: 'Linux, macOS, Windows', version: info.release?.tag, home: new URL('/', site.url).href });
+---
+<Base title={t('meta.title')} description={t('meta.description')} schema={[schema]}>
+  <PageHero hue="blue" kicker={t('kicker.usagebar')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#install" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href={repoUrl('usagebar')} class="btn btn-ghost">GitHub</a>
+  </PageHero>
+  <div class="wrap" data-hue="blue">
+    <RepoMeta id="usagebar" />
+    <div class="mt-10"><Shot src={panel} alt={t('hero.shotAlt')} eager zoom={false} /></div>
+  </div>
+
+  <Section title={t('why.title')} lede={t('why.lede')} hue="blue" fill>
+    <Figure name="usagebar-providers" alt={t('why.alt')} />
+    <a href={href('/workflow/')} class="btn btn-ghost">{t('why.link')}</a>
+  </Section>
+
+  <Section title={t('surfaces.title')} lede={t('surfaces.lede')} hue="blue" tint>
+    <div class="grid gap-x-10 gap-y-14 md:grid-cols-2">
+      {surfaces.map((s) => (
+        <div>
+          <Shot src={s.src} alt={s.alt} tall={s.tall} sizes="(min-width: 768px) 36rem, 94vw" />
+          <h3 class="text-xl mt-6">{s.title}</h3>
+          <p class="mt-2 text-muted" set:html={s.text} />
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section title={t('features.title')} hue="blue">
+    <FeatureGrid items={features} />
+  </Section>
+
+  <Section title={t('providers.title')} lede={t('providers.lede')} hue="blue" tint>
+    <ul class="flex flex-wrap gap-2.5" data-reveal="children">
+      {providers.map((p) => <li class="badge !text-[0.95rem] !py-1.5 !px-3.5">{p}</li>)}
+    </ul>
+  </Section>
+
+  <Section title={t('install.title')} lede={t('install.lede')} hue="blue" id="install">
+    <Tabs id="usagebar-install" labels={raw<string[]>('install.tabs')}>
+      <div slot="0" class="max-w-3xl"><CodeBlock code={install[0]} /></div>
+      <div slot="1" class="max-w-3xl"><CodeBlock code={install[1]} /></div>
+      <div slot="2" class="max-w-3xl"><CodeBlock code={install[2]} /></div>
+      <div slot="3" class="max-w-3xl"><CodeBlock code={install[3]} /></div>
+      <div slot="4" class="max-w-3xl"><CodeBlock code={install[4]} /></div>
+    </Tabs>
+    <p class="mt-10 text-muted">{t('install.then')}</p>
+    <div class="mt-4 max-w-3xl"><CodeBlock code={quickstart} /></div>
+    <a href={`${repoUrl('usagebar')}#readme`} class="btn btn-ghost mt-8">{t('install.readme')}</a>
+  </Section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>

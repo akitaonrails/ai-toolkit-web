@@ -1,0 +1,8 @@
+---
+// Two or three onward links at the bottom of a detail page.
+import FeatureGrid from './FeatureGrid.astro';
+import type { Hue } from '@/data/site';
+interface Props { title: string; items: { title: string; text: string; hue?: Hue; href: string }[] }
+const { title, items } = Astro.props;
+---
+<section class="band bg-tint"><div class="wrap"><h2 class="text-2xl mb-8">{title}</h2><FeatureGrid items={items} cols={items.length === 2 ? 2 : 3} /></div></section>
