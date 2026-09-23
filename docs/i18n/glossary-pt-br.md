@@ -47,3 +47,7 @@ Decisões de tradução além do glossário do brief (`docs/research/I18N-TRANSL
 | conference talk | palestra |
 | intern with amnesia | estagiário com amnésia |
 | for / to (informal) | pra (registro informal do blog) |
+
+## Deliberate differences from English
+
+- `home.json` `hero.intro` opens with "Olá pessoal, Fabio Akita, sou ...", the greeting that started every Akitando video. It is a reference for Brazilian readers and stays in pt-br only; the other languages keep a plain "I am Fabio Akita". Do not normalize it back.
