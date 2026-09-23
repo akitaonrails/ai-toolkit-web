@@ -10,7 +10,7 @@ Start from `docs/sources.md`. It lists every source (GitHub repos, blog posts, t
 
 ## Rules
 
-- English only until the owner approves translations (`docs/i18n.md`). Still, no visible text in `.astro` files: words go in `src/i18n/locales/en/<namespace>.json`, structure (hues, hrefs, ids, commands) stays in code or `src/data/`.
+- Six languages: en, pt-br, es, he, ja, ko (`docs/i18n.md`). Every text change goes to all six in the same change: edit English, translate the same key in the other five following `docs/research/I18N-TRANSLATE-BRIEF.md`, then `npm run i18n:stamp && npm run check:i18n`. Never stamp without translating. No visible text in `.astro` files: words go in `src/i18n/locales/<locale>/<namespace>.json`, structure (hues, hrefs, ids, commands) stays in code or `src/data/`. A diagram label change means localizing that diagram again (`scripts/localize-image.mjs`).
 - Colors are tokens. Change a decision in `scripts/build-palette.mjs`, run it with `--write`, then `npm run check:colors`. No raw color values in pages or components; the check fails on them.
 - Green is the one action color. Each subject keeps its hue everywhere (table in `docs/design-system.md`).
 - Facts come from the sources. Do not invent numbers, features or quotes. Numbers that change (subscribers, PR counts) carry the date they were read, in `src/data/`.

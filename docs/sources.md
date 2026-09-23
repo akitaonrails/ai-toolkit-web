@@ -93,6 +93,7 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 
 | Source | Lands in |
 |---|---|
+| Owner's instructions (2026-09-23): favorite models. With a paid Anthropic or OpenAI subscription on the Pro plan, the latest Opus or GPT Sol at medium effort covers about 90% of cases; Kimi K3 and GLM 5.3 on their own subscription plans are in the rotation when Claude or GPT hits quota, thanks to ai-memory | `setup.json` `models`. Model names change with each release: update when the owner's daily driver changes |
 | Owner's instructions (2026-09-23): the loop does not end at release; kaizen, continuous improvement of tools, setup, harness instructions and skills from the problems found. The quote "Every line in these skills is a scar" and the two pr-bump rules are from the skills post (section 3) | `home.json` `loop`, `workflow.json` `kaizen`, diagrams `home-loop` and `workflow-pipeline` |
 | Owner's instructions (2026-09-23): the intro line (programmer for 30+ years, entrepreneur, speaker, writer, former YouTuber) linking to LinkedIn | `home.json` `hero.intro` |
 | Owner's instructions (2026-09-23): contact email `boss@akitaonrails.com` and the warning that goes with it (no sales, no sponsorship, no automatic reply, silence means no) | `site.ts` `site.email`, `home.json` `contact`, footer `Contact` link to `/#contact` |

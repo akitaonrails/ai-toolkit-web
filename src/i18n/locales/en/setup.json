@@ -54,5 +54,21 @@
     "lede": "An agent that starts every session from zero repeats the same mistakes, whichever orchestrator sits on top. Without memory, each session is an intern with amnesia. That is why I built ai-memory, and why every agent I run starts with ai-memory run.",
     "site": "The ai-memory site",
     "workflow": "How it fits my workflow"
+  },
+  "models": {
+    "title": "My favorite models",
+    "lede": "I test every major model in my benchmark, but day to day the choice is simple. If you pay for an Anthropic or OpenAI subscription on the Pro plan, you are well served.",
+    "items": [
+      {
+        "title": "The daily driver",
+        "text": "The latest Opus or the latest GPT Sol, at medium effort. That covers about 90% of what I do."
+      },
+      {
+        "title": "In the rotation",
+        "text": "Kimi K3 and GLM 5.3, on their own subscription plans. When Claude or GPT hits its quota, I switch to one of them, and ai-memory brings the context along."
+      }
+    ],
+    "benchmark": "The benchmark behind these choices",
+    "latest": "The newest models, tested"
   }
 }
