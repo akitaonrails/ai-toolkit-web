@@ -11,13 +11,14 @@ import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import home from '@/assets/img/shots/newsletter-home.png';
 import blog from '@/assets/img/shots/newsletter-blog.png';
+import spotifyShot from '@/assets/img/shots/spotify-show.png';
 import { newsletter } from '@/data/site';
-import { chronicles } from '@/data/newsletter';
+import { chronicles, spotify } from '@/data/newsletter';
 import { articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, date } = useI18n(Astro, 'newsletter');
+const { t, raw, date, number } = useI18n(Astro, 'newsletter');
 type Text = { title: string; text: string };
 const steps = raw<Text[]>('pipeline.steps');
 const stack = raw<Text[]>('stack.items').map((s) => ({ ...s, title: `<code>${s.title}</code>`, hue: 'rose' as const }));
@@ -27,6 +28,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
   <PageHero hue="rose" kicker={t('kicker.newsletter')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href={newsletter.url} class="btn btn-primary">{t('hero.primary')}</a>
     <a href={newsletter.blog} class="btn btn-ghost">{t('hero.secondary')}</a>
+    <a href={newsletter.spotify} class="btn btn-ghost">{t('hero.tertiary')}</a>
   </PageHero>
   <div class="wrap" data-hue="rose">
     <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr] items-center">
@@ -53,6 +55,14 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
   <Section title={t('stack.title')} lede={t('stack.lede')} hue="rose" tint>
     <FeatureGrid items={stack} cols={2} />
     <div class="mt-14"><Shot src={blog} alt={t('blogShotAlt')} /></div>
+  </Section>
+
+  <Section title={t('spotify.title')} lede={t('spotify.lede')} hue="rose" id="spotify">
+    <Shot src={spotifyShot} alt={t('spotify.alt')} />
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-4">
+      <a href={newsletter.spotify} class="btn btn-primary">{t('spotify.follow')}</a>
+      <span class="font-mono text-sm text-muted">{t('spotify.rating', { rating: number(spotify.rating), n: number(spotify.ratings) })} · {t('numbers.note', { date: date(spotify.readOn) })}</span>
+    </div>
   </Section>
 
   <section class="wrap">

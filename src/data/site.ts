@@ -41,7 +41,7 @@ export const sisters = {
   memory: { url: 'https://aimemorybr.netlify.app', hue: 'teal' as Hue },
 };
 
-export const newsletter = { url: 'https://themakitachronicles.com', blog: 'https://blog.themakitachronicles.com' };
+export const newsletter = { url: 'https://themakitachronicles.com', blog: 'https://blog.themakitachronicles.com', spotify: 'https://open.spotify.com/show/7MzG2UB7IAkC3GAwEXEIVD' };
 
 /** Where to follow. Handles and descriptions live in common.json under social.<id>. */
 export const social = [

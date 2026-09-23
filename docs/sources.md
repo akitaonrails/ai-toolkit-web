@@ -57,6 +57,7 @@ Gap signal: a new post in the highlights block that is about AI. Add it to `arti
 |---|---|---|
 | `~/Projects/akitando-news` (private repo): `README.md`, `AGENTS.md`, `CLAUDE.md` | Weekly, in Portuguese, M.Arvin persona; Discord and X (every 30 min) intake; summaries and illustrations; credibility check for `#suspect` stories; Sunday sections list; Sunday night assembly and approval gate; podcast with a cloned voice and M.Arvin's; Monday 7 a.m. BRT email and blog; two Rails apps sharing a `content/` folder plus a Hugo blog | `newsletter.json` `pipeline`, `stack` |
 | https://themakitachronicles.com (live) | Subscriber counter (16,054 on 2026-09-23); the screenshot | `src/data/newsletter.ts`, `src/assets/img/shots/newsletter-home.png` |
+| The Spotify show, https://open.spotify.com/show/7MzG2UB7IAkC3GAwEXEIVD (owner's screenshot, `~/Pictures/Screenshots/screenshot-2026-09-23_16-53-38.png`) | Rating 4.6 from 126 ratings; blog posts now published as episodes too (owner, 2026-09-23); the screenshot | `src/data/newsletter.ts` `spotify`, `newsletter.json` `spotify`, `src/assets/img/shots/spotify-show.png`, home `newsletter.text` |
 | https://blog.themakitachronicles.com (live) | Latest issue number (#33 on 2026-09-23); the screenshot | same, `newsletter-blog.png` |
 
 The repository is private. Never quote code, prompts, credentials, environment variable values or infrastructure details from it. Model names change often there; the site does not name them on purpose.
