@@ -11,9 +11,15 @@ export const getStaticPaths = localePaths;
 const { t, date, number } = useI18n(Astro, 'podcasts');
 // Conference talks, as opposed to podcast episodes. Everything else in the list is a podcast.
 const talks = new Set(['U3bZavG8qQY']);
+// schema.org VideoObject for each appearance, so search engines can show them as videos.
+const toIso = (d: string) => { const p = d.split(':').map(Number); const [h, m, s] = p.length === 3 ? p : [0, ...p]; return `PT${h ? `${h}H` : ''}${m}M${s}S`; };
+const schema = [{ '@type': 'ItemList', itemListElement: videos.appearances.map((v, i) => ({ '@type': 'ListItem', position: i + 1, item: {
+  '@type': 'VideoObject', name: v.title, description: t(`items.${v.id}`), uploadDate: v.date, duration: toIso(v.duration),
+  thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`, embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`, contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+} })) }];
 const compact = (n: number) => number(n, { notation: 'compact', maximumFractionDigits: 1 });
 ---
-<Base title={t('meta.title')} description={t('meta.description')}>
+<Base title={t('meta.title')} description={t('meta.description')} schema={schema}>
   <PageHero hue="amber" kicker={t('meta.title')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#episodes" class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#cuts" class="btn btn-ghost">{t('hero.secondary')}</a>

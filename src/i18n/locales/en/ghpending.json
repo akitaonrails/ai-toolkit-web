@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "ghpending: open PRs and issues across your GitHub repos",
-    "description": "ghpending is a Rust CLI that lists open pull requests, issues and security alerts across every GitHub repository you track, in one sorted digest for your terminal."
+    "title": "ghpending: open PRs across your repos",
+    "description": "ghpending is a Rust CLI that lists open pull requests, issues and security alerts across every GitHub repository you track, in one digest in your terminal."
   },
   "hero": {
     "title": "Every open pull request and issue, in one list",

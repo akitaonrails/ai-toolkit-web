@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "My game collection as code, on Omarchy",
-    "description": "How Fabio Akita uses AI agents to keep Steam games, emulators, PC ports and decomps in an idempotent Ansible repo inside a distrobox, with his own Omarchy launcher on top."
+    "description": "How I use AI agents to keep Steam games, emulators, PC ports and decomps in an idempotent Ansible repo inside a distrobox, with my own Omarchy launcher."
   },
   "hero": {
     "title": "Not everything is work. Even I need to play.",

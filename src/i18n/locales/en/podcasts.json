@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Podcasts and talks",
-    "description": "Fabio Akita on the Flow Podcast, Inteligência Ltda, Fernando Ulrich and Tropical on Rails: long conversations about AI, programming jobs and the hype, newest first."
+    "description": "Fabio Akita on Flow Podcast, Inteligência Ltda, Fernando Ulrich and Tropical on Rails: long conversations about AI, programming jobs and the hype."
   },
   "hero": {
     "title": "Long conversations about AI",
@@ -10,7 +10,10 @@
     "secondary": "Jump to the Flow cuts"
   },
   "play": "Play",
-  "kind": { "podcast": "Podcast", "talk": "Conference talk" },
+  "kind": {
+    "podcast": "Podcast",
+    "talk": "Conference talk"
+  },
   "views": "{n} views",
   "watch": "Watch on YouTube",
   "items": {

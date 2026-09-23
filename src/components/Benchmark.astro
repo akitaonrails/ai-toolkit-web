@@ -5,8 +5,9 @@ import Shot from './Shot.astro';
 import { benchmark, articles, articleUrl } from '@/data/articles';
 import chart from '@/assets/img/shots/benchmark-v4-cost-en.png';
 import { useI18n } from '@/i18n';
-interface Props { compact?: boolean }
-const { compact } = Astro.props;
+interface Props { compact?: boolean; level?: 2 | 3 }
+const { compact, level = 3 } = Astro.props;
+const Heading = `h${level}`;
 const { t, number, date, href } = useI18n(Astro, 'writing');
 const facts = [
   { n: benchmark.models, label: t('benchmark.facts.models') },
@@ -18,7 +19,7 @@ const facts = [
 <div data-hue="rose" class:list={['grid gap-12 items-start', !compact && 'lg:grid-cols-[1fr_1.1fr]']}>
   <div>
     <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('benchmark.kicker')}</div>
-    <h3 class="text-2xl mt-4">{t('benchmark.title')}</h3>
+    <Heading class="text-2xl mt-4">{t('benchmark.title')}</Heading>
     {compact ? <p class="mt-4 text-muted max-w-[44em]" set:html={t('benchmark.teaser', { n: benchmark.models })} /> : <Fragment>
       <p class="mt-4 text-muted" set:html={t('benchmark.text')} />
       <p class="mt-4 text-muted" set:html={t('benchmark.current', { n: benchmark.latestRound.models, date: date(benchmark.latestRound.date) })} />

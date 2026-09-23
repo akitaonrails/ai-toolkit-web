@@ -27,7 +27,7 @@ const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: Ar
     <a href="#benchmark" class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
 
-  <section id="benchmark" class="band bg-tint scroll-mt-16"><div class="wrap"><Benchmark /></div></section>
+  <section id="benchmark" class="band bg-tint scroll-mt-16"><div class="wrap"><Benchmark level={2} /></div></section>
 
   {groups.map((g, i) => (
     <Section title={t(`sections.${g.id}.title`)} lede={t(`sections.${g.id}.lede`)} hue={g.hue} tint={i % 2 === 1} id={g.id}>

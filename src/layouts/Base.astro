@@ -20,7 +20,7 @@ interface Props {
 const { t, locale, dir, htmlLang, href } = useI18n(Astro);
 const { title, description = t('site.description'), schema = [], noindex = false } = Astro.props;
 const tagline = t('site.tagline');
-const fullTitle = title ? `${title} | ${site.name}` : site.name;
+const fullTitle = title ? `${title} | ${site.name}` : t('site.homeTitle');
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const home = new URL(href('/'), Astro.site).href;
 

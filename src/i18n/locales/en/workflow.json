@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "My AI coding workflow",
-    "description": "How Fabio Akita runs AI coding agents across 40+ repositories: tmux, one line per project, audit skills for every PR and issue, and ai-memory under every harness."
+    "description": "How Fabio Akita runs AI coding agents across 40+ repositories: tmux, one line per project, audit skills for every PR and issue, and ai-memory under it all."
   },
   "hero": {
     "title": "How one person keeps 40 repositories moving",
