@@ -5,6 +5,7 @@ import Section from '@/components/Section.astro';
 import Video from '@/components/Video.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import videos from '@/data/videos.json';
+import { playlists } from '@/data/site';
 import { localePaths, useI18n } from '@/i18n';
 export const getStaticPaths = localePaths;
 
@@ -41,6 +42,20 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
       ))}
     </ol>
   </section>
+
+  <Section title={t('all.title')} lede={t('all.lede')} hue="amber" id="all">
+    <ul class="grid gap-5 md:grid-cols-2">
+      {(['talks', 'interviews'] as const).map((id) => (
+        <li>
+          <a href={playlists[id]} class="cell h-full" data-hue="amber">
+            <span class="font-display font-bold text-xl" style="font-stretch:110%">{t(`all.${id}.name`)}</span>
+            <p class="mt-3 text-muted">{t(`all.${id}.text`)}</p>
+            <span class="link mt-3 inline-block">{t('all.open')}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Section>
 
   <Section title={t('cuts.title')} lede={t('cuts.lede')} hue="amber" id="cuts" tint>
     {Object.entries(videos.cuts).map(([episode, list]) => (

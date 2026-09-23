@@ -61,6 +61,12 @@ export const externalTools: NavLink[] = [
 
 export const newsletter = { url: 'https://themakitachronicles.com', blog: 'https://blog.themakitachronicles.com', spotify: 'https://open.spotify.com/show/7MzG2UB7IAkC3GAwEXEIVD' };
 
+/** YouTube playlists with every appearance, beyond the handful on the podcasts page (owner, 2026-09-23). */
+export const playlists = {
+  talks: 'https://www.youtube.com/playlist?list=PLdsnXVqbHDUf73fY4oNcXIuAjxGf8hTjj',
+  interviews: 'https://www.youtube.com/playlist?list=PLdsnXVqbHDUcjiwcY87avf7RWuQX5cF9g',
+};
+
 /** Where to follow. Handles and descriptions live in common.json under social.<id>. */
 export const social = [
   { id: 'x', url: 'https://x.com/AkitaOnRails', handle: '@AkitaOnRails', hue: 'red' as Hue },

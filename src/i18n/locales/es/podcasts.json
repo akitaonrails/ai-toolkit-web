@@ -23,6 +23,19 @@
     "_Hl9wiLkns4": "Con el escritor Ricardo Cavallini y la astrofísica Roberta Duarte: si llegará la superinteligencia, qué hace realmente un GPT y un largo desvío por la física cuántica y las computadoras cuánticas.",
     "sf4Gxf0LiKo": "Mi primera conversación larga sobre IA en Flow: qué hace de verdad hoy, sus límites, su historia desde los años 60 y lo que nadie te cuenta sobre las computadoras cuánticas."
   },
+  "all": {
+    "title": "La lista completa",
+    "lede": "Esta página muestra solo las conversaciones recientes sobre IA. A lo largo de los años hice muchas más, y están en dos listas de YouTube.",
+    "talks": {
+      "name": "Podcasts, charlas y clases",
+      "text": "Todos los demás podcasts en los que fui invitado, más mis charlas en eventos y clases."
+    },
+    "interviews": {
+      "name": "Entrevistas",
+      "text": "Todas las entrevistas que di, en un solo lugar."
+    },
+    "open": "Abrir la lista en YouTube"
+  },
   "cuts": {
     "title": "Cortes do Flow",
     "lede": "El equipo de Flow cortó los dos episodios en clips cortos en su canal Cortes do Flow. Si cuatro horas es demasiado, empieza aquí.",
