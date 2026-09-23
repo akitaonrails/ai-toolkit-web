@@ -1,0 +1,40 @@
+---
+// "More on my blog": a compact list of the owner's most recent posts on the page's subject, newest first.
+// Pass the post ids from `related` in src/data/articles.ts. `hue` makes it a full band with its own heading (end of a
+// page); without it, it is a small list with a short heading, for use inside another section.
+import type { Hue } from '@/data/site';
+import { articleUrl, newest, type ArticleId } from '@/data/articles';
+import { useI18n } from '@/i18n';
+interface Props { ids: readonly ArticleId[]; hue?: Hue }
+const { ids, hue } = Astro.props;
+const { t, date } = useI18n(Astro, 'articles');
+const posts = newest(...ids);
+---
+<div class:list={['related', hue && 'band']} data-hue={hue}>
+ <div class:list={[hue && 'wrap']}>
+  {hue ? <Fragment><h2 class="text-3xl">{t('related.title')}</h2><p class="lede mt-6 mb-10">{t('related.lede')}</p></Fragment> : <h3 class="text-lg mb-4">{t('related.title')}</h3>}
+  <ul class="grid">
+    {posts.map((a) => (
+      <li data-hue={a.hue}>
+        <a href={articleUrl(a)} class="rel">
+          <time datetime={a.date} class="rel-date">{date(a.date, { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+          <span class="rel-body">
+            <span class="rel-title">{t(`items.${a.id}.title`)}</span>
+            <span class="rel-sum">{t(`items.${a.id}.summary`)}</span>
+          </span>
+        </a>
+      </li>
+    ))}
+  </ul>
+ </div>
+</div>
+<style>
+  .related ul { border-block-start: 1px solid var(--line); }
+  .rel { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0.3rem 1.2rem; padding: 0.95rem 0.2rem; border-block-end: 1px solid var(--line); transition: background 0.2s; }
+  .rel:hover { background: var(--tint); }
+  .rel-date { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--hue); padding-block-start: 0.15rem; }
+  .rel-title { display: block; font-weight: 650; }
+  .rel:hover .rel-title { text-decoration: underline; text-underline-offset: 0.2em; }
+  .rel-sum { display: block; color: var(--muted); font-size: 0.95rem; margin-block-start: 0.15rem; }
+  @media (max-width: 40rem) { .rel { grid-template-columns: 1fr; } }
+</style>

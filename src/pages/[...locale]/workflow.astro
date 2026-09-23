@@ -10,6 +10,8 @@ import Callout from '@/components/Callout.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import Related from '@/components/Related.astro';
+import { related } from '@/data/articles';
 import { repoUrl } from '@/data/site';
 import { articles, articleUrl } from '@/data/articles';
 import { skillIds } from '@/data/workflow';
@@ -108,6 +110,8 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
   <Section title={t('knowledge.title')} lede={t('knowledge.lede')} hue="teal">
     <FeatureGrid items={knowledge} cols={2} />
   </Section>
+
+  <Related ids={related.workflow} hue="violet" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />

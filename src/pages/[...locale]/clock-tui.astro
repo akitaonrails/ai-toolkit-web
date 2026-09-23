@@ -11,6 +11,8 @@ import Clip from '@/components/Clip.astro';
 import RepoMeta from '@/components/RepoMeta.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import Related from '@/components/Related.astro';
+import { related } from '@/data/articles';
 import eva from '@/assets/img/shots/tclock-evangelion.png';
 import nerv from '@/assets/img/shots/tclock-nerv.png';
 import { repoUrl, site } from '@/data/site';
@@ -94,6 +96,8 @@ const schema = softwareApp({ name: 'tclock (clock-tui)', description: t('meta.de
     </Tabs>
     <p class="mt-10 text-muted max-w-[40em] prose-site" set:html={t('install.credit')} />
   </Section>
+
+  <Related ids={related.tclock} hue="red" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />

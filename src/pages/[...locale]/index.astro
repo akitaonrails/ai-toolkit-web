@@ -17,7 +17,7 @@ import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
 import tclockShot from '@/assets/img/shots/tclock-nerv.png';
 import { sisters, site, social } from '@/data/site';
-import { pick } from '@/data/articles';
+import { pick, articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
@@ -28,9 +28,9 @@ type Tool = { tagline: string; text: string; points: string[]; shotAlt: string }
 
 const steps = withText([{ hue: 'red' }, { hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }] as const, raw<Text[]>('desk.steps'));
 const tools = withText([
-  { id: 'usagebar', name: 'ai-usagebar', hue: 'blue', href: '/ai-usagebar/', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo binstall ai-usagebar' },
-  { id: 'ghpending', name: 'ghpending', hue: 'amber', href: '/ghpending/', shot: ghpendingShot, install: 'brew tap akitaonrails/tap && brew install ghpending\nghpending add' },
-  { id: 'tclock', name: 'tclock', hue: 'red', href: '/clock-tui/', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
+  { id: 'usagebar', name: 'ai-usagebar', hue: 'blue', href: '/ai-usagebar/', post: 'usagebarPost', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo binstall ai-usagebar' },
+  { id: 'ghpending', name: 'ghpending', hue: 'amber', href: '/ghpending/', post: 'ghpendingPost', shot: ghpendingShot, install: 'brew tap akitaonrails/tap && brew install ghpending\nghpending add' },
+  { id: 'tclock', name: 'tclock', hue: 'red', href: '/clock-tui/', post: 'dayToDay', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
 ] as const, raw<Tool[]>('tools.items'));
 const bigger = withText([
   { hue: sisters.memory.hue, href: sisters.memory.url },
@@ -89,13 +89,14 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
     <div class="flex flex-wrap gap-3">
       <a href={sisters.memory.url} class="btn btn-ghost">{t('switch.memory')}</a>
       <a href={href('/ai-usagebar/')} class="btn btn-ghost">{t('switch.usagebar')}</a>
+      <a href={articleUrl({ id: 'memorySwitch', ...articles.memorySwitch })} class="btn btn-ghost">{t('switch.post')}</a>
     </div>
   </Section>
 
   <Section title={t('tools.title')} lede={t('tools.lede')} id="tools" tint>
     <div class="grid gap-24 md:gap-32">
       {tools.map((tool, i) => (
-        <ToolBlock {...tool} flip={i % 2 === 1} more={t('tools.more', { name: tool.name })} />
+        <ToolBlock {...tool} flip={i % 2 === 1} more={t('tools.more', { name: tool.name })} post={{ url: articleUrl({ id: tool.post, ...articles[tool.post] }), label: t('tools.post') }} />
       ))}
     </div>
   </Section>

@@ -50,6 +50,21 @@ Local checkout: `~/Projects/akitaonrails-hugo`. English posts are `index.en.md` 
 | [Vibe Code: From Zero to Production in 6 Days](https://akitaonrails.com/en/2026/02/16/vibe-code-zero-to-production-in-6-days-the-m-akita-chronicles/) | Newsletter stack built in six days, 201 commits | `newsletter.json` `story` |
 | `content/about.en.md` | Blogging since 2006; X account is protected; YouTube channel finished, still valuable; no sponsorships | `common.json` `social`, `writing.json` `hero` |
 
+**"More on my blog" lists.** Every tool and technique page ends with (or, on the setup page, embeds per section) the owner's most recent posts on that subject, newest first. The map is `related` in `src/data/articles.ts`; titles and one-line summaries are in `articles.json`, rewritten from each post's `description`. The home page's tool blocks link each tool's dedicated post (`post` in the `tools` list of `index.astro`). To find candidates for a subject: `grep -l -i '<keyword>' content/2026/*/*/*/index.en.md | sort -r`, then read the post's `description` and check the context, since a keyword can appear in passing. The English address is `/en/<yyyy>/<mm>/<dd>/<slug>/` with `slug` from the post's front matter; check it answers 200 before adding it.
+
+| Subject | Posts (ids in `articles.ts`) |
+|---|---|
+| ai-usagebar | usagebarPost, memorySwitch, tuiPost, toolkitTips |
+| ghpending | ghpendingPost, githubBlock, bend2 (ported ghpending), skills |
+| tclock | dayToDay, bend2 (ported tclock), tuiPost, skills |
+| Workflow | skills, shipMore, hotTake, openSourceAi, marathon |
+| Games | emuDistrobox, racingGames, dayToDay |
+| Omarchy (setup) | omarchyDualGpu, omarchyThinkpad, nwOmarchy |
+| Orchestrators (setup) | hotTake, typesafe, toolkitTips |
+| Memory (setup) | aiMemory2, memorySwitch, memoryPost |
+
+No post mentions Herdr or the games launcher by name yet (checked 2026-09-23); add one when it exists.
+
 Gap signal: a new post in the highlights block that is about AI. Add it to `articles.ts` and `articles.json`, and to a group in `writing.astro`. When a new benchmark round is published, update `benchmark.latestRound` and add the post as `benchmarkLatest` (move the old one to its own id if it should stay listed).
 
 ## 4. The newsletter (The M.Akita Chronicles)

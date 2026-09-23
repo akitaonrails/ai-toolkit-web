@@ -60,6 +60,9 @@ Hubot Sans for headlines (800, width 112%; the home h1 goes to 118%), Mona Sans 
 | `ArticleList` | Blog posts as cells. Props: `items` from `pick()` in `src/data/articles.ts`. |
 | `PullQuote` | One of the owner's known phrases, placed next to the subject it is about. Props: `text`, `original` (Portuguese wording), `cite`, `large`. Use each phrase once, never as a gallery. |
 | `Social` | Where to follow, one cell per network. |
+| `Related` | "More on my blog": the most recent posts on the page's subject. With `hue`, a full band at the end of a page; without, a small list inside a section. Ids from `related` in `src/data/articles.ts`. |
+| `Portrait` | The home page portrait over the spectrum-ringed disc. |
+| `PullQuote` | See above. |
 | `CodeBlock` | A terminal with a copy button. Lines starting with `#` dim. |
 | `Tabs` | Panels are slots named `"0"`, `"1"`... Write the slots out; Astro cannot name slots inside a `.map()`. |
 | `Callout` | Limits, caveats and asides. |

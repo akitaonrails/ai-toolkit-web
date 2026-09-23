@@ -9,8 +9,10 @@ import { useI18n } from '@/i18n';
 interface Props {
   id: RepoId; name: string; hue: Hue; href: string; install: string; shot: ImageMetadata; flip?: boolean;
   tagline: string; text: string; points: string[]; shotAlt: string; more: string;
+  /** The tool's dedicated blog post, when there is one. */
+  post?: { url: string; label: string };
 }
-const { id, name, hue, href: page, install, shot, flip, tagline, text, points, shotAlt, more } = Astro.props;
+const { id, name, hue, href: page, install, shot, flip, tagline, text, points, shotAlt, more, post } = Astro.props;
 const { href } = useI18n(Astro);
 ---
 <article data-hue={hue} class:list={['tool grid gap-10 lg:gap-16 items-center lg:grid-cols-[1.15fr_1fr]', flip && 'flip']}>
@@ -23,6 +25,9 @@ const { href } = useI18n(Astro);
     <div class="mt-7"><CodeBlock code={install} /></div>
     <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
       <a href={href(page)} class="btn btn-ghost">{more}</a>
+      {post && <a href={post.url} class="link font-semibold">{post.label}</a>}
+    </div>
+    <div class="mt-5">
       <RepoMeta id={id} />
     </div>
   </div>

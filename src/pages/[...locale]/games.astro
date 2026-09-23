@@ -11,6 +11,8 @@ import Callout from '@/components/Callout.astro';
 import RepoMeta from '@/components/RepoMeta.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import Related from '@/components/Related.astro';
+import { related } from '@/data/articles';
 import menuShot from '@/assets/img/shots/games-menu.jpg';
 import { repoUrl } from '@/data/site';
 import { games } from '@/data/games';
@@ -67,6 +69,8 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
   <section class="wrap">
     <Callout title={t('note.title')} hue="orange"><p>{t('note.text')}</p></Callout>
   </section>
+
+  <Related ids={related.games} hue="orange" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />

@@ -52,7 +52,8 @@
     "alt": "Three terminals: Claude Code, Codex and OpenCode. Claude Code's quota gauge is full and red. A green arrow labelled Switch moves the work to Codex. All three sit on one slab labelled Same memory.",
     "memory": "How ai-memory does it",
     "usagebar": "How I watch the quotas",
-    "codeTitle": "one project, two agents"
+    "codeTitle": "one project, two agents",
+    "post": "The blog post on switching agents"
   },
   "tools": {
     "title": "Three small tools I use every day",
@@ -89,7 +90,8 @@
         ],
         "shotAlt": "tclock with the NERV theme: 17:34:24 in large red pixel digits over a dark sky, a GitHub pending widget, a Google Calendar widget and a system health strip."
       }
-    ]
+    ],
+    "post": "Read the blog post"
   },
   "sisters": {
     "title": "The bigger pieces",

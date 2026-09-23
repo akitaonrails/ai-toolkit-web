@@ -10,6 +10,8 @@ import Tabs from '@/components/Tabs.astro';
 import RepoMeta from '@/components/RepoMeta.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import Related from '@/components/Related.astro';
+import { related } from '@/data/articles';
 import panel from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import tui from '@/assets/img/shots/tui-openai.png';
 import mac from '@/assets/img/shots/macos-tray-dashboard.png';
@@ -85,6 +87,8 @@ const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.descripti
     <div class="mt-4 max-w-3xl"><CodeBlock code={quickstart} /></div>
     <a href={`${repoUrl('usagebar')}#readme`} class="btn btn-ghost mt-8">{t('install.readme')}</a>
   </Section>
+
+  <Related ids={related.usagebar} hue="blue" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />

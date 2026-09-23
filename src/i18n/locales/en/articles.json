@@ -1,21 +1,138 @@
 {
   "readOn": "Read on akitaonrails.com",
   "items": {
-    "benchmarkLatest": { "title": "LLM Benchmark v4: Opus 5.5, GPT 6 Sol and Luna, MiMo 2.6, Grok 4.7", "summary": "Five new models go into the v4 table. Is upgrading worth it, and why Grok 4.7 regresses against its own predecessor." },
-    "benchmarkPart1": { "title": "New LLM Benchmark v4, Part 1: the process", "summary": "Why I threw away a whole version, how the sabotaged Rails app works, and what it cost: over $4,000 in nine days." },
-    "benchmarkPart2": { "title": "New LLM Benchmark v4, Part 2: 39 models ranked", "summary": "The full table, ranked by vigilance. Six ties at the top, a free model beating half of Claude, and cost against score." },
-    "shipMore": { "title": "Stop making excuses and ship more", "summary": "With frontier models making fewer mistakes than most developers, review bureaucracy is the last excuse to hold a deploy. My numbers since February." },
-    "skills": { "title": "Talking a bit about my AI skills", "summary": "Skills are prompts in text files. Mine closed over a thousand PRs and issues. Read them, then write your own." },
-    "nesToSms": { "title": "AI challenge: converting NES ROMs to the Master System", "summary": "Frontier models against 6502 to Z80 translation, with the emulator as the feedback oracle, and where the mappers stall everything." },
-    "aiMemory2": { "title": "ai-memory 2.0", "summary": "The open OKF format, local embeddings by default, and teams working in parallel, compared with the alternatives." },
-    "hotTake": { "title": "Hot take: harness, loop and graph engineering are bullshit", "summary": "Thirty public repos, a benchmark and an AI marathon, none of them needing a new discipline with a consulting price tag." },
-    "dayToDay": { "title": "Using AI to solve my little day-to-day problems", "summary": "A desk clock with widgets, manga readers, email, typing practice, karaoke: small tools born from small annoyances." },
-    "protect": { "title": "How I stop my agents from deleting my stuff", "summary": "Five months in YOLO mode without an accident, and still no trust: BTRFS snapshots, restic backups, a sandbox and discipline." },
-    "openSourceAi": { "title": "AI contributions to open source projects: my take", "summary": "AI pull requests are here to stay, slop included. Automate triage and auditing, and keep the final decision human." },
-    "bestPractices": { "title": "Open source best practices with LLMs: the minimum", "summary": "Simple installs, reliable tests and CI, and documentation about the problem. Standard releases make automation predictable." },
-    "cleanCode": { "title": "Clean Code for AI agents", "summary": "When an agent is the main reader: small code, greppable names, provenance, headless tests and explicit rules." },
-    "multiModel": { "title": "LLM benchmarks: is it worth mixing models in one project?", "summary": "Seven combinations across Claude Code, opencode and Codex, and why a single strong model stayed the default." },
-    "chronicles": { "title": "Vibe code: from zero to production in 6 days", "summary": "How the newsletter, blog, podcast and Discord bot of The M.Akita Chronicles went live in six days and 201 commits." },
-    "aiKilled": { "title": "Rant: did AI kill programmers?", "summary": "Why AI will not replace experienced programmers, the S-curve ceiling of current LLMs, and what changes for engineers." }
+    "benchmarkLatest": {
+      "title": "LLM Benchmark v4: Opus 5.5, GPT 6 Sol and Luna, MiMo 2.6, Grok 4.7",
+      "summary": "Five new models go into the v4 table. Is upgrading worth it, and why Grok 4.7 regresses against its own predecessor."
+    },
+    "benchmarkPart1": {
+      "title": "New LLM Benchmark v4, Part 1: the process",
+      "summary": "Why I threw away a whole version, how the sabotaged Rails app works, and what it cost: over $4,000 in nine days."
+    },
+    "benchmarkPart2": {
+      "title": "New LLM Benchmark v4, Part 2: 39 models ranked",
+      "summary": "The full table, ranked by vigilance. Six ties at the top, a free model beating half of Claude, and cost against score."
+    },
+    "shipMore": {
+      "title": "Stop making excuses and ship more",
+      "summary": "With frontier models making fewer mistakes than most developers, review bureaucracy is the last excuse to hold a deploy. My numbers since February."
+    },
+    "skills": {
+      "title": "Talking a bit about my AI skills",
+      "summary": "Skills are prompts in text files. Mine closed over a thousand PRs and issues. Read them, then write your own."
+    },
+    "nesToSms": {
+      "title": "AI challenge: converting NES ROMs to the Master System",
+      "summary": "Frontier models against 6502 to Z80 translation, with the emulator as the feedback oracle, and where the mappers stall everything."
+    },
+    "aiMemory2": {
+      "title": "ai-memory 2.0",
+      "summary": "The open OKF format, local embeddings by default, and teams working in parallel, compared with the alternatives."
+    },
+    "hotTake": {
+      "title": "Hot take: harness, loop and graph engineering are bullshit",
+      "summary": "Thirty public repos, a benchmark and an AI marathon, none of them needing a new discipline with a consulting price tag."
+    },
+    "dayToDay": {
+      "title": "Using AI to solve my little day-to-day problems",
+      "summary": "A desk clock with widgets, manga readers, email, typing practice, karaoke: small tools born from small annoyances."
+    },
+    "protect": {
+      "title": "How I stop my agents from deleting my stuff",
+      "summary": "Five months in YOLO mode without an accident, and still no trust: BTRFS snapshots, restic backups, a sandbox and discipline."
+    },
+    "openSourceAi": {
+      "title": "AI contributions to open source projects: my take",
+      "summary": "AI pull requests are here to stay, slop included. Automate triage and auditing, and keep the final decision human."
+    },
+    "bestPractices": {
+      "title": "Open source best practices with LLMs: the minimum",
+      "summary": "Simple installs, reliable tests and CI, and documentation about the problem. Standard releases make automation predictable."
+    },
+    "cleanCode": {
+      "title": "Clean Code for AI agents",
+      "summary": "When an agent is the main reader: small code, greppable names, provenance, headless tests and explicit rules."
+    },
+    "multiModel": {
+      "title": "LLM benchmarks: is it worth mixing models in one project?",
+      "summary": "Seven combinations across Claude Code, opencode and Codex, and why a single strong model stayed the default."
+    },
+    "chronicles": {
+      "title": "Vibe code: from zero to production in 6 days",
+      "summary": "How the newsletter, blog, podcast and Discord bot of The M.Akita Chronicles went live in six days and 201 commits."
+    },
+    "aiKilled": {
+      "title": "Rant: did AI kill programmers?",
+      "summary": "Why AI will not replace experienced programmers, the S-curve ceiling of current LLMs, and what changes for engineers."
+    },
+    "usagebarPost": {
+      "title": "I built a Waybar widget for Omarchy to monitor LLM plan usage",
+      "summary": "Why ai-usagebar exists: a Rust port of claudebar that puts every plan's quota in the top bar or a terminal."
+    },
+    "toolkitTips": {
+      "title": "Akita's AI tips and toolkit",
+      "summary": "After 600 hours with coding agents: ai-jail, ai-memory, ai-usagebar and ghpending, plus tests, backups and discipline."
+    },
+    "tuiPost": {
+      "title": "Playing with TUIs and LLMs: Ratatui and Bubbletea",
+      "summary": "The component library behind my terminal apps, built with LLMs, and already powering ai-usagebar."
+    },
+    "memorySwitch": {
+      "title": "Switch AI agents without losing the session",
+      "summary": "ai-memory run keeps one work session going across Claude Code, Codex and other agents, with ai-jail and ai-usagebar integrated."
+    },
+    "ghpendingPost": {
+      "title": "I built a CLI to check my GitHub pending stuff",
+      "summary": "Why ghpending exists and how it fetches every repository in parallel within GitHub's rate limits."
+    },
+    "githubBlock": {
+      "title": "Bypassing the GitHub API block in Brazil",
+      "summary": "When GitHub's API stopped answering from Brazil: the SOCKS proxy support that keeps gh and ghpending working."
+    },
+    "bend2": {
+      "title": "New AI-focused language: Bend 2",
+      "summary": "I ported ghpending and tclock to Bend 2 on launch day to see what the language can really do."
+    },
+    "memoryPost": {
+      "title": "I built a memory system for coding agents",
+      "summary": "Where ai-memory started: Markdown in git, SQLite search, automatic capture and handoffs between agents."
+    },
+    "jailUpdate": {
+      "title": "ai-jail security update: Docker goes opt-in",
+      "summary": "A reported flaw, a hands-on demo, and why the Docker socket is now off unless you ask for it."
+    },
+    "typesafe": {
+      "title": "Why things like TypeSafe AI don't interest me",
+      "summary": "My rule for new AI tools, and why I do not spend time optimizing token spend."
+    },
+    "omarchyDualGpu": {
+      "title": "Omarchy 3: dual GPU setup with AMD and NVIDIA",
+      "summary": "The iGPU drives the desktop and the RTX 5090 takes 3D work, configured in Hyprland."
+    },
+    "omarchyThinkpad": {
+      "title": "Omarchy on the ThinkPad T14 Gen 6",
+      "summary": "A mini review and the full setup of my Linux laptop for SSH, agents and the NAS."
+    },
+    "nwOmarchy": {
+      "title": "NW-Omarchy: bringing Omarchy to X11",
+      "summary": "An X11 session next to Omarchy that keeps the themes and 70-plus shortcuts."
+    },
+    "emuDistrobox": {
+      "title": "An emulation distrobox with Claude Code",
+      "summary": "How the gaming box started: twelve platforms and Steam in Ansible roles, written with an agent."
+    },
+    "racingGames": {
+      "title": "My favorite retro racing games on my distrobox",
+      "summary": "Driveclub on a shadPS4 fork, Forza Motorsport 4 on Xenia, and the tweaks it took."
+    },
+    "marathon": {
+      "title": "Wrapping up my AI marathon: success or failure?",
+      "summary": "500 hours across 24 repositories, ranked, and why review and XP decide whether AI helps."
+    }
+  },
+  "related": {
+    "title": "More on my blog",
+    "lede": "The longer versions, with the details and the dead ends.",
+    "read": "Read the post"
   }
 }

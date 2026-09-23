@@ -6,6 +6,8 @@ import FeatureGrid from '@/components/FeatureGrid.astro';
 import CodeBlock from '@/components/CodeBlock.astro';
 import Figure from '@/components/Figure.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import Related from '@/components/Related.astro';
+import { related } from '@/data/articles';
 import { sisters, thirdParty } from '@/data/site';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
@@ -25,6 +27,7 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
       <a href={thirdParty.foundation} class="btn btn-ghost">{t('omarchy.foundation')}</a>
       <a href={thirdParty.donate} class="btn btn-ghost">{t('omarchy.donate')}</a>
     </div>
+    <div class="mt-14 max-w-3xl"><Related ids={related.omarchy} /></div>
   </Section>
 
   <Section title={t('tmux.title')} lede={t('tmux.lede')} hue="amber">
@@ -45,6 +48,7 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
   <Section title={t('orchestration.title')} lede={t('orchestration.lede')} hue="rose">
     <FeatureGrid items={orchestrators} cols={2} />
     <p class="mt-10 max-w-[44em]">{t('orchestration.text')}</p>
+    <div class="mt-14 max-w-3xl"><Related ids={related.orchestration} /></div>
   </Section>
 
   <Section title={t('memory.title')} lede={t('memory.lede')} hue="teal" tint fill>
@@ -53,6 +57,7 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
       <a href={sisters.memory.url} class="btn btn-primary">{t('memory.site')}</a>
       <a href={href('/workflow/')} class="btn btn-ghost">{t('memory.workflow')}</a>
     </div>
+    <div class="mt-14 max-w-3xl"><Related ids={related.memory} /></div>
   </Section>
   <CtaBand />
 </Base>

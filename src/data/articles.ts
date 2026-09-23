@@ -24,10 +24,41 @@ export const articles = {
   multiModel: { path: '/en/2026/04/18/llm-benchmarks-part-2-multi-model/', date: '2026-04-18', hue: 'rose' },
   chronicles: { path: '/en/2026/02/16/vibe-code-zero-to-production-in-6-days-the-m-akita-chronicles/', date: '2026-02-16', hue: 'orange' },
   aiKilled: { path: '/en/2026/02/08/rant-ai-killed-programmers/', date: '2026-02-08', hue: 'red' },
+  usagebarPost: { path: '/en/2026/05/24/i-built-a-waybar-widget-for-omarchy-to-monitor-llm-usage-ai-usagebar/', date: '2026-05-24', hue: 'blue' },
+  toolkitTips: { path: '/en/2026/05/24/akita-ai-tips-toolkit-ai-jail-ai-memory-ai-usagebar/', date: '2026-05-24', hue: 'violet' },
+  tuiPost: { path: '/en/2026/06/08/playing-with-tuis-llms-ratatui-bubbletea/', date: '2026-06-08', hue: 'red' },
+  memorySwitch: { path: '/en/2026/07/20/whats-new-ai-memory-switch-agents-without-losing-session/', date: '2026-07-20', hue: 'teal' },
+  ghpendingPost: { path: '/en/2026/05/23/i-built-a-cli-to-check-my-github-pending-stuff-ghpending/', date: '2026-05-23', hue: 'amber' },
+  githubBlock: { path: '/en/2026/06/11/bypassing-github-api-block-brazil/', date: '2026-06-11', hue: 'amber' },
+  bend2: { path: '/en/2026/09/19/new-ai-language-just-released-bend-2/', date: '2026-09-19', hue: 'red' },
+  memoryPost: { path: '/en/2026/05/23/i-built-memory-system-for-coding-agents-ai-memory/', date: '2026-05-23', hue: 'teal' },
+  jailUpdate: { path: '/en/2026/07/25/ai-jail-security-update-docker-opt-in/', date: '2026-07-25', hue: 'orange' },
+  typesafe: { path: '/en/2026/09/16/why-things-like-typesafe-ai-dont-interest-me/', date: '2026-09-16', hue: 'red' },
+  omarchyDualGpu: { path: '/en/2026/01/21/omarchy-3-dual-gpu-setup-with-amd-and-nvidia/', date: '2026-01-21', hue: 'blue' },
+  omarchyThinkpad: { path: '/en/2026/04/18/omarchy-on-thinkpad-t14-gen-6/', date: '2026-04-18', hue: 'blue' },
+  nwOmarchy: { path: '/en/2026/05/01/nw-omarchy-xlibre-inaugural/', date: '2026-05-01', hue: 'blue' },
+  emuDistrobox: { path: '/en/2026/04/11/emulation-distrobox-with-claude-code/', date: '2026-04-11', hue: 'orange' },
+  racingGames: { path: '/en/2026/04/19/my-favorite-retro-racing-games-on-distrobox/', date: '2026-04-19', hue: 'orange' },
+  marathon: { path: '/en/2026/05/14/wrapping-up-my-ai-marathon-success-or-failure/', date: '2026-05-14', hue: 'violet' },
 } satisfies Record<string, Omit<Article, 'id'>>;
 
 export type ArticleId = keyof typeof articles;
 export const pick = (...ids: ArticleId[]): Article[] => ids.map((id) => ({ id, ...articles[id] }));
+/** The same posts, newest first. Used by the "More on my blog" lists. */
+export const newest = (...ids: ArticleId[]): Article[] => pick(...ids).sort((a, b) => b.date.localeCompare(a.date));
+
+/** "More on my blog" on each page: the owner's most recent posts on that subject (docs/sources.md, section 3). */
+export const related = {
+  usagebar: ['usagebarPost', 'memorySwitch', 'tuiPost', 'toolkitTips'],
+  ghpending: ['ghpendingPost', 'githubBlock', 'bend2', 'skills'],
+  tclock: ['dayToDay', 'bend2', 'tuiPost', 'skills'],
+  workflow: ['skills', 'shipMore', 'hotTake', 'openSourceAi', 'marathon'],
+  games: ['emuDistrobox', 'racingGames', 'dayToDay'],
+  omarchy: ['omarchyDualGpu', 'omarchyThinkpad', 'nwOmarchy'],
+  orchestration: ['hotTake', 'typesafe', 'toolkitTips'],
+  memory: ['aiMemory2', 'memorySwitch', 'memoryPost'],
+  jail: ['jailUpdate', 'protect'],
+} satisfies Record<string, ArticleId[]>;
 
 /** The LLM Benchmark v4 numbers, from the Part 1 and Part 2 posts and the latest update. */
 export const benchmark = {

@@ -11,6 +11,8 @@ import Callout from '@/components/Callout.astro';
 import RepoMeta from '@/components/RepoMeta.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import Related from '@/components/Related.astro';
+import { related } from '@/data/articles';
 import digest from '@/assets/img/shots/ghpending-digest.png';
 import { repoUrl, site } from '@/data/site';
 import { repo } from '@/data/github';
@@ -64,6 +66,8 @@ const schema = softwareApp({ name: 'ghpending', description: t('meta.description
       <p><a class="link" href={href('/clock-tui/')}>{t('widget.link')}</a></p>
     </Callout>
   </section>
+
+  <Related ids={related.ghpending} hue="amber" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />
