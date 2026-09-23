@@ -10,7 +10,7 @@ const { number } = useI18n(Astro);
 <dl class="stats" style={`--cols:${cols}`} data-reveal="children">
   {items.map((f) => (
     <div>
-      <dd class="text-4xl">{f.prefix}{f.display ? <span title={number(f.n)}>{f.display}</span> : <span data-count={f.n}>{number(f.n)}</span>}{f.suffix}</dd>
+      <dd>{f.prefix}{f.display ? <span title={number(f.n)}>{f.display}</span> : <span data-count={f.n}>{number(f.n)}</span>}{f.suffix}</dd>
       <dt>{f.label}</dt>
     </div>
   ))}
@@ -18,7 +18,8 @@ const { number } = useI18n(Astro);
 <style>
   .stats { display: grid; gap: 2.2rem 2rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   @media (min-width: 48rem) { .stats { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
-  .stats > div { border-block-start: 3px solid var(--hue-vivid, var(--v-green)); padding-block-start: 1rem; }
-  .stats dd { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; }
+  /* Each number sizes to its own column (cqi), capped at the page's largest size, so a long figure never runs into the next. */
+  .stats > div { border-block-start: 3px solid var(--hue-vivid, var(--v-green)); padding-block-start: 1rem; container-type: inline-size; }
+  .stats dd { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; font-size: min(var(--text-4xl), 21cqi); white-space: nowrap; }
   .stats dt { margin-block-start: 0.6rem; color: var(--muted); }
 </style>

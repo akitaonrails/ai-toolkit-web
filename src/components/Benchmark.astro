@@ -28,7 +28,7 @@ const facts = [
     <dl class:list={['bfacts mt-8', compact && 'bfacts-row']}>
       {(compact ? facts.slice(0, 2).concat(facts.slice(3)) : facts).map((f) => (
         <div>
-          <dd class="text-3xl">{f.prefix}<span data-count={f.n}>{number(f.n)}</span>{f.suffix}</dd>
+          <dd>{f.prefix}<span data-count={f.n}>{number(f.n)}</span>{f.suffix}</dd>
           <dt>{f.label}</dt>
         </div>
       ))}
@@ -44,8 +44,8 @@ const facts = [
 </div>
 <style>
   .bfacts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 1.5rem; }
-  .bfacts > div { border-block-start: 3px solid var(--hue-vivid); padding-block-start: 0.8rem; }
+  .bfacts > div { border-block-start: 3px solid var(--hue-vivid); padding-block-start: 0.8rem; container-type: inline-size; }
   @media (min-width: 48rem) { .bfacts-row { grid-template-columns: repeat(3, minmax(0, 12rem)); } }
-  .bfacts dd { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; color: var(--hue); line-height: 1; font-variant-numeric: tabular-nums; }
+  .bfacts dd { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; color: var(--hue); line-height: 1; font-variant-numeric: tabular-nums; font-size: min(var(--text-3xl), 19cqi); white-space: nowrap; }
   .bfacts dt { margin-block-start: 0.45rem; color: var(--muted); font-size: var(--text-sm); }
 </style>
