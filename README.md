@@ -1,6 +1,6 @@
-# Akita's AI Toolkit
+# Akita's AI Lair
 
-Source of https://aitoolkit.akitaonrails.com: Fabio Akita's open source AI tools (ai-usagebar, ghpending, tclock, my-skills), the workflow that ties them to ai-memory, the LLM benchmark and writing, the newsletter and podcast appearances.
+Source of https://ailair.akitaonrails.com: Fabio Akita's open source AI tools (ai-usagebar, ghpending, tclock, my-skills), the workflow that ties them to ai-memory, the LLM benchmark and writing, the newsletter and podcast appearances.
 
 ```bash
 npm install

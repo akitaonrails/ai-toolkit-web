@@ -74,7 +74,7 @@
 
 :root {
   --shadow: 0 1px 2px oklch(0.2 0.05 310 / 0.08), 0 12px 40px -12px oklch(0.2 0.05 310 / 0.25);
-  /* The toolkit spectrum: every subject hue in wheel order. Interpolated in OKLCH so the midpoints stay saturated. */
+  /* The site spectrum: every subject hue in wheel order. Interpolated in OKLCH so the midpoints stay saturated. */
   --spectrum: linear-gradient(90deg in oklch, var(--v-red), var(--v-amber), var(--v-teal), var(--v-blue), var(--v-violet), var(--v-rose));
   --radius: 1rem;
   color-scheme: light;

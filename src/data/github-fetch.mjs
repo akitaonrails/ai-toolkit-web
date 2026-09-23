@@ -3,7 +3,7 @@
 import REPOS from './repos.json' with { type: 'json' };
 
 async function gh(path) {
-  const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'aitoolkit-build' };
+  const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'ailair-build' };
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const res = await fetch(`https://api.github.com${path}`, { headers, signal: AbortSignal.timeout(15000) });
   if (res.status === 404) return null;

@@ -1,13 +1,13 @@
 {
   "site": {
     "tagline": "The tools, workflow and writing behind how I work with AI",
-    "description": "Fabio Akita's open source AI toolkit: ai-usagebar, ghpending, tclock, agent skills and ai-memory, plus the LLM benchmark and the writing behind it all.",
-    "ogAlt": "Akita's AI Toolkit: tools, workflow and writing. A small dashboard with a red pixel clock, an amber list, a blue gauge and a violet chip.",
-    "homeTitle": "Akita's AI Toolkit: AI coding tools, workflow and benchmarks"
+    "description": "Fabio Akita's lair of open source AI tools: ai-usagebar, ghpending, tclock, agent skills and ai-memory, plus the LLM benchmark and the writing behind it.",
+    "ogAlt": "Akita's AI Lair: tools, workflow and writing. A small dashboard with a red pixel clock, an amber list, a blue gauge and a violet chip.",
+    "homeTitle": "Akita's AI Lair: AI coding tools, workflow and benchmarks"
   },
   "a11y": {
     "skip": "Skip to content",
-    "home": "Akita's AI Toolkit home",
+    "home": "Akita's AI Lair home",
     "mainNav": "Main",
     "language": "Language",
     "toggleTheme": "Switch between light and dark",

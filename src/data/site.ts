@@ -1,9 +1,9 @@
 import reposJson from './repos.json';
 
 export const site = {
-  name: "Akita's AI Toolkit",
+  name: "Akita's AI Lair",
   // The production domain. astro.config.mjs reads it from here.
-  url: 'https://aitoolkit.akitaonrails.com',
+  url: 'https://ailair.akitaonrails.com',
   github: 'https://github.com/akitaonrails',
   blog: 'https://akitaonrails.com',
   // English posts live under /en/ on the blog; Portuguese is the blog's default.

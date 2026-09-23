@@ -6,7 +6,7 @@ The site is static Astro output, deployed by Netlify on every push to `main`. `n
 
 1. Push the repository to GitHub.
 2. Netlify: Add new project, Import an existing project, GitHub, pick the repo. Netlify reads `netlify.toml`; leave the fields as they are and deploy.
-3. Optional: name the project `aitoolkit` for `aitoolkit.netlify.app` while DNS propagates.
+3. Optional: name the project `ailair` for `ailair.netlify.app` while DNS propagates.
 
 Recommended: add a `GITHUB_TOKEN` environment variable (a fine-grained token with read-only access to public repositories, scope "Builds", marked secret). The build reads stars and releases from the GitHub API; without a token, Netlify's shared IPs often hit the anonymous limit and the build falls back to `src/data/github-snapshot.json`. It never fails because of it.
 
@@ -14,9 +14,13 @@ Recommended: add a `GITHUB_TOKEN` environment variable (a fine-grained token wit
 
 `akitaonrails.com` uses AWS Route 53 for DNS (checked 2026-09-23), and the blog itself is on Netlify.
 
-1. Netlify, the project, Domain management, Add a domain: `aitoolkit.akitaonrails.com`. Netlify will say it is an external domain; accept.
-2. Route 53, the `akitaonrails.com` hosted zone, Create record: name `aitoolkit`, type `CNAME`, value `<project-name>.netlify.app`, TTL 300.
+1. Netlify, the project, Domain management, Add a domain: `ailair.akitaonrails.com`. Netlify will say it is an external domain; accept.
+2. Route 53, the `akitaonrails.com` hosted zone, Create record: name `ailair`, type `CNAME`, value `<project-name>.netlify.app`, TTL 300.
 3. Back in Netlify, wait for the DNS check, then let it provision the Let's Encrypt certificate (HTTPS, Verify DNS configuration, Provision certificate).
+
+## The old address
+
+The site launched as Akita's AI Toolkit at `aitoolkit.akitaonrails.com`. `netlify.toml` redirects that host to `ailair.akitaonrails.com` with a 301, path included. For the redirect to fire, the old host must still reach Netlify: keep its Route 53 CNAME pointing at the Netlify project and add it in Netlify as a domain alias (Domain management, Add a domain alias).
 
 ## Analytics (optional)
 
@@ -30,7 +34,7 @@ npm run check:colors && npm run check:i18n && npm run build
 
 ## After launch
 
-- Add `https://aitoolkit.akitaonrails.com/sitemap-index.xml` to Google Search Console (a URL-prefix property works for a subdomain).
+- Add `https://ailair.akitaonrails.com/sitemap-index.xml` to Google Search Console (a URL-prefix property works for a subdomain).
 - Link the site from the GitHub profile README, the blog's About page and the tools' READMEs.
 - Check the share card at https://www.opengraph.xyz.
 

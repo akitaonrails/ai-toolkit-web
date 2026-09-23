@@ -4,7 +4,7 @@
 
 | Item | Where |
 |---|---|
-| A unique title per page, 60 characters or fewer with the " \| Akita's AI Toolkit" suffix (page titles in `meta.title` stay under about 39 characters); the home page uses `site.homeTitle` | `Base.astro`, each namespace's `meta` |
+| A unique title per page, 60 characters or fewer with the " \| Akita's AI Lair" suffix (page titles in `meta.title` stay under about 43 characters); the home page uses `site.homeTitle` | `Base.astro`, each namespace's `meta` |
 | A meta description per page, 140 to 160 characters | each namespace's `meta.description`, `common.json` `site.description` as the fallback |
 | Canonical URL on every page, trailing slash | `Base.astro`, `trailingSlash: 'always'` |
 | Open Graph and Twitter card with a 1200x630 image | `Base.astro`, `src/assets/img/og.png` |
@@ -20,7 +20,7 @@
 
 ## After launch
 
-1. Google Search Console: add `https://aitoolkit.akitaonrails.com/` as a URL-prefix property and submit `sitemap-index.xml`.
+1. Google Search Console: add `https://ailair.akitaonrails.com/` as a URL-prefix property and submit `sitemap-index.xml`.
 2. Bing Webmaster Tools: import from Search Console.
 3. Link to the site from the GitHub profile README, the blog's About page and each tool's README. Links from pages that already rank matter more than anything on the page.
 4. Check the share card at https://www.opengraph.xyz.

@@ -1,6 +1,6 @@
 # Design system
 
-How pages on aitoolkit.akitaonrails.com are put together. Read this before adding or changing a page. It follows the same structure as the sister sites (`~/Projects/ai-jail-web`, `~/Projects/ai-memory-web`) with its own palette and type. Colors and type: [color-study.md](color-study.md).
+How pages on ailair.akitaonrails.com are put together. Read this before adding or changing a page. It follows the same structure as the sister sites (`~/Projects/ai-jail-web`, `~/Projects/ai-memory-web`) with its own palette and type. Colors and type: [color-study.md](color-study.md).
 
 ## The idea
 

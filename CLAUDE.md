@@ -1,6 +1,6 @@
-# aitoolkit.akitaonrails.com
+# ailair.akitaonrails.com
 
-Akita's AI Toolkit: one site for Fabio Akita's AI tools, workflow, writing, newsletter and podcast appearances. Astro 7, Tailwind 4, GSAP, deployed on Netlify. It is the umbrella over the sister sites `~/Projects/ai-jail-web` (aijail.io) and `~/Projects/ai-memory-web` and shares their structure and scripts.
+Akita's AI Lair: one site for Fabio Akita's AI tools, workflow, writing, newsletter and podcast appearances. Astro 7, Tailwind 4, GSAP, deployed on Netlify. It is the umbrella over the sister sites `~/Projects/ai-jail-web` (aijail.io) and `~/Projects/ai-memory-web` and shares their structure and scripts.
 
 Read before changing anything: `docs/design-system.md`, `docs/color-study.md`, `docs/sources.md`.
 

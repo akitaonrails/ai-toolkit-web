@@ -1,5 +1,5 @@
-A wide social share card. On the left two thirds, in large bold expanded sans-serif lettering, off-white (#F3EFEC): "Akita's AI Toolkit". Directly under it, smaller, in warm grey (#B7AFAA): "Tools, workflow and writing". Under that, a thin horizontal rule made of a spectrum gradient going red, amber, teal, blue, violet, rose.
+A wide social share card. On the left two thirds, in large bold expanded sans-serif lettering, off-white (#F4F0F8): "Akita's AI Lair". Directly under it, smaller, in warm grey (#B7AFAA): "Tools, workflow and writing". Under that, a thin horizontal rule made of a spectrum gradient going red, amber, teal, blue, violet, rose.
 
 On the right third, a compact abstract composition: a small blocky pixel clock in signal red, a short amber list panel, a blue gauge bar and a violet chip, arranged like a mini dashboard, all resting on a teal glowing slab.
 
-Only these texts: "Akita's AI Toolkit", "Tools, workflow and writing".
+Only these texts: "Akita's AI Lair", "Tools, workflow and writing".

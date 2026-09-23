@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "Akita's AI Toolkit: Fabio Akita's open source AI tools, workflow and writing, in one place: https://aitoolkit.akitaonrails.com",
+  "description": "Akita's AI Lair: Fabio Akita's open source AI tools, workflow and writing, in one place: https://ailair.akitaonrails.com",
   "author": "Fabio Akita",
   "license": "UNLICENSED",
   "scripts": {
@@ -20,9 +20,13 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/heebo": "^5.3.0",
     "@fontsource-variable/hubot-sans": "^5.3.0",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@fontsource-variable/mona-sans": "^5.3.0",
+    "@fontsource-variable/noto-sans-jp": "^5.3.0",
+    "@fontsource-variable/noto-sans-kr": "^5.3.0",
+    "@fontsource-variable/rubik": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.4",
     "gsap": "^3.15.0",
