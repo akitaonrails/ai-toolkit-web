@@ -17,12 +17,30 @@
   "features": {
     "title": "Details that save the morning",
     "items": [
-      { "title": "Forks follow upstream", "text": "When a tracked repo is a fork, you see your pull requests on the original project instead of the fork's own empty queue. Detected automatically and cached." },
-      { "title": "Security alerts first", "text": "For repos you own: Dependabot, secret scanning and code scanning alerts, tagged SEC or QUA and sorted by severity ahead of everything else." },
-      { "title": "Your items step back", "text": "Pull requests you opened are dimmed and listed last, marked \"by you\". They wait on other people, not on you." },
-      { "title": "Feedback stands out", "text": "Comment counts and review decisions show wherever the API has them, highlighted when there is something to read." },
-      { "title": "Sort by what matters today", "text": "Most recent activity, name, most open items, or the most neglected repository first. <code>--limit</code> caps the list fairly across repos." },
-      { "title": "Fast with a token", "text": "With <code>GITHUB_TOKEN</code>, all repos come in one batched GraphQL request, private ones included. Without it, public repos still work." }
+      {
+        "title": "Forks follow upstream",
+        "text": "When a tracked repo is a fork, you see your pull requests on the original project instead of the fork's own empty queue. Detected automatically and cached."
+      },
+      {
+        "title": "Security alerts first",
+        "text": "For repos you own: Dependabot, secret scanning and code scanning alerts, tagged SEC or QUA and sorted by severity ahead of everything else."
+      },
+      {
+        "title": "Your items step back",
+        "text": "Pull requests you opened are dimmed and listed last, marked \"by you\", because they are waiting on other people."
+      },
+      {
+        "title": "Feedback stands out",
+        "text": "Comment counts and review decisions show wherever the API has them, highlighted when there is something to read."
+      },
+      {
+        "title": "Sort by what matters today",
+        "text": "Most recent activity, name, most open items, or the most neglected repository first. <code>--limit</code> caps the list fairly across repos."
+      },
+      {
+        "title": "Fast with a token",
+        "text": "With <code>GITHUB_TOKEN</code>, all repos come in one batched GraphQL request, private ones included. Without it, public repos still work."
+      }
     ]
   },
   "usage": {
@@ -32,7 +50,12 @@
   },
   "install": {
     "title": "Install",
-    "tabs": ["Homebrew", "Arch", "Cargo", "mise"],
+    "tabs": [
+      "Homebrew",
+      "Arch",
+      "Cargo",
+      "mise"
+    ],
     "readme": "Configuration, proxy and all flags in the README"
   },
   "widget": {
@@ -41,8 +64,17 @@
     "link": "See tclock"
   },
   "next": [
-    { "title": "tclock", "text": "The clock that shows ghpending on my second monitor." },
-    { "title": "The workflow", "text": "What happens after ghpending shows the queue." },
-    { "title": "ai-usagebar", "text": "The other gauge I check before starting." }
+    {
+      "title": "tclock",
+      "text": "The clock that shows ghpending on my second monitor."
+    },
+    {
+      "title": "The workflow",
+      "text": "What happens after ghpending shows the queue."
+    },
+    {
+      "title": "ai-usagebar",
+      "text": "The other gauge I check before starting."
+    }
   ]
 }

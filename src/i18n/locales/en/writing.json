@@ -12,7 +12,7 @@
   "benchmark": {
     "kicker": "LLM Benchmark v4",
     "title": "Every major model, tested on the same sabotaged app",
-    "text": "Version 4 is one Rails app that grows over seven sprints while an isolated subagent plants fourteen sabotages based on real CVEs. A model scores for noticing and fixing what is broken, not for finishing a checklist. I rebuilt the benchmark from scratch for the third time to get there.",
+    "text": "Version 4 is one Rails app that grows over seven sprints while an isolated subagent plants fourteen sabotages based on real CVEs. Models are ranked by vigilance: did they notice what was broken and fix it? I rebuilt the benchmark from scratch for the third time to get there.",
     "current": "When a major frontier model ships, it runs through the same table. The latest round added {n} models on {date}. That is how I pick which model to use for what, and what each one costs per task.",
     "facts": {
       "models": "models ranked",
@@ -23,7 +23,9 @@
     "results": "Read the results",
     "repo": "Benchmark repository",
     "chartAlt": "Bubble chart of the v4 results: dollar cost on a logarithmic horizontal axis against score, bubble size is wall-clock time, color is the harness. The best deals sit high and to the left.",
-    "chartCaption": "Cost against score for the Tier A models with a real dollar cost, from Part 2. Up and to the left is better; smaller bubbles finished faster."
+    "chartCaption": "Cost against score for the Tier A models with a real dollar cost, from Part 2. Up and to the left is better; smaller bubbles finished faster.",
+    "teaser": "One Rails app, fourteen sabotages based on real CVEs, and {n} models ranked by whether they notice and fix what is broken. Every major new model goes through the same table.",
+    "more": "The benchmark, in detail"
   },
   "sections": {
     "benchmarks": {

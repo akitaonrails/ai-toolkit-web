@@ -5,7 +5,7 @@
   },
   "hero": {
     "title": "The rest of my setup",
-    "lede": "The tools I did not write but use every day, and a few popular ones I tried and set aside. The short version: a good OS, a terminal that survives accidents, and memory."
+    "lede": "The tools I did not write but use every day, and a few popular ones I tried and set aside."
   },
   "omarchy": {
     "title": "Omarchy, the operating system",
@@ -25,13 +25,13 @@
     "title": "tmux, so nothing dies by accident",
     "lede": "tmux is a terminal multiplexer: it runs your shells inside a session that lives apart from the terminal window, split into windows and panes. I use it mostly for one reason. If I close the terminal by accident, the agents keep running, and one command brings everything back.",
     "codeTitle": "all it takes",
-    "text": "Each project gets a tmux window with its agent. That is the whole orchestration layer I need.",
+    "text": "Each project gets a tmux window with its agent, and that is all the orchestration I need.",
     "link": "tmux on GitHub"
   },
   "herdr": {
     "title": "Tried and set aside: Herdr",
     "lede": "Herdr is an agent multiplexer written in Rust: tmux-style panes and sessions, plus a sidebar that knows which pane holds a coding agent and whether it is working, blocked or done.",
-    "text": "I tried it. It is well made and plenty of people like it. I did not find a use for it in my own routine, because one tmux window per project already tells me where each agent is. That says more about how I work than about Herdr.",
+    "text": "I tried it. It is well made and plenty of people like it. I did not find a use for it in my own routine, because one tmux window per project already tells me where each agent is, and yours may be different.",
     "link": "herdr.dev"
   },
   "orchestration": {
@@ -47,13 +47,12 @@
         "text": "A terminal app that gives each agent (Claude Code, Codex, Gemini, Aider) its own tmux session and git worktree."
       }
     ],
-    "text": "They solve a real problem for some people. For me the bottleneck was never how many agents run at once. It was how much each one remembers."
+    "text": "They solve a real problem for some people. My bottleneck has always been how much each agent remembers, and running more of them in parallel does nothing for that."
   },
   "memory": {
     "title": "What matters most: memory",
-    "lede": "An agent that starts every session from zero repeats the same mistakes, whichever orchestrator sits on top. Memory is what turns a fast intern into someone who knows the codebase. That is why I built ai-memory, and why every agent I run starts with ai-memory run.",
+    "lede": "An agent that starts every session from zero repeats the same mistakes, whichever orchestrator sits on top. Without memory, each session is an intern with amnesia. That is why I built ai-memory, and why every agent I run starts with ai-memory run.",
     "site": "The ai-memory site",
-    "workflow": "How it fits my workflow",
-    "alt": "Three terminals: Claude Code, Codex and OpenCode. Claude Code's quota gauge is full and red, a green arrow moves the work to Codex, and all three sit on one slab labelled Same memory."
+    "workflow": "How it fits my workflow"
   }
 }

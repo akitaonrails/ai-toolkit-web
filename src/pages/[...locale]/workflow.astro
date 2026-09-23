@@ -24,6 +24,7 @@ type Text = { title: string; text: string };
 const prompts = raw<{ code: string; text: string }[]>('start.items');
 const skills = withText(skillIds.map((id) => ({ hue: id === 'release' ? 'rose' : id === 'pr-bump' ? 'amber' : 'violet', href: `${repoUrl('skills')}/tree/master/${id}` })) as { hue: 'violet' | 'rose' | 'amber'; href: string }[], raw<Text[]>('skills.items'))
   .map((s) => ({ ...s, title: `<code>${s.title}</code>` }));
+const kaizen = withText([{ hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }, { hue: 'orange' }] as const, raw<Text[]>('kaizen.items'));
 const knowledge = withText([{ hue: 'teal' }, { hue: 'violet' }, { hue: 'amber' }, { hue: 'rose' }] as const, raw<Text[]>('knowledge.items'));
 const next = withText([{ hue: 'blue', href: '/ai-usagebar/' }, { hue: 'amber', href: '/ghpending/' }, { hue: 'rose', href: '/writing/' }] as const, raw<Text[]>('next'));
 const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
@@ -58,6 +59,11 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
   <Section title={t('skills.title')} lede={t('skills.lede')} hue="violet" id="skills">
     <FeatureGrid items={skills} />
     <a href={repoUrl('skills')} class="btn btn-ghost mt-10">{t('skills.link')}</a>
+  </Section>
+
+  <Section title={t('kaizen.title')} lede={t('kaizen.lede')} hue="teal" id="kaizen">
+    <FeatureGrid items={kaizen} cols={2} />
+    <div class="mt-14"><PullQuote {...raw<{ text: string; cite: string }>('kaizen.quote')} /></div>
   </Section>
 
   <Section title={t('numbers.title')} lede={t('numbers.lede', { year: tally.year, date: date(tally.countedOn) })} hue="violet" tint>

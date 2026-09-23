@@ -32,7 +32,7 @@
   "pipeline": {
     "title": "The pipeline",
     "lede": "Nothing a contributor writes is taken as true. Every claim gets checked, every approved fix gets a test first, and nothing is tagged without green CI on that exact commit.",
-    "alt": "A left to right pipeline: Open PRs and issues split into pr-audit and iss-audit, which merge after an Approved check into github-resolution, then pr-post-audit, then release. An ai-memory bar runs under all of it.",
+    "alt": "A left to right pipeline: Open PRs and issues split into pr-audit and iss-audit, which merge after an Approved check into github-resolution, then pr-post-audit, then release, then Kaizen, with an arrow from Kaizen back to the start. An ai-memory bar runs under all of it.",
     "caption": "pr-post-audit runs when a session resolved more than three tickets. The release skill runs only when I ask for one."
   },
   "skills": {
@@ -49,7 +49,7 @@
       },
       {
         "title": "github-resolution",
-        "text": "Turns approved tickets into merged code, one at a time, each with a regression test written before the fix. No speculative abstractions, no drive-by refactors."
+        "text": "Turns approved tickets into merged code, one at a time, each with a regression test written before the fix, and without speculative abstractions or drive-by refactors."
       },
       {
         "title": "security-audit",
@@ -102,7 +102,7 @@
     "link": "The post where I explain this"
   },
   "knowledge": {
-    "title": "Skills are small. Knowledge is large.",
+    "title": "Where the rest of the knowledge lives",
     "lede": "Skills cover procedures that repeat the same way. Everything else lives in plain text the agents can read.",
     "items": [
       {
@@ -136,5 +136,31 @@
       "title": "Writing",
       "text": "The benchmark and the posts behind these choices."
     }
-  ]
+  ],
+  "kaizen": {
+    "title": "Kaizen closes the loop",
+    "lede": "After each round I look at what went wrong or took too long and fix the process, along with the code. I call it kaizen, the Japanese word for continuous improvement, and it is the step that makes the next round better than this one.",
+    "items": [
+      {
+        "title": "Skills",
+        "text": "A rule gets added the day a mistake shows up. The my-skills history is full of them: batch the Dependabot bumps into one pass, leave declined pull requests in a clean state."
+      },
+      {
+        "title": "Harness instructions",
+        "text": "Each project's AGENTS.md collects the commands, invariants and traps as I find them, so the next agent does not have to rediscover them."
+      },
+      {
+        "title": "Tools",
+        "text": "ai-usagebar, ghpending and tclock each exist because something in my routine was slow or invisible. They keep changing for the same reason."
+      },
+      {
+        "title": "Setup",
+        "text": "The desktop, the terminal and the gaming box are all code, so an improvement is a commit that I can review, keep or revert."
+      }
+    ],
+    "quote": {
+      "text": "Every line in these skills is a scar.",
+      "cite": "From my post on skills"
+    }
+  }
 }

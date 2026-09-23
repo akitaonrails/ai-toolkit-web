@@ -93,6 +93,7 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 
 | Source | Lands in |
 |---|---|
+| Owner's instructions (2026-09-23): the loop does not end at release; kaizen, continuous improvement of tools, setup, harness instructions and skills from the problems found. The quote "Every line in these skills is a scar" and the two pr-bump rules are from the skills post (section 3) | `home.json` `loop`, `workflow.json` `kaizen`, diagrams `home-loop` and `workflow-pipeline` |
 | Owner's instructions (2026-09-23): the intro line (programmer for 30+ years, entrepreneur, speaker, writer, former YouTuber) linking to LinkedIn | `home.json` `hero.intro` |
 | Owner's instructions (2026-09-23): contact email `boss@akitaonrails.com` and the warning that goes with it (no sales, no sponsorship, no automatic reply, silence means no) | `site.ts` `site.email`, `home.json` `contact`, footer `Contact` link to `/#contact` |
 | Owner's instructions (2026-09-23): runs Omarchy and donated to its foundation; tmux mainly so nothing dies when a terminal closes; tried Herdr and agent orchestrators and did not need them personally, without calling them useless; memory matters most | `setup.json`, `setup.astro`. Third-party facts below |

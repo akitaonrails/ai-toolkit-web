@@ -38,9 +38,9 @@
   },
   "loop": {
     "title": "The daily loop",
-    "lede": "Skills do the heavy lifting. I read their reports, decide, and supervise.",
-    "alt": "A clockwise loop: See what is pending, Audit, Resolve, Release, around a central ai-memory wiki connected to every step.",
-    "caption": "ghpending shows the queue, the audit skills check every pull request and issue, github-resolution turns the approved ones into merged code, and the release skill cuts a version when I ask for one.",
+    "lede": "The skills do the heavy lifting. I read their reports and make the calls.",
+    "alt": "A clockwise loop of five stations: See what is pending, Audit, Resolve, Release and Kaizen, around a central ai-memory wiki connected to every step.",
+    "caption": "ghpending shows the queue, the audit skills check every pull request and issue, github-resolution turns the approved ones into merged code, and the release skill cuts a version when I ask for one. Kaizen closes the circle: whatever went wrong becomes a fix to the process itself.",
     "link": "How the pipeline works",
     "quote": {
       "text": "Ship first, fix later. AI made fixing faster and cheaper."
@@ -52,7 +52,6 @@
     "alt": "Three terminals: Claude Code, Codex and OpenCode. Claude Code's quota gauge is full and red. A green arrow labelled Switch moves the work to Codex. All three sit on one slab labelled Same memory.",
     "memory": "How ai-memory does it",
     "usagebar": "How I watch the quotas",
-    "codeTitle": "one project, two agents",
     "post": "The blog post on switching agents"
   },
   "tools": {

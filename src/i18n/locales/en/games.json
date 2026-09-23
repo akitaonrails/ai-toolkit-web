@@ -31,7 +31,7 @@
   },
   "research": {
     "title": "AI does the research, and writes it down",
-    "lede": "For every port, recompilation or stubborn Windows game, an agent researched the sources, found the right settings and patches, wrote the Ansible role, and left a note: where to get it, how it is configured, and what did not work. Steam games have their own compatibility database under Proton, with each local fix backed by a source.",
+    "lede": "For every port, recompilation or stubborn Windows game, an agent researched the sources, wrote the Ansible role and left a note with where to get it, how it is set up and what did not work. Steam games have their own compatibility database under Proton, with each local fix backed by a source.",
     "link": "Browse the notes"
   },
   "box": {

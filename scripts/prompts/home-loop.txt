@@ -1,10 +1,11 @@
-A circular loop diagram with four stations on a ring, read clockwise starting at the top. Phosphor green arrows (#52F184) run clockwise between stations.
+A circular loop diagram with five stations evenly spaced on a ring, read clockwise starting at the top. Phosphor green arrows (#52F184) run clockwise between stations and close the circle.
 
 TOP station, amber (#FFBE3D): a list panel with small tag pills. Label "See what is pending".
-RIGHT station, violet (#A86BFD): a magnifying lens over a document with a shield. Label "Audit".
-BOTTOM station, violet (#A86BFD) brighter: a merge symbol (two branches joining into one) with a green check dot. Label "Resolve".
-LEFT station, rose (#F45FB0): a tag shape with a small package box. Label "Release".
+UPPER RIGHT station, violet: a magnifying lens over a document with a shield. Label "Audit".
+LOWER RIGHT station, violet, brighter: a merge symbol (two branches joining into one) with a green check dot. Label "Resolve".
+LOWER LEFT station, rose (#F45FB0): a tag shape with a small package box. Label "Release".
+UPPER LEFT station, teal (#2FD8D0): a gear with a small curved arrow around it pointing upward, meaning continuous improvement. Label "Kaizen".
 
-In the CENTER of the ring, a glowing teal (#2FD8D0) stack of pages like a wiki, labelled "ai-memory", with thin teal lines reaching out to all four stations.
+In the CENTER of the ring, a glowing teal stack of pages like a wiki, labelled "ai-memory", with thin teal lines reaching out to all five stations.
 
-Only these labels: "See what is pending", "Audit", "Resolve", "Release", "ai-memory".
+Only these texts appear in the image, each exactly once: "See what is pending", "Audit", "Resolve", "Release", "Kaizen", "ai-memory". No other words or letters.

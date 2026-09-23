@@ -4,7 +4,6 @@ import PageHero from '@/components/PageHero.astro';
 import Section from '@/components/Section.astro';
 import FeatureGrid from '@/components/FeatureGrid.astro';
 import CodeBlock from '@/components/CodeBlock.astro';
-import Figure from '@/components/Figure.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import Related from '@/components/Related.astro';
 import { related } from '@/data/articles';
@@ -52,7 +51,6 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
   </Section>
 
   <Section title={t('memory.title')} lede={t('memory.lede')} hue="teal" tint fill>
-    <Figure name="home-switch" alt={t('memory.alt')} />
     <div class="flex flex-wrap gap-3">
       <a href={sisters.memory.url} class="btn btn-primary">{t('memory.site')}</a>
       <a href={href('/workflow/')} class="btn btn-ghost">{t('memory.workflow')}</a>

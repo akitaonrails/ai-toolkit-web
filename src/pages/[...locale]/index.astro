@@ -10,7 +10,6 @@ import ArticleList from '@/components/ArticleList.astro';
 import Social from '@/components/Social.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import CtaBand from '@/components/CtaBand.astro';
-import CodeBlock from '@/components/CodeBlock.astro';
 import Portrait from '@/components/Portrait.astro';
 import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
@@ -85,7 +84,6 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 
   <Section title={t('switch.title')} lede={t('switch.lede')} hue="teal">
     <Figure name="home-switch" alt={t('switch.alt')} />
-    <div class="max-w-2xl mb-8"><CodeBlock title={t('switch.codeTitle')} code={'ai-memory run claude\n# quota gone: same workstream, different agent\nai-memory run codex --yolo'} /></div>
     <div class="flex flex-wrap gap-3">
       <a href={sisters.memory.url} class="btn btn-ghost">{t('switch.memory')}</a>
       <a href={href('/ai-usagebar/')} class="btn btn-ghost">{t('switch.usagebar')}</a>
@@ -107,7 +105,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 
   <Section title={t('writing.title')} lede={t('writing.lede')} hue="rose" id="writing" tint>
     <div class="mb-20"><PullQuote {...raw<Quote>('writing.quote')} large /></div>
-    <Benchmark />
+    <Benchmark compact />
     <h3 class="text-2xl mt-24 mb-8">{t('writing.postsTitle')}</h3>
     <ArticleList items={posts} />
     <a href={href('/writing/')} class="btn btn-ghost mt-10">{t('writing.more')}</a>
