@@ -16,7 +16,7 @@
 
 ## Check before pushing
 
-A quick audit of the built pages (title and description length, h1 count, heading skips, images without `alt`, broken internal links) is the Python snippet in the commit that added this file; rerun it after adding a page.
+`npm run build && npm run check:seo` audits every built page: title and description length, one h1, heading order, `alt` on images, canonical, and internal links. It exits 1 on any problem.
 
 ## After launch
 

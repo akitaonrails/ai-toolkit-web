@@ -8,23 +8,23 @@ const languages = languageLinks(Astro.url.pathname);
   <div class="spectrum-rule !rounded-none" aria-hidden="true"></div>
   <div class="wrap py-14 grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
     <div>
-      <a href={href('/')} class="wordmark"><span class="dot" aria-hidden="true"></span><span>Akita's AI Toolkit</span></a>
+      <a href={href("/")} class="wordmark py-2"><span class="dot" aria-hidden="true"></span><span>Akita's AI Toolkit</span></a>
       <p class="mt-3 text-muted max-w-[26em]">{t('footer.about')}</p>
     </div>
     <nav aria-label={t('footer.tools')} class="grid gap-2 content-start">
       <span class="font-display font-bold">{t('footer.tools')}</span>
-      {[...nav, ...extras].map((l) => <a href={href(l.href)} class="hover:text-text text-muted">{t(`nav.${l.id}.label`)}</a>)}
+      {[...nav, ...extras].map((l) => <a href={href(l.href)} class="hover:text-text text-muted py-1.5">{t(`nav.${l.id}.label`)}</a>)}
     </nav>
     <div class="grid gap-2 content-start">
       <span class="font-display font-bold">{t('footer.sisters')}</span>
-      <a href={sisters.memory.url} class="hover:text-text text-muted">ai-memory</a>
-      <a href={sisters.jail.url} class="hover:text-text text-muted">ai-jail</a>
-      <a href={repoUrl('skills')} class="hover:text-text text-muted">my-skills</a>
+      <a href={sisters.memory.url} class="hover:text-text text-muted py-1.5">ai-memory</a>
+      <a href={sisters.jail.url} class="hover:text-text text-muted py-1.5">ai-jail</a>
+      <a href={repoUrl('skills')} class="hover:text-text text-muted py-1.5">my-skills</a>
     </div>
     <div class="grid gap-2 content-start">
       <span class="font-display font-bold">{t('footer.more')}</span>
-      {social.map((s) => <a href={s.url} class="hover:text-text text-muted" rel="me">{t(`social.${s.id}.name`)}</a>)}
-      <a href={href('/#contact')} class="hover:text-text text-muted">{t('footer.contact')}</a>
+      {social.map((s) => <a href={s.url} class="hover:text-text text-muted py-1.5" rel="me">{t(`social.${s.id}.name`)}</a>)}
+      <a href={href('/#contact')} class="hover:text-text text-muted py-1.5">{t('footer.contact')}</a>
     </div>
   </div>
   <div class="wrap pb-10 flex flex-wrap gap-x-6 gap-y-3 items-center text-sm text-muted">

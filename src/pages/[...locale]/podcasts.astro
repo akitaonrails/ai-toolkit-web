@@ -35,7 +35,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
             <h2 class="text-2xl mt-3 !leading-tight">{v.title}</h2>
             <p class="mt-2 font-mono text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
             <p class="mt-4 text-muted">{t(`items.${v.id}`)}</p>
-            <a class="link mt-4 inline-block" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
+            <a class="link mt-2 inline-block py-2.5" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
           </div>
         </li>
       ))}

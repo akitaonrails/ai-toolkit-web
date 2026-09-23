@@ -25,7 +25,7 @@ const { href } = useI18n(Astro);
     <div class="mt-7"><CodeBlock code={install} /></div>
     <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
       <a href={href(page)} class="btn btn-ghost">{more}</a>
-      {post && <a href={post.url} class="link font-semibold">{post.label}</a>}
+      {post && <a href={post.url} class="link font-semibold inline-block py-2">{post.label}</a>}
     </div>
     <div class="mt-5">
       <RepoMeta id={id} />

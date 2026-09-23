@@ -34,14 +34,14 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
       <CodeBlock title={t('tmux.codeTitle')} code={'tmux new -s work       # start a named session\n# ...terminal closed by accident...\ntmux attach -t work    # everything is still there'} />
       <div>
         <p class="text-muted">{t('tmux.text')}</p>
-        <a href={thirdParty.tmux} class="link mt-4 inline-block">{t('tmux.link')}</a>
+        <a href={thirdParty.tmux} class="link mt-2 inline-block py-2.5">{t('tmux.link')}</a>
       </div>
     </div>
   </Section>
 
   <Section title={t('herdr.title')} lede={t('herdr.lede')} hue="rose" tint>
     <p class="max-w-[44em]">{t('herdr.text')}</p>
-    <a href={thirdParty.herdr} class="link mt-4 inline-block">{t('herdr.link')}</a>
+    <a href={thirdParty.herdr} class="link mt-2 inline-block py-2.5">{t('herdr.link')}</a>
   </Section>
 
   <Section title={t('orchestration.title')} lede={t('orchestration.lede')} hue="rose">

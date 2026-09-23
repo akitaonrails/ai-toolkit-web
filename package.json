@@ -15,7 +15,8 @@
     "i18n:stamp": "node scripts/check-i18n.mjs --stamp",
     "colors:build": "node scripts/build-palette.mjs --write",
     "snapshot:github": "node scripts/snapshot-github.mjs",
-    "videos:refresh": "node scripts/refresh-videos.mjs"
+    "videos:refresh": "node scripts/refresh-videos.mjs",
+    "check:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
