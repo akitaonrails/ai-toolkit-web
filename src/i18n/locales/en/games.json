@@ -1,47 +1,83 @@
 {
   "meta": {
-    "title": "My retro gaming setup, as code",
-    "description": "How Fabio Akita documents his game collection as code: Ansible playbooks for an Arch distrobox full of emulators and PC ports, and a fullscreen launcher for Omarchy."
+    "title": "My game collection as code, on Omarchy",
+    "description": "How Fabio Akita uses AI agents to keep Steam games, emulators, PC ports and decomps in an idempotent Ansible repo inside a distrobox, with his own Omarchy launcher on top."
   },
   "hero": {
     "title": "My game collection, as code",
-    "lede": "Not everything I build with AI is about AI. My emulators, PC ports and mods live in a container that Ansible can rebuild from scratch, and a launcher of my own puts all of it one key away.",
+    "lede": "Steam games, emulators, PC ports, decompilations, recompilations, fan games and mod packs. AI agents installed, configured and documented all of it into one Ansible repository that runs inside a container, so my Omarchy desktop never sees their dependencies. On top sits a launcher I wrote to make it look like a console.",
     "primary": "distrobox-gaming",
     "secondary": "omarchy-games-menu",
-    "shotAlt": "The Omarchy games menu: a fullscreen grid of 52 game covers including Banjo-Kazooie, OutRun, several Colin McRae Rally titles, Donkey Kong Country and DOOM 3, with filter chips and sort buttons on top."
+    "shotAlt": "My games launcher on Omarchy: a fullscreen grid of 52 game covers including Banjo-Kazooie Recompiled, OutRun, the Colin McRae Rally series, Donkey Kong Country and DOOM 3, with category chips and sort buttons on top.",
+    "caption": "The launcher on my desktop: every game, port and emulator in one grid, whatever it runs on underneath."
   },
-  "stack": {
-    "title": "How it is layered",
-    "lede": "The host stays clean. Everything game-related lives in one Arch Linux container named gaming, and the launcher reads what is installed there.",
-    "alt": "Three layers: a Host slab at the bottom, an orange distrobox container labelled gaming holding Emulators and PC ports with an Ansible recipe on its wall, and a Launcher grid of cover art floating on top."
-  },
-  "distrobox": {
-    "title": "distrobox-gaming",
-    "text": "Ansible playbooks that build the whole setup and can reset, back up and restore it. Every emulator, config and mod set is written down, which makes the playbooks the real catalog of my collection.",
+  "clean": {
+    "title": "The host stays clean",
+    "lede": "Emulators and Windows games drag in 32-bit libraries, Wine builds, AUR packages and runtime versions that fight each other. None of that touches my desktop. It all lives in one Arch Linux distrobox called gaming, Steam included, and the host keeps only what the desktop needs.",
+    "alt": "Two panels. Without a container: a Host tower buried under a tangle of library blocks with red Conflicts warnings. With distrobox: the same Host clean with a green dot, and next to it an orange gaming container holding the same blocks in tidy rows, with an Ansible recipe labelled Rebuild anytime.",
     "points": [
-      "ES-DE and standalone emulators: shadPS4, Dolphin, PCSX2, DuckStation, Flycast, xemu, RPCS3, PPSSPP, Azahar, Eden, Cemu, RetroArch and Supermodel",
-      "Native recompilations and ports such as Ship of Harkinian, Starship, SpaghettiKart and Unleashed Recompiled",
-      "Wine-managed PC games and reproducible NexusMods mod sets per game",
-      "Per-game optimization configs, and batch installers for DLC and patches"
-    ],
-    "codeTitle": "from the ansible/ folder"
+      "Steam runs inside the box, with my library and its Proton prefixes on their own disk",
+      "The NVIDIA driver is passed through, and the one 32-bit library edge case is fixed in the launcher, never on the host",
+      "The box renders desktop entries; a small host script validates and installs them, and removes the ones for apps that are gone",
+      "Saves are mirrored to my NAS and restored on demand, so wiping the box loses nothing"
+    ]
+  },
+  "idempotent": {
+    "title": "Idempotent, so I can break it",
+    "lede": "Every emulator, config, patch and mod set is an Ansible role. Running the playbook a second time changes nothing, so I can experiment freely, reset a single emulator's settings, or rebuild the whole box from scratch and get the same machine back.",
+    "codeTitle": "from the ansible/ folder",
+    "docs": "notes in docs/, one per game, port or fix",
+    "commits": "commits since {date}"
+  },
+  "research": {
+    "title": "AI does the research, and writes it down",
+    "lede": "For every port, recompilation or stubborn Windows game, an agent researched the sources, found the right settings and patches, wrote the Ansible role, and left a note: where to get it, how it is configured, and what did not work. Steam games have their own compatibility database under Proton, with each local fix backed by a source.",
+    "link": "Browse the notes"
+  },
+  "box": {
+    "title": "What is in the box",
+    "items": [
+      {
+        "title": "Emulators",
+        "text": "ES-DE as the frontend, plus standalone shadPS4, Dolphin, PCSX2, DuckStation, Flycast, xemu, RPCS3, PPSSPP, Azahar, Eden, Cemu, Supermodel and RetroArch with its cores."
+      },
+      {
+        "title": "Ports, decomps and recomps",
+        "text": "Native builds such as Ship of Harkinian, 2Ship2Harkinian, Starship, SpaghettiKart, Render96ex and Unleashed Recompiled."
+      },
+      {
+        "title": "Windows games",
+        "text": "Wine-managed installs and fixes for games like Colin McRae Rally, OutRun 2006 and the Metal Gear Master Collection."
+      },
+      {
+        "title": "Mods, reproducibly",
+        "text": "NexusMods mod sets per game, DLC and patch installers for PS3 and Switch, and per-game RPCS3 settings."
+      }
+    ]
   },
   "menu": {
-    "title": "omarchy-games-menu",
-    "text": "A Steam-like fullscreen launcher for Omarchy and Hyprland. A Rust CLI, ogm, owns the logic; a QuickShell overlay draws the grid.",
+    "title": "My own launcher, made for Omarchy",
+    "lede": "omarchy-games-menu is a Steam-like fullscreen launcher for Omarchy and Hyprland. It reads the desktop entries the gaming repository exports, so a new game shows up by itself, and it puts everything a keybinding away.",
+    "alt": "Three layers: a Host slab, an orange distrobox container labelled gaming holding Emulators and PC ports with an Ansible recipe, and a Launcher grid of cover art on top.",
     "points": [
-      "Scans installed games and emulators, and groups them into Games, Emulators and Tools",
-      "Cover art and metadata from SteamGridDB, and new release checks on GitHub",
-      "Sorts by most played, name, date added or release date; type anywhere to filter",
-      "Opens with one keybinding, for example Super+G"
+      "A Rust CLI, ogm, does the scanning, catalog and persistence; a QuickShell overlay draws the grid",
+      "Cover art and metadata from SteamGridDB, and new-release checks on GitHub for ports and recomps",
+      "Sorted by most played, name, date added or release date; type anywhere to filter",
+      "Scales with Hyprland's monitor setting, opens with one key such as Super+G, and games open fullscreen on a dedicated workspace"
     ]
   },
   "note": {
     "title": "Why it is on this site",
-    "text": "Both repositories were written with the same agents and skills as everything else here, and they are the best example I have of the rule I apply everywhere: if a machine's setup is not code, it is not documented."
+    "text": "Both repositories were written with the same agents and skills as everything else here. They are the clearest example I have of the rule I apply everywhere: if a machine's setup is not code, it is not documented, and if it is not documented, it will break the day you need it."
   },
   "next": [
-    { "title": "The workflow", "text": "The agents and skills that wrote these playbooks." },
-    { "title": "tclock", "text": "Another small tool that grew out of my own desk." }
+    {
+      "title": "Setup",
+      "text": "Omarchy, and the rest of the desktop this runs on."
+    },
+    {
+      "title": "The workflow",
+      "text": "The agents and skills that wrote these playbooks."
+    }
   ]
 }

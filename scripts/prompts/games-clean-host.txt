@@ -1,0 +1,7 @@
+A comparison split into two equal halves side by side, with a thin vertical divider between them. Do not write the words "left", "right" or "panel" anywhere.
+
+On the left half, the heading "Without a container" at the top. Below it, one large computer tower drawn as a raised graphite box with the word "Host" on its front. Around and on top of it, a chaotic tangle of dozens of small colored library blocks, wires and loose packages, some blocks cracked, with a few small signal red (#FD3A37) warning triangles. One short leader line points at the tangle with the word "Conflicts". It looks messy and fragile.
+
+On the right half, the heading "With distrobox" at the top. Below it, the same computer tower with the word "Host" on its front, now clean and calm, with a small glowing phosphor green (#52F184) dot on its front and no text next to that dot. Next to the tower, connected by one neat thin line, a translucent orange (#FF8527) container box with the word "gaming" (monospace) under it, holding the same library blocks in tidy rows. Above the container, a small scroll icon with the word "Ansible", and a circular arrow around it with the words "Rebuild anytime".
+
+Only these texts appear in the image, each exactly once: "Without a container", "With distrobox", "Host" (twice, one per tower), "Conflicts", "gaming", "Ansible", "Rebuild anytime". No other words, letters or captions.

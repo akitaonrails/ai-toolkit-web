@@ -4,42 +4,60 @@ import PageHero from '@/components/PageHero.astro';
 import Section from '@/components/Section.astro';
 import Figure from '@/components/Figure.astro';
 import Shot from '@/components/Shot.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
 import CodeBlock from '@/components/CodeBlock.astro';
+import Stats from '@/components/Stats.astro';
 import Callout from '@/components/Callout.astro';
 import RepoMeta from '@/components/RepoMeta.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import menuShot from '@/assets/img/shots/games-menu.jpg';
 import { repoUrl } from '@/data/site';
+import { games } from '@/data/games';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw } = useI18n(Astro, 'games');
+const { t, raw, date } = useI18n(Astro, 'games');
 type Text = { title: string; text: string };
-const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'red', href: '/clock-tui/' }] as const, raw<Text[]>('next'));
+const box = raw<Text[]>('box.items').map((b) => ({ ...b, hue: 'orange' as const }));
+const next = withText([{ hue: 'teal', href: '/setup/' }, { hue: 'violet', href: '/workflow/' }] as const, raw<Text[]>('next'));
 // From the distrobox-gaming README's Quick Start and Commands sections.
-const playbooks = 'ansible-playbook site.yml               # full setup from scratch\nansible-playbook site.yml --tags verify  # post-setup checks\nansible-playbook backup.yml             # before destructive testing\nansible-playbook restore.yml';
-const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu';
+const playbooks = 'ansible-playbook site.yml                 # the whole box, from scratch\nansible-playbook site.yml                 # again: nothing changes\nansible-playbook reset-configs.yml --tags esde   # reset one frontend\nansible-playbook backup.yml && ansible-playbook restore.yml\nansible-playbook site.yml --tags verify   # post-setup checks';
+const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu   # or bind it: bind = SUPER, G, exec, games-menu';
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
   <PageHero hue="orange" kicker={t('kicker.games')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href={repoUrl('distrobox')} class="btn btn-primary">{t('hero.primary')}</a>
     <a href={repoUrl('gamesMenu')} class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
-  <div class="wrap"><Shot src={menuShot} alt={t('hero.shotAlt')} eager zoom={false} /></div>
+  <div class="wrap"><Shot src={menuShot} alt={t('hero.shotAlt')} caption={t('hero.caption')} eager zoom={false} /></div>
 
-  <Section title={t('stack.title')} lede={t('stack.lede')} hue="orange" fill>
-    <Figure name="games-stack" alt={t('stack.alt')} />
+  <Section title={t('clean.title')} lede={t('clean.lede')} hue="orange" fill>
+    <Figure name="games-clean-host" alt={t('clean.alt')} />
+    <ul class="ticks grid gap-4 md:grid-cols-2 !gap-x-12">{raw<string[]>('clean.points').map((p) => <li>{p}</li>)}</ul>
   </Section>
 
-  <Section title={t('distrobox.title')} lede={t('distrobox.text')} hue="orange" tint>
-    <div class="grid gap-10 lg:grid-cols-2 items-start">
-      <ul class="ticks">{raw<string[]>('distrobox.points').map((p) => <li>{p}</li>)}</ul>
-      <div><CodeBlock title={t('distrobox.codeTitle')} code={playbooks} /><div class="mt-6"><RepoMeta id="distrobox" /></div></div>
+  <Section title={t('idempotent.title')} lede={t('idempotent.lede')} hue="orange" tint>
+    <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr] items-start">
+      <CodeBlock title={t('idempotent.codeTitle')} code={playbooks} />
+      <Stats cols={1} items={[
+        { n: games.docs, label: t('idempotent.docs') },
+        { n: games.commits, label: t('idempotent.commits', { date: date(games.since) }) },
+      ]} />
     </div>
   </Section>
 
-  <Section title={t('menu.title')} lede={t('menu.text')} hue="orange">
+  <Section title={t('research.title')} lede={t('research.lede')} hue="orange">
+    <a href={`${repoUrl('distrobox')}/tree/master/docs`} class="btn btn-ghost">{t('research.link')}</a>
+  </Section>
+
+  <Section title={t('box.title')} hue="orange" tint>
+    <FeatureGrid items={box} cols={2} />
+    <div class="mt-10"><RepoMeta id="distrobox" /></div>
+  </Section>
+
+  <Section title={t('menu.title')} lede={t('menu.lede')} hue="orange" id="launcher">
+    <Figure name="games-stack" alt={t('menu.alt')} />
     <div class="grid gap-10 lg:grid-cols-2 items-start">
       <ul class="ticks">{raw<string[]>('menu.points').map((p) => <li>{p}</li>)}</ul>
       <div><CodeBlock code={ogm} /><div class="mt-6"><RepoMeta id="gamesMenu" /></div></div>
