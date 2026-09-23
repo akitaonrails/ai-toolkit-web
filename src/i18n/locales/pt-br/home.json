@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "description": "As ferramentas, skills e memória que uso pra rodar agentes de IA em mais de 40 repositórios: ai-usagebar, ghpending, tclock, ai-memory e meu benchmark."
+  },
+  "hero": {
+    "kicker": "Um covil de portas abertas",
+    "title": "Akita's AI Lair",
+    "lede": "Eu mantenho mais de 40 repositórios open source com agentes de IA fazendo a maior parte da digitação. Aqui estão as ferramentas que eu criei pra dar conta disso, o workflow que junta tudo e os textos onde eu documento o que aprendo.",
+    "primary": "Ver o workflow",
+    "secondary": "Onde me seguir",
+    "shotAlt": "Meu segundo monitor: o tclock mostrando 16:10:22 em dígitos vermelhos grandes, um widget de pendências do GitHub listando pull requests e issues abertos do ai-memory e do ai-usagebar, um widget do Google Calendar e uma faixa de saúde do sistema.",
+    "shotCaption": "Meu segundo monitor numa quinta-feira normal. 43 repositórios checados, 6 com alguma coisa esperando.",
+    "portraitAlt": "Retrato ilustrado de Fabio Akita: cabelo grisalho, óculos redondos, camisa branca e gravata escura, olhando pra cima com um meio sorriso confiante.",
+    "intro": "Eu sou o Fabio Akita: programador há mais de 30 anos, empreendedor, palestrante, escritor e ex-YouTuber. <a class=\"link\" href=\"{linkedin}\">Meu LinkedIn</a> tem a versão longa."
+  },
+  "desk": {
+    "title": "Uma mesa, dois monitores, muitos agentes",
+    "lede": "O segundo monitor me diz o que precisa de atenção. O primeiro roda um agente por projeto. Uma memória compartilhada fica embaixo de todos eles, e um medidor na barra superior me avisa quando trocar de provedor.",
+    "alt": "Dois monitores numa mesa. O Monitor 2 mostra um relógio de pixels vermelho e uma lista do ghpending. O Monitor 1 mostra o tmux dividido em quatro painéis de agentes, com o ai-usagebar na barra superior. Uma base verde-azulada chamada ai-memory embaixo da mesa alimenta os quatro painéis.",
+    "steps": [
+      {
+        "title": "Monitor 2: a fila",
+        "text": "O <a href=\"/clock-tui/\">tclock</a> mostra a hora, minha agenda, a saúde do sistema e um widget do <a href=\"/ghpending/\">ghpending</a> com todo pull request e issue aberto nos repositórios que eu acompanho."
+      },
+      {
+        "title": "Monitor 1: tmux, um agente por projeto",
+        "text": "Cada janela do tmux é um projeto. Eu inicio o agente com <code>ai-memory run</code> e passo uma linha: <code>run pr-audit and iss-audit, then run github-resolution</code>. As <a href=\"/workflow/\">skills</a> fazem o resto."
+      },
+      {
+        "title": "Embaixo de tudo: ai-memory",
+        "text": "Cada projeto guarda sua própria memória de decisões e armadilhas. Uma sessão nova começa de onde a anterior parou, não importa qual agente esteja rodando."
+      },
+      {
+        "title": "Na barra superior: ai-usagebar",
+        "text": "O <a href=\"/ai-usagebar/\">ai-usagebar</a> mostra quanto da cota de 5 horas e da cota semanal de cada plano eu já usei, e quando ela reseta. Quando uma acaba, eu passo o trabalho pra outro agente."
+      }
+    ]
+  },
+  "loop": {
+    "title": "O ciclo diário",
+    "lede": "As skills fazem o trabalho pesado. Eu leio os relatórios e tomo as decisões.",
+    "alt": "Um ciclo em sentido horário com cinco estações: Ver o que está pendente, Auditar, Resolver, Release e Kaizen, em volta de uma wiki ai-memory central ligada a cada etapa.",
+    "caption": "O ghpending mostra a fila, as skills de auditoria checam cada pull request e issue, o github-resolution transforma os aprovados em código mergeado, e a skill release gera uma versão quando eu peço. O kaizen fecha o ciclo: o que deu errado vira uma correção no próprio processo.",
+    "link": "Como o pipeline funciona",
+    "quote": {
+      "text": "Faça deploy primeiro, conserte depois. A IA deixou consertar mais rápido e mais barato."
+    }
+  },
+  "switch": {
+    "title": "Acabou a cota? Troque de agente, mantenha o contexto",
+    "lede": "A memória fica fora do agente, então passar uma tarefa do Claude Code pro Codex ou pro OpenCode custa um comando. O agente novo lê a mesma wiki que o anterior escreveu.",
+    "alt": "Três terminais: Claude Code, Codex e OpenCode. O medidor de cota do Claude Code está cheio e vermelho. Uma seta verde com o rótulo Trocar leva o trabalho pro Codex. Os três ficam sobre uma base com o rótulo Mesma memória.",
+    "memory": "Como o ai-memory faz isso",
+    "usagebar": "Como eu acompanho as cotas",
+    "post": "O post sobre trocar de agente"
+  },
+  "tools": {
+    "title": "Três ferramentinhas que eu uso todo dia",
+    "lede": "Em ordem de quanto eu dependo delas. As três são escritas em Rust, com licença MIT, e instalam com um comando.",
+    "more": "Tudo sobre o {name}",
+    "items": [
+      {
+        "tagline": "Saiba quanto de IA ainda sobra",
+        "text": "Um widget pra barra superior, uma interface de terminal e apps nativos de bandeja que mostram cota, saldo e horário de reset de Claude, Codex, GitHub Copilot, Z.AI, OpenRouter e mais 19 provedores.",
+        "points": [
+          "Omarchy Quattro, Waybar, GNOME, KDE Plasma 6, macOS e Windows",
+          "Um alerta no desktop quando uma janela de uso passa de 97%",
+          "Um item da barra pode alternar entre todos os provedores que você paga"
+        ],
+        "shotAlt": "O painel do ai-usagebar aberto na barra superior do Omarchy, mostrando o uso do Z.AI GLM Coding Pro: sessão, semanal e ferramentas MCP mensais, cada um com seu horário de reset, e abas para Claude, Codex, Z.AI, OpenRouter e Kimi."
+      },
+      {
+        "tagline": "Todo PR e issue aberto, numa lista só",
+        "text": "Um CLI em Rust que busca todos os repositórios que você acompanha de uma vez e mostra o que está esperando. Seus próprios itens vão pro fim, porque dependem de outras pessoas. Nos forks, ele mostra seus pull requests no projeto upstream.",
+        "points": [
+          "Alertas do Dependabot, de secret scanning e de code scanning nos repos que são seus",
+          "Ordena por atividade, nome, quantidade ou o mais abandonado",
+          "Também funciona como widget do tclock, com os mesmos temas"
+        ],
+        "shotAlt": "Saída do ghpending num terminal: os repositórios FrankClaw, FrankMD, FrankMega e FrankSherlock, cada um com seus pull requests e issues abertos, número, título, idade e autor."
+      },
+      {
+        "tagline": "Um relógio pro segundo monitor",
+        "text": "Meu fork mantido do clock-tui: relógio, timer, cronômetro e contagem regressiva no terminal. Os widgets rodam qualquer comando e mostram a saída embaixo do relógio, e o relógio vira um dashboard.",
+        "points": [
+          "Temas Evangelion e NERV, alternados com Shift+T",
+          "Widgets atualizam no próprio ritmo e podem abrir popups de detalhe",
+          "Binários prontos pra x86_64 e aarch64"
+        ],
+        "shotAlt": "O tclock com o tema NERV: 17:34:24 em dígitos de pixel vermelhos grandes sobre um céu escuro, um widget de pendências do GitHub, um widget do Google Calendar e uma faixa de saúde do sistema."
+      }
+    ],
+    "post": "Ler o post no blog"
+  },
+  "sisters": {
+    "title": "As peças maiores",
+    "lede": "Duas das minhas ferramentas cresceram o suficiente pra ganhar site próprio. A terceira é o conjunto de prompts que move o pipeline inteiro.",
+    "items": [
+      {
+        "title": "ai-memory",
+        "text": "Memória de longo prazo pra agentes de código: uma wiki em Markdown puro, versionada no git, que captura sessões, consolida decisões e passa o trabalho de um agente pro outro.",
+        "link": "Visitar o site do ai-memory"
+      },
+      {
+        "title": "ai-jail",
+        "text": "Um sandbox de sistema pra agentes de código com IA no Linux e no macOS. O projeto continua gravável. Suas chaves, tokens e seu diretório home ficam fora de alcance.",
+        "link": "Visitar aijail.io"
+      },
+      {
+        "title": "my-skills",
+        "text": "Umas duas dúzias de skills de agente, do pr-audit ao release. Publicadas pra você ler o raciocínio e escrever as suas.",
+        "link": "Ver como eu uso"
+      }
+    ]
+  },
+  "writing": {
+    "title": "Aprendendo em público",
+    "lede": "Tudo que eu testo com IA acaba no meu blog, com os números, as contas e os fracassos. É assim também que eu decido qual modelo usar pra quê.",
+    "more": "Mais textos",
+    "postsTitle": "Alguns posts que mostram como eu trabalho",
+    "quote": {
+      "text": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA.",
+      "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
+    }
+  },
+  "newsletter": {
+    "title": "E toda segunda, uma newsletter",
+    "text": "The M.Akita Chronicles é uma newsletter semanal de tecnologia com podcast, em português, com curadoria minha e comentários do M.Arvin, um robô muito deprimido. O podcast agora também tem alguns dos meus posts favoritos do blog como episódios completos.",
+    "link": "Como ela é feita"
+  },
+  "independence": {
+    "title": "Ninguém me paga pra dizer nada disso",
+    "text": "Eu não sou criador de conteúdo pago. Não aceito patrocínio, não tenho Patreon nem assinatura paga, e não ganho dinheiro com views. Eu me sustento sozinho e faço tudo isso por puro prazer. Quando eu recomendo uma ferramenta ou um modelo, é porque eu uso.",
+    "quote": {
+      "text": "Eu só acredito em troca voluntária para benefício mútuo.",
+      "cite": "Inspirado em Ayn Rand"
+    }
+  },
+  "podcasts": {
+    "title": "Cinco conversas longas, em vídeo",
+    "text": "Flow, Inteligência Ltda, Fernando Ulrich e uma palestra no Tropical on Rails: horas falando de IA, emprego de programador e hype, mais os cortes curtos se você estiver com pressa.",
+    "link": "Assistir"
+  },
+  "contact": {
+    "title": "Como falar comigo",
+    "text": "Escreva para <a class=\"link\" href=\"mailto:{email}\">{email}</a>.",
+    "warningTitle": "Antes de escrever",
+    "warning": "Não tente me vender nada e não ofereça patrocínio: eu não respondo. Não existe resposta automática de \"recebido\". Se eu não responder, é porque não me interessou."
+  }
+}

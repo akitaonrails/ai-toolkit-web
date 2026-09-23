@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "ai-usagebar: 상단 바에서 보는 AI 할당량",
+    "description": "ai-usagebar는 Claude, Codex, Copilot, Z.AI, OpenRouter 외 19개 AI 제공업체의 할당량, 잔액, 초기화 시간을 Linux, macOS, Windows에서 보여 줍니다."
+  },
+  "hero": {
+    "title": "AI가 바닥나기 전에 얼마나 남았는지 확인",
+    "lede": "ai-usagebar는 요금제마다 사용량을 제공업체에서 읽어서, 이미 보고 있는 곳에 띄웁니다. 상단 바, 터미널 UI, 시스템 트레이. claudebar를 Rust로 옮기며 시작했고, 지금은 제공업체 24곳을 지원합니다.",
+    "primary": "설치",
+    "shotAlt": "Omarchy 상단 바 아래로 열린 ai-usagebar 패널: Z.AI GLM Coding Pro의 세션, 주간, 월간 MCP 할당량이 1%이고 각각의 초기화 시간, 그리고 Claude, Codex, Z.AI, OpenRouter, Kimi 탭."
+  },
+  "why": {
+    "title": "만든 이유",
+    "lede": "저는 코딩 요금제 여러 개에 돈을 내고, 요금제마다 재는 방식이 다릅니다. 여기는 5시간 한도, 저기는 주간 상한, 또 다른 곳은 선불 잔액. 다음 작업을 어느 에이전트에 줄지 정하려고 대시보드 다섯 개를 여는 건 바보 같았습니다. 이제는 바를 한 번 보면 됩니다.",
+    "alt": "제공업체 칩 일곱 개(Claude, Codex, Copilot, Z.AI, OpenRouter, Kimi, DeepSeek)가 게이지 하나가 있는 바로 이어집니다. 확대된 패널에는 미터 세 개가 있고, 첫 번째는 거의 가득 차서 97%에서 알림이라고 적힌 빨간 표시가 있으며, 초기화까지 시계가 있습니다.",
+    "link": "제 워크플로에 들어가는 방식"
+  },
+  "surfaces": {
+    "title": "어디서 일하든",
+    "lede": "같은 Rust 코어가 모든 프런트엔드에 데이터를 주므로 숫자가 어디서나 같습니다.",
+    "items": [
+      {
+        "title": "터미널 UI",
+        "text": "<code>ai-usagebar-tui</code>: 제공업체마다 탭이 있고, 60초마다 갱신되며, 설정 오버레이가 있습니다.",
+        "alt": "OpenAI 탭을 연 ai-usagebar TUI: Codex 5시간 한도 6%, 주간 1%, 초기화 시간과 소진 속도, 그리고 크레딧 섹션."
+      },
+      {
+        "title": "macOS 메뉴 막대",
+        "text": "켜 둔 모든 제공업체와 소진 속도 표시, 초기화 시간을 보여 주는 네이티브 팝오버.",
+        "alt": "Claude Max, Codex, Cursor, SuperGrok, Antigravity를 나열한 macOS 트레이 팝오버. 각각 사용량 바, 사용 비율, 초기화 시간이 있습니다."
+      },
+      {
+        "title": "Windows 트레이",
+        "text": "WebView2 팝오버가 달린 알림 영역 아이콘. Scoop으로 설치합니다.",
+        "alt": "제공업체별 사용량 바가 있는 Windows 트레이 대시보드."
+      },
+      {
+        "title": "KDE Plasma 6",
+        "text": "제공업체 탭이 있는 plasmoid. 애플릿 인스턴스마다 다른 제공업체를 따라갈 수 있습니다.",
+        "alt": "제공업체 탭과 사용량 바를 보여 주는 KDE Plasma 6 plasmoid."
+      }
+    ]
+  },
+  "features": {
+    "title": "해 주는 일",
+    "items": [
+      {
+        "title": "벽에 부딪히기 전에 알림",
+        "text": "할당량 사용 한도가 97%를 넘으면 데스크톱 알림, 100%에서 긴급 알림, 적립된 초기화 크레딧이 만료되기 48시간 전에 경고를 보냅니다. 기준값은 바꿀 수 있습니다."
+      },
+      {
+        "title": "계정을 찾아 줍니다",
+        "text": "<code>ai-usagebar detect</code>는 이미 머신에 자격 증명이 있는 제공업체를 모두 켭니다. 로컬 파일과 키체인만 읽고 네트워크는 쓰지 않습니다."
+      },
+      {
+        "title": "마지막으로 받은 정상 값 유지",
+        "text": "네트워크가 실패해도 이전 데이터를 화면에 둡니다. HTTP 429로 응답한 제공업체는 5분 동안 건드리지 않습니다."
+      },
+      {
+        "title": "여러 계정",
+        "text": "이름을 붙인 Claude, Codex, OpenRouter 계정을 나란히 두고, 각각 따로 항목을 가집니다."
+      },
+      {
+        "title": "claudebar를 그대로 대체",
+        "text": "같은 Waybar JSON, 플래그, Pango 툴팁, Omarchy 테마 감지, 잠금이 걸린 OAuth 갱신."
+      },
+      {
+        "title": "스크립트로 쓰기",
+        "text": "<code>ai-usagebar usage --json</code>은 모든 제공업체의 할당량과 초기화 시간을 문서 하나로 출력합니다."
+      }
+    ]
+  },
+  "providers": {
+    "title": "제공업체 24곳",
+    "lede": "명령줄과 TUI는 전부 지원합니다. 데스크톱 지원 범위는 연동마다 다르고, 표는 README에 있습니다."
+  },
+  "install": {
+    "title": "설치",
+    "lede": "플랫폼을 고르세요. Omarchy Quattro에서는 바이너리와 플러그인이 둘 다 필요합니다.",
+    "tabs": [
+      "Omarchy",
+      "Arch",
+      "Linux 또는 macOS",
+      "Nix",
+      "Windows"
+    ],
+    "then": "그다음 이미 쓰는 것을 켜고 확인하세요.",
+    "readme": "나머지는 모두 README에"
+  },
+  "next": [
+    {
+      "title": "워크플로",
+      "text": "할당량 게이지가 다음 작업을 어느 에이전트에 줄지 정하는 곳."
+    },
+    {
+      "title": "ghpending",
+      "text": "매일 아침 확인하는 또 하나."
+    },
+    {
+      "title": "tclock",
+      "text": "두 번째 모니터에서 대시보드를 띄우는 시계."
+    }
+  ]
+}

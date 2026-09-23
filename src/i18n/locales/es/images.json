@@ -1,0 +1,65 @@
+{
+  "home-desk": {
+    "Monitor 2": "Monitor 2",
+    "Monitor 1": "Monitor 1"
+  },
+  "home-loop": {
+    "See what is pending": "Ver lo pendiente",
+    "Audit": "Auditar",
+    "Resolve": "Resolver",
+    "Release": "Versión",
+    "Kaizen": "Kaizen"
+  },
+  "home-switch": {
+    "Quota reached": "Cuota agotada",
+    "Switch": "Cambiar",
+    "Same memory": "Misma memoria",
+    "Usage gauge": "Indicador de uso"
+  },
+  "workflow-pipeline": {
+    "Open PRs and issues": "PRs e issues abiertos",
+    "Approved": "Aprobado",
+    "Kaizen": "Kaizen"
+  },
+  "workflow-symlinks": {
+    "One edit reaches all": "Un cambio llega a todos"
+  },
+  "usagebar-providers": {
+    "One bar": "Una barra",
+    "Alert at 97%": "Aviso al 97%",
+    "Resets in": "Se reinicia en",
+    "and more": "y más"
+  },
+  "ghpending-digest": {
+    "Your repos": "Tus repos",
+    "One digest": "Un resumen",
+    "Fork": "Fork",
+    "Upstream": "Upstream",
+    "follows pull requests on the original project": "sigue los pull requests del proyecto original"
+  },
+  "tclock-widgets": {
+    "Any command": "Cualquier comando"
+  },
+  "newsletter-pipeline": {
+    "Links": "Enlaces",
+    "Summaries": "Resúmenes",
+    "Sunday": "Domingo",
+    "Monday": "Lunes",
+    "Email": "Correo",
+    "Podcast": "Podcast",
+    "Blog": "Blog"
+  },
+  "games-stack": {
+    "Host": "Host",
+    "Emulators": "Emuladores",
+    "PC ports": "Ports para PC",
+    "Launcher": "Lanzador"
+  },
+  "games-clean-host": {
+    "Without a container": "Sin contenedor",
+    "With distrobox": "Con distrobox",
+    "Host": "Host",
+    "Conflicts": "Conflictos",
+    "Rebuild anytime": "Reconstruir cuando quieras"
+  }
+}

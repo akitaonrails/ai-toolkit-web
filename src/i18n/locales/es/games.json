@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Mi colección de juegos como código",
+    "description": "Cómo uso agentes de IA para mantener juegos de Steam, emuladores, ports para PC y decomps en un repo Ansible idempotente en un distrobox, con mi lanzador."
+  },
+  "hero": {
+    "title": "No todo es trabajo. Hasta yo necesito jugar.",
+    "lede": "Y mi idea de relajarme es, claro, convertir mi colección de juegos en un proyecto de software. Juegos de Steam, emuladores, ports para PC, decompilaciones, fan games y paquetes de mods, todo instalado, configurado y documentado por agentes de IA en un único repositorio de Ansible. Corre dentro de un contenedor, así que mi escritorio Omarchy nunca ve ni una de sus dependencias. Encima va un lanzador que escribí yo, para que todo se sienta como una consola.",
+    "primary": "distrobox-gaming",
+    "secondary": "omarchy-games-menu",
+    "shotAlt": "Mi lanzador de juegos en Omarchy: una cuadrícula a pantalla completa con 52 portadas, entre ellas Banjo-Kazooie Recompiled, OutRun, la serie Colin McRae Rally, Donkey Kong Country y DOOM 3, con chips de categoría y botones de orden arriba.",
+    "caption": "El lanzador en mi escritorio: cada juego, port y emulador en una sola cuadrícula, corra sobre lo que corra por debajo."
+  },
+  "clean": {
+    "title": "El host queda limpio",
+    "lede": "Los emuladores y los juegos de Windows arrastran bibliotecas de 32 bits, builds de Wine, paquetes del AUR y versiones de runtime que se pelean entre sí. Nada de eso toca mi escritorio. Todo vive en un distrobox de Arch Linux llamado gaming, Steam incluido, y el host guarda solo lo que el escritorio necesita.",
+    "alt": "Dos paneles. Sin contenedor: una torre Host enterrada bajo un enredo de bloques de bibliotecas con avisos rojos de Conflictos. Con distrobox: el mismo Host limpio con un punto verde y, al lado, un contenedor naranja gaming con los mismos bloques en filas ordenadas y una receta de Ansible con la etiqueta Reconstruir cuando quieras.",
+    "points": [
+      "Steam corre dentro del contenedor, con mi biblioteca y sus prefijos de Proton en su propio disco",
+      "El driver de NVIDIA se pasa al contenedor, y el único caso raro de biblioteca de 32 bits se corrige en el lanzador, nunca en el host",
+      "El contenedor genera las entradas de escritorio; un pequeño script en el host las valida, las instala y quita las de apps que ya no están",
+      "Las partidas guardadas se replican en mi NAS y se restauran cuando hace falta, así que borrar el contenedor no pierde nada"
+    ]
+  },
+  "idempotent": {
+    "title": "Idempotente, para poder romperlo",
+    "lede": "Cada emulador, configuración, parche y conjunto de mods es un rol de Ansible. Correr el playbook una segunda vez no cambia nada, así que puedo experimentar sin miedo, restablecer la configuración de un solo emulador o reconstruir todo el contenedor desde cero y recuperar la misma máquina.",
+    "codeTitle": "de la carpeta ansible/",
+    "docs": "notas en docs/, una por juego, port o arreglo",
+    "commits": "commits desde {date}"
+  },
+  "research": {
+    "title": "La IA investiga y lo deja por escrito",
+    "lede": "Para cada port, recompilación o juego de Windows testarudo, un agente investigó las fuentes, escribió el rol de Ansible y dejó una nota con dónde conseguirlo, cómo se configura y qué no funcionó. Los juegos de Steam tienen su propia base de compatibilidad con Proton, con cada arreglo local respaldado por una fuente.",
+    "link": "Ver las notas"
+  },
+  "box": {
+    "title": "Qué hay en el contenedor",
+    "items": [
+      {
+        "title": "Emuladores",
+        "text": "ES-DE como frontend, más shadPS4, Dolphin, PCSX2, DuckStation, Flycast, xemu, RPCS3, PPSSPP, Azahar, Eden, Cemu, Supermodel y RetroArch con sus cores."
+      },
+      {
+        "title": "Ports, decomps y recomps",
+        "text": "Builds nativos como Ship of Harkinian, 2Ship2Harkinian, Starship, SpaghettiKart, Render96ex y Unleashed Recompiled."
+      },
+      {
+        "title": "Juegos de Windows",
+        "text": "Instalaciones gestionadas con Wine y arreglos para juegos como Colin McRae Rally, OutRun 2006 y la Metal Gear Master Collection."
+      },
+      {
+        "title": "Mods reproducibles",
+        "text": "Conjuntos de mods de NexusMods por juego, instaladores de DLC y parches para PS3 y Switch, y ajustes de RPCS3 por juego."
+      }
+    ]
+  },
+  "menu": {
+    "title": "Mi propio lanzador, hecho para Omarchy",
+    "lede": "omarchy-games-menu es un lanzador a pantalla completa al estilo Steam para Omarchy y Hyprland. Lee las entradas de escritorio que exporta el repositorio gaming, así que un juego nuevo aparece solo, y deja todo a un atajo de teclado.",
+    "alt": "Tres capas: una base Host, un contenedor distrobox naranja llamado gaming con Emuladores y Ports para PC y una receta de Ansible, y arriba una cuadrícula Lanzador con portadas.",
+    "points": [
+      "Un CLI en Rust, ogm, hace el escaneo, el catálogo y la persistencia; un overlay de QuickShell dibuja la cuadrícula",
+      "Portadas y metadatos de SteamGridDB, y chequeo de versiones nuevas en GitHub para ports y recomps",
+      "Orden por más jugados, nombre, fecha de alta o fecha de lanzamiento; escribe en cualquier momento para filtrar",
+      "Escala con la configuración de monitor de Hyprland, se abre con una tecla como Super+G, y los juegos abren a pantalla completa en un workspace propio"
+    ]
+  },
+  "note": {
+    "title": "Por qué está en este sitio",
+    "text": "Los dos repositorios se escribieron con los mismos agentes y skills que todo lo demás aquí. Son el ejemplo más claro que tengo de la regla que aplico en todas partes: si la configuración de una máquina no es código, no está documentada, y si no está documentada, se va a romper el día que la necesites."
+  },
+  "next": [
+    {
+      "title": "Setup",
+      "text": "Omarchy y el resto del escritorio donde corre esto."
+    },
+    {
+      "title": "El flujo de trabajo",
+      "text": "Los agentes y skills que escribieron estos playbooks."
+    }
+  ]
+}

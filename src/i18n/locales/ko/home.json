@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "description": "AI 코딩 에이전트로 저장소 40개 이상을 운영할 때 쓰는 도구, 스킬, 메모리를 소개합니다. ai-usagebar, ghpending, tclock, my-skills, ai-memory, 그리고 제 LLM 벤치마크."
+  },
+  "hero": {
+    "kicker": "문이 열려 있는 아지트",
+    "title": "Akita's AI Lair",
+    "lede": "저는 오픈 소스 저장소 40개 이상을 관리하고, 타이핑은 대부분 AI 에이전트가 합니다. 여기 있는 것은 그 일을 감당할 수 있게 만든 도구, 그 도구들을 묶는 워크플로, 그리고 배운 것을 기록한 글입니다.",
+    "primary": "워크플로 보기",
+    "secondary": "저를 팔로우하는 곳",
+    "shotAlt": "제 두 번째 모니터: 큰 빨간 숫자로 16:10:22를 보여 주는 tclock, ai-memory와 ai-usagebar의 열린 풀 리퀘스트와 이슈를 나열한 GitHub pending 위젯, Google Calendar 위젯, 시스템 상태 표시줄.",
+    "shotCaption": "평범한 목요일의 제 두 번째 모니터. 저장소 43개를 확인했고 6개에 대기 중인 일이 있습니다.",
+    "portraitAlt": "Fabio Akita의 일러스트 초상화: 회색 머리, 둥근 안경, 흰 셔츠에 어두운 넥타이, 자신감 있는 옅은 미소로 위를 올려다보는 모습.",
+    "intro": "저는 Fabio Akita입니다. 30년 넘게 프로그래머로 일했고, 창업가, 연사, 작가, 전직 유튜버이기도 합니다. 긴 버전은 <a class=\"link\" href=\"{linkedin}\">제 LinkedIn</a>에 있습니다."
+  },
+  "desk": {
+    "title": "책상 하나, 모니터 둘, 에이전트 여럿",
+    "lede": "두 번째 모니터는 무엇에 신경 써야 하는지 알려 줍니다. 첫 번째 모니터에서는 프로젝트마다 에이전트가 하나씩 돕니다. 그 아래에는 공유 메모리가 있고, 상단 바의 게이지가 제공업체를 바꿀 때를 알려 줍니다.",
+    "alt": "책상 위의 모니터 두 대. 모니터 2에는 빨간 픽셀 시계와 ghpending 목록. 모니터 1에는 에이전트 창 네 개로 나뉜 tmux와 상단 바의 ai-usagebar. 책상 아래 ai-memory라고 적힌 청록색 판이 네 창 모두에 연결되어 있습니다.",
+    "steps": [
+      {
+        "title": "모니터 2: 대기열",
+        "text": "<a href=\"/clock-tui/\">tclock</a>이 시간, 일정, 시스템 상태, 그리고 추적하는 저장소 전체의 열린 풀 리퀘스트와 이슈를 담은 <a href=\"/ghpending/\">ghpending</a> 위젯을 보여 줍니다."
+      },
+      {
+        "title": "모니터 1: tmux, 프로젝트마다 에이전트 하나",
+        "text": "tmux 창 하나가 프로젝트 하나입니다. <code>ai-memory run</code>으로 에이전트를 띄우고 한 줄만 줍니다. <code>run pr-audit and iss-audit, then run github-resolution</code>. 나머지는 <a href=\"/workflow/\">스킬</a>이 합니다."
+      },
+      {
+        "title": "모든 것의 아래: ai-memory",
+        "text": "프로젝트마다 결정 사항과 함정을 기억하는 메모리가 따로 있습니다. 어떤 에이전트가 돌든 새 세션은 지난 세션이 멈춘 곳에서 시작합니다."
+      },
+      {
+        "title": "상단 바: ai-usagebar",
+        "text": "<a href=\"/ai-usagebar/\">ai-usagebar</a>는 요금제마다 5시간 할당량과 주간 할당량을 얼마나 썼는지, 언제 초기화되는지 보여 줍니다. 하나가 바닥나면 작업을 다른 에이전트로 옮깁니다."
+      }
+    ]
+  },
+  "loop": {
+    "title": "매일의 루프",
+    "lede": "힘든 일은 스킬이 합니다. 저는 보고서를 읽고 결정을 내립니다.",
+    "alt": "다섯 단계가 시계 방향으로 도는 루프: 대기 중인 일 확인, 감사, 해결, 릴리스, Kaizen. 가운데의 ai-memory 위키가 모든 단계와 연결되어 있습니다.",
+    "caption": "ghpending이 대기열을 보여 주고, 감사 스킬이 모든 풀 리퀘스트와 이슈를 확인하고, github-resolution이 승인된 것을 머지된 코드로 바꾸고, 제가 요청하면 release 스킬이 버전을 냅니다. 카이젠이 원을 닫습니다. 잘못된 것은 무엇이든 프로세스 자체의 수정으로 이어집니다.",
+    "link": "파이프라인 작동 방식",
+    "quote": {
+      "text": "먼저 배포하고 나중에 고치세요. AI 덕분에 고치는 일이 더 빠르고 싸졌습니다."
+    }
+  },
+  "switch": {
+    "title": "할당량이 바닥나면 에이전트만 바꾸고 맥락은 그대로",
+    "lede": "메모리가 에이전트 밖에 있기 때문에 작업을 Claude Code에서 Codex나 OpenCode로 옮기는 데 명령어 하나면 됩니다. 새 에이전트는 이전 에이전트가 쓴 위키를 그대로 읽습니다.",
+    "alt": "터미널 세 개: Claude Code, Codex, OpenCode. Claude Code의 할당량 게이지는 가득 차서 빨갛습니다. 전환이라고 적힌 초록 화살표가 작업을 Codex로 옮깁니다. 셋 모두 같은 메모리라고 적힌 판 위에 있습니다.",
+    "memory": "ai-memory의 방식",
+    "usagebar": "할당량을 지켜보는 방법",
+    "post": "에이전트 전환에 관한 블로그 글"
+  },
+  "tools": {
+    "title": "매일 쓰는 작은 도구 세 개",
+    "lede": "의존하는 정도순입니다. 셋 다 Rust로 작성했고, MIT 라이선스이며, 명령어 하나로 설치됩니다.",
+    "more": "{name}의 모든 것",
+    "items": [
+      {
+        "tagline": "AI가 얼마나 남았는지 확인",
+        "text": "상단 바 위젯, 터미널 UI, 네이티브 트레이 앱으로 Claude, Codex, GitHub Copilot, Z.AI, OpenRouter 외 19개 제공업체의 할당량, 잔액, 초기화 시간을 보여 줍니다.",
+        "points": [
+          "Omarchy Quattro, Waybar, GNOME, KDE Plasma 6, macOS, Windows",
+          "할당량 사용 한도가 97%를 넘으면 데스크톱 알림",
+          "바 항목 하나로 돈 내는 모든 제공업체를 순환"
+        ],
+        "shotAlt": "Omarchy 상단 바에서 열린 ai-usagebar 패널. Z.AI GLM Coding Pro의 세션, 주간, 월간 MCP 도구 사용량과 각각의 초기화 시간, 그리고 Claude, Codex, Z.AI, OpenRouter, Kimi 탭."
+      },
+      {
+        "tagline": "열린 PR과 이슈를 한 목록에",
+        "text": "추적하는 모든 저장소를 한꺼번에 가져와서 대기 중인 것을 출력하는 Rust CLI입니다. 내 항목은 다른 사람을 기다리는 중이라 맨 아래로 갑니다. 포크는 업스트림 프로젝트에 올린 내 풀 리퀘스트를 보여 줍니다.",
+        "points": [
+          "내가 소유한 저장소의 Dependabot, 시크릿 스캐닝, 코드 스캐닝 알림",
+          "활동, 이름, 개수, 가장 방치된 순으로 정렬",
+          "테마가 맞는 tclock 위젯으로도 동작"
+        ],
+        "shotAlt": "터미널의 ghpending 출력: FrankClaw, FrankMD, FrankMega, FrankSherlock 저장소마다 열린 풀 리퀘스트와 이슈, 번호, 제목, 경과 시간, 작성자."
+      },
+      {
+        "tagline": "두 번째 모니터용 시계",
+        "text": "제가 관리하는 clock-tui 포크입니다. 터미널 시계, 타이머, 스톱워치, 카운트다운이 있습니다. 위젯이 아무 명령어나 실행해서 출력을 시계 아래에 보여 주므로 시계가 대시보드가 됩니다.",
+        "points": [
+          "Evangelion과 NERV 테마, Shift+T로 전환",
+          "위젯마다 자체 주기로 갱신하고 상세 팝업을 열 수 있음",
+          "x86_64와 aarch64용 빌드된 바이너리"
+        ],
+        "shotAlt": "NERV 테마의 tclock: 어두운 하늘 위에 큰 빨간 픽셀 숫자로 17:34:24, GitHub pending 위젯, Google Calendar 위젯, 시스템 상태 표시줄."
+      }
+    ],
+    "post": "블로그 글 읽기"
+  },
+  "sisters": {
+    "title": "더 큰 조각들",
+    "lede": "도구 중 두 개는 자기 사이트가 생길 만큼 커졌습니다. 세 번째는 파이프라인 전체를 움직이는 프롬프트 모음입니다.",
+    "items": [
+      {
+        "title": "ai-memory",
+        "text": "코딩 에이전트를 위한 장기 메모리입니다. git으로 관리하는 평범한 Markdown 위키에 세션을 기록하고, 결정을 정리하고, 한 에이전트의 작업을 다른 에이전트에게 넘깁니다.",
+        "link": "ai-memory 사이트 방문"
+      },
+      {
+        "title": "ai-jail",
+        "text": "Linux와 macOS에서 AI 코딩 에이전트를 가두는 OS 샌드박스입니다. 프로젝트는 쓸 수 있고, 키, 토큰, 홈 디렉터리는 손이 닿지 않습니다.",
+        "link": "aijail.io 방문"
+      },
+      {
+        "title": "my-skills",
+        "text": "pr-audit부터 release까지 에이전트 스킬 스무 개 남짓입니다. 논리를 읽고 자기 것을 쓸 수 있도록 공개했습니다.",
+        "link": "제가 쓰는 방식 보기"
+      }
+    ]
+  },
+  "writing": {
+    "title": "공개적으로 배우기",
+    "lede": "AI로 시도한 모든 것은 숫자, 청구서, 실패와 함께 블로그에 올라갑니다. 어떤 모델을 어디에 쓸지도 그렇게 정합니다.",
+    "more": "글 더 보기",
+    "postsTitle": "제 작업 방식을 보여 주는 글 몇 편",
+    "quote": {
+      "text": "AI에 대한 흥분은 AI에 대한 지식에 반비례합니다.",
+      "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
+    }
+  },
+  "newsletter": {
+    "title": "그리고 매주 월요일에는 뉴스레터",
+    "text": "The M.Akita Chronicles는 포르투갈어로 된 주간 기술 뉴스레터이자 팟캐스트입니다. 제가 고르고, 아주 우울한 로봇 M.Arvin이 논평합니다. 이제 팟캐스트에는 제가 아끼는 블로그 글 몇 편도 정식 에피소드로 올라갑니다.",
+    "link": "만드는 방법"
+  },
+  "independence": {
+    "title": "이 말을 하라고 돈 주는 사람은 없습니다",
+    "text": "저는 유료 콘텐츠 크리에이터가 아닙니다. 후원도 받지 않고, Patreon도 유료 구독도 없으며, 조회수로 돈을 벌지도 않습니다. 스스로 먹고살 수 있고, 이 모든 걸 제가 좋아서 합니다. 제가 도구나 모델을 추천한다면 제가 쓰기 때문입니다.",
+    "quote": {
+      "text": "저는 상호 이익을 위한 자발적 거래만 믿습니다.",
+      "cite": "Ayn Rand에게서 빌린 말"
+    }
+  },
+  "podcasts": {
+    "title": "영상으로 보는 긴 대화 다섯 편",
+    "text": "Flow, Inteligência Ltda, Fernando Ulrich, 그리고 Tropical on Rails 발표. AI, 개발자 일자리, 과대광고에 관한 몇 시간짜리 이야기와, 바쁘다면 짧은 클립도 있습니다.",
+    "link": "보러 가기"
+  },
+  "contact": {
+    "title": "연락 방법",
+    "text": "<a class=\"link\" href=\"mailto:{email}\">{email}</a>로 메일을 보내세요.",
+    "warningTitle": "보내기 전에",
+    "warning": "저에게 무언가를 팔려고 하거나 후원을 제안하지 마세요. 그런 메일에는 답하지 않습니다. \"수신 확인\" 자동 답장은 없습니다. 답이 없다면 관심이 없었던 겁니다."
+  }
+}

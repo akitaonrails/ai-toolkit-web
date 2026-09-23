@@ -1,0 +1,65 @@
+{
+  "home-desk": {
+    "Monitor 2": "モニター2",
+    "Monitor 1": "モニター1"
+  },
+  "home-loop": {
+    "See what is pending": "未対応を確認",
+    "Audit": "監査",
+    "Resolve": "解決",
+    "Release": "リリース",
+    "Kaizen": "改善"
+  },
+  "home-switch": {
+    "Quota reached": "クォータ到達",
+    "Switch": "切り替え",
+    "Same memory": "同じメモリ",
+    "Usage gauge": "使用量ゲージ"
+  },
+  "workflow-pipeline": {
+    "Open PRs and issues": "未対応のPRとIssue",
+    "Approved": "承認",
+    "Kaizen": "改善"
+  },
+  "workflow-symlinks": {
+    "One edit reaches all": "1回の編集で全部に反映"
+  },
+  "usagebar-providers": {
+    "One bar": "1本のバー",
+    "Alert at 97%": "97%で通知",
+    "Resets in": "リセットまで",
+    "and more": "ほか"
+  },
+  "ghpending-digest": {
+    "Your repos": "自分のリポジトリ",
+    "One digest": "1つの一覧",
+    "Fork": "フォーク",
+    "Upstream": "本家",
+    "follows pull requests on the original project": "本家プロジェクトのプルリクエストを追跡"
+  },
+  "tclock-widgets": {
+    "Any command": "任意のコマンド"
+  },
+  "newsletter-pipeline": {
+    "Links": "リンク",
+    "Summaries": "要約",
+    "Sunday": "日曜日",
+    "Monday": "月曜日",
+    "Email": "メール",
+    "Podcast": "ポッドキャスト",
+    "Blog": "ブログ"
+  },
+  "games-stack": {
+    "Host": "ホスト",
+    "Emulators": "エミュレーター",
+    "PC ports": "PC移植",
+    "Launcher": "ランチャー"
+  },
+  "games-clean-host": {
+    "Without a container": "コンテナなし",
+    "With distrobox": "distroboxあり",
+    "Host": "ホスト",
+    "Conflicts": "競合",
+    "Rebuild anytime": "いつでも再構築"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "site": {
+    "tagline": "私のAIとの働き方を支えるツール、ワークフロー、文章",
+    "description": "Fabio AkitaのオープンソースAIツールの隠れ家。ai-usagebar、ghpending、tclock、エージェントのスキル、ai-memory、そしてLLMベンチマークとその解説記事。",
+    "ogAlt": "Akita's AI Lair：ツール、ワークフロー、文章。赤いピクセル時計、琥珀色のリスト、青いゲージ、紫のチップが並ぶ小さなダッシュボード。",
+    "homeTitle": "Akita's AI Lair：AIコーディングツール、ワークフロー、ベンチマーク"
+  },
+  "a11y": {
+    "skip": "本文へスキップ",
+    "home": "Akita's AI Lairのホーム",
+    "mainNav": "メイン",
+    "language": "言語",
+    "toggleTheme": "ライトとダークを切り替える",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "menu": "メニュー",
+    "external": "別のサイトが開きます",
+    "chooseOne": "1つ選んでください"
+  },
+  "nav": {
+    "workflow": {
+      "label": "ワークフロー",
+      "note": "スキル、tmux、毎日のループ"
+    },
+    "usagebar": {
+      "label": "ai-usagebar",
+      "note": "24のAIプロバイダーのクォータとリセット時刻"
+    },
+    "ghpending": {
+      "label": "ghpending",
+      "note": "未対応のプルリクエストとIssueを1つのリストに"
+    },
+    "tclock": {
+      "label": "tclock",
+      "note": "コマンドウィジェット付きのターミナル時計"
+    },
+    "writing": {
+      "label": "執筆",
+      "note": "ブログとLLMベンチマーク"
+    },
+    "newsletter": {
+      "label": "ニュースレター",
+      "note": "The M.Akita Chronicles、毎週月曜日"
+    },
+    "podcasts": {
+      "label": "ポッドキャスト",
+      "note": "AIについての長い対談を動画で"
+    },
+    "games": {
+      "label": "ゲーム",
+      "note": "コードで管理するゲームコレクション、Omarchyで"
+    },
+    "follow": {
+      "label": "フォロー"
+    },
+    "setup": {
+      "label": "環境",
+      "note": "Omarchy、tmux、そして見送ったもの"
+    },
+    "tools": {
+      "label": "ツール",
+      "note": "ai-usagebar、ghpending、tclock"
+    },
+    "memory": {
+      "label": "ai-memory",
+      "note": "コーディングエージェントの長期メモリ"
+    },
+    "jail": {
+      "label": "ai-jail",
+      "note": "AIコーディングエージェント用のOSサンドボックス"
+    }
+  },
+  "kicker": {
+    "workflow": "ワークフロー",
+    "usagebar": "ai-usagebar",
+    "ghpending": "ghpending",
+    "tclock": "tclock",
+    "writing": "執筆",
+    "newsletter": "ニュースレター",
+    "podcasts": "ポッドキャスト",
+    "games": "仕事のあとで",
+    "setup": "環境"
+  },
+  "code": {
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "terminal": "ターミナル"
+  },
+  "repo": {
+    "stars": "GitHubのスター {n}",
+    "release": "最新リリース {tag}",
+    "github": "GitHubのソースコード",
+    "readme": "READMEを読む"
+  },
+  "next": {
+    "title": "続けて読む"
+  },
+  "cta": {
+    "title": "ここにあるものはすべてオープンソースです",
+    "text": "ツールもスキルもベンチマークも公開リポジトリです。フォークして、自分の働き方に合うバージョンを作ってください。",
+    "github": "リポジトリ一覧を見る",
+    "blog": "ブログを読む"
+  },
+  "social": {
+    "title": "フォローする場所",
+    "lede": "場所ごとに見せている顔が違います。聞きたい話に合うところを選んでください。",
+    "x": {
+      "name": "X",
+      "text": "いちばん遠慮のない場所です。暴論、釣り、議論、その日の出来事への第一印象。鍵アカウントなので、フォローリクエストを送ってください。"
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "text": "かしこまった面です。主にブログの新着記事と、読む価値のある業界ニュース。"
+    },
+    "instagram": {
+      "name": "Instagram",
+      "text": "娯楽だけです。ゲーム、レトロゲーム機、ガジェットのレビューなど楽しいもの。AIの議論はしません。"
+    },
+    "youtube": {
+      "name": "YouTube：Akitando",
+      "text": "もう動画は出していませんが、過去の動画は今でも通用します。ブログの新着記事はすべてコミュニティタブで共有していて、そこが意外と活発です。"
+    },
+    "blog": {
+      "name": "ブログ",
+      "text": "すべてを英語とポルトガル語で書き残している場所です。1つだけフォローするなら、ここにしてください。"
+    },
+    "github": {
+      "name": "GitHub",
+      "text": "このサイトのツールすべてと、数十の個人プロジェクト。"
+    }
+  },
+  "footer": {
+    "about": "私が作ったツールと、その使い方。スポンサーも広告も有料購読もありません。自分の楽しみでやっています。",
+    "tools": "ツール",
+    "more": "その他",
+    "sisters": "姉妹サイト",
+    "theme": {
+      "system": "システム",
+      "light": "ライト",
+      "dark": "ダーク"
+    },
+    "cookieSettings": "Cookieの設定",
+    "contact": "連絡先",
+    "rights": "無断転載を禁じます。各ツールにはそれぞれのオープンソースライセンスが適用されます。"
+  },
+  "notfound": {
+    "title": "ここには未対応のものはありません",
+    "text": "そのアドレスは存在しません。ホームページならあります。",
+    "home": "ホームページへ"
+  },
+  "consent": {
+    "label": "アクセス解析への同意",
+    "text": "このサイトは訪問数を数えるためにGoogle Analyticsを使っています。広告は表示せず、ほかのサイトまで追跡することもありません。よろしいですか？",
+    "decline": "拒否する",
+    "accept": "同意する"
+  }
+}

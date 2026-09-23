@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "tclock: reloj de terminal con widgets",
+    "description": "tclock, mi fork de clock-tui: reloj, temporizador, cronómetro y cuenta regresiva en la terminal, con widgets de comandos y temas Evangelion y NERV."
+  },
+  "hero": {
+    "title": "Un reloj que también es un panel",
+    "lede": "tclock es mi fork mantenido de clock-tui: un reloj de terminal con modos de temporizador, cronómetro y cuenta regresiva. Sus widgets corren cualquier comando cada cierto tiempo y muestran la salida debajo del reloj, lo que convierte mi segundo monitor en un tablero de estado.",
+    "primary": "Instalar",
+    "evaAlt": "tclock con el tema Evangelion: grandes dígitos de píxeles, un widget de pendientes de GitHub, un widget de Google Calendar y una franja con el estado del sistema.",
+    "nervAlt": "tclock con el tema NERV: 17:34:24 en grandes dígitos rojos de píxeles sobre un cielo oscuro, con widgets de pendientes de GitHub, Google Calendar y estado del sistema.",
+    "caption": "El mismo panel en dos de los tres temas incluidos. Shift+T los alterna, y los widgets acompañan."
+  },
+  "widgets": {
+    "title": "Cualquier comando se vuelve un widget",
+    "lede": "Un widget corre un comando, captura su salida con los colores ANSI intactos y se actualiza con su propio intervalo. Si imprime algo útil y termina, puede vivir debajo del reloj.",
+    "alt": "Una terminal con un reloj rojo de píxeles arriba y tres paneles de widgets abajo, ámbar, verde azulado y verde, cada uno alimentado por una línea punteada desde una caja de comando: ghpending, calendario y estado del sistema. Etiqueta: Cualquier comando. Tres muestras de tema: default, evangelion, nerv."
+  },
+  "config": {
+    "title": "Mi segundo monitor, como configuración",
+    "lede": "Este es el archivo real detrás de la captura, recortado. El script de estado del sistema viene con tclock como widget de ejemplo.",
+    "codeTitle": "~/.config/tclock/config.toml"
+  },
+  "features": {
+    "title": "Lo que agregué al fork",
+    "items": [
+      {
+        "title": "Widgets de comandos",
+        "text": "Hasta seis lado a lado en terminales ultra anchas, o una franja a todo el ancho abajo, del tamaño de su salida."
+      },
+      {
+        "title": "Temas",
+        "text": "<code>default</code>, <code>evangelion</code> y <code>nerv</code>. El nombre del tema se pasa a cada widget como <code>TCLOCK_WIDGET_THEME</code> para que puedan combinar."
+      },
+      {
+        "title": "Grupos",
+        "text": "Pon widgets en grupos y cambia el conjunto entero con <code>g</code>. Los widgets ocultos no se ejecutan."
+      },
+      {
+        "title": "Ventanas de detalle",
+        "text": "Asigna una tecla a una vista de detalle: el comando del widget con argumentos extra, mostrado encima del reloj."
+      },
+      {
+        "title": "Modo solo reloj",
+        "text": "<code>z</code> oculta todos los widgets y centra el reloj. Púlsala otra vez para traerlos de vuelta."
+      },
+      {
+        "title": "Empaquetado",
+        "text": "Dependencias actualizadas, binarios de cada versión para x86_64 y aarch64, un paquete en el AUR y autocompletado para la shell."
+      }
+    ]
+  },
+  "modes": {
+    "title": "Sigue siendo un buen reloj",
+    "lede": "Reloj, temporizador, cronómetro y cuenta regresiva. Los temporizadores pueden encadenar duraciones y correr un comando cuando se acaba el tiempo.",
+    "clockLabel": "tclock en modo reloj, con los dígitos avanzando.",
+    "timerLabel": "tclock en modo temporizador, en cuenta regresiva.",
+    "codeTitle": "algunos ejemplos"
+  },
+  "install": {
+    "title": "Instalar",
+    "tabs": [
+      "Arch",
+      "Cargo",
+      "Binario"
+    ],
+    "binary": "Descarga el tarball para tu arquitectura desde la página de versiones y pon tclock en tu PATH.",
+    "credit": "tclock es un fork de <a href=\"https://github.com/race604/clock-tui\">race604/clock-tui</a>, que quedó en pausa hace mucho. La idea es de ellos; los widgets, los temas y el empaquetado son míos."
+  },
+  "next": [
+    {
+      "title": "ghpending",
+      "text": "El widget que más miro."
+    },
+    {
+      "title": "El flujo de trabajo",
+      "text": "Lo que alimenta el panel."
+    },
+    {
+      "title": "ai-usagebar",
+      "text": "El indicador en la barra superior del otro monitor."
+    }
+  ]
+}

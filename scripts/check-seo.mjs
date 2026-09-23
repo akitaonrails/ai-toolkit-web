@@ -14,10 +14,14 @@ for (const p of pages) {
   const s = readFileSync(p, 'utf8');
   const url = `/${relative(dist, dirname(p))}/`.replace('//', '/');
   const problems = [];
+  // Search engines show fewer full-width characters, so Japanese and Korean get their own ranges.
+  const lang = s.match(/<html lang="([^"]+)"/)?.[1] ?? 'en';
+  const cjk = /^(ja|ko)/.test(lang);
+  const [dMin, dMax, tMax] = cjk ? [70, 125, 50] : [120, 160, 60];
   const title = decode(s.match(/<title>(.*?)<\/title>/)?.[1] ?? '');
   const desc = decode(s.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '');
-  if (!title || title.length > 60) problems.push(`title is ${title.length} characters`);
-  if (desc.length < 120 || desc.length > 160) problems.push(`description is ${desc.length} characters`);
+  if (!title || title.length > tMax) problems.push(`title is ${title.length} characters`);
+  if (desc.length < dMin || desc.length > dMax) problems.push(`description is ${desc.length} characters`);
   const h1 = (s.match(/<h1[\s>]/g) ?? []).length;
   if (h1 !== 1) problems.push(`${h1} h1 elements`);
   const levels = [...s.matchAll(/<h([1-6])[\s>]/g)].map((m) => Number(m[1]));

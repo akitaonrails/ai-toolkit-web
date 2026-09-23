@@ -1,0 +1,138 @@
+{
+  "readOn": "akitaonrails.com에서 읽기",
+  "items": {
+    "benchmarkLatest": {
+      "title": "LLM 벤치마크 v4: Opus 5.5, GPT 6 Sol과 Luna, MiMo 2.6, Grok 4.7",
+      "summary": "v4 표에 새 모델 다섯 개가 들어갑니다. 업그레이드할 가치가 있는지, 그리고 Grok 4.7이 왜 전작보다 뒤처지는지 다룹니다."
+    },
+    "benchmarkPart1": {
+      "title": "새 LLM 벤치마크 v4, 1부: 과정",
+      "summary": "버전 하나를 통째로 버린 이유, 사보타주를 심은 Rails 앱의 작동 방식, 그리고 비용 이야기입니다. 9일 동안 4,000달러가 넘게 들었습니다."
+    },
+    "benchmarkPart2": {
+      "title": "새 LLM 벤치마크 v4, 2부: 39개 모델 순위",
+      "summary": "경계심 기준으로 정렬한 전체 표입니다. 최상위 동점이 여섯, Claude 절반을 이기는 무료 모델, 그리고 점수 대비 비용을 봅니다."
+    },
+    "shipMore": {
+      "title": "핑계는 그만, 더 많이 배포하기",
+      "summary": "프런티어 모델이 대부분의 개발자보다 실수를 덜 하는 지금, 리뷰 관료주의는 배포를 붙잡는 마지막 핑계입니다. 2월부터의 제 숫자를 공개합니다."
+    },
+    "skills": {
+      "title": "제 AI 스킬 이야기",
+      "summary": "스킬은 텍스트 파일에 담긴 프롬프트입니다. 제 스킬로 PR과 이슈를 천 개 넘게 처리했습니다. 읽어 보고, 자기 것을 직접 쓰세요."
+    },
+    "nesToSms": {
+      "title": "AI 도전: NES ROM을 Master System으로 변환하기",
+      "summary": "프런티어 모델에게 6502에서 Z80으로의 번역을 맡기고 에뮬레이터를 피드백 오라클로 썼습니다. 매퍼에서 모든 것이 멈추는 지점도 봅니다."
+    },
+    "aiMemory2": {
+      "title": "ai-memory 2.0",
+      "summary": "공개 포맷 OKF, 기본값이 된 로컬 임베딩, 팀 단위 병렬 작업을 다른 대안들과 비교합니다."
+    },
+    "hotTake": {
+      "title": "핫테이크: 하네스, 루프, 그래프 엔지니어링은 헛소리다",
+      "summary": "공개 저장소 30개, 벤치마크 하나, AI 마라톤 한 번. 컨설팅 가격표가 붙은 새 분야는 어디에도 필요하지 않았습니다."
+    },
+    "dayToDay": {
+      "title": "AI로 소소한 일상 문제 해결하기",
+      "summary": "위젯이 달린 탁상시계, 만화 뷰어, 이메일, 타자 연습, 노래방. 작은 불편에서 태어난 작은 도구들입니다."
+    },
+    "protect": {
+      "title": "에이전트가 내 파일을 지우지 못하게 막는 법",
+      "summary": "YOLO 모드로 다섯 달 동안 사고가 없었지만 여전히 믿지 않습니다. BTRFS 스냅숏, restic 백업, 샌드박스, 그리고 규율로 지킵니다."
+    },
+    "openSourceAi": {
+      "title": "오픈 소스 프로젝트에 대한 AI 기여: 제 생각",
+      "summary": "AI가 만든 풀 리퀘스트는 쓰레기까지 포함해서 계속 옵니다. 분류와 감사는 자동화하고 최종 결정은 사람이 내립니다."
+    },
+    "bestPractices": {
+      "title": "LLM 시대의 오픈 소스 모범 사례: 최소한의 것",
+      "summary": "간단한 설치, 믿을 수 있는 테스트와 CI, 문제를 설명하는 문서. 표준적인 릴리스가 자동화를 예측 가능하게 만듭니다."
+    },
+    "cleanCode": {
+      "title": "AI 에이전트를 위한 클린 코드",
+      "summary": "에이전트가 주 독자일 때 필요한 것들입니다. 작은 코드, grep하기 쉬운 이름, 출처 기록, 헤드리스 테스트, 명시적인 규칙."
+    },
+    "multiModel": {
+      "title": "LLM 벤치마크: 한 프로젝트에 여러 모델을 섞을 가치가 있을까?",
+      "summary": "Claude Code, opencode, Codex에서 조합 일곱 가지를 돌려 봤고, 강한 모델 하나가 기본값으로 남은 이유를 설명합니다."
+    },
+    "chronicles": {
+      "title": "바이브 코딩: 6일 만에 0에서 프로덕션까지",
+      "summary": "The M.Akita Chronicles의 뉴스레터, 블로그, 팟캐스트, Discord 봇이 6일, 커밋 201개 만에 오픈한 과정입니다."
+    },
+    "aiKilled": {
+      "title": "푸념: AI가 프로그래머를 죽였을까?",
+      "summary": "AI가 숙련된 프로그래머를 대체하지 못하는 이유, 현재 LLM이 부딪힌 S자 곡선의 천장, 그리고 엔지니어에게 달라지는 것들."
+    },
+    "usagebarPost": {
+      "title": "LLM 요금제 사용량을 보는 Omarchy용 Waybar 위젯을 만들었습니다",
+      "summary": "ai-usagebar를 만든 이유입니다. claudebar를 Rust로 옮겨서 모든 요금제의 할당량을 상단 바나 터미널에 보여 줍니다."
+    },
+    "toolkitTips": {
+      "title": "Akita의 AI 팁과 도구 모음",
+      "summary": "코딩 에이전트와 600시간을 보낸 뒤의 정리입니다. ai-jail, ai-memory, ai-usagebar, ghpending, 그리고 테스트, 백업, 규율."
+    },
+    "tuiPost": {
+      "title": "TUI와 LLM 가지고 놀기: Ratatui와 Bubbletea",
+      "summary": "LLM으로 만든 제 터미널 앱들의 컴포넌트 라이브러리입니다. ai-usagebar가 이미 이걸로 돌아갑니다."
+    },
+    "memorySwitch": {
+      "title": "세션을 잃지 않고 AI 에이전트 바꾸기",
+      "summary": "ai-memory run은 Claude Code, Codex 같은 에이전트를 오가도 작업 세션 하나를 이어 갑니다. ai-jail과 ai-usagebar도 연동됩니다."
+    },
+    "ghpendingPost": {
+      "title": "GitHub에 쌓인 일을 확인하는 CLI를 만들었습니다",
+      "summary": "ghpending을 만든 이유와, GitHub 요청 한도 안에서 모든 저장소를 병렬로 가져오는 방법을 설명합니다."
+    },
+    "githubBlock": {
+      "title": "브라질에서 막힌 GitHub API 우회하기",
+      "summary": "GitHub API가 브라질에서 응답하지 않게 됐을 때, gh와 ghpending을 계속 쓰게 해 준 SOCKS 프록시 지원 이야기입니다."
+    },
+    "bend2": {
+      "title": "AI를 겨냥한 새 언어: Bend 2",
+      "summary": "출시 당일 ghpending과 tclock을 Bend 2로 옮겨서 이 언어가 실제로 뭘 할 수 있는지 봤습니다."
+    },
+    "memoryPost": {
+      "title": "코딩 에이전트용 메모리 시스템을 만들었습니다",
+      "summary": "ai-memory의 시작입니다. git에 담긴 Markdown, SQLite 검색, 자동 기록, 에이전트 사이의 인계."
+    },
+    "jailUpdate": {
+      "title": "ai-jail 보안 업데이트: Docker는 이제 옵트인",
+      "summary": "제보된 결함, 직접 해 본 시연, 그리고 Docker 소켓이 이제 요청할 때만 열리는 이유를 다룹니다."
+    },
+    "typesafe": {
+      "title": "TypeSafe AI 같은 것에 관심이 없는 이유",
+      "summary": "새 AI 도구를 대하는 제 규칙과, 토큰 비용 최적화에 시간을 쓰지 않는 이유입니다."
+    },
+    "omarchyDualGpu": {
+      "title": "Omarchy 3: AMD와 NVIDIA 듀얼 GPU 설정",
+      "summary": "iGPU는 데스크톱을, RTX 5090은 3D 작업을 맡도록 Hyprland에서 설정했습니다."
+    },
+    "omarchyThinkpad": {
+      "title": "ThinkPad T14 Gen 6에서 쓰는 Omarchy",
+      "summary": "짧은 리뷰와 함께 SSH, 에이전트, NAS용으로 쓰는 제 리눅스 노트북의 전체 설정을 정리했습니다."
+    },
+    "nwOmarchy": {
+      "title": "NW-Omarchy: Omarchy를 X11로",
+      "summary": "Omarchy 옆에 두는 X11 세션입니다. 테마와 70개가 넘는 단축키를 그대로 씁니다."
+    },
+    "emuDistrobox": {
+      "title": "Claude Code로 만든 에뮬레이션 distrobox",
+      "summary": "게임 박스의 시작입니다. 플랫폼 열두 개와 Steam을 에이전트와 함께 Ansible 롤로 작성했습니다."
+    },
+    "racingGames": {
+      "title": "제 distrobox에서 즐기는 레트로 레이싱 게임",
+      "summary": "shadPS4 포크로 돌리는 Driveclub, Xenia로 돌리는 Forza Motorsport 4, 그리고 여기에 필요했던 조정들."
+    },
+    "marathon": {
+      "title": "AI 마라톤 마무리: 성공일까 실패일까?",
+      "summary": "저장소 24개에 걸친 500시간을 순위로 정리했고, AI가 도움이 되느냐는 리뷰와 XP에 달려 있다는 이야기입니다."
+    }
+  },
+  "related": {
+    "title": "블로그에서 더 보기",
+    "lede": "자세한 내용과 막다른 길까지 담은 긴 버전입니다.",
+    "read": "글 읽기"
+  }
+}

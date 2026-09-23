@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Podcasts y charlas sobre IA",
+    "description": "Fabio Akita en Flow Podcast, Inteligência Ltda, Fernando Ulrich y Tropical on Rails: conversaciones largas sobre IA, empleos de programación y el hype."
+  },
+  "hero": {
+    "title": "Conversaciones largas sobre IA",
+    "lede": "Ya no hago videos, pero todavía acepto algunas invitaciones a formatos largos. Estas son las que valen tus horas, de la más nueva a la más antigua. Están en portugués de Brasil; los subtítulos traducidos automáticamente de YouTube funcionan bastante bien.",
+    "primary": "Empezar por la más nueva",
+    "secondary": "Ir a los clips de Flow"
+  },
+  "play": "Reproducir",
+  "kind": {
+    "podcast": "Podcast",
+    "talk": "Charla en conferencia"
+  },
+  "views": "{n} visualizaciones",
+  "watch": "Ver en YouTube",
+  "items": {
+    "U3bZavG8qQY": "Lecciones de 37 días de inmersión total en vibe coding: 653 commits, unas 144.000 líneas y 8 proyectos en producción. Qué pueden y qué no pueden hacer los agentes, qué modelos de negocio tienen sentido y por qué el prompt único que lo resuelve todo es un mito.",
+    "4c7pbOxYn_A": "Casi cinco horas sobre cómo cambió la IA en un año: el punto de inflexión, lo que no dicen los dueños de los modelos más grandes, por qué las preguntas tontas queman más tokens, el empleo y cuál es la mejor IA para programadores.",
+    "9aWa-eCmWYE": "El fin de la era del hype. Por qué el entusiasmo con la IA es inversamente proporcional a saber cómo funciona, y cómo usé modelos de frontera para multiplicar mi producción en siete proyectos reales sin reemplazar al ingeniero.",
+    "_Hl9wiLkns4": "Con el escritor Ricardo Cavallini y la astrofísica Roberta Duarte: si llegará la superinteligencia, qué hace realmente un GPT y un largo desvío por la física cuántica y las computadoras cuánticas.",
+    "sf4Gxf0LiKo": "Mi primera conversación larga sobre IA en Flow: qué hace de verdad hoy, sus límites, su historia desde los años 60 y lo que nadie te cuenta sobre las computadoras cuánticas."
+  },
+  "cuts": {
+    "title": "Cortes do Flow",
+    "lede": "El equipo de Flow cortó los dos episodios en clips cortos en su canal Cortes do Flow. Si cuatro horas es demasiado, empieza aquí.",
+    "episode": {
+      "4c7pbOxYn_A": "De Flow #588, abril de 2026",
+      "sf4Gxf0LiKo": "Del episodio de junio de 2025"
+    },
+    "channel": "El canal Cortes do Flow",
+    "note": "Visualizaciones al {date}."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "tclock: 위젯이 달린 터미널 시계",
+    "description": "clock-tui를 포크한 tclock입니다. 터미널 시계, 타이머, 스톱워치, 카운트다운에 명령어 위젯과 Evangelion, NERV 테마를 더했습니다. 리눅스용 바이너리를 제공합니다."
+  },
+  "hero": {
+    "title": "대시보드이기도 한 시계",
+    "lede": "tclock은 제가 관리하는 clock-tui 포크입니다. 타이머, 스톱워치, 카운트다운 모드가 있는 터미널 시계입니다. 위젯이 아무 명령어나 주기적으로 실행해서 출력을 시계 아래에 보여 주고, 덕분에 제 두 번째 모니터가 상황판이 됩니다.",
+    "primary": "설치",
+    "evaAlt": "Evangelion 테마의 tclock: 큰 픽셀 숫자, GitHub pending 위젯, Google Calendar 위젯, 시스템 상태 표시줄.",
+    "nervAlt": "NERV 테마의 tclock: 어두운 하늘 위에 큰 빨간 픽셀 숫자로 17:34:24, 그리고 GitHub pending, Google Calendar, 시스템 상태 위젯.",
+    "caption": "기본 테마 세 개 중 두 개로 본 같은 대시보드. Shift+T로 테마를 바꾸면 위젯도 따라갑니다."
+  },
+  "widgets": {
+    "title": "어떤 명령어든 위젯이 됩니다",
+    "lede": "위젯은 명령어를 실행하고, ANSI 색상을 살린 채 출력을 잡아서, 자체 주기로 갱신합니다. 쓸모 있는 걸 출력하고 끝나는 명령어라면 시계 아래에 둘 수 있습니다.",
+    "alt": "위에는 빨간 픽셀 시계, 아래에는 호박색, 청록색, 초록색 위젯 패널 세 개가 있는 터미널. 패널마다 명령어 상자에서 점선이 이어집니다: ghpending, calendar, system health. 아무 명령어나라는 라벨이 붙어 있습니다. 테마 견본 세 개: default, evangelion, nerv."
+  },
+  "config": {
+    "title": "설정 파일로 본 제 두 번째 모니터",
+    "lede": "스크린숏 뒤에 있는 실제 파일을 줄였습니다. 시스템 상태 스크립트는 예제 위젯으로 tclock에 들어 있습니다.",
+    "codeTitle": "~/.config/tclock/config.toml"
+  },
+  "features": {
+    "title": "포크에 추가한 것",
+    "items": [
+      {
+        "title": "명령어 위젯",
+        "text": "울트라와이드 터미널에서는 최대 여섯 개를 나란히 두고, 아니면 출력 크기에 맞춘 전체 너비 띠를 아래에 둡니다."
+      },
+      {
+        "title": "테마",
+        "text": "<code>default</code>, <code>evangelion</code>, <code>nerv</code>. 테마 이름이 <code>TCLOCK_WIDGET_THEME</code>로 모든 위젯에 전달되므로 위젯도 맞출 수 있습니다."
+      },
+      {
+        "title": "그룹",
+        "text": "위젯을 그룹으로 묶고 <code>g</code>로 세트 전체를 바꿉니다. 숨긴 위젯은 실행되지 않습니다."
+      },
+      {
+        "title": "팝업",
+        "text": "키에 상세 보기를 연결합니다. 위젯 명령어에 인자를 더해 실행한 결과를 시계 위에 띄웁니다."
+      },
+      {
+        "title": "시계만 보기",
+        "text": "<code>z</code>를 누르면 위젯을 모두 숨기고 시계를 가운데에 둡니다. 다시 누르면 돌아옵니다."
+      },
+      {
+        "title": "패키징",
+        "text": "의존성 업데이트, x86_64와 aarch64용 릴리스 바이너리, AUR 패키지, 셸 자동 완성."
+      }
+    ]
+  },
+  "modes": {
+    "title": "여전히 좋은 시계입니다",
+    "lede": "시계, 타이머, 스톱워치, 카운트다운. 타이머는 시간을 이어 붙일 수 있고, 시간이 다 되면 명령어를 실행합니다.",
+    "clockLabel": "시계 모드의 tclock, 숫자가 넘어가는 모습.",
+    "timerLabel": "타이머 모드의 tclock, 카운트다운 중.",
+    "codeTitle": "예제 몇 개"
+  },
+  "install": {
+    "title": "설치",
+    "tabs": [
+      "Arch",
+      "Cargo",
+      "바이너리"
+    ],
+    "binary": "릴리스 페이지에서 내 아키텍처용 tarball을 받아 tclock을 PATH에 두세요.",
+    "credit": "tclock은 오래전에 멈춘 <a href=\"https://github.com/race604/clock-tui\">race604/clock-tui</a>의 포크입니다. 아이디어는 원작자의 것이고, 위젯, 테마, 패키징은 제 것입니다."
+  },
+  "next": [
+    {
+      "title": "ghpending",
+      "text": "제가 가장 많이 보는 위젯."
+    },
+    {
+      "title": "워크플로",
+      "text": "이 대시보드가 이어지는 곳."
+    },
+    {
+      "title": "ai-usagebar",
+      "text": "다른 모니터의 상단 바에 있는 게이지."
+    }
+  ]
+}

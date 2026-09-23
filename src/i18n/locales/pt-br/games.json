@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Minha coleção de games como código",
+    "description": "Como uso agentes de IA pra manter jogos da Steam, emuladores, ports para PC e decomps num repositório Ansible idempotente num distrobox, com launcher próprio."
+  },
+  "hero": {
+    "title": "Nem tudo é trabalho. Até eu preciso jogar.",
+    "lede": "E a minha ideia de relaxar é, claro, transformar minha coleção de games num projeto de software. Jogos da Steam, emuladores, ports para PC, decompilações, fan games e pacotes de mods, tudo instalado, configurado e documentado por agentes de IA num único repositório Ansible. Roda dentro de um container, então meu desktop Omarchy nunca vê nenhuma dessas dependências. Por cima fica um launcher que eu escrevi, pra coisa toda parecer um console.",
+    "primary": "distrobox-gaming",
+    "secondary": "omarchy-games-menu",
+    "shotAlt": "Meu launcher de games no Omarchy: uma grade em tela cheia com 52 capas de jogos, incluindo Banjo-Kazooie Recompiled, OutRun, a série Colin McRae Rally, Donkey Kong Country e DOOM 3, com chips de categoria e botões de ordenação no topo.",
+    "caption": "O launcher no meu desktop: todo jogo, port e emulador numa grade só, não importa no que ele roda por baixo."
+  },
+  "clean": {
+    "title": "O host fica limpo",
+    "lede": "Emuladores e jogos de Windows puxam bibliotecas 32-bit, builds do Wine, pacotes do AUR e versões de runtime que brigam entre si. Nada disso encosta no meu desktop. Tudo mora num distrobox Arch Linux chamado gaming, Steam incluída, e o host só guarda o que o desktop precisa.",
+    "alt": "Dois painéis. Sem container: uma torre Host soterrada por um emaranhado de blocos de bibliotecas com avisos vermelhos de Conflitos. Com distrobox: o mesmo Host limpo com um ponto verde e, ao lado, um container laranja gaming com os mesmos blocos em fileiras organizadas e uma receita Ansible com o rótulo Recrie quando quiser.",
+    "points": [
+      "A Steam roda dentro da caixa, com minha biblioteca e os prefixes do Proton num disco próprio",
+      "O driver da NVIDIA é repassado pro container, e o único caso chato de biblioteca 32-bit é resolvido no launcher, nunca no host",
+      "A caixa gera os desktop entries; um scriptzinho no host valida e instala, e remove os de apps que já sumiram",
+      "Os saves são espelhados no meu NAS e restaurados sob demanda, então apagar a caixa não perde nada"
+    ]
+  },
+  "idempotent": {
+    "title": "Idempotente, então posso quebrar à vontade",
+    "lede": "Cada emulador, config, patch e conjunto de mods é uma role do Ansible. Rodar o playbook de novo não muda nada, então posso experimentar sem medo, resetar as configurações de um emulador só, ou recriar a caixa inteira do zero e ter a mesma máquina de volta.",
+    "codeTitle": "da pasta ansible/",
+    "docs": "notas em docs/, uma por jogo, port ou correção",
+    "commits": "commits desde {date}"
+  },
+  "research": {
+    "title": "A IA faz a pesquisa, e deixa tudo anotado",
+    "lede": "Pra cada port, recompilação ou jogo de Windows teimoso, um agente pesquisou as fontes, escreveu a role do Ansible e deixou uma nota dizendo onde baixar, como está configurado e o que não funcionou. Os jogos da Steam têm seu próprio banco de compatibilidade com o Proton, com cada correção local apoiada numa fonte.",
+    "link": "Ver as notas"
+  },
+  "box": {
+    "title": "O que tem na caixa",
+    "items": [
+      {
+        "title": "Emuladores",
+        "text": "ES-DE como frontend, mais shadPS4, Dolphin, PCSX2, DuckStation, Flycast, xemu, RPCS3, PPSSPP, Azahar, Eden, Cemu, Supermodel standalone e o RetroArch com seus cores."
+      },
+      {
+        "title": "Ports, decomps e recomps",
+        "text": "Builds nativos como Ship of Harkinian, 2Ship2Harkinian, Starship, SpaghettiKart, Render96ex e Unleashed Recompiled."
+      },
+      {
+        "title": "Jogos de Windows",
+        "text": "Instalações gerenciadas pelo Wine e correções pra jogos como Colin McRae Rally, OutRun 2006 e a Metal Gear Master Collection."
+      },
+      {
+        "title": "Mods, de forma reproduzível",
+        "text": "Conjuntos de mods do NexusMods por jogo, instaladores de DLC e patches pra PS3 e Switch, e configurações do RPCS3 por jogo."
+      }
+    ]
+  },
+  "menu": {
+    "title": "Meu próprio launcher, feito pro Omarchy",
+    "lede": "O omarchy-games-menu é um launcher em tela cheia no estilo da Steam pra Omarchy e Hyprland. Ele lê os desktop entries que o repositório de games exporta, então um jogo novo aparece sozinho, e deixa tudo a um atalho de distância.",
+    "alt": "Três camadas: uma base Host, um container distrobox laranja chamado gaming com Emuladores e Ports para PC e uma receita Ansible, e no topo uma grade de capas do Launcher.",
+    "points": [
+      "Um CLI em Rust, o ogm, faz a varredura, o catálogo e a persistência; um overlay em QuickShell desenha a grade",
+      "Capas e metadados do SteamGridDB, e checagem de releases novos no GitHub pra ports e recomps",
+      "Ordena por mais jogados, nome, data de inclusão ou data de lançamento; é só digitar em qualquer lugar pra filtrar",
+      "Escala com a configuração de monitor do Hyprland, abre com uma tecla como Super+G, e os jogos abrem em tela cheia num workspace dedicado"
+    ]
+  },
+  "note": {
+    "title": "Por que isso está neste site",
+    "text": "Os dois repositórios foram escritos com os mesmos agentes e skills de todo o resto aqui. São o exemplo mais claro que eu tenho da regra que aplico em tudo: se o setup de uma máquina não é código, ele não está documentado, e se não está documentado, vai quebrar justo no dia que você precisar."
+  },
+  "next": [
+    {
+      "title": "Setup",
+      "text": "O Omarchy e o resto do desktop onde isso roda."
+    },
+    {
+      "title": "O workflow",
+      "text": "Os agentes e skills que escreveram esses playbooks."
+    }
+  ]
+}

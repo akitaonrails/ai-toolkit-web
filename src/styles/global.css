@@ -121,7 +121,7 @@
   body { background: var(--bg); font-size: var(--text-base); line-height: 1.6; overflow-x: clip; text-rendering: optimizeLegibility; font-stretch: 100%; }
   * { min-width: 0; }
   /* Hubot Sans, expanded and heavy, for headlines; the width axis gives them presence without going larger. */
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; line-height: 1.04; letter-spacing: -0.02em; text-wrap: balance; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; line-height: 1.04; letter-spacing: -0.02em; text-wrap: balance; overflow-wrap: break-word; hyphens: auto; }
   h3 { line-height: 1.2; letter-spacing: -0.01em; font-weight: 720; font-stretch: 105%; }
   p { text-wrap: pretty; }
   code, pre, kbd { font-family: var(--font-mono); }
@@ -182,10 +182,11 @@
 /* Motion start states. Only applied when the motion script is running (html.motion). */
 html.motion [data-reveal]:not([data-reveal='children']), html.motion [data-reveal='children'] > * { opacity: 0; }
 
-/* Languages. Hubot and Mona Sans cover Latin only; Hebrew, Japanese and Korean switch families (fonts-*.css). */
+/* Languages. Hubot and Mona Sans cover Latin only. Japanese and Korean keep them first, so names and Latin words keep
+   the brand faces, and fall through to Noto for their own script; Hebrew switches to Rubik and Heebo (fonts-*.css). */
 :lang(he) { --font-display: 'Rubik Variable', system-ui, sans-serif; --font-sans: 'Heebo Variable', system-ui, sans-serif; }
-:lang(ja) { --font-display: 'Noto Sans JP Variable', system-ui, sans-serif; --font-sans: 'Noto Sans JP Variable', system-ui, sans-serif; }
-:lang(ko) { --font-display: 'Noto Sans KR Variable', system-ui, sans-serif; --font-sans: 'Noto Sans KR Variable', system-ui, sans-serif; }
+:lang(ja) { --font-display: 'Hubot Sans Variable', 'Noto Sans JP Variable', system-ui, sans-serif; --font-sans: 'Mona Sans Variable', 'Noto Sans JP Variable', system-ui, sans-serif; }
+:lang(ko) { --font-display: 'Hubot Sans Variable', 'Noto Sans KR Variable', system-ui, sans-serif; --font-sans: 'Mona Sans Variable', 'Noto Sans KR Variable', system-ui, sans-serif; }
 :lang(he) :is(h1, h2, h3), :lang(ja) :is(h1, h2, h3), :lang(ko) :is(h1, h2, h3) { letter-spacing: 0; line-height: 1.25; font-stretch: 100%; }
 :lang(ja) body, :lang(ko) body, :lang(he) body { line-height: 1.8; }
 :lang(ja) { line-break: strict; word-break: normal; overflow-wrap: anywhere; }

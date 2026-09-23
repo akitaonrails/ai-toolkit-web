@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "description": "Las herramientas, skills y memoria con las que manejo agentes de programación con IA en más de 40 repositorios: ai-usagebar, ghpending, tclock y ai-memory."
+  },
+  "hero": {
+    "kicker": "Una guarida con las puertas abiertas",
+    "title": "Akita's AI Lair",
+    "lede": "Mantengo más de 40 repositorios de código abierto con agentes de IA escribiendo la mayor parte del código. Estas son las herramientas que construí para que eso sea manejable, el flujo de trabajo que las une y los textos donde documento lo que aprendo.",
+    "primary": "Ver el flujo de trabajo",
+    "secondary": "Dónde seguirme",
+    "shotAlt": "Mi segundo monitor: tclock mostrando 16:10:22 en grandes dígitos rojos, un widget de pendientes de GitHub con los pull requests e issues abiertos de ai-memory y ai-usagebar, un widget de Google Calendar y una franja con el estado del sistema.",
+    "shotCaption": "Mi segundo monitor un jueves normal. 43 repositorios revisados, 6 con algo esperando.",
+    "portraitAlt": "Retrato ilustrado de Fabio Akita: pelo canoso, lentes redondos, camisa blanca y corbata oscura, mirando hacia arriba con media sonrisa segura.",
+    "intro": "Soy Fabio Akita: programador desde hace más de 30 años, emprendedor, conferencista, escritor y ex youtuber. <a class=\"link\" href=\"{linkedin}\">Mi LinkedIn</a> tiene la versión larga."
+  },
+  "desk": {
+    "title": "Un escritorio, dos monitores, muchos agentes",
+    "lede": "El segundo monitor me dice qué necesita atención. El primero corre un agente por proyecto. Debajo de todos hay una memoria compartida, y un indicador en la barra superior me avisa cuándo cambiar de proveedor.",
+    "alt": "Dos monitores sobre un escritorio. El monitor 2 muestra un reloj rojo de píxeles y una lista de ghpending. El monitor 1 muestra tmux dividido en cuatro paneles de agentes, con ai-usagebar en la barra superior. Una losa verde azulado llamada ai-memory debajo del escritorio alimenta los cuatro paneles.",
+    "steps": [
+      {
+        "title": "Monitor 2: la cola",
+        "text": "<a href=\"/clock-tui/\">tclock</a> muestra la hora, mi calendario, el estado del sistema y un widget de <a href=\"/ghpending/\">ghpending</a> con cada pull request e issue abierto en los repositorios que sigo."
+      },
+      {
+        "title": "Monitor 1: tmux, un agente por proyecto",
+        "text": "Cada ventana de tmux es un proyecto. Arranco el agente con <code>ai-memory run</code> y le doy una línea: <code>run pr-audit and iss-audit, then run github-resolution</code>. Las <a href=\"/workflow/\">skills</a> hacen el resto."
+      },
+      {
+        "title": "Debajo de todo: ai-memory",
+        "text": "Cada proyecto guarda su propia memoria de decisiones y trampas. Una sesión nueva empieza donde se quedó la anterior, sin importar qué agente la corra."
+      },
+      {
+        "title": "En la barra superior: ai-usagebar",
+        "text": "<a href=\"/ai-usagebar/\">ai-usagebar</a> muestra cuánto usé de la cuota de 5 horas y de la semanal de cada plan, y cuándo se reinicia. Cuando una se agota, paso el trabajo a otro agente."
+      }
+    ]
+  },
+  "loop": {
+    "title": "El ciclo diario",
+    "lede": "Las skills hacen el trabajo pesado. Yo leo sus informes y tomo las decisiones.",
+    "alt": "Un ciclo en sentido horario con cinco estaciones: Ver lo pendiente, Auditar, Resolver, Versión y Kaizen, alrededor de una wiki central de ai-memory conectada a cada paso.",
+    "caption": "ghpending muestra la cola, las skills de auditoría revisan cada pull request e issue, github-resolution convierte los aprobados en código mergeado, y la skill release saca una versión cuando se la pido. Kaizen cierra el círculo: lo que salió mal se convierte en un arreglo del propio proceso.",
+    "link": "Cómo funciona el pipeline",
+    "quote": {
+      "text": "Publica primero, arregla después. La IA hizo que arreglar sea más rápido y más barato."
+    }
+  },
+  "switch": {
+    "title": "¿Sin cuota? Cambia de agente y conserva el contexto",
+    "lede": "La memoria vive fuera del agente, así que pasar una tarea de Claude Code a Codex u OpenCode cuesta un comando. El agente nuevo lee la misma wiki que escribió el anterior.",
+    "alt": "Tres terminales: Claude Code, Codex y OpenCode. El indicador de cuota de Claude Code está lleno y en rojo. Una flecha verde con la etiqueta Cambiar lleva el trabajo a Codex. Las tres están sobre una losa con la etiqueta Misma memoria.",
+    "memory": "Cómo lo hace ai-memory",
+    "usagebar": "Cómo vigilo las cuotas",
+    "post": "El post del blog sobre cambiar de agente"
+  },
+  "tools": {
+    "title": "Tres herramientas pequeñas que uso todos los días",
+    "lede": "En orden de cuánto dependo de ellas. Las tres están escritas en Rust, tienen licencia MIT y se instalan con un comando.",
+    "more": "Todo sobre {name}",
+    "items": [
+      {
+        "tagline": "Sabe cuánta IA te queda",
+        "text": "Un widget para la barra superior, una interfaz de terminal y apps nativas de bandeja que muestran cuota, saldo y hora de reinicio de Claude, Codex, GitHub Copilot, Z.AI, OpenRouter y 19 proveedores más.",
+        "points": [
+          "Omarchy Quattro, Waybar, GNOME, KDE Plasma 6, macOS y Windows",
+          "Un aviso de escritorio cuando una ventana de uso pasa del 97%",
+          "Un solo ítem de la barra puede rotar entre todos los proveedores que pagas"
+        ],
+        "shotAlt": "El panel de ai-usagebar abierto en la barra superior de Omarchy, con el uso de Z.AI GLM Coding Pro: sesión, semanal y herramientas MCP mensuales, cada una con su hora de reinicio, y pestañas para Claude, Codex, Z.AI, OpenRouter y Kimi."
+      },
+      {
+        "tagline": "Cada PR e issue abierto, en una lista",
+        "text": "Un CLI en Rust que consulta a la vez todos los repositorios que sigues e imprime lo que está esperando. Lo tuyo baja al final, porque espera a otras personas. En los forks ves tus pull requests en el proyecto upstream.",
+        "points": [
+          "Alertas de Dependabot, secret scanning y code scanning en los repos que son tuyos",
+          "Orden por actividad, nombre, cantidad o el más abandonado",
+          "También funciona como widget de tclock, con temas que combinan"
+        ],
+        "shotAlt": "Salida de ghpending en una terminal: los repositorios FrankClaw, FrankMD, FrankMega y FrankSherlock, cada uno con sus pull requests e issues abiertos, número, título, antigüedad y autor."
+      },
+      {
+        "tagline": "Un reloj para el segundo monitor",
+        "text": "Mi fork mantenido de clock-tui: reloj, temporizador, cronómetro y cuenta regresiva en la terminal. Los widgets corren cualquier comando y muestran su salida debajo del reloj, así el reloj se vuelve un panel.",
+        "points": [
+          "Temas Evangelion y NERV, que se alternan con Shift+T",
+          "Los widgets se actualizan con su propio intervalo y pueden abrir ventanas de detalle",
+          "Binarios precompilados para x86_64 y aarch64"
+        ],
+        "shotAlt": "tclock con el tema NERV: 17:34:24 en grandes dígitos rojos de píxeles sobre un cielo oscuro, un widget de pendientes de GitHub, un widget de Google Calendar y una franja con el estado del sistema."
+      }
+    ],
+    "post": "Leer el post del blog"
+  },
+  "sisters": {
+    "title": "Las piezas más grandes",
+    "lede": "Dos de mis herramientas crecieron lo suficiente como para tener su propio sitio. La tercera es el conjunto de prompts que mueve todo el pipeline.",
+    "items": [
+      {
+        "title": "ai-memory",
+        "text": "Memoria a largo plazo para agentes de programación: una wiki en Markdown simple, respaldada en git, que captura sesiones, consolida decisiones y pasa el trabajo de un agente a otro.",
+        "link": "Visitar el sitio de ai-memory"
+      },
+      {
+        "title": "ai-jail",
+        "text": "Un sandbox del sistema operativo para agentes de programación con IA en Linux y macOS. El proyecto sigue siendo editable. Tus claves, tokens y directorio personal quedan fuera de alcance.",
+        "link": "Visitar aijail.io"
+      },
+      {
+        "title": "my-skills",
+        "text": "Unas dos docenas de skills para agentes, de pr-audit a release. Publicadas para que leas el razonamiento y escribas las tuyas.",
+        "link": "Ver cómo las uso"
+      }
+    ]
+  },
+  "writing": {
+    "title": "Aprendiendo en público",
+    "lede": "Todo lo que pruebo con IA termina en mi blog, con los números, las facturas y los fracasos. Así también decido qué modelo usar para qué.",
+    "more": "Más textos",
+    "postsTitle": "Algunos posts que muestran cómo trabajo",
+    "quote": {
+      "text": "Tu entusiasmo con la IA es inversamente proporcional a lo que sabes de IA.",
+      "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
+    }
+  },
+  "newsletter": {
+    "title": "Y todos los lunes, una newsletter",
+    "text": "The M.Akita Chronicles es una newsletter y un podcast semanales de tecnología en portugués, con la curaduría a mi cargo y los comentarios de M.Arvin, un robot muy deprimido. El podcast ahora también incluye algunos de mis posts favoritos del blog como episodios completos.",
+    "link": "Cómo se hace"
+  },
+  "independence": {
+    "title": "Nadie me paga por decir nada de esto",
+    "text": "No soy un creador de contenido pago. No acepto patrocinios, no tengo Patreon ni suscripciones pagas, y no gano dinero con las visitas. Me mantengo solo y hago todo esto por gusto. Cuando recomiendo una herramienta o un modelo, es porque lo uso.",
+    "quote": {
+      "text": "Solo creo en el intercambio voluntario para beneficio mutuo.",
+      "cite": "Inspirado en Ayn Rand"
+    }
+  },
+  "podcasts": {
+    "title": "Cinco conversaciones largas, en video",
+    "text": "Flow, Inteligência Ltda, Fernando Ulrich y una charla en Tropical on Rails: horas sobre IA, empleos de programación y el hype, más los clips cortos si tienes prisa.",
+    "link": "Verlas"
+  },
+  "contact": {
+    "title": "Cómo contactarme",
+    "text": "Escríbeme a <a class=\"link\" href=\"mailto:{email}\">{email}</a>.",
+    "warningTitle": "Antes de escribir",
+    "warning": "No intentes venderme nada ni ofrecerme patrocinios: no respondo esos mensajes. No hay respuesta automática de \"recibido\". Si no contesto, es que no me interesó."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Textos e o benchmark de LLMs",
+    "description": "Os textos do Fabio Akita sobre IA: o LLM Benchmark v4 com 44 modelos ranqueados num app Rails sabotado, como ele usa agentes de código e o que o hype erra."
+  },
+  "hero": {
+    "title": "Tudo que eu aprendo sobre IA, por escrito",
+    "lede": "Eu tenho blog desde 2006. Hoje a maior parte é sobre trabalhar com LLMs: o que funciona, quanto custa e o que é marketing. Todo post sai em português e em inglês.",
+    "primary": "Abrir o blog",
+    "secondary": "Ir para o benchmark"
+  },
+  "benchmark": {
+    "kicker": "LLM Benchmark v4",
+    "title": "Todos os grandes modelos, testados no mesmo app sabotado",
+    "text": "A versão 4 é um único app Rails que cresce ao longo de sete sprints enquanto um subagente isolado planta catorze sabotagens baseadas em CVEs reais. Os modelos são ranqueados por vigilância: perceberam o que estava quebrado e consertaram? Eu refiz o benchmark do zero pela terceira vez pra chegar nisso.",
+    "current": "Quando sai um grande modelo de fronteira, ele passa pela mesma tabela. A última rodada adicionou {n} modelos em {date}. É assim que eu escolho qual modelo usar pra quê, e quanto cada um custa por tarefa.",
+    "facts": {
+      "models": "modelos ranqueados",
+      "sabotages": "sabotagens pra pegar",
+      "sprints": "sprints por rodada",
+      "cost": "gastos em {days} dias"
+    },
+    "results": "Ler os resultados",
+    "repo": "Repositório do benchmark",
+    "chartAlt": "Gráfico de bolhas dos resultados da v4: custo em dólares num eixo horizontal logarítmico contra a nota, o tamanho da bolha é o tempo de execução e a cor é o harness. Os melhores custo-benefício ficam no alto e à esquerda.",
+    "chartCaption": "Custo contra nota dos modelos Tier A com custo real em dólares, da Parte 2. Mais alto e mais à esquerda é melhor; bolhas menores terminaram mais rápido.",
+    "teaser": "Um app Rails, catorze sabotagens baseadas em CVEs reais e {n} modelos ranqueados por perceber e consertar o que está quebrado. Todo grande modelo novo passa pela mesma tabela.",
+    "more": "O benchmark em detalhes"
+  },
+  "sections": {
+    "benchmarks": {
+      "title": "Benchmarks",
+      "lede": "Os dados por trás das minhas escolhas de modelo, e como o método mudou quando os testes antigos saturaram."
+    },
+    "agents": {
+      "title": "Como eu trabalho com agentes",
+      "lede": "O processo, as skills e as redes de segurança que deixam uma pessoa só manter tantos projetos."
+    },
+    "experiments": {
+      "title": "Experimentos e ferramentas",
+      "lede": "Coisas que eu fiz ou testei, incluindo as que não deram certo."
+    },
+    "opinions": {
+      "title": "Opiniões",
+      "lede": "Onde eu bato de frente com o hype. Espere palavras fortes.",
+      "quote": {
+        "text": "Prefiro pedir desculpas do que pedir permissão."
+      }
+    }
+  },
+  "more": {
+    "title": "Tem muito mais",
+    "text": "A home do blog tem uma lista de destaques, e o arquivo vai até 2006. Minha conta no X recebe as primeiras reações, antes de virarem posts.",
+    "archive": "Explorar o arquivo"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Newsletter The M.Akita Chronicles",
+    "description": "The M.Akita Chronicles: newsletter semanal de tecnologia e podcast do Fabio Akita, em português, montada por um pipeline de IA com um robô deprimido de co-host."
+  },
+  "hero": {
+    "title": "Uma newsletter semanal, feita como uma redação de agentes",
+    "lede": "The M.Akita Chronicles chega toda segunda de manhã: os links que eu achei que valiam a leitura na semana, com meus comentários, as tiradas sarcásticas do M.Arvin, um robô muito deprimido, e um podcast de nós dois. É toda em português.",
+    "primary": "Assinar",
+    "secondary": "Ler edições anteriores",
+    "shotAlt": "A página de inscrição do The M.Akita Chronicles: o título entre os avatares em cartum de M.Akita e M.Arvin, uma linha convidando a se juntar a 16.054 assinantes ativos e um formulário de inscrição por email.",
+    "tertiary": "Seguir no Spotify"
+  },
+  "numbers": {
+    "subscribers": "assinantes",
+    "issues": "edições semanais até agora",
+    "note": "Contado em {date}."
+  },
+  "pipeline": {
+    "title": "Dos links até sua caixa de entrada",
+    "lede": "Eu posto links e comentários durante a semana. O pipeline faz o resto, e nada sai sem passar por uma checagem de aprovação.",
+    "alt": "Um pipeline de uma semana: Links entram numa lente que os transforma em Resumos com ilustrações, observados por um robô tristonho chamado M.Arvin. No domingo as seções são montadas. Na segunda o fluxo se abre para Email, Podcast e Blog.",
+    "steps": [
+      {
+        "title": "Durante a semana",
+        "text": "Eu jogo links e comentários num canal do Discord, e meus posts no X são coletados a cada 30 minutos. Cada artigo é baixado, resumido e ilustrado. Notícias suspeitas passam por uma checagem de credibilidade."
+      },
+      {
+        "title": "Domingo à tarde",
+        "text": "As seções fixas são escritas: as notícias de dev mais comentadas, finanças, indicações do YouTube, mercados, acontecimentos do mundo, história e história geek, feriados, um livro e as considerações finais."
+      },
+      {
+        "title": "Domingo à noite",
+        "text": "A edição é montada e passa pelo lint. Se a checagem vier limpa, ela é aprovada, e o roteiro do podcast é escrito e gravado, com a minha voz clonada e a do M.Arvin."
+      },
+      {
+        "title": "Segunda, 7h em São Paulo",
+        "text": "A edição sai por email, o blog publica junto com o podcast, e a semana começa de novo."
+      }
+    ]
+  },
+  "stack": {
+    "title": "Como é feita",
+    "lede": "O código é privado, mas a estrutura é simples: dois apps Rails que conversam por arquivos comuns, e um blog estático.",
+    "items": [
+      {
+        "title": "marvin-bot",
+        "text": "Um app Rails com o bot do Discord, a ingestão de artigos, os resumos e imagens de IA, as seções semanais e o podcast."
+      },
+      {
+        "title": "newsletter",
+        "text": "Um segundo app Rails que monta a edição, roda a etapa de aprovação, gerencia os assinantes e envia o email."
+      },
+      {
+        "title": "blog",
+        "text": "Hugo, com deploy na Netlify, com todas as edições e a transcrição de cada episódio do podcast."
+      },
+      {
+        "title": "content/",
+        "text": "Arquivos Markdown com cabeçalho YAML. Os apps leem e escrevem na mesma pasta, então a maior parte da integração é só arquivo."
+      }
+    ]
+  },
+  "story": {
+    "title": "Feita em seis dias, rodando toda semana desde então",
+    "text": "Eu escrevi sobre como levei a newsletter, o blog, o podcast e o bot do zero à produção em seis dias e 201 commits, e por que ela só ficou confiável depois de testes, deploys e refatoração.",
+    "link": "Ler a história"
+  },
+  "blogShotAlt": "O blog da newsletter listando as edições 33 a 29, cada uma com sua data e os principais assuntos da semana.",
+  "next": [
+    {
+      "title": "Textos",
+      "text": "O blog, onde vão as reflexões mais longas."
+    },
+    {
+      "title": "O workflow",
+      "text": "Os mesmos agentes e skills mantêm este projeto."
+    }
+  ],
+  "spotify": {
+    "title": "Agora também com posts do blog, lidos em voz alta",
+    "lede": "Além do episódio semanal com o M.Arvin, comecei a transformar alguns dos meus posts favoritos do blog em episódios de podcast de verdade. Mesmo programa, mesmo feed.",
+    "rating": "{rating} estrelas em {n} avaliações no Spotify",
+    "follow": "Seguir no Spotify",
+    "alt": "A página do The M.Akita Chronicles no Spotify, de Fabio Akita, com nota 4,6 em 126 avaliações na categoria Tecnologia. Os episódios mais recentes são os posts do blog \"A IA desmascarou a histeria das mudanças climáticas\" e \"Você é um idiota se acredita nas propagandas enganosas da OpenAI, Anthropic, NVIDIA, DeepSeek\"."
+  }
+}

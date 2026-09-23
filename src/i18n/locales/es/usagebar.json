@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "ai-usagebar: cuota de IA en tu barra",
+    "description": "ai-usagebar muestra cuota, saldo y reinicios de Claude, Codex, Copilot, Z.AI, OpenRouter y otros 19 proveedores de IA, en Linux, macOS y Windows."
+  },
+  "hero": {
+    "title": "Sabe cuánta IA te queda antes de que se acabe",
+    "lede": "ai-usagebar lee el uso de cada plan desde el proveedor y lo muestra donde ya miras: la barra superior, una interfaz de terminal o la bandeja del sistema. Empezó como un port a Rust de claudebar y hoy cubre 24 proveedores.",
+    "primary": "Instalar",
+    "shotAlt": "El panel de ai-usagebar abierto bajo la barra superior de Omarchy: Z.AI GLM Coding Pro con cuotas de sesión, semanal y herramientas MCP mensuales al 1%, sus horas de reinicio y pestañas para Claude, Codex, Z.AI, OpenRouter y Kimi."
+  },
+  "why": {
+    "title": "Por qué lo construí",
+    "lede": "Pago varios planes de programación y cada uno mide distinto: una ventana de 5 horas aquí, un tope semanal allá, un saldo prepago en otro lado. Abrir cinco paneles para decidir qué agente se lleva la próxima tarea era absurdo. Ahora me basta un vistazo a la barra.",
+    "alt": "Siete chips de proveedores, Claude, Codex, Copilot, Z.AI, OpenRouter, Kimi y DeepSeek, alimentan una barra con un indicador. El panel ampliado muestra tres medidores, el primero casi lleno con una marca roja que dice Aviso al 97%, y un reloj Se reinicia en.",
+    "link": "Cómo encaja en mi flujo de trabajo"
+  },
+  "surfaces": {
+    "title": "Donde sea que trabajes",
+    "lede": "El mismo núcleo en Rust alimenta cada interfaz, así que los números coinciden en todas partes.",
+    "items": [
+      {
+        "title": "Interfaz de terminal",
+        "text": "<code>ai-usagebar-tui</code>: una pestaña por proveedor, actualizada cada 60 segundos, con un panel de configuración.",
+        "alt": "La TUI de ai-usagebar en la pestaña de OpenAI: ventana de 5 horas de Codex al 6% y semanal al 1%, con horas de reinicio y ritmo, y una sección de créditos."
+      },
+      {
+        "title": "Barra de menús de macOS",
+        "text": "Un popover nativo con cada proveedor activado, marcas de ritmo y horas de reinicio.",
+        "alt": "El popover de la bandeja de macOS con Claude Max, Codex, Cursor, SuperGrok y Antigravity, cada uno con barras de uso, porcentaje usado y horas de reinicio."
+      },
+      {
+        "title": "Bandeja de Windows",
+        "text": "Un ícono en el área de notificaciones con un popover en WebView2. Se instala con Scoop.",
+        "alt": "El panel de la bandeja de Windows con barras de uso por proveedor."
+      },
+      {
+        "title": "KDE Plasma 6",
+        "text": "Un plasmoide con pestañas por proveedor. Cada instancia del applet puede seguir a un proveedor distinto.",
+        "alt": "El plasmoide de KDE Plasma 6 con pestañas por proveedor y barras de uso."
+      }
+    ]
+  },
+  "features": {
+    "title": "Lo que hace por ti",
+    "items": [
+      {
+        "title": "Avisos antes del muro",
+        "text": "Una notificación de escritorio cuando una ventana de uso pasa del 97%, una crítica al 100% y un aviso 48 horas antes de que venzan los créditos de reinicio acumulados. El umbral lo cambias tú."
+      },
+      {
+        "title": "Encuentra tus cuentas",
+        "text": "<code>ai-usagebar detect</code> activa cada proveedor que ya tiene una credencial en la máquina. Lee archivos locales y llaveros, nunca la red."
+      },
+      {
+        "title": "Sigue mostrando el último número bueno",
+        "text": "Si falla la red, los datos anteriores siguen en pantalla. A un proveedor que responde HTTP 429 lo deja en paz por cinco minutos."
+      },
+      {
+        "title": "Varias cuentas",
+        "text": "Cuentas con nombre de Claude, Codex y OpenRouter lado a lado, cada una con su propia entrada."
+      },
+      {
+        "title": "Reemplazo directo de claudebar",
+        "text": "El mismo JSON de Waybar, las mismas flags, el tooltip Pango, la detección de temas de Omarchy y la renovación de OAuth con bloqueo."
+      },
+      {
+        "title": "Programable",
+        "text": "<code>ai-usagebar usage --json</code> imprime la cuota y la hora de reinicio de cada proveedor en un solo documento."
+      }
+    ]
+  },
+  "providers": {
+    "title": "24 proveedores",
+    "lede": "La línea de comandos y la TUI los soportan todos. La cobertura de escritorio varía según la integración; la tabla está en el README."
+  },
+  "install": {
+    "title": "Instalar",
+    "lede": "Elige tu plataforma. En Omarchy Quattro necesitas el binario y el plugin.",
+    "tabs": [
+      "Omarchy",
+      "Arch",
+      "Linux o macOS",
+      "Nix",
+      "Windows"
+    ],
+    "then": "Después activa lo que ya usas y mira:",
+    "readme": "Todo lo demás está en el README"
+  },
+  "next": [
+    {
+      "title": "El flujo de trabajo",
+      "text": "Donde el indicador de cuota decide qué agente se lleva la próxima tarea."
+    },
+    {
+      "title": "ghpending",
+      "text": "La otra cosa que miro cada mañana."
+    },
+    {
+      "title": "tclock",
+      "text": "El reloj que aloja el panel en mi segundo monitor."
+    }
+  ]
+}

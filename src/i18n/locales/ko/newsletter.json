@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "The M.Akita Chronicles 뉴스레터",
+    "description": "The M.Akita Chronicles: Fabio Akita가 포르투갈어로 내는 주간 기술 뉴스레터이자 팟캐스트입니다. AI 파이프라인이 만들고, 침울한 로봇이 공동 진행을 맡습니다."
+  },
+  "hero": {
+    "title": "에이전트 편집국처럼 만드는 주간 뉴스레터",
+    "lede": "The M.Akita Chronicles는 매주 월요일 아침에 도착합니다. 그 주에 읽을 만하다고 본 링크와 제 코멘트, 아주 우울한 로봇 M.Arvin의 빈정거림, 그리고 우리 둘의 팟캐스트가 담깁니다. 포르투갈어로 씁니다.",
+    "primary": "구독하기",
+    "secondary": "지난 호 읽기",
+    "shotAlt": "The M.Akita Chronicles 구독 페이지: M.Akita와 M.Arvin 만화 아바타 사이의 제목, 활성 구독자 16,054명과 함께하라는 문구, 이메일 가입 양식.",
+    "tertiary": "Spotify에서 팔로우"
+  },
+  "numbers": {
+    "subscribers": "구독자",
+    "issues": "지금까지 발행한 주간 호",
+    "note": "{date} 기준."
+  },
+  "pipeline": {
+    "title": "링크에서 받은편지함까지",
+    "lede": "저는 한 주 동안 링크와 코멘트를 올립니다. 나머지는 파이프라인이 하고, 승인 검사를 통과하지 못하면 아무것도 나가지 않습니다.",
+    "alt": "일주일짜리 파이프라인: 링크가 렌즈를 지나 삽화가 붙은 요약이 되고, M.Arvin이라고 적힌 침울한 로봇이 지켜봅니다. 일요일에 섹션이 조립됩니다. 월요일에 흐름이 이메일, 팟캐스트, 블로그로 퍼집니다.",
+    "steps": [
+      {
+        "title": "주중",
+        "text": "Discord 채널에 링크와 코멘트를 남기고, X에 올린 글은 30분마다 수집됩니다. 기사마다 가져와서 요약하고 삽화를 붙입니다. 수상한 기사는 신뢰도 검사를 받습니다."
+      },
+      {
+        "title": "일요일 오후",
+        "text": "고정 섹션을 씁니다. 가장 화제가 된 개발 소식, 금융, YouTube 추천, 시장, 세계 소식, 역사와 괴짜 역사, 기념일, 책 한 권, 마무리 코멘트."
+      },
+      {
+        "title": "일요일 밤",
+        "text": "호를 조립하고 린트합니다. 검사가 깨끗하면 승인되고, 팟캐스트 대본을 써서 복제한 제 목소리와 M.Arvin의 목소리로 녹음합니다."
+      },
+      {
+        "title": "월요일, 상파울루 시간 오전 7시",
+        "text": "호가 이메일로 나가고, 블로그에 팟캐스트와 함께 게시되고, 한 주가 다시 시작됩니다."
+      }
+    ]
+  },
+  "stack": {
+    "title": "만드는 방법",
+    "lede": "코드는 비공개지만 구조는 단순합니다. 평범한 파일로 대화하는 Rails 앱 두 개와 정적 블로그 하나입니다.",
+    "items": [
+      {
+        "title": "marvin-bot",
+        "text": "Discord 봇, 기사 수집, AI 요약과 이미지, 주간 섹션, 팟캐스트를 맡는 Rails 앱입니다."
+      },
+      {
+        "title": "newsletter",
+        "text": "호를 조립하고, 승인 관문을 돌리고, 구독자를 관리하고, 이메일을 보내는 두 번째 Rails 앱입니다."
+      },
+      {
+        "title": "blog",
+        "text": "Netlify에 배포하는 Hugo 블로그로, 모든 호와 모든 팟캐스트 에피소드의 대본이 있습니다."
+      },
+      {
+        "title": "content/",
+        "text": "YAML 헤더가 달린 Markdown 파일입니다. 앱들이 같은 폴더를 읽고 쓰기 때문에 연동 대부분이 그냥 파일입니다."
+      }
+    ]
+  },
+  "story": {
+    "title": "6일 만에 만들어서 매주 돌리는 중",
+    "text": "뉴스레터, 블로그, 팟캐스트, 봇을 6일, 커밋 201개 만에 0에서 프로덕션까지 올린 이야기와, 테스트, 배포, 리팩터링을 거친 뒤에야 안정된 이유를 글로 썼습니다.",
+    "link": "이야기 읽기"
+  },
+  "blogShotAlt": "33호부터 29호까지 나열된 뉴스레터 블로그. 호마다 날짜와 그 주의 주요 주제가 있습니다.",
+  "next": [
+    {
+      "title": "글",
+      "text": "긴 생각을 적는 블로그."
+    },
+    {
+      "title": "워크플로",
+      "text": "이 프로젝트도 같은 에이전트와 스킬이 관리합니다."
+    }
+  ],
+  "spotify": {
+    "title": "이제 블로그 글도 소리로",
+    "lede": "M.Arvin과 함께하는 주간 에피소드 말고도, 제가 아끼는 블로그 글 몇 편을 정식 팟캐스트 에피소드로 만들기 시작했습니다. 같은 쇼, 같은 피드입니다.",
+    "rating": "Spotify 평가 {n}개, 평점 {rating}",
+    "follow": "Spotify에서 팔로우",
+    "alt": "Spotify의 The M.Akita Chronicles 쇼 페이지. Fabio Akita 제작, 기술 카테고리에서 평가 126개로 평점 4.6. 최신 에피소드는 블로그 글 \"A IA desmascarou a histeria das mudanças climáticas\"와 \"Você é um idiota se acredita nas propagandas enganosas da OpenAI, Anthropic, NVIDIA, DeepSeek\"입니다."
+  }
+}

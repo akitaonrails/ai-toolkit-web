@@ -1,0 +1,157 @@
+{
+  "site": {
+    "tagline": "제가 AI와 일하는 방식 뒤에 있는 도구, 워크플로, 글",
+    "description": "Fabio Akita의 오픈 소스 AI 도구 아지트입니다. ai-usagebar, ghpending, tclock, 에이전트 스킬과 ai-memory, 그리고 LLM 벤치마크와 그 뒤의 글을 모았습니다.",
+    "ogAlt": "Akita's AI Lair: 도구, 워크플로, 글. 빨간 픽셀 시계, 호박색 목록, 파란 게이지, 보라색 칩이 있는 작은 대시보드.",
+    "homeTitle": "Akita's AI Lair: AI 코딩 도구, 워크플로, 벤치마크"
+  },
+  "a11y": {
+    "skip": "본문으로 건너뛰기",
+    "home": "Akita's AI Lair 홈",
+    "mainNav": "주 메뉴",
+    "language": "언어",
+    "toggleTheme": "라이트 모드와 다크 모드 전환",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기",
+    "menu": "메뉴",
+    "external": "다른 사이트로 이동",
+    "chooseOne": "하나를 고르세요"
+  },
+  "nav": {
+    "workflow": {
+      "label": "워크플로",
+      "note": "스킬, tmux, 매일의 루프"
+    },
+    "usagebar": {
+      "label": "ai-usagebar",
+      "note": "AI 제공업체 24곳의 할당량과 초기화 시간"
+    },
+    "ghpending": {
+      "label": "ghpending",
+      "note": "열린 PR과 이슈를 한 목록에"
+    },
+    "tclock": {
+      "label": "tclock",
+      "note": "명령어 위젯이 달린 터미널 시계"
+    },
+    "writing": {
+      "label": "글",
+      "note": "블로그와 LLM 벤치마크"
+    },
+    "newsletter": {
+      "label": "뉴스레터",
+      "note": "매주 월요일 The M.Akita Chronicles"
+    },
+    "podcasts": {
+      "label": "팟캐스트",
+      "note": "AI에 관한 긴 대화, 영상으로"
+    },
+    "games": {
+      "label": "게임",
+      "note": "Omarchy 위에 코드로 관리하는 게임 컬렉션"
+    },
+    "follow": {
+      "label": "팔로우"
+    },
+    "setup": {
+      "label": "작업 환경",
+      "note": "Omarchy, tmux, 그리고 쓰지 않기로 한 것들"
+    },
+    "tools": {
+      "label": "도구",
+      "note": "ai-usagebar, ghpending, tclock"
+    },
+    "memory": {
+      "label": "ai-memory",
+      "note": "코딩 에이전트를 위한 장기 메모리"
+    },
+    "jail": {
+      "label": "ai-jail",
+      "note": "AI 코딩 에이전트를 위한 OS 샌드박스"
+    }
+  },
+  "kicker": {
+    "workflow": "워크플로",
+    "usagebar": "ai-usagebar",
+    "ghpending": "ghpending",
+    "tclock": "tclock",
+    "writing": "글",
+    "newsletter": "뉴스레터",
+    "podcasts": "팟캐스트",
+    "games": "퇴근 후",
+    "setup": "작업 환경"
+  },
+  "code": {
+    "copy": "복사",
+    "copied": "복사됨",
+    "terminal": "터미널"
+  },
+  "repo": {
+    "stars": "GitHub 스타 {n}개",
+    "release": "최신 릴리스 {tag}",
+    "github": "GitHub에서 소스 보기",
+    "readme": "README 읽기"
+  },
+  "next": {
+    "title": "계속 보기"
+  },
+  "cta": {
+    "title": "여기 있는 건 전부 오픈 소스",
+    "text": "도구, 스킬, 벤치마크 모두 공개 저장소입니다. 포크해서 자기 방식에 맞는 버전을 만드세요.",
+    "github": "제 저장소 전체 보기",
+    "blog": "블로그 읽기"
+  },
+  "social": {
+    "title": "저를 팔로우하는 곳",
+    "lede": "곳마다 제 다른 면이 나옵니다. 듣고 싶은 이야기에 맞는 곳을 고르세요.",
+    "x": {
+      "name": "X",
+      "text": "필터가 가장 없는 곳입니다. 핫테이크, 떡밥, 논쟁, 그리고 그날 일어난 일에 대한 첫 반응. 비공개 계정이니 팔로우 요청을 보내세요."
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "text": "좀 더 격식 있는 쪽입니다. 주로 새 블로그 글과 시간을 들일 만한 업계 소식을 올립니다."
+    },
+    "instagram": {
+      "name": "Instagram",
+      "text": "오락 전용입니다. 게임, 레트로 콘솔, 기기 리뷰, 재미있는 것들. AI 논쟁은 여기 없습니다."
+    },
+    "youtube": {
+      "name": "YouTube: Akitando",
+      "text": "이제 영상은 올리지 않지만 기존 영상은 여전히 볼 만합니다. 새 블로그 글은 커뮤니티 탭에 공유하는데, 의외로 활발합니다."
+    },
+    "blog": {
+      "name": "블로그",
+      "text": "모든 것을 끝까지 글로 적는 곳입니다. 영어와 포르투갈어로 씁니다. 하나만 팔로우한다면 여기입니다."
+    },
+    "github": {
+      "name": "GitHub",
+      "text": "이 사이트의 모든 도구와 사이드 프로젝트 수십 개가 있습니다."
+    }
+  },
+  "footer": {
+    "about": "제가 만든 도구와 그걸 쓰는 방식입니다. 후원도, 광고도, 유료 구독도 없습니다. 제가 좋아서 합니다.",
+    "tools": "도구",
+    "more": "더 보기",
+    "sisters": "자매 사이트",
+    "theme": {
+      "system": "시스템",
+      "light": "라이트",
+      "dark": "다크"
+    },
+    "cookieSettings": "쿠키 설정",
+    "contact": "연락처",
+    "rights": "모든 권리 보유. 각 도구는 자체 오픈 소스 라이선스를 따릅니다."
+  },
+  "notfound": {
+    "title": "여기엔 쌓인 일이 없습니다",
+    "text": "없는 주소입니다. 홈 페이지는 있습니다.",
+    "home": "홈으로 가기"
+  },
+  "consent": {
+    "label": "분석 동의",
+    "text": "이 사이트는 방문 수를 세려고 Google Analytics를 씁니다. 광고는 없고 다른 사이트까지 따라가지도 않습니다. 괜찮으신가요?",
+    "decline": "거부",
+    "accept": "동의"
+  }
+}

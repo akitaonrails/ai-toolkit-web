@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Omarchy에서 코드로 관리하는 게임 컬렉션",
+    "description": "AI 에이전트로 Steam 게임, 에뮬레이터, PC 이식, 디컴프를 distrobox 안의 멱등 Ansible 저장소로 관리하고, 직접 만든 Omarchy 런처로 실행하는 방법을 소개합니다."
+  },
+  "hero": {
+    "title": "일만 하고 살 순 없습니다. 저도 놀아야죠.",
+    "lede": "그리고 제가 쉬는 방식은 당연히 게임 컬렉션을 소프트웨어 프로젝트로 만드는 것입니다. Steam 게임, 에뮬레이터, PC 이식, 디컴파일, 팬 게임, 모드 팩까지 전부 AI 에이전트가 Ansible 저장소 하나에서 설치하고 설정하고 문서로 남깁니다. 모두 컨테이너 안에서 돌기 때문에 제 Omarchy 데스크톱은 의존성을 하나도 보지 않습니다. 그 위에는 제가 만든 런처가 있어서 전체가 콘솔처럼 느껴집니다.",
+    "primary": "distrobox-gaming",
+    "secondary": "omarchy-games-menu",
+    "shotAlt": "Omarchy에서 돌아가는 제 게임 런처: Banjo-Kazooie Recompiled, OutRun, Colin McRae Rally 시리즈, Donkey Kong Country, DOOM 3 등 게임 커버 52개가 전체 화면 그리드로 놓여 있고, 위에는 카테고리 칩과 정렬 버튼이 있습니다.",
+    "caption": "제 데스크톱의 런처입니다. 게임, 이식작, 에뮬레이터가 밑에서 무엇으로 돌든 한 그리드에 모입니다."
+  },
+  "clean": {
+    "title": "호스트는 깨끗하게",
+    "lede": "에뮬레이터와 Windows 게임은 32비트 라이브러리, Wine 빌드, AUR 패키지, 서로 충돌하는 런타임 버전을 끌고 들어옵니다. 그중 어느 것도 제 데스크톱에 닿지 않습니다. Steam까지 포함해 전부 gaming이라는 Arch Linux distrobox 하나에 들어 있고, 호스트에는 데스크톱에 필요한 것만 남습니다.",
+    "alt": "두 개의 패널. 컨테이너 없이: 호스트 타워가 빨간 충돌 경고가 붙은 라이브러리 블록 더미에 묻혀 있습니다. distrobox로: 같은 호스트가 초록 점과 함께 깨끗하고, 옆의 주황색 gaming 컨테이너가 같은 블록을 가지런히 담고 있으며, 언제든 재구축이라고 적힌 Ansible 레시피가 있습니다.",
+    "points": [
+      "Steam은 박스 안에서 돌고, 라이브러리와 Proton 프리픽스는 별도 디스크에 있습니다",
+      "NVIDIA 드라이버는 그대로 전달하고, 32비트 라이브러리 예외 하나는 호스트가 아닌 런처에서 고칩니다",
+      "박스가 데스크톱 항목을 만들면 호스트의 작은 스크립트가 검증해서 설치하고, 사라진 앱의 항목은 지웁니다",
+      "세이브는 NAS에 미러링하고 필요할 때 복원하므로 박스를 지워도 잃는 게 없습니다"
+    ]
+  },
+  "idempotent": {
+    "title": "멱등이라 마음껏 부숩니다",
+    "lede": "에뮬레이터, 설정, 패치, 모드 세트가 모두 Ansible 롤입니다. 플레이북을 두 번 돌려도 바뀌는 게 없으니, 마음대로 실험하고, 에뮬레이터 하나의 설정만 초기화하거나, 박스 전체를 처음부터 다시 만들어도 같은 머신이 돌아옵니다.",
+    "codeTitle": "ansible/ 폴더에서",
+    "docs": "docs/의 노트, 게임, 이식작, 수정마다 하나씩",
+    "commits": "{date} 이후 커밋"
+  },
+  "research": {
+    "title": "조사는 AI가 하고, 기록도 남깁니다",
+    "lede": "이식작, 리컴파일, 말 안 듣는 Windows 게임마다 에이전트가 자료를 조사하고 Ansible 롤을 쓰고, 어디서 구하는지, 어떻게 설정하는지, 무엇이 안 됐는지를 노트로 남겼습니다. Steam 게임은 Proton용 호환성 데이터베이스가 따로 있고, 로컬 수정마다 출처가 달려 있습니다.",
+    "link": "노트 둘러보기"
+  },
+  "box": {
+    "title": "박스 안에 든 것",
+    "items": [
+      {
+        "title": "에뮬레이터",
+        "text": "프런트엔드는 ES-DE이고, 단독 실행형 shadPS4, Dolphin, PCSX2, DuckStation, Flycast, xemu, RPCS3, PPSSPP, Azahar, Eden, Cemu, Supermodel, 그리고 코어를 갖춘 RetroArch가 있습니다."
+      },
+      {
+        "title": "이식작, 디컴프, 리컴프",
+        "text": "Ship of Harkinian, 2Ship2Harkinian, Starship, SpaghettiKart, Render96ex, Unleashed Recompiled 같은 네이티브 빌드."
+      },
+      {
+        "title": "Windows 게임",
+        "text": "Colin McRae Rally, OutRun 2006, Metal Gear Master Collection 같은 게임을 Wine으로 설치하고 수정합니다."
+      },
+      {
+        "title": "모드도 재현 가능하게",
+        "text": "게임별 NexusMods 모드 세트, PS3와 Switch용 DLC 및 패치 설치, 게임별 RPCS3 설정."
+      }
+    ]
+  },
+  "menu": {
+    "title": "Omarchy용으로 직접 만든 런처",
+    "lede": "omarchy-games-menu는 Omarchy와 Hyprland용 Steam 스타일 전체 화면 런처입니다. gaming 저장소가 내보내는 데스크톱 항목을 읽기 때문에 새 게임은 알아서 나타나고, 모든 게 단축키 하나 거리에 있습니다.",
+    "alt": "세 개의 층: 아래의 호스트 판, 그 위에 에뮬레이터와 PC 이식, Ansible 레시피를 담은 gaming이라는 주황색 distrobox 컨테이너, 맨 위에 커버 아트 런처 그리드.",
+    "points": [
+      "Rust CLI인 ogm이 스캔, 카탈로그, 저장을 맡고, QuickShell 오버레이가 그리드를 그립니다",
+      "커버 아트와 메타데이터는 SteamGridDB에서 가져오고, 이식작과 리컴프는 GitHub에서 새 릴리스를 확인합니다",
+      "많이 플레이한 순, 이름, 추가한 날짜, 출시일로 정렬하고, 아무 데서나 입력하면 필터링됩니다",
+      "Hyprland 모니터 설정에 맞춰 크기가 바뀌고, Super+G 같은 키 하나로 열리며, 게임은 전용 워크스페이스에서 전체 화면으로 열립니다"
+    ]
+  },
+  "note": {
+    "title": "이게 왜 이 사이트에 있냐면",
+    "text": "두 저장소 모두 여기 있는 다른 것들과 같은 에이전트와 스킬로 만들었습니다. 제가 어디에나 적용하는 규칙을 가장 잘 보여 주는 예입니다. 머신 설정이 코드가 아니면 문서화되지 않은 것이고, 문서화되지 않았으면 필요한 날 망가집니다."
+  },
+  "next": [
+    {
+      "title": "작업 환경",
+      "text": "Omarchy와 이 모든 게 돌아가는 나머지 데스크톱."
+    },
+    {
+      "title": "워크플로",
+      "text": "이 플레이북을 쓴 에이전트와 스킬."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "home-desk": {
+    "Monitor 2": "모니터 2",
+    "Monitor 1": "모니터 1"
+  },
+  "home-loop": {
+    "See what is pending": "대기 중인 일 확인",
+    "Audit": "감사",
+    "Resolve": "해결",
+    "Release": "릴리스",
+    "Kaizen": "Kaizen"
+  },
+  "home-switch": {
+    "Quota reached": "할당량 소진",
+    "Switch": "전환",
+    "Same memory": "같은 메모리",
+    "Usage gauge": "사용량 게이지"
+  },
+  "workflow-pipeline": {
+    "Open PRs and issues": "열린 PR과 이슈",
+    "Approved": "승인",
+    "Kaizen": "Kaizen"
+  },
+  "workflow-symlinks": {
+    "One edit reaches all": "한 번 고치면 전부 반영"
+  },
+  "usagebar-providers": {
+    "One bar": "바 하나",
+    "Alert at 97%": "97%에서 알림",
+    "Resets in": "초기화까지",
+    "and more": "외 다수"
+  },
+  "ghpending-digest": {
+    "Your repos": "내 저장소",
+    "One digest": "요약 하나",
+    "Fork": "포크",
+    "Upstream": "업스트림",
+    "follows pull requests on the original project": "원래 프로젝트의 풀 리퀘스트를 따라감"
+  },
+  "tclock-widgets": {
+    "Any command": "아무 명령어나"
+  },
+  "newsletter-pipeline": {
+    "Links": "링크",
+    "Summaries": "요약",
+    "Sunday": "일요일",
+    "Monday": "월요일",
+    "Email": "이메일",
+    "Podcast": "팟캐스트",
+    "Blog": "블로그"
+  },
+  "games-stack": {
+    "Host": "호스트",
+    "Emulators": "에뮬레이터",
+    "PC ports": "PC 이식",
+    "Launcher": "런처"
+  },
+  "games-clean-host": {
+    "Without a container": "컨테이너 없이",
+    "With distrobox": "distrobox로",
+    "Host": "호스트",
+    "Conflicts": "충돌",
+    "Rebuild anytime": "언제든 재구축"
+  }
+}

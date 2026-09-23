@@ -1,0 +1,157 @@
+{
+  "site": {
+    "tagline": "As ferramentas, o workflow e os textos por trás de como eu trabalho com IA",
+    "description": "O covil de ferramentas open source de IA do Fabio Akita: ai-usagebar, ghpending, tclock, skills de agentes e ai-memory, além do benchmark de LLMs e dos posts.",
+    "ogAlt": "Akita's AI Lair: ferramentas, workflow e textos. Um pequeno dashboard com um relógio de pixels vermelho, uma lista âmbar, um medidor azul e um chip violeta.",
+    "homeTitle": "Akita's AI Lair: ferramentas de IA e benchmarks de LLM"
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo",
+    "home": "Início do Akita's AI Lair",
+    "mainNav": "Principal",
+    "language": "Idioma",
+    "toggleTheme": "Alternar entre claro e escuro",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "menu": "Menu",
+    "external": "abre outro site",
+    "chooseOne": "Escolha um"
+  },
+  "nav": {
+    "workflow": {
+      "label": "Workflow",
+      "note": "Skills, tmux e o ciclo do dia a dia"
+    },
+    "usagebar": {
+      "label": "ai-usagebar",
+      "note": "Cota e horário de reset de 24 provedores de IA"
+    },
+    "ghpending": {
+      "label": "ghpending",
+      "note": "Todo PR e issue aberto numa lista só"
+    },
+    "tclock": {
+      "label": "tclock",
+      "note": "Um relógio de terminal com widgets de comando"
+    },
+    "writing": {
+      "label": "Textos",
+      "note": "O blog e o benchmark de LLMs"
+    },
+    "newsletter": {
+      "label": "Newsletter",
+      "note": "The M.Akita Chronicles, toda segunda"
+    },
+    "podcasts": {
+      "label": "Podcasts",
+      "note": "Conversas longas sobre IA, em vídeo"
+    },
+    "games": {
+      "label": "Games",
+      "note": "Minha coleção de games como código, no Omarchy"
+    },
+    "follow": {
+      "label": "Me siga"
+    },
+    "setup": {
+      "label": "Setup",
+      "note": "Omarchy, tmux e o que eu deixei de lado"
+    },
+    "tools": {
+      "label": "Ferramentas",
+      "note": "ai-usagebar, ghpending e tclock"
+    },
+    "memory": {
+      "label": "ai-memory",
+      "note": "Memória de longo prazo pra agentes de código"
+    },
+    "jail": {
+      "label": "ai-jail",
+      "note": "Um sandbox de sistema pra agentes de código com IA"
+    }
+  },
+  "kicker": {
+    "workflow": "Workflow",
+    "usagebar": "ai-usagebar",
+    "ghpending": "ghpending",
+    "tclock": "tclock",
+    "writing": "Textos",
+    "newsletter": "Newsletter",
+    "podcasts": "Podcasts",
+    "games": "Fora do expediente",
+    "setup": "Setup"
+  },
+  "code": {
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "terminal": "terminal"
+  },
+  "repo": {
+    "stars": "{n} estrelas no GitHub",
+    "release": "Último release {tag}",
+    "github": "Código no GitHub",
+    "readme": "Leia o README"
+  },
+  "next": {
+    "title": "Continue"
+  },
+  "cta": {
+    "title": "Tudo aqui é open source",
+    "text": "As ferramentas, as skills e o benchmark são repositórios públicos. Faça um fork e monte a versão que encaixa no seu jeito de trabalhar.",
+    "github": "Ver todos os meus repositórios",
+    "blog": "Ler o blog"
+  },
+  "social": {
+    "title": "Onde me seguir",
+    "lede": "Cada lugar mostra um lado diferente meu. Escolha o que combina com o que você quer ouvir.",
+    "x": {
+      "name": "X",
+      "text": "Onde eu sou mais sem filtro. Hot takes, provocação, briga e a primeira reação ao que aconteceu hoje. A conta é protegida, então peça pra seguir."
+    },
+    "linkedin": {
+      "name": "LinkedIn",
+      "text": "O lado mais formal. Principalmente meus posts novos no blog e as notícias do mercado que valem seu tempo."
+    },
+    "instagram": {
+      "name": "Instagram",
+      "text": "Só entretenimento: games, consoles retrô, reviews de aparelhos e as coisas divertidas. Nada de briga sobre IA aqui."
+    },
+    "youtube": {
+      "name": "YouTube: Akitando",
+      "text": "Não publico mais vídeos, mas o acervo continua valendo, e todo post novo do blog aparece na aba de comunidade, que é surpreendentemente ativa."
+    },
+    "blog": {
+      "name": "Blog",
+      "text": "Onde tudo fica escrito por inteiro, em português e inglês. Se for seguir uma coisa só, siga esta."
+    },
+    "github": {
+      "name": "GitHub",
+      "text": "Todas as ferramentas deste site e mais algumas dezenas de projetos paralelos."
+    }
+  },
+  "footer": {
+    "about": "As ferramentas que eu fiz e como eu uso cada uma. Sem patrocinadores, sem anúncios, sem assinaturas pagas: faço isso por puro prazer.",
+    "tools": "Ferramentas",
+    "more": "Mais",
+    "sisters": "Sites irmãos",
+    "theme": {
+      "system": "Sistema",
+      "light": "Claro",
+      "dark": "Escuro"
+    },
+    "cookieSettings": "Configurar cookies",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados. Cada ferramenta mantém sua própria licença open source."
+  },
+  "notfound": {
+    "title": "Nada pendente aqui",
+    "text": "Esse endereço não existe. A página inicial existe.",
+    "home": "Ir pra página inicial"
+  },
+  "consent": {
+    "label": "Consentimento de analytics",
+    "text": "Este site usa o Google Analytics pra contar visitas. Não mostra anúncios e não segue você por outros sites. Tudo bem?",
+    "decline": "Recusar",
+    "accept": "Aceitar"
+  }
+}

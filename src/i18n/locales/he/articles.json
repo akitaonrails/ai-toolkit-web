@@ -1,0 +1,138 @@
+{
+  "readOn": "לקריאה ב-akitaonrails.com",
+  "items": {
+    "benchmarkLatest": {
+      "title": "בנצ׳מרק LLM v4: Opus 5.5, GPT 6 Sol ו-Luna, MiMo 2.6, Grok 4.7",
+      "summary": "חמישה מודלים חדשים נכנסים לטבלה של v4. האם שווה לשדרג, ולמה Grok 4.7 נסוג לאחור ביחס לקודם שלו."
+    },
+    "benchmarkPart1": {
+      "title": "בנצ׳מרק ה-LLM החדש v4, חלק 1: התהליך",
+      "summary": "למה זרקתי גרסה שלמה, איך עובדת אפליקציית ה-Rails עם החבלות, וכמה זה עלה: יותר מ-4,000 דולר בתשעה ימים."
+    },
+    "benchmarkPart2": {
+      "title": "בנצ׳מרק ה-LLM החדש v4, חלק 2: דירוג של 39 מודלים",
+      "summary": "הטבלה המלאה, מדורגת לפי ערנות. שישה מודלים בתיקו בפסגה, מודל חינמי שעוקף חצי מ-Claude, ועלות מול ציון."
+    },
+    "shipMore": {
+      "title": "תפסיקו לחפש תירוצים ותשחררו יותר",
+      "summary": "כשמודלי החזית טועים פחות מרוב המפתחים, הבירוקרטיה של code review היא התירוץ האחרון לעכב דיפלוי. המספרים שלי מאז פברואר."
+    },
+    "skills": {
+      "title": "קצת על ה-skills שלי ל-AI",
+      "summary": "skills הם פרומפטים בקובצי טקסט. שלי סגרו יותר מאלף PRs ו-issues. קראו אותם, ואז כתבו משלכם."
+    },
+    "nesToSms": {
+      "title": "אתגר AI: המרת ROMs של NES ל-Master System",
+      "summary": "מודלי החזית מול תרגום מ-6502 ל-Z80, עם האמולטור בתור אורקל המשוב, והמקום שבו ה-mappers תוקעים הכול."
+    },
+    "aiMemory2": {
+      "title": "ai-memory 2.0",
+      "summary": "הפורמט הפתוח OKF, embeddings מקומיים כברירת מחדל וצוותים שעובדים במקביל, בהשוואה לחלופות."
+    },
+    "hotTake": {
+      "title": "דעה חריפה: harness engineering, loop engineering ו-graph engineering הם שטויות",
+      "summary": "שלושים מאגרים ציבוריים, בנצ׳מרק ומרתון AI, ואף אחד מהם לא היה צריך דיסציפלינה חדשה עם תג מחיר של ייעוץ."
+    },
+    "dayToDay": {
+      "title": "משתמש ב-AI כדי לפתור את הבעיות הקטנות של היומיום",
+      "summary": "שעון שולחני עם ווידג׳טים, קוראי מנגה, אימייל, תרגול הקלדה, קריוקי: כלים קטנים שנולדו ממטרדים קטנים."
+    },
+    "protect": {
+      "title": "איך אני מונע מהסוכנים שלי למחוק לי דברים",
+      "summary": "חמישה חודשים במצב YOLO בלי תקלה, ועדיין בלי אמון: snapshots של BTRFS, גיבויים עם restic, sandbox ומשמעת."
+    },
+    "openSourceAi": {
+      "title": "תרומות AI לפרויקטי קוד פתוח: הדעה שלי",
+      "summary": "pull requests שנכתבו ב-AI כאן כדי להישאר, כולל הזבל. תעשו אוטומציה למיון ולביקורת, והשאירו את ההחלטה הסופית לבני אדם."
+    },
+    "bestPractices": {
+      "title": "שיטות עבודה מומלצות בקוד פתוח עם LLMs: המינימום",
+      "summary": "התקנה פשוטה, בדיקות ו-CI אמינים, ותיעוד שמסביר את הבעיה. גרסאות סטנדרטיות הופכות את האוטומציה לצפויה."
+    },
+    "cleanCode": {
+      "title": "Clean Code לסוכני AI",
+      "summary": "כשסוכן הוא הקורא העיקרי: קוד קטן, שמות שקל למצוא ב-grep, מקור מתועד, בדיקות ללא ממשק וכללים מפורשים."
+    },
+    "multiModel": {
+      "title": "בנצ׳מרקים ל-LLM: שווה לערבב מודלים באותו פרויקט?",
+      "summary": "שבעה שילובים ב-Claude Code, ב-opencode וב-Codex, ולמה מודל חזק אחד נשאר ברירת המחדל."
+    },
+    "chronicles": {
+      "title": "Vibe code: מאפס לפרודקשן בשישה ימים",
+      "summary": "איך הניוזלטר, הבלוג, הפודקאסט ובוט ה-Discord של The M.Akita Chronicles עלו לאוויר בשישה ימים וב-201 קומיטים."
+    },
+    "aiKilled": {
+      "title": "חפירה: ה-AI הרג את המתכנתים?",
+      "summary": "למה AI לא יחליף מתכנתים מנוסים, התקרה של עקומת ה-S של מודלי ה-LLM של היום, ומה משתנה למהנדסים."
+    },
+    "usagebarPost": {
+      "title": "בניתי ווידג׳ט Waybar ל-Omarchy שעוקב אחרי השימוש במנויי LLM",
+      "summary": "למה ai-usagebar קיים: פורט של claudebar ל-Rust ששם את המכסה של כל מנוי בסרגל העליון או בטרמינל."
+    },
+    "toolkitTips": {
+      "title": "הטיפים וארגז הכלים של Akita ל-AI",
+      "summary": "אחרי 600 שעות עם סוכני קוד: ai-jail, ai-memory, ai-usagebar ו-ghpending, וגם בדיקות, גיבויים ומשמעת."
+    },
+    "tuiPost": {
+      "title": "משחק עם TUIs ו-LLMs: Ratatui ו-Bubbletea",
+      "summary": "ספריית הרכיבים שמאחורי אפליקציות הטרמינל שלי, שנבנתה עם LLMs וכבר מפעילה את ai-usagebar."
+    },
+    "memorySwitch": {
+      "title": "להחליף סוכני AI בלי לאבד את הסשן",
+      "summary": "הפקודה ai-memory run שומרת על סשן עבודה אחד בין Claude Code, Codex וסוכנים אחרים, עם ai-jail ו-ai-usagebar משולבים."
+    },
+    "ghpendingPost": {
+      "title": "בניתי CLI שבודק מה ממתין לי ב-GitHub",
+      "summary": "למה ghpending קיים ואיך הוא מביא את כל המאגרים במקביל בלי לחרוג ממגבלות הקצב של GitHub."
+    },
+    "githubBlock": {
+      "title": "עוקפים את החסימה של ה-API של GitHub בברזיל",
+      "summary": "כשה-API של GitHub הפסיק לענות מברזיל: תמיכה בפרוקסי SOCKS ששומרת על gh ו-ghpending עובדים."
+    },
+    "bend2": {
+      "title": "שפה חדשה שמכוונת ל-AI: Bend 2",
+      "summary": "העברתי את ghpending ו-tclock ל-Bend 2 ביום ההשקה כדי לראות מה השפה באמת יודעת לעשות."
+    },
+    "memoryPost": {
+      "title": "בניתי מערכת זיכרון לסוכני קוד",
+      "summary": "איפה ai-memory התחיל: Markdown ב-git, חיפוש ב-SQLite, לכידה אוטומטית והעברות עבודה בין סוכנים."
+    },
+    "jailUpdate": {
+      "title": "עדכון אבטחה ל-ai-jail: Docker הופך לאופציונלי",
+      "summary": "פרצה שדווחה, הדגמה מעשית, ולמה ה-socket של Docker כבוי עכשיו אלא אם תבקשו אותו."
+    },
+    "typesafe": {
+      "title": "למה דברים כמו TypeSafe AI לא מעניינים אותי",
+      "summary": "הכלל שלי לגבי כלי AI חדשים, ולמה אני לא מבזבז זמן על אופטימיזציה של צריכת טוקנים."
+    },
+    "omarchyDualGpu": {
+      "title": "Omarchy 3: הגדרת שני כרטיסי מסך עם AMD ו-NVIDIA",
+      "summary": "ה-iGPU מריץ את הדסקטופ וה-RTX 5090 לוקח את עבודת התלת־ממד, בהגדרה של Hyprland."
+    },
+    "omarchyThinkpad": {
+      "title": "Omarchy על ה-ThinkPad T14 Gen 6",
+      "summary": "מיני ביקורת וההגדרה המלאה של הלפטופ שלי עם Linux ל-SSH, לסוכנים ול-NAS."
+    },
+    "nwOmarchy": {
+      "title": "NW-Omarchy: מביאים את Omarchy ל-X11",
+      "summary": "סשן X11 לצד Omarchy ששומר על ערכות הנושא ועל יותר מ-70 קיצורי המקלדת."
+    },
+    "emuDistrobox": {
+      "title": "distrobox לאמולציה עם Claude Code",
+      "summary": "איך קופסת המשחקים התחילה: שתים־עשרה פלטפורמות ו-Steam ב-roles של Ansible, שנכתבו עם סוכן."
+    },
+    "racingGames": {
+      "title": "משחקי המרוצים הרטרו האהובים עליי ב-distrobox שלי",
+      "summary": "Driveclub על fork של shadPS4, Forza Motorsport 4 על Xenia, והכוונונים שזה דרש."
+    },
+    "marathon": {
+      "title": "מסכם את מרתון ה-AI שלי: הצלחה או כישלון?",
+      "summary": "500 שעות ב-24 מאגרים, מדורגים, ולמה code review ו-XP קובעים אם ה-AI עוזר."
+    }
+  },
+  "related": {
+    "title": "עוד בבלוג שלי",
+    "lede": "הגרסאות הארוכות, עם הפרטים והמבויים הסתומים.",
+    "read": "לקריאת הפוסט"
+  }
+}

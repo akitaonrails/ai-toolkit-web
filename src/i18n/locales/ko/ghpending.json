@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "ghpending: 여러 저장소의 열린 PR 확인",
+    "description": "ghpending은 추적하는 모든 GitHub 저장소의 열린 풀 리퀘스트, 이슈, 보안 알림을 터미널에서 요약 목록 하나로 보여 주는 Rust CLI입니다."
+  },
+  "hero": {
+    "title": "열린 풀 리퀘스트와 이슈를 한 목록에",
+    "lede": "ghpending은 추적하는 모든 저장소를 한꺼번에 가져와서 대기 중인 것을 출력하고, 제 손이 필요한 일을 맨 위에 둡니다. 제 두 번째 모니터의 첫 번째 위젯이고, 어느 프로젝트에 오전을 써야 하는지 알려 주는 도구입니다.",
+    "primary": "설치",
+    "shotAlt": "터미널의 ghpending 출력. akitaonrails/FrankMD 아래에 Dependabot 풀 리퀘스트 다섯 개와 이슈 세 개, akitaonrails/FrankMega 아래에 Dependabot 풀 리퀘스트 여섯 개. FrankClaw와 FrankSherlock은 대기 중인 것이 없습니다."
+  },
+  "what": {
+    "title": "저장소 40개를 한눈에",
+    "lede": "GitHub 알림은 모든 것을 뒤섞습니다. ghpending은 저장소마다 지금 열려 있는 게 뭔지 한 가지만 묻고, 몇 초 만에 전부에 대해 답합니다.",
+    "alt": "저장소 폴더 12개 중 5개가 빛납니다. 빛나는 폴더에서 나온 호박색 선이 요약 목록 하나로 모이고, 맨 위에 빨간 SEC 알림, 그 아래 보라색 풀 리퀘스트와 호박색 이슈가 있습니다. 구석에는 포크 화살표가 업스트림을 가리킵니다."
+  },
+  "features": {
+    "title": "오전을 아껴 주는 디테일",
+    "items": [
+      {
+        "title": "포크는 업스트림을 따라갑니다",
+        "text": "추적하는 저장소가 포크라면, 포크의 빈 대기열 대신 원래 프로젝트에 올린 내 풀 리퀘스트를 보여 줍니다. 자동으로 감지하고 캐시합니다."
+      },
+      {
+        "title": "보안 알림이 먼저",
+        "text": "내가 소유한 저장소라면 Dependabot, 시크릿 스캐닝, 코드 스캐닝 알림을 SEC 또는 QUA 태그로 표시하고 심각도순으로 다른 모든 것보다 앞에 둡니다."
+      },
+      {
+        "title": "내 항목은 뒤로",
+        "text": "내가 연 풀 리퀘스트는 다른 사람을 기다리는 중이므로 흐리게 표시하고 \"by you\"를 붙여 맨 뒤에 둡니다."
+      },
+      {
+        "title": "피드백은 눈에 띄게",
+        "text": "API가 제공하는 곳이라면 댓글 수와 리뷰 결정을 보여 주고, 읽을 게 있으면 강조합니다."
+      },
+      {
+        "title": "오늘 중요한 순서로 정렬",
+        "text": "최근 활동, 이름, 열린 항목 수, 가장 방치된 저장소순. <code>--limit</code>은 저장소 사이에 공평하게 목록 길이를 제한합니다."
+      },
+      {
+        "title": "토큰이 있으면 빠르게",
+        "text": "<code>GITHUB_TOKEN</code>이 있으면 비공개 저장소를 포함한 모든 저장소를 GraphQL 요청 한 번으로 묶어 가져옵니다. 없어도 공개 저장소는 됩니다."
+      }
+    ]
+  },
+  "usage": {
+    "title": "사용법",
+    "lede": "저장소는 한 번만 고르면 됩니다. 그다음부터는 한 단어입니다.",
+    "codeTitle": "ghpending"
+  },
+  "install": {
+    "title": "설치",
+    "tabs": [
+      "Homebrew",
+      "Arch",
+      "Cargo",
+      "mise"
+    ],
+    "readme": "설정, 프록시, 모든 플래그는 README에"
+  },
+  "widget": {
+    "title": "시계 아래에 두려고 만들었습니다",
+    "text": "tclock 위젯으로 실행하면 <code>TCLOCK_WIDGET_THEME</code>를 통해 NERV와 Evangelion 팔레트까지 시계 테마를 따라갑니다.",
+    "link": "tclock 보기"
+  },
+  "next": [
+    {
+      "title": "tclock",
+      "text": "제 두 번째 모니터에서 ghpending을 보여 주는 시계."
+    },
+    {
+      "title": "워크플로",
+      "text": "ghpending이 대기열을 보여 준 다음에 일어나는 일."
+    },
+    {
+      "title": "ai-usagebar",
+      "text": "시작하기 전에 확인하는 또 하나의 게이지."
+    }
+  ]
+}

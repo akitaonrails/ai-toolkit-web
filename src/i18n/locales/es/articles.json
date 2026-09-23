@@ -1,0 +1,138 @@
+{
+  "readOn": "Leer en akitaonrails.com",
+  "items": {
+    "benchmarkLatest": {
+      "title": "LLM Benchmark v4: Opus 5.5, GPT 6 Sol y Luna, MiMo 2.6, Grok 4.7",
+      "summary": "Cinco modelos nuevos entran en la tabla v4. Si vale la pena actualizar y por qué Grok 4.7 retrocede frente a su propio predecesor."
+    },
+    "benchmarkPart1": {
+      "title": "Nuevo LLM Benchmark v4, parte 1: el proceso",
+      "summary": "Por qué tiré a la basura una versión entera, cómo funciona la app Rails saboteada y cuánto costó: más de 4.000 dólares en nueve días."
+    },
+    "benchmarkPart2": {
+      "title": "Nuevo LLM Benchmark v4, parte 2: 39 modelos en el ranking",
+      "summary": "La tabla completa, ordenada por vigilancia. Seis empates en la cima, un modelo gratuito que supera a la mitad de Claude y el costo frente a la puntuación."
+    },
+    "shipMore": {
+      "title": "Deja de poner excusas y publica más",
+      "summary": "Con modelos de frontera que se equivocan menos que la mayoría de los desarrolladores, la burocracia de revisión es la última excusa para frenar un deploy. Mis números desde febrero."
+    },
+    "skills": {
+      "title": "Hablando un poco de mis skills de IA",
+      "summary": "Las skills son prompts en archivos de texto. Las mías cerraron más de mil PRs e issues. Léelas y luego escribe las tuyas."
+    },
+    "nesToSms": {
+      "title": "Desafío de IA: convertir ROMs de NES a Master System",
+      "summary": "Modelos de frontera frente a la traducción de 6502 a Z80, con el emulador como oráculo de feedback, y el punto donde los mappers lo traban todo."
+    },
+    "aiMemory2": {
+      "title": "ai-memory 2.0",
+      "summary": "El formato abierto OKF, embeddings locales por defecto y equipos trabajando en paralelo, comparado con las alternativas."
+    },
+    "hotTake": {
+      "title": "Opinión polémica: harness, loop y graph engineering son puro humo",
+      "summary": "Treinta repositorios públicos, un benchmark y un maratón de IA, y ninguno necesitó una disciplina nueva con precio de consultoría."
+    },
+    "dayToDay": {
+      "title": "Usando IA para resolver mis pequeños problemas del día a día",
+      "summary": "Un reloj de escritorio con widgets, lectores de manga, correo, práctica de mecanografía, karaoke: herramientas pequeñas nacidas de molestias pequeñas."
+    },
+    "protect": {
+      "title": "Cómo evito que mis agentes borren mis cosas",
+      "summary": "Cinco meses en modo YOLO sin un accidente, y aun así sin confiar: snapshots de BTRFS, backups con restic, un sandbox y disciplina."
+    },
+    "openSourceAi": {
+      "title": "Contribuciones de IA a proyectos de código abierto: mi opinión",
+      "summary": "Los pull requests hechos con IA llegaron para quedarse, basura incluida. Automatiza el triaje y la auditoría, y deja la decisión final en manos humanas."
+    },
+    "bestPractices": {
+      "title": "Buenas prácticas de código abierto con LLMs: lo mínimo",
+      "summary": "Instalación sencilla, tests y CI confiables, y documentación sobre el problema. Versiones estándar hacen que la automatización sea predecible."
+    },
+    "cleanCode": {
+      "title": "Clean Code para agentes de IA",
+      "summary": "Cuando el lector principal es un agente: código pequeño, nombres fáciles de buscar con grep, procedencia, tests headless y reglas explícitas."
+    },
+    "multiModel": {
+      "title": "Benchmarks de LLM: ¿vale la pena mezclar modelos en un proyecto?",
+      "summary": "Siete combinaciones entre Claude Code, opencode y Codex, y por qué un solo modelo fuerte siguió siendo la opción por defecto."
+    },
+    "chronicles": {
+      "title": "Vibe code: de cero a producción en 6 días",
+      "summary": "Cómo la newsletter, el blog, el podcast y el bot de Discord de The M.Akita Chronicles salieron a producción en seis días y 201 commits."
+    },
+    "aiKilled": {
+      "title": "Desahogo: ¿la IA mató a los programadores?",
+      "summary": "Por qué la IA no va a reemplazar a los programadores con experiencia, el techo de la curva S de los LLMs actuales y qué cambia para los ingenieros."
+    },
+    "usagebarPost": {
+      "title": "Hice un widget de Waybar para Omarchy que monitorea el uso de planes de LLM",
+      "summary": "Por qué existe ai-usagebar: un port a Rust de claudebar que pone la cuota de cada plan en la barra superior o en una terminal."
+    },
+    "toolkitTips": {
+      "title": "Consejos y herramientas de IA de Akita",
+      "summary": "Después de 600 horas con agentes de programación: ai-jail, ai-memory, ai-usagebar y ghpending, además de tests, backups y disciplina."
+    },
+    "tuiPost": {
+      "title": "Jugando con TUIs y LLMs: Ratatui y Bubbletea",
+      "summary": "La biblioteca de componentes detrás de mis apps de terminal, hecha con LLMs y que ya mueve ai-usagebar."
+    },
+    "memorySwitch": {
+      "title": "Cambia de agente de IA sin perder la sesión",
+      "summary": "ai-memory run mantiene una misma sesión de trabajo entre Claude Code, Codex y otros agentes, con ai-jail y ai-usagebar integrados."
+    },
+    "ghpendingPost": {
+      "title": "Hice un CLI para revisar mis pendientes de GitHub",
+      "summary": "Por qué existe ghpending y cómo consulta todos los repositorios en paralelo sin pasarse de los límites de la API de GitHub."
+    },
+    "githubBlock": {
+      "title": "Cómo esquivar el bloqueo de la API de GitHub en Brasil",
+      "summary": "Cuando la API de GitHub dejó de responder desde Brasil: el soporte de proxy SOCKS que mantiene funcionando gh y ghpending."
+    },
+    "bend2": {
+      "title": "Nuevo lenguaje enfocado en IA: Bend 2",
+      "summary": "Porté ghpending y tclock a Bend 2 el mismo día del lanzamiento para ver qué puede hacer de verdad el lenguaje."
+    },
+    "memoryPost": {
+      "title": "Hice un sistema de memoria para agentes de programación",
+      "summary": "Donde empezó ai-memory: Markdown en git, búsqueda con SQLite, captura automática y traspasos entre agentes."
+    },
+    "jailUpdate": {
+      "title": "Actualización de seguridad de ai-jail: Docker pasa a ser opcional",
+      "summary": "Una falla reportada, una demostración práctica y por qué el socket de Docker ahora está apagado a menos que lo pidas."
+    },
+    "typesafe": {
+      "title": "Por qué cosas como TypeSafe AI no me interesan",
+      "summary": "Mi regla para las herramientas nuevas de IA y por qué no pierdo tiempo optimizando el gasto de tokens."
+    },
+    "omarchyDualGpu": {
+      "title": "Omarchy 3: configuración con dos GPUs, AMD y NVIDIA",
+      "summary": "La iGPU mueve el escritorio y la RTX 5090 se encarga del trabajo 3D, configurado en Hyprland."
+    },
+    "omarchyThinkpad": {
+      "title": "Omarchy en la ThinkPad T14 Gen 6",
+      "summary": "Una mini reseña y la configuración completa de mi laptop Linux para SSH, agentes y el NAS."
+    },
+    "nwOmarchy": {
+      "title": "NW-Omarchy: llevando Omarchy a X11",
+      "summary": "Una sesión X11 junto a Omarchy que conserva los temas y más de 70 atajos."
+    },
+    "emuDistrobox": {
+      "title": "Un distrobox de emulación con Claude Code",
+      "summary": "Cómo empezó el contenedor de juegos: doce plataformas y Steam en roles de Ansible, escritos con un agente."
+    },
+    "racingGames": {
+      "title": "Mis juegos de carreras retro favoritos en mi distrobox",
+      "summary": "Driveclub en un fork de shadPS4, Forza Motorsport 4 en Xenia y los ajustes que hicieron falta."
+    },
+    "marathon": {
+      "title": "Cerrando mi maratón de IA: ¿éxito o fracaso?",
+      "summary": "500 horas en 24 repositorios, en un ranking, y por qué la revisión y XP deciden si la IA ayuda."
+    }
+  },
+  "related": {
+    "title": "Más en mi blog",
+    "lede": "Las versiones largas, con los detalles y los callejones sin salida.",
+    "read": "Leer el post"
+  }
+}

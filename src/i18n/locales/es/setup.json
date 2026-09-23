@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "title": "Mi setup: Omarchy, tmux y memoria",
+    "description": "Las herramientas de terceros detrás del flujo de trabajo con IA de Fabio Akita: Omarchy Linux, tmux y por qué dejó de lado Herdr y los orquestadores de agentes."
+  },
+  "hero": {
+    "title": "El resto de mi setup",
+    "lede": "Las herramientas que no escribí yo pero uso todos los días, y algunas populares que probé y dejé de lado."
+  },
+  "omarchy": {
+    "title": "Omarchy, el sistema operativo",
+    "lede": "Omarchy es la distribución Linux de DHH: Arch Linux con el gestor de ventanas en mosaico Hyprland, configurado y con temas listos de fábrica. Su sitio lo llama \"the malleable OS for the age of agents\". Es mi escritorio de todos los días, y creo que hoy es la mejor opción para desarrolladores.",
+    "points": [
+      "Primero el teclado: cada ventana, workspace y app está a un atajo de distancia, algo ideal para un día metido en terminales",
+      "Arch por debajo, así que los compiladores, runtimes y CLIs de agentes más nuevos están a un paquete de distancia",
+      "Todo son archivos de configuración de texto, justo lo que un agente de programación puede leer y cambiar por ti",
+      "ai-usagebar y mi lanzador de juegos tienen integración nativa con Omarchy"
+    ],
+    "donation": "Creo tanto en él que doné a la Omacom Foundation, la organización sin fines de lucro que financia Omarchy y los proyectos de código abierto sobre los que está construido.",
+    "site": "omarchy.org",
+    "foundation": "La Omacom Foundation",
+    "donate": "Donar"
+  },
+  "tmux": {
+    "title": "tmux, para que nada muera por accidente",
+    "lede": "tmux es un multiplexor de terminal: corre tus shells dentro de una sesión que vive aparte de la ventana de la terminal, dividida en ventanas y paneles. Lo uso sobre todo por una razón. Si cierro la terminal sin querer, los agentes siguen corriendo, y un comando trae todo de vuelta.",
+    "codeTitle": "es todo lo que hace falta",
+    "text": "Cada proyecto tiene una ventana de tmux con su agente, y esa es toda la orquestación que necesito.",
+    "link": "tmux en GitHub"
+  },
+  "herdr": {
+    "title": "Probado y dejado de lado: Herdr",
+    "lede": "Herdr es un multiplexor de agentes escrito en Rust: paneles y sesiones al estilo tmux, más una barra lateral que sabe qué panel tiene un agente de programación y si está trabajando, bloqueado o terminado.",
+    "text": "Lo probé. Está bien hecho y a mucha gente le gusta. No le encontré uso en mi rutina, porque una ventana de tmux por proyecto ya me dice dónde está cada agente, y la tuya puede ser distinta.",
+    "link": "herdr.dev"
+  },
+  "orchestration": {
+    "title": "Probados y dejados de lado: orquestadores de agentes",
+    "lede": "Los orquestadores corren varios agentes en paralelo, cada uno en su propio git worktree, y te dan un solo lugar para revisar lo que hicieron. Los más conocidos hoy:",
+    "items": [
+      {
+        "title": "Conductor",
+        "text": "Una app para macOS: arranca varios agentes de Claude Code o Codex, cada uno en un worktree aislado, y sigue sus diffs desde una sola ventana."
+      },
+      {
+        "title": "Claude Squad",
+        "text": "Una app de terminal que le da a cada agente (Claude Code, Codex, Gemini, Aider) su propia sesión de tmux y su git worktree."
+      }
+    ],
+    "text": "Para algunas personas resuelven un problema real. Mi cuello de botella siempre fue cuánto recuerda cada agente, y correr más agentes en paralelo no cambia eso."
+  },
+  "memory": {
+    "title": "Lo que más importa: la memoria",
+    "lede": "Un agente que empieza cada sesión desde cero repite los mismos errores, tenga el orquestador que tenga encima. Sin memoria, cada sesión es un pasante con amnesia. Por eso construí ai-memory, y por eso cada agente que corro arranca con ai-memory run.",
+    "site": "El sitio de ai-memory",
+    "workflow": "Cómo encaja en mi flujo de trabajo"
+  },
+  "models": {
+    "title": "Mis modelos favoritos",
+    "lede": "Pruebo cada modelo importante en mi benchmark, pero en el día a día la elección es simple. Si pagas la suscripción de Anthropic u OpenAI en el plan Pro, estás bien servido.",
+    "items": [
+      {
+        "title": "El de todos los días",
+        "text": "El Opus más reciente o el GPT Sol más reciente, con effort medio. Eso cubre cerca del 90% de lo que hago."
+      },
+      {
+        "title": "En la rotación",
+        "text": "Kimi K3 y GLM 5.3, cada uno con su propio plan de suscripción. Cuando Claude o GPT llegan a su cuota, cambio a uno de ellos, y ai-memory se lleva el contexto."
+      }
+    ],
+    "benchmark": "El benchmark detrás de estas elecciones",
+    "latest": "Los modelos más nuevos, probados"
+  }
+}

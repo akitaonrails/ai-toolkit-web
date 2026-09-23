@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "ghpending: PRs abiertos en tus repos",
+    "description": "ghpending es un CLI en Rust que lista pull requests, issues y alertas de seguridad abiertos de todos tus repositorios de GitHub, en un resumen en la terminal."
+  },
+  "hero": {
+    "title": "Cada pull request e issue abierto, en una lista",
+    "lede": "ghpending consulta a la vez todos los repositorios que sigues e imprime lo que está esperando, con lo que te necesita a ti primero. Es el primer widget de mi segundo monitor y la razón por la que sé qué proyectos necesitan una mañana.",
+    "primary": "Instalar",
+    "shotAlt": "Salida de ghpending en una terminal. En akitaonrails/FrankMD: cinco pull requests de Dependabot y tres issues. En akitaonrails/FrankMega: seis pull requests de Dependabot. FrankClaw y FrankSherlock no tienen nada pendiente."
+  },
+  "what": {
+    "title": "Cuarenta repositorios de un vistazo",
+    "lede": "Las notificaciones de GitHub mezclan todo con todo. ghpending hace una sola pregunta por repositorio, qué está abierto ahora mismo, y la responde para todos en unos segundos.",
+    "alt": "Doce carpetas de repositorios, cinco iluminadas. De las iluminadas salen líneas ámbar que convergen en una sola lista resumen, con alertas SEC rojas arriba, pull requests violetas e issues ámbar. En la esquina, una flecha Fork apunta a Upstream."
+  },
+  "features": {
+    "title": "Detalles que salvan la mañana",
+    "items": [
+      {
+        "title": "Los forks siguen al upstream",
+        "text": "Cuando un repo que sigues es un fork, ves tus pull requests en el proyecto original en lugar de la cola vacía del fork. Se detecta solo y queda en caché."
+      },
+      {
+        "title": "Alertas de seguridad primero",
+        "text": "En los repos que son tuyos: alertas de Dependabot, secret scanning y code scanning, marcadas SEC o QUA y ordenadas por severidad antes que todo lo demás."
+      },
+      {
+        "title": "Lo tuyo pasa atrás",
+        "text": "Los pull requests que abriste tú aparecen atenuados y al final, marcados \"by you\", porque están esperando a otras personas."
+      },
+      {
+        "title": "El feedback resalta",
+        "text": "La cantidad de comentarios y las decisiones de revisión aparecen donde la API las ofrece, resaltadas cuando hay algo para leer."
+      },
+      {
+        "title": "Ordena por lo que importa hoy",
+        "text": "Actividad más reciente, nombre, más ítems abiertos o el repositorio más abandonado primero. <code>--limit</code> recorta la lista de forma pareja entre repos."
+      },
+      {
+        "title": "Rápido con un token",
+        "text": "Con <code>GITHUB_TOKEN</code>, todos los repos llegan en una sola petición GraphQL agrupada, privados incluidos. Sin él, los repos públicos siguen funcionando."
+      }
+    ]
+  },
+  "usage": {
+    "title": "Úsalo",
+    "lede": "Eliges los repositorios una vez. Después es una sola palabra.",
+    "codeTitle": "ghpending"
+  },
+  "install": {
+    "title": "Instalar",
+    "tabs": [
+      "Homebrew",
+      "Arch",
+      "Cargo",
+      "mise"
+    ],
+    "readme": "Configuración, proxy y todas las flags en el README"
+  },
+  "widget": {
+    "title": "Se hizo para vivir debajo de un reloj",
+    "text": "Córrelo como widget de tclock y sigue el tema del reloj a través de <code>TCLOCK_WIDGET_THEME</code>, incluidas las paletas NERV y Evangelion.",
+    "link": "Ver tclock"
+  },
+  "next": [
+    {
+      "title": "tclock",
+      "text": "El reloj que muestra ghpending en mi segundo monitor."
+    },
+    {
+      "title": "El flujo de trabajo",
+      "text": "Lo que pasa después de que ghpending muestra la cola."
+    },
+    {
+      "title": "ai-usagebar",
+      "text": "El otro indicador que miro antes de empezar."
+    }
+  ]
+}

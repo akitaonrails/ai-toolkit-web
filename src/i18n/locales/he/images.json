@@ -1,0 +1,65 @@
+{
+  "home-desk": {
+    "Monitor 2": "מסך 2",
+    "Monitor 1": "מסך 1"
+  },
+  "home-loop": {
+    "See what is pending": "לראות מה ממתין",
+    "Audit": "ביקורת",
+    "Resolve": "פתרון",
+    "Release": "גרסה",
+    "Kaizen": "קאיזן"
+  },
+  "home-switch": {
+    "Quota reached": "המכסה נגמרה",
+    "Switch": "החלפה",
+    "Same memory": "אותו זיכרון",
+    "Usage gauge": "מד שימוש"
+  },
+  "workflow-pipeline": {
+    "Open PRs and issues": "כל ה-PRs וה-issues הפתוחים",
+    "Approved": "אושר",
+    "Kaizen": "קאיזן"
+  },
+  "workflow-symlinks": {
+    "One edit reaches all": "עריכה אחת מגיעה לכולם"
+  },
+  "usagebar-providers": {
+    "One bar": "סרגל אחד",
+    "Alert at 97%": "התראה ב-97%",
+    "Resets in": "מתאפס בעוד",
+    "and more": "ועוד"
+  },
+  "ghpending-digest": {
+    "Your repos": "המאגרים שלכם",
+    "One digest": "תקציר אחד",
+    "Fork": "ה-fork",
+    "Upstream": "המקור",
+    "follows pull requests on the original project": "עוקב אחרי pull requests בפרויקט המקורי"
+  },
+  "tclock-widgets": {
+    "Any command": "כל פקודה"
+  },
+  "newsletter-pipeline": {
+    "Links": "קישורים",
+    "Summaries": "תקצירים",
+    "Sunday": "יום ראשון",
+    "Monday": "יום שני",
+    "Email": "אימייל",
+    "Podcast": "פודקאסט",
+    "Blog": "בלוג"
+  },
+  "games-stack": {
+    "Host": "המארח",
+    "Emulators": "אמולטורים",
+    "PC ports": "פורטים ל-PC",
+    "Launcher": "משגר"
+  },
+  "games-clean-host": {
+    "Without a container": "בלי קונטיינר",
+    "With distrobox": "עם distrobox",
+    "Host": "המארח",
+    "Conflicts": "התנגשויות",
+    "Rebuild anytime": "בנייה מחדש בכל עת"
+  }
+}

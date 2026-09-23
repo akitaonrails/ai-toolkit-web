@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Meu workflow de programação com IA",
+    "description": "Como o Fabio Akita roda agentes de código com IA em mais de 40 repositórios: tmux, uma linha por projeto, skills de auditoria pra cada PR e issue, e ai-memory."
+  },
+  "hero": {
+    "title": "Como uma pessoa só mantém 40 repositórios andando",
+    "lede": "Toda manhã eu abro um agente por projeto no tmux, passo uma única linha e reviso o que volta. O trabalho pesado fica nas skills: prompts em texto puro que eu vou refinando.",
+    "primary": "Ler as skills",
+    "secondary": "Por que não copiar"
+  },
+  "start": {
+    "title": "Uma linha pra começar o dia",
+    "lede": "Cada janela do tmux é um projeto. Eu inicio o agente pelo ai-memory, então ele já chega com a memória daquele projeto e os hooks ligados.",
+    "codeTitle": "uma janela do tmux, toda manhã",
+    "prompts": "Depois eu digito uma de três linhas, dependendo de como está a fila:",
+    "items": [
+      {
+        "code": "run pr-audit and iss-audit, then run github-resolution",
+        "text": "O dia normal: auditar tudo que está aberto e depois corrigir o que as auditorias aprovaram."
+      },
+      {
+        "code": "... then run the release skill",
+        "text": "Acrescentada quando já entrou coisa suficiente pra uma versão."
+      },
+      {
+        "code": "run pr-bump and release",
+        "text": "Dias em que a única fila é do Dependabot."
+      }
+    ]
+  },
+  "pipeline": {
+    "title": "O pipeline",
+    "lede": "Nada que um contribuidor escreve é aceito como verdade. Toda afirmação é checada, toda correção aprovada ganha um teste antes, e nada recebe tag sem CI verde naquele commit exato.",
+    "alt": "Um pipeline da esquerda pra direita: PRs e issues abertos se dividem em pr-audit e iss-audit, que se juntam depois de uma checagem Aprovado no github-resolution, depois pr-post-audit, depois release, depois Kaizen, com uma seta do Kaizen de volta pro início. Uma barra ai-memory corre por baixo de tudo.",
+    "caption": "O pr-post-audit roda quando uma sessão resolveu mais de três tickets. A skill release só roda quando eu peço."
+  },
+  "skills": {
+    "title": "As skills que fazem o trabalho",
+    "lede": "Cada uma é um arquivo SKILL.md: um nome, uma descrição e um prompt longo e específico. O agente só carrega o corpo quando decide usar a skill.",
+    "items": [
+      {
+        "title": "pr-audit",
+        "text": "Evidência acima de narrativa. Checa cada afirmação de um pull request, procura bits de execução escondidos, homoglyphs, actions sem versão fixada, dependências com typosquatting e prompt injection, e controla o semver."
+      },
+      {
+        "title": "iss-audit",
+        "text": "A mesma desconfiança pras issues. Nunca roda um comando copiado de uma issue, separa o que foi observado do diagnóstico de quem reportou e reproduz com dados sintéticos num sandbox."
+      },
+      {
+        "title": "github-resolution",
+        "text": "Transforma tickets aprovados em código mergeado, um de cada vez, cada um com um teste de regressão escrito antes da correção, e sem abstrações especulativas nem refatorações de passagem."
+      },
+      {
+        "title": "security-audit",
+        "text": "Modelo de ameaças e auditoria de uma codebase, de um intervalo de commits ou de um pull request: injection, bypass de autenticação, segredos, supply chain, comprometimento de CI, negação de serviço."
+      },
+      {
+        "title": "pr-bump",
+        "text": "O caminho rápido pro Dependabot. Junta todos os bumps numa única passada de verificação, com um piso de supply chain que manda qualquer coisa estranha pra uma auditoria completa."
+      },
+      {
+        "title": "release",
+        "text": "A versão sai do changelog: correções são patch, adições são minor, breaking changes são major. Só cria tag com CI verde, e nunca reescreve uma tag publicada."
+      }
+    ],
+    "link": "Todas as skills no GitHub"
+  },
+  "numbers": {
+    "title": "No que isso dá",
+    "lede": "Tudo abaixo aconteceu em {year}, nas ferramentas deste site, nos meus projetos paralelos Frank, na newsletter, no benchmark e no blog. Contado em {date}. Quase tudo passou por agentes e por essas skills, comigo lendo os relatórios e tomando as decisões.",
+    "projects": "projetos com commits",
+    "commits": "commits",
+    "prs": "pull requests mergeados",
+    "issues": "issues fechadas",
+    "code": "linhas de código adicionadas",
+    "posts": "posts publicados no blog",
+    "method": "Linhas de código são linhas adicionadas em arquivos de código. Lockfiles, dados, fontes, traduções, arquivos vendorizados e gerados não contam, nem a saída dos modelos no benchmark ou o conteúdo gerado da newsletter. FrankGeary e tclock são forks, então só as minhas mudanças contam. Pull requests e issues vêm do GitHub; frank_bazaar não tem remote no GitHub e akitando-news é privado.",
+    "table": {
+      "toggle": "Projeto por projeto",
+      "project": "Projeto",
+      "commits": "Commits",
+      "prs": "PRs mergeados",
+      "issues": "Issues fechadas",
+      "code": "Linhas de código adicionadas",
+      "posts": "{n} posts",
+      "private": "privado"
+    },
+    "quote": {
+      "text": "A IA é um espelho. Se você é bom, ela te deixa dez vezes mais rápido. Se você é ruim, ela também te deixa dez vezes mais rápido, só que produzindo lixo."
+    }
+  },
+  "links": {
+    "title": "Uma pasta, todos os agentes",
+    "lede": "As skills moram num repositório só. A pasta de skills de cada agente tem links simbólicos pra ele, então uma edição chega no Claude Code, Codex, OpenCode e Kimi de uma vez.",
+    "alt": "Uma pasta my-skills central ligada por símbolos de corrente a cinco pastas de agentes: Claude Code, Codex, OpenCode, Kimi e ~/.agents. Uma edição chega em todos.",
+    "codeTitle": "adicionando uma skill"
+  },
+  "copy": {
+    "title": "Por favor, não copie minhas skills",
+    "text": "Elas são moldadas em volta dos meus projetos, das minhas linguagens e do meu nível de paranoia com supply chain. Rodar a skill de outra pessoa às cegas é instalar as instruções dela com as suas permissões, nos seus repositórios, com os seus tokens. Leia as minhas pra entender a estrutura e o raciocínio, e depois peça pro seu agente escrever as suas.",
+    "link": "O post onde eu explico isso"
+  },
+  "knowledge": {
+    "title": "Onde fica o resto do conhecimento",
+    "lede": "As skills cobrem procedimentos que se repetem sempre do mesmo jeito. Todo o resto fica em texto puro que os agentes conseguem ler.",
+    "items": [
+      {
+        "title": "Uma memória por projeto",
+        "text": "O ai-memory guarda as decisões, armadilhas e handoffs de cada projeto. Uma sessão nova, em qualquer agente, começa dali."
+      },
+      {
+        "title": "AGENTS.md em todo lugar",
+        "text": "Cada repositório tem suas próprias instruções: os comandos, os invariantes, os erros pra não repetir."
+      },
+      {
+        "title": "Aponte pra um exemplo vivo",
+        "text": "\"Faça um workflow de AUR igual ao do ai-memory\" funciona melhor que uma skill sobre empacotamento no AUR, porque o exemplo está sempre atualizado."
+      },
+      {
+        "title": "Anote o que não virou código",
+        "text": "Pesquisa, alternativas descartadas, o motivo por trás de uma decisão. Cada hora de pesquisa de um agente vira um documento que eu posso reaproveitar."
+      }
+    ]
+  },
+  "next": [
+    {
+      "title": "ai-usagebar",
+      "text": "O medidor de cota que me diz quando trocar de agente."
+    },
+    {
+      "title": "ghpending",
+      "text": "A lista que me diz quais projetos vão precisar de uma manhã."
+    },
+    {
+      "title": "Textos",
+      "text": "O benchmark e os posts por trás dessas escolhas."
+    }
+  ],
+  "kaizen": {
+    "title": "O kaizen fecha o ciclo",
+    "lede": "Depois de cada rodada eu olho o que deu errado ou demorou demais e corrijo o processo junto com o código. Eu chamo isso de kaizen, a palavra japonesa pra melhoria contínua, e é a etapa que faz a próxima rodada ser melhor que esta.",
+    "items": [
+      {
+        "title": "Skills",
+        "text": "Uma regra entra no dia em que um erro aparece. O histórico do my-skills está cheio delas: juntar os bumps do Dependabot numa passada só, deixar pull requests recusados num estado limpo."
+      },
+      {
+        "title": "Instruções do harness",
+        "text": "O AGENTS.md de cada projeto junta os comandos, invariantes e armadilhas conforme eu encontro, pra que o próximo agente não precise descobrir tudo de novo."
+      },
+      {
+        "title": "Ferramentas",
+        "text": "O ai-usagebar, o ghpending e o tclock existem porque alguma coisa na minha rotina era lenta ou invisível. E continuam mudando pelo mesmo motivo."
+      },
+      {
+        "title": "Setup",
+        "text": "O desktop, o terminal e a caixa de games são todos código, então uma melhoria é um commit que eu posso revisar, manter ou reverter."
+      }
+    ],
+    "quote": {
+      "text": "Cada linha dessas skills é uma cicatriz.",
+      "cite": "Do meu post sobre skills"
+    }
+  }
+}

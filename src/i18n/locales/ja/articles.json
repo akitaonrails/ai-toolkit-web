@@ -1,0 +1,138 @@
+{
+  "readOn": "akitaonrails.comで読む",
+  "items": {
+    "benchmarkLatest": {
+      "title": "LLMベンチマークv4：Opus 5.5、GPT 6 SolとLuna、MiMo 2.6、Grok 4.7",
+      "summary": "v4の表に新しく5つのモデルが加わりました。乗り換える価値はあるのか。そしてGrok 4.7が前のバージョンより後退した理由。"
+    },
+    "benchmarkPart1": {
+      "title": "新LLMベンチマークv4、パート1：進め方",
+      "summary": "1バージョンを丸ごと捨てた理由、妨害工作を仕込んだRailsアプリの仕組み、そしてかかった費用。9日間で4,000ドル超です。"
+    },
+    "benchmarkPart2": {
+      "title": "新LLMベンチマークv4、パート2：39モデルのランキング",
+      "summary": "注意深さで並べた全ランキング。首位は6モデルが同点、無料モデルがClaudeの半分に勝ち、コストとスコアの関係も載せています。"
+    },
+    "shipMore": {
+      "title": "言い訳はやめて、もっとリリースしよう",
+      "summary": "フロンティアモデルは大半の開発者よりミスが少ない。そうなるとレビューの手続きがデプロイを止める最後の言い訳です。2月以降の私の数字を公開します。"
+    },
+    "skills": {
+      "title": "私のAIスキルについて少し話します",
+      "summary": "スキルはテキストファイルに書いたプロンプトです。私のスキルは1,000件を超えるプルリクエストとIssueをクローズしました。読んでから、自分のものを書いてください。"
+    },
+    "nesToSms": {
+      "title": "AIへの挑戦：NESのROMをマスターシステムに変換する",
+      "summary": "フロンティアモデルに6502からZ80への変換をやらせ、エミュレーターを判定役にしました。どこでマッパーが全部を止めてしまうのかも。"
+    },
+    "aiMemory2": {
+      "title": "ai-memory 2.0",
+      "summary": "オープンなOKFフォーマット、デフォルトでローカル埋め込み、チームでの並行作業。ほかの選択肢との比較も。"
+    },
+    "hotTake": {
+      "title": "暴論：ハーネス、ループ、グラフエンジニアリングはたわごとだ",
+      "summary": "公開リポジトリ30個、ベンチマーク、AIマラソン。どれもコンサル料つきの新しい学問分野なんて必要ありませんでした。"
+    },
+    "dayToDay": {
+      "title": "日々のちょっとした問題をAIで解決する",
+      "summary": "ウィジェット付きの卓上時計、マンガリーダー、メール、タイピング練習、カラオケ。小さな不満から生まれた小さなツールです。"
+    },
+    "protect": {
+      "title": "エージェントにファイルを消させないために私がしていること",
+      "summary": "YOLOモードで5か月、事故はゼロ。それでも信用はしていません。BTRFSスナップショット、resticバックアップ、サンドボックス、そして規律。"
+    },
+    "openSourceAi": {
+      "title": "オープンソースへのAIによる貢献：私の考え",
+      "summary": "AIが書いたプルリクエストは、質の低いものも含めてなくなりません。トリアージと監査は自動化し、最終判断は人間に残しましょう。"
+    },
+    "bestPractices": {
+      "title": "LLM時代のオープンソースのベストプラクティス：最低限これだけ",
+      "summary": "簡単なインストール、信頼できるテストとCI、問題を説明するドキュメント。標準的なリリースなら自動化の挙動も読めます。"
+    },
+    "cleanCode": {
+      "title": "AIエージェントのためのClean Code",
+      "summary": "主な読み手がエージェントになったら。小さなコード、grepしやすい名前、出どころの記録、ヘッドレスなテスト、明示的なルール。"
+    },
+    "multiModel": {
+      "title": "LLMベンチマーク：1つのプロジェクトで複数モデルを混ぜる価値はあるか",
+      "summary": "Claude Code、opencode、Codexで7通りの組み合わせを試しました。それでも強いモデル1つがデフォルトのままだった理由。"
+    },
+    "chronicles": {
+      "title": "バイブコーディング：ゼロから本番まで6日間",
+      "summary": "The M.Akita Chroniclesのニュースレター、ブログ、ポッドキャスト、Discordボットを6日間、201コミットで公開した話。"
+    },
+    "aiKilled": {
+      "title": "愚痴：AIはプログラマーを殺したのか",
+      "summary": "AIが経験豊富なプログラマーの代わりにならない理由、今のLLMが突き当たるS字カーブの天井、そしてエンジニアにとって何が変わるのか。"
+    },
+    "usagebarPost": {
+      "title": "LLMプランの使用量を監視するOmarchy用Waybarウィジェットを作りました",
+      "summary": "ai-usagebarを作った理由。claudebarをRustに移植し、すべてのプランのクォータをトップバーやターミナルに表示します。"
+    },
+    "toolkitTips": {
+      "title": "AkitaのAI活用のコツとツールキット",
+      "summary": "コーディングエージェントと600時間過ごして使っているもの。ai-jail、ai-memory、ai-usagebar、ghpending、それにテスト、バックアップ、規律。"
+    },
+    "tuiPost": {
+      "title": "TUIとLLMで遊ぶ：RatatuiとBubbletea",
+      "summary": "LLMで作った、私のターミナルアプリを支えるコンポーネントライブラリ。すでにai-usagebarで使っています。"
+    },
+    "memorySwitch": {
+      "title": "セッションを失わずにAIエージェントを乗り換える",
+      "summary": "ai-memory runなら、Claude Code、Codexなどのエージェントをまたいで1つの作業セッションを続けられます。ai-jailとai-usagebarも連携済みです。"
+    },
+    "ghpendingPost": {
+      "title": "GitHubの未対応をチェックするCLIを作りました",
+      "summary": "ghpendingを作った理由と、GitHubのレート制限内で全リポジトリを並列に取得する仕組み。"
+    },
+    "githubBlock": {
+      "title": "ブラジルでのGitHub APIブロックを回避する",
+      "summary": "ブラジルからGitHubのAPIが応答しなくなったとき、ghとghpendingを動かし続けたSOCKSプロキシ対応の話。"
+    },
+    "bend2": {
+      "title": "AI向けの新言語：Bend 2",
+      "summary": "リリース当日にghpendingとtclockをBend 2へ移植し、この言語に実際何ができるのかを試しました。"
+    },
+    "memoryPost": {
+      "title": "コーディングエージェント用のメモリシステムを作りました",
+      "summary": "ai-memoryの始まり。gitで管理するMarkdown、SQLiteでの検索、自動キャプチャ、エージェント間の引き継ぎ。"
+    },
+    "jailUpdate": {
+      "title": "ai-jailのセキュリティアップデート：Dockerはオプトインに",
+      "summary": "報告された欠陥、実際に動かしたデモ、そしてDockerソケットを明示しない限り無効にした理由。"
+    },
+    "typesafe": {
+      "title": "TypeSafe AIのようなものに私が興味を持たない理由",
+      "summary": "新しいAIツールに対する私のルールと、トークン消費の最適化に時間を使わない理由。"
+    },
+    "omarchyDualGpu": {
+      "title": "Omarchy 3：AMDとNVIDIAのデュアルGPU構成",
+      "summary": "iGPUがデスクトップを担当し、RTX 5090が3D処理を受け持つ。Hyprlandでの設定方法です。"
+    },
+    "omarchyThinkpad": {
+      "title": "ThinkPad T14 Gen 6でOmarchy",
+      "summary": "ミニレビューと、SSH、エージェント、NAS用に組んだLinuxノートPCの全設定。"
+    },
+    "nwOmarchy": {
+      "title": "NW-Omarchy：OmarchyをX11へ",
+      "summary": "Omarchyの隣で動くX11セッション。テーマと70以上のショートカットはそのままです。"
+    },
+    "emuDistrobox": {
+      "title": "Claude Codeで作ったエミュレーション用distrobox",
+      "summary": "ゲーム用ボックスの始まり。12のプラットフォームとSteamをAnsibleのロールにまとめ、エージェントと一緒に書きました。"
+    },
+    "racingGames": {
+      "title": "私のdistroboxで遊ぶお気に入りのレトロレースゲーム",
+      "summary": "shadPS4のフォークでDriveclub、XeniaでForza Motorsport 4。必要だった調整もまとめました。"
+    },
+    "marathon": {
+      "title": "AIマラソンの総括：成功か失敗か",
+      "summary": "24リポジトリで500時間。ランキングと、AIが役に立つかどうかをレビューとXPが決める理由。"
+    }
+  },
+  "related": {
+    "title": "ブログにもっとあります",
+    "lede": "詳細と行き止まりまで含めた長いバージョンです。",
+    "read": "記事を読む"
+  }
+}
