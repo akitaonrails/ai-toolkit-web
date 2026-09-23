@@ -53,7 +53,17 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
     <a href={`${repoUrl('distrobox')}/tree/master/docs`} class="btn btn-ghost">{t('research.link')}</a>
   </Section>
 
-  <Section title={t('box.title')} hue="orange" tint>
+  <Section title={t('use.title')} lede={t('use.lede')} hue="orange" tint id="use">
+    <div class="grid gap-8 lg:grid-cols-2 items-start">
+      <CodeBlock title={t('use.codeTitle')} code={'git clone https://github.com/akitaonrails/distrobox-gaming\ncd distrobox-gaming\nclaude'} />
+      <div>
+        <p class="prompt-line" dir="auto">{t("use.prompt")}</p>
+        <p class="mt-5 text-muted">{t('use.note')}</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section title={t('box.title')} hue="orange">
     <FeatureGrid items={box} cols={2} />
     <div class="mt-10"><RepoMeta id="distrobox" /></div>
   </Section>
@@ -75,3 +85,7 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />
 </Base>
+
+<style>
+  .prompt-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--orange); background: var(--orange-soft); padding: 0.8rem 1rem; border-radius: 0.6rem; }
+</style>

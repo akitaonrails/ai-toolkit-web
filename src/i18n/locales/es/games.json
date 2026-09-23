@@ -79,5 +79,12 @@
       "title": "El flujo de trabajo",
       "text": "Los agentes y skills que escribieron estos playbooks."
     }
-  ]
+  ],
+  "use": {
+    "title": "Cómo usarlo",
+    "lede": "Lo más fácil es dejar que un agente lo haga. Clona el repositorio, abre Claude Code dentro de él y dile qué contenedor y qué juegos quieres. Los playbooks y las notas están escritos justo para eso.",
+    "codeTitle": "clonar y abrir",
+    "prompt": "Configura el contenedor gaming con ES-DE, Dolphin y PCSX2. Mis ROMs y BIOS están en /ruta/a/tus/juegos.",
+    "note": "El repositorio no incluye juegos, ROMs, BIOS ni otros binarios. Tú pones los tuyos y le dices al agente dónde están."
+  }
 }

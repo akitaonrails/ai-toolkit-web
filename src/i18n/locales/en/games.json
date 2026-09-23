@@ -79,5 +79,12 @@
       "title": "The workflow",
       "text": "The agents and skills that wrote these playbooks."
     }
-  ]
+  ],
+  "use": {
+    "title": "How to use it",
+    "lede": "The easiest way is to let an agent do it. Clone the repository, open Claude Code inside it, and tell it which container and games you want. The playbooks and notes are written for exactly that.",
+    "codeTitle": "clone and open",
+    "prompt": "Set up the gaming container with ES-DE, Dolphin and PCSX2. My ROMs and BIOS files are in /path/to/your/games.",
+    "note": "The repository ships no games, ROMs, BIOS or other binaries. You bring your own and tell the agent where they are."
+  }
 }

@@ -79,5 +79,12 @@
       "title": "תהליך העבודה",
       "text": "הסוכנים וה-skills שכתבו את ה-playbooks האלה."
     }
-  ]
+  ],
+  "use": {
+    "title": "איך משתמשים",
+    "lede": "הדרך הקלה ביותר היא לתת לסוכן לעשות את זה. שכפלו את המאגר, פתחו בתוכו את Claude Code ואמרו לו איזה קונטיינר ואילו משחקים אתם רוצים. ה-playbooks וההערות נכתבו בדיוק בשביל זה.",
+    "codeTitle": "שכפול ופתיחה",
+    "prompt": "Set up the gaming container with ES-DE, Dolphin and PCSX2. My ROMs and BIOS files are in /path/to/your/games.",
+    "note": "המאגר לא כולל משחקים, ROMs, BIOS או קבצים בינאריים אחרים. אתם מביאים את שלכם ואומרים לסוכן איפה הם נמצאים."
+  }
 }
