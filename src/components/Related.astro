@@ -7,7 +7,7 @@ import { articleUrl, newest, type ArticleId } from '@/data/articles';
 import { useI18n } from '@/i18n';
 interface Props { ids: readonly ArticleId[]; hue?: Hue }
 const { ids, hue } = Astro.props;
-const { t, date } = useI18n(Astro, 'articles');
+const { t, date, locale } = useI18n(Astro, 'articles');
 const posts = newest(...ids);
 ---
 <div class:list={['related', hue && 'band']} data-hue={hue}>
@@ -16,7 +16,7 @@ const posts = newest(...ids);
   <ul class="grid">
     {posts.map((a) => (
       <li data-hue={a.hue}>
-        <a href={articleUrl(a)} class="rel">
+        <a href={articleUrl(a, locale)} class="rel">
           <time datetime={a.date} class="rel-date">{date(a.date, { year: 'numeric', month: 'short', day: 'numeric' })}</time>
           <span class="rel-body">
             <span class="rel-title">{t(`items.${a.id}.title`)}</span>

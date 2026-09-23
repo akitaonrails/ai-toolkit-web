@@ -1,5 +1,8 @@
 ---
 import '@/styles/global.css';
+import fontsHe from '@/styles/fonts-he.css?url';
+import fontsJa from '@/styles/fonts-ja.css?url';
+import fontsKo from '@/styles/fonts-ko.css?url';
 import Nav from '@/components/Nav.astro';
 import Footer from '@/components/Footer.astro';
 import Analytics from '@/components/Analytics.astro';
@@ -27,6 +30,8 @@ const home = new URL(href('/'), Astro.site).href;
 // The same page in every language, for <link rel="alternate" hreflang> and the language switcher.
 const barePath = stripLocale(Astro.url.pathname);
 const alternates = localeCodes.map((l) => ({ hreflang: locales[l].htmlLang, url: new URL(localizePath(l, barePath), Astro.site).href }));
+// Hebrew, Japanese and Korean need their own fonts; only those pages download them.
+const localeFonts = { he: fontsHe, ja: fontsJa, ko: fontsKo }[locale as string];
 const structuredData = siteGraph({ home, canonical: canonical.href, htmlLang, tagline, description, fullTitle, extra: schema });
 
 // First-visit language detection for hosts without Netlify's edge redirect (and for `npm run preview`).
@@ -45,6 +50,7 @@ const detect = locale === defaultLocale && !noindex && localeCodes.length > 1
     <link rel="canonical" href={canonical} />
     {!noindex && alternates.length > 1 && alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.url} />)}
     {!noindex && alternates.length > 1 && <link rel="alternate" hreflang="x-default" href={new URL(barePath, Astro.site).href} />}
+    {localeFonts && <link rel="stylesheet" href={localeFonts} />}
     <meta name="robots" content={noindex ? 'noindex' : 'index, follow, max-image-preview:large'} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -83,7 +83,8 @@
   },
   "code": {
     "copy": "Copy",
-    "copied": "Copied"
+    "copied": "Copied",
+    "terminal": "terminal"
   },
   "repo": {
     "stars": "{n} stars on GitHub",

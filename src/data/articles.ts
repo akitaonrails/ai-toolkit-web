@@ -68,7 +68,7 @@ export const related = {
 /** The LLM Benchmark v4 numbers, from the Part 1 and Part 2 posts and the latest update. */
 export const benchmark = {
   repo: 'https://github.com/akitaonrails/llm-coding-benchmark',
-  models: 39,
+  models: 44, // 39 in Part 2, plus 5 added on 2026-09-23
   sabotages: 14,
   sprints: 7,
   costUsd: 4000,

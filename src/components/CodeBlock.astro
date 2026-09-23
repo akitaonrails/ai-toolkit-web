@@ -2,8 +2,8 @@
 // A terminal with a copy button. Lines starting with "#" dim as comments. Always dark, always left to right.
 import { useI18n } from '@/i18n';
 interface Props { code: string; title?: string }
-const { code, title = 'terminal' } = Astro.props;
 const { t } = useI18n(Astro);
+const { code, title = t('code.terminal') } = Astro.props;
 const lines = code.trim().split('\n');
 ---
 <div class="term on-ink" dir="ltr" data-code>

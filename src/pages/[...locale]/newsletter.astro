@@ -18,7 +18,7 @@ import { articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, date, number } = useI18n(Astro, 'newsletter');
+const { t, raw, date, number, locale } = useI18n(Astro, 'newsletter');
 type Text = { title: string; text: string };
 const steps = raw<Text[]>('pipeline.steps');
 const stack = raw<Text[]>('stack.items').map((s) => ({ ...s, title: `<code>${s.title}</code>`, hue: 'rose' as const }));
@@ -68,7 +68,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
   <section class="wrap">
     <Callout title={t('story.title')} hue="rose">
       <p>{t('story.text')}</p>
-      <p><a class="link" href={articleUrl({ id: 'chronicles', ...articles.chronicles })}>{t('story.link')}</a></p>
+      <p><a class="link" href={articleUrl({ id: 'chronicles', ...articles.chronicles }, locale)}>{t('story.link')}</a></p>
     </Callout>
   </section>
 

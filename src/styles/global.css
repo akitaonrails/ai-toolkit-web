@@ -181,3 +181,16 @@
 
 /* Motion start states. Only applied when the motion script is running (html.motion). */
 html.motion [data-reveal]:not([data-reveal='children']), html.motion [data-reveal='children'] > * { opacity: 0; }
+
+/* Languages. Hubot and Mona Sans cover Latin only; Hebrew, Japanese and Korean switch families (fonts-*.css). */
+:lang(he) { --font-display: 'Rubik Variable', system-ui, sans-serif; --font-sans: 'Heebo Variable', system-ui, sans-serif; }
+:lang(ja) { --font-display: 'Noto Sans JP Variable', system-ui, sans-serif; --font-sans: 'Noto Sans JP Variable', system-ui, sans-serif; }
+:lang(ko) { --font-display: 'Noto Sans KR Variable', system-ui, sans-serif; --font-sans: 'Noto Sans KR Variable', system-ui, sans-serif; }
+:lang(he) :is(h1, h2, h3), :lang(ja) :is(h1, h2, h3), :lang(ko) :is(h1, h2, h3) { letter-spacing: 0; line-height: 1.25; font-stretch: 100%; }
+:lang(ja) body, :lang(ko) body, :lang(he) body { line-height: 1.8; }
+:lang(ja) { line-break: strict; word-break: normal; overflow-wrap: anywhere; }
+:lang(ko) { word-break: keep-all; overflow-wrap: anywhere; }
+[dir='rtl'] :is(code, pre, kbd) { direction: ltr; unicode-bidi: isolate; }
+:lang(ja) :is(h1, h2, h3, .fill-lede) { word-break: auto-phrase; }
+:lang(ja) .text-4xl { font-size: clamp(1.9rem, 1rem + 3vw, 3rem); line-height: 1.3; }
+:lang(ko) .text-4xl { font-size: clamp(2.2rem, 1.2rem + 4vw, 4.25rem); }

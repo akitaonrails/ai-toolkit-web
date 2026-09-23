@@ -20,7 +20,7 @@ import { pick, articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, href } = useI18n(Astro, 'home');
+const { t, raw, href, locale } = useI18n(Astro, 'home');
 type Text = { title: string; text: string };
 type Quote = { text: string; original?: string; cite?: string };
 type Tool = { tagline: string; text: string; points: string[]; shotAlt: string };
@@ -87,14 +87,14 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
     <div class="flex flex-wrap gap-3">
       <a href={sisters.memory.url} class="btn btn-ghost">{t('switch.memory')}</a>
       <a href={href('/ai-usagebar/')} class="btn btn-ghost">{t('switch.usagebar')}</a>
-      <a href={articleUrl({ id: 'memorySwitch', ...articles.memorySwitch })} class="btn btn-ghost">{t('switch.post')}</a>
+      <a href={articleUrl({ id: 'memorySwitch', ...articles.memorySwitch }, locale)} class="btn btn-ghost">{t('switch.post')}</a>
     </div>
   </Section>
 
   <Section title={t('tools.title')} lede={t('tools.lede')} id="tools" tint>
     <div class="grid gap-24 md:gap-32">
       {tools.map((tool, i) => (
-        <ToolBlock {...tool} flip={i % 2 === 1} more={t('tools.more', { name: tool.name })} post={{ url: articleUrl({ id: tool.post, ...articles[tool.post] }), label: t('tools.post') }} />
+        <ToolBlock {...tool} flip={i % 2 === 1} more={t('tools.more', { name: tool.name })} post={{ url: articleUrl({ id: tool.post, ...articles[tool.post] }, locale), label: t('tools.post') }} />
       ))}
     </div>
   </Section>

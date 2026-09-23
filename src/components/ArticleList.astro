@@ -4,12 +4,12 @@ import { articleUrl, type Article } from '@/data/articles';
 import { useI18n } from '@/i18n';
 interface Props { items: Article[]; cols?: 2 | 3 }
 const { items, cols = 3 } = Astro.props;
-const { t, date } = useI18n(Astro, 'articles');
+const { t, date, locale } = useI18n(Astro, 'articles');
 ---
 <ul class:list={['grid gap-5', cols === 3 ? 'md:grid-cols-2 lg:grid-cols-3' : 'md:grid-cols-2']} data-reveal="children">
   {items.map((a) => (
     <li>
-      <a href={articleUrl(a)} data-hue={a.hue} class="cell post h-full">
+      <a href={articleUrl(a, locale)} data-hue={a.hue} class="cell post h-full">
         <span class="kicker"><span class="dot !size-2" aria-hidden="true"></span><time datetime={a.date}>{date(a.date)}</time></span>
         <h3 class="text-lg mt-3 !leading-snug">{t(`items.${a.id}.title`)}</h3>
         <p class="mt-2 text-muted text-[0.97rem]">{t(`items.${a.id}.summary`)}</p>

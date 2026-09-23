@@ -1,9 +1,10 @@
 ---
 // The closing call to action. The one centered thing on the site.
 import { site } from '@/data/site';
+import { blogHome } from '@/data/articles';
 import { useI18n } from '@/i18n';
 interface Props { title?: string; text?: string }
-const { t } = useI18n(Astro);
+const { t, locale } = useI18n(Astro);
 const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
 ---
 <section class="on-ink band text-center relative overflow-hidden">
@@ -13,7 +14,7 @@ const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
     <p class="lede mx-auto mt-5">{text}</p>
     <div class="mt-9 flex flex-wrap justify-center gap-3">
       <a href={site.github} class="btn btn-primary">{t('cta.github')}</a>
-      <a href={site.blogEn + '/'} class="btn btn-ghost">{t('cta.blog')}</a>
+      <a href={blogHome(locale)} class="btn btn-ghost">{t('cta.blog')}</a>
     </div>
   </div>
 </section>

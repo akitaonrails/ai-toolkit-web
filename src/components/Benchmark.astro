@@ -3,12 +3,13 @@
 // The full version lives on the writing page. `compact` is the home page teaser: two numbers, no chart, one link there.
 import Shot from './Shot.astro';
 import { benchmark, articles, articleUrl } from '@/data/articles';
-import chart from '@/assets/img/shots/benchmark-v4-cost-en.png';
+import chartEn from '@/assets/img/shots/benchmark-v4-cost-en.png';
+import chartPt from '@/assets/img/shots/benchmark-v4-cost-pt.png';
 import { useI18n } from '@/i18n';
 interface Props { compact?: boolean; level?: 2 | 3 }
 const { compact, level = 3 } = Astro.props;
 const Heading = `h${level}`;
-const { t, number, date, href } = useI18n(Astro, 'writing');
+const { t, number, date, href, locale } = useI18n(Astro, 'writing');
 const facts = [
   { n: benchmark.models, label: t('benchmark.facts.models') },
   { n: benchmark.sabotages, label: t('benchmark.facts.sabotages') },
@@ -34,12 +35,12 @@ const facts = [
     </dl>
     <div class="mt-9 flex flex-wrap gap-3">
       {compact ? <a href={href('/writing/#benchmark')} class="btn btn-ghost">{t('benchmark.more')}</a> : <Fragment>
-        <a href={articleUrl({ id: 'benchmarkPart2', ...articles.benchmarkPart2 })} class="btn btn-primary">{t('benchmark.results')}</a>
+        <a href={articleUrl({ id: 'benchmarkPart2', ...articles.benchmarkPart2 }, locale)} class="btn btn-primary">{t('benchmark.results')}</a>
         <a href={benchmark.repo} class="btn btn-ghost">{t('benchmark.repo')}</a>
       </Fragment>}
     </div>
   </div>
-  {!compact && <Shot src={chart} alt={t('benchmark.chartAlt')} caption={t('benchmark.chartCaption')} sizes="(min-width: 1024px) 38rem, 94vw" />}
+  {!compact && <Shot src={locale === 'pt-br' ? chartPt : chartEn} alt={t('benchmark.chartAlt')} caption={t('benchmark.chartCaption')} sizes="(min-width: 1024px) 38rem, 94vw" />}
 </div>
 <style>
   .bfacts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 1.5rem; }

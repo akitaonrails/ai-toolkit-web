@@ -6,7 +6,7 @@ const { text, original, cite, large } = Astro.props;
 ---
 <figure class:list={['pq', large && 'pq-large']} data-reveal>
   <blockquote><p class="pq-text">{text}</p></blockquote>
-  {original && <p class="pq-orig" lang="pt-BR">{original}</p>}
+  {original && original !== text && <p class="pq-orig" lang="pt-BR">{original}</p>}
   {cite && <figcaption class="pq-cite">{cite}</figcaption>}
 </figure>
 <style>

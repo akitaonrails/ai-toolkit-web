@@ -19,7 +19,7 @@ import tally from '@/data/tally.json';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, href, date, number } = useI18n(Astro, 'workflow');
+const { t, raw, href, date, number, locale } = useI18n(Astro, 'workflow');
 type Text = { title: string; text: string };
 const prompts = raw<{ code: string; text: string }[]>('start.items');
 const skills = withText(skillIds.map((id) => ({ hue: id === 'release' ? 'rose' : id === 'pr-bump' ? 'amber' : 'violet', href: `${repoUrl('skills')}/tree/master/${id}` })) as { hue: 'violet' | 'rose' | 'amber'; href: string }[], raw<Text[]>('skills.items'))
@@ -27,7 +27,7 @@ const skills = withText(skillIds.map((id) => ({ hue: id === 'release' ? 'rose' :
 const kaizen = withText([{ hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }, { hue: 'orange' }] as const, raw<Text[]>('kaizen.items'));
 const knowledge = withText([{ hue: 'teal' }, { hue: 'violet' }, { hue: 'amber' }, { hue: 'rose' }] as const, raw<Text[]>('knowledge.items'));
 const next = withText([{ hue: 'blue', href: '/ai-usagebar/' }, { hue: 'amber', href: '/ghpending/' }, { hue: 'rose', href: '/writing/' }] as const, raw<Text[]>('next'));
-const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
+const skillsPost = articleUrl({ id: 'skills', ...articles.skills }, locale);
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
   <PageHero hue="violet" kicker={t('kicker.workflow')} title={t('hero.title')} lede={t('hero.lede')}>
