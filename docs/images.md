@@ -44,6 +44,8 @@ Check before committing:
 
 Generation costs a few cents per image and is not part of the build.
 
+Every diagram with translatable labels also has a copy per language in `src/assets/img/gen/<locale>/`, made by `scripts/localize-image.mjs` from the labels in `images.json` (see `docs/i18n.md`). All 53 copies were checked label by label on 2026-09-23. `home-desk` has no Portuguese or Spanish copy: its only labels ("Monitor 1", "Monitor 2") read the same. When an English diagram is regenerated, delete its copies and localize again.
+
 ## Screenshots
 
 Real screenshots live in `src/assets/img/shots/` and render through `Shot`. Where each comes from: [sources.md](sources.md), section 7. Astro converts them to responsive WebP at build time, so commit the original PNG or JPG.
