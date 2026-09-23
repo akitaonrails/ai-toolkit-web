@@ -1,0 +1,58 @@
+---
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import FeatureGrid from '@/components/FeatureGrid.astro';
+import CodeBlock from '@/components/CodeBlock.astro';
+import Figure from '@/components/Figure.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { sisters, thirdParty } from '@/data/site';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, href } = useI18n(Astro, 'setup');
+type Text = { title: string; text: string };
+const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { hue: 'rose', href: thirdParty.claudeSquad }] as const, raw<Text[]>('orchestration.items'));
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="teal" kicker={t('kicker.setup')} title={t('hero.title')} lede={t('hero.lede')} />
+
+  <Section title={t('omarchy.title')} lede={t('omarchy.lede')} hue="blue" tint>
+    <ul class="ticks max-w-[44em]">{raw<string[]>('omarchy.points').map((p) => <li>{p}</li>)}</ul>
+    <p class="mt-8 max-w-[44em]">{t('omarchy.donation')}</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href={thirdParty.omarchy} class="btn btn-ghost">{t('omarchy.site')}</a>
+      <a href={thirdParty.foundation} class="btn btn-ghost">{t('omarchy.foundation')}</a>
+      <a href={thirdParty.donate} class="btn btn-ghost">{t('omarchy.donate')}</a>
+    </div>
+  </Section>
+
+  <Section title={t('tmux.title')} lede={t('tmux.lede')} hue="amber">
+    <div class="grid gap-8 lg:grid-cols-2 items-start">
+      <CodeBlock title={t('tmux.codeTitle')} code={'tmux new -s work       # start a named session\n# ...terminal closed by accident...\ntmux attach -t work    # everything is still there'} />
+      <div>
+        <p class="text-muted">{t('tmux.text')}</p>
+        <a href={thirdParty.tmux} class="link mt-4 inline-block">{t('tmux.link')}</a>
+      </div>
+    </div>
+  </Section>
+
+  <Section title={t('herdr.title')} lede={t('herdr.lede')} hue="rose" tint>
+    <p class="max-w-[44em]">{t('herdr.text')}</p>
+    <a href={thirdParty.herdr} class="link mt-4 inline-block">{t('herdr.link')}</a>
+  </Section>
+
+  <Section title={t('orchestration.title')} lede={t('orchestration.lede')} hue="rose">
+    <FeatureGrid items={orchestrators} cols={2} />
+    <p class="mt-10 max-w-[44em]">{t('orchestration.text')}</p>
+  </Section>
+
+  <Section title={t('memory.title')} lede={t('memory.lede')} hue="teal" tint fill>
+    <Figure name="home-switch" alt={t('memory.alt')} />
+    <div class="flex flex-wrap gap-3">
+      <a href={sisters.memory.url} class="btn btn-primary">{t('memory.site')}</a>
+      <a href={href('/workflow/')} class="btn btn-ghost">{t('memory.workflow')}</a>
+    </div>
+  </Section>
+  <CtaBand />
+</Base>

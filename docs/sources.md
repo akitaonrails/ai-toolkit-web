@@ -12,6 +12,7 @@ Run these, then read the sections below for whatever changed.
 npm run snapshot:github             # stars and latest release of every repo in src/data/repos.json
 git -C ~/Projects/ai-usagebar log --oneline $(git -C ~/Projects/ai-usagebar describe --tags --abbrev=0)..HEAD | head
 node scripts/refresh-videos.mjs     # podcast metadata and thumbnails (falls back to the cache when YouTube refuses)
+python3 scripts/tally-projects.py   # the year's commits, PRs, issues, lines of code and blog posts (section 9)
 grep -o 'href="/en/20[^"]*"' ~/Projects/akitaonrails-hugo/content/_index.en.md | head -20   # blog highlights, newest first
 ```
 
@@ -44,8 +45,8 @@ Local checkout: `~/Projects/akitaonrails-hugo`. English posts are `index.en.md` 
 | [LLM Benchmark v4 Part 1](https://akitaonrails.com/en/2026/09/15/new-llm-benchmark-v4-retesting-all-top-llms-part-1/) | Rebuilt from scratch the third time; Rails app; over $4,000 in 9 days | `articles.ts` `benchmark`, `writing.json` `benchmark` |
 | [LLM Benchmark v4 Part 2](https://akitaonrails.com/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2/) | 39 models; 7 sprints; 14 sabotages based on real CVEs; ranked by vigilance; the cost-score chart (`v4-cost-score-en.png`, S3) | same, plus `src/assets/img/shots/benchmark-v4-cost-en.png` |
 | [LLM Benchmark v4: Opus 5.5, GPT 6...](https://akitaonrails.com/en/2026/09/23/llm-benchmark-v4-opus-5-5-gpt-6-sol-luna-mimo-2-6-grok-4-7/) | Latest round: 5 models on 2026-09-23 | `articles.ts` `benchmark.latestRound` |
-| [Talking a Bit About My AI Skills](https://akitaonrails.com/en/2026/09/17/talking-about-my-ai-skills/) | The daily ritual and its one-line prompts; skill rules; merged PRs and closed issues per repo (ai-memory 430/260, ai-usagebar 137/34, ai-jail 42/81, counted 2026-09-17); "more than 40 repositories"; the second-monitor screenshot; knowledge over skills | `src/data/workflow.ts` `throughput`, `workflow.json`, home `desk`, `src/assets/img/shots/desk-second-monitor.png` |
-| Second-monitor screenshot in that post | 43 projects checked, 6 with pending work | `workflow.ts` `trackedRepos`, home `hero.shotCaption` |
+| [Talking a Bit About My AI Skills](https://akitaonrails.com/en/2026/09/17/talking-about-my-ai-skills/) | The daily ritual and its one-line prompts; skill rules; "more than 40 repositories"; the second-monitor screenshot; knowledge over skills. (Its PR counts were replaced by the tally in section 9.) | `workflow.json`, home `desk`, `src/assets/img/shots/desk-second-monitor.png` |
+| Second-monitor screenshot in that post | 43 projects checked, 6 with pending work | home `hero.shotCaption` |
 | [Vibe Code: From Zero to Production in 6 Days](https://akitaonrails.com/en/2026/02/16/vibe-code-zero-to-production-in-6-days-the-m-akita-chronicles/) | Newsletter stack built in six days, 201 commits | `newsletter.json` `story` |
 | `content/about.en.md` | Blogging since 2006; X account is protected; YouTube channel finished, still valuable; no sponsorships | `common.json` `social`, `writing.json` `hero` |
 
@@ -77,8 +78,25 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 
 | Source | Lands in |
 |---|---|
+| Owner's instructions (2026-09-23): contact email `boss@akitaonrails.com` and the warning that goes with it (no sales, no sponsorship, no automatic reply, silence means no) | `site.ts` `site.email`, `home.json` `contact`, footer `Contact` link to `/#contact` |
+| Owner's instructions (2026-09-23): runs Omarchy and donated to its foundation; tmux mainly so nothing dies when a terminal closes; tried Herdr and agent orchestrators and did not need them personally, without calling them useless; memory matters most | `setup.json`, `setup.astro`. Third-party facts below |
 | Owner's instructions (2026-09-23): social networks and what each is for; the phrases he is known for; "not a paid content creator, no sponsorship, no Patreon, no subscriptions, no monetized views, self-sustained, does it for leisure" | `common.json` `social` and `footer.about`; `home.json` `independence`. The phrases are spread, one per place: "excitement is inversely proportional" in `home.json` `writing.quote`, "ship first, fix later" in `home.json` `loop.quote`, "voluntary trade" in `home.json` `independence.quote`, "AI is a mirror" in `workflow.json` `numbers.quote`, "apologize rather than ask permission" in `writing.json` `sections.opinions.quote` |
 | Sister sites' designs: `~/Projects/ai-jail-web`, `~/Projects/ai-memory-web` | The component set, the scripts and the rules in `docs/design-system.md` |
+
+## 6b. Third-party tools (setup page)
+
+Checked 2026-09-23. Describe them fairly and link to the vendor; re-check before changing the wording.
+
+| Tool | Facts taken | Source |
+|---|---|---|
+| Omarchy | DHH's Linux distribution, Arch plus Hyprland; tagline "the malleable OS for the age of agents" | https://omarchy.org |
+| Omacom Foundation | The nonprofit that funds Omarchy and the open source projects under it; donations at donate.omarchy.org | https://omarchy.org/foundation/ (the domain `omacom.foundation` is a parked domain for sale; never link it) |
+| tmux | Terminal multiplexer, sessions survive the terminal window | https://github.com/tmux/tmux |
+| Herdr | Rust agent multiplexer: tmux-style panes and sessions plus a sidebar with each agent's state (working, blocked, done) | https://herdr.dev, https://github.com/herdrdev/herdr |
+| Conductor | macOS app running several Claude Code or Codex agents in isolated git worktrees, one window for their diffs | https://www.conductor.build |
+| Claude Squad | Terminal app giving each agent (Claude Code, Codex, Gemini, Aider) its own tmux session and git worktree | https://github.com/smtg-ai/claude-squad |
+
+Vibe Kanban was considered and left out: its repository announced it is being sunset.
 
 ## 7. Images
 
@@ -99,7 +117,8 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 | Page | Built from |
 |---|---|
 | `/` | Blog post on skills (desk, loop), ai-memory README (switch), the three tool repos (tool blocks), sister sites, benchmark posts, blog highlights, owner's words (phrases next to the loop, the writing and the independence note; social) |
-| `/workflow/` | my-skills repo, skills blog post, ai-memory README |
+| `/workflow/` | my-skills repo, skills blog post, ai-memory README, the tally (section 9) |
+| `/setup/` | Owner's words and the third-party sources in section 6b |
 | `/ai-usagebar/` | ai-usagebar repo |
 | `/ghpending/` | ghpending repo |
 | `/clock-tui/` | clock-tui repo, owner's tclock config |
@@ -107,3 +126,30 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 | `/newsletter/` | akitando-news repo, the two live newsletter sites, the six-days post |
 | `/podcasts/` | The five videos, Cortes do Flow |
 | `/games/` | distrobox-gaming and omarchy-games-menu repos |
+
+## 9. The yearly tally (workflow page, "What that adds up to")
+
+`scripts/tally-projects.py` writes `src/data/tally.json`; the workflow page reads totals and the per-project table from it. Rerun it whenever the owner asks for current numbers, and always at a year boundary (`--year`).
+
+**Which projects.** Every folder in `~/Projects` matching `ai*`, `frank*` or `Frank*`, plus `github-pending` (ghpending), `clock-tui`, `distrobox-gaming`, `akitaonrails-hugo` (the blog, remote `akitaonrails.github.io`), `llm-coding-benchmark`, `omarchy-games-menu`, `akitando-news`, `google-calendar-tui` and `tropicalruby2026` (the keynote; folder has no dash, repo `tropicalruby-2026`). The owner gave this list on 2026-09-23. A folder only counts when it is a git checkout with commits in the year, so the non-git folders (ai-babel, aitrepreneur-krea2-docker, frank_manga, frankmd_zed_extension, frank_oracle, Frank360, Frankenstein-AI) drop out on their own. `frank-sherlock-bin` is skipped: it is the AUR packaging of FrankSherlock. New projects matching the patterns are picked up automatically; new names outside them go in `EXTRA`.
+
+**What is counted, all within the year.**
+
+| Figure | How |
+|---|---|
+| Commits | `git rev-list --count --no-merges` on `origin/HEAD` after a fetch, so a checkout with local changes that cannot pull (llm-coding-benchmark and akitando-news had some) is still counted up to date |
+| Lines of code added | Sum of added lines from `git log --numstat`, leaving out: lockfiles; minified, map, SVG, CSV, JSON and notebook files; images, fonts, audio and video; `.po` translations, `.eml` samples and `.sgf` game records; `node_modules`, `vendor`, `dist`, `target`, `public`; and per-project folders in `EXCLUDE` |
+| Prose added | Added lines in Markdown and text files. Recorded in the JSON, not shown on the site |
+| Merged PRs, closed issues | GitHub search API, `merged:`/`closed:` within the year. Needs `gh` logged in; the script sleeps between calls for the 30-a-minute limit |
+| Blog posts | For the blog only: `content/<year>/*/*/*/index.md`. Lines are not counted for the blog, because most of its added lines in 2026 are edits and translations of old posts |
+| Private | Flagged from `gh repo view`; private repos are counted but not linked |
+
+**Per-project exclusions (`EXCLUDE`) and why.** `llm-coding-benchmark/results*`: code written by the models under test. `akitando-news` `content` folders: the newsletter bot's weekly output. `frank_go/data`: joseki and tsumego collections. `frank_fbi/suspects`: sample emails being analyzed. `frank_yomik/fonts`: a vendored font repository (336k lines). `FrankGeary/help`: upstream Geary's translated help pages.
+
+**No "size of the tree" number.** It was tried and dropped: FrankGeary is a fork of GNOME Geary and clock-tui a fork of race604's, so counting the current tree credited upstream's code (FrankGeary alone measured 180k lines). Everything shown happened in the year.
+
+**Sanity check before publishing.** Look at any project whose lines added are far above its commit count suggests (thousands of lines per commit). Find the folder with
+`git -C <repo> log --no-merges --since=<year>-01-01 --numstat --format= origin/HEAD | awk -F'\t' '$1!="-"{split($3,p,"/"); a[p[1]"/"p[2]]+=$1} END{for(k in a) print a[k], k}' | sort -rn | head`
+and add it to `EXCLUDE` when it is data, vendored or generated.
+
+**First run, 2026-09-23:** 30 projects, 6,330 commits, 783 merged PRs, 486 closed issues, 1,077,444 lines of code added, 121 blog posts.

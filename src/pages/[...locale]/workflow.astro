@@ -12,11 +12,12 @@ import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { repoUrl } from '@/data/site';
 import { articles, articleUrl } from '@/data/articles';
-import { totals, throughput, skillIds } from '@/data/workflow';
+import { skillIds } from '@/data/workflow';
+import tally from '@/data/tally.json';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, href } = useI18n(Astro, 'workflow');
+const { t, raw, href, date, number } = useI18n(Astro, 'workflow');
 type Text = { title: string; text: string };
 const prompts = raw<{ code: string; text: string }[]>('start.items');
 const skills = withText(skillIds.map((id) => ({ hue: id === 'release' ? 'rose' : id === 'pr-bump' ? 'amber' : 'violet', href: `${repoUrl('skills')}/tree/master/${id}` })) as { hue: 'violet' | 'rose' | 'amber'; href: string }[], raw<Text[]>('skills.items'))
@@ -57,12 +58,38 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
     <a href={repoUrl('skills')} class="btn btn-ghost mt-10">{t('skills.link')}</a>
   </Section>
 
-  <Section title={t('numbers.title')} lede={t('numbers.lede')} hue="violet" tint>
-    <Stats items={[
-      { n: totals.prs, label: t('numbers.prs') },
-      { n: totals.issues, label: t('numbers.issues') },
-      { n: throughput.trackedRepos, label: t('numbers.repos') },
+  <Section title={t('numbers.title')} lede={t('numbers.lede', { year: tally.year, date: date(tally.countedOn) })} hue="violet" tint>
+    <Stats cols={3} items={[
+      { n: tally.totals.projects, label: t('numbers.projects') },
+      { n: tally.totals.commits, label: t('numbers.commits') },
+      { n: tally.totals.prs, label: t('numbers.prs') },
+      { n: tally.totals.issues, label: t('numbers.issues') },
+      { n: tally.totals.code_added, label: t('numbers.code'), display: number(tally.totals.code_added, { notation: 'compact', maximumFractionDigits: 2 }) },
+      { n: tally.totals.posts, label: t('numbers.posts') },
     ]} />
+    <p class="mt-10 text-sm text-muted max-w-[52em]">{t('numbers.method')}</p>
+    <details class="tally mt-8">
+      <summary class="btn btn-ghost">{t('numbers.table.toggle')}</summary>
+      <div class="table-wrap mt-6">
+        <table class="table-site tally-table">
+          <thead><tr><th>{t('numbers.table.project')}</th><th>{t('numbers.table.commits')}</th><th>{t('numbers.table.prs')}</th><th>{t('numbers.table.issues')}</th><th>{t('numbers.table.code')}</th></tr></thead>
+          <tbody>
+            {tally.projects.map((p) => {
+              const label = p.repo ? p.repo.split('/')[1] : p.name;
+              return (
+                <tr>
+                  <td>{p.repo && !p.private ? <a class="link" href={`https://github.com/${p.repo}`}>{label}</a> : <span>{label}</span>}{p.private && <span class="text-muted font-normal"> ({t('numbers.table.private')})</span>}</td>
+                  <td>{number(p.commits ?? 0)}</td>
+                  <td>{p.prs == null ? '·' : number(p.prs)}</td>
+                  <td>{p.issues == null ? '·' : number(p.issues)}</td>
+                  <td>{'posts' in p && p.posts != null ? t('numbers.table.posts', { n: p.posts }) : number(p.code_added ?? 0)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </details>
     <div class="mt-16"><PullQuote {...raw<{ text: string }>('numbers.quote')} /></div>
   </Section>
 
@@ -87,5 +114,9 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills });
 </Base>
 
 <style>
+  .tally summary { list-style: none; cursor: pointer; }
+  .tally summary::-webkit-details-marker { display: none; }
+  .tally-table td:not(:first-child), .tally-table th:not(:first-child) { text-align: end; font-variant-numeric: tabular-nums; font-family: var(--font-mono); font-size: 0.92rem; }
+  .tally-table td { min-width: 0; }
   .prompt code { font-size: 0.95rem; color: var(--violet); background: var(--violet-soft); border: 0; padding: 0.55rem 0.8rem; border-radius: 0.6rem; overflow-wrap: anywhere; }
 </style>

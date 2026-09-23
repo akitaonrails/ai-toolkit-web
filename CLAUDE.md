@@ -18,4 +18,5 @@ Start from `docs/sources.md`. It lists every source (GitHub repos, blog posts, t
 - Writing rules: `docs/design-system.md`, "Writing". First person, short, no em dashes, no hype words.
 - Diagrams: `docs/images.md`. Look at every generated image before committing it.
 - Videos: edit `src/data/videos.config.json`, run `node scripts/refresh-videos.mjs`.
+- Yearly numbers on the workflow page: `python3 scripts/tally-projects.py`, method and exclusions in `docs/sources.md` section 9. Sanity-check outliers before publishing.
 - Before pushing: `npm run check:colors && npm run check:i18n && npm run build`. `main` deploys to production through Netlify (`docs/deploy.md`).

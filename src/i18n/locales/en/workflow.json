@@ -68,10 +68,24 @@
   },
   "numbers": {
     "title": "What that adds up to",
-    "lede": "Counted on September 17, 2026, across three of my projects: ai-memory, ai-usagebar and ai-jail. Nearly all of it went through these skills, with me reading the reports and making the calls.",
+    "lede": "Everything below happened in {year}, across the tools on this site, my Frank side projects, the newsletter, the benchmark and the blog. Counted on {date}. Nearly all of it went through agents and these skills, with me reading the reports and making the calls.",
+    "projects": "projects with commits",
+    "commits": "commits",
     "prs": "merged pull requests",
     "issues": "closed issues",
-    "repos": "repositories I track with ghpending",
+    "code": "lines of code added",
+    "posts": "blog posts published",
+    "method": "Lines of code are lines added to code files. Lockfiles, data, fonts, translations, vendored and generated files do not count, and neither do the benchmark's model output or the newsletter's generated content. FrankGeary and tclock are forks, so only my own changes count. Pull requests and issues come from GitHub; frank_bazaar has no GitHub remote and akitando-news is private.",
+    "table": {
+      "toggle": "Project by project",
+      "project": "Project",
+      "commits": "Commits",
+      "prs": "Merged PRs",
+      "issues": "Closed issues",
+      "code": "Lines of code added",
+      "posts": "{n} posts",
+      "private": "private"
+    },
     "quote": {
       "text": "AI is a mirror. If you are good, it makes you ten times faster. If you are bad, it also makes you ten times faster, at producing slop."
     }

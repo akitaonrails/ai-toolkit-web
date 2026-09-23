@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "My setup: Omarchy, tmux and what I set aside",
+    "description": "The third-party tools under Fabio Akita's AI workflow: Omarchy Linux, tmux, and why he passed on Herdr and agent orchestrators in favor of long-term memory."
+  },
+  "hero": {
+    "title": "The rest of my setup",
+    "lede": "The tools I did not write but use every day, and a few popular ones I tried and set aside. The short version: a good OS, a terminal that survives accidents, and memory."
+  },
+  "omarchy": {
+    "title": "Omarchy, the operating system",
+    "lede": "Omarchy is DHH's Linux distribution: Arch Linux with the Hyprland tiling window manager, configured and themed out of the box. Its site calls it \"the malleable OS for the age of agents\". It is my daily desktop, and I think it is the best choice for developers today.",
+    "points": [
+      "Keyboard first: every window, workspace and app is a shortcut away, which suits a day spent in terminals",
+      "Arch underneath, so the newest compilers, runtimes and agent CLIs are one package away",
+      "Everything is plain configuration files, which is exactly what a coding agent can read and change for you",
+      "ai-usagebar and my games launcher have native Omarchy integrations"
+    ],
+    "donation": "I believe in it enough to have donated to the Omacom Foundation, the nonprofit that funds Omarchy and the open source projects it is built on.",
+    "site": "omarchy.org",
+    "foundation": "The Omacom Foundation",
+    "donate": "Donate"
+  },
+  "tmux": {
+    "title": "tmux, so nothing dies by accident",
+    "lede": "tmux is a terminal multiplexer: it runs your shells inside a session that lives apart from the terminal window, split into windows and panes. I use it mostly for one reason. If I close the terminal by accident, the agents keep running, and one command brings everything back.",
+    "codeTitle": "all it takes",
+    "text": "Each project gets a tmux window with its agent. That is the whole orchestration layer I need.",
+    "link": "tmux on GitHub"
+  },
+  "herdr": {
+    "title": "Tried and set aside: Herdr",
+    "lede": "Herdr is an agent multiplexer written in Rust: tmux-style panes and sessions, plus a sidebar that knows which pane holds a coding agent and whether it is working, blocked or done.",
+    "text": "I tried it. It is well made and plenty of people like it. I did not find a use for it in my own routine, because one tmux window per project already tells me where each agent is. That says more about how I work than about Herdr.",
+    "link": "herdr.dev"
+  },
+  "orchestration": {
+    "title": "Tried and set aside: agent orchestrators",
+    "lede": "Orchestrators run several agents in parallel, each on its own git worktree, and give you one place to review what they did. The best known today:",
+    "items": [
+      {
+        "title": "Conductor",
+        "text": "A macOS app: start several Claude Code or Codex agents, each in an isolated worktree, and watch their diffs from one window."
+      },
+      {
+        "title": "Claude Squad",
+        "text": "A terminal app that gives each agent (Claude Code, Codex, Gemini, Aider) its own tmux session and git worktree."
+      }
+    ],
+    "text": "They solve a real problem for some people. For me the bottleneck was never how many agents run at once. It was how much each one remembers."
+  },
+  "memory": {
+    "title": "What matters most: memory",
+    "lede": "An agent that starts every session from zero repeats the same mistakes, whichever orchestrator sits on top. Memory is what turns a fast intern into someone who knows the codebase. That is why I built ai-memory, and why every agent I run starts with ai-memory run.",
+    "site": "The ai-memory site",
+    "workflow": "How it fits my workflow",
+    "alt": "Three terminals: Claude Code, Codex and OpenCode. Claude Code's quota gauge is full and red, a green arrow moves the work to Codex, and all three sit on one slab labelled Same memory."
+  }
+}

@@ -1,13 +1,14 @@
 ---
 // A strip of numbers that count up once. Numbers come from src/data, never typed into a page.
-interface Item { n: number; label: string; prefix?: string; suffix?: string }
-interface Props { items: Item[] }
-const { items } = Astro.props;
+// `display` replaces the counting number with fixed text, for figures too wide to show in full ("1.08M").
+interface Item { n: number; label: string; prefix?: string; suffix?: string; display?: string }
+interface Props { items: Item[]; cols?: number }
+const { items, cols = items.length } = Astro.props;
 ---
-<dl class="stats" style={`--cols:${items.length}`} data-reveal="children">
+<dl class="stats" style={`--cols:${cols}`} data-reveal="children">
   {items.map((f) => (
     <div>
-      <dd class="text-4xl">{f.prefix}<span data-count={f.n}>{f.n.toLocaleString('en')}</span>{f.suffix}</dd>
+      <dd class="text-4xl">{f.prefix}{f.display ? <span title={f.n.toLocaleString('en')}>{f.display}</span> : <span data-count={f.n}>{f.n.toLocaleString('en')}</span>}{f.suffix}</dd>
       <dt>{f.label}</dt>
     </div>
   ))}

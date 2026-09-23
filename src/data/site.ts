@@ -10,6 +10,7 @@ export const site = {
   blogEn: 'https://akitaonrails.com/en',
   author: 'Fabio Akita',
   authorUrl: 'https://akitaonrails.com/en/about/',
+  email: 'boss@akitaonrails.com',
 };
 
 export type Hue = 'red' | 'orange' | 'amber' | 'teal' | 'blue' | 'violet' | 'rose';
@@ -26,6 +27,7 @@ export const nav: NavLink[] = [
   { id: 'writing', href: '/writing/', hue: 'rose' },
   { id: 'newsletter', href: '/newsletter/', hue: 'rose' },
   { id: 'podcasts', href: '/podcasts/', hue: 'amber' },
+  { id: 'setup', href: '/setup/', hue: 'teal' },
 ];
 export const extras: NavLink[] = [{ id: 'games', href: '/games/', hue: 'orange' }];
 
@@ -39,6 +41,13 @@ export const repoUrl = (id: RepoId) => `https://github.com/${repos[id]}`;
 export const sisters = {
   jail: { url: 'https://aijail.io', hue: 'orange' as Hue },
   memory: { url: 'https://aimemorybr.netlify.app', hue: 'teal' as Hue },
+};
+
+/** Third-party tools on the setup page. */
+export const thirdParty = {
+  omarchy: 'https://omarchy.org', foundation: 'https://omarchy.org/foundation/', donate: 'https://donate.omarchy.org',
+  tmux: 'https://github.com/tmux/tmux', herdr: 'https://herdr.dev',
+  conductor: 'https://www.conductor.build', claudeSquad: 'https://github.com/smtg-ai/claude-squad',
 };
 
 export const newsletter = { url: 'https://themakitachronicles.com', blog: 'https://blog.themakitachronicles.com', spotify: 'https://open.spotify.com/show/7MzG2UB7IAkC3GAwEXEIVD' };

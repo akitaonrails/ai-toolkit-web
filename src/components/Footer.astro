@@ -24,6 +24,7 @@ const languages = languageLinks(Astro.url.pathname);
     <div class="grid gap-2 content-start">
       <span class="font-display font-bold">{t('footer.more')}</span>
       {social.map((s) => <a href={s.url} class="hover:text-text text-muted" rel="me">{t(`social.${s.id}.name`)}</a>)}
+      <a href={href('/#contact')} class="hover:text-text text-muted">{t('footer.contact')}</a>
     </div>
   </div>
   <div class="wrap pb-10 flex flex-wrap gap-x-6 gap-y-3 items-center text-sm text-muted">

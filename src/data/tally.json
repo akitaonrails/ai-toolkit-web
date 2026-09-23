@@ -1,0 +1,316 @@
+{
+  "year": 2026,
+  "countedOn": "2026-09-23",
+  "totals": {
+    "commits": 6330,
+    "code_added": 1077444,
+    "prose_added": 144694,
+    "prs": 783,
+    "issues": 486,
+    "projects": 30,
+    "posts": 121
+  },
+  "projects": [
+    {
+      "name": "ai-memory",
+      "repo": "akitaonrails/ai-memory",
+      "commits": 1468,
+      "code_added": 328177,
+      "prose_added": 44731,
+      "prs": 500,
+      "issues": 283,
+      "private": false
+    },
+    {
+      "name": "akitaonrails-hugo",
+      "repo": "akitaonrails/akitaonrails.github.io",
+      "commits": 637,
+      "code_added": null,
+      "prose_added": null,
+      "prs": 9,
+      "issues": 5,
+      "posts": 121,
+      "private": false
+    },
+    {
+      "name": "akitando-news",
+      "repo": "akitaonrails/akitando-news",
+      "commits": 577,
+      "code_added": 80602,
+      "prose_added": 13034,
+      "prs": 1,
+      "issues": 0,
+      "private": true
+    },
+    {
+      "name": "ai-usagebar",
+      "repo": "akitaonrails/ai-usagebar",
+      "commits": 553,
+      "code_added": 132932,
+      "prose_added": 9718,
+      "prs": 146,
+      "issues": 42,
+      "private": false
+    },
+    {
+      "name": "distrobox-gaming",
+      "repo": "akitaonrails/distrobox-gaming",
+      "commits": 497,
+      "code_added": 47622,
+      "prose_added": 16918,
+      "prs": 2,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "FrankMD",
+      "repo": "akitaonrails/FrankMD",
+      "commits": 361,
+      "code_added": 81237,
+      "prose_added": 2590,
+      "prs": 42,
+      "issues": 45,
+      "private": false
+    },
+    {
+      "name": "llm-coding-benchmark",
+      "repo": "akitaonrails/llm-coding-benchmark",
+      "commits": 359,
+      "code_added": 17636,
+      "prose_added": 19593,
+      "prs": 5,
+      "issues": 7,
+      "private": false
+    },
+    {
+      "name": "ai-jail",
+      "repo": "akitaonrails/ai-jail",
+      "commits": 353,
+      "code_added": 41666,
+      "prose_added": 5160,
+      "prs": 44,
+      "issues": 83,
+      "private": false
+    },
+    {
+      "name": "frank_yomik",
+      "repo": "akitaonrails/FrankYomik",
+      "commits": 248,
+      "code_added": 53833,
+      "prose_added": 3405,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "frank_go",
+      "repo": "akitaonrails/frank_go",
+      "commits": 220,
+      "code_added": 16725,
+      "prose_added": 3196,
+      "prs": 3,
+      "issues": 1,
+      "private": false
+    },
+    {
+      "name": "frank_investigator",
+      "repo": "akitaonrails/frank_investigator",
+      "commits": 189,
+      "code_added": 45365,
+      "prose_added": 2356,
+      "prs": 1,
+      "issues": 2,
+      "private": false
+    },
+    {
+      "name": "frankclaw",
+      "repo": "akitaonrails/FrankClaw",
+      "commits": 189,
+      "code_added": 69114,
+      "prose_added": 5633,
+      "prs": 3,
+      "issues": 2,
+      "private": false
+    },
+    {
+      "name": "frank_sherlock",
+      "repo": "akitaonrails/FrankSherlock",
+      "commits": 121,
+      "code_added": 48930,
+      "prose_added": 1996,
+      "prs": 2,
+      "issues": 8,
+      "private": false
+    },
+    {
+      "name": "frank_karaoke",
+      "repo": "akitaonrails/frank_karaoke",
+      "commits": 102,
+      "code_added": 10465,
+      "prose_added": 1129,
+      "prs": 4,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "frank_fbi",
+      "repo": "akitaonrails/frank_fbi",
+      "commits": 79,
+      "code_added": 25498,
+      "prose_added": 898,
+      "prs": 1,
+      "issues": 3,
+      "private": false
+    },
+    {
+      "name": "frank_mega",
+      "repo": "akitaonrails/FrankMega",
+      "commits": 62,
+      "code_added": 10965,
+      "prose_added": 610,
+      "prs": 2,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "clock-tui",
+      "repo": "akitaonrails/clock-tui",
+      "commits": 54,
+      "code_added": 7276,
+      "prose_added": 556,
+      "prs": 10,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "frank_type",
+      "repo": "akitaonrails/frank_type",
+      "commits": 49,
+      "code_added": 9815,
+      "prose_added": 443,
+      "prs": 3,
+      "issues": 2,
+      "private": false
+    },
+    {
+      "name": "github-pending",
+      "repo": "akitaonrails/ghpending",
+      "commits": 40,
+      "code_added": 6081,
+      "prose_added": 287,
+      "prs": 3,
+      "issues": 2,
+      "private": false
+    },
+    {
+      "name": "FrankGeary",
+      "repo": "akitaonrails/frank_geary",
+      "commits": 34,
+      "code_added": 1157,
+      "prose_added": 220,
+      "prs": 1,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "tropicalruby2026",
+      "repo": "akitaonrails/tropicalruby-2026",
+      "commits": 30,
+      "code_added": 2201,
+      "prose_added": 5224,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "ai-memory-web",
+      "repo": "akitaonrails/ai-memory-web",
+      "commits": 22,
+      "code_added": 9775,
+      "prose_added": 3452,
+      "prs": 1,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "frank_scanlation",
+      "repo": "akitaonrails/frank_scanlation",
+      "commits": 21,
+      "code_added": 8904,
+      "prose_added": 280,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "omarchy-games-menu",
+      "repo": "akitaonrails/omarchy-games-menu",
+      "commits": 17,
+      "code_added": 6951,
+      "prose_added": 310,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "aitrepreneur-docker",
+      "repo": "akitaonrails/aitrepreneur-docker",
+      "commits": 13,
+      "code_added": 781,
+      "prose_added": 625,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "google-calendar-tui",
+      "repo": "akitaonrails/google-calendar-tui",
+      "commits": 12,
+      "code_added": 3956,
+      "prose_added": 245,
+      "prs": 0,
+      "issues": 1,
+      "private": false
+    },
+    {
+      "name": "ai-jail-web",
+      "repo": "akitaonrails/ai-jail-web",
+      "commits": 10,
+      "code_added": 2887,
+      "prose_added": 1316,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "frank_lyrics",
+      "repo": "akitaonrails/frank_lyrics",
+      "commits": 9,
+      "code_added": 2346,
+      "prose_added": 118,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "ai-toolkit-web",
+      "repo": "akitaonrails/ai-toolkit-web",
+      "commits": 3,
+      "code_added": 2778,
+      "prose_added": 651,
+      "prs": 0,
+      "issues": 0,
+      "private": false
+    },
+    {
+      "name": "frank_bazaar",
+      "repo": null,
+      "commits": 1,
+      "code_added": 1769,
+      "prose_added": 0,
+      "prs": null,
+      "issues": null,
+      "private": null
+    }
+  ]
+}

@@ -15,7 +15,7 @@ import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
 import tclockShot from '@/assets/img/shots/tclock-nerv.png';
-import { sisters } from '@/data/site';
+import { sisters, site } from '@/data/site';
 import { pick } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
@@ -135,6 +135,16 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
         <div class="mt-6"><PullQuote {...raw<Quote>('independence.quote')} /></div>
       </div>
     </aside>
+    <div id="contact" class="contact mt-14 scroll-mt-24 grid gap-8 md:grid-cols-[1fr_1.2fr] items-start">
+      <div>
+        <h3 class="text-2xl">{t('contact.title')}</h3>
+        <p class="mt-3 text-lg" set:html={t('contact.text', { email: site.email })} />
+      </div>
+      <aside data-hue="red" class="warn">
+        <h4 class="font-display font-bold text-lg" style="color:var(--hue)">{t('contact.warningTitle')}</h4>
+        <p class="mt-2">{t('contact.warning')}</p>
+      </aside>
+    </div>
   </Section>
 
   <CtaBand />
@@ -151,6 +161,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   .desk-steps .num { display: grid; place-items: center; inline-size: 2.4rem; block-size: 2.4rem; border-radius: 99px; font-family: var(--font-mono); font-weight: 700; background: var(--hue-soft); color: var(--hue); box-shadow: 0 0 0 1.5px var(--hue-vivid); }
   .desk-steps :global(a) { color: var(--hue); text-decoration: underline; text-underline-offset: 0.2em; }
   .desk-steps[data-focus-ready] > li[data-state='ahead'] { opacity: 0.45; }
+  .warn { padding: 1.4rem 1.6rem; border-radius: var(--radius); background: var(--hue-soft); border-inline-start: 4px solid var(--hue-vivid); }
   .indie { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; padding: 1.6rem; border-radius: var(--radius); background: var(--hue-soft); }
   .indie .dot { margin-block-start: 0.45rem; }
   .pair { border-color: color-mix(in oklch, var(--hue-vivid) 45%, var(--line)); display: flex; flex-direction: column; align-items: flex-start; }

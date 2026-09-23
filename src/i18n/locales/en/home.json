@@ -137,5 +137,11 @@
     "title": "Five long conversations, on video",
     "text": "Flow, Inteligência Ltda, Fernando Ulrich and a Tropical on Rails talk: hours about AI, programming jobs and the hype, plus the short cuts if you are in a hurry.",
     "link": "Watch them"
+  },
+  "contact": {
+    "title": "How to contact me",
+    "text": "Write to <a class=\"link\" href=\"mailto:{email}\">{email}</a>.",
+    "warningTitle": "Before you write",
+    "warning": "Do not try to sell me anything, and do not offer sponsorships: I will not answer those. There is no automatic \"received\" reply. If I do not answer, I was not interested."
   }
 }

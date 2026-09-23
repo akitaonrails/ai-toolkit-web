@@ -21,6 +21,7 @@ This site is an umbrella: many small tools, one person, one workflow. There is n
 | ai-memory | teal | `teal` |
 | Writing, the benchmark, the newsletter | rose | `rose` |
 | Games, ai-jail | orange | `orange` |
+| Setup (third-party tools), ai-memory's punchline | teal | `teal` |
 
 The mapping for pages lives in `src/data/site.ts` (`nav`, `extras`, `sisters`, `social`). Put `data-hue` on an element and its children can use `var(--hue)` (text-safe), `var(--hue-soft)` (fill) and `var(--hue-vivid)` (dots, rules, glows; never text).
 
@@ -54,7 +55,7 @@ Hubot Sans for headlines (800, width 112%; the home h1 goes to 118%), Mona Sans 
 | `ToolBlock` | One tool on the home page: screenshot, tagline, points, install command, links. `flip` alternates sides. |
 | `RepoMeta` | GitHub link, stars and latest release of a repo in `src/data/repos.json`, read at build time. |
 | `FeatureGrid` | Two to six short points; items with `href` become cells. |
-| `Stats` | Numbers that count up. Props: `items[{n,label,prefix,suffix}]`. Numbers come from `src/data`. |
+| `Stats` | Numbers that count up. Props: `items[{n,label,prefix,suffix,display}]`, `cols`. `display` shows fixed text ("1.08M") for figures too wide to count in full. Numbers come from `src/data`. |
 | `Benchmark` | The LLM Benchmark v4 feature (home and writing). |
 | `ArticleList` | Blog posts as cells. Props: `items` from `pick()` in `src/data/articles.ts`. |
 | `PullQuote` | One of the owner's known phrases, placed next to the subject it is about. Props: `text`, `original` (Portuguese wording), `cite`, `large`. Use each phrase once, never as a gallery. |

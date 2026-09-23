@@ -51,6 +51,10 @@
     },
     "follow": {
       "label": "Follow"
+    },
+    "setup": {
+      "label": "Setup",
+      "note": "Omarchy, tmux, and what I set aside"
     }
   },
   "kicker": {
@@ -61,7 +65,8 @@
     "writing": "Writing",
     "newsletter": "Newsletter",
     "podcasts": "Podcasts",
-    "games": "After hours"
+    "games": "After hours",
+    "setup": "Setup"
   },
   "code": {
     "copy": "Copy",
@@ -121,7 +126,8 @@
       "light": "Light",
       "dark": "Dark"
     },
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "contact": "Contact"
   },
   "notfound": {
     "title": "Nothing pending here",
