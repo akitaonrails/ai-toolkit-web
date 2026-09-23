@@ -4,8 +4,8 @@
     "description": "How Fabio Akita uses AI agents to keep Steam games, emulators, PC ports and decomps in an idempotent Ansible repo inside a distrobox, with his own Omarchy launcher on top."
   },
   "hero": {
-    "title": "My game collection, as code",
-    "lede": "Steam games, emulators, PC ports, decompilations, recompilations, fan games and mod packs. AI agents installed, configured and documented all of it into one Ansible repository that runs inside a container, so my Omarchy desktop never sees their dependencies. On top sits a launcher I wrote to make it look like a console.",
+    "title": "Not everything is work. Even I need to play.",
+    "lede": "And my idea of relaxing is, of course, turning my game collection into a software project. Steam games, emulators, PC ports, decompilations, fan games and mod packs, all installed, configured and documented by AI agents in one Ansible repository. It runs inside a container, so my Omarchy desktop never sees a single one of their dependencies. On top sits a launcher I wrote, so the whole thing feels like a console.",
     "primary": "distrobox-gaming",
     "secondary": "omarchy-games-menu",
     "shotAlt": "My games launcher on Omarchy: a fullscreen grid of 52 game covers including Banjo-Kazooie Recompiled, OutRun, the Colin McRae Rally series, Donkey Kong Country and DOOM 3, with category chips and sort buttons on top.",

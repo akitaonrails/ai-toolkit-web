@@ -53,6 +53,12 @@ export const thirdParty = {
   conductor: 'https://www.conductor.build', claudeSquad: 'https://github.com/smtg-ai/claude-squad',
 };
 
+/** Tools with their own sites, listed after the on-site tools in the Tools menu and drawer. Labels in common.json nav.<id>. */
+export const externalTools: NavLink[] = [
+  { id: 'memory', href: sisters.memory.url, hue: sisters.memory.hue },
+  { id: 'jail', href: sisters.jail.url, hue: sisters.jail.hue },
+];
+
 export const newsletter = { url: 'https://themakitachronicles.com', blog: 'https://blog.themakitachronicles.com', spotify: 'https://open.spotify.com/show/7MzG2UB7IAkC3GAwEXEIVD' };
 
 /** Where to follow. Handles and descriptions live in common.json under social.<id>. */

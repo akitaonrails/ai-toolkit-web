@@ -59,6 +59,14 @@
     "tools": {
       "label": "Tools",
       "note": "ai-usagebar, ghpending and tclock"
+    },
+    "memory": {
+      "label": "ai-memory",
+      "note": "Long-term memory for coding agents"
+    },
+    "jail": {
+      "label": "ai-jail",
+      "note": "An OS sandbox for AI coding agents"
     }
   },
   "kicker": {

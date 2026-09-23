@@ -39,7 +39,7 @@ Hubot Sans for headlines (800, width 112%; the home h1 goes to 118%), Mona Sans 
 - Left aligned. Only the closing CTA band is centered.
 - Open layouts over boxes. `.cell` is for things you click.
 - Mobile first. Every grid collapses to one column. The page must never scroll sideways at 360px (`document.documentElement.scrollWidth === innerWidth`).
-- The inline nav appears at `xl` (1280px); below that, the drawer. The tool pages (`toolIds` in `src/data/site.ts`) sit under one "Tools" menu in the top bar and under a "Tools" heading in the drawer.
+- The inline nav appears at `xl` (1280px); below that, the drawer. The tool pages (`toolIds` in `src/data/site.ts`) sit under one "Tools" menu in the top bar and under a "Tools" heading in the drawer, followed by the tools with their own sites (`externalTools`: ai-memory, ai-jail), marked with an arrow.
 
 ## Components (`src/components`)
 
