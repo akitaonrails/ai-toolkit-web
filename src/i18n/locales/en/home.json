@@ -10,7 +10,8 @@
     "secondary": "Where to follow me",
     "shotAlt": "My second monitor: tclock showing 16:10:22 in large red digits, a GitHub pending widget listing open pull requests and issues for ai-memory and ai-usagebar, a Google Calendar widget and a system health strip.",
     "shotCaption": "My second monitor on a normal Thursday. 43 repositories checked, 6 with something waiting.",
-    "portraitAlt": "Illustrated portrait of Fabio Akita: grey hair, round glasses, white shirt and a dark tie, looking up with a confident half smile."
+    "portraitAlt": "Illustrated portrait of Fabio Akita: grey hair, round glasses, white shirt and a dark tie, looking up with a confident half smile.",
+    "intro": "I am Fabio Akita: a programmer for more than 30 years, entrepreneur, speaker, writer and former YouTuber. <a class=\"link\" href=\"{linkedin}\">My LinkedIn</a> has the long version."
   },
   "desk": {
     "title": "One desk, two monitors, many agents",

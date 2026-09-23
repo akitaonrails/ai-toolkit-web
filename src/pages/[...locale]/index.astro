@@ -16,7 +16,7 @@ import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
 import tclockShot from '@/assets/img/shots/tclock-nerv.png';
-import { sisters, site } from '@/data/site';
+import { sisters, site, social } from '@/data/site';
 import { pick } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
@@ -46,7 +46,8 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
         <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{t('hero.kicker')}</div>
         <h1 class="text-4xl hero-title" data-reveal>{t('hero.title')}</h1>
         <div class="spectrum-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
-        <p class="lede mt-7 !text-[1.3rem]">{t('hero.lede')}</p>
+        <p class="intro mt-7" set:html={t('hero.intro', { linkedin: social.find((s) => s.id === 'linkedin')!.url })} />
+        <p class="lede mt-4 !text-[1.3rem]">{t('hero.lede')}</p>
         <div class="mt-9 flex flex-wrap gap-3">
           <a href={href('/workflow/')} class="btn btn-primary">{t('hero.primary')}</a>
           <a href="#follow" class="btn btn-ghost">{t('hero.secondary')}</a>
@@ -153,6 +154,8 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 
 <style>
   .hero { background: var(--bg); transform-origin: 50% 100%; }
+  .intro { font-size: var(--text-lg); line-height: 1.5; max-width: 34em; }
+  .intro :global(a) { color: var(--blue); }
   .hero-title { font-stretch: 118%; letter-spacing: -0.03em; }
 
   .desk-steps { display: grid; gap: 2.5rem 3rem; margin-block-start: 1rem; }

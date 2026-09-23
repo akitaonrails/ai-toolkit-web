@@ -47,7 +47,7 @@
     },
     "games": {
       "label": "Games",
-      "note": "My emulator setup, as code"
+      "note": "My game collection as code, on Omarchy"
     },
     "follow": {
       "label": "Follow"
@@ -55,6 +55,10 @@
     "setup": {
       "label": "Setup",
       "note": "Omarchy, tmux, and what I set aside"
+    },
+    "tools": {
+      "label": "Tools",
+      "note": "ai-usagebar, ghpending and tclock"
     }
   },
   "kicker": {

@@ -78,6 +78,7 @@ YouTube answers bursts of requests with a bot check. `refresh-videos.mjs` caches
 
 | Source | Lands in |
 |---|---|
+| Owner's instructions (2026-09-23): the intro line (programmer for 30+ years, entrepreneur, speaker, writer, former YouTuber) linking to LinkedIn | `home.json` `hero.intro` |
 | Owner's instructions (2026-09-23): contact email `boss@akitaonrails.com` and the warning that goes with it (no sales, no sponsorship, no automatic reply, silence means no) | `site.ts` `site.email`, `home.json` `contact`, footer `Contact` link to `/#contact` |
 | Owner's instructions (2026-09-23): runs Omarchy and donated to its foundation; tmux mainly so nothing dies when a terminal closes; tried Herdr and agent orchestrators and did not need them personally, without calling them useless; memory matters most | `setup.json`, `setup.astro`. Third-party facts below |
 | Owner's instructions (2026-09-23): social networks and what each is for; the phrases he is known for; "not a paid content creator, no sponsorship, no Patreon, no subscriptions, no monetized views, self-sustained, does it for leisure" | `common.json` `social` and `footer.about`; `home.json` `independence`. The phrases are spread, one per place: "excitement is inversely proportional" in `home.json` `writing.quote`, "ship first, fix later" in `home.json` `loop.quote`, "voluntary trade" in `home.json` `independence.quote`, "AI is a mirror" in `workflow.json` `numbers.quote`, "apologize rather than ask permission" in `writing.json` `sections.opinions.quote` |
