@@ -182,6 +182,8 @@ and add it to `EXCLUDE` when it is data, vendored or generated.
 
 **The smaller ones.** The owner added five more the same day, shown as compact cards (`small` in `frank.ts`): frank_mangaplus, frank_go, frank_type, frank_lyrics and frank_geary. Their "itch" lines come from the owner's own reasons in the day-to-day post (2026-07-12), the Frank GO post and the READMEs. For Frank Geary the README's sidebar screenshot is used, since its autocomplete screenshot shows real email addresses.
 
+**Owner's swap (2026-09-24).** Frank Manga+ moved up to the main six (next to Frank Yomik) and Frank Karaoke down to the smaller ones (next to Frank Lyrics), so the main six are the owner's pick, no longer strictly the most starred. The main section's lede says "my main ones" for that reason.
+
 **What each card says.** The first paragraph and feature list of each README (local checkouts in `~/Projects`: FrankMD, frank_sherlock, frank_yomik, frank_mega, frank_karaoke, frank_scanlation, FrankGeary, frank_type, frank_go, frank_lyrics; frank_mangaplus has no local checkout, clone it). The "itch" line paraphrases the README's own reason for the project. The screenshot is the README's main image, copied to `src/assets/img/shots/frank-*.jpg` (FrankMD's comes from its S3 link; Frank Karaoke's landscape score shot is cropped to 16:9 on the score side).
 
 **The name.** Frank Rosenblatt and the Perceptron (1957): the FrankMD README and the FrankMD part 1 post; the first AI hype and AI winter: the "RANT: Did AI Kill Programmers?" post. The Frankenstein double meaning, "niche itches" and "test beds for the AI workflow": the owner's own words, 2026-09-24.

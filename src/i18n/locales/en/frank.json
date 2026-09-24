@@ -19,7 +19,7 @@
   },
   "projects": {
     "title": "Six of them worth a look",
-    "lede": "The most starred ones that I still maintain. Each card links the repository and the posts where I wrote about it.",
+    "lede": "My main ones, all still maintained. Each card links the repository and the posts where I wrote about it.",
     "itch": "The itch:",
     "items": {
       "frankmd": {
