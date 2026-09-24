@@ -7,7 +7,7 @@ import CodeBlock from '@/components/CodeBlock.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import Related from '@/components/Related.astro';
 import { related, articles, articleUrl } from '@/data/articles';
-import { sisters, thirdParty } from '@/data/site';
+import { sisterUrl, thirdParty } from '@/data/site';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
@@ -61,7 +61,7 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
 
   <Section title={t('memory.title')} lede={t('memory.lede')} hue="teal" tint fill>
     <div class="flex flex-wrap gap-3">
-      <a href={sisters.memory.url} class="btn btn-primary">{t('memory.site')}</a>
+      <a href={sisterUrl('memory', locale)} class="btn btn-primary">{t('memory.site')}</a>
       <a href={href('/workflow/')} class="btn btn-ghost">{t('memory.workflow')}</a>
     </div>
     <div class="mt-14 max-w-3xl"><Related ids={related.memory} /></div>

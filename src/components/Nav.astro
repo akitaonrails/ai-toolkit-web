@@ -1,5 +1,5 @@
 ---
-import { nav, site, toolIds, externalTools } from '@/data/site';
+import { nav, site, toolIds, externalTools, sisterUrl } from '@/data/site';
 import { useI18n, languageLinks } from '@/i18n';
 import { locales } from '@/i18n/config';
 const { t, href, locale } = useI18n(Astro);
@@ -34,7 +34,7 @@ const onTool = tools.some((l) => path === href(l.href));
             ))}
             <span class="menu-sep" aria-hidden="true"></span>
             {externalTools.map((tool) => (
-              <a href={tool.href} data-hue={tool.hue} class="tool-item" aria-label={`${t(`nav.${tool.id}.label`)} (${t('a11y.external')})`}>
+              <a href={sisterUrl(tool.id, locale)} data-hue={tool.hue} class="tool-item" aria-label={`${t(`nav.${tool.id}.label`)} (${t('a11y.external')})`}>
                 <span class="dot" aria-hidden="true"></span>
                 <span><span class="flex items-center gap-1.5 font-display font-bold">{t(`nav.${tool.id}.label`)}<svg class="ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="block text-sm text-muted">{t(`nav.${tool.id}.note`)}</span></span>
               </a>
@@ -83,7 +83,7 @@ const onTool = tools.some((l) => path === href(l.href));
         <span><span class="block font-display font-bold text-lg leading-tight">{t(`nav.${l.id}.label`)}</span><span class="block text-sm text-muted">{t(`nav.${l.id}.note`)}</span></span>
       </a>
       {i === firstTool + tools.length - 1 && externalTools.map((tool) => (
-        <a href={tool.href} data-hue={tool.hue} class="drawer-link drawer-sub">
+        <a href={sisterUrl(tool.id, locale)} data-hue={tool.hue} class="drawer-link drawer-sub">
           <span class="dot" aria-hidden="true"></span>
           <span><span class="flex items-center gap-1.5 font-display font-bold text-lg leading-tight">{t(`nav.${tool.id}.label`)}<svg class="ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="block text-sm text-muted">{t(`nav.${tool.id}.note`)}</span></span>
         </a>

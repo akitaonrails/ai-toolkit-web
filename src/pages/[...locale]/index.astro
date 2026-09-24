@@ -15,7 +15,7 @@ import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
 import tclockShot from '@/assets/img/shots/tclock-nerv.png';
-import { sisters, site, social } from '@/data/site';
+import { sisters, sisterUrl, site, social } from '@/data/site';
 import { pick, articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
@@ -32,8 +32,8 @@ const tools = withText([
   { id: 'tclock', name: 'tclock', hue: 'red', href: '/clock-tui/', post: 'dayToDay', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
 ] as const, raw<Tool[]>('tools.items'));
 const bigger = withText([
-  { hue: sisters.memory.hue, href: sisters.memory.url },
-  { hue: sisters.jail.hue, href: sisters.jail.url },
+  { hue: sisters.memory.hue, href: sisterUrl('memory', locale) },
+  { hue: sisters.jail.hue, href: sisterUrl('jail', locale) },
   { hue: 'violet', href: '/workflow/' },
 ] as const, raw<(Text & { link: string })[]>('sisters.items'));
 const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cleanCode');
@@ -85,7 +85,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   <Section title={t('switch.title')} lede={t('switch.lede')} hue="teal">
     <Figure name="home-switch" alt={t('switch.alt')} />
     <div class="flex flex-wrap gap-3">
-      <a href={sisters.memory.url} class="btn btn-ghost">{t('switch.memory')}</a>
+      <a href={sisterUrl('memory', locale)} class="btn btn-ghost">{t('switch.memory')}</a>
       <a href={href('/ai-usagebar/')} class="btn btn-ghost">{t('switch.usagebar')}</a>
       <a href={articleUrl({ id: 'memorySwitch', ...articles.memorySwitch }, locale)} class="btn btn-ghost">{t('switch.post')}</a>
     </div>

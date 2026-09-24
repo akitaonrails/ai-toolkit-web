@@ -45,6 +45,9 @@ export const sisters = {
   jail: { url: 'https://aijail.io', hue: 'orange' as Hue },
   memory: { url: 'https://aimemorybr.netlify.app', hue: 'teal' as Hue },
 };
+export type SisterId = keyof typeof sisters;
+/** Both sister sites use the same routes as this one (English at the root, the rest under /<locale>/), so readers stay in their language. */
+export const sisterUrl = (id: SisterId, locale = 'en') => `${sisters[id].url}/${locale === 'en' ? '' : `${locale}/`}`;
 
 /** Third-party tools on the setup page. */
 export const thirdParty = {
@@ -54,9 +57,9 @@ export const thirdParty = {
 };
 
 /** Tools with their own sites, listed after the on-site tools in the Tools menu and drawer. Labels in common.json nav.<id>. */
-export const externalTools: NavLink[] = [
-  { id: 'memory', href: sisters.memory.url, hue: sisters.memory.hue },
-  { id: 'jail', href: sisters.jail.url, hue: sisters.jail.hue },
+export const externalTools: { id: SisterId; hue: Hue }[] = [
+  { id: 'memory', hue: sisters.memory.hue },
+  { id: 'jail', hue: sisters.jail.hue },
 ];
 
 export const newsletter = { url: 'https://themakitachronicles.com', blog: 'https://blog.themakitachronicles.com', spotify: 'https://open.spotify.com/show/7MzG2UB7IAkC3GAwEXEIVD' };

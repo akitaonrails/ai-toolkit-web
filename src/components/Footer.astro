@@ -1,5 +1,5 @@
 ---
-import { nav, extras, site, social, sisters, repoUrl } from '@/data/site';
+import { nav, extras, site, social, sisterUrl, repoUrl } from '@/data/site';
 import { useI18n, languageLinks } from '@/i18n';
 const { t, href, locale } = useI18n(Astro);
 const languages = languageLinks(Astro.url.pathname);
@@ -17,8 +17,8 @@ const languages = languageLinks(Astro.url.pathname);
     </nav>
     <div class="grid gap-2 content-start">
       <span class="font-display font-bold">{t('footer.sisters')}</span>
-      <a href={sisters.memory.url} class="hover:text-text text-muted py-1.5">ai-memory</a>
-      <a href={sisters.jail.url} class="hover:text-text text-muted py-1.5">ai-jail</a>
+      <a href={sisterUrl('memory', locale)} class="hover:text-text text-muted py-1.5">ai-memory</a>
+      <a href={sisterUrl('jail', locale)} class="hover:text-text text-muted py-1.5">ai-jail</a>
       <a href={repoUrl('skills')} class="hover:text-text text-muted py-1.5">my-skills</a>
     </div>
     <div class="grid gap-2 content-start">
