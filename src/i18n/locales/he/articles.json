@@ -128,6 +128,34 @@
     "marathon": {
       "title": "מסכם את מרתון ה-AI שלי: הצלחה או כישלון?",
       "summary": "500 שעות ב-24 מאגרים, מדורגים, ולמה code review ו-XP קובעים אם ה-AI עוזר."
+    },
+    "frankmdPost": {
+      "title": "בניתי עורך Markdown מאפס עם Claude Code (FrankMD), חלק 1",
+      "summary": "שלושה ימים של vibe coding על עורך Markdown באירוח עצמי שמותאם לדרך שבה אני כותב בבלוג."
+    },
+    "megaPost": {
+      "title": "בניתי שיבוט של Mega ב-Rails ביום אחד לשרת הביתי שלי",
+      "summary": "FrankMega ב-Rails 8 ביום אחד, ולמה ניסיון עדיין חשוב ב-vibe coding."
+    },
+    "sherlockPost": {
+      "title": "בניתי מאנדקס תמונות חכם עם AI ביומיים (Frank Sherlock)",
+      "summary": "קטלוג תמונות מקומי מבוסס AI לשולחן העבודה, שנבנה בסוף שבוע עם Claude Code."
+    },
+    "neverDone": {
+      "title": "תוכנה אף פעם לא גמורה: ארבעה פרויקטים והחיים אחרי ה-deploy",
+      "summary": "125 קומיטים אחרי ההשקה בארבעה פרויקטים בעשרה ימים, ולמה one-shot prompt הוא מיתוס."
+    },
+    "yomikFail": {
+      "title": "הכישלון הראשון שלי ב-vibe coding ואיך תיקנתי אותו (Frank Yomik)",
+      "summary": "ימים של זיהוי בועות עם OpenCV שנזרקו ונבנו מחדש בתוך שעות על מודל מאומן מראש."
+    },
+    "karaokePost": {
+      "title": "הופכים את YouTube לאפליקציית קריוקי (Frank Karaoke)",
+      "summary": "אפליקציית Flutter שנותנת ציון לשירה שלכם בזמן אמת על סרטוני קריוקי ב-YouTube, בארבעה מצבים."
+    },
+    "mangaSolution": {
+      "title": "פתרון מנגה מלא: Frank Manga+,‏ Frank Yomik ו-Prettify",
+      "summary": "MANGA Plus בשולחן העבודה, קורא טוב יותר לאתרים ול-Kindle, ו-furigana או תרגום לעמודים ביפנית ובקוריאנית."
     }
   },
   "related": {

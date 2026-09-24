@@ -7,5 +7,11 @@
   "jail": "akitaonrails/ai-jail",
   "benchmark": "akitaonrails/llm-coding-benchmark",
   "distrobox": "akitaonrails/distrobox-gaming",
-  "gamesMenu": "akitaonrails/omarchy-games-menu"
+  "gamesMenu": "akitaonrails/omarchy-games-menu",
+  "frankmd": "akitaonrails/FrankMD",
+  "sherlock": "akitaonrails/FrankSherlock",
+  "yomik": "akitaonrails/FrankYomik",
+  "mega": "akitaonrails/FrankMega",
+  "karaoke": "akitaonrails/frank_karaoke",
+  "scanlation": "akitaonrails/frank_scanlation"
 }

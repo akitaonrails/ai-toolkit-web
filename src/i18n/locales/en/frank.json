@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "The Frank projects",
+    "description": "FrankMD, Frank Sherlock, Frank Yomik and more: small open source experiments by Fabio Akita, named after Frank Rosenblatt, built to scratch his own itches."
+  },
+  "hero": {
+    "kicker": "Side projects",
+    "title": "Frank, as in Rosenblatt. And Frankenstein.",
+    "lede": "Small open source apps I built with AI agents to solve my own problems. Each one is useful to me, and most of them only to people with the same very specific need.",
+    "primary": "See the projects",
+    "secondary": "All of them on GitHub"
+  },
+  "name": {
+    "title": "Why they are all called Frank",
+    "paragraphs": [
+      "Frank Rosenblatt built the <strong>Perceptron</strong> in 1957, the original neural network and the ancestor of every LLM I use today. He also promised machines smarter than people \"very soon\", the newspapers ran with it, and the first AI winter followed. These apps were written with AI, so the name is a small tribute to him.",
+      "The other Frank is Frankenstein. These are experiments, stitched together to see what agents can build, and I make no promise that they are robust. Each one scratches a very niche itch of mine. They were also my test beds: building them is how I worked out the agent workflow I use every day."
+    ]
+  },
+  "projects": {
+    "title": "Six of them worth a look",
+    "lede": "The most starred ones that I still maintain. Each card links the repository and the posts where I wrote about it.",
+    "itch": "The itch:",
+    "items": {
+      "frankmd": {
+        "name": "FrankMD",
+        "text": "A self-hosted Markdown editor and notes organizer. No database: notes are plain files on disk. It starts with one Docker command, and the fed command opens any folder in it.",
+        "itch": "an editor built around the way I write blog posts."
+      },
+      "sherlock": {
+        "name": "Frank Sherlock",
+        "text": "Point it at a folder of photos, PDFs and videos, and a local vision model describes every file, reads the text with OCR and indexes it all. Then search for \"receipt from market of $42.00\". It also finds duplicates and groups faces. Nothing leaves the machine.",
+        "itch": "finding one image among thousands on my NAS without sending them anywhere."
+      },
+      "yomik": {
+        "name": "Frank Yomik",
+        "text": "Read Japanese and Korean comics in the original. It finds the speech bubbles, reads them with OCR, and translates them with a local LLM or adds furigana. Hold the pointer over the page and a magnifier shows the result. There is an Android and Linux app and a Chromium extension.",
+        "itch": "reading manga in Japanese and looking up only the parts I get stuck on."
+      },
+      "mega": {
+        "name": "FrankMega",
+        "text": "File sharing for a home server. Upload a file and get a link that expires after a set time or number of downloads. Invite-only, with passkeys and two-factor login, and no external services.",
+        "itch": "sending big files to family and friends without a third-party service."
+      },
+      "karaoke": {
+        "name": "Frank Karaoke",
+        "text": "An Android app that wraps YouTube and scores your singing live, from the video's audio and your microphone, with no song files. Four scoring modes and pitch shift. The scoring is still experimental.",
+        "itch": "a score for any karaoke video on YouTube."
+      },
+      "scanlation": {
+        "name": "Frank Scanlation",
+        "text": "A Kindle-like desktop reader for scanlation sites. Paste a site's address and it becomes a library card with cover art, chapter tracking and a badge when new chapters land. Linux, macOS and Windows.",
+        "itch": "scanlation sites are bright, full of ads and one long scroll."
+      }
+    },
+    "more": "I have {n} public Frank repositories on GitHub as of {date}. The others are less popular or not finished.",
+    "all": "See every Frank repository"
+  },
+  "note": {
+    "title": "Use them at your own risk",
+    "text": "These are experiments. They work for me, on my machines, for what I need. If one fits your need too, good. If it breaks, the code is open and yours to fix."
+  },
+  "next": [
+    { "title": "The workflow", "text": "The agents and skills I tried out on these projects." },
+    { "title": "Games", "text": "Another itch: my game collection as code." }
+  ]
+}

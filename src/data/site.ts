@@ -24,6 +24,7 @@ export const nav: NavLink[] = [
   { id: 'usagebar', href: '/ai-usagebar/', hue: 'blue' },
   { id: 'ghpending', href: '/ghpending/', hue: 'amber' },
   { id: 'tclock', href: '/clock-tui/', hue: 'red' },
+  { id: 'frank', href: '/frank/', hue: 'violet' },
   { id: 'writing', href: '/writing/', hue: 'rose' },
   { id: 'newsletter', href: '/newsletter/', hue: 'rose' },
   { id: 'podcasts', href: '/podcasts/', hue: 'amber' },
@@ -32,7 +33,7 @@ export const nav: NavLink[] = [
 ];
 export const extras: NavLink[] = [];
 /** In the top bar these pages sit under one "Tools" menu, placed where the first of them appears in `nav`. */
-export const toolIds = ['usagebar', 'ghpending', 'tclock'];
+export const toolIds = ['usagebar', 'ghpending', 'tclock', 'frank'];
 
 /** Repositories whose stars and latest release the build reads (src/data/github.ts). The list is JSON so the
     plain-JS snapshot script can read it too. */

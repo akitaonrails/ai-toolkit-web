@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Los proyectos Frank",
+    "description": "FrankMD, Frank Sherlock, Frank Yomik y más: pequeños experimentos open source de Fabio Akita, en honor a Frank Rosenblatt, para necesidades muy específicas."
+  },
+  "hero": {
+    "kicker": "Proyectos paralelos",
+    "title": "Frank, por Rosenblatt. Y por Frankenstein.",
+    "lede": "Pequeñas apps open source que hice con agentes de IA para resolver mis propios problemas. Todas me sirven a mí, y la mayoría solo a quien tenga exactamente la misma necesidad muy específica.",
+    "primary": "Ver los proyectos",
+    "secondary": "Todos en GitHub"
+  },
+  "name": {
+    "title": "Por qué todos se llaman Frank",
+    "paragraphs": [
+      "Frank Rosenblatt creó el <strong>Perceptrón</strong> en 1957, la red neuronal original y el ancestro de cada LLM que uso hoy. También prometió máquinas más inteligentes que las personas \"muy pronto\", los periódicos se lo creyeron y llegó el primer invierno de la IA. Estas apps se escribieron con IA, así que el nombre es un pequeño homenaje a él.",
+      "El otro Frank es Frankenstein. Son experimentos, cosidos para ver qué pueden construir los agentes, y no prometo que sean robustos. Cada uno resuelve una necesidad mía muy de nicho. También fueron mis bancos de pruebas: construyéndolos definí el flujo de trabajo con agentes que uso todos los días."
+    ]
+  },
+  "projects": {
+    "title": "Seis que vale la pena ver",
+    "lede": "Los que tienen más estrellas y que sigo manteniendo. Cada tarjeta enlaza el repositorio y los posts donde escribí sobre él.",
+    "itch": "Lo que me picaba:",
+    "items": {
+      "frankmd": {
+        "name": "FrankMD",
+        "text": "Un editor de Markdown y organizador de notas self-hosted. Sin base de datos: las notas son archivos normales en el disco. Arranca con un comando de Docker, y el comando fed abre cualquier carpeta en él.",
+        "itch": "un editor pensado para cómo escribo los posts del blog."
+      },
+      "sherlock": {
+        "name": "Frank Sherlock",
+        "text": "Apúntalo a una carpeta de fotos, PDFs y videos, y un modelo de visión local describe cada archivo, lee el texto con OCR e indexa todo. Después busca \"recibo del súper de $42.00\". También encuentra duplicados y agrupa caras. Nada sale de la máquina.",
+        "itch": "encontrar una imagen entre miles en mi NAS sin mandarlas a ningún lado."
+      },
+      "yomik": {
+        "name": "Frank Yomik",
+        "text": "Lee cómics japoneses y coreanos en el original. Encuentra los globos de diálogo, los lee con OCR y los traduce con un LLM local o les agrega furigana. Mantén el puntero sobre la página y una lupa muestra el resultado. Hay una app para Android y Linux y una extensión para Chromium.",
+        "itch": "leer manga en japonés y consultar solo las partes donde me atasco."
+      },
+      "mega": {
+        "name": "FrankMega",
+        "text": "Compartir archivos desde un servidor casero. Subes un archivo y recibes un enlace que caduca tras un tiempo o un número de descargas. Solo por invitación, con passkeys y login en dos pasos, y sin servicios externos.",
+        "itch": "mandar archivos grandes a la familia y los amigos sin un servicio de terceros."
+      },
+      "karaoke": {
+        "name": "Frank Karaoke",
+        "text": "Una app Android que envuelve YouTube y califica tu canto en vivo, a partir del audio del video y de tu micrófono, sin archivos de canciones. Cuatro modos de puntuación y cambio de tono. La puntuación todavía es experimental.",
+        "itch": "una puntuación para cualquier video de karaoke en YouTube."
+      },
+      "scanlation": {
+        "name": "Frank Scanlation",
+        "text": "Un lector de escritorio estilo Kindle para sitios de scanlation. Pega la dirección de un sitio y se convierte en una tarjeta de tu biblioteca con portada, seguimiento de capítulos y un aviso cuando salen capítulos nuevos. Linux, macOS y Windows.",
+        "itch": "los sitios de scanlation son muy brillantes, están llenos de anuncios y son un solo scroll interminable."
+      }
+    },
+    "more": "Tengo {n} repositorios Frank públicos en GitHub a {date}. Los demás son menos populares o no están terminados.",
+    "all": "Ver todos los repositorios Frank"
+  },
+  "note": {
+    "title": "Úsalos bajo tu propio riesgo",
+    "text": "Son experimentos. Funcionan para mí, en mis máquinas, para lo que necesito. Si alguno también te sirve, bien. Si se rompe, el código está abierto y es tuyo para arreglarlo."
+  },
+  "next": [
+    {
+      "title": "El flujo de trabajo",
+      "text": "Los agentes y skills que probé en estos proyectos."
+    },
+    {
+      "title": "Juegos",
+      "text": "Otra necesidad: mi colección de juegos como código."
+    }
+  ]
+}

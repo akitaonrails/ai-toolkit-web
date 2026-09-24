@@ -34,6 +34,10 @@
       "label": "tclock",
       "note": "명령어 위젯이 달린 터미널 시계"
     },
+    "frank": {
+      "label": "Frank 프로젝트",
+      "note": "제 가려운 곳을 긁는 실험들"
+    },
     "writing": {
       "label": "글",
       "note": "블로그와 LLM 벤치마크"
@@ -59,7 +63,7 @@
     },
     "tools": {
       "label": "도구",
-      "note": "ai-usagebar, ghpending, tclock"
+      "note": "ai-usagebar, ghpending, tclock, Frank 프로젝트"
     },
     "memory": {
       "label": "ai-memory",

@@ -128,6 +128,34 @@
     "marathon": {
       "title": "Wrapping up my AI marathon: success or failure?",
       "summary": "500 hours across 24 repositories, ranked, and why review and XP decide whether AI helps."
+    },
+    "frankmdPost": {
+      "title": "I built a Markdown editor from scratch with Claude Code (FrankMD), part 1",
+      "summary": "Three days of vibe coding a self-hosted Markdown editor shaped around how I blog."
+    },
+    "megaPost": {
+      "title": "I built a Mega clone in Rails in one day for my home server",
+      "summary": "FrankMega in Rails 8 in a single day, and why experience still matters when vibe coding."
+    },
+    "sherlockPost": {
+      "title": "I built a smart image indexer with AI in two days (Frank Sherlock)",
+      "summary": "A local, AI-powered image catalog for the desktop, built over a weekend with Claude Code."
+    },
+    "neverDone": {
+      "title": "Software is never done: four projects and life after deploy",
+      "summary": "125 commits after launch across four projects in ten days, and why the one-shot prompt is a myth."
+    },
+    "yomikFail": {
+      "title": "My first vibe coding failure and how I fixed it (Frank Yomik)",
+      "summary": "Days of OpenCV bubble detection thrown away and rebuilt in hours on a pretrained model."
+    },
+    "karaokePost": {
+      "title": "Turning YouTube into a karaoke app (Frank Karaoke)",
+      "summary": "A Flutter app that scores your singing live over YouTube karaoke videos, in four modes."
+    },
+    "mangaSolution": {
+      "title": "The complete manga setup: Frank Manga+, Frank Yomik and Prettify",
+      "summary": "MANGA Plus on the desktop, a better reader for websites and Kindle, and furigana or translation for Japanese and Korean pages."
     }
   },
   "related": {

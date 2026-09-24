@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Callout from '@/components/Callout.astro';
+import RepoMeta from '@/components/RepoMeta.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import frankmdShot from '@/assets/img/shots/frank-md.jpg';
+import sherlockShot from '@/assets/img/shots/frank-sherlock.jpg';
+import yomikShot from '@/assets/img/shots/frank-yomik.jpg';
+import megaShot from '@/assets/img/shots/frank-mega.jpg';
+import karaokeShot from '@/assets/img/shots/frank-karaoke.jpg';
+import scanlationShot from '@/assets/img/shots/frank-scanlation.jpg';
+import { frank } from '@/data/frank';
+import { articles, articleUrl } from '@/data/articles';
+import { repoUrl } from '@/data/site';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, date, locale } = useI18n(Astro, 'frank');
+const { t: ta } = useI18n(Astro, 'articles');
+type Text = { title: string; text: string };
+// Screenshots from each project's README.
+const shots: Record<string, ImageMetadata> = { frankmd: frankmdShot, sherlock: sherlockShot, yomik: yomikShot, mega: megaShot, karaoke: karaokeShot, scanlation: scanlationShot };
+const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'orange', href: '/games/' }] as const, raw<Text[]>('next'));
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="violet" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#projects" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href={frank.github} class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+
+  <Section title={t('name.title')} hue="violet">
+    <div class="grid gap-8 lg:grid-cols-2 max-w-[62rem]">
+      {raw<string[]>('name.paragraphs').map((p) => <p class="text-lg text-muted" set:html={p} />)}
+    </div>
+  </Section>
+
+  <section id="projects" class="band bg-tint scroll-mt-16" data-hue="violet">
+    <div class="wrap">
+      <h2 class="text-3xl max-w-[18em]">{t('projects.title')}</h2>
+      <p class="lede mt-6">{t('projects.lede')}</p>
+      <ul class="frank-grid mt-12" data-reveal="children">
+        {frank.projects.map((p) => (
+          <li class="frank-card">
+            <a href={repoUrl(p.repo)} class="frank-shot" dir="ltr" tabindex="-1" aria-hidden="true">
+              <Image src={shots[p.id]} alt="" widths={[480, 800, 1200].filter((w) => w <= shots[p.id].width)} sizes="(min-width: 1024px) 36rem, 94vw" quality={82} class="w-full h-full object-cover object-top" />
+            </a>
+            <div class="p-6 md:p-7 flex flex-col gap-3 grow">
+              <h3 class="text-2xl"><a href={repoUrl(p.repo)} class="hover:underline">{t(`projects.items.${p.id}.name`)}</a></h3>
+              <p class="font-mono text-xs text-muted" dir="ltr">{p.stack}</p>
+              <p class="text-muted">{t(`projects.items.${p.id}.text`)}</p>
+              <p class="text-sm"><span class="font-semibold">{t('projects.itch')}</span> <span class="text-muted">{t(`projects.items.${p.id}.itch`)}</span></p>
+              <ul class="grid gap-1 text-sm mt-1">
+                {p.posts.map((id) => (
+                  <li><a class="link" href={articleUrl({ id, ...articles[id] }, locale)}>{ta(`items.${id}.title`)}</a></li>
+                ))}
+              </ul>
+              <div class="mt-auto pt-3"><RepoMeta id={p.repo} /></div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-12 text-muted max-w-[40em]">{t('projects.more', { n: frank.count, date: date(frank.countDate) })}</p>
+      <a href={frank.github} class="btn btn-ghost mt-6">{t('projects.all')}</a>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <Callout title={t('note.title')} hue="violet"><p>{t('note.text')}</p></Callout>
+  </section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>
+
+<style>
+  .frank-grid { display: grid; gap: 1.5rem; }
+  @media (min-width: 1024px) { .frank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .frank-card { display: flex; flex-direction: column; border: 1.5px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+  .frank-shot { display: block; aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--ink); }
+  .frank-card h3 a { text-decoration-color: var(--hue-vivid); text-underline-offset: 0.2em; }
+</style>

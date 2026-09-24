@@ -128,6 +128,34 @@
     "marathon": {
       "title": "AIマラソンの総括：成功か失敗か",
       "summary": "24リポジトリで500時間。ランキングと、AIが役に立つかどうかをレビューとXPが決める理由。"
+    },
+    "frankmdPost": {
+      "title": "Claude CodeでMarkdownエディタをゼロから作った（FrankMD）その1",
+      "summary": "自分のブログの書き方に合わせたセルフホストのMarkdownエディタを、3日間のvibe codingで作った話。"
+    },
+    "megaPost": {
+      "title": "ホームサーバー用にMegaのクローンをRailsで1日で作った",
+      "summary": "Rails 8でFrankMegaを1日で作った話と、vibe codingでも経験が大事な理由。"
+    },
+    "sherlockPost": {
+      "title": "AIで賢い画像インデクサーを2日で作った（Frank Sherlock）",
+      "summary": "ローカルで動くAI画像カタログのデスクトップアプリを、Claude Codeで週末に作った話。"
+    },
+    "neverDone": {
+      "title": "ソフトウェアに完成はない：4つのプロジェクトとデプロイ後の日々",
+      "summary": "10日間で4つのプロジェクトに積み上がったリリース後の125件のコミットと、一発プロンプトが幻想である理由。"
+    },
+    "yomikFail": {
+      "title": "初めてのvibe codingの失敗と、その直し方（Frank Yomik）",
+      "summary": "OpenCVでの吹き出し検出に何日もかけて捨て、学習済みモデルで数時間で作り直した話。"
+    },
+    "karaokePost": {
+      "title": "YouTubeをカラオケアプリにする（Frank Karaoke）",
+      "summary": "YouTubeのカラオケ動画の上で歌をリアルタイム採点するFlutterアプリ。採点モードは4つ。"
+    },
+    "mangaSolution": {
+      "title": "マンガの完全ソリューション：Frank Manga+、Frank Yomik、Prettify",
+      "summary": "MANGA Plusをデスクトップで。WebサイトとKindleをもっと読みやすく。日本語と韓国語のページにふりがなや翻訳を。"
     }
   },
   "related": {

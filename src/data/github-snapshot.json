@@ -1,8 +1,8 @@
 {
-  "fetchedAt": "2026-09-23T19:20:52.662Z",
+  "fetchedAt": "2026-09-24T18:06:00.530Z",
   "repos": {
     "usagebar": {
-      "stars": 549,
+      "stars": 561,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -11,16 +11,16 @@
       }
     },
     "ghpending": {
-      "stars": 44,
+      "stars": 45,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v0.9.0",
-        "date": "2026-09-20T13:34:06Z"
+        "tag": "v0.10.0",
+        "date": "2026-09-24T17:58:07Z"
       }
     },
     "tclock": {
-      "stars": 70,
+      "stars": 73,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -29,13 +29,13 @@
       }
     },
     "skills": {
-      "stars": 123,
+      "stars": 158,
       "language": "Python",
       "license": null,
       "release": null
     },
     "memory": {
-      "stars": 8197,
+      "stars": 8305,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -44,7 +44,7 @@
       }
     },
     "jail": {
-      "stars": 1280,
+      "stars": 1290,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
@@ -53,24 +53,78 @@
       }
     },
     "benchmark": {
-      "stars": 335,
+      "stars": 336,
       "language": "Python",
       "license": null,
       "release": null
     },
     "distrobox": {
-      "stars": 311,
+      "stars": 316,
       "language": "Shell",
       "license": null,
       "release": null
     },
     "gamesMenu": {
-      "stars": 16,
+      "stars": 18,
       "language": "Rust",
       "license": "MIT",
       "release": {
         "tag": "v0.1.7",
         "date": "2026-09-23T04:40:09Z"
+      }
+    },
+    "frankmd": {
+      "stars": 556,
+      "language": "JavaScript",
+      "license": null,
+      "release": {
+        "tag": "v1.1.2",
+        "date": "2026-09-22T17:15:31Z"
+      }
+    },
+    "sherlock": {
+      "stars": 296,
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "release": {
+        "tag": "v0.8.1",
+        "date": "2026-09-10T19:27:09Z"
+      }
+    },
+    "yomik": {
+      "stars": 196,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "release": {
+        "tag": "v1.0.1",
+        "date": "2026-09-20T19:00:52Z"
+      }
+    },
+    "mega": {
+      "stars": 83,
+      "language": "Ruby",
+      "license": "AGPL-3.0",
+      "release": {
+        "tag": "v1.0.0",
+        "date": "2026-09-20T18:58:58Z"
+      }
+    },
+    "karaoke": {
+      "stars": 78,
+      "language": "Dart",
+      "license": null,
+      "release": {
+        "tag": "v0.4.0",
+        "date": "2026-07-01T00:58:34Z"
+      }
+    },
+    "scanlation": {
+      "stars": 63,
+      "language": "JavaScript",
+      "license": null,
+      "release": {
+        "tag": "v0.4.0",
+        "date": "2026-08-25T20:47:14Z"
       }
     }
   }

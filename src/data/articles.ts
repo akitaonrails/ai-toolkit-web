@@ -45,6 +45,13 @@ export const articles = {
   emuDistrobox: { path: '/en/2026/04/11/emulation-distrobox-with-claude-code/', ptPath: '/2026/04/11/distrobox-de-emulacao-com-claude-code/', date: '2026-04-11', hue: 'orange' },
   racingGames: { path: '/en/2026/04/19/my-favorite-retro-racing-games-on-distrobox/', ptPath: '/2026/04/19/retrogames-de-corrida-favoritos-no-distrobox/', date: '2026-04-19', hue: 'orange' },
   marathon: { path: '/en/2026/05/14/wrapping-up-my-ai-marathon-success-or-failure/', ptPath: '/2026/05/14/terminando-maratona-ia-sucesso-ou-fracasso/', date: '2026-05-14', hue: 'violet' },
+  frankmdPost: { path: '/en/2026/02/01/frankmd-markdown-editor-vibe-code-part-1/', ptPath: '/2026/02/01/vibe-code-fiz-um-editor-de-markdown-do-zero-com-claude-code-frankmd-part-1/', date: '2026-02-01', hue: 'violet' },
+  megaPost: { path: '/en/2026/02/21/vibe-code-built-a-mega-clone-in-rails-in-1-day-frankmega/', ptPath: '/2026/02/21/vibe-code-fiz-um-clone-do-mega-em-rails-em-1-dia-pro-meu-home-server/', date: '2026-02-21', hue: 'violet' },
+  sherlockPost: { path: '/en/2026/02/23/vibe-code-built-a-smart-image-indexer-with-ai-in-2-days-frank-sherlock/', ptPath: '/2026/02/23/vibe-code-fiz-um-indexador-inteligente-de-imagens-com-ia-em-2-dias/', date: '2026-02-23', hue: 'violet' },
+  neverDone: { path: '/en/2026/03/01/software-is-never-done-4-projects-life-after-deploy-one-shot-prompt-myth/', ptPath: '/2026/03/01/software-nunca-esta-pronto-4-projetos-a-vida-pos-deploy-e-por-que-one-shot-prompt-e-mito/', date: '2026-03-01', hue: 'violet' },
+  yomikFail: { path: '/en/2026/03/05/my-first-vibe-code-failure-frank-yomik/', ptPath: '/2026/03/05/meu-primeiro-fracasso-com-vibe-code-e-como-consertei-frank-yomik/', date: '2026-03-05', hue: 'violet' },
+  karaokePost: { path: '/en/2026/04/05/turning-youtube-into-a-karaoke-app-frank-karaoke/', ptPath: '/2026/04/05/transformando-youtube-num-app-de-karaoke-frank-karaoke/', date: '2026-04-05', hue: 'violet' },
+  mangaSolution: { path: '/en/2026/05/30/manga-plus-shueisha-on-the-desktop-frank-manga-plus/', ptPath: '/2026/05/30/manga-plus-shueisha-desktop-frank-manga-plus/', date: '2026-05-30', hue: 'violet' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;

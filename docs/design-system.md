@@ -14,7 +14,7 @@ This site is an umbrella: many small tools, one person, one workflow. There is n
 
 | Subject | Hue | `data-hue` |
 |---|---|---|
-| Workflow, skills, agents | violet | `violet` |
+| Workflow, skills, agents, the Frank projects | violet | `violet` |
 | ai-usagebar | blue | `blue` |
 | ghpending, podcasts | amber | `amber` |
 | tclock | red | `red` |

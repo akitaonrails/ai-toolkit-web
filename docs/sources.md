@@ -147,6 +147,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `/newsletter/` | akitando-news repo, the two live newsletter sites, the six-days post |
 | `/podcasts/` | The five videos, the two complete playlists (`site.ts` `playlists`), Cortes do Flow |
 | `/games/` | distrobox-gaming and omarchy-games-menu repos |
+| `/frank/` | The six Frank repos and their blog posts (section 10), owner's words on the name |
 
 ## 9. The yearly tally (workflow page, "What that adds up to")
 
@@ -174,3 +175,15 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 and add it to `EXCLUDE` when it is data, vendored or generated.
 
 **First run, 2026-09-23:** 30 projects, 6,330 commits, 783 merged PRs, 486 closed issues, 1,077,444 lines of code added, 121 blog posts.
+
+## 10. The Frank projects (`/frank/`)
+
+**Which six.** Public repositories named `frank*`, listed with `gh repo list akitaonrails --limit 300 --json name,stargazerCount,pushedAt,description`, ranked by stars and kept only when still maintained (pushed in the last few weeks). On 2026-09-24: FrankMD, FrankSherlock, FrankYomik, FrankMega, frank_karaoke, frank_scanlation. Left out: frank_investigator and frank_fbi (owner's request), FrankClaw (README says not done, no push since May). The list, the stack line and the post ids live in `src/data/frank.ts`; the repos in `src/data/repos.json` (stars and releases come from `npm run snapshot:github`, which needs `GITHUB_TOKEN=$(gh auth token)` once the anonymous limit is hit).
+
+**What each card says.** The first paragraph and feature list of each README (local checkouts in `~/Projects`: FrankMD, frank_sherlock, frank_yomik, frank_mega, frank_karaoke, frank_scanlation). The "itch" line paraphrases the README's own reason for the project. The screenshot is the README's main image, copied to `src/assets/img/shots/frank-*.jpg` (FrankMD's comes from its S3 link; Frank Karaoke's landscape score shot is cropped to 16:9 on the score side).
+
+**The name.** Frank Rosenblatt and the Perceptron (1957): the FrankMD README and the FrankMD part 1 post; the first AI hype and AI winter: the "RANT: Did AI Kill Programmers?" post. The Frankenstein double meaning, "niche itches" and "test beds for the AI workflow": the owner's own words, 2026-09-24.
+
+**Posts per card.** Search the blog for each project name in `content/2026/**/index.en.md` and link the post dedicated to it plus any post where it is a main subject. New post about a Frank project: add it to `articles.ts`, the `articles` catalogs (real Portuguese title in `pt-br`) and the project's `posts` in `frank.ts`.
+
+**Refresh.** Rerun the `gh repo list` above; update `count` and `countDate` in `frank.ts`; swap a project only when another one clearly passes it in stars and activity.

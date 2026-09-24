@@ -34,6 +34,10 @@
       "label": "tclock",
       "note": "שעון לטרמינל עם ווידג׳טים של פקודות"
     },
+    "frank": {
+      "label": "פרויקטי Frank",
+      "note": "ניסויים לצרכים שלי"
+    },
     "writing": {
       "label": "כתיבה",
       "note": "הבלוג ובנצ׳מרק ה-LLM"
@@ -59,7 +63,7 @@
     },
     "tools": {
       "label": "כלים",
-      "note": "ai-usagebar, ghpending ו-tclock"
+      "note": "ai-usagebar, ghpending, tclock ופרויקטי Frank"
     },
     "memory": {
       "label": "ai-memory",

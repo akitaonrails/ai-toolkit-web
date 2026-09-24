@@ -34,6 +34,10 @@
       "label": "tclock",
       "note": "コマンドウィジェット付きのターミナル時計"
     },
+    "frank": {
+      "label": "Frankプロジェクト",
+      "note": "自分の困りごとを解決する実験"
+    },
     "writing": {
       "label": "執筆",
       "note": "ブログとLLMベンチマーク"
@@ -59,7 +63,7 @@
     },
     "tools": {
       "label": "ツール",
-      "note": "ai-usagebar、ghpending、tclock"
+      "note": "ai-usagebar、ghpending、tclock、Frankプロジェクト"
     },
     "memory": {
       "label": "ai-memory",

@@ -128,6 +128,34 @@
     "marathon": {
       "title": "AI 마라톤 마무리: 성공일까 실패일까?",
       "summary": "저장소 24개에 걸친 500시간을 순위로 정리했고, AI가 도움이 되느냐는 리뷰와 XP에 달려 있다는 이야기입니다."
+    },
+    "frankmdPost": {
+      "title": "Claude Code로 Markdown 에디터를 처음부터 만들었다 (FrankMD) 1부",
+      "summary": "제 블로그 작성 방식에 맞춘 셀프 호스팅 Markdown 에디터를 사흘 동안 vibe coding으로 만든 이야기."
+    },
+    "megaPost": {
+      "title": "홈 서버용 Mega 클론을 Rails로 하루 만에 만들었다",
+      "summary": "Rails 8로 FrankMega를 하루 만에 만든 이야기와, vibe coding에서도 경험이 중요한 이유."
+    },
+    "sherlockPost": {
+      "title": "AI로 똑똑한 이미지 인덱서를 이틀 만에 만들었다 (Frank Sherlock)",
+      "summary": "로컬에서 도는 AI 이미지 카탈로그 데스크톱 앱을 Claude Code로 주말 동안 만든 이야기."
+    },
+    "neverDone": {
+      "title": "소프트웨어는 결코 완성되지 않는다: 프로젝트 네 개와 배포 이후의 삶",
+      "summary": "열흘 동안 네 개 프로젝트에 쌓인 출시 후 커밋 125개, 그리고 원샷 프롬프트가 신화인 이유."
+    },
+    "yomikFail": {
+      "title": "첫 vibe coding 실패와 그걸 고친 방법 (Frank Yomik)",
+      "summary": "며칠을 들인 OpenCV 말풍선 감지를 버리고 사전 학습 모델로 몇 시간 만에 다시 만든 이야기."
+    },
+    "karaokePost": {
+      "title": "YouTube를 노래방 앱으로 바꾸기 (Frank Karaoke)",
+      "summary": "YouTube 노래방 영상 위에서 노래를 실시간 채점하는 Flutter 앱, 채점 모드는 네 가지."
+    },
+    "mangaSolution": {
+      "title": "만화 완전 정복: Frank Manga+, Frank Yomik, Prettify",
+      "summary": "데스크톱의 MANGA Plus, 웹사이트와 Kindle을 위한 더 나은 리더, 일본어와 한국어 페이지를 위한 후리가나와 번역."
     }
   },
   "related": {

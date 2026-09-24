@@ -34,6 +34,10 @@
       "label": "tclock",
       "note": "Um relógio de terminal com widgets de comando"
     },
+    "frank": {
+      "label": "Projetos Frank",
+      "note": "Experimentos pras minhas próprias coceiras"
+    },
     "writing": {
       "label": "Textos",
       "note": "O blog e o benchmark de LLMs"
@@ -59,7 +63,7 @@
     },
     "tools": {
       "label": "Ferramentas",
-      "note": "ai-usagebar, ghpending e tclock"
+      "note": "ai-usagebar, ghpending, tclock e os projetos Frank"
     },
     "memory": {
       "label": "ai-memory",
