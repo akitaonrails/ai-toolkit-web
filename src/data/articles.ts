@@ -52,6 +52,7 @@ export const articles = {
   yomikFail: { path: '/en/2026/03/05/my-first-vibe-code-failure-frank-yomik/', ptPath: '/2026/03/05/meu-primeiro-fracasso-com-vibe-code-e-como-consertei-frank-yomik/', date: '2026-03-05', hue: 'violet' },
   karaokePost: { path: '/en/2026/04/05/turning-youtube-into-a-karaoke-app-frank-karaoke/', ptPath: '/2026/04/05/transformando-youtube-num-app-de-karaoke-frank-karaoke/', date: '2026-04-05', hue: 'violet' },
   mangaSolution: { path: '/en/2026/05/30/manga-plus-shueisha-on-the-desktop-frank-manga-plus/', ptPath: '/2026/05/30/manga-plus-shueisha-desktop-frank-manga-plus/', date: '2026-05-30', hue: 'violet' },
+  frankGoPost: { path: '/en/2026/07/06/frank-go-playing-go-with-ai/', ptPath: '/2026/07/06/frank-go-brincando-de-go-com-ia/', date: '2026-07-06', hue: 'violet' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;

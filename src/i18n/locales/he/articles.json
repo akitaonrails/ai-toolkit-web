@@ -156,6 +156,10 @@
     "mangaSolution": {
       "title": "פתרון מנגה מלא: Frank Manga+,‏ Frank Yomik ו-Prettify",
       "summary": "MANGA Plus בשולחן העבודה, קורא טוב יותר לאתרים ול-Kindle, ו-furigana או תרגום לעמודים ביפנית ובקוריאנית."
+    },
+    "frankGoPost": {
+      "title": "Frank GO: משחקים Go עם AI",
+      "summary": "fork של Sabaki עם KataGo, יותר מ-4,700 בעיות tsumego, משחקים היסטוריים ושכבות שמראות שטח וניקוד למתחילים."
     }
   },
   "related": {

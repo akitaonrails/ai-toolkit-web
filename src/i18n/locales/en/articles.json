@@ -156,6 +156,10 @@
     "mangaSolution": {
       "title": "The complete manga setup: Frank Manga+, Frank Yomik and Prettify",
       "summary": "MANGA Plus on the desktop, a better reader for websites and Kindle, and furigana or translation for Japanese and Korean pages."
+    },
+    "frankGoPost": {
+      "title": "Frank GO: playing Go with AI",
+      "summary": "A Sabaki fork with KataGo, more than 4,700 tsumego, historical games and overlays that show territory and score to beginners."
     }
   },
   "related": {

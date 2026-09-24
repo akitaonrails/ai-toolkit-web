@@ -51,17 +51,52 @@
         "name": "Frank Scanlation",
         "text": "A Kindle-like desktop reader for scanlation sites. Paste a site's address and it becomes a library card with cover art, chapter tracking and a badge when new chapters land. Linux, macOS and Windows.",
         "itch": "scanlation sites are bright, full of ads and one long scroll."
+      },
+      "mangaplus": {
+        "name": "Frank Manga+",
+        "text": "A desktop reader for MANGA Plus by Shueisha, which is otherwise a phone app. Library, full catalog search and a page-fit reader. The free tier works as is, and a subscriber secret opens the premium chapters. Linux, macOS and Windows.",
+        "itch": "reading MANGA Plus on a real screen instead of the phone."
+      },
+      "go": {
+        "name": "Frank GO",
+        "text": "A beginner-friendly Go trainer built on Sabaki. More than 4,700 tsumego served at your level, historical games to study, and KataGo as an opponent. Overlays show territory and score, the part beginners cannot see yet.",
+        "itch": "strong Go software is made for strong players."
+      },
+      "type": {
+        "name": "Frank Type",
+        "text": "A typing trainer with public-domain prose instead of random word lists, in the MonkeyType style. No account: history and charts stay in the browser. A digraph heat map shows which key pairs slow you down. Runs in Docker.",
+        "itch": "MonkeyType serves random words, and TypeRacer makes me wait for other players."
+      },
+      "lyrics": {
+        "name": "Frank Lyrics",
+        "text": "A Chrome extension that adds line-by-line controls to YouTube lyric videos. It pulls synced timestamps from LRCLIB, or lets you mark lines by hand, then repeats the exact line you are memorizing. Experimental.",
+        "itch": "hunting the YouTube timeline to repeat the same line of a song."
+      },
+      "geary": {
+        "name": "Frank Geary",
+        "text": "My fork of the GNOME Geary email client, with two fixes as native patches: the accounts sidebar collapses, and the recipient field suggests the people who already wrote to you. I rebase it on upstream often.",
+        "itch": "Geary was almost perfect, but its three fixed columns wasted my vertical monitor and the recipient field never suggested anyone."
       }
     },
-    "more": "I have {n} public Frank repositories on GitHub as of {date}. The others are less popular or not finished.",
+    "more": "I have {n} public Frank repositories on GitHub as of {date}, a few more than the ones on this page.",
     "all": "See every Frank repository"
+  },
+  "small": {
+    "title": "Smaller itches",
+    "lede": "Five more, each built for one job I needed done."
   },
   "note": {
     "title": "Use them at your own risk",
     "text": "These are experiments. They work for me, on my machines, for what I need. If one fits your need too, good. If it breaks, the code is open and yours to fix."
   },
   "next": [
-    { "title": "The workflow", "text": "The agents and skills I tried out on these projects." },
-    { "title": "Games", "text": "Another itch: my game collection as code." }
+    {
+      "title": "The workflow",
+      "text": "The agents and skills I tried out on these projects."
+    },
+    {
+      "title": "Games",
+      "text": "Another itch: my game collection as code."
+    }
   ]
 }

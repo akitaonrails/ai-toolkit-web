@@ -51,10 +51,39 @@
         "name": "Frank Scanlation",
         "text": "Un lector de escritorio estilo Kindle para sitios de scanlation. Pega la dirección de un sitio y se convierte en una tarjeta de tu biblioteca con portada, seguimiento de capítulos y un aviso cuando salen capítulos nuevos. Linux, macOS y Windows.",
         "itch": "los sitios de scanlation son muy brillantes, están llenos de anuncios y son un solo scroll interminable."
+      },
+      "mangaplus": {
+        "name": "Frank Manga+",
+        "text": "Un lector de escritorio para MANGA Plus de Shueisha, que si no solo existe como app de móvil. Biblioteca, búsqueda en todo el catálogo y un lector que ajusta la página a la pantalla. El plan gratuito funciona tal cual, y un secret de suscriptor abre los capítulos premium. Linux, macOS y Windows.",
+        "itch": "leer MANGA Plus en una pantalla de verdad en lugar del móvil."
+      },
+      "go": {
+        "name": "Frank GO",
+        "text": "Un entrenador de Go para principiantes, construido sobre Sabaki. Más de 4.700 tsumego a tu nivel, partidas históricas para estudiar y KataGo como rival. Capas visuales muestran territorio y puntuación, lo que un principiante todavía no ve.",
+        "itch": "el software fuerte de Go está hecho para jugadores fuertes."
+      },
+      "type": {
+        "name": "Frank Type",
+        "text": "Un entrenador de mecanografía con prosa de dominio público en lugar de listas de palabras al azar, al estilo de MonkeyType. Sin cuenta: el historial y los gráficos se quedan en el navegador. Un mapa de calor de dígrafos muestra qué pares de teclas te frenan. Corre en Docker.",
+        "itch": "MonkeyType da palabras al azar, y TypeRacer me hace esperar a otros jugadores."
+      },
+      "lyrics": {
+        "name": "Frank Lyrics",
+        "text": "Una extensión de Chrome que agrega controles línea por línea a los videos con letra de YouTube. Trae los tiempos sincronizados de LRCLIB, o te deja marcar las líneas a mano, y repite justo la línea que estás memorizando. Experimental.",
+        "itch": "buscar en la línea de tiempo de YouTube el punto para repetir la misma línea de una canción."
+      },
+      "geary": {
+        "name": "Frank Geary",
+        "text": "Mi fork del cliente de correo GNOME Geary, con dos arreglos como parches nativos: la barra lateral de cuentas se oculta, y el campo de destinatario sugiere a quien ya te escribió. Hago rebase desde upstream a menudo.",
+        "itch": "Geary era casi perfecto, pero sus tres columnas fijas desperdiciaban mi monitor vertical y el campo de destinatario nunca sugería a nadie."
       }
     },
-    "more": "Tengo {n} repositorios Frank públicos en GitHub a {date}. Los demás son menos populares o no están terminados.",
+    "more": "Tengo {n} repositorios Frank públicos en GitHub a {date}, algunos más que los de esta página.",
     "all": "Ver todos los repositorios Frank"
+  },
+  "small": {
+    "title": "Necesidades más pequeñas",
+    "lede": "Cinco más, cada uno hecho para una sola tarea que necesitaba resolver."
   },
   "note": {
     "title": "Úsalos bajo tu propio riesgo",

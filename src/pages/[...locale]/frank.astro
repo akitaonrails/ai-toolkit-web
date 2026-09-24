@@ -1,10 +1,9 @@
 ---
-import { Image } from 'astro:assets';
 import Base from '@/layouts/Base.astro';
 import PageHero from '@/components/PageHero.astro';
 import Section from '@/components/Section.astro';
 import Callout from '@/components/Callout.astro';
-import RepoMeta from '@/components/RepoMeta.astro';
+import FrankCard from '@/components/FrankCard.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import frankmdShot from '@/assets/img/shots/frank-md.jpg';
@@ -13,17 +12,20 @@ import yomikShot from '@/assets/img/shots/frank-yomik.jpg';
 import megaShot from '@/assets/img/shots/frank-mega.jpg';
 import karaokeShot from '@/assets/img/shots/frank-karaoke.jpg';
 import scanlationShot from '@/assets/img/shots/frank-scanlation.jpg';
+import mangaplusShot from '@/assets/img/shots/frank-mangaplus.jpg';
+import goShot from '@/assets/img/shots/frank-go.jpg';
+import typeShot from '@/assets/img/shots/frank-type.jpg';
+import lyricsShot from '@/assets/img/shots/frank-lyrics.jpg';
+import gearyShot from '@/assets/img/shots/frank-geary.jpg';
 import { frank } from '@/data/frank';
-import { articles, articleUrl } from '@/data/articles';
-import { repoUrl } from '@/data/site';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, date, locale } = useI18n(Astro, 'frank');
-const { t: ta } = useI18n(Astro, 'articles');
+const { t, raw, date } = useI18n(Astro, 'frank');
 type Text = { title: string; text: string };
 // Screenshots from each project's README.
-const shots: Record<string, ImageMetadata> = { frankmd: frankmdShot, sherlock: sherlockShot, yomik: yomikShot, mega: megaShot, karaoke: karaokeShot, scanlation: scanlationShot };
+const shots: Record<string, ImageMetadata> = { frankmd: frankmdShot, sherlock: sherlockShot, yomik: yomikShot, mega: megaShot, karaoke: karaokeShot, scanlation: scanlationShot,
+  mangaplus: mangaplusShot, go: goShot, type: typeShot, lyrics: lyricsShot, geary: gearyShot };
 const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'orange', href: '/games/' }] as const, raw<Text[]>('next'));
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
@@ -43,25 +45,12 @@ const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'orange', h
       <h2 class="text-3xl max-w-[18em]">{t('projects.title')}</h2>
       <p class="lede mt-6">{t('projects.lede')}</p>
       <ul class="frank-grid mt-12" data-reveal="children">
-        {frank.projects.map((p) => (
-          <li class="frank-card">
-            <a href={repoUrl(p.repo)} class="frank-shot" dir="ltr" tabindex="-1" aria-hidden="true">
-              <Image src={shots[p.id]} alt="" widths={[480, 800, 1200].filter((w) => w <= shots[p.id].width)} sizes="(min-width: 1024px) 36rem, 94vw" quality={82} class="w-full h-full object-cover object-top" />
-            </a>
-            <div class="p-6 md:p-7 flex flex-col gap-3 grow">
-              <h3 class="text-2xl"><a href={repoUrl(p.repo)} class="hover:underline">{t(`projects.items.${p.id}.name`)}</a></h3>
-              <p class="font-mono text-xs text-muted" dir="ltr">{p.stack}</p>
-              <p class="text-muted">{t(`projects.items.${p.id}.text`)}</p>
-              <p class="text-sm"><span class="font-semibold">{t('projects.itch')}</span> <span class="text-muted">{t(`projects.items.${p.id}.itch`)}</span></p>
-              <ul class="grid gap-1 text-sm mt-1">
-                {p.posts.map((id) => (
-                  <li><a class="link" href={articleUrl({ id, ...articles[id] }, locale)}>{ta(`items.${id}.title`)}</a></li>
-                ))}
-              </ul>
-              <div class="mt-auto pt-3"><RepoMeta id={p.repo} /></div>
-            </div>
-          </li>
-        ))}
+        {frank.projects.map((p) => <FrankCard project={p} shot={shots[p.id]} />)}
+      </ul>
+      <h2 class="text-2xl mt-20">{t('small.title')}</h2>
+      <p class="lede mt-4">{t('small.lede')}</p>
+      <ul class="frank-grid is-small mt-10" data-reveal="children">
+        {frank.small.map((p) => <FrankCard project={p} shot={shots[p.id]} small />)}
       </ul>
       <p class="mt-12 text-muted max-w-[40em]">{t('projects.more', { n: frank.count, date: date(frank.countDate) })}</p>
       <a href={frank.github} class="btn btn-ghost mt-6">{t('projects.all')}</a>
@@ -79,7 +68,6 @@ const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'orange', h
 <style>
   .frank-grid { display: grid; gap: 1.5rem; }
   @media (min-width: 1024px) { .frank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .frank-card { display: flex; flex-direction: column; border: 1.5px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
-  .frank-shot { display: block; aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--ink); }
-  .frank-card h3 a { text-decoration-color: var(--hue-vivid); text-underline-offset: 0.2em; }
+  @media (min-width: 640px) { .frank-grid.is-small { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) { .frank-grid.is-small { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 </style>

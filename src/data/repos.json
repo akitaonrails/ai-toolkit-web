@@ -13,5 +13,10 @@
   "yomik": "akitaonrails/FrankYomik",
   "mega": "akitaonrails/FrankMega",
   "karaoke": "akitaonrails/frank_karaoke",
-  "scanlation": "akitaonrails/frank_scanlation"
+  "scanlation": "akitaonrails/frank_scanlation",
+  "mangaplus": "akitaonrails/frank_mangaplus",
+  "geary": "akitaonrails/frank_geary",
+  "type": "akitaonrails/frank_type",
+  "go": "akitaonrails/frank_go",
+  "lyrics": "akitaonrails/frank_lyrics"
 }

@@ -156,6 +156,10 @@
     "mangaSolution": {
       "title": "Solução Completa de Mangá: Frank Manga+, Frank Yomik, extensão Prettify-Manga",
       "summary": "O MANGA Plus no desktop, um leitor melhor pra sites e Kindle, e furigana ou tradução pra páginas em japonês e coreano."
+    },
+    "frankGoPost": {
+      "title": "Frank GO: brincando de GO com IA",
+      "summary": "Um fork do Sabaki com KataGo, mais de 4.700 tsumego, partidas históricas e camadas que mostram território e placar pra iniciantes."
     }
   },
   "related": {

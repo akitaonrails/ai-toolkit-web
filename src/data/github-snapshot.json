@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-24T18:06:00.530Z",
+  "fetchedAt": "2026-09-24T18:35:24.577Z",
   "repos": {
     "usagebar": {
       "stars": 561,
@@ -29,13 +29,13 @@
       }
     },
     "skills": {
-      "stars": 158,
+      "stars": 159,
       "language": "Python",
       "license": null,
       "release": null
     },
     "memory": {
-      "stars": 8305,
+      "stars": 8313,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -125,6 +125,51 @@
       "release": {
         "tag": "v0.4.0",
         "date": "2026-08-25T20:47:14Z"
+      }
+    },
+    "mangaplus": {
+      "stars": 46,
+      "language": "Rust",
+      "license": null,
+      "release": {
+        "tag": "v1.2.0",
+        "date": "2026-09-19T23:13:05Z"
+      }
+    },
+    "geary": {
+      "stars": 5,
+      "language": "Vala",
+      "license": "NOASSERTION",
+      "release": {
+        "tag": "v46.0-frank.4",
+        "date": "2026-09-12T17:47:13Z"
+      }
+    },
+    "type": {
+      "stars": 29,
+      "language": "JavaScript",
+      "license": "MIT",
+      "release": {
+        "tag": "v0.2.3",
+        "date": "2026-06-23T17:05:13Z"
+      }
+    },
+    "go": {
+      "stars": 23,
+      "language": "JavaScript",
+      "license": "MIT",
+      "release": {
+        "tag": "v0.3.17",
+        "date": "2026-09-19T14:40:25Z"
+      }
+    },
+    "lyrics": {
+      "stars": 9,
+      "language": "JavaScript",
+      "license": null,
+      "release": {
+        "tag": "v0.1.2",
+        "date": "2026-07-12T21:58:20Z"
       }
     }
   }

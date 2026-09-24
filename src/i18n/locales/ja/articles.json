@@ -156,6 +156,10 @@
     "mangaSolution": {
       "title": "マンガの完全ソリューション：Frank Manga+、Frank Yomik、Prettify",
       "summary": "MANGA Plusをデスクトップで。WebサイトとKindleをもっと読みやすく。日本語と韓国語のページにふりがなや翻訳を。"
+    },
+    "frankGoPost": {
+      "title": "Frank GO：AIで囲碁を楽しむ",
+      "summary": "KataGoを組み込んだSabakiのフォーク。4,700問以上の詰碁、歴史的な棋譜、初心者向けに地と形勢を見せるオーバーレイ。"
     }
   },
   "related": {

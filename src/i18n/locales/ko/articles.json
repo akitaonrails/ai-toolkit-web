@@ -156,6 +156,10 @@
     "mangaSolution": {
       "title": "만화 완전 정복: Frank Manga+, Frank Yomik, Prettify",
       "summary": "데스크톱의 MANGA Plus, 웹사이트와 Kindle을 위한 더 나은 리더, 일본어와 한국어 페이지를 위한 후리가나와 번역."
+    },
+    "frankGoPost": {
+      "title": "Frank GO: AI로 바둑 즐기기",
+      "summary": "KataGo를 넣은 Sabaki 포크. 4,700개가 넘는 사활 문제, 역사적인 기보, 초보자에게 집과 형세를 보여 주는 오버레이."
     }
   },
   "related": {
