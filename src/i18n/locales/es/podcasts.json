@@ -12,16 +12,21 @@
   "play": "Reproducir",
   "kind": {
     "podcast": "Podcast",
-    "talk": "Charla en conferencia"
+    "talk": "Charla en conferencia",
+    "tv": "Noticiero de TV"
   },
   "views": "{n} visualizaciones",
   "watch": "Ver en YouTube",
   "items": {
+    "7uFqDMwQ4_8": "Una participación en News Manhã, de SBT News. Los riesgos de la IA entraron en el debate de la Asamblea General de la ONU esta semana, y hablé de las advertencias de las propias empresas de IA, los riesgos para la seguridad global y el uso de IA y deepfakes en las elecciones brasileñas.",
     "U3bZavG8qQY": "Lecciones de 37 días de inmersión total en vibe coding: 653 commits, unas 144.000 líneas y 8 proyectos en producción. Qué pueden y qué no pueden hacer los agentes, qué modelos de negocio tienen sentido y por qué el prompt único que lo resuelve todo es un mito.",
     "4c7pbOxYn_A": "Casi cinco horas sobre cómo cambió la IA en un año: el punto de inflexión, lo que no dicen los dueños de los modelos más grandes, por qué las preguntas tontas queman más tokens, el empleo y cuál es la mejor IA para programadores.",
     "9aWa-eCmWYE": "El fin de la era del hype. Por qué el entusiasmo con la IA es inversamente proporcional a saber cómo funciona, y cómo usé modelos de frontera para multiplicar mi producción en siete proyectos reales sin reemplazar al ingeniero.",
     "_Hl9wiLkns4": "Con el escritor Ricardo Cavallini y la astrofísica Roberta Duarte: si llegará la superinteligencia, qué hace realmente un GPT y un largo desvío por la física cuántica y las computadoras cuánticas.",
     "sf4Gxf0LiKo": "Mi primera conversación larga sobre IA en Flow: qué hace de verdad hoy, sus límites, su historia desde los años 60 y lo que nadie te cuenta sobre las computadoras cuánticas."
+  },
+  "tv": {
+    "title": "En la TV"
   },
   "all": {
     "title": "La lista completa",

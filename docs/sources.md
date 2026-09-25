@@ -84,6 +84,7 @@ The repository is private. Never quote code, prompts, credentials, environment v
 |---|---|---|
 | The five appearances the owner listed (YouTube IDs in `src/data/videos.config.json` `appearances`) | Title, channel, date, duration, views; summary from each video's description and chapters | `src/data/videos.json` (generated), `podcasts.json` `items` (summaries, written by hand) |
 | The owner's two YouTube playlists (2026-09-23): [podcasts, talks and lectures](https://www.youtube.com/playlist?list=PLdsnXVqbHDUf73fY4oNcXIuAjxGf8hTjj) and [interviews](https://www.youtube.com/playlist?list=PLdsnXVqbHDUcjiwcY87avf7RWuQX5cF9g) | Links only, for everything not on the page | `site.ts` `playlists`, `podcasts.json` `all` |
+| The SBT News segment the owner sent on 2026-09-25 (`videos.config.json` `tv`) | Title, channel, date, duration, views; summary from the video's description (UN General Assembly on AI risks, AI companies' warnings, global security, AI and deepfakes in the Brazilian elections) | `videos.json` `tv` (generated), shown at the top of `/podcasts/` under "On TV"; `podcasts.json` `items` |
 | [Cortes do Flow](https://www.youtube.com/@cortesdoflow) | Clips cut from the two Flow episodes | `videos.config.json` `cuts`, generated into `videos.json` |
 
 How the cuts were found: list the channel's uploads with `yt-dlp --flat-playlist`, find the positions of a few known clips, fetch the neighbors, and keep only videos whose description says `ASSISTA COMPLETO: https://youtube.com/live/<episode id>`. Titles alone are not enough: several clips do not name the guest, and one clip about the owner ("Convidado é 100% SINCERO sobre FABIO AKITA") comes from another guest's episode and is left out. There are also clips from an August 2024 Flow appearance that is not on the owner's list.
@@ -145,7 +146,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `/clock-tui/` | clock-tui repo, owner's tclock config |
 | `/writing/` | Blog highlights and the benchmark posts |
 | `/newsletter/` | akitando-news repo, the two live newsletter sites, the six-days post |
-| `/podcasts/` | The five videos, the two complete playlists (`site.ts` `playlists`), Cortes do Flow |
+| `/podcasts/` | The SBT News TV segment, the five videos, the two complete playlists (`site.ts` `playlists`), Cortes do Flow |
 | `/games/` | distrobox-gaming and omarchy-games-menu repos |
 | `/frank/` | The six Frank repos and their blog posts (section 10), owner's words on the name |
 

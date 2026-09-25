@@ -12,16 +12,21 @@
   "play": "Play",
   "kind": {
     "podcast": "Podcast",
-    "talk": "Conference talk"
+    "talk": "Conference talk",
+    "tv": "TV news segment"
   },
   "views": "{n} views",
   "watch": "Watch on YouTube",
   "items": {
+    "7uFqDMwQ4_8": "A segment on SBT News's News Manhã. The UN General Assembly took up the risks of AI this week, and I talked about the warnings from the AI companies themselves, the risks to global security, and AI and deepfakes in the Brazilian elections.",
     "U3bZavG8qQY": "Lessons from 37 days of full immersion in vibe coding: 653 commits, about 144,000 lines and 8 projects in production. What agents can and cannot do, which business models make sense, and why the one-shot prompt is a myth.",
     "4c7pbOxYn_A": "Almost five hours on how AI changed in a year: the tipping point, what the owners of the biggest models do not say, why dumb questions burn more tokens, jobs, and which AI is best for programmers.",
     "9aWa-eCmWYE": "The end of the hype era. Why excitement about AI is inversely proportional to knowing how it works, and how I used frontier models to multiply my output on seven real projects without replacing the engineer.",
     "_Hl9wiLkns4": "With writer Ricardo Cavallini and astrophysicist Roberta Duarte: will superintelligence arrive, what a GPT really does, and a long detour through quantum physics and quantum computers.",
     "sf4Gxf0LiKo": "My first long conversation about AI on Flow: what it really does today, its limits, its history back to the 1960s, and what nobody tells you about quantum computers."
+  },
+  "tv": {
+    "title": "On TV"
   },
   "all": {
     "title": "The complete list",

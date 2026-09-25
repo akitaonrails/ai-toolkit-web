@@ -14,7 +14,7 @@ const { t, date, number } = useI18n(Astro, 'podcasts');
 const talks = new Set(['U3bZavG8qQY']);
 // schema.org VideoObject for each appearance, so search engines can show them as videos.
 const toIso = (d: string) => { const p = d.split(':').map(Number); const [h, m, s] = p.length === 3 ? p : [0, ...p]; return `PT${h ? `${h}H` : ''}${m}M${s}S`; };
-const schema = [{ '@type': 'ItemList', itemListElement: videos.appearances.map((v, i) => ({ '@type': 'ListItem', position: i + 1, item: {
+const schema = [{ '@type': 'ItemList', itemListElement: [...videos.tv, ...videos.appearances].map((v, i) => ({ '@type': 'ListItem', position: i + 1, item: {
   '@type': 'VideoObject', name: v.title, description: t(`items.${v.id}`), uploadDate: v.date, duration: toIso(v.duration),
   thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`, embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`, contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
 } })) }];
@@ -25,6 +25,22 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
     <a href="#episodes" class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#cuts" class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
+
+  <section id="tv" class="wrap pb-20 scroll-mt-20" data-hue="amber">
+    <h2 class="text-2xl mb-8">{t('tv.title')}</h2>
+    {videos.tv.map((v) => (
+      <div class="ep tv grid gap-8 lg:grid-cols-[1.25fr_1fr] items-center">
+        <Video id={v.id} title={v.title} play={t('play')} />
+        <div>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('kind.tv')} · {v.channel}</div>
+          <h3 class="text-2xl mt-3 !leading-tight">{v.title}</h3>
+          <p class="mt-2 font-mono text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
+          <p class="mt-4 text-muted">{t(`items.${v.id}`)}</p>
+          <a class="link mt-2 inline-block py-2.5" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
+        </div>
+      </div>
+    ))}
+  </section>
 
   <section id="episodes" class="wrap pb-20 scroll-mt-20" data-hue="amber">
     <ol class="grid gap-16 md:gap-20">

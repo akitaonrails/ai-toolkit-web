@@ -1,5 +1,15 @@
 {
-  "fetchedAt": "2026-09-23T19:35:41.687Z",
+  "fetchedAt": "2026-09-25T14:59:20.288Z",
+  "tv": [
+    {
+      "id": "7uFqDMwQ4_8",
+      "title": "Inteligência artificial, deepfakes e eleições: quais são os riscos reais? | #Newsmanhã",
+      "channel": "SBT News",
+      "date": "2026-09-25",
+      "duration": "17:34",
+      "views": 912
+    }
+  ],
   "appearances": [
     {
       "id": "U3bZavG8qQY",
@@ -7,7 +17,7 @@
       "channel": "Tropical on Rails",
       "date": "2026-05-28",
       "duration": "58:50",
-      "views": 119057
+      "views": 119919
     },
     {
       "id": "4c7pbOxYn_A",
@@ -15,7 +25,7 @@
       "channel": "Flow Podcast",
       "date": "2026-04-14",
       "duration": "4:44:12",
-      "views": 683520
+      "views": 687422
     },
     {
       "id": "9aWa-eCmWYE",
@@ -23,7 +33,7 @@
       "channel": "Fernando Ulrich",
       "date": "2026-03-08",
       "duration": "1:27:18",
-      "views": 326988
+      "views": 327467
     },
     {
       "id": "_Hl9wiLkns4",
@@ -31,7 +41,7 @@
       "channel": "Inteligência Ltda",
       "date": "2025-07-10",
       "duration": "4:25:25",
-      "views": 381601
+      "views": 381925
     },
     {
       "id": "sf4Gxf0LiKo",
@@ -39,7 +49,7 @@
       "channel": "Flow Podcast",
       "date": "2025-06-14",
       "duration": "4:40:55",
-      "views": 766807
+      "views": 767425
     }
   ],
   "cuts": {
@@ -50,7 +60,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-15",
         "duration": "17:24",
-        "views": 72824
+        "views": 72952
       },
       {
         "id": "Coi2-MBtkH8",
@@ -58,7 +68,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:30",
-        "views": 132224
+        "views": 133126
       },
       {
         "id": "fwYzEDPtdA0",
@@ -66,7 +76,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "10:16",
-        "views": 126355
+        "views": 126409
       },
       {
         "id": "5nKAHOSSgqY",
@@ -74,7 +84,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:20",
-        "views": 79240
+        "views": 79436
       },
       {
         "id": "xIjInGjJLFE",
@@ -82,7 +92,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:51",
-        "views": 40285
+        "views": 40301
       },
       {
         "id": "JmmrjgHFErQ",
@@ -90,7 +100,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:25",
-        "views": 37019
+        "views": 37107
       },
       {
         "id": "UJrT-KieiiQ",
@@ -98,7 +108,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:35",
-        "views": 32170
+        "views": 32171
       },
       {
         "id": "hJ2hqU0Cvmo",
@@ -106,7 +116,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "13:46",
-        "views": 31573
+        "views": 31847
       },
       {
         "id": "9ArApZStyzI",
@@ -114,7 +124,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:20",
-        "views": 23563
+        "views": 23620
       },
       {
         "id": "7dAKzagCklo",
@@ -122,7 +132,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "13:43",
-        "views": 17219
+        "views": 17391
       },
       {
         "id": "U_-g8zGu6wM",
@@ -130,7 +140,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:14",
-        "views": 15633
+        "views": 15646
       },
       {
         "id": "jaL7rXRcj1o",
@@ -138,7 +148,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:04",
-        "views": 5965
+        "views": 5967
       },
       {
         "id": "7YRNS4Q6kb0",
@@ -146,7 +156,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "10:11",
-        "views": 5676
+        "views": 5681
       },
       {
         "id": "yBBkP2k0lKg",
@@ -154,7 +164,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:02",
-        "views": 5244
+        "views": 5245
       },
       {
         "id": "aA5nQJnOUxc",
@@ -162,7 +172,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:13",
-        "views": 3105
+        "views": 3109
       },
       {
         "id": "PWpUC8wEUY0",
@@ -170,7 +180,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:21",
-        "views": 2645
+        "views": 2646
       },
       {
         "id": "LhjqBaEuezg",
@@ -178,7 +188,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:29",
-        "views": 2169
+        "views": 2170
       },
       {
         "id": "v9xg3A_eiIA",
@@ -186,7 +196,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:11",
-        "views": 1191
+        "views": 1193
       },
       {
         "id": "8dANZrq-z1I",
@@ -194,7 +204,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "16:17",
-        "views": 64955
+        "views": 65115
       },
       {
         "id": "ojCPRYw-AZ8",
@@ -202,7 +212,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "10:12",
-        "views": 44452
+        "views": 44532
       },
       {
         "id": "kJePoWn-DPk",
@@ -228,7 +238,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "19:25",
-        "views": 143246
+        "views": 143248
       },
       {
         "id": "ZplyjiCon4M",
@@ -236,7 +246,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "10:16",
-        "views": 60576
+        "views": 60578
       },
       {
         "id": "PsNun0DABL8",
@@ -252,7 +262,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "10:31",
-        "views": 37105
+        "views": 37118
       },
       {
         "id": "uUKUa8_TdYo",
@@ -260,7 +270,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "12:19",
-        "views": 33194
+        "views": 33196
       },
       {
         "id": "3kheUdwa3ro",
@@ -268,7 +278,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "12:32",
-        "views": 14342
+        "views": 14343
       },
       {
         "id": "x8XFQA6fNQU",
@@ -276,7 +286,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:03",
-        "views": 1417250
+        "views": 1417567
       },
       {
         "id": "3ss_RUZqS4E",
@@ -284,7 +294,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:16",
-        "views": 176895
+        "views": 176897
       },
       {
         "id": "exfagaBE8kQ",
@@ -292,7 +302,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "16:34",
-        "views": 77677
+        "views": 77680
       },
       {
         "id": "5qD5Do_HriQ",
@@ -300,7 +310,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:58",
-        "views": 66489
+        "views": 66609
       },
       {
         "id": "q_hZY_1QcoU",
@@ -308,7 +318,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "11:55",
-        "views": 39856
+        "views": 39857
       }
     ]
   }

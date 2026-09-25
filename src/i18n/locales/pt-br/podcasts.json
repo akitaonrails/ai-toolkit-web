@@ -12,16 +12,21 @@
   "play": "Assistir",
   "kind": {
     "podcast": "Podcast",
-    "talk": "Palestra"
+    "talk": "Palestra",
+    "tv": "Reportagem de TV"
   },
   "views": "{n} visualizações",
   "watch": "Assistir no YouTube",
   "items": {
+    "7uFqDMwQ4_8": "Participação no News Manhã, do SBT News. Os riscos da IA entraram no debate da Assembleia Geral da ONU nesta semana, e eu comentei os alertas das próprias empresas de IA, os riscos à segurança global e o uso de IA e deepfakes nas eleições brasileiras.",
     "U3bZavG8qQY": "Lições de 37 dias de imersão total em vibe coding: 653 commits, cerca de 144.000 linhas e 8 projetos em produção. O que os agentes conseguem e não conseguem fazer, quais modelos de negócio fazem sentido e por que o prompt one-shot é um mito.",
     "4c7pbOxYn_A": "Quase cinco horas sobre como a IA mudou em um ano: o ponto de virada, o que os donos dos maiores modelos não contam, por que pergunta burra queima mais tokens, empregos, e qual IA é a melhor pra programador.",
     "9aWa-eCmWYE": "O fim da era do hype. Por que a empolgação com IA é inversamente proporcional a saber como ela funciona, e como eu usei modelos de fronteira pra multiplicar minha produção em sete projetos reais sem substituir o engenheiro.",
     "_Hl9wiLkns4": "Com o escritor Ricardo Cavallini e a astrofísica Roberta Duarte: a superinteligência vai chegar, o que um GPT realmente faz, e um longo desvio por física quântica e computadores quânticos.",
     "sf4Gxf0LiKo": "Minha primeira conversa longa sobre IA no Flow: o que ela realmente faz hoje, seus limites, sua história desde os anos 1960, e o que ninguém te conta sobre computadores quânticos."
+  },
+  "tv": {
+    "title": "Na TV"
   },
   "all": {
     "title": "A lista completa",

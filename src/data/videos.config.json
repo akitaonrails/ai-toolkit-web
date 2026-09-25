@@ -1,5 +1,8 @@
 {
   "_comment": "Edit this list, then run `node scripts/refresh-videos.mjs` to refresh titles, dates, views and thumbnails into src/data/videos.json. How the cuts were found: docs/sources.md.",
+  "tv": [
+    "7uFqDMwQ4_8"
+  ],
   "appearances": [
     "U3bZavG8qQY",
     "4c7pbOxYn_A",
