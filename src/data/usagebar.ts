@@ -9,7 +9,7 @@ export const providers = [
 export const install = [
   'omarchy pkg aur add ai-usagebar-bin &&\n  omarchy plugin add https://github.com/akitaonrails/ai-usagebar.git --enable',
   'yay -S ai-usagebar-bin    # prebuilt\nyay -S ai-usagebar        # from source',
-  'cargo binstall ai-usagebar   # prebuilt\ncargo install ai-usagebar    # from source',
+  'cargo install ai-usagebar    # from source, Linux or macOS\ncargo binstall ai-usagebar   # prebuilt Linux binary (needs cargo-binstall)',
   'nix profile install github:akitaonrails/ai-usagebar',
   'scoop bucket add akitaonrails https://github.com/akitaonrails/scoop-bucket\nscoop install ai-usagebar',
 ];

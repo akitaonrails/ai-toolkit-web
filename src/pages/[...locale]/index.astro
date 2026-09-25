@@ -27,7 +27,7 @@ type Tool = { tagline: string; text: string; points: string[]; shotAlt: string }
 
 const steps = withText([{ hue: 'red' }, { hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }] as const, raw<Text[]>('desk.steps'));
 const tools = withText([
-  { id: 'usagebar', name: 'ai-usagebar', hue: 'blue', href: '/ai-usagebar/', post: 'usagebarPost', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo binstall ai-usagebar' },
+  { id: 'usagebar', name: 'ai-usagebar', hue: 'blue', href: '/ai-usagebar/', post: 'usagebarPost', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo install ai-usagebar' },
   { id: 'ghpending', name: 'ghpending', hue: 'amber', href: '/ghpending/', post: 'ghpendingPost', shot: ghpendingShot, install: 'brew tap akitaonrails/tap && brew install ghpending\nghpending add' },
   { id: 'tclock', name: 'tclock', hue: 'red', href: '/clock-tui/', post: 'dayToDay', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
 ] as const, raw<Tool[]>('tools.items'));
