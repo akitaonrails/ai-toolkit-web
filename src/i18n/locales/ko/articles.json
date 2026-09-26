@@ -160,6 +160,30 @@
     "frankGoPost": {
       "title": "Frank GO: AI로 바둑 즐기기",
       "summary": "KataGo를 넣은 Sabaki 포크. 4,700개가 넘는 사활 문제, 역사적인 기보, 초보자에게 집과 형세를 보여 주는 오버레이."
+    },
+    "misleadingAds": {
+      "title": "OpenAI, Anthropic, Nvidia의 오해를 부르는 광고를 믿는다면 바보입니다",
+      "summary": "칩 파는 회사가 선언한 AGI, 무차별 대입으로 푼 밀레니엄 문제, 연출된 사임을 다루고, 과대광고와 종말론이 왜 같은 영업 멘트인지 설명합니다."
+    },
+    "akitaCaved": {
+      "title": "RANT: Akita는 AI에 굴복했나?",
+      "summary": "저는 매일 LLM을 쓰면서도 AGI는 달성할 수 없다고 말합니다. 둘 다 동시에 사실입니다."
+    },
+    "fableSoap": {
+      "title": "LLM 벤치마크: Fable 5와 Anthropic 막장 드라마",
+      "summary": "외부에서는 아무도 테스트할 수 없던 모델, 지연된 데이터센터, 160주에 이르는 변압기 리드 타임, 그리고 과대광고 뒤의 경제학을 다룹니다."
+    },
+    "llmsFail": {
+      "title": "LLM이 여러분 회사에서 실패할 이유",
+      "summary": "병목은 사람의 결정으로 옮겨 갑니다. LLM은 거울입니다. 나쁜 코드를 열 배 빠르게 만듭니다."
+    },
+    "highestScore": {
+      "title": "LLM 벤치마크: 점수가 가장 높은 모델을 써야 할까?",
+      "summary": "모델에 지능이 얼마나 있는지 보여 주는 MRI는 없습니다. 어떤 순위든 최상위권은 하나의 무리로 읽으세요."
+    },
+    "businessModels": {
+      "title": "바이브 코딩 몰입 37일: 비즈니스 모델에 대한 결론",
+      "summary": "프런티어 모델을 학습시키고 운영하는 데 드는 비용, 그리고 왜 소수의 회사만 그걸 할 수 있는지 설명합니다."
     }
   },
   "related": {

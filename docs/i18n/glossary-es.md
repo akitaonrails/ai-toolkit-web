@@ -43,3 +43,8 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | ranked | en el ranking / ordenados |
 | contributor | colaborador |
 | intern | pasante |
+| AGI | la AGI (femenino, sin traducir a IAG) |
+| datacenter | datacenter |
+| valuation | valoración |
+| takeaways | conclusiones |
+| sources (list of links) | fuentes |

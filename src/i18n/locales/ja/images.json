@@ -61,5 +61,39 @@
     "Host": "ホスト",
     "Conflicts": "競合",
     "Rebuild anytime": "いつでも再構築"
+  },
+  "agi-definitions": {
+    "AGI?": "AGI?",
+    "Most jobs": "大半の仕事",
+    "$100B profit": "$100Bの利益",
+    "Levels 0 to 5": "レベル0〜5",
+    "Skill learning": "スキル習得",
+    "Human-level": "人間並み"
+  },
+  "agi-benchmarks": {
+    "Next one": "次のもの"
+  },
+  "agi-money-loop": {
+    "Hype": "ハイプ",
+    "Valuation": "企業価値",
+    "IPO": "IPO",
+    "Datacenters": "データセンター",
+    "GPUs": "GPU"
+  },
+  "agi-history": {
+    "Perceptron": "パーセプトロン",
+    "AI winter": "AIの冬"
+  },
+  "agi-tool": {
+    "I decide": "私が決める",
+    "Tool": "ツール",
+    "Result": "結果",
+    "Review": "レビュー"
+  },
+  "agi-efficiency": {
+    "Today": "現在",
+    "Needed": "必要なもの",
+    "Less compute": "計算量を減らす",
+    "Lower price": "価格を下げる"
   }
 }

@@ -160,6 +160,30 @@
     "frankGoPost": {
       "title": "Frank GO: brincando de GO com IA",
       "summary": "Um fork do Sabaki com KataGo, mais de 4.700 tsumego, partidas históricas e camadas que mostram território e placar pra iniciantes."
+    },
+    "misleadingAds": {
+      "title": "Você é um idiota se acredita nas propagandas enganosas da OpenAI, Anthropic, NVIDIA. Entenda",
+      "summary": "AGI declarada pelo vendedor de chips, um Problema do Milênio resolvido na força bruta, uma demissão encenada, e por que hype e apocalipse são o mesmo papo de vendedor."
+    },
+    "akitaCaved": {
+      "title": "RANT: o Akita abriu as pernas pra IA??",
+      "summary": "Eu uso LLMs todo dia e continuo dizendo que AGI não é alcançável. As duas coisas são verdade ao mesmo tempo."
+    },
+    "fableSoap": {
+      "title": "LLM Benchmark: Fable 5 e a novela da Anthropic",
+      "summary": "Um modelo que ninguém de fora conseguiu testar, datacenters atrasados, 160 semanas de espera por transformadores e a economia por trás do hype."
+    },
+    "llmsFail": {
+      "title": "Por que LLMs vão falhar na Sua Empresa?",
+      "summary": "O gargalo passa pras decisões humanas. É um espelho: código ruim dez vezes mais rápido."
+    },
+    "highestScore": {
+      "title": "LLM Benchmark: Devo usar o que tem nota maior?",
+      "summary": "Nenhuma ressonância magnética mostra quanto de inteligência um modelo tem. Leia o topo de qualquer ranking como um bloco só."
+    },
+    "businessModels": {
+      "title": "37 dias de Imersão em Vibe Coding: Conclusão quanto a Modelos de Negócio",
+      "summary": "Quanto custa treinar e rodar modelos de fronteira, e por que só um punhado de empresas consegue."
     }
   },
   "related": {

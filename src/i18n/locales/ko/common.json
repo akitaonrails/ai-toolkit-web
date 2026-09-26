@@ -72,6 +72,10 @@
     "jail": {
       "label": "ai-jail",
       "note": "AI 코딩 에이전트를 위한 OS 샌드박스"
+    },
+    "agi": {
+      "label": "AGI가 중요하지 않은 이유",
+      "note": "출처를 단 의견"
     }
   },
   "kicker": {

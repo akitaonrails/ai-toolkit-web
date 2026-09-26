@@ -61,5 +61,39 @@
     "Host": "Host",
     "Conflicts": "Conflitos",
     "Rebuild anytime": "Recrie quando quiser"
+  },
+  "agi-definitions": {
+    "AGI?": "AGI?",
+    "Most jobs": "Maioria dos empregos",
+    "$100B profit": "Lucro de $100B",
+    "Levels 0 to 5": "Níveis 0 a 5",
+    "Skill learning": "Aprendizado",
+    "Human-level": "Nível humano"
+  },
+  "agi-benchmarks": {
+    "Next one": "O próximo"
+  },
+  "agi-money-loop": {
+    "Hype": "Hype",
+    "Valuation": "Valuation",
+    "IPO": "IPO",
+    "Datacenters": "Datacenters",
+    "GPUs": "GPUs"
+  },
+  "agi-history": {
+    "Perceptron": "Perceptron",
+    "AI winter": "Inverno da IA"
+  },
+  "agi-tool": {
+    "I decide": "Eu decido",
+    "Tool": "Ferramenta",
+    "Result": "Resultado",
+    "Review": "Review"
+  },
+  "agi-efficiency": {
+    "Today": "Hoje",
+    "Needed": "Necessário",
+    "Less compute": "Menos computação",
+    "Lower price": "Preço menor"
   }
 }

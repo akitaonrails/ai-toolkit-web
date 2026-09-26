@@ -72,6 +72,10 @@
     "jail": {
       "label": "ai-jail",
       "note": "sandbox ברמת מערכת ההפעלה לסוכני קוד מבוססי AI"
+    },
+    "agi": {
+      "label": "למה AGI לא משנה",
+      "note": "דעה, עם מקורות"
     }
   },
   "kicker": {

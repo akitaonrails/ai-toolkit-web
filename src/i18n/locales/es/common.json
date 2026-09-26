@@ -38,6 +38,10 @@
       "label": "Proyectos Frank",
       "note": "Experimentos para mis propias necesidades"
     },
+    "agi": {
+      "label": "Por qué la AGI no importa",
+      "note": "Una opinión, con fuentes"
+    },
     "writing": {
       "label": "Textos",
       "note": "El blog y el benchmark de LLMs"

@@ -196,7 +196,7 @@ and add it to `EXCLUDE` when it is data, vendored or generated.
 
 ## 11. Why AGI doesn't matter (`/agi/`)
 
-An opinion page asked for by the owner on 2026-09-26, in English first; the other languages come after his review (until then they fall back to English). Structure in `src/data/agi.ts`, words in `en/agi.json`.
+An opinion page asked for by the owner on 2026-09-26. English first; he reviewed it and the five translations followed the same day. Structure in `src/data/agi.ts`, words in `en/agi.json`.
 
 **His positions.** The main source is "You're an idiot if you believe the misleading ads from OpenAI, Anthropic and Nvidia" (2026-09-09): AGI as a deliberately empty marketing word, Huang declaring it for a model trained on his chips, the Navier-Stokes brute force, hype and doom as the same pitch, "demand proof". The rest comes from the 2026 posts linked in each section (the February rants for the Rosenblatt history and "AGI is not achievable", the v4 benchmark parts for saturation, the Fable 5 post for datacenter numbers). His framing at the owner's request: AGI is poorly defined, so poorly testable, so in his opinion a marketing term that keeps valuations and IPOs high. The X post (https://x.com/AkitaOnRails/status/2103930940179226812) gives the "tools, my servants" quote and the efficiency point; its Portuguese original is quoted as posted.
 

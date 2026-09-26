@@ -72,6 +72,10 @@
     "jail": {
       "label": "ai-jail",
       "note": "AIコーディングエージェント用のOSサンドボックス"
+    },
+    "agi": {
+      "label": "AGIがどうでもいい理由",
+      "note": "出典付きの意見"
     }
   },
   "kicker": {

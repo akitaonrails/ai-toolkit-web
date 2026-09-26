@@ -61,5 +61,39 @@
     "Host": "호스트",
     "Conflicts": "충돌",
     "Rebuild anytime": "언제든 재구축"
+  },
+  "agi-definitions": {
+    "AGI?": "AGI?",
+    "Most jobs": "대부분의 일",
+    "$100B profit": "$100B 이익",
+    "Levels 0 to 5": "레벨 0~5",
+    "Skill learning": "기술 학습",
+    "Human-level": "인간 수준"
+  },
+  "agi-benchmarks": {
+    "Next one": "다음 것"
+  },
+  "agi-money-loop": {
+    "Hype": "과대광고",
+    "Valuation": "기업 가치",
+    "IPO": "IPO",
+    "Datacenters": "데이터센터",
+    "GPUs": "GPU"
+  },
+  "agi-history": {
+    "Perceptron": "퍼셉트론",
+    "AI winter": "AI 겨울"
+  },
+  "agi-tool": {
+    "I decide": "내가 결정",
+    "Tool": "도구",
+    "Result": "결과",
+    "Review": "리뷰"
+  },
+  "agi-efficiency": {
+    "Today": "지금",
+    "Needed": "필요한 것",
+    "Less compute": "더 적은 연산",
+    "Lower price": "더 낮은 가격"
   }
 }

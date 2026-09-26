@@ -72,6 +72,10 @@
     "jail": {
       "label": "ai-jail",
       "note": "Um sandbox de sistema pra agentes de código com IA"
+    },
+    "agi": {
+      "label": "Por que AGI não importa",
+      "note": "Uma opinião, com fontes"
     }
   },
   "kicker": {

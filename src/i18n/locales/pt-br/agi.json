@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "Por que AGI não importa",
+    "description": "Fabio Akita sobre AGI: sem definição aceita, sem teste de verdade, palavra de marketing que sustenta valuations. As ferramentas já funcionam; falta eficiência."
+  },
+  "hero": {
+    "kicker": "Opinião",
+    "title": "Por que AGI não importa",
+    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Seis pontos curtos sobre o porquê, com links pras versões longas.",
+    "primary": "Pular pras conclusões",
+    "secondary": "A versão longa no meu blog"
+  },
+  "motto": {
+    "text": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA.",
+    "original": "Sua empolgação com IA é inversamente proporcional ao seu conhecimento sobre IA."
+  },
+  "sourcesTitle": "Fontes",
+  "sections": {
+    "define": {
+      "kicker": "1. A definição",
+      "title": "Ninguém concorda sobre o que é",
+      "lede": "Pergunte a cinco laboratórios o que AGI significa e você recebe cinco alvos diferentes. Um deles é só um número de lucro.",
+      "alt": "Cinco alvos de tiro com arco espalhados pelo quadro, com os rótulos Maioria dos empregos, Lucro de $100B, Níveis 0 a 5, Aprendizado e Nível humano, e uma flecha com o rótulo AGI? voando entre eles sem acertar nenhum.",
+      "points": [
+        "O Charter da OpenAI diz que AGI significa sistemas que superam humanos na maior parte do trabalho com valor econômico.",
+        "O contrato da Microsoft com a OpenAI teria definido AGI como US$ 100 bilhões de lucro. Não tem nada de cognitivo nisso. Em abril de 2026 eles derrubaram a cláusula de vez.",
+        "O paper \"Levels of AGI\" do Google DeepMind já classificava o ChatGPT como \"Emerging AGI\" em 2023. François Chollet define inteligência como a eficiência com que um sistema aprende habilidades novas, coisa que nenhum dos outros mede.",
+        "Até quem vende dá de ombros. Sam Altman chamou de \"um termo não muito útil\", Dario Amodei diz que não gosta dele, e Greg Brockman abriu \"a era da AGI\" admitindo que cada um tem uma definição diferente."
+      ],
+      "sources": {
+        "charter": "OpenAI Charter",
+        "profit": "TechCrunch: AGI como US$ 100 bi de lucro",
+        "dropped": "CNBC: a cláusula de AGI caiu (2026)",
+        "levels": "DeepMind: Levels of AGI",
+        "chollet": "Chollet: On the Measure of Intelligence",
+        "altman": "CNBC: Altman, \"um termo não muito útil\""
+      }
+    },
+    "test": {
+      "kicker": "2. O teste",
+      "title": "Então ninguém consegue testar",
+      "lede": "Se não dá pra definir, não dá pra medir. O que temos no lugar é uma fila de benchmarks que enchem, são burlados e trocados por outros.",
+      "alt": "Cinco barras de medidor em fila com os rótulos MMLU, GSM8K, ARC-AGI, HLE e O próximo. As quatro primeiras estão cheias até a linha vermelha do teto; a última ainda está vazia.",
+      "points": [
+        "O ARC-AGI-3 saiu em março de 2026 com a melhor IA em cerca de 0,5%. Em setembro um harness customizado levou a nota a 99,9% por US$ 19.000. A própria equipe do ARC Prize escreveu que saturar o teste não prova AGI.",
+        "O mesmo modelo tira 57% ou 24% no teste \"Definition of AGI\", dependendo de como você calcula a média.",
+        "O Humanity's Last Exam saiu com cerca de 29% das respostas de biologia e química provavelmente erradas. A OpenAI parou de reportar o SWE-bench Verified porque os testes tinham falhas e os modelos já tinham visto as soluções. A Meta colocou no LMArena um Llama 4 ajustado especialmente pra ele.",
+        "Meu próprio benchmark saturou duas vezes antes de eu reconstruir ele em volta de sabotagem escondida. Hoje vários modelos empatam em 100. O que sobra pra comparar é custo, velocidade e disciplina, não um salto de inteligência."
+      ],
+      "quote": "A gente mesmo se declarar num marco de AGI, pra mim isso é só benchmark hacking sem sentido.",
+      "quoteCite": "Satya Nadella, CEO da Microsoft",
+      "sources": {
+        "astra": "ARC Prize: GPT-6 Astra e o ARC-AGI-3",
+        "hendrycks": "Hendrycks et al.: A Definition of AGI",
+        "fourati": "Fourati: uma medida baseada em coerência",
+        "hle": "FutureHouse: auditoria do Humanity's Last Exam",
+        "swebench": "OpenAI: por que não avaliamos mais o SWE-bench Verified",
+        "arena": "The Leaderboard Illusion",
+        "nadella": "Dwarkesh Patel: Satya Nadella"
+      }
+    },
+    "marketing": {
+      "kicker": "3. O dinheiro",
+      "title": "É uma palavra de marketing",
+      "lede": "Na minha opinião, AGI é um termo de marketing, vago de propósito, pra poder ser anunciado sempre que o dinheiro precisar.",
+      "alt": "Um ciclo de cinco caixas em volta da palavra AGI: Hype, Valuation, IPO, Datacenters e GPUs, cada seta alimentando a próxima e a última voltando pro Hype.",
+      "points": [
+        "Jensen Huang declarou que \"a AGI chegou\" por causa de um modelo treinado em cerca de 100.000 dos chips que ele vende. É o vendedor de pá anunciando ouro.",
+        "O resultado da OpenAI em Navier-Stokes foi força bruta: cerca de 10.000 agentes em paralelo por 88 horas e milhões de dólares. Escala industrial, não um novo tipo de gênio.",
+        "A palavra sustenta números enormes: OpenAI avaliada em US$ 852 bilhões, Anthropic pedindo IPO a US$ 965 bilhões, perto de US$ 700 bilhões de capex das Big Techs em 2026. E os negócios andam em círculo: a Nvidia financia os datacenters que compram chips da Nvidia.",
+        "Quando \"olha como é revolucionário\" para de funcionar, o discurso vira \"olha como é perigoso\". Hype e apocalipse são o mesmo papo de vendedor."
+      ],
+      "quote": "Exija provas. Exija skin in the game. Pergunte quem ganha com o seu medo e com a sua empolgação.",
+      "sources": {
+        "huang": "Fox Business: Huang, \"a AGI chegou\"",
+        "marcus": "Gary Marcus: \"decreto corporativo\"",
+        "openaiRound": "CNBC: OpenAI a US$ 852 bi",
+        "anthropicIpo": "Fortune: Anthropic pede IPO",
+        "nvidiaDeal": "CNBC: Nvidia financiando o datacenter da OpenAI",
+        "capex": "CNBC: capex de IA das Big Techs em 2026"
+      }
+    },
+    "history": {
+      "kicker": "4. A história",
+      "title": "Já vimos esse filme",
+      "lede": "Esta é a segunda bolha de IA. A primeira fez as mesmas promessas e acabou num inverno.",
+      "alt": "Uma linha do tempo com um primeiro pico chamado 1958 Perceptron, um vale longo chamado Inverno da IA, uma subida marcada 2017 e um pico mais alto chamado 2026 terminando num ponto de interrogação.",
+      "points": [
+        "Em 1958 o New York Times noticiou que a Marinha americana esperava que o Perceptron de Frank Rosenblatt fosse \"andar, falar, ver, escrever, se reproduzir e ter consciência da própria existência\".",
+        "Minsky e Papert mostraram os limites dele em 1969. Em 1973 o relatório Lighthill concluiu que nada tinha produzido \"o grande impacto que foi prometido na época\". O financiamento secou e veio o primeiro inverno da IA.",
+        "Bolhas estouram e a tecnologia fica. Ciclos econômicos não têm nada a ver com ciclos tecnológicos."
+      ],
+      "sources": {
+        "nyt": "The New York Times, 1958",
+        "perceptrons": "Minsky e Papert: Perceptrons (1969)",
+        "lighthill": "O relatório Lighthill (1973)"
+      }
+    },
+    "tool": {
+      "kicker": "5. O que importa",
+      "title": "Uma ferramenta fantástica, fazendo o que eu mando",
+      "lede": "Não preciso que ela seja geral. Preciso que ela faça o que eu peço, rápido, e ela já faz.",
+      "alt": "Um terminal com o rótulo Eu decido manda trabalho pra uma máquina com o rótulo Ferramenta, que produz uma pilha de documentos com o rótulo Resultado; uma seta com o rótulo Review volta pro terminal.",
+      "points": [
+        "LLMs são ferramentas fantásticas, e os modelos multimídia também impressionam. Algo como o Seedance já é útil no workflow de qualquer artista. Nenhum deles chega nem perto de \"fazer tudo sozinho\".",
+        "O resultado é diretamente proporcional a quem está no controle: as instruções, o review, o acompanhamento. É um espelho. Código ruim dez vezes mais rápido, ou código bom dez vezes mais rápido.",
+        "É a melhor forma que temos de automatizar tarefas e parar de gastar tempo humano com trabalho mundano. Esse é o estado da arte, e nesse nível ele já é excelente."
+      ],
+      "quote": "Todas as IAs são FERRAMENTAS. São meus servos. Servos caros, mas eles fazer o que MANDO. E esse sempre vai ser o limite.",
+      "quoteOriginal": "Todas as IAs são FERRAMENTAS. São meus servos. Servos caros, mas eles fazer o que MANDO. E esse sempre vai ser o limite.",
+      "quoteCite": "Eu no X, 26 de setembro de 2026"
+    },
+    "efficiency": {
+      "kicker": "6. O que falta",
+      "title": "Eficiência, não inteligência",
+      "lede": "Hoje isso exige praticamente todos os datacenters do mundo, com meio trilhão de dólares em backlog ainda por construir, e vira gargalo pra todo fabricante de hardware de servidor.",
+      "alt": "Fileiras de racks de datacenter com o rótulo Hoje à esquerda, um único chip pequeno com o rótulo Necessário à direita, e uma seta verde entre eles com os rótulos Menos computação e Preço menor.",
+      "points": [
+        "Os hyperscalers vão gastar mais de US$ 650 bilhões este ano, e cerca de 7 dos 12 GW de datacenters planejados nos EUA pra 2026 estão atrasados ou cancelados.",
+        "Modelos mais baratos já chegam perto. No meu benchmark o DeepSeek V4.1 Flash tirou 92,5 por US$ 1,21, e um modelo gratuito tirou 94.",
+        "O que falta agora é otimização em massa: muito menos computação por tarefa e preços que caiam drasticamente. Isso mudaria mais do que qualquer anúncio de AGI."
+      ]
+    }
+  },
+  "takeaways": {
+    "title": "As conclusões",
+    "items": [
+      "AGI não tem definição aceita. A que foi escrita num contrato era uma meta de lucro, e caiu.",
+      "Sem definição não tem teste. Os benchmarks enchem e são trocados pelo próximo.",
+      "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",
+      "As ferramentas são reais e excelentes. Fazem o que você manda, e quem está no comando continua sendo você.",
+      "O que importa agora é eficiência: o mesmo trabalho com menos hardware e preços menores."
+    ]
+  },
+  "next": [
+    {
+      "title": "Textos e o LLM Benchmark",
+      "text": "Os posts do blog por trás desta página, e os números do benchmark."
+    },
+    {
+      "title": "Como eu uso",
+      "text": "O ciclo diário, as skills e os agentes que eu realmente rodo."
+    }
+  ]
+}

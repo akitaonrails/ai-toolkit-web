@@ -64,3 +64,9 @@ Terms decided while translating. One English term maps to one target term across
 | symbolic link | シンボリックリンク |
 | intern with amnesia | 記憶喪失のインターン |
 | All rights reserved | 無断転載を禁じます |
+| AGI | AGI（英語のまま） |
+| AI winter | AIの冬 |
+| valuation | 企業価値 / 評価額 |
+| doom (vs hype) | 破滅論 |
+| capex | 設備投資 |
+| takeaways | まとめ |

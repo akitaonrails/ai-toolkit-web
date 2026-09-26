@@ -61,5 +61,39 @@
     "Host": "המארח",
     "Conflicts": "התנגשויות",
     "Rebuild anytime": "בנייה מחדש בכל עת"
+  },
+  "agi-definitions": {
+    "AGI?": "AGI?",
+    "Most jobs": "רוב המשרות",
+    "$100B profit": "רווח $100B",
+    "Levels 0 to 5": "רמות 0 עד 5",
+    "Skill learning": "למידת מיומנויות",
+    "Human-level": "רמה אנושית"
+  },
+  "agi-benchmarks": {
+    "Next one": "הבא בתור"
+  },
+  "agi-money-loop": {
+    "Hype": "הייפ",
+    "Valuation": "שווי",
+    "IPO": "IPO",
+    "Datacenters": "דאטה סנטרים",
+    "GPUs": "GPUs"
+  },
+  "agi-history": {
+    "Perceptron": "Perceptron",
+    "AI winter": "חורף ה-AI"
+  },
+  "agi-tool": {
+    "I decide": "אני מחליט",
+    "Tool": "כלי",
+    "Result": "תוצאה",
+    "Review": "בדיקה"
+  },
+  "agi-efficiency": {
+    "Today": "היום",
+    "Needed": "נדרש",
+    "Less compute": "פחות חישוב",
+    "Lower price": "מחיר נמוך יותר"
   }
 }
