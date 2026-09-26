@@ -1,0 +1,94 @@
+---
+// The money and family ties reported around the Coxon story, drawn in the site's style (docs/sources.md, section 11).
+// Solid edges are confirmed by a public record; dashed edges are reported but not independently confirmed.
+// Names stay as they are (except the safety groups' collective name); descriptions and edge labels come from the `agi` catalog (network.*). On narrow screens
+// the same edges render as a list, since the drawing would be too small to read.
+import type { Hue } from '@/data/site';
+import { useI18n } from '@/i18n';
+const { t, dir } = useI18n(Astro, 'agi');
+
+type Node = { id: string; name: string; x: number; y: number; hue: Hue };
+const nodes: Node[] = [
+  { id: 'goodVentures', name: 'Good Ventures', x: 190, y: 110, hue: 'amber' },
+  { id: 'dey', name: 'DEY.', x: 600, y: 110, hue: 'orange' },
+  { id: 'tallinn', name: 'Jaan Tallinn · SFF', x: 1010, y: 110, hue: 'amber' },
+  { id: 'coefficient', name: 'Coefficient Giving', x: 190, y: 370, hue: 'amber' },
+  { id: 'anthropic', name: 'Anthropic', x: 600, y: 370, hue: 'rose' },
+  { id: 'groups', name: t('network.groupsName'), x: 1010, y: 370, hue: 'orange' },
+  { id: 'karnofsky', name: 'Holden Karnofsky', x: 190, y: 630, hue: 'violet' },
+  { id: 'daniela', name: 'Daniela Amodei', x: 600, y: 630, hue: 'violet' },
+  { id: 'coxon', name: 'Jacob Coxon', x: 1010, y: 630, hue: 'red' },
+];
+const at = Object.fromEntries(nodes.map((n) => [n.id, n]));
+const W = 300, H = 92;
+
+// `path` overrides the straight line; `lx, ly` place the label.
+type Edge = { id: string; from: string; to: string; reported?: boolean; path?: string; lx?: number; ly?: number };
+const edges: Edge[] = [
+  { id: 'mainFunder', from: 'goodVentures', to: 'coefficient' },
+  { id: 'cofounded', from: 'karnofsky', to: 'coefficient' },
+  { id: 'married', from: 'karnofsky', to: 'daniela' },
+  { id: 'president', from: 'daniela', to: 'anthropic' },
+  { id: 'joined', from: 'karnofsky', to: 'anthropic' },
+  { id: 'seriesA', from: 'goodVentures', to: 'anthropic' },
+  { id: 'ledSeriesA', from: 'tallinn', to: 'anthropic', lx: 890, ly: 196 },
+  { id: 'grants', from: 'tallinn', to: 'groups' },
+  { id: 'amplified', from: 'groups', to: 'coxon', reported: true },
+  { id: 'booked', from: 'dey', to: 'coxon', reported: true, lx: 700, ly: 250 },
+  { id: 'scholarship', from: 'goodVentures', to: 'coxon', reported: true, path: 'M 40 110 C -50 110, -50 745, 200 745 L 860 745 C 970 745, 1010 725, 1010 676', lx: 600, ly: 745 },
+];
+const mid = (e: Edge) => ({ x: e.lx ?? (at[e.from].x + at[e.to].x) / 2, y: e.ly ?? (at[e.from].y + at[e.to].y) / 2 });
+---
+<figure class="net">
+  <div class="net-draw on-ink" dir="ltr">
+    <svg viewBox="-70 20 1290 760" role="img" aria-label={t('network.alt')}>
+      <g class="edges">
+        {edges.map((e) => (
+          e.path
+            ? <path d={e.path} class:list={['edge', e.reported && 'reported']} />
+            : <line x1={at[e.from].x} y1={at[e.from].y} x2={at[e.to].x} y2={at[e.to].y} class:list={['edge', e.reported && 'reported']} />
+        ))}
+      </g>
+      <g class="edge-labels">
+        {edges.map((e) => { const m = mid(e); return <text x={m.x} y={m.y} class:list={['edge-label', e.reported && 'reported']} text-anchor="middle" dominant-baseline="middle" direction={dir}>{t(`network.edges.${e.id}`)}</text>; })}
+      </g>
+      {nodes.map((n) => (
+        <g class="node" data-hue={n.hue} transform={`translate(${n.x - W / 2} ${n.y - H / 2})`}>
+          <rect width={W} height={H} rx="16" />
+          <circle cx="22" cy="24" r="6" class="dot" />
+          <text x={W / 2} y="40" text-anchor="middle" class="node-name" direction={n.id === 'groups' ? dir : 'ltr'}>{n.name}</text>
+          <text x={W / 2} y="68" text-anchor="middle" class="node-note" direction={dir}>{t(`network.nodes.${n.id}`)}</text>
+        </g>
+      ))}
+    </svg>
+  </div>
+  <ul class="net-list">
+    {edges.map((e) => (
+      <li class:list={[e.reported && 'reported']}><strong>{at[e.from].name}</strong> <span class="text-muted">{t(`network.edges.${e.id}`)}</span> <strong>{at[e.to].name}</strong></li>
+    ))}
+  </ul>
+  <figcaption>
+    <span class="key"><span class="swatch" aria-hidden="true"></span>{t('network.legendVerified')}</span>
+    <span class="key"><span class="swatch reported" aria-hidden="true"></span>{t('network.legendReported')}</span>
+    <span class="block mt-2">{t('network.caption')}</span>
+  </figcaption>
+</figure>
+<style>
+  .net-draw { display: none; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink); padding: 1rem; }
+  svg { display: block; inline-size: 100%; block-size: auto; }
+  .edge { stroke: var(--ink-line); stroke-width: 3; fill: none; }
+  .edge.reported { stroke-dasharray: 10 9; }
+  .edge-label { font: 600 19px var(--font-sans); fill: var(--muted); paint-order: stroke; stroke: var(--ink); stroke-width: 10px; stroke-linejoin: round; }
+  .edge-label.reported { font-style: italic; }
+  .node rect { fill: var(--ink-raised); stroke: var(--hue-vivid); stroke-width: 2.5; filter: drop-shadow(0 0 10px var(--hue-soft)); }
+  .node .dot { fill: var(--hue-vivid); }
+  .node-name { font: 700 24px var(--font-display); fill: var(--text); }
+  .node-note { font: 500 17px var(--font-sans); fill: var(--muted); }
+  .net-list { display: grid; gap: 0.6rem; border-inline-start: 3px solid var(--line); padding-inline-start: 1rem; }
+  .net-list li.reported { border-inline-start: 2px dashed var(--line); padding-inline-start: 0.6rem; font-style: italic; }
+  figcaption { margin-top: 1rem; color: var(--muted); font-size: 0.95rem; max-width: 52em; }
+  .key { display: inline-flex; align-items: center; gap: 0.5rem; margin-inline-end: 1.5rem; }
+  .swatch { inline-size: 2.2rem; block-size: 0; border-top: 3px solid var(--muted); }
+  .swatch.reported { border-top-style: dashed; }
+  @media (min-width: 768px) { .net-draw { display: block; } .net-list { display: none; } }
+</style>

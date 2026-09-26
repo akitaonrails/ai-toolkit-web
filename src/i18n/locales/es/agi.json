@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinión",
     "title": "Por qué la AGI no importa",
-    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Siete puntos breves sobre por qué, con enlaces a las versiones largas.",
+    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Ocho puntos breves sobre por qué, con enlaces a las versiones largas.",
     "primary": "Ir a las conclusiones",
     "secondary": "La versión larga en mi blog"
   },
@@ -111,8 +111,34 @@
         "saltTyphoon": "FBI y CISA: China en las redes de telecomunicaciones de EE. UU."
       }
     },
+    "doom": {
+      "kicker": "5. El apocalipsis",
+      "title": "Los profetas del apocalipsis no traen pruebas",
+      "lede": "Cada pocos meses alguien deja un laboratorio y advierte al mundo. A mi entender, ninguno ha mostrado nada que se pueda verificar.",
+      "points": [
+        "Jacob Coxon, septiembre de 2026: cuatro meses en Anthropic y luego un hilo advirtiendo que la IA podría matar a todo el mundo antes de que termine la década. Más de 100 millones de vistas, y la prensa dijo que renunció a sus acciones. En Anthropic el vesting empieza a los seis meses. No había nada a qué renunciar.",
+        "Después salieron los detalles. Según se informó, grupos financiados por los mismos donantes de la seguridad de la IA lo amplificaron en cuestión de minutos, y Pirate Wires informó que una agencia de relaciones públicas cuyos clientes incluyen a catastrofistas conocidos le estaba agendando entrevistas al día siguiente. Él le había dicho a Fox News que no había terceros involucrados.",
+        "Sigue el dinero y da vueltas en círculo: los mismos donantes financian a los grupos de seguridad e invirtieron en Anthropic, el laboratorio que pide regulación. Una regulación escrita para el líder es una barrera de entrada disfrazada de seguridad.",
+        "Es el mismo guion cada vez. Hinton dejando Google, el hilo de renuncia de Leike, la carta \"Right to Warn\", \"Situational Awareness\", \"AI 2027\" y ahora Coxon. Ex-OpenAI, ex-Anthropic, ex-Google. Sentimientos, escenarios y líneas de tendencia, y ningún documento interno, incidente o número que alguien pueda verificar.",
+        "No confíes en nadie que no pueda mostrarte la prueba. Ni en los laboratorios, ni en los exempleados, ni en mí."
+      ],
+      "quote": "Declaración dramática y superficial, sin evidencia verificable, sin arriesgar nada propio, en un momento sospechoso.",
+      "quoteOriginal": "Declaração dramática e superficial, sem uma evidência checável, sem nenhum skin in the game, com timing suspeito.",
+      "quoteCite": "Yo, sobre el caso Coxon",
+      "sources": {
+        "pirateWires": "Pirate Wires: la agencia de RR. PP. detrás de Coxon",
+        "timeline": "OfficeChai: quién amplificó el hilo, y cuándo",
+        "sacks": "Benzinga: David Sacks sobre la \"psyop catastrofista\"",
+        "sff": "SFF: subvenciones a los grupos de seguridad",
+        "seriesA": "Anthropic: la Serie A y sus inversores",
+        "karnofsky": "Holden Karnofsky",
+        "coefficient": "Coefficient Giving (ex-Open Philanthropy)",
+        "nbc": "NBC News: se van dos investigadores más",
+        "rightToWarn": "La carta \"Right to Warn\""
+      }
+    },
     "history": {
-      "kicker": "5. La historia",
+      "kicker": "6. La historia",
       "title": "Ya vimos esta película",
       "lede": "Esta es la segunda burbuja de la IA. La primera hizo las mismas promesas y terminó en un invierno.",
       "alt": "Una línea de tiempo con un primer pico etiquetado 1958 Perceptrón, un largo valle etiquetado Invierno IA, una subida marcada 2017 y un pico más alto etiquetado 2026 que termina en un signo de interrogación.",
@@ -128,7 +154,7 @@
       }
     },
     "tool": {
-      "kicker": "6. Lo que importa",
+      "kicker": "7. Lo que importa",
       "title": "Una herramienta fantástica que hace lo que le digo",
       "lede": "No necesito que sea general. Necesito que haga lo que le pido, rápido, y eso ya lo hace.",
       "alt": "Una terminal etiquetada Yo decido envía trabajo a una máquina etiquetada Herramienta, que produce una pila de documentos etiquetada Resultado; una flecha etiquetada Revisión vuelve a la terminal.",
@@ -142,7 +168,7 @@
       "quoteCite": "Yo en X, 26 de septiembre de 2026"
     },
     "efficiency": {
-      "kicker": "7. Lo que falta",
+      "kicker": "8. Lo que falta",
       "title": "Eficiencia, no inteligencia",
       "lede": "Hoy hacen falta prácticamente todos los datacenters del mundo, con medio billón de dólares de pedidos todavía por construir, y es un cuello de botella para todos los fabricantes de hardware para servidores.",
       "alt": "Filas de racks de datacenter etiquetadas Hoy a la izquierda, un solo chip pequeño etiquetado Necesario a la derecha y una flecha verde entre ellos etiquetada Menos cómputo y Menor precio.",
@@ -160,12 +186,50 @@
       "Sin definición no hay prueba. Los benchmarks se saturan y el siguiente los reemplaza.",
       "La palabra sirve para vender chips, rondas de inversión e IPOs. Por eso la siguen anunciando.",
       "Los aterradores \"ataques de IA\" fueron personas que dejaron puertas abiertas. La herramienta hizo aquello a lo que la apuntaron.",
+      "El apocalipsis también es marketing. Los profetas traen sentimientos y pronósticos, nunca pruebas que puedas verificar.",
       "Las herramientas son reales y excelentes. Hacen lo que les dices, y el control sigue siendo tuyo.",
       "Lo que importa ahora es la eficiencia: el mismo trabajo con menos hardware y precios más bajos."
     ]
   },
   "next": [
-    { "title": "Textos y el benchmark de LLMs", "text": "Los posts del blog detrás de esta página y los números del benchmark." },
-    { "title": "Cómo lo uso", "text": "El ciclo diario, las skills y los agentes que de verdad uso." }
-  ]
+    {
+      "title": "Textos y el benchmark de LLMs",
+      "text": "Los posts del blog detrás de esta página y los números del benchmark."
+    },
+    {
+      "title": "Cómo lo uso",
+      "text": "El ciclo diario, las skills y los agentes que de verdad uso."
+    }
+  ],
+  "network": {
+    "alt": "Un mapa de nueve cajas: Good Ventures, DEY., Jaan Tallinn y SFF, Coefficient Giving, Anthropic, los grupos de seguridad de la IA Encode, AI Futures y AIPI, Holden Karnofsky, Daniela Amodei y Jacob Coxon, unidas por lazos de financiamiento, familia y trabajo.",
+    "groupsName": "Grupos de seguridad",
+    "nodes": {
+      "goodVentures": "fondo de Dustin Moskovitz",
+      "dey": "agencia de RR. PP.",
+      "tallinn": "inversor, fondo de subvenciones",
+      "coefficient": "ex-Open Philanthropy",
+      "anthropic": "el laboratorio",
+      "groups": "Encode, AI Futures, AIPI",
+      "karnofsky": "cofundador, Open Phil",
+      "daniela": "presidenta, Anthropic",
+      "coxon": "ex-Anthropic, 4 meses"
+    },
+    "edges": {
+      "mainFunder": "principal financiador",
+      "cofounded": "cofundó",
+      "married": "casado con",
+      "president": "cofundadora, presidenta",
+      "joined": "entró en 2025",
+      "seriesA": "Serie A (Moskovitz)",
+      "ledSeriesA": "lideró la Serie A",
+      "grants": "subvenciones",
+      "amplified": "amplificaron en minutos",
+      "booked": "agendó entrevistas",
+      "scholarship": "beca de 2022"
+    },
+    "legendVerified": "Confirmado por un registro público",
+    "legendReported": "Reportado, sin confirmación independiente",
+    "caption": "Los lazos que David Sacks y otros señalaron tras el hilo de Coxon, redibujados conservando solo lo que respalda una fuente. Estar conectado no prueba nada por sí solo; es un motivo para preguntar quién gana con el pánico."
+  }
 }

@@ -2,8 +2,8 @@
 // owner's posts it links. Words live in the `agi` catalog. Where every fact comes from: docs/sources.md, section 11.
 import type { ArticleId } from './articles';
 
-// `x` links the owner's post on X quoted in that section; `jail` adds a link to ai-jail, the sandbox he uses.
-export interface AgiSection { id: string; figure: string; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
+// `network` draws the AgiNetwork map instead of a generated figure. `x` links the owner's post on X quoted in that section; `jail` adds a link to ai-jail, the sandbox he uses.
+export interface AgiSection { id: string; figure?: string; network?: boolean; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
 
 export const agi = {
   sections: [
@@ -43,6 +43,17 @@ export const agi = {
       { id: 'bybit', href: 'https://www.fbi.gov/investigate/cyber/alerts/2025/north-korea-responsible-for-1-5-billion-bybit-hack' },
       { id: 'opm', href: 'https://www.nextgov.com/cybersecurity/2015/07/opm-215m-impacted-by-background-check-breach/207786/' },
       { id: 'saltTyphoon', href: 'https://www.cisa.gov/news-events/news/joint-statement-fbi-and-cisa-peoples-republic-china-prc-targeting-commercial-telecommunications' },
+    ] },
+    { id: 'doom', network: true, posts: ['misleadingAds', 'akitaCaved', 'highestScore'], sources: [
+      { id: 'pirateWires', href: 'https://tech.yahoo.com/ai/meta-ai/articles/ex-anthropic-researcher-warned-ai-082244257.html' },
+      { id: 'timeline', href: 'https://officechai.com/ai/questions-arise-over-anthropic-quitter-jacob-coxons-neutrality-and-ties-to-ai-safety-pr-groups-after-mega-viral-x-post/' },
+      { id: 'sacks', href: 'https://www.benzinga.com/markets/tech/26/09/61753920/david-sacks-jacob-coxon-anthropic-ai-safety' },
+      { id: 'sff', href: 'https://survivalandflourishing.fund/recommendations' },
+      { id: 'seriesA', href: 'https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems' },
+      { id: 'karnofsky', href: 'https://en.wikipedia.org/wiki/Holden_Karnofsky' },
+      { id: 'coefficient', href: 'https://en.wikipedia.org/wiki/Coefficient_Giving' },
+      { id: 'nbc', href: 'https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086' },
+      { id: 'rightToWarn', href: 'https://righttowarn.ai/' },
     ] },
     { id: 'history', figure: 'agi-history', posts: ['aiKilled'], sources: [
       { id: 'nyt', href: 'https://www.nytimes.com/1958/07/08/archives/new-navy-device-learns-by-doing-psychologist-shows-embryo-of.html' },

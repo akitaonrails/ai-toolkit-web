@@ -4,6 +4,7 @@
 import Base from '@/layouts/Base.astro';
 import PageHero from '@/components/PageHero.astro';
 import Figure from '@/components/Figure.astro';
+import AgiNetwork from '@/components/AgiNetwork.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import Related from '@/components/Related.astro';
 import NextPages from '@/components/NextPages.astro';
@@ -36,7 +37,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
         <div class="kicker"><span class="dot" aria-hidden="true"></span>{s(sec.id, 'kicker')}</div>
         <h2 class="text-3xl mt-4 max-w-[18em]">{s(sec.id, 'title')}</h2>
         <p class="lede mt-6">{s(sec.id, 'lede')}</p>
-        <div class="mt-10"><Figure name={sec.figure} alt={s(sec.id, 'alt')} /></div>
+        <div class="mt-10">{sec.network ? <AgiNetwork /> : <Figure name={sec.figure!} alt={s(sec.id, 'alt')} />}</div>
         <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] mt-10 items-start">
           <div>
             <ul class="ticks text-lg">{raw<string[]>(`sections.${sec.id}.points`).map((p) => <li>{p}</li>)}</ul>

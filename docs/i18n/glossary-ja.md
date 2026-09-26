@@ -78,3 +78,9 @@ Terms decided while translating. One English term maps to one target term across
 | maintainer | メンテナー |
 | real servers (diagram label) | 実サーバー |
 | human decision | 人間の判断 |
+| doomer / prophets of doom | 破滅論者 / 破滅の預言者 |
+| equity / vesting | 株式 / 権利確定 |
+| moat (regulatory) | 参入障壁 |
+| AI-safety groups / donors | AI安全性団体 / 寄付者 |
+| lab (AI lab) | 研究所 |
+| PR firm | PR会社 |

@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "의견",
     "title": "AGI가 중요하지 않은 이유",
-    "lede": "몇 주마다 누군가 AGI를 발표합니다. 저는 이 도구들을 매일 쓰지만, 그게 \"범용\"인지는 관심 없습니다. 그 이유를 짧게 일곱 가지로 정리하고, 긴 버전으로 가는 링크를 달았습니다.",
+    "lede": "몇 주마다 누군가 AGI를 발표합니다. 저는 이 도구들을 매일 쓰지만, 그게 \"범용\"인지는 관심 없습니다. 그 이유를 짧게 여덟 가지로 정리하고, 긴 버전으로 가는 링크를 달았습니다.",
     "primary": "결론으로 바로 가기",
     "secondary": "블로그의 긴 버전"
   },
@@ -111,8 +111,34 @@
         "saltTyphoon": "FBI와 CISA: 미국 통신망에 침투한 중국"
       }
     },
+    "doom": {
+      "kicker": "5. 종말론",
+      "title": "증거 없는 종말의 예언자들",
+      "lede": "몇 달마다 누군가 연구소를 그만두고 세상에 경고합니다. 제가 보기에는 그중 누구도 확인할 수 있는 것을 보여 주지 않았습니다.",
+      "points": [
+        "Jacob Coxon, 2026년 9월: Anthropic에서 넉 달을 일한 뒤, AI가 이번 10년이 가기 전에 모두를 죽일 수 있다고 경고하는 스레드를 올렸습니다. 조회수는 1억 회를 넘었고, 언론은 그가 지분을 포기했다고 전했습니다. Anthropic의 베스팅은 6개월부터 시작됩니다. 포기할 것이 없었습니다.",
+        "그러다 세부 사항이 드러났습니다. 같은 AI 안전 후원자들에게 자금을 받는 단체들이 몇 분 만에 그를 띄워 줬다고 알려졌고, Pirate Wires는 이름난 종말론자들을 고객으로 둔 PR 회사가 바로 다음 날 그의 인터뷰를 잡고 있었다고 보도했습니다. 그는 Fox News에 제3자는 관여하지 않았다고 말했었습니다.",
+        "돈을 따라가 보면 돌고 돕니다. 같은 후원자들이 안전 단체에 돈을 대고, 규제를 요구하는 연구소인 Anthropic에도 투자했습니다. 선두 주자에 맞춰 쓰인 규제는 안전으로 위장한 해자입니다.",
+        "매번 같은 각본입니다. Hinton의 Google 퇴사, Leike의 사임 스레드, \"Right to Warn\" 서한, \"Situational Awareness\", \"AI 2027\", 그리고 이제 Coxon. 전 OpenAI, 전 Anthropic, 전 Google. 감정과 시나리오와 추세선만 있고, 누구나 검증할 수 있는 내부 문서도, 사고도, 숫자도 없습니다.",
+        "증거를 보여 주지 못하는 사람은 아무도 믿지 마세요. 연구소도, 전 직원도, 저도 마찬가지입니다."
+      ],
+      "quote": "극적이고 얄팍한 선언, 확인 가능한 증거 없음, 스스로 지는 위험 없음, 수상한 타이밍.",
+      "quoteOriginal": "Declaração dramática e superficial, sem uma evidência checável, sem nenhum skin in the game, com timing suspeito.",
+      "quoteCite": "Coxon 건에 대해 제가 한 말",
+      "sources": {
+        "pirateWires": "Pirate Wires: Coxon 뒤에 있던 PR 회사",
+        "timeline": "OfficeChai: 누가, 언제 스레드를 띄웠나",
+        "sacks": "Benzinga: \"종말론자 심리전\"에 대한 David Sacks",
+        "sff": "SFF: 안전 단체에 준 지원금",
+        "seriesA": "Anthropic: 시리즈 A와 투자자들",
+        "karnofsky": "Holden Karnofsky",
+        "coefficient": "Coefficient Giving (전 Open Philanthropy)",
+        "nbc": "NBC News: 또 떠난 연구원 두 명",
+        "rightToWarn": "\"Right to Warn\" 서한"
+      }
+    },
     "history": {
-      "kicker": "5. 역사",
+      "kicker": "6. 역사",
       "title": "이미 본 영화",
       "lede": "지금은 두 번째 AI 버블입니다. 첫 번째 버블도 똑같은 약속을 했고, 겨울로 끝났습니다.",
       "alt": "첫 번째 봉우리에는 1958 퍼셉트론, 긴 골짜기에는 AI 겨울이라는 라벨이 붙은 타임라인입니다. 2017에서 다시 오르기 시작해 더 높은 봉우리 2026에 이르고, 물음표로 끝납니다.",
@@ -128,7 +154,7 @@
       }
     },
     "tool": {
-      "kicker": "6. 중요한 것",
+      "kicker": "7. 중요한 것",
       "title": "시키는 일을 하는 훌륭한 도구",
       "lede": "범용일 필요는 없습니다. 제가 요청한 일을 빠르게 해 주면 되고, 이미 그렇게 하고 있습니다.",
       "alt": "내가 결정이라는 라벨의 터미널이 도구라는 기계에 작업을 보내고, 기계는 결과라는 문서 더미를 만들어 냅니다. 리뷰라는 화살표가 다시 터미널로 돌아옵니다.",
@@ -142,7 +168,7 @@
       "quoteCite": "X에 올린 제 글, 2026년 9월 26일"
     },
     "efficiency": {
-      "kicker": "7. 부족한 것",
+      "kicker": "8. 부족한 것",
       "title": "지능보다 효율",
       "lede": "지금은 사실상 전 세계 데이터센터가 전부 필요하고, 아직 지어야 할 수주 잔고만 5,000억 달러에 이르며, 서버 하드웨어 제조사마다 병목에 걸려 있습니다.",
       "alt": "왼쪽에는 지금이라는 라벨의 데이터센터 랙이 줄지어 있고, 오른쪽에는 필요한 것이라는 라벨의 작은 칩 하나가 있습니다. 그 사이의 초록색 화살표에는 더 적은 연산, 더 낮은 가격이라는 라벨이 붙어 있습니다.",
@@ -160,6 +186,7 @@
       "정의가 없으니 테스트도 없습니다. 벤치마크는 포화되고 다음 벤치마크로 교체됩니다.",
       "이 단어는 칩, 투자 라운드, IPO를 파는 데 쓸모가 있습니다. 그래서 계속 발표됩니다.",
       "무서운 \"AI 공격\"은 사람이 문을 열어 둔 결과였습니다. 도구는 겨눈 곳을 향해 움직였을 뿐입니다.",
+      "종말론도 마케팅입니다. 예언자들이 내놓는 것은 감정과 예측뿐이고, 확인할 수 있는 증거는 끝내 없습니다.",
       "도구는 실재하고 훌륭합니다. 시키는 일을 하고, 주도권은 여전히 여러분에게 있습니다.",
       "다음으로 중요한 것은 효율입니다. 더 적은 하드웨어와 더 낮은 가격으로 같은 일을 해내는 것입니다."
     ]
@@ -173,5 +200,36 @@
       "title": "제가 쓰는 방식",
       "text": "매일 돌리는 루프, 실제로 쓰는 스킬과 에이전트입니다."
     }
-  ]
+  ],
+  "network": {
+    "alt": "상자 아홉 개로 된 관계도입니다. Good Ventures, DEY., Jaan Tallinn과 SFF, Coefficient Giving, Anthropic, AI 안전 단체 Encode, AI Futures, AIPI, Holden Karnofsky, Daniela Amodei, Jacob Coxon이 자금, 가족, 업무 관계로 이어져 있습니다.",
+    "groupsName": "AI 안전 단체",
+    "nodes": {
+      "goodVentures": "Dustin Moskovitz의 펀드",
+      "dey": "PR 회사",
+      "tallinn": "투자자, 지원금 펀드",
+      "coefficient": "전 Open Philanthropy",
+      "anthropic": "연구소",
+      "groups": "Encode, AI Futures, AIPI",
+      "karnofsky": "Open Phil 공동 설립자",
+      "daniela": "Anthropic 사장",
+      "coxon": "전 Anthropic, 4개월"
+    },
+    "edges": {
+      "mainFunder": "주요 후원자",
+      "cofounded": "공동 설립",
+      "married": "부부",
+      "president": "공동 설립자, 사장",
+      "joined": "2025년 합류",
+      "seriesA": "시리즈 A (Moskovitz)",
+      "ledSeriesA": "시리즈 A 주도",
+      "grants": "지원금",
+      "amplified": "몇 분 만에 확산",
+      "booked": "인터뷰 섭외",
+      "scholarship": "2022년 장학금"
+    },
+    "legendVerified": "공개 기록으로 확인됨",
+    "legendReported": "보도됨, 독립 확인 안 됨",
+    "caption": "Coxon 스레드 이후 David Sacks 등이 지목한 관계를, 출처가 뒷받침하는 것만 남기고 다시 그렸습니다. 연결돼 있다는 사실만으로는 아무것도 증명되지 않습니다. 이 공포로 누가 이득을 보는지 물어볼 이유가 될 뿐입니다."
+  }
 }

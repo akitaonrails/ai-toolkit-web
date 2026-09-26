@@ -53,3 +53,11 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | credentials | credenciales |
 | maintainer | mantenedor |
 | scary stories (AI attacks) | historias de miedo |
+| doom / prophets of doom | apocalipsis / profetas del apocalipsis |
+| doomer | catastrofista |
+| equity (startup shares) | acciones |
+| vesting | vesting |
+| moat (competitive) | barrera de entrada |
+| Series A | Serie A |
+| PR firm | agencia de relaciones públicas (RR. PP. en etiquetas) |
+| grants | subvenciones |

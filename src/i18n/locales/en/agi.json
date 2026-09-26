@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "Why AGI doesn't matter",
-    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Seven short points on why, with links to the long versions.",
+    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Eight short points on why, with links to the long versions.",
     "primary": "Skip to the takeaways",
     "secondary": "The long version on my blog"
   },
@@ -111,8 +111,34 @@
         "saltTyphoon": "FBI and CISA: China in US telecom networks"
       }
     },
+    "doom": {
+      "kicker": "5. The doom",
+      "title": "The prophets of doom bring no evidence",
+      "lede": "Every few months someone quits a lab and warns the world. In my reading, none of them has shown anything you can check.",
+      "points": [
+        "Jacob Coxon, September 2026: four months at Anthropic, then a thread warning that AI could kill everyone by the end of the decade. Over 100 million views, and the press said he gave up his equity. Anthropic's vesting starts at six months. There was nothing to give up.",
+        "Then the details came out. Groups funded by the same AI-safety donors reportedly amplified him within minutes, and Pirate Wires reported that a PR firm whose clients include well-known doomers was booking his interviews the day after. He had told Fox News no third parties were involved.",
+        "Follow the money and it goes in circles: the same donors fund the safety groups and invested in Anthropic, the lab asking for regulation. Regulation written for the leader is a moat disguised as safety.",
+        "It's the same script every time. Hinton leaving Google, Leike's resignation thread, the \"Right to Warn\" letter, \"Situational Awareness\", \"AI 2027\", and now Coxon. Ex-OpenAI, ex-Anthropic, ex-Google. Feelings, scenarios and trend lines, and no internal document, incident or number anyone can verify.",
+        "Don't trust anybody who can't show you the proof. Not the labs, not the ex-employees, and not me."
+      ],
+      "quote": "Dramatic and shallow declaration, no checkable evidence, no skin in the game, suspicious timing.",
+      "quoteOriginal": "Declaração dramática e superficial, sem uma evidência checável, sem nenhum skin in the game, com timing suspeito.",
+      "quoteCite": "Me, on the Coxon story",
+      "sources": {
+        "pirateWires": "Pirate Wires: the PR firm behind Coxon",
+        "timeline": "OfficeChai: who amplified the thread, and when",
+        "sacks": "Benzinga: David Sacks on the \"doomer psyop\"",
+        "sff": "SFF: grants to the safety groups",
+        "seriesA": "Anthropic: the Series A and its investors",
+        "karnofsky": "Holden Karnofsky",
+        "coefficient": "Coefficient Giving (ex-Open Philanthropy)",
+        "nbc": "NBC News: two more researchers leave",
+        "rightToWarn": "The \"Right to Warn\" letter"
+      }
+    },
     "history": {
-      "kicker": "5. The history",
+      "kicker": "6. The history",
       "title": "We've seen this movie before",
       "lede": "This is the second AI bubble. The first one made the same promises, and it ended in a winter.",
       "alt": "A timeline with a first peak labeled 1958 Perceptron, a long valley labeled AI winter, a rise marked 2017 and a higher peak labeled 2026 ending in a question mark.",
@@ -128,7 +154,7 @@
       }
     },
     "tool": {
-      "kicker": "6. What matters",
+      "kicker": "7. What matters",
       "title": "A fantastic tool, doing what I tell it",
       "lede": "I don't need it to be general. I need it to do what I ask, fast, and it already does.",
       "alt": "A terminal labeled I decide sends work to a machine labeled Tool, which produces a stack of documents labeled Result; an arrow labeled Review returns to the terminal.",
@@ -142,7 +168,7 @@
       "quoteCite": "Me on X, September 26, 2026"
     },
     "efficiency": {
-      "kicker": "7. What's missing",
+      "kicker": "8. What's missing",
       "title": "Efficiency, not intelligence",
       "lede": "Today it takes practically every datacenter in the world, with half a trillion dollars of backlog still to build, and it bottlenecks every maker of server hardware.",
       "alt": "Rows of datacenter racks labeled Today on the left, a single small chip labeled Needed on the right, and a green arrow between them labeled Less compute and Lower price.",
@@ -160,6 +186,7 @@
       "Without a definition there's no test. Benchmarks fill up and get replaced by the next one.",
       "The word is useful for selling chips, funding rounds and IPOs. That's why it keeps being announced.",
       "The scary \"AI attacks\" were people leaving doors open. The tool did what it was pointed at.",
+      "Doom is marketing too. The prophets bring feelings and forecasts, never evidence you can check.",
       "The tools are real and excellent. They do what you tell them, and you're still in charge.",
       "What matters next is efficiency: the same work with less hardware and lower prices."
     ]
@@ -173,5 +200,36 @@
       "title": "How I use it",
       "text": "The daily loop, the skills and the agents I actually run."
     }
-  ]
+  ],
+  "network": {
+    "alt": "A map of nine boxes: Good Ventures, DEY., Jaan Tallinn and SFF, Coefficient Giving, Anthropic, the AI-safety groups Encode, AI Futures and AIPI, Holden Karnofsky, Daniela Amodei and Jacob Coxon, linked by funding, family and work ties.",
+    "groupsName": "AI-safety groups",
+    "nodes": {
+      "goodVentures": "Dustin Moskovitz's fund",
+      "dey": "PR firm",
+      "tallinn": "investor, grant fund",
+      "coefficient": "ex-Open Philanthropy",
+      "anthropic": "the lab",
+      "groups": "Encode, AI Futures, AIPI",
+      "karnofsky": "co-founder, Open Phil",
+      "daniela": "president, Anthropic",
+      "coxon": "ex-Anthropic, 4 months"
+    },
+    "edges": {
+      "mainFunder": "main funder",
+      "cofounded": "co-founded",
+      "married": "married",
+      "president": "co-founder, president",
+      "joined": "joined in 2025",
+      "seriesA": "Series A (Moskovitz)",
+      "ledSeriesA": "led the Series A",
+      "grants": "grants",
+      "amplified": "amplified in minutes",
+      "booked": "booked interviews",
+      "scholarship": "2022 scholarship"
+    },
+    "legendVerified": "Confirmed by a public record",
+    "legendReported": "Reported, not independently confirmed",
+    "caption": "The ties David Sacks and others pointed to after the Coxon thread, redrawn keeping only what a source supports. Being connected proves nothing by itself; it's a reason to ask who gains from the panic."
+  }
 }
