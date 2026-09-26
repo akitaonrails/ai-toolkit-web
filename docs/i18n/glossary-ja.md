@@ -70,3 +70,11 @@ Terms decided while translating. One English term maps to one target term across
 | doom (vs hype) | 破滅論 |
 | capex | 設備投資 |
 | takeaways | まとめ |
+| "AI attacks" (agi page) | 「AIの攻撃」 |
+| sandbox | サンドボックス |
+| air gap | エアギャップ |
+| jailbreak (a model) | ジェイルブレイク |
+| production / dev (environments) | 本番環境 / 開発環境 |
+| maintainer | メンテナー |
+| real servers (diagram label) | 実サーバー |
+| human decision | 人間の判断 |

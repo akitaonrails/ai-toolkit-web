@@ -48,3 +48,8 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | valuation | valoración |
 | takeaways | conclusiones |
 | sources (list of links) | fuentes |
+| air gap | air gap |
+| jailbreak (a model) | hacer jailbreak |
+| credentials | credenciales |
+| maintainer | mantenedor |
+| scary stories (AI attacks) | historias de miedo |

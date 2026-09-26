@@ -95,5 +95,12 @@
     "Needed": "Needed",
     "Less compute": "Less compute",
     "Lower price": "Lower price"
+  },
+  "agi-attacks": {
+    "Sandbox": "Sandbox",
+    "Left open": "Left open",
+    "Real servers": "Real servers",
+    "Credentials": "Credentials",
+    "Human decision": "Human decision"
   }
 }

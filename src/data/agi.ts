@@ -2,11 +2,10 @@
 // owner's posts it links. Words live in the `agi` catalog. Where every fact comes from: docs/sources.md, section 11.
 import type { ArticleId } from './articles';
 
-export interface AgiSection { id: string; figure: string; sources: { id: string; href: string }[]; posts: ArticleId[] }
+// `x` links the owner's post on X quoted in that section; `jail` adds a link to ai-jail, the sandbox he uses.
+export interface AgiSection { id: string; figure: string; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
 
 export const agi = {
-  // The owner's post on X of 2026-09-26, quoted in section "tool".
-  xPost: 'https://x.com/AkitaOnRails/status/2103930940179226812',
   sections: [
     { id: 'define', figure: 'agi-definitions', posts: ['misleadingAds', 'akitaCaved'], sources: [
       { id: 'charter', href: 'https://openai.com/charter/' },
@@ -33,12 +32,24 @@ export const agi = {
       { id: 'nvidiaDeal', href: 'https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html' },
       { id: 'capex', href: 'https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html' },
     ] },
+    { id: 'attacks', figure: 'agi-attacks', posts: ['misleadingAds', 'protect'], jail: true, x: 'https://x.com/AkitaOnRails/status/2103884967168065543', sources: [
+      { id: 'hfReport', href: 'https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf' },
+      { id: 'rubygems', href: 'https://www.rubyhack.ai/' },
+      { id: 'replit', href: 'https://fortune.com/2025/07/23/ai-coding-tool-replit-wiped-database-called-it-a-catastrophic-failure/' },
+      { id: 'gtg', href: 'https://www.anthropic.com/news/disrupting-AI-espionage' },
+      { id: 'misalignment', href: 'https://www.anthropic.com/research/agentic-misalignment' },
+      { id: 'stuxnet', href: 'https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/' },
+      { id: 'lazarus', href: 'https://www.pbs.org/newshour/nation/north-korean-programmer-charged-in-sony-hack-wannacry-attack' },
+      { id: 'bybit', href: 'https://www.fbi.gov/investigate/cyber/alerts/2025/north-korea-responsible-for-1-5-billion-bybit-hack' },
+      { id: 'opm', href: 'https://www.nextgov.com/cybersecurity/2015/07/opm-215m-impacted-by-background-check-breach/207786/' },
+      { id: 'saltTyphoon', href: 'https://www.cisa.gov/news-events/news/joint-statement-fbi-and-cisa-peoples-republic-china-prc-targeting-commercial-telecommunications' },
+    ] },
     { id: 'history', figure: 'agi-history', posts: ['aiKilled'], sources: [
       { id: 'nyt', href: 'https://www.nytimes.com/1958/07/08/archives/new-navy-device-learns-by-doing-psychologist-shows-embryo-of.html' },
       { id: 'perceptrons', href: 'https://en.wikipedia.org/wiki/Perceptrons_(book)' },
       { id: 'lighthill', href: 'http://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm' },
     ] },
-    { id: 'tool', figure: 'agi-tool', posts: ['shipMore', 'llmsFail', 'marathon'], sources: [] },
+    { id: 'tool', figure: 'agi-tool', posts: ['shipMore', 'llmsFail', 'marathon'], sources: [], x: 'https://x.com/AkitaOnRails/status/2103930940179226812' },
     { id: 'efficiency', figure: 'agi-efficiency', posts: ['fableSoap', 'benchmarkPart2', 'benchmarkLatest'], sources: [] },
   ] satisfies AgiSection[],
 };

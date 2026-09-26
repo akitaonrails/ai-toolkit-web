@@ -40,7 +40,7 @@ Check before committing:
 | `newsletter-pipeline` | newsletter |
 | `games-stack` | games |
 | `games-clean-host` | games (regenerated once: the first try printed the prompt's own words, "LEFT PANEL", as labels; never name layout parts in quotes-free prose that could be read as text) |
-| `agi-definitions`, `agi-benchmarks`, `agi-money-loop`, `agi-history`, `agi-tool`, `agi-efficiency` | agi. Localized on 2026-09-26. Gemini kept filling the empty "Next one" bar in `agi-benchmarks` (es, pt-br), which is the point of the drawing, so those two copies were made by painting the new label over the English original with ImageMagick (Noto Sans 47, `#EEE8F6`, centered under the bar). `agi-money-loop` has no pt-br copy: its labels stay in English there. |
+| `agi-definitions`, `agi-benchmarks`, `agi-money-loop`, `agi-attacks`, `agi-history`, `agi-tool`, `agi-efficiency` | agi. Localized on 2026-09-26. Gemini kept filling the empty "Next one" bar in `agi-benchmarks` (es, pt-br), which is the point of the drawing, so those two copies were made by painting the new label over the English original with ImageMagick (Noto Sans 47, `#EEE8F6`, centered under the bar). `agi-money-loop` has no pt-br copy: its labels stay in English there. |
 | `og` (cropped to `src/assets/img/og.png`, 1200x630) | share card |
 
 Generation costs a few cents per image and is not part of the build.

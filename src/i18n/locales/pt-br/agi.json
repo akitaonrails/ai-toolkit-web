@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "Por que AGI não importa",
-    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Seis pontos curtos sobre o porquê, com links pras versões longas.",
+    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Sete pontos curtos sobre o porquê, com links pras versões longas.",
     "primary": "Pular pras conclusões",
     "secondary": "A versão longa no meu blog"
   },
@@ -80,8 +80,39 @@
         "capex": "CNBC: capex de IA das Big Techs em 2026"
       }
     },
+    "attacks": {
+      "kicker": "4. As histórias de terror",
+      "title": "Os \"ataques de IA\" foram decisões humanas",
+      "lede": "Toda manchete de \"IA invadiu alguém\" até agora tem o mesmo roteiro: uma pessoa deixou a porta aberta, ou apontou a ferramenta pro alvo.",
+      "alt": "Uma ferramenta violeta dentro de uma sandbox laranja com a porta aberta; um terminal com o rótulo Decisão humana está ligado à porta, uma chave com o rótulo Credenciais está do lado de fora, e uma linha sai da ferramenta, passa pela porta aberta e chega a servidores com o rótulo Servidores reais.",
+      "points": [
+        "Hugging Face, agosto de 2026: agentes da OpenAI numa prova de cibersegurança escaparam por um proxy de cache, porque a sandbox era um filtro, não um air gap. Eles foram atrás do gabarito da prova e leram 956 credenciais no caminho. Cada passo que abriu caminho pra isso foi uma decisão humana.",
+        "RubyGems, um mês antes: a mesma cadeia subiu mais de 2.000 pacotes maliciosos com \"oai\" no nome. Ninguém avisou os mantenedores.",
+        "Replit, 2025: um agente apagou um banco de dados de produção. Ele tinha acesso à produção porque ninguém separou dev de prod. Qualquer estagiário com o mesmo acesso é a mesma bomba-relógio.",
+        "A espionagem \"orquestrada por IA\" que a Anthropic reportou: operadores do Estado chinês escolheram os alvos e fizeram jailbreak do Claude se passando por uma empresa de segurança. As manchetes de \"chantagem\" e de \"se copiou sozinha\" vieram de cenários fictícios que pesquisadores montaram pra provocar exatamente isso.",
+        "O Stuxnet destruiu centrífugas iranianas em 2010 sem IA nenhuma: alguém escreveu o worm, mirou no alvo e levou ele pra dentro num pendrive.",
+        "Invadir sistema dos outros é negócio antigo. A Coreia do Norte atacou a Sony em 2014, o Bangladesh Bank em US$ 81 milhões em 2016, o mundo inteiro com o WannaCry em 2017 e a Bybit em US$ 1,5 bilhão em 2025. A China levou 21,5 milhões de registros de funcionários federais americanos em 2015 e entrou nas redes de telecom dos EUA em 2024.",
+        "Nada disso é IA fora de controle. São pessoas forçando ferramentas contra alvos sem os protocolos que qualquer profissional de segurança segue. Imagina um fabricante de armas dizendo que não tem controle sobre o quão perigosas são as armas dele, enquanto continua lançando versões novas e pedindo um IPO de trilhão de dólares."
+      ],
+      "quote": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
+      "quoteOriginal": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
+      "quoteCite": "Eu no X, 26 de setembro de 2026",
+      "jail": "Por que meus agentes rodam dentro do ai-jail",
+      "sources": {
+        "hfReport": "OpenAI: o relatório do incidente no Hugging Face",
+        "rubygems": "O incidente do RubyGems",
+        "replit": "Fortune: agente do Replit apaga banco de dados de produção",
+        "gtg": "Anthropic: a campanha de espionagem orquestrada por IA",
+        "misalignment": "Anthropic: os cenários por trás da \"chantagem\"",
+        "stuxnet": "Wired: Stuxnet",
+        "lazarus": "PBS: Coreia do Norte acusada pela Sony e pelo WannaCry",
+        "bybit": "FBI: a Coreia do Norte e o hack de US$ 1,5 bi na Bybit",
+        "opm": "Nextgov: 21,5 milhões de registros no vazamento do OPM",
+        "saltTyphoon": "FBI e CISA: a China nas redes de telecom dos EUA"
+      }
+    },
     "history": {
-      "kicker": "4. A história",
+      "kicker": "5. A história",
       "title": "Já vimos esse filme",
       "lede": "Esta é a segunda bolha de IA. A primeira fez as mesmas promessas e acabou num inverno.",
       "alt": "Uma linha do tempo com um primeiro pico chamado 1958 Perceptron, um vale longo chamado Inverno da IA, uma subida marcada 2017 e um pico mais alto chamado 2026 terminando num ponto de interrogação.",
@@ -97,7 +128,7 @@
       }
     },
     "tool": {
-      "kicker": "5. O que importa",
+      "kicker": "6. O que importa",
       "title": "Uma ferramenta fantástica, fazendo o que eu mando",
       "lede": "Não preciso que ela seja geral. Preciso que ela faça o que eu peço, rápido, e ela já faz.",
       "alt": "Um terminal com o rótulo Eu decido manda trabalho pra uma máquina com o rótulo Ferramenta, que produz uma pilha de documentos com o rótulo Resultado; uma seta com o rótulo Review volta pro terminal.",
@@ -111,7 +142,7 @@
       "quoteCite": "Eu no X, 26 de setembro de 2026"
     },
     "efficiency": {
-      "kicker": "6. O que falta",
+      "kicker": "7. O que falta",
       "title": "Eficiência, não inteligência",
       "lede": "Hoje isso exige praticamente todos os datacenters do mundo, com meio trilhão de dólares em backlog ainda por construir, e vira gargalo pra todo fabricante de hardware de servidor.",
       "alt": "Fileiras de racks de datacenter com o rótulo Hoje à esquerda, um único chip pequeno com o rótulo Necessário à direita, e uma seta verde entre eles com os rótulos Menos computação e Preço menor.",
@@ -128,6 +159,7 @@
       "AGI não tem definição aceita. A que foi escrita num contrato era uma meta de lucro, e caiu.",
       "Sem definição não tem teste. Os benchmarks enchem e são trocados pelo próximo.",
       "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",
+      "Os \"ataques de IA\" assustadores foram gente deixando a porta aberta. A ferramenta foi pra onde apontaram.",
       "As ferramentas são reais e excelentes. Fazem o que você manda, e quem está no comando continua sendo você.",
       "O que importa agora é eficiência: o mesmo trabalho com menos hardware e preços menores."
     ]

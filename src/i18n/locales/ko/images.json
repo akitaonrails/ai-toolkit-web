@@ -95,5 +95,12 @@
     "Needed": "필요한 것",
     "Less compute": "더 적은 연산",
     "Lower price": "더 낮은 가격"
+  },
+  "agi-attacks": {
+    "Sandbox": "샌드박스",
+    "Left open": "열린 채",
+    "Real servers": "실제 서버",
+    "Credentials": "자격 증명",
+    "Human decision": "사람의 결정"
   }
 }

@@ -95,5 +95,12 @@
     "Needed": "נדרש",
     "Less compute": "פחות חישוב",
     "Lower price": "מחיר נמוך יותר"
+  },
+  "agi-attacks": {
+    "Sandbox": "סנדבוקס",
+    "Left open": "נשאר פתוח",
+    "Real servers": "שרתים אמיתיים",
+    "Credentials": "פרטי גישה",
+    "Human decision": "החלטה אנושית"
   }
 }

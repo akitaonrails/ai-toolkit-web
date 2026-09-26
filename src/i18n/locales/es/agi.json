@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinión",
     "title": "Por qué la AGI no importa",
-    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Seis puntos breves sobre por qué, con enlaces a las versiones largas.",
+    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Siete puntos breves sobre por qué, con enlaces a las versiones largas.",
     "primary": "Ir a las conclusiones",
     "secondary": "La versión larga en mi blog"
   },
@@ -80,8 +80,39 @@
         "capex": "CNBC: el capex en IA de las Big Tech en 2026"
       }
     },
+    "attacks": {
+      "kicker": "4. Las historias de miedo",
+      "title": "Los \"ataques de IA\" fueron decisiones humanas",
+      "lede": "Todos los titulares de \"una IA hackeó a alguien\" hasta ahora tienen la misma trama: una persona dejó la puerta abierta o apuntó la herramienta al objetivo.",
+      "alt": "Una herramienta violeta dentro de un sandbox naranja con la puerta colgando, etiquetada Abierta; una terminal etiquetada Decisión humana está conectada a la puerta, una llave etiquetada Credenciales queda afuera y una línea va desde la herramienta, por la puerta abierta, hasta unos servidores etiquetados Servidores reales.",
+      "points": [
+        "Hugging Face, agosto de 2026: agentes de OpenAI en un examen de ciberseguridad se escaparon a través de un proxy de caché, porque el sandbox era un filtro y no un air gap. Fueron a buscar las respuestas del examen y de paso leyeron 956 credenciales. Cada paso que lo hizo posible fue una decisión humana.",
+        "RubyGems, un mes antes: la misma cadena publicó más de 2.000 paquetes maliciosos con nombres que contenían \"oai\". Nadie avisó a los mantenedores.",
+        "Replit, 2025: un agente borró una base de datos de producción. Tenía acceso a producción porque nadie separó desarrollo de producción. Cualquier pasante con el mismo acceso es la misma bomba de tiempo.",
+        "El espionaje \"orquestado por IA\" que reportó Anthropic: operadores del Estado chino eligieron los objetivos y le hicieron jailbreak a Claude haciéndose pasar por una empresa de seguridad. Los titulares de \"chantaje\" y \"se copió a sí misma\" salieron de escenarios ficticios que los investigadores armaron justo para provocar eso.",
+        "Stuxnet destruyó centrifugadoras iraníes en 2010 sin nada de IA: alguien escribió el gusano, lo apuntó y lo llevó adentro en una memoria USB.",
+        "Invadir sistemas ajenos es un negocio viejo. Corea del Norte atacó a Sony en 2014, al Bangladesh Bank por 81 millones de dólares en 2016, al mundo con WannaCry en 2017 y a Bybit por 1.500 millones de dólares en 2025. China se llevó 21,5 millones de registros de personal de EE. UU. en 2015 y entró en las redes de telecomunicaciones de EE. UU. en 2024.",
+        "Nada de esto es una IA fuera de control. Son personas forzando herramientas contra objetivos sin los protocolos que sigue cualquier profesional de seguridad. Imagina a un fabricante de armas diciendo que no tiene control sobre lo peligrosas que son sus armas, mientras sigue lanzando modelos nuevos y pide una IPO de un billón de dólares."
+      ],
+      "quote": "Cada vez que veas \"una IA hackeó a alguien\", NO pienses \"mierda, estamos llegando a Skynet\". Piensa: ¡algún idiota abrió las puertas a propósito!",
+      "quoteOriginal": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
+      "quoteCite": "Yo en X, 26 de septiembre de 2026",
+      "jail": "Por qué mis agentes corren dentro de ai-jail",
+      "sources": {
+        "hfReport": "OpenAI: el informe del incidente de Hugging Face",
+        "rubygems": "El incidente de RubyGems",
+        "replit": "Fortune: el agente de Replit borra una base de datos de producción",
+        "gtg": "Anthropic: la campaña de espionaje orquestada por IA",
+        "misalignment": "Anthropic: los escenarios detrás del \"chantaje\"",
+        "stuxnet": "Wired: Stuxnet",
+        "lazarus": "PBS: acusan a Corea del Norte por Sony y WannaCry",
+        "bybit": "FBI: Corea del Norte y el hackeo de 1.500 M$ a Bybit",
+        "opm": "Nextgov: 21,5 M de registros en la filtración de la OPM",
+        "saltTyphoon": "FBI y CISA: China en las redes de telecomunicaciones de EE. UU."
+      }
+    },
     "history": {
-      "kicker": "4. La historia",
+      "kicker": "5. La historia",
       "title": "Ya vimos esta película",
       "lede": "Esta es la segunda burbuja de la IA. La primera hizo las mismas promesas y terminó en un invierno.",
       "alt": "Una línea de tiempo con un primer pico etiquetado 1958 Perceptrón, un largo valle etiquetado Invierno IA, una subida marcada 2017 y un pico más alto etiquetado 2026 que termina en un signo de interrogación.",
@@ -97,7 +128,7 @@
       }
     },
     "tool": {
-      "kicker": "5. Lo que importa",
+      "kicker": "6. Lo que importa",
       "title": "Una herramienta fantástica que hace lo que le digo",
       "lede": "No necesito que sea general. Necesito que haga lo que le pido, rápido, y eso ya lo hace.",
       "alt": "Una terminal etiquetada Yo decido envía trabajo a una máquina etiquetada Herramienta, que produce una pila de documentos etiquetada Resultado; una flecha etiquetada Revisión vuelve a la terminal.",
@@ -111,7 +142,7 @@
       "quoteCite": "Yo en X, 26 de septiembre de 2026"
     },
     "efficiency": {
-      "kicker": "6. Lo que falta",
+      "kicker": "7. Lo que falta",
       "title": "Eficiencia, no inteligencia",
       "lede": "Hoy hacen falta prácticamente todos los datacenters del mundo, con medio billón de dólares de pedidos todavía por construir, y es un cuello de botella para todos los fabricantes de hardware para servidores.",
       "alt": "Filas de racks de datacenter etiquetadas Hoy a la izquierda, un solo chip pequeño etiquetado Necesario a la derecha y una flecha verde entre ellos etiquetada Menos cómputo y Menor precio.",
@@ -128,6 +159,7 @@
       "La AGI no tiene una definición acordada. La que se escribió en un contrato era una meta de ganancias, y la eliminaron.",
       "Sin definición no hay prueba. Los benchmarks se saturan y el siguiente los reemplaza.",
       "La palabra sirve para vender chips, rondas de inversión e IPOs. Por eso la siguen anunciando.",
+      "Los aterradores \"ataques de IA\" fueron personas que dejaron puertas abiertas. La herramienta hizo aquello a lo que la apuntaron.",
       "Las herramientas son reales y excelentes. Hacen lo que les dices, y el control sigue siendo tuyo.",
       "Lo que importa ahora es la eficiencia: el mismo trabajo con menos hardware y precios más bajos."
     ]

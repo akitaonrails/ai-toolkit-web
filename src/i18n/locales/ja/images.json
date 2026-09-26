@@ -95,5 +95,12 @@
     "Needed": "必要なもの",
     "Less compute": "計算量を減らす",
     "Lower price": "価格を下げる"
+  },
+  "agi-attacks": {
+    "Sandbox": "サンドボックス",
+    "Left open": "開けっぱなし",
+    "Real servers": "実サーバー",
+    "Credentials": "認証情報",
+    "Human decision": "人間の判断"
   }
 }

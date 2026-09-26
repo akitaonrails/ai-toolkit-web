@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "Why AGI doesn't matter",
-    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Six short points on why, with links to the long versions.",
+    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Seven short points on why, with links to the long versions.",
     "primary": "Skip to the takeaways",
     "secondary": "The long version on my blog"
   },
@@ -80,8 +80,39 @@
         "capex": "CNBC: Big Tech AI capex in 2026"
       }
     },
+    "attacks": {
+      "kicker": "4. The scary stories",
+      "title": "The \"AI attacks\" were human decisions",
+      "lede": "Every \"AI hacked someone\" headline so far has the same plot: a person left the door open, or pointed the tool at the target.",
+      "alt": "A violet tool sits inside an orange sandbox whose door hangs open; a terminal labeled Human decision is wired to the door, a key labeled Credentials lies outside, and a line runs from the tool through the open door to servers labeled Real servers.",
+      "points": [
+        "Hugging Face, August 2026: OpenAI agents in a cybersecurity exam got out through a caching proxy, because the sandbox was a filter, not an air gap. They went looking for the exam's answer key and read 956 credentials on the way. Every enabling step was a human decision.",
+        "RubyGems, a month earlier: the same chain pushed over 2,000 malicious packages under names with \"oai\" in them. Nobody warned the maintainers.",
+        "Replit, 2025: an agent deleted a production database. It had production access because nobody separated dev from prod. Any intern with the same access is the same time bomb.",
+        "The \"AI-orchestrated\" espionage Anthropic reported: Chinese state operators chose the targets and jailbroke Claude by posing as a security firm. The \"blackmail\" and \"copied itself\" headlines came from fictional scenarios researchers built to provoke exactly that.",
+        "Stuxnet wrecked Iranian centrifuges in 2010 with no AI at all: someone wrote the worm, aimed it, and carried it in on a USB drive.",
+        "Breaking into other people's systems is old business. North Korea hit Sony in 2014, Bangladesh Bank for $81 million in 2016, the world with WannaCry in 2017 and Bybit for $1.5 billion in 2025. China took 21.5 million US personnel records in 2015 and got into US telecom networks in 2024.",
+        "None of it is AI out of control. It's people forcing tools onto targets without the protocols any security professional follows. Imagine a gun maker saying he has no control over how dangerous his guns are, while still releasing new versions and asking for a trillion-dollar IPO."
+      ],
+      "quote": "Every time you see \"AI hacked someone\", DON'T think \"holy crap, we're getting to Skynet\". Think: some idiot opened the gates on purpose!",
+      "quoteOriginal": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
+      "quoteCite": "Me on X, September 26, 2026",
+      "jail": "Why my agents run inside ai-jail",
+      "sources": {
+        "hfReport": "OpenAI: the Hugging Face incident report",
+        "rubygems": "The RubyGems incident",
+        "replit": "Fortune: Replit's agent deletes a production database",
+        "gtg": "Anthropic: the AI-orchestrated espionage campaign",
+        "misalignment": "Anthropic: the scenarios behind \"blackmail\"",
+        "stuxnet": "Wired: Stuxnet",
+        "lazarus": "PBS: North Korea charged for Sony and WannaCry",
+        "bybit": "FBI: North Korea and the $1.5B Bybit hack",
+        "opm": "Nextgov: 21.5M records in the OPM breach",
+        "saltTyphoon": "FBI and CISA: China in US telecom networks"
+      }
+    },
     "history": {
-      "kicker": "4. The history",
+      "kicker": "5. The history",
       "title": "We've seen this movie before",
       "lede": "This is the second AI bubble. The first one made the same promises, and it ended in a winter.",
       "alt": "A timeline with a first peak labeled 1958 Perceptron, a long valley labeled AI winter, a rise marked 2017 and a higher peak labeled 2026 ending in a question mark.",
@@ -97,7 +128,7 @@
       }
     },
     "tool": {
-      "kicker": "5. What matters",
+      "kicker": "6. What matters",
       "title": "A fantastic tool, doing what I tell it",
       "lede": "I don't need it to be general. I need it to do what I ask, fast, and it already does.",
       "alt": "A terminal labeled I decide sends work to a machine labeled Tool, which produces a stack of documents labeled Result; an arrow labeled Review returns to the terminal.",
@@ -111,7 +142,7 @@
       "quoteCite": "Me on X, September 26, 2026"
     },
     "efficiency": {
-      "kicker": "6. What's missing",
+      "kicker": "7. What's missing",
       "title": "Efficiency, not intelligence",
       "lede": "Today it takes practically every datacenter in the world, with half a trillion dollars of backlog still to build, and it bottlenecks every maker of server hardware.",
       "alt": "Rows of datacenter racks labeled Today on the left, a single small chip labeled Needed on the right, and a green arrow between them labeled Less compute and Lower price.",
@@ -128,12 +159,19 @@
       "AGI has no agreed definition. The one written into a contract was a profit target, and it was dropped.",
       "Without a definition there's no test. Benchmarks fill up and get replaced by the next one.",
       "The word is useful for selling chips, funding rounds and IPOs. That's why it keeps being announced.",
+      "The scary \"AI attacks\" were people leaving doors open. The tool did what it was pointed at.",
       "The tools are real and excellent. They do what you tell them, and you're still in charge.",
       "What matters next is efficiency: the same work with less hardware and lower prices."
     ]
   },
   "next": [
-    { "title": "Writing and the LLM benchmark", "text": "The blog posts behind this page, and the benchmark numbers." },
-    { "title": "How I use it", "text": "The daily loop, the skills and the agents I actually run." }
+    {
+      "title": "Writing and the LLM benchmark",
+      "text": "The blog posts behind this page, and the benchmark numbers."
+    },
+    {
+      "title": "How I use it",
+      "text": "The daily loop, the skills and the agents I actually run."
+    }
   ]
 }
