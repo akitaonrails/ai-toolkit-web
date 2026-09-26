@@ -1,0 +1,78 @@
+---
+// "Why AGI doesn't matter": the owner's opinion in six short sections, each with a diagram, a few points, his posts
+// and outside sources. Structure in src/data/agi.ts, words in the `agi` catalog (English only until reviewed).
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Figure from '@/components/Figure.astro';
+import PullQuote from '@/components/PullQuote.astro';
+import Related from '@/components/Related.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { agi } from '@/data/agi';
+import { articles, articleUrl } from '@/data/articles';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, locale } = useI18n(Astro, 'agi');
+type Text = { title: string; text: string };
+const s = (id: string, key: string) => t(`sections.${id}.${key}`);
+const has = (id: string, key: string) => key in raw<Record<string, unknown>>(`sections.${id}`);
+const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href: '/workflow/' }] as const, raw<Text[]>('next'));
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="red" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#takeaways" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href={articleUrl({ id: 'misleadingAds', ...articles.misleadingAds }, locale)} class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+
+  <section class="wrap pb-8" data-hue="red">
+    <PullQuote {...raw<{ text: string; original: string }>('motto')} large />
+  </section>
+
+  {agi.sections.map((sec, i) => (
+    <section id={sec.id} data-hue="red" class:list={['band scroll-mt-16', i % 2 === 1 && 'bg-tint']}>
+      <div class="wrap">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span>{s(sec.id, 'kicker')}</div>
+        <h2 class="text-3xl mt-4 max-w-[18em]">{s(sec.id, 'title')}</h2>
+        <p class="lede mt-6">{s(sec.id, 'lede')}</p>
+        <div class="mt-10"><Figure name={sec.figure} alt={s(sec.id, 'alt')} /></div>
+        <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] mt-10 items-start">
+          <div>
+            <ul class="ticks text-lg">{raw<string[]>(`sections.${sec.id}.points`).map((p) => <li>{p}</li>)}</ul>
+            {has(sec.id, 'quote') && (
+              <div class="mt-10">
+                <PullQuote text={s(sec.id, 'quote')} original={has(sec.id, 'quoteOriginal') ? s(sec.id, 'quoteOriginal') : undefined} cite={has(sec.id, 'quoteCite') ? s(sec.id, 'quoteCite') : undefined} />
+                {sec.id === 'tool' && <a class="link text-sm mt-3 inline-block ms-6" href={agi.xPost}>x.com/AkitaOnRails</a>}
+              </div>
+            )}
+          </div>
+          <div class="grid gap-8">
+            <Related ids={sec.posts} />
+            {sec.sources.length > 0 && (
+              <div>
+                <h3 class="text-lg mb-3">{t('sourcesTitle')}</h3>
+                <ul class="grid gap-1.5 text-sm">
+                  {sec.sources.map((src) => <li><a class="link" href={src.href}>{s(sec.id, `sources.${src.id}`)}</a></li>)}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section id="takeaways" class="band scroll-mt-16" data-hue="red">
+    <div class="wrap">
+      <h2 class="text-3xl">{t('takeaways.title')}</h2>
+      <ol class="takeaways mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
+        {raw<string[]>('takeaways.items').map((item, i) => (
+          <li class="cell"><span class="font-display font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>

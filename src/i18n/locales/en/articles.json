@@ -160,6 +160,30 @@
     "frankGoPost": {
       "title": "Frank GO: playing Go with AI",
       "summary": "A Sabaki fork with KataGo, more than 4,700 tsumego, historical games and overlays that show territory and score to beginners."
+    },
+    "misleadingAds": {
+      "title": "You're an idiot if you believe the misleading ads from OpenAI, Anthropic and Nvidia",
+      "summary": "AGI declared by the chip seller, a Millennium Problem brute-forced, a staged resignation, and why hype and doom are the same pitch."
+    },
+    "akitaCaved": {
+      "title": "RANT: Did Akita cave to AI?",
+      "summary": "I use LLMs every day and still say AGI is not achievable. Both are true at the same time."
+    },
+    "fableSoap": {
+      "title": "LLM Benchmark: Fable 5 and the Anthropic soap opera",
+      "summary": "A model nobody outside could test, delayed datacenters, 160-week transformer lead times, and the economics behind the hype."
+    },
+    "llmsFail": {
+      "title": "Why LLMs will fail at your company",
+      "summary": "The bottleneck moves to human decisions. It is a mirror: bad code ten times faster."
+    },
+    "highestScore": {
+      "title": "LLM Benchmark: should I use the highest-scoring model?",
+      "summary": "No MRI shows how much intelligence a model has. Read the top of any ranking as one cluster."
+    },
+    "businessModels": {
+      "title": "37 days of vibe coding immersion: conclusions on business models",
+      "summary": "What training and running frontier models costs, and why only a handful of companies can do it."
     }
   },
   "related": {

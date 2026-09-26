@@ -53,6 +53,12 @@ export const articles = {
   karaokePost: { path: '/en/2026/04/05/turning-youtube-into-a-karaoke-app-frank-karaoke/', ptPath: '/2026/04/05/transformando-youtube-num-app-de-karaoke-frank-karaoke/', date: '2026-04-05', hue: 'violet' },
   mangaSolution: { path: '/en/2026/05/30/manga-plus-shueisha-on-the-desktop-frank-manga-plus/', ptPath: '/2026/05/30/manga-plus-shueisha-desktop-frank-manga-plus/', date: '2026-05-30', hue: 'violet' },
   frankGoPost: { path: '/en/2026/07/06/frank-go-playing-go-with-ai/', ptPath: '/2026/07/06/frank-go-brincando-de-go-com-ia/', date: '2026-07-06', hue: 'violet' },
+  misleadingAds: { path: '/en/2026/09/09/propagandas-enganosas-da-openai-anthropic-nvidia/', ptPath: '/2026/09/09/propagandas-enganosas-da-openai-anthropic-nvidia/', date: '2026-09-09', hue: 'red' },
+  akitaCaved: { path: '/en/2026/02/24/rant-akita-caved-to-ai/', ptPath: '/2026/02/24/rant-o-akita-abriu-as-pernas-pra-ia/', date: '2026-02-24', hue: 'red' },
+  fableSoap: { path: '/en/2026/06/11/llm-benchmark-fable-5-anthropic-soap-opera/', ptPath: '/2026/06/11/llm-benchmark-fable-5-e-a-novela-da-anthropic/', date: '2026-06-11', hue: 'rose' },
+  llmsFail: { path: '/en/2026/06/24/why-llms-will-fail-at-your-company/', ptPath: '/2026/06/24/por-que-llms-vao-falhar-na-sua-empresa/', date: '2026-06-24', hue: 'violet' },
+  highestScore: { path: '/en/2026/07/19/llm-benchmark-should-i-use-the-highest-scoring-model/', ptPath: '/2026/07/19/llm-benchmark-devo-usar-o-que-tem-nota-maior/', date: '2026-07-19', hue: 'rose' },
+  businessModels: { path: '/en/2026/03/05/37-days-of-vibe-coding-immersion-conclusions-on-business-models/', ptPath: '/2026/03/05/37-dias-de-imersão-em-vibe-coding-conclusão-quanto-a-modelos-de-negócio/', date: '2026-03-05', hue: 'violet' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;

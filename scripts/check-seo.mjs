@@ -14,12 +14,13 @@ for (const p of pages) {
   const s = readFileSync(p, 'utf8');
   const url = `/${relative(dist, dirname(p))}/`.replace('//', '/');
   const problems = [];
-  // Search engines show fewer full-width characters, so Japanese and Korean get their own ranges.
-  const lang = s.match(/<html lang="([^"]+)"/)?.[1] ?? 'en';
-  const cjk = /^(ja|ko)/.test(lang);
-  const [dMin, dMax, tMax] = cjk ? [70, 125, 50] : [120, 160, 60];
   const title = decode(s.match(/<title>(.*?)<\/title>/)?.[1] ?? '');
   const desc = decode(s.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? '');
+  // Search engines show fewer full-width characters, so Japanese and Korean get their own ranges. A page still
+  // falling back to English (not translated yet) is measured as English.
+  const lang = s.match(/<html lang="([^"]+)"/)?.[1] ?? 'en';
+  const cjk = /^(ja|ko)/.test(lang) && /[\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]/.test(desc);
+  const [dMin, dMax, tMax] = cjk ? [70, 125, 50] : [120, 160, 60];
   if (!title || title.length > tMax) problems.push(`title is ${title.length} characters`);
   if (desc.length < dMin || desc.length > dMax) problems.push(`description is ${desc.length} characters`);
   const h1 = (s.match(/<h1[\s>]/g) ?? []).length;

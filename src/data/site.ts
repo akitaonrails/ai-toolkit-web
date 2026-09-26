@@ -31,7 +31,8 @@ export const nav: NavLink[] = [
   { id: 'games', href: '/games/', hue: 'orange' },
   { id: 'setup', href: '/setup/', hue: 'teal' },
 ];
-export const extras: NavLink[] = [];
+// Pages outside the top bar: listed in the footer and llms.txt, linked from related pages.
+export const extras: NavLink[] = [{ id: 'agi', href: '/agi/', hue: 'red' }];
 /** In the top bar these pages sit under one "Tools" menu, placed where the first of them appears in `nav`. */
 export const toolIds = ['usagebar', 'ghpending', 'tclock', 'frank'];
 

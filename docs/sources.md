@@ -148,6 +148,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `/newsletter/` | akitando-news repo, the two live newsletter sites, the six-days post |
 | `/podcasts/` | The SBT News TV segment, the five videos, the two complete playlists (`site.ts` `playlists`), Cortes do Flow |
 | `/games/` | distrobox-gaming and omarchy-games-menu repos |
+| `/agi/` | The owner's 2026 posts and his X post of 2026-09-26, plus the outside sources in section 11 |
 | `/frank/` | The six Frank repos and their blog posts (section 10), owner's words on the name |
 
 ## 9. The yearly tally (workflow page, "What that adds up to")
@@ -192,3 +193,13 @@ and add it to `EXCLUDE` when it is data, vendored or generated.
 **Posts per card.** Search the blog for each project name in `content/2026/**/index.en.md` and link the post dedicated to it plus any post where it is a main subject. New post about a Frank project: add it to `articles.ts`, the `articles` catalogs (real Portuguese title in `pt-br`) and the project's `posts` in `frank.ts`.
 
 **Refresh.** Rerun the `gh repo list` above; update `count` and `countDate` in `frank.ts`; swap a project only when another one clearly passes it in stars and activity.
+
+## 11. Why AGI doesn't matter (`/agi/`)
+
+An opinion page asked for by the owner on 2026-09-26, in English first; the other languages come after his review (until then they fall back to English). Structure in `src/data/agi.ts`, words in `en/agi.json`.
+
+**His positions.** The main source is "You're an idiot if you believe the misleading ads from OpenAI, Anthropic and Nvidia" (2026-09-09): AGI as a deliberately empty marketing word, Huang declaring it for a model trained on his chips, the Navier-Stokes brute force, hype and doom as the same pitch, "demand proof". The rest comes from the 2026 posts linked in each section (the February rants for the Rosenblatt history and "AGI is not achievable", the v4 benchmark parts for saturation, the Fable 5 post for datacenter numbers). His framing at the owner's request: AGI is poorly defined, so poorly testable, so in his opinion a marketing term that keeps valuations and IPOs high. The X post (https://x.com/AkitaOnRails/status/2103930940179226812) gives the "tools, my servants" quote and the efficiency point; its Portuguese original is quoted as posted.
+
+**Outside sources.** Every URL in `agi.ts` was fetched on 2026-09-26 (openai.com, nytimes.com and x.com block bots; their text was checked through Wayback or search). Left out because they could not be verified: OpenAI's reported IPO filing and its size, a reported SWE-Bench Pro retraction, an Anthropic October 2026 listing target.
+
+**Refresh.** New AGI claims or benchmark results: add the point to the section, its source to `agi.ts` with a date in the label when it matters, and keep the owner's own opinions marked as his.
