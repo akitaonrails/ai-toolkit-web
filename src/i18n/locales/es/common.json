@@ -42,6 +42,10 @@
       "label": "Por qué la AGI no importa",
       "note": "Una opinión, con fuentes"
     },
+    "students": {
+      "label": "La IA y los estudiantes",
+      "note": "Por qué los fundamentos importan más que nunca"
+    },
     "writing": {
       "label": "Textos",
       "note": "El blog y el benchmark de LLMs"

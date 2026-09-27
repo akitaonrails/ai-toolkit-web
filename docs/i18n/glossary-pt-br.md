@@ -47,7 +47,20 @@ Decisões de tradução além do glossário do brief (`docs/research/I18N-TRANSL
 | conference talk | palestra |
 | intern with amnesia | estagiário com amnésia |
 | for / to (informal) | pra (registro informal do blog) |
+| vibe coding / vibe code | vibe coding / Vibe Code (em título de post) |
+| junior / senior | júnior / sênior |
+| entry-level | nível de entrada |
+| new grads | recém-formados |
+| big tech companies | big techs |
+| layoffs | demissões |
+| chores (AI chores) | tarefas chatas |
+| output (AI output) | resultado / saída da IA (diagrama) |
+| trade-offs | trade-offs |
+| exoskeleton / crutch | exoesqueleto / muleta |
+| deliberate practice | prática deliberada |
+| preprint / peer review | preprint / revisão por pares |
 
 ## Deliberate differences from English
 
 - `home.json` `hero.intro` opens with "Olá pessoal, Fabio Akita, sou ...", the greeting that started every Akitando video. It is a reference for Brazilian readers and stays in pt-br only; the other languages keep a plain "I am Fabio Akita". Do not normalize it back.
+- `students.json` `akitando.lede` drops the English closing sentence about the videos being in Portuguese with auto-translated captions, and the `ep132` / `ep72` source labels drop "(Portuguese)": for a Brazilian reader that note says nothing. The other languages keep it.

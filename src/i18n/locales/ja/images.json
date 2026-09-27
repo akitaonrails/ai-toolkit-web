@@ -102,5 +102,39 @@
     "Real servers": "実サーバー",
     "Credentials": "認証情報",
     "Human decision": "人間の判断"
+  },
+  "students-multiplier": {
+    "Junior": "ジュニア",
+    "Senior": "シニア",
+    "Output": "成果"
+  },
+  "students-bubbles": {
+    "Bootcamps": "ブートキャンプ",
+    "Layoffs": "レイオフ",
+    "Vibe coding": "バイブコーディング"
+  },
+  "students-guess": {
+    "Vague ask": "あいまいな依頼",
+    "Real goal": "本当の目的",
+    "Constraints": "制約",
+    "Trade-offs": "トレードオフ",
+    "Only you know": "あなたしか知らない"
+  },
+  "students-practice": {
+    "Write by hand": "手で書く",
+    "Break it": "壊す",
+    "Debug": "デバッグ",
+    "Review": "レビュー",
+    "Foundations": "基礎",
+    "AI: chores": "AI：雑用"
+  },
+  "students-guardrails": {
+    "AI output": "AIの出力",
+    "Directives": "指示",
+    "Fences": "柵",
+    "Lessons": "教訓",
+    "Docs": "ドキュメント",
+    "Tests": "テスト",
+    "Weeks of review": "数週間のレビュー"
   }
 }

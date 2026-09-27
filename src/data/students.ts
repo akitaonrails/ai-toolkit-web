@@ -30,13 +30,14 @@ export const students = {
       { id: 'veracode', href: 'https://www.veracode.com/blog/genai-code-security-report/' },
     ] },
     { id: 'bubble', figure: 'students-bubbles', posts: ['aiKilled'], sources: [
-      { id: 'cfpb', href: 'https://www.consumerfinance.gov/enforcement/actions/bloomtech-inc-and-austen-allred/' },
+      { id: 'cfpb', href: 'https://www.consumerfinance.gov/archive/newsroom/cfpb-takes-action-against-coding-boot-camp-bloomtech-and-ceo-austen-allred-for-deceiving-students-and-hiding-loan-costs/' },
+      { id: 'courseReport', href: 'https://www.coursereport.com/reports/2018-coding-bootcamp-market-size-research' },
       { id: 'closures', href: 'https://www.insidehighered.com/news/tech-innovation/teaching-learning/2025/01/09/changes-boot-camp-marks-signal-shifts-workforce' },
       { id: 'twoU', href: 'https://www.highereddive.com/news/2u-exit-boot-camps-transition-microcredentials/734798/' },
       { id: 'layoffs', href: 'https://techcrunch.com/2024/12/31/a-comprehensive-archive-of-2024-tech-layoffs/' },
       { id: 'ep132', href: 'https://akitaonrails.com/2022/11/22/akitando-132-rant-a-bolha-de-startups-estourou/' },
     ] },
-    { id: 'evidence', posts: ['highestScore'], stats: [
+    { id: 'evidence', posts: ['punchCard', 'driveclub'], stats: [
       { key: 'anthropic', n: 17, suffix: ' pts' },
       { key: 'bastani', n: 17, suffix: '%' },
       { key: 'metr', n: 19, suffix: '%' },
@@ -62,9 +63,11 @@ export const students = {
       // Measured on the ai-memory checkout at 49147a5d, 2026-09-27 (docs/sources.md, section 12).
       { key: 'words', n: 4743 },
       { key: 'invariants', n: 16 },
-      { key: 'boundaries', n: 23 },
-      { key: 'unit', n: 3028 },
-      { key: 'integration', n: 614 },
+      // 23 rows in docs/security-boundaries.md, one of them a proposal: 22 enforced.
+      { key: 'boundaries', n: 22 },
+      // Test attributes counted with grep (3,028 to 3,029 unit, 614 integration, depending on the pattern).
+      { key: 'unit', n: 3000, suffix: '+', display: '3,000+' },
+      { key: 'integration', n: 600, suffix: '+', display: '600+' },
     ], sources: [] },
     { id: 'practice', figure: 'students-practice', posts: ['driveclub', 'akitaCaved', 'marathon'], sources: [
       { id: 'anthropicStuck', href: 'https://www.anthropic.com/research/AI-assistance-coding-skills' },

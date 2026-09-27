@@ -61,3 +61,17 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | Series A | Serie A |
 | PR firm | agencia de relaciones públicas (RR. PP. en etiquetas) |
 | grants | subvenciones |
+| vibe coding / vibe code | vibe coding (hacer vibe coding) |
+| junior / senior (developer) | junior / senior |
+| bootcamp | bootcamp |
+| foundations (CS) | fundamentos |
+| deliberate practice | práctica deliberada |
+| chores (tasks for the AI) | tareas rutinarias (IA: rutina en etiquetas) |
+| trade-offs | trade-offs |
+| exoskeleton / crutch | exoesqueleto / muleta |
+| layoffs | despidos |
+| new grad / entry-level | recién graduado / nivel inicial |
+| big tech companies | grandes tecnológicas |
+| peer reviewed / preprint | revisado por pares / preprint |
+| transcript | transcripción |
+| directives / fences (ai-memory layers) | directivas / barreras |

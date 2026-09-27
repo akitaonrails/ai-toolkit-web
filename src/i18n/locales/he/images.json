@@ -102,5 +102,39 @@
     "Real servers": "שרתים אמיתיים",
     "Credentials": "פרטי גישה",
     "Human decision": "החלטה אנושית"
+  },
+  "students-multiplier": {
+    "Junior": "ג׳וניור",
+    "Senior": "סניור",
+    "Output": "תוצר"
+  },
+  "students-bubbles": {
+    "Bootcamps": "בוטקאמפים",
+    "Layoffs": "פיטורים",
+    "Vibe coding": "Vibe coding"
+  },
+  "students-guess": {
+    "Vague ask": "בקשה מעורפלת",
+    "Real goal": "המטרה האמיתית",
+    "Constraints": "אילוצים",
+    "Trade-offs": "פשרות",
+    "Only you know": "רק אתם יודעים"
+  },
+  "students-practice": {
+    "Write by hand": "לכתוב ביד",
+    "Break it": "לשבור",
+    "Debug": "לדבג",
+    "Review": "לבדוק",
+    "Foundations": "יסודות",
+    "AI: chores": "AI: עבודות שחורות"
+  },
+  "students-guardrails": {
+    "AI output": "תוצר AI",
+    "Directives": "הנחיות",
+    "Fences": "גדרות",
+    "Lessons": "לקחים",
+    "Docs": "תיעוד",
+    "Tests": "בדיקות",
+    "Weeks of review": "שבועות של בדיקה"
   }
 }

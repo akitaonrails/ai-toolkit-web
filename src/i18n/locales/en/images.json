@@ -102,5 +102,39 @@
     "Real servers": "Real servers",
     "Credentials": "Credentials",
     "Human decision": "Human decision"
+  },
+  "students-multiplier": {
+    "Junior": "Junior",
+    "Senior": "Senior",
+    "Output": "Output"
+  },
+  "students-bubbles": {
+    "Bootcamps": "Bootcamps",
+    "Layoffs": "Layoffs",
+    "Vibe coding": "Vibe coding"
+  },
+  "students-guess": {
+    "Vague ask": "Vague ask",
+    "Real goal": "Real goal",
+    "Constraints": "Constraints",
+    "Trade-offs": "Trade-offs",
+    "Only you know": "Only you know"
+  },
+  "students-practice": {
+    "Write by hand": "Write by hand",
+    "Break it": "Break it",
+    "Debug": "Debug",
+    "Review": "Review",
+    "Foundations": "Foundations",
+    "AI: chores": "AI: chores"
+  },
+  "students-guardrails": {
+    "AI output": "AI output",
+    "Directives": "Directives",
+    "Fences": "Fences",
+    "Lessons": "Lessons",
+    "Docs": "Docs",
+    "Tests": "Tests",
+    "Weeks of review": "Weeks of review"
   }
 }

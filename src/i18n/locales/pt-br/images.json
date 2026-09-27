@@ -102,5 +102,39 @@
     "Real servers": "Servidores reais",
     "Credentials": "Credenciais",
     "Human decision": "Decisão humana"
+  },
+  "students-multiplier": {
+    "Junior": "Júnior",
+    "Senior": "Sênior",
+    "Output": "Resultado"
+  },
+  "students-bubbles": {
+    "Bootcamps": "Bootcamps",
+    "Layoffs": "Demissões",
+    "Vibe coding": "Vibe coding"
+  },
+  "students-guess": {
+    "Vague ask": "Pedido vago",
+    "Real goal": "Objetivo real",
+    "Constraints": "Restrições",
+    "Trade-offs": "Trade-offs",
+    "Only you know": "Só você sabe"
+  },
+  "students-practice": {
+    "Write by hand": "Escrever na mão",
+    "Break it": "Quebrar",
+    "Debug": "Debugar",
+    "Review": "Revisar",
+    "Foundations": "Fundamentos",
+    "AI: chores": "IA: tarefas chatas"
+  },
+  "students-guardrails": {
+    "AI output": "Saída da IA",
+    "Directives": "Diretivas",
+    "Fences": "Cercas",
+    "Lessons": "Lições",
+    "Docs": "Docs",
+    "Tests": "Testes",
+    "Weeks of review": "Semanas de review"
   }
 }

@@ -184,6 +184,26 @@
     "businessModels": {
       "title": "37 dias de Imersão em Vibe Coding: Conclusão quanto a Modelos de Negócio",
       "summary": "Quanto custa treinar e rodar modelos de fronteira, e por que só um punhado de empresas consegue."
+    },
+    "zeroToPost": {
+      "title": "Do Zero à Pós-Produção em 1 Semana: Como usar IA em Projetos de Verdade | Bastidores do The M.Akita Chronicles",
+      "summary": "Os bastidores do The M.Akita Chronicles: XP com a IA como par. A IA é o seu espelho, e revela mais rápido quem você é."
+    },
+    "punchCard": {
+      "title": "VS Code é o novo Cartão Perfurado",
+      "summary": "Digitar tudo na mão acabou, e os fundamentos voltam a ser o principal ativo: exoesqueleto ou muleta."
+    },
+    "talkClaude": {
+      "title": "Por que as LLMs não te dão o resultado esperado | Por que eu prefiro Claude Code hoje",
+      "summary": "O que eu quero, como, o que eu não quero e como a gente confere: a IA não lê o que está na sua cabeça."
+    },
+    "tvClipboard": {
+      "title": "Vibe Code: Eu fiz um appzinho 100% com GLM 4.7 (TV Clipboard)",
+      "summary": "Escrito pra iniciantes e professores: um estagiário motivado, e código que precisa ser revisado por um programador experiente."
+    },
+    "driveclub": {
+      "title": "Como Driveclub e shadPS4 Quase Derrotaram a IA e a Mim: Como Aprender",
+      "summary": "A IA só acha o que você já sabe perguntar. Como um júnior aprende hoje, e por que os fundamentos antigos ainda compensam."
     }
   },
   "related": {

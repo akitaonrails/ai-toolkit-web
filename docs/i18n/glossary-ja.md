@@ -84,3 +84,15 @@ Terms decided while translating. One English term maps to one target term across
 | AI-safety groups / donors | AI安全性団体 / 寄付者 |
 | lab (AI lab) | 研究所 |
 | PR firm | PR会社 |
+| junior / senior (developer) | ジュニア / シニア |
+| bootcamp | ブートキャンプ |
+| layoffs | レイオフ |
+| exoskeleton / crutch | 外骨格 / 松葉杖 |
+| entry-level (jobs, hiring) | 未経験者向け |
+| new-grad hiring | 新卒採用 |
+| deliberate practice | 意図的な練習 |
+| mastery | 習熟 |
+| chores / mundane tasks (for AI) | 雑用 / ありふれた作業 |
+| foundations (CS fundamentals) | 基礎 |
+| preprint / peer review | プレプリント / 査読 |
+| descriptive / causal | 記述的 / 因果的 |

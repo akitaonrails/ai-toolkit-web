@@ -23,7 +23,7 @@ This site is an umbrella: many small tools, one person, one workflow. There is n
 | Games, ai-jail | orange | `orange` |
 | Setup (third-party tools), ai-memory's punchline | teal | `teal` |
 
-The mapping for pages lives in `src/data/site.ts` (`nav`, `extras`, `sisters`, `social`). Put `data-hue` on an element and its children can use `var(--hue)` (text-safe), `var(--hue-soft)` (fill) and `var(--hue-vivid)` (dots, rules, glows; never text).
+The mapping for pages lives in `src/data/site.ts` (`nav`, `extras`, `sisters`, `social`). The top bar groups pages into dropdowns with `navGroups`: Tools (the tool pages plus the sister sites) and Writing (the writing page, Why AGI doesn't matter, AI and students); the drawer shows the same groups under headings. Put `data-hue` on an element and its children can use `var(--hue)` (text-safe), `var(--hue-soft)` (fill) and `var(--hue-vivid)` (dots, rules, glows; never text).
 
 ## Type
 

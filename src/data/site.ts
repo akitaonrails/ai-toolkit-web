@@ -26,15 +26,23 @@ export const nav: NavLink[] = [
   { id: 'tclock', href: '/clock-tui/', hue: 'red' },
   { id: 'frank', href: '/frank/', hue: 'violet' },
   { id: 'writing', href: '/writing/', hue: 'rose' },
+  { id: 'agi', href: '/agi/', hue: 'red' },
+  { id: 'students', href: '/students/', hue: 'amber' },
   { id: 'newsletter', href: '/newsletter/', hue: 'rose' },
   { id: 'podcasts', href: '/podcasts/', hue: 'amber' },
   { id: 'games', href: '/games/', hue: 'orange' },
   { id: 'setup', href: '/setup/', hue: 'teal' },
 ];
 // Pages outside the top bar: listed in the footer and llms.txt, linked from related pages.
-export const extras: NavLink[] = [{ id: 'agi', href: '/agi/', hue: 'red' }, { id: 'students', href: '/students/', hue: 'amber' }];
+export const extras: NavLink[] = [];
 /** In the top bar these pages sit under one "Tools" menu, placed where the first of them appears in `nav`. */
 export const toolIds = ['usagebar', 'ghpending', 'tclock', 'frank'];
+/** Dropdown groups in the top bar (and headings in the drawer). Each sits where its first page appears in `nav`;
+    `label` is the catalog key of the button. Tools also lists the external sites after its own pages. */
+export const navGroups: { id: string; label: string; ids: string[]; external?: boolean }[] = [
+  { id: 'tools', label: 'nav.tools.label', ids: toolIds, external: true },
+  { id: 'texts', label: 'nav.writing.label', ids: ['writing', 'agi', 'students'] },
+];
 
 /** Repositories whose stars and latest release the build reads (src/data/github.ts). The list is JSON so the
     plain-JS snapshot script can read it too. */

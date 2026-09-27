@@ -13,20 +13,20 @@
   "quote": {
     "text": "Me, a senior with years of experience, I'll vibe code 100%. You, a student, a junior, MUST write as much as possible by hand, let the AI do the more mundane tasks in parallel, and you MUST review everything manually. You need tens of thousands of hours of deliberate practice and study to become someone who later knows what to ask the AI to do for you. Not before.",
     "original": "Eu, sênior, anos de experiência, vou fazer 100% vibe codec. você, estudante, júnior, DEVE escrever o máximo possível na mão, deixar a IA fazer tarefas mais mundanas, em paralelo, e você DEVE revisar tudo manualmente. Você precisa de dezenas de milhares de horas de prática deliberada, estudo, pra se tornar alguém que, depois, vai saber o que mandar a IA fazer por você, não antes.",
-    "cite": "Me on X, September 25, 2026"
+    "cite": "Me on X, September 24, 2026"
   },
   "sourcesTitle": "Sources",
   "sections": {
     "multiplier": {
       "kicker": "1. The multiplier",
       "title": "AI multiplies what you bring",
-      "lede": "The same tool gives a senior ten times more good work, and gives a beginner ten times more of whatever the beginner has, mistakes included.",
+      "lede": "The same tool gives a senior more good work, faster, and gives a beginner more of whatever the beginner has, mistakes included.",
       "alt": "Two rows: a thin knowledge stack labeled Junior, multiplied by × AI, gives one tiny output card; a tall knowledge stack labeled Senior, multiplied by the same × AI, gives a tall stack of output.",
       "points": [
         "AI is your mirror. If you're incompetent, it produces bad things faster. If you're competent, it produces good things faster.",
         "People who understand operating systems, databases, networks, data structures and compilers use agents as an exoskeleton. People who don't use them as a crutch. An exoskeleton amplifies strength; a crutch only hides weakness.",
         "Google's DORA 2025 report found the same in teams: \"AI doesn't fix a team; it amplifies what's already there.\"",
-        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the generated code samples had OWASP Top 10 security flaws."
+        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the code samples failed security tests and introduced OWASP Top 10 vulnerabilities."
       ],
       "sources": {
         "dora": "Google DORA 2025: AI amplifies what's there",
@@ -36,11 +36,11 @@
     "bubble": {
       "kicker": "2. The last bubble",
       "title": "We've seen this shortcut before",
-      "lede": "Before AI, the promise was a bootcamp: a few weeks and you'd be hired by Google. It ended in closures and layoffs.",
+      "lede": "Before AI, the promise was a bootcamp: two months and you'd earn a Google salary. It ended in closures and layoffs.",
       "alt": "A timeline: a tall peak labeled Bootcamps around 2021, a sharp drop into a valley labeled Layoffs, then a new rise labeled Vibe coding in 2026 ending in a question mark.",
       "points": [
-        "Bootcamp enrollment grew about ninefold between 2012 and 2018. Lambda School advertised placement rates \"as high as 86 percent\"; the US consumer protection bureau found its internal numbers near 50%, sometimes 30%.",
-        "Then the cheap money ran out. Bootcamps closed one after another, 2U left the business in 2024, and the tech industry cut more than 150,000 jobs that year alone.",
+        "Bootcamp graduates grew about eightfold between 2013 and 2018. Lambda School advertised placement rates \"as high as 86 percent\"; the Consumer Financial Protection Bureau found its internal numbers closer to 50%, sometimes as low as 30%.",
+        "Then the cheap money ran out. Bootcamps closed in 2023 and 2024, 2U announced in late 2024 it was leaving the business, and the tech industry cut more than 150,000 jobs that year alone.",
         "I started Akitando in 2018 for exactly this: to prepare real programmers to survive the bubble popping. In 2022 I was telling people to cancel the courses and stop believing influencers.",
         "Now the same promise is back with a new face: you don't need to learn to code, the AI does it for you. Nobody becomes an engineer in a one-month bootcamp, and nobody becomes one by prompting either."
       ],
@@ -49,7 +49,8 @@
         "closures": "Inside Higher Ed: the bootcamp closures",
         "twoU": "Higher Ed Dive: 2U exits bootcamps",
         "layoffs": "TechCrunch: the 2024 tech layoffs",
-        "ep132": "Akitando #132: the startup bubble burst (2022, Portuguese)"
+        "ep132": "Akitando #132: the startup bubble burst (2022, Portuguese)",
+        "courseReport": "Course Report: the bootcamp market, 2013 to 2018"
       }
     },
     "evidence": {
@@ -57,13 +58,13 @@
       "title": "Learning on autopilot doesn't stick",
       "lede": "The studies so far point the same way: when the AI does the thinking, you don't learn.",
       "stats": {
-        "anthropic": "fewer quiz points for juniors who learned a new library with AI",
+        "anthropic": "fewer quiz points for mostly junior engineers who learned a new library with AI",
         "bastani": "lower exam scores for students who practiced with plain GPT-4, once it was gone",
         "metr": "slower: experienced developers with AI, who still believed they were faster"
       },
       "points": [
-        "Anthropic's own study, January 2026: juniors learning a new library with AI scored 50% on the quiz, against 67% for those who coded by hand, with no significant time saved. Those who used AI to explain concepts kept most of the learning; those who handed off the code did worst.",
-        "In a PNAS study with about 1,000 high school students, plain GPT-4 raised practice scores by 48% and then cut exam scores by 17% once it was taken away. A tutor built to make them think avoided the loss.",
+        "Anthropic's own study, January 2026: mostly junior engineers learning a new library (Trio) with AI scored 50% on the quiz, against 67% for those who coded by hand, with no significant time saved. Those who used AI to explain concepts kept most of the learning; those who handed off the code scored among the lowest.",
+        "In a PNAS study with about 1,000 high school students, plain GPT-4 raised practice scores by 48% and then cut exam scores by 17% once it was taken away. A tutor built to make them think largely avoided the loss.",
         "METR's 2025 trial: experienced open-source developers took 19% longer with AI, and afterwards still believed it had made them 20% faster.",
         "An MIT preprint, not yet peer reviewed, found that people who wrote essays with ChatGPT struggled to quote their own work."
       ],
@@ -80,19 +81,19 @@
       "lede": "Companies still hire people who can review and decide. They hire far fewer beginners to type.",
       "stats": {
         "newGrads": "less new-grad hiring at the big tech companies than in 2019",
-        "entry": "of software developer job postings are entry-level (early 2026)",
+        "entry": "of software development job postings are entry-level (Q1 2026)",
         "young": "fewer 22 to 25 year-olds than expected in the most AI-exposed jobs"
       },
       "points": [
-        "SignalFire, 2026: new-grad hiring is down about 65% at the big tech companies and 76% at early-stage startups compared with 2019, while engineering hiring overall is down only 11%.",
+        "SignalFire, 2026: new-grad hiring is down about 65% at the big tech companies and 76% at early-stage startups compared with 2019, while engineering hiring at the big tech companies is down only 11%.",
         "Indeed: entry-level roles were 4.5% of software development postings in early 2026. Senior roles were 69%.",
-        "Stanford's \"Canaries\" study: employment for 22 to 25 year-olds in the most AI-exposed jobs, software developers included, is 19% below trend, mostly through fewer hires. The authors are careful to call it descriptive rather than causal.",
-        "Recent computer science graduates face higher unemployment than most majors, but far less underemployment: when they're hired, it's for the real job. The typical entry path is still a bachelor's degree."
+        "Stanford's \"Canaries\" study: employment for 22 to 25 year-olds in the most AI-exposed jobs, software developers included, is 19% below where it would be had it kept pace with less-exposed jobs, mostly through fewer hires. The authors are careful to call it descriptive rather than causal.",
+        "Recent computer science graduates have one of the highest unemployment rates of any major (7.0%) but one of the lowest underemployment rates (19%, against 39% overall): when they're hired, it's usually into a job that needs the degree. The typical entry path is still a bachelor's degree."
       ],
       "sources": {
         "signalfire": "SignalFire: State of Tech Talent 2026",
         "indeed": "Indeed: the labor market tilts toward seniority",
-        "canaries": "Stanford: Canaries in the Coal Mine (August 2026)",
+        "canaries": "Stanford Digital Economy Lab: the AI gap for young workers (August 2026)",
         "nyfed": "New York Fed: the labor market for recent graduates",
         "bls": "BLS: software developers"
       }
@@ -105,18 +106,18 @@
       "points": [
         "A coding agent needs you to explain the goal, the context, the constraints, the priorities, what must not break, which paths are acceptable and how success is measured. Many programmers never learned to say that.",
         "My way of talking to an agent has four parts: what I want, how, what I don't want, and how we check it. You can't fill those in without knowing the domain.",
-        "Even for a tiny app, anything built by vibe coding must go through review by an experienced programmer. That isn't optional."
+        "Even for a tiny app, anything built by vibe coding that goes to production must be reviewed by an experienced programmer. That isn't optional."
       ]
     },
     "memory": {
       "kicker": "6. A real example",
       "title": "What \"the AI did it\" actually took",
-      "lede": "ai-memory, my open source memory system for coding agents, is mostly written by AI. Everything that keeps it correct was added by hand, week after week.",
+      "lede": "ai-memory, my open source memory system for coding agents, is mostly written by AI. Everything that keeps it correct came from my review and direction, week after week.",
       "alt": "A core labeled AI output wrapped in five rings labeled Directives, Fences, Lessons, Docs and Tests, with a timeline underneath labeled Weeks of review.",
       "stats": {
         "words": "words of rules for the agents in AGENTS.md",
         "invariants": "invariants that must never break",
-        "boundaries": "security boundaries, each mapped to a guard and adversarial tests",
+        "boundaries": "enforced security boundaries, each mapped to a guard and adversarial tests",
         "unit": "unit tests",
         "integration": "integration tests"
       },
@@ -140,7 +141,7 @@
         "Write as much as you can by hand. Break it, debug it, fix it. Getting stuck is part of it: Anthropic's researchers write that cognitive effort, \"even getting painfully stuck\", is likely important for mastery.",
         "Let AI handle the mundane tasks in parallel, and ask it to explain concepts, not to write the code you're supposed to learn from.",
         "Review everything it produces, line by line. If you can't explain a change, you're not ready to accept it.",
-        "Count the hours. From zero to a first junior job is at least about 1,400 hours of study and practice; mastery takes tens of thousands. Later research shows practice isn't the whole story, but nothing replaces it.",
+        "Count the hours. From zero to a first junior job is at least about 1,400 hours of study and practice; in my view, mastery takes tens of thousands. Ericsson's best violinists had over 10,000 by age 20, and later research shows practice isn't the whole story, but nothing replaces it.",
         "A senior is someone who has been a junior in every topic they master."
       ],
       "sources": {
@@ -162,7 +163,7 @@
     "episodes": {
       "V7oUDL7E1g4": "Why programming is not easy, and why a few weeks of a course won't make you a programmer.",
       "oUPaJxk6TZ0": "How to learn on your own, through fundamentals and real problems, without chasing certificates.",
-      "8G80nuEyDN4": "Building a 6502 computer from scratch: binary, memory, Assembly and the stack.",
+      "8G80nuEyDN4": "Building a 6502 breadboard computer (Ben Eater's kit): binary, memory, Assembly and the stack.",
       "Gp2m8ZuXoPg": "What a Hello World in C really does, down to memory and pointers.",
       "SNyh-cubxaU": "Compilers, interpreters, virtual machines and JIT.",
       "0TndL-Nh6Ok": "Networks from the bottom up, from bits to signals to packets. Part 1 of 6."
@@ -173,7 +174,7 @@
     "items": [
       "AI multiplies what you already know. With little to multiply, you get very little.",
       "Shortcuts sold as careers already had one crash. The new one is the same promise.",
-      "Learning on autopilot doesn't stick. The studies agree.",
+      "Learning on autopilot doesn't stick. The studies so far agree.",
       "The jobs left go to people who can judge the output, and entry-level hiring is shrinking.",
       "AI can't guess your goal, your limits or your trade-offs. Knowing them is the job.",
       "Write by hand, let AI do the chores, review everything, and put in the hours."

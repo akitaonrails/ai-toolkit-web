@@ -76,6 +76,10 @@
     "agi": {
       "label": "AGI가 중요하지 않은 이유",
       "note": "출처를 단 의견"
+    },
+    "students": {
+      "label": "AI와 학생",
+      "note": "기초가 그 어느 때보다 중요한 이유"
     }
   },
   "kicker": {

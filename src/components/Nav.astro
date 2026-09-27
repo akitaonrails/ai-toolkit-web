@@ -1,5 +1,5 @@
 ---
-import { nav, site, toolIds, externalTools, sisterUrl } from '@/data/site';
+import { nav, site, navGroups, externalTools, sisterUrl } from '@/data/site';
 import { useI18n, languageLinks } from '@/i18n';
 import { locales } from '@/i18n/config';
 const { t, href, locale } = useI18n(Astro);
@@ -7,10 +7,12 @@ const path = Astro.url.pathname;
 const languages = languageLinks(path);
 // The language menu appears once there is a second language to pick.
 const multilingual = languages.length > 1;
-// The top bar groups the tool pages under one menu; the drawer lists them under a heading.
-const tools = nav.filter((l) => toolIds.includes(l.id));
-const firstTool = nav.findIndex((l) => toolIds.includes(l.id));
-const onTool = tools.some((l) => path === href(l.href));
+// The top bar groups some pages under dropdown menus (Tools, Writing); the drawer lists them under headings.
+const groups = navGroups.map((g) => {
+  const pages = nav.filter((l) => g.ids.includes(l.id));
+  return { ...g, pages, first: nav.findIndex((l) => g.ids.includes(l.id)), last: nav.findLastIndex((l) => g.ids.includes(l.id)), current: pages.some((l) => path === href(l.href)) };
+});
+const groupOf = (id: string) => groups.find((g) => g.ids.includes(id));
 ---
 <header class="site-nav" data-nav>
   <div class="wrap flex h-16 items-center gap-5">
@@ -19,21 +21,21 @@ const onTool = tools.some((l) => path === href(l.href));
       <span>Akita's AI Lair</span>
     </a>
     <nav class="hidden xl:flex items-center gap-0.5 ms-3" aria-label={t('a11y.mainNav')}>
-      {nav.map((l, i) => toolIds.includes(l.id) ? (i === firstTool && (
+      {nav.map((l, i) => { const g = groupOf(l.id); return g ? (i === g.first && (
         <div class="relative" data-menu>
-          <button type="button" class="nav-link inline-flex items-center gap-1" data-menu-trigger aria-expanded="false" aria-haspopup="true" data-current={onTool ? '' : undefined}>
-            {t('nav.tools.label')}
+          <button type="button" class="nav-link inline-flex items-center gap-1" data-menu-trigger aria-expanded="false" aria-haspopup="true" data-current={g.current ? '' : undefined}>
+            {t(g.label)}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="menu-panel tools-panel" role="group" aria-label={t('nav.tools.label')}>
-            {tools.map((tool) => (
-              <a href={href(tool.href)} data-hue={tool.hue} class="tool-item" aria-current={path === href(tool.href) ? 'page' : undefined}>
+          <div class="menu-panel tools-panel" role="group" aria-label={t(g.label)}>
+            {g.pages.map((page) => (
+              <a href={href(page.href)} data-hue={page.hue} class="tool-item" aria-current={path === href(page.href) ? 'page' : undefined}>
                 <span class="dot" aria-hidden="true"></span>
-                <span><span class="block font-display font-bold">{t(`nav.${tool.id}.label`)}</span><span class="block text-sm text-muted">{t(`nav.${tool.id}.note`)}</span></span>
+                <span><span class="block font-display font-bold">{t(`nav.${page.id}.label`)}</span><span class="block text-sm text-muted">{t(`nav.${page.id}.note`)}</span></span>
               </a>
             ))}
-            <span class="menu-sep" aria-hidden="true"></span>
-            {externalTools.map((tool) => (
+            {g.external && <span class="menu-sep" aria-hidden="true"></span>}
+            {g.external && externalTools.map((tool) => (
               <a href={sisterUrl(tool.id, locale)} data-hue={tool.hue} class="tool-item" aria-label={`${t(`nav.${tool.id}.label`)} (${t('a11y.external')})`}>
                 <span class="dot" aria-hidden="true"></span>
                 <span><span class="flex items-center gap-1.5 font-display font-bold">{t(`nav.${tool.id}.label`)}<svg class="ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="block text-sm text-muted">{t(`nav.${tool.id}.note`)}</span></span>
@@ -41,7 +43,7 @@ const onTool = tools.some((l) => path === href(l.href));
             ))}
           </div>
         </div>
-      )) : <a href={href(l.href)} data-hue={l.hue} class="nav-link" aria-current={path === href(l.href) ? 'page' : undefined}>{t(`nav.${l.id}.label`)}</a>)}
+      )) : <a href={href(l.href)} data-hue={l.hue} class="nav-link" aria-current={path === href(l.href) ? 'page' : undefined}>{t(`nav.${l.id}.label`)}</a>; })}
     </nav>
     <div class="ms-auto flex items-center gap-1.5">
       <a href={site.github} class="icon-btn" aria-label="GitHub">
@@ -75,22 +77,22 @@ const onTool = tools.some((l) => path === href(l.href));
     </button>
   </div>
   <div class="px-5 pb-10 grid gap-1">
-    {nav.map((l, i) => (
+    {nav.map((l, i) => { const g = groupOf(l.id); return (
       <Fragment>
-      {i === firstTool && <span class="drawer-group">{t('nav.tools.label')}</span>}
-      <a href={href(l.href)} data-hue={l.hue} class:list={['drawer-link', toolIds.includes(l.id) && 'drawer-sub']}>
+      {g && i === g.first && <span class="drawer-group">{t(g.label)}</span>}
+      <a href={href(l.href)} data-hue={l.hue} class:list={['drawer-link', g && 'drawer-sub']}>
         <span class="dot" aria-hidden="true"></span>
         <span><span class="block font-display font-bold text-lg leading-tight">{t(`nav.${l.id}.label`)}</span><span class="block text-sm text-muted">{t(`nav.${l.id}.note`)}</span></span>
       </a>
-      {i === firstTool + tools.length - 1 && externalTools.map((tool) => (
+      {g?.external && i === g.last && externalTools.map((tool) => (
         <a href={sisterUrl(tool.id, locale)} data-hue={tool.hue} class="drawer-link drawer-sub">
           <span class="dot" aria-hidden="true"></span>
           <span><span class="flex items-center gap-1.5 font-display font-bold text-lg leading-tight">{t(`nav.${tool.id}.label`)}<svg class="ext" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="block text-sm text-muted">{t(`nav.${tool.id}.note`)}</span></span>
         </a>
       ))}
-      {i === firstTool + tools.length - 1 && <span class="drawer-rule" aria-hidden="true"></span>}
+      {g && i === g.last && <span class="drawer-rule" aria-hidden="true"></span>}
       </Fragment>
-    ))}
+    ); })}
     <a href={href('/#follow')} class="btn btn-primary mt-5">{t('nav.follow.label')}</a>
   </div>
 </dialog>

@@ -102,5 +102,39 @@
     "Real servers": "실제 서버",
     "Credentials": "자격 증명",
     "Human decision": "사람의 결정"
+  },
+  "students-multiplier": {
+    "Junior": "주니어",
+    "Senior": "시니어",
+    "Output": "결과물"
+  },
+  "students-bubbles": {
+    "Bootcamps": "부트캠프",
+    "Layoffs": "해고",
+    "Vibe coding": "바이브 코딩"
+  },
+  "students-guess": {
+    "Vague ask": "모호한 요청",
+    "Real goal": "진짜 목표",
+    "Constraints": "제약",
+    "Trade-offs": "트레이드오프",
+    "Only you know": "여러분만 아는 것"
+  },
+  "students-practice": {
+    "Write by hand": "손으로 쓰기",
+    "Break it": "망가뜨리기",
+    "Debug": "디버깅",
+    "Review": "리뷰",
+    "Foundations": "기초",
+    "AI: chores": "AI: 잡일"
+  },
+  "students-guardrails": {
+    "AI output": "AI 결과물",
+    "Directives": "지시",
+    "Fences": "울타리",
+    "Lessons": "교훈",
+    "Docs": "문서",
+    "Tests": "테스트",
+    "Weeks of review": "몇 주의 리뷰"
   }
 }

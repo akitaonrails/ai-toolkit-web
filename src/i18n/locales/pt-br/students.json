@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "IA e estudantes de programação",
+    "description": "Fabio Akita sobre IA pra estudantes e juniores: sênior pode fazer vibe coding, você deve escrever na mão, revisar tudo e construir os fundamentos primeiro."
+  },
+  "hero": {
+    "kicker": "Opinião",
+    "title": "IA e estudantes",
+    "lede": "Eu sou sênior e faço 100% vibe coding. Se você é estudante ou júnior, não me copie ainda. Sete pontos curtos sobre o porquê, e por onde começar.",
+    "primary": "O que fazer",
+    "secondary": "O arquivo do Akitando"
+  },
+  "quote": {
+    "text": "Eu, sênior, anos de experiência, vou fazer 100% vibe codec. você, estudante, júnior, DEVE escrever o máximo possível na mão, deixar a IA fazer tarefas mais mundanas, em paralelo, e você DEVE revisar tudo manualmente. Você precisa de dezenas de milhares de horas de prática deliberada, estudo, pra se tornar alguém que, depois, vai saber o que mandar a IA fazer por você, não antes.",
+    "original": "Eu, sênior, anos de experiência, vou fazer 100% vibe codec. você, estudante, júnior, DEVE escrever o máximo possível na mão, deixar a IA fazer tarefas mais mundanas, em paralelo, e você DEVE revisar tudo manualmente. Você precisa de dezenas de milhares de horas de prática deliberada, estudo, pra se tornar alguém que, depois, vai saber o que mandar a IA fazer por você, não antes.",
+    "cite": "Eu no X, 24 de setembro de 2026"
+  },
+  "sourcesTitle": "Fontes",
+  "sections": {
+    "multiplier": {
+      "kicker": "1. O multiplicador",
+      "title": "A IA multiplica o que você traz",
+      "lede": "A mesma ferramenta dá ao sênior mais trabalho bom, mais rápido, e dá ao iniciante mais do que o iniciante já tem, erros incluídos.",
+      "alt": "Duas linhas: uma pilha fina de conhecimento com o rótulo Júnior, multiplicada por × IA, gera um cartão de resultado minúsculo; uma pilha alta de conhecimento com o rótulo Sênior, multiplicada pelo mesmo × IA, gera uma pilha alta de resultado.",
+      "points": [
+        "A IA é o seu espelho. Se você é incompetente, ela produz coisa ruim mais rápido. Se você é competente, ela produz coisa boa mais rápido.",
+        "Quem entende sistemas operacionais, bancos de dados, redes, estruturas de dados e compiladores usa agentes como exoesqueleto. Quem não entende usa como muleta. Exoesqueleto amplifica a força; muleta só esconde a fraqueza.",
+        "O relatório DORA 2025 do Google viu a mesma coisa em times: \"a IA não conserta um time; ela amplifica o que já está lá.\"",
+        "E alguém tem que conferir o resultado. No teste da Veracode de 2025 com mais de 100 modelos, 45% das amostras de código falharam nos testes de segurança e introduziram vulnerabilidades do OWASP Top 10."
+      ],
+      "sources": {
+        "dora": "Google DORA 2025: a IA amplifica o que já existe",
+        "veracode": "Veracode: falhas de segurança em código gerado por IA"
+      }
+    },
+    "bubble": {
+      "kicker": "2. A última bolha",
+      "title": "A gente já viu esse atalho",
+      "lede": "Antes da IA, a promessa era o bootcamp: dois meses e você ganharia salário de Google. Acabou em fechamentos e demissões.",
+      "alt": "Uma linha do tempo: um pico alto com o rótulo Bootcamps por volta de 2021, uma queda brusca num vale com o rótulo Demissões, e depois uma nova subida com o rótulo Vibe coding em 2026 terminando num ponto de interrogação.",
+      "points": [
+        "Os formados em bootcamp cresceram umas oito vezes entre 2013 e 2018. A Lambda School anunciava taxas de colocação \"de até 86 por cento\"; o Consumer Financial Protection Bureau viu que os números internos dela ficavam mais perto de 50%, às vezes tão baixos quanto 30%.",
+        "Aí o dinheiro barato acabou. Bootcamps fecharam em 2023 e 2024, a 2U anunciou no fim de 2024 que ia sair do negócio, e a indústria de tecnologia cortou mais de 150 mil vagas só naquele ano.",
+        "Eu comecei o Akitando em 2018 exatamente pra isso: preparar programadores de verdade pra sobreviver ao estouro da bolha. Em 2022 eu estava dizendo pro pessoal cancelar os cursos e parar de acreditar em influencer.",
+        "Agora a mesma promessa voltou com cara nova: você não precisa aprender a programar, a IA faz por você. Ninguém vira engenheiro num bootcamp de um mês, e ninguém vira engenheiro escrevendo prompt também."
+      ],
+      "sources": {
+        "cfpb": "CFPB: as promessas de colocação da Lambda School",
+        "closures": "Inside Higher Ed: os fechamentos de bootcamps",
+        "twoU": "Higher Ed Dive: a 2U sai dos bootcamps",
+        "layoffs": "TechCrunch: as demissões em tecnologia de 2024",
+        "ep132": "Akitando #132: a bolha de startups estourou (2022)",
+        "courseReport": "Course Report: o mercado de bootcamps, de 2013 a 2018"
+      }
+    },
+    "evidence": {
+      "kicker": "3. As evidências",
+      "title": "Aprender no piloto automático não fixa",
+      "lede": "Os estudos até agora apontam pro mesmo lado: quando a IA pensa por você, você não aprende.",
+      "stats": {
+        "anthropic": "menos pontos no quiz pra engenheiros, a maioria júnior, que aprenderam uma biblioteca nova com IA",
+        "bastani": "nota menor na prova pra alunos que praticaram com o GPT-4 puro, depois que ele foi tirado",
+        "metr": "mais lentos: desenvolvedores experientes com IA, que ainda achavam que estavam mais rápidos"
+      },
+      "points": [
+        "O próprio estudo da Anthropic, janeiro de 2026: engenheiros, a maioria júnior, aprendendo uma biblioteca nova (Trio) com IA tiraram 50% no quiz, contra 67% de quem programou na mão, sem economia de tempo significativa. Quem usou a IA pra explicar conceitos manteve a maior parte do aprendizado; quem entregou o código pra ela ficou entre as notas mais baixas.",
+        "Num estudo da PNAS com cerca de 1.000 alunos do ensino médio, o GPT-4 puro aumentou as notas nos exercícios em 48% e depois derrubou as notas na prova em 17% quando foi tirado. Um tutor feito pra fazer eles pensarem evitou a perda em grande parte.",
+        "O experimento da METR de 2025: desenvolvedores open source experientes levaram 19% mais tempo com IA, e depois ainda achavam que ela tinha deixado eles 20% mais rápidos.",
+        "Um preprint do MIT, ainda sem revisão por pares, viu que quem escreveu redações com o ChatGPT teve dificuldade pra citar o próprio texto."
+      ],
+      "sources": {
+        "anthropic": "Anthropic: como a assistência de IA afeta habilidades de programação",
+        "bastani": "Bastani et al., PNAS: IA generativa pode prejudicar o aprendizado",
+        "metr": "METR: desenvolvedores experientes 19% mais lentos",
+        "mit": "MIT Media Lab: Your Brain on ChatGPT (preprint)"
+      }
+    },
+    "market": {
+      "kicker": "4. O mercado",
+      "title": "As vagas que sobram vão pra quem sabe julgar o resultado",
+      "lede": "As empresas ainda contratam quem sabe revisar e decidir. Contratam bem menos iniciantes pra digitar.",
+      "stats": {
+        "newGrads": "menos contratação de recém-formados nas big techs do que em 2019",
+        "entry": "das vagas de desenvolvimento de software são de nível de entrada (1º tri de 2026)",
+        "young": "menos jovens de 22 a 25 anos do que o esperado nos empregos mais expostos à IA"
+      },
+      "points": [
+        "SignalFire, 2026: a contratação de recém-formados caiu cerca de 65% nas big techs e 76% em startups em estágio inicial em comparação com 2019, enquanto a contratação de engenharia nas big techs caiu só 11%.",
+        "Indeed: vagas de nível de entrada eram 4,5% dos anúncios de desenvolvimento de software no início de 2026. Vagas sênior eram 69%.",
+        "O estudo \"Canaries\" de Stanford: o emprego de jovens de 22 a 25 anos nos trabalhos mais expostos à IA, desenvolvedores de software incluídos, está 19% abaixo de onde estaria se tivesse acompanhado os trabalhos menos expostos, principalmente por causa de menos contratações. Os autores tomam o cuidado de chamar isso de descritivo, e não causal.",
+        "Recém-formados em ciência da computação têm uma das maiores taxas de desemprego entre todos os cursos (7,0%), mas uma das menores taxas de subemprego (19%, contra 39% no geral): quando são contratados, geralmente é num emprego que exige o diploma. O caminho de entrada típico ainda é o bacharelado."
+      ],
+      "sources": {
+        "signalfire": "SignalFire: State of Tech Talent 2026",
+        "indeed": "Indeed: o mercado de trabalho pende pra senioridade",
+        "canaries": "Stanford Digital Economy Lab: o abismo da IA pros trabalhadores jovens (agosto de 2026)",
+        "nyfed": "Fed de Nova York: o mercado de trabalho pra recém-formados",
+        "bls": "BLS: desenvolvedores de software"
+      }
+    },
+    "guess": {
+      "kicker": "5. A lacuna",
+      "title": "A IA não adivinha o que você precisa",
+      "lede": "Ela faz o que você pede, e não faz o que você não pediu. Saber o que pedir é o trabalho.",
+      "alt": "Um bilhete amassado com o rótulo Pedido vago entra numa máquina com o rótulo IA e sai como um cartão cheio de pontos de interrogação; três cartões trancados com os rótulos Objetivo real, Restrições e Trade-offs se ligam só a um terminal com o rótulo Só você sabe.",
+      "points": [
+        "Um agente de código precisa que você explique o objetivo, o contexto, as restrições, as prioridades, o que não pode quebrar, quais caminhos são aceitáveis e como o sucesso é medido. Muito programador nunca aprendeu a dizer isso.",
+        "Meu jeito de falar com um agente tem quatro partes: o que eu quero, como, o que eu não quero, e como a gente confere. Você não consegue preencher isso sem conhecer o domínio.",
+        "Mesmo num app minúsculo, qualquer coisa feita com vibe coding que vai pra produção precisa ser revisada por um programador experiente. Isso não é opcional."
+      ]
+    },
+    "memory": {
+      "kicker": "6. Um exemplo real",
+      "title": "O que \"a IA fez\" custou de verdade",
+      "lede": "O ai-memory, meu sistema de memória open source pra agentes de código, é escrito na maior parte por IA. Tudo que mantém ele correto veio da minha review e da minha direção, semana após semana.",
+      "alt": "Um núcleo com o rótulo Saída da IA envolto em cinco anéis com os rótulos Diretivas, Cercas, Lições, Docs e Testes, com uma linha do tempo embaixo com o rótulo Semanas de review.",
+      "stats": {
+        "words": "palavras de regras pros agentes no AGENTS.md",
+        "invariants": "invariantes que nunca podem quebrar",
+        "boundaries": "fronteiras de segurança garantidas, cada uma ligada a uma guarda e a testes adversariais",
+        "unit": "testes unitários",
+        "integration": "testes de integração"
+      },
+      "statsNote": "Contado no repositório em 27 de setembro de 2026.",
+      "points": [
+        "Cerca de 65 diretivas explícitas, 28 notas de memória com curadoria que existem por causa de erros específicos, e mais de 60 documentos com pesquisa, post-mortems e decisões de arquitetura.",
+        "Nada disso apareceu no primeiro dia. São semanas vendo a IA fazer o grosso do trabalho todo dia e refinando, e o refinamento depende de experiência.",
+        "Cada camada marca um lugar onde a IA sozinha não acertou e eu tive que saber como consertar."
+      ],
+      "site": "Conheça o ai-memory",
+      "quote": "Nada disso é automático, feito pela IA. Tudo isso é onde a IA sozinha não consegue fazer e eu preciso saber com ajustar. Nenhum amador consegue fazer isso.",
+      "quoteOriginal": "Nada disso é automático, feito pela IA. Tudo isso é onde a IA sozinha não consegue fazer e eu preciso saber com ajustar. Nenhum amador consegue fazer isso.",
+      "quoteCite": "Eu no X, 25 de setembro de 2026"
+    },
+    "practice": {
+      "kicker": "7. O que fazer",
+      "title": "Se você é estudante ou júnior",
+      "lede": "Use a IA do jeito que um sênior usa um estagiário: pras tarefas chatas. O aprendizado tem que passar pelas suas mãos.",
+      "alt": "Um ciclo de quatro passos, Escrever na mão, Quebrar, Debugar e Revisar, em volta de uma pilha crescente com o rótulo Fundamentos, com uma pequena faixa separada ao lado com o rótulo IA: tarefas chatas.",
+      "points": [
+        "Escreva o máximo que puder na mão. Quebre, debugue, conserte. Ficar travado faz parte: os pesquisadores da Anthropic escrevem que o esforço cognitivo, \"mesmo ficar dolorosamente travado\", provavelmente é importante pra maestria.",
+        "Deixe a IA cuidar das tarefas mundanas em paralelo, e peça pra ela explicar conceitos, não pra escrever o código com o qual você deveria aprender.",
+        "Revise tudo que ela produz, linha por linha. Se você não consegue explicar uma mudança, você não está pronto pra aceitar ela.",
+        "Conte as horas. Do zero ao primeiro emprego de júnior são pelo menos umas 1.400 horas de estudo e prática; na minha opinião, maestria leva dezenas de milhares. Os melhores violinistas do Ericsson tinham mais de 10.000 aos 20 anos, e pesquisas posteriores mostram que prática não é a história toda, mas nada substitui ela.",
+        "Sênior é alguém que já foi júnior em cada assunto que domina."
+      ],
+      "sources": {
+        "anthropicStuck": "Anthropic: \"ficar dolorosamente travado\"",
+        "ericsson": "Ericsson et al. (1993): prática deliberada",
+        "macnamara": "Macnamara e Maitra (2019): a replicação",
+        "ep72": "Akitando #72: programar não é fácil"
+      }
+    }
+  },
+  "akitando": {
+    "kicker": "Por onde começar",
+    "title": "O arquivo do Akitando",
+    "lede": "Eu fiz o canal entre 2018 e 2024 pra ensinar os fundamentos que continuam valendo quando a ferramenta da moda muda: 146 vídeos, mais de 96 horas. Com agentes por aí, esse arquivo importa mais do que nunca.",
+    "play": "Assistir",
+    "transcript": "Ler a transcrição",
+    "channel": "Abrir o canal",
+    "all": "Todas as transcrições no blog",
+    "episodes": {
+      "V7oUDL7E1g4": "Por que programar não é fácil, e por que umas poucas semanas de curso não vão te transformar em programador.",
+      "oUPaJxk6TZ0": "Como aprender sozinho, pelos fundamentos e por problemas reais, sem ficar caçando certificado.",
+      "8G80nuEyDN4": "Montando um computador 6502 em protoboard (o kit do Ben Eater): binário, memória, Assembly e a pilha.",
+      "Gp2m8ZuXoPg": "O que um Hello World em C faz de verdade, descendo até memória e ponteiros.",
+      "SNyh-cubxaU": "Compiladores, interpretadores, máquinas virtuais e JIT.",
+      "0TndL-Nh6Ok": "Redes de baixo pra cima, de bits a sinais a pacotes. Parte 1 de 6."
+    }
+  },
+  "takeaways": {
+    "title": "As conclusões",
+    "items": [
+      "A IA multiplica o que você já sabe. Com pouco pra multiplicar, você recebe muito pouco.",
+      "Atalhos vendidos como carreira já tiveram um crash. O novo é a mesma promessa.",
+      "Aprender no piloto automático não fixa. Os estudos até agora concordam.",
+      "As vagas que sobram vão pra quem sabe julgar o resultado, e a contratação de nível de entrada está encolhendo.",
+      "A IA não adivinha seu objetivo, seus limites ou seus trade-offs. Saber isso é o trabalho.",
+      "Escreva na mão, deixe a IA com as tarefas chatas, revise tudo e coloque as horas."
+    ]
+  },
+  "next": [
+    {
+      "title": "Por que AGI não importa",
+      "text": "O hype por trás da promessa de que você não vai precisar saber nada."
+    },
+    {
+      "title": "Como eu uso",
+      "text": "Como é fazer 100% vibe coding depois de décadas de prática."
+    }
+  ]
+}
