@@ -5,6 +5,8 @@ export const site = {
   // The production domain. astro.config.mjs reads it from here.
   url: 'https://ailair.akitaonrails.com',
   github: 'https://github.com/akitaonrails',
+  // This site's own source. The header's GitHub icon points here so readers can open issues and PRs.
+  repo: 'https://github.com/akitaonrails/ai-toolkit-web',
   blog: 'https://akitaonrails.com',
   // English posts live under /en/ on the blog; Portuguese is the blog's default.
   blogEn: 'https://akitaonrails.com/en',
