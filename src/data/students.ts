@@ -49,7 +49,7 @@ export const students = {
     ] },
     { id: 'market', posts: ['aiKilled'], stats: [
       { key: 'newGrads', n: 65, suffix: '%' },
-      { key: 'entry', n: 4.5, suffix: '%', display: '4.5%' },
+      { key: 'entry', n: 4.5, suffix: '%', display: '4.5' },
       { key: 'young', n: 19, suffix: '%' },
     ], sources: [
       { id: 'signalfire', href: 'https://www.signalfire.com/blog/signalfire-state-of-talent-report-2026' },
@@ -66,8 +66,8 @@ export const students = {
       // 23 rows in docs/security-boundaries.md, one of them a proposal: 22 enforced.
       { key: 'boundaries', n: 22 },
       // Test attributes counted with grep (3,028 to 3,029 unit, 614 integration, depending on the pattern).
-      { key: 'unit', n: 3000, suffix: '+', display: '3,000+' },
-      { key: 'integration', n: 600, suffix: '+', display: '600+' },
+      { key: 'unit', n: 3000, suffix: '+', display: '3,000' },
+      { key: 'integration', n: 600, suffix: '+', display: '600' },
     ], sources: [] },
     { id: 'practice', figure: 'students-practice', posts: ['driveclub', 'akitaCaved', 'marathon'], sources: [
       { id: 'anthropicStuck', href: 'https://www.anthropic.com/research/AI-assistance-coding-skills' },
