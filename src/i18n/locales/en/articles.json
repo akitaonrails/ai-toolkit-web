@@ -184,6 +184,26 @@
     "businessModels": {
       "title": "37 days of vibe coding immersion: conclusions on business models",
       "summary": "What training and running frontier models costs, and why only a handful of companies can do it."
+    },
+    "zeroToPost": {
+      "title": "From zero to post-production in one week: using AI on real projects",
+      "summary": "Behind The M.Akita Chronicles: XP with AI as the pair. AI is your mirror, and it reveals faster who you are."
+    },
+    "punchCard": {
+      "title": "VS Code is the new punch card",
+      "summary": "Typing everything by hand is over, and the foundations are the main asset again: exoskeleton or crutch."
+    },
+    "talkClaude": {
+      "title": "Why LLMs aren't giving you the result you expect",
+      "summary": "What I want, how, what I don't want and how we check it: the AI can't read what's in your head."
+    },
+    "tvClipboard": {
+      "title": "Vibe code: I built a little app 100% with GLM 4.7 (TV Clipboard)",
+      "summary": "Written for beginners and teachers: a motivated intern, and code that must be reviewed by an experienced programmer."
+    },
+    "driveclub": {
+      "title": "How DriveClub and shadPS4 almost defeated AI and me: how to learn",
+      "summary": "AI only finds what you already know to ask about. How a junior learns today, and why the old foundations still pay."
     }
   },
   "related": {

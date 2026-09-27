@@ -39,7 +39,9 @@ function thumb(id, big) {
 const byDate = (a, b) => b.date.localeCompare(a.date) || (b.views ?? 0) - (a.views ?? 0);
 // Special appearances outside podcasts (a TV news segment), shown on their own at the top of the page.
 const tv = (cfg.tv ?? []).map((id) => { thumb(id, true); return meta(id); }).sort(byDate);
+// Akitando episodes on the students page, in the order the page lists them (not by date).
+const akitando = (cfg.akitando ?? []).map((id) => { thumb(id, true); return meta(id); });
 const appearances = cfg.appearances.map((id) => { thumb(id, true); return meta(id); }).sort(byDate);
 const cuts = Object.fromEntries(Object.entries(cfg.cuts).map(([episode, ids]) => [episode, ids.map((id) => { thumb(id, false); return meta(id); }).sort(byDate)]));
-writeFileSync(`${root}src/data/videos.json`, JSON.stringify({ fetchedAt: new Date().toISOString(), tv, appearances, cuts }, null, 2) + '\n');
-console.log(`${tv.length} TV, ${appearances.length} appearances, ${Object.values(cuts).flat().length} cuts`);
+writeFileSync(`${root}src/data/videos.json`, JSON.stringify({ fetchedAt: new Date().toISOString(), tv, akitando, appearances, cuts }, null, 2) + '\n');
+console.log(`${tv.length} TV, ${akitando.length} Akitando, ${appearances.length} appearances, ${Object.values(cuts).flat().length} cuts`);

@@ -59,6 +59,11 @@ export const articles = {
   llmsFail: { path: '/en/2026/06/24/why-llms-will-fail-at-your-company/', ptPath: '/2026/06/24/por-que-llms-vao-falhar-na-sua-empresa/', date: '2026-06-24', hue: 'violet' },
   highestScore: { path: '/en/2026/07/19/llm-benchmark-should-i-use-the-highest-scoring-model/', ptPath: '/2026/07/19/llm-benchmark-devo-usar-o-que-tem-nota-maior/', date: '2026-07-19', hue: 'rose' },
   businessModels: { path: '/en/2026/03/05/37-days-of-vibe-coding-immersion-conclusions-on-business-models/', ptPath: '/2026/03/05/37-dias-de-imersão-em-vibe-coding-conclusão-quanto-a-modelos-de-negócio/', date: '2026-03-05', hue: 'violet' },
+  zeroToPost: { path: '/en/2026/02/20/zero-to-post-production-in-1-week-using-ai-on-real-projects-behind-the-m-akita-chronicles/', ptPath: '/2026/02/20/do-zero-a-pos-producao-em-1-semana-como-usar-ia-em-projetos-de-verdade-bastidores-do-the-m-akita-chronicles/', date: '2026-02-20', hue: 'violet' },
+  punchCard: { path: '/en/2026/04/11/vs-code-is-the-new-punch-card/', ptPath: '/2026/04/11/vs-code-e-o-novo-cartao-perfurado/', date: '2026-04-11', hue: 'violet' },
+  talkClaude: { path: '/en/2026/04/15/how-to-talk-to-claude-code-effectively/', ptPath: '/2026/04/15/como-falar-com-o-claude-code-efetivamente/', date: '2026-04-15', hue: 'violet' },
+  tvClipboard: { path: '/en/2026/01/28/vibe-code-built-a-little-app-fully-with-glm-4-7-tv-clipboard/', ptPath: '/2026/01/28/vibe-code-eu-fiz-um-appzinho-100-com-glm-4-7-tv-clipboard/', date: '2026-01-28', hue: 'violet' },
+  driveclub: { path: '/en/2026/04/23/driveclub-shadps4-e-ia-como-aprender/', ptPath: '/2026/04/23/driveclub-shadps4-e-ia-como-aprender/', date: '2026-04-23', hue: 'orange' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;

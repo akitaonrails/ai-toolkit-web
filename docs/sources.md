@@ -149,6 +149,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `/podcasts/` | The SBT News TV segment, the five videos, the two complete playlists (`site.ts` `playlists`), Cortes do Flow |
 | `/games/` | distrobox-gaming and omarchy-games-menu repos |
 | `/agi/` | The owner's 2026 posts and his X post of 2026-09-26, plus the outside sources in section 11 |
+| `/students/` | The owner's two X posts of 2026-09-25, his 2026 posts, Akitando, the ai-memory repository, and the outside sources in section 12 |
 | `/frank/` | The six Frank repos and their blog posts (section 10), owner's words on the name |
 
 ## 9. The yearly tally (workflow page, "What that adds up to")
@@ -207,3 +208,13 @@ An opinion page asked for by the owner on 2026-09-26. English first; he reviewed
 **Outside sources.** Every URL in `agi.ts` was fetched on 2026-09-26 (openai.com, nytimes.com and x.com block bots; their text was checked through Wayback or search). Left out because they could not be verified: OpenAI's reported IPO filing and its size, a reported SWE-Bench Pro retraction, an Anthropic October 2026 listing target.
 
 **Refresh.** New AGI claims or benchmark results: add the point to the section, its source to `agi.ts` with a date in the label when it matters, and keep the owner's own opinions marked as his.
+
+## 12. AI and students (`/students/`)
+
+Asked for by the owner on 2026-09-27, English first; the other languages come after his review (until then they fall back to English). Structure in `src/data/students.ts`, words in `en/students.json`, the six Akitando episodes in `videos.config.json` `akitando` (refreshed with the other videos).
+
+**His positions.** The trigger is his X post https://x.com/AkitaOnRails/status/2103300221799207150 (seniors can vibe code, students and juniors must write by hand, let AI do chores, review everything, tens of thousands of hours first; quoted in full with the Portuguese original as posted) and https://x.com/AkitaOnRails/status/2103322331745604001 (ai-memory). Other points come from his 2026 posts: the mirror (2026-02-20), exoskeleton vs crutch (2026-04-11), the bootcamp bubble and "nobody becomes an engineer in a 1-month bootcamp" (2026-02-08), explaining goals and constraints (2026-06-24, 2026-04-15), review is not optional (2026-01-28), "a senior is someone who has been a junior in every topic they master" (2026-04-23). Why he made Akitando: the 2026-02-08 rant and episode #132 (2022). The "about 1,400 hours to a first junior job" is episode #72 (2020).
+
+**ai-memory numbers.** Measured on the checkout at 49147a5d, 2026-09-27: AGENTS.md 4,743 words (`wc -w`), 16 numbered invariants, 23 rows in `docs/security-boundaries.md` (22 enforced plus one proposal), 3,028 unit tests and 614 integration tests (test attributes inside and outside `tests/`). The "about 65 directives", "28 memory notes" and "more than 60 documents" come from his post (63 top-level docs, 69 with subfolders).
+
+**Outside sources**, fetched 2026-09-26/27: Anthropic's skill-formation RCT (50% vs 67%), Bastani et al. in PNAS via PMC (+48% practice, -17% exam), METR (19% slower), the MIT "Your Brain on ChatGPT" preprint (marked as not peer reviewed), DORA 2025, Veracode 2025 (45%), the CFPB order on Lambda School/BloomTech (86% advertised vs about 50%), Inside Higher Ed and Higher Ed Dive on bootcamp closures and 2U, TechCrunch on 2024 layoffs (150,000+), SignalFire 2026 (new-grad hiring -65% at big tech vs 2019), Indeed Hiring Lab (4.5% entry-level postings), Stanford "Canaries" August 2026 (-19%, descriptive, not causal), the New York Fed recent-graduates page and BLS. Deliberate practice: Ericsson 1993 and the Macnamara replication (2019), used to say practice is not the whole story. Left out: bootcamp-vs-degree earnings figures (only from marketing sites) and unverified secondary numbers.

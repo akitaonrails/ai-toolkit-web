@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-25T14:59:20.288Z",
+  "fetchedAt": "2026-09-27T16:56:48.381Z",
   "tv": [
     {
       "id": "7uFqDMwQ4_8",
@@ -7,7 +7,57 @@
       "channel": "SBT News",
       "date": "2026-09-25",
       "duration": "17:34",
-      "views": 912
+      "views": 29825
+    }
+  ],
+  "akitando": [
+    {
+      "id": "V7oUDL7E1g4",
+      "title": "RANT: Programação NÃO É Fácil",
+      "channel": "Fabio Akita",
+      "date": "2020-02-19",
+      "duration": "32:22",
+      "views": 340499
+    },
+    {
+      "id": "oUPaJxk6TZ0",
+      "title": "Guia DEFINITIVO de Aprendendo a Aprender | A maior BRONCA da sua vida [RATED R]",
+      "channel": "Fabio Akita",
+      "date": "2020-04-01",
+      "duration": "1:04:37",
+      "views": 1246599
+    },
+    {
+      "id": "8G80nuEyDN4",
+      "title": "O Guia +Hardcore de Introdução à COMPUTAÇÃO",
+      "channel": "Fabio Akita",
+      "date": "2020-06-04",
+      "duration": "1:18:28",
+      "views": 389082
+    },
+    {
+      "id": "Gp2m8ZuXoPg",
+      "title": "Hello World Como Você Nunca Viu! | Entendendo C",
+      "channel": "Fabio Akita",
+      "date": "2021-03-06",
+      "duration": "1:09:22",
+      "views": 316529
+    },
+    {
+      "id": "SNyh-cubxaU",
+      "title": "Linguagem Compilada vs Interpretada | Qual é melhor?",
+      "channel": "Fabio Akita",
+      "date": "2022-04-15",
+      "duration": "1:11:44",
+      "views": 195212
+    },
+    {
+      "id": "0TndL-Nh6Ok",
+      "title": "Introdução a Redes: Como Dados viram Ondas? | Parte 1",
+      "channel": "Fabio Akita",
+      "date": "2022-07-01",
+      "duration": "37:59",
+      "views": 309208
     }
   ],
   "appearances": [
@@ -17,7 +67,7 @@
       "channel": "Tropical on Rails",
       "date": "2026-05-28",
       "duration": "58:50",
-      "views": 119919
+      "views": 120650
     },
     {
       "id": "4c7pbOxYn_A",
@@ -25,7 +75,7 @@
       "channel": "Flow Podcast",
       "date": "2026-04-14",
       "duration": "4:44:12",
-      "views": 687422
+      "views": 690964
     },
     {
       "id": "9aWa-eCmWYE",
@@ -33,7 +83,7 @@
       "channel": "Fernando Ulrich",
       "date": "2026-03-08",
       "duration": "1:27:18",
-      "views": 327467
+      "views": 328072
     },
     {
       "id": "_Hl9wiLkns4",
@@ -41,7 +91,7 @@
       "channel": "Inteligência Ltda",
       "date": "2025-07-10",
       "duration": "4:25:25",
-      "views": 381925
+      "views": 382240
     },
     {
       "id": "sf4Gxf0LiKo",
@@ -49,7 +99,7 @@
       "channel": "Flow Podcast",
       "date": "2025-06-14",
       "duration": "4:40:55",
-      "views": 767425
+      "views": 767958
     }
   ],
   "cuts": {
@@ -60,7 +110,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-15",
         "duration": "17:24",
-        "views": 72952
+        "views": 73114
       },
       {
         "id": "Coi2-MBtkH8",
@@ -68,7 +118,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:30",
-        "views": 133126
+        "views": 134409
       },
       {
         "id": "fwYzEDPtdA0",
@@ -76,7 +126,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "10:16",
-        "views": 126409
+        "views": 126451
       },
       {
         "id": "5nKAHOSSgqY",
@@ -84,7 +134,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:20",
-        "views": 79436
+        "views": 79650
       },
       {
         "id": "xIjInGjJLFE",
@@ -92,7 +142,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:51",
-        "views": 40301
+        "views": 40312
       },
       {
         "id": "JmmrjgHFErQ",
@@ -100,7 +150,15 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:25",
-        "views": 37107
+        "views": 37223
+      },
+      {
+        "id": "hJ2hqU0Cvmo",
+        "title": "MENTIRAM PRA VOCÊ de QUE ISSO IA SER a PROFISSÃO do FUTURO?",
+        "channel": "Cortes do Flow [OFICIAL]",
+        "date": "2026-04-14",
+        "duration": "13:46",
+        "views": 32302
       },
       {
         "id": "UJrT-KieiiQ",
@@ -111,20 +169,12 @@
         "views": 32171
       },
       {
-        "id": "hJ2hqU0Cvmo",
-        "title": "MENTIRAM PRA VOCÊ de QUE ISSO IA SER a PROFISSÃO do FUTURO?",
-        "channel": "Cortes do Flow [OFICIAL]",
-        "date": "2026-04-14",
-        "duration": "13:46",
-        "views": 31847
-      },
-      {
         "id": "9ArApZStyzI",
         "title": "O ponto de NÃO RETORNO: Fábio Akita faz PREVISÃO PREOCUPANTE sobre o FUTURO da IA",
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:20",
-        "views": 23620
+        "views": 23667
       },
       {
         "id": "7dAKzagCklo",
@@ -132,7 +182,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "13:43",
-        "views": 17391
+        "views": 17553
       },
       {
         "id": "U_-g8zGu6wM",
@@ -140,7 +190,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:14",
-        "views": 15646
+        "views": 15653
       },
       {
         "id": "jaL7rXRcj1o",
@@ -156,7 +206,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "10:11",
-        "views": 5681
+        "views": 5698
       },
       {
         "id": "yBBkP2k0lKg",
@@ -164,7 +214,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:02",
-        "views": 5245
+        "views": 5254
       },
       {
         "id": "aA5nQJnOUxc",
@@ -172,7 +222,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:13",
-        "views": 3109
+        "views": 3110
       },
       {
         "id": "PWpUC8wEUY0",
@@ -180,7 +230,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:21",
-        "views": 2646
+        "views": 2648
       },
       {
         "id": "LhjqBaEuezg",
@@ -188,7 +238,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:29",
-        "views": 2170
+        "views": 2171
       },
       {
         "id": "v9xg3A_eiIA",
@@ -196,7 +246,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:11",
-        "views": 1193
+        "views": 1194
       },
       {
         "id": "8dANZrq-z1I",
@@ -204,7 +254,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "16:17",
-        "views": 65115
+        "views": 65259
       },
       {
         "id": "ojCPRYw-AZ8",
@@ -212,7 +262,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "10:12",
-        "views": 44532
+        "views": 44617
       },
       {
         "id": "kJePoWn-DPk",
@@ -220,7 +270,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "8:25",
-        "views": 6135
+        "views": 6136
       },
       {
         "id": "xEh2xdW5Sus",
@@ -228,7 +278,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "8:12",
-        "views": 3362
+        "views": 3363
       }
     ],
     "sf4Gxf0LiKo": [
@@ -238,7 +288,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "19:25",
-        "views": 143248
+        "views": 143249
       },
       {
         "id": "ZplyjiCon4M",
@@ -246,7 +296,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "10:16",
-        "views": 60578
+        "views": 60579
       },
       {
         "id": "PsNun0DABL8",
@@ -254,7 +304,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "14:33",
-        "views": 48612
+        "views": 48613
       },
       {
         "id": "1_9xn-_ExVI",
@@ -262,7 +312,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "10:31",
-        "views": 37118
+        "views": 37143
       },
       {
         "id": "uUKUa8_TdYo",
@@ -270,7 +320,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "12:19",
-        "views": 33196
+        "views": 33199
       },
       {
         "id": "3kheUdwa3ro",
@@ -278,7 +328,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "12:32",
-        "views": 14343
+        "views": 14344
       },
       {
         "id": "x8XFQA6fNQU",
@@ -286,7 +336,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:03",
-        "views": 1417567
+        "views": 1417728
       },
       {
         "id": "3ss_RUZqS4E",
@@ -294,7 +344,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:16",
-        "views": 176897
+        "views": 176899
       },
       {
         "id": "exfagaBE8kQ",
@@ -302,7 +352,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "16:34",
-        "views": 77680
+        "views": 77685
       },
       {
         "id": "5qD5Do_HriQ",
@@ -310,7 +360,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:58",
-        "views": 66609
+        "views": 66719
       },
       {
         "id": "q_hZY_1QcoU",

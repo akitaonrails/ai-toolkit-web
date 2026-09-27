@@ -1,0 +1,113 @@
+---
+// "AI and students": the owner's case for foundations and deliberate practice, in short sections with a diagram or
+// a strip of numbers, his posts and outside sources, then the Akitando archive. Same layout as /agi/.
+// Structure in src/data/students.ts, words in the `students` catalog (English first, until the owner reviews it).
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Figure from '@/components/Figure.astro';
+import PullQuote from '@/components/PullQuote.astro';
+import Related from '@/components/Related.astro';
+import Stats from '@/components/Stats.astro';
+import Video from '@/components/Video.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { students } from '@/data/students';
+import { sisterUrl } from '@/data/site';
+import videos from '@/data/videos.json';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, locale, date } = useI18n(Astro, 'students');
+type Text = { title: string; text: string };
+const s = (id: string, key: string) => t(`sections.${id}.${key}`);
+const has = (id: string, key: string) => key in raw<Record<string, unknown>>(`sections.${id}`);
+const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/workflow/' }] as const, raw<Text[]>('next'));
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="amber" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
+    <a href="#practice" class="btn btn-primary">{t('hero.primary')}</a>
+    <a href="#akitando" class="btn btn-ghost">{t('hero.secondary')}</a>
+  </PageHero>
+
+  <section class="wrap pb-8" data-hue="amber">
+    <PullQuote text={t('quote.text')} original={t('quote.original')} cite={t('quote.cite')} large />
+    <a class="link text-sm mt-3 inline-block ms-6" href={students.xStudents}>x.com/AkitaOnRails</a>
+  </section>
+
+  {students.sections.map((sec, i) => (
+    <section id={sec.id} data-hue="amber" class:list={['band scroll-mt-16', i % 2 === 1 && 'bg-tint']}>
+      <div class="wrap">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span>{s(sec.id, 'kicker')}</div>
+        <h2 class="text-3xl mt-4 max-w-[18em]">{s(sec.id, 'title')}</h2>
+        <p class="lede mt-6">{s(sec.id, 'lede')}</p>
+        {sec.figure && <div class="mt-10"><Figure name={sec.figure} alt={s(sec.id, 'alt')} /></div>}
+        {sec.stats && (
+          <div class="mt-10">
+            <Stats cols={Math.min(sec.stats.length, 5)} items={sec.stats.map((x) => ({ n: x.n, prefix: x.prefix, suffix: x.suffix, display: x.display, label: t(`sections.${sec.id}.stats.${x.key}`) }))} />
+            {has(sec.id, 'statsNote') && <p class="mt-4 text-sm text-muted">{s(sec.id, 'statsNote')}</p>}
+          </div>
+        )}
+        <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] mt-10 items-start">
+          <div>
+            <ul class="ticks text-lg">{raw<string[]>(`sections.${sec.id}.points`).map((p) => <li>{p}</li>)}</ul>
+            {sec.memory && <a href={sisterUrl('memory', locale)} class="btn btn-ghost mt-8">{s(sec.id, 'site')}</a>}
+            {has(sec.id, 'quote') && (
+              <div class="mt-10">
+                <PullQuote text={s(sec.id, 'quote')} original={has(sec.id, 'quoteOriginal') ? s(sec.id, 'quoteOriginal') : undefined} cite={has(sec.id, 'quoteCite') ? s(sec.id, 'quoteCite') : undefined} />
+                {sec.x && <a class="link text-sm mt-3 inline-block ms-6" href={sec.x}>x.com/AkitaOnRails</a>}
+              </div>
+            )}
+          </div>
+          <div class="grid gap-8">
+            <Related ids={sec.posts} />
+            {sec.sources.length > 0 && (
+              <div>
+                <h3 class="text-lg mb-3">{t('sourcesTitle')}</h3>
+                <ul class="grid gap-1.5 text-sm">
+                  {sec.sources.map((src) => <li><a class="link" href={src.href}>{s(sec.id, `sources.${src.id}`)}</a></li>)}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section id="akitando" class="band scroll-mt-16 bg-tint" data-hue="amber">
+    <div class="wrap">
+      <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('akitando.kicker')}</div>
+      <h2 class="text-3xl mt-4 max-w-[18em]">{t('akitando.title')}</h2>
+      <p class="lede mt-6">{t('akitando.lede')}</p>
+      <ul class="eps mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        {videos.akitando.map((v) => (
+          <li>
+            <Video id={v.id} title={v.title} play={t('akitando.play')} sizes="(min-width: 1024px) 24rem, (min-width: 640px) 46vw, 94vw" />
+            <p class="mt-3 font-semibold leading-snug" lang="pt-BR">{v.title}</p>
+            <p class="mt-1 font-mono text-xs text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration}</p>
+            <p class="mt-2 text-sm text-muted">{t(`akitando.episodes.${v.id}`)}</p>
+            <a class="link text-sm mt-1 inline-block py-1" href={students.episodes[v.id]}>{t('akitando.transcript')}</a>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-12 flex flex-wrap gap-3">
+        <a href={students.channel} class="btn btn-primary">{t('akitando.channel')}</a>
+        <a href={students.transcripts} class="btn btn-ghost">{t('akitando.all')}</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="takeaways" class="band scroll-mt-16" data-hue="amber">
+    <div class="wrap">
+      <h2 class="text-3xl">{t('takeaways.title')}</h2>
+      <ol class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
+        {raw<string[]>('takeaways.items').map((item, i) => (
+          <li class="cell"><span class="font-display font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>

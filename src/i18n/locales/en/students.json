@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "title": "AI and students",
+    "description": "Fabio Akita on AI for students and juniors: seniors can vibe code, you should write by hand, review everything and build the foundations first."
+  },
+  "hero": {
+    "kicker": "Opinion",
+    "title": "AI and students",
+    "lede": "I'm a senior and I vibe code 100%. If you're a student or a junior, don't copy me yet. Seven short points on why, and where to start.",
+    "primary": "What to do",
+    "secondary": "The Akitando archive"
+  },
+  "quote": {
+    "text": "Me, a senior with years of experience, I'll vibe code 100%. You, a student, a junior, MUST write as much as possible by hand, let the AI do the more mundane tasks in parallel, and you MUST review everything manually. You need tens of thousands of hours of deliberate practice and study to become someone who later knows what to ask the AI to do for you. Not before.",
+    "original": "Eu, sênior, anos de experiência, vou fazer 100% vibe codec. você, estudante, júnior, DEVE escrever o máximo possível na mão, deixar a IA fazer tarefas mais mundanas, em paralelo, e você DEVE revisar tudo manualmente. Você precisa de dezenas de milhares de horas de prática deliberada, estudo, pra se tornar alguém que, depois, vai saber o que mandar a IA fazer por você, não antes.",
+    "cite": "Me on X, September 25, 2026"
+  },
+  "sourcesTitle": "Sources",
+  "sections": {
+    "multiplier": {
+      "kicker": "1. The multiplier",
+      "title": "AI multiplies what you bring",
+      "lede": "The same tool gives a senior ten times more good work, and gives a beginner ten times more of whatever the beginner has, mistakes included.",
+      "alt": "Two rows: a thin knowledge stack labeled Junior, multiplied by × AI, gives one tiny output card; a tall knowledge stack labeled Senior, multiplied by the same × AI, gives a tall stack of output.",
+      "points": [
+        "AI is your mirror. If you're incompetent, it produces bad things faster. If you're competent, it produces good things faster.",
+        "People who understand operating systems, databases, networks, data structures and compilers use agents as an exoskeleton. People who don't use them as a crutch. An exoskeleton amplifies strength; a crutch only hides weakness.",
+        "Google's DORA 2025 report found the same in teams: \"AI doesn't fix a team; it amplifies what's already there.\"",
+        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the generated code samples had OWASP Top 10 security flaws."
+      ],
+      "sources": {
+        "dora": "Google DORA 2025: AI amplifies what's there",
+        "veracode": "Veracode: security flaws in AI-generated code"
+      }
+    },
+    "bubble": {
+      "kicker": "2. The last bubble",
+      "title": "We've seen this shortcut before",
+      "lede": "Before AI, the promise was a bootcamp: a few weeks and you'd be hired by Google. It ended in closures and layoffs.",
+      "alt": "A timeline: a tall peak labeled Bootcamps around 2021, a sharp drop into a valley labeled Layoffs, then a new rise labeled Vibe coding in 2026 ending in a question mark.",
+      "points": [
+        "Bootcamp enrollment grew about ninefold between 2012 and 2018. Lambda School advertised placement rates \"as high as 86 percent\"; the US consumer protection bureau found its internal numbers near 50%, sometimes 30%.",
+        "Then the cheap money ran out. Bootcamps closed one after another, 2U left the business in 2024, and the tech industry cut more than 150,000 jobs that year alone.",
+        "I started Akitando in 2018 for exactly this: to prepare real programmers to survive the bubble popping. In 2022 I was telling people to cancel the courses and stop believing influencers.",
+        "Now the same promise is back with a new face: you don't need to learn to code, the AI does it for you. Nobody becomes an engineer in a one-month bootcamp, and nobody becomes one by prompting either."
+      ],
+      "sources": {
+        "cfpb": "CFPB: Lambda School's placement claims",
+        "closures": "Inside Higher Ed: the bootcamp closures",
+        "twoU": "Higher Ed Dive: 2U exits bootcamps",
+        "layoffs": "TechCrunch: the 2024 tech layoffs",
+        "ep132": "Akitando #132: the startup bubble burst (2022, Portuguese)"
+      }
+    },
+    "evidence": {
+      "kicker": "3. The evidence",
+      "title": "Learning on autopilot doesn't stick",
+      "lede": "The studies so far point the same way: when the AI does the thinking, you don't learn.",
+      "stats": {
+        "anthropic": "fewer quiz points for juniors who learned a new library with AI",
+        "bastani": "lower exam scores for students who practiced with plain GPT-4, once it was gone",
+        "metr": "slower: experienced developers with AI, who still believed they were faster"
+      },
+      "points": [
+        "Anthropic's own study, January 2026: juniors learning a new library with AI scored 50% on the quiz, against 67% for those who coded by hand, with no significant time saved. Those who used AI to explain concepts kept most of the learning; those who handed off the code did worst.",
+        "In a PNAS study with about 1,000 high school students, plain GPT-4 raised practice scores by 48% and then cut exam scores by 17% once it was taken away. A tutor built to make them think avoided the loss.",
+        "METR's 2025 trial: experienced open-source developers took 19% longer with AI, and afterwards still believed it had made them 20% faster.",
+        "An MIT preprint, not yet peer reviewed, found that people who wrote essays with ChatGPT struggled to quote their own work."
+      ],
+      "sources": {
+        "anthropic": "Anthropic: how AI assistance affects coding skills",
+        "bastani": "Bastani et al., PNAS: generative AI can harm learning",
+        "metr": "METR: experienced developers 19% slower",
+        "mit": "MIT Media Lab: Your Brain on ChatGPT (preprint)"
+      }
+    },
+    "market": {
+      "kicker": "4. The market",
+      "title": "The jobs left go to people who can judge the output",
+      "lede": "Companies still hire people who can review and decide. They hire far fewer beginners to type.",
+      "stats": {
+        "newGrads": "less new-grad hiring at the big tech companies than in 2019",
+        "entry": "of software developer job postings are entry-level (early 2026)",
+        "young": "fewer 22 to 25 year-olds than expected in the most AI-exposed jobs"
+      },
+      "points": [
+        "SignalFire, 2026: new-grad hiring is down about 65% at the big tech companies and 76% at early-stage startups compared with 2019, while engineering hiring overall is down only 11%.",
+        "Indeed: entry-level roles were 4.5% of software development postings in early 2026. Senior roles were 69%.",
+        "Stanford's \"Canaries\" study: employment for 22 to 25 year-olds in the most AI-exposed jobs, software developers included, is 19% below trend, mostly through fewer hires. The authors are careful to call it descriptive rather than causal.",
+        "Recent computer science graduates face higher unemployment than most majors, but far less underemployment: when they're hired, it's for the real job. The typical entry path is still a bachelor's degree."
+      ],
+      "sources": {
+        "signalfire": "SignalFire: State of Tech Talent 2026",
+        "indeed": "Indeed: the labor market tilts toward seniority",
+        "canaries": "Stanford: Canaries in the Coal Mine (August 2026)",
+        "nyfed": "New York Fed: the labor market for recent graduates",
+        "bls": "BLS: software developers"
+      }
+    },
+    "guess": {
+      "kicker": "5. The gap",
+      "title": "AI can't guess what you need",
+      "lede": "It does what you ask, and it doesn't do what you didn't ask. Knowing what to ask is the job.",
+      "alt": "A crumpled note labeled Vague ask goes into a machine labeled AI and comes out as a card full of question marks; three locked cards labeled Real goal, Constraints and Trade-offs connect only to a terminal labeled Only you know.",
+      "points": [
+        "A coding agent needs you to explain the goal, the context, the constraints, the priorities, what must not break, which paths are acceptable and how success is measured. Many programmers never learned to say that.",
+        "My way of talking to an agent has four parts: what I want, how, what I don't want, and how we check it. You can't fill those in without knowing the domain.",
+        "Even for a tiny app, anything built by vibe coding must go through review by an experienced programmer. That isn't optional."
+      ]
+    },
+    "memory": {
+      "kicker": "6. A real example",
+      "title": "What \"the AI did it\" actually took",
+      "lede": "ai-memory, my open source memory system for coding agents, is mostly written by AI. Everything that keeps it correct was added by hand, week after week.",
+      "alt": "A core labeled AI output wrapped in five rings labeled Directives, Fences, Lessons, Docs and Tests, with a timeline underneath labeled Weeks of review.",
+      "stats": {
+        "words": "words of rules for the agents in AGENTS.md",
+        "invariants": "invariants that must never break",
+        "boundaries": "security boundaries, each mapped to a guard and adversarial tests",
+        "unit": "unit tests",
+        "integration": "integration tests"
+      },
+      "statsNote": "Counted in the repository on September 27, 2026.",
+      "points": [
+        "About 65 explicit directives, 28 curated memory notes that exist because of specific mistakes, and more than 60 documents with research, post-mortems and architecture decisions.",
+        "None of it showed up on day one. It's weeks of watching the AI do the bulk of the work every day and refining it, and the refining depends on experience.",
+        "Each layer marks a place where the AI alone didn't get it right and I had to know how to fix it."
+      ],
+      "site": "See ai-memory",
+      "quote": "None of this is automatic, made by the AI. All of it is where the AI alone can't do it and I need to know how to adjust. No amateur can do this.",
+      "quoteOriginal": "Nada disso é automático, feito pela IA. Tudo isso é onde a IA sozinha não consegue fazer e eu preciso saber com ajustar. Nenhum amador consegue fazer isso.",
+      "quoteCite": "Me on X, September 25, 2026"
+    },
+    "practice": {
+      "kicker": "7. What to do",
+      "title": "If you're a student or a junior",
+      "lede": "Use AI the way a senior uses an intern: for the chores. The learning has to go through your own hands.",
+      "alt": "A loop of four steps, Write by hand, Break it, Debug and Review, around a growing stack labeled Foundations, with a small separate lane labeled AI: chores off to the side.",
+      "points": [
+        "Write as much as you can by hand. Break it, debug it, fix it. Getting stuck is part of it: Anthropic's researchers write that cognitive effort, \"even getting painfully stuck\", is likely important for mastery.",
+        "Let AI handle the mundane tasks in parallel, and ask it to explain concepts, not to write the code you're supposed to learn from.",
+        "Review everything it produces, line by line. If you can't explain a change, you're not ready to accept it.",
+        "Count the hours. From zero to a first junior job is at least about 1,400 hours of study and practice; mastery takes tens of thousands. Later research shows practice isn't the whole story, but nothing replaces it.",
+        "A senior is someone who has been a junior in every topic they master."
+      ],
+      "sources": {
+        "anthropicStuck": "Anthropic: \"getting painfully stuck\"",
+        "ericsson": "Ericsson et al. (1993): deliberate practice",
+        "macnamara": "Macnamara and Maitra (2019): the replication",
+        "ep72": "Akitando #72: programming is not easy (Portuguese)"
+      }
+    }
+  },
+  "akitando": {
+    "kicker": "Where to start",
+    "title": "The Akitando archive",
+    "lede": "I made the channel between 2018 and 2024 to teach the foundations that still hold when the fashionable tool changes: 146 videos, over 96 hours. With agents around, that archive matters more than ever. The videos and transcripts are in Portuguese; YouTube's auto-translated captions help.",
+    "play": "Play",
+    "transcript": "Read the transcript",
+    "channel": "Open the channel",
+    "all": "All transcripts on the blog",
+    "episodes": {
+      "V7oUDL7E1g4": "Why programming is not easy, and why a few weeks of a course won't make you a programmer.",
+      "oUPaJxk6TZ0": "How to learn on your own, through fundamentals and real problems, without chasing certificates.",
+      "8G80nuEyDN4": "Building a 6502 computer from scratch: binary, memory, Assembly and the stack.",
+      "Gp2m8ZuXoPg": "What a Hello World in C really does, down to memory and pointers.",
+      "SNyh-cubxaU": "Compilers, interpreters, virtual machines and JIT.",
+      "0TndL-Nh6Ok": "Networks from the bottom up, from bits to signals to packets. Part 1 of 6."
+    }
+  },
+  "takeaways": {
+    "title": "The takeaways",
+    "items": [
+      "AI multiplies what you already know. With little to multiply, you get very little.",
+      "Shortcuts sold as careers already had one crash. The new one is the same promise.",
+      "Learning on autopilot doesn't stick. The studies agree.",
+      "The jobs left go to people who can judge the output, and entry-level hiring is shrinking.",
+      "AI can't guess your goal, your limits or your trade-offs. Knowing them is the job.",
+      "Write by hand, let AI do the chores, review everything, and put in the hours."
+    ]
+  },
+  "next": [
+    {
+      "title": "Why AGI doesn't matter",
+      "text": "The hype behind the promise that you won't need to know anything."
+    },
+    {
+      "title": "How I use it",
+      "text": "What 100% vibe coding looks like after decades of practice."
+    }
+  ]
+}
