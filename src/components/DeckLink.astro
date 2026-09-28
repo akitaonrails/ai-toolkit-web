@@ -1,0 +1,11 @@
+---
+// Download link for an essay page's slide deck (public/pdf/<deck>-<locale>.pdf, made by `npm run build:decks`).
+import { useI18n } from '@/i18n';
+interface Props { deck: 'agi' | 'students' }
+const { deck } = Astro.props;
+const { t, locale } = useI18n(Astro);
+---
+<a href={`/pdf/${deck}-${locale}.pdf`} download class="btn btn-ghost" type="application/pdf">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14" /></svg>
+  {t('deck.download')} <span class="text-muted font-normal">· {t('deck.format')}</span>
+</a>

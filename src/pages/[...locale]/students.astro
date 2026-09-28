@@ -4,6 +4,7 @@
 // Structure in src/data/students.ts, words in the `students` catalog (English first, until the owner reviews it).
 import Base from '@/layouts/Base.astro';
 import PageHero from '@/components/PageHero.astro';
+import DeckLink from '@/components/DeckLink.astro';
 import Figure from '@/components/Figure.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import Related from '@/components/Related.astro';
@@ -27,6 +28,7 @@ const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/w
   <PageHero hue="amber" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#practice" class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#akitando" class="btn btn-ghost">{t('hero.secondary')}</a>
+    <DeckLink deck="students" />
   </PageHero>
 
   <section class="wrap pb-8" data-hue="amber">
@@ -106,6 +108,7 @@ const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/w
         ))}
       </ol>
       <div class="mt-14"><PullQuote text={t('takeaways.quote')} original={t('takeaways.quoteOriginal')} large /></div>
+      <div class="mt-12"><DeckLink deck="students" /></div>
     </div>
   </section>
 

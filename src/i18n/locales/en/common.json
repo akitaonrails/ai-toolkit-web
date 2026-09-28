@@ -165,5 +165,9 @@
     "text": "This site uses Google Analytics to count visits. It shows no ads and does not follow you to other sites. Is that okay?",
     "decline": "Decline",
     "accept": "Accept"
+  },
+  "deck": {
+    "download": "Send this to your boss",
+    "format": "PDF slides"
   }
 }

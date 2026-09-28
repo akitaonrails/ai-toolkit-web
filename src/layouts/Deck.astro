@@ -1,0 +1,111 @@
+---
+// Print layout for the slide decks (the PDF versions of /agi/ and /students/). Every slide is a fixed 1920x1080
+// page that never breaks inside; scripts/build-decks.mjs prints these pages to PDF and fails if any slide
+// overflows. Always dark, with the site's fonts and color tokens. docs/pdf.md explains the pipeline.
+import '@/styles/global.css';
+import fontsHe from '@/styles/fonts-he.css?url';
+import fontsJa from '@/styles/fonts-ja.css?url';
+import fontsKo from '@/styles/fonts-ko.css?url';
+import { useI18n } from '@/i18n';
+interface Props { title: string }
+const { title } = Astro.props;
+const { locale, dir, htmlLang } = useI18n(Astro);
+const localeFonts = { he: fontsHe, ja: fontsJa, ko: fontsKo }[locale as string];
+---
+<!doctype html>
+<html lang={htmlLang} dir={dir} data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>{title}</title>
+    {localeFonts && <link rel="stylesheet" href={localeFonts} />}
+  </head>
+  <body class="deck">
+    <slot />
+    <script is:inline>
+      // Paginates by measuring, so the breaks hold in every language: a slide whose [data-flow] list overflows sends
+      // its last whole item to a continuation slide (same kicker and title) until it fits; then a section's quote
+      // slide ([data-ride]) folds into the slide before it if its quote fits there. Sets body[data-paged] when done;
+      // scripts/build-decks.mjs waits for it, then checks every slide again before printing.
+      (async () => {
+        await document.fonts.ready;
+        await Promise.all([...document.images].map((i) => i.complete || new Promise((r) => { i.onload = i.onerror = r; })));
+        const fits = (s) => {
+          const limit = s.getBoundingClientRect().bottom - 110;
+          return [...s.children].every((el) => el.matches('.rule, .slide-foot') || el.getBoundingClientRect().bottom <= limit)
+            && [...s.querySelectorAll('[data-flow]')].every((f) => f.scrollWidth <= f.clientWidth + 1);
+        };
+        const tidy = (s) => { const ul = s.querySelector('ul.points'); ul?.classList.toggle('two', ul.children.length > 1); };
+        for (const slide of document.querySelectorAll('.slide:has([data-flow])')) {
+          let cur = slide;
+          while (cur) {
+            const flow = cur.querySelector('[data-flow]');
+            let next = null;
+            tidy(cur);
+            while (!fits(cur) && flow.children.length > 1) {
+              if (!next) {
+                next = cur.cloneNode(true);
+                next.querySelectorAll('.stats').forEach((e) => e.remove());
+                next.querySelector('[data-flow]').replaceChildren();
+                cur.after(next);
+              }
+              next.querySelector('[data-flow]').prepend(flow.lastElementChild);
+              tidy(cur);
+            }
+            cur = next;
+          }
+        }
+        for (const qs of document.querySelectorAll('.slide[data-ride]')) {
+          const host = qs.previousElementSibling;
+          if (!host?.matches('.pts')) continue;
+          const q = qs.querySelector('blockquote').cloneNode(true);
+          q.classList.remove('big');
+          host.querySelector('.slide-foot').before(q);
+          if (fits(host)) qs.remove(); else q.remove();
+        }
+        document.body.dataset.paged = '1';
+      })();
+    </script>
+  </body>
+</html>
+<style is:global>
+  @page { size: 1920px 1080px; margin: 0; }
+  html, body.deck { margin: 0; padding: 0; background: var(--bg); }
+  body.deck { counter-reset: slide; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slide {
+    position: relative; box-sizing: border-box; inline-size: 1920px; block-size: 1080px; overflow: hidden;
+    padding: 96px 128px 120px; background: var(--bg); color: var(--text);
+    break-after: page; break-inside: avoid; counter-increment: slide;
+    font-family: var(--font-sans); font-size: 30px; line-height: 1.45;
+  }
+  .slide:last-child { break-after: auto; }
+  .slide .rule { position: absolute; inset-inline: 0; top: 0; inline-size: auto; border-radius: 0; block-size: 10px; background: var(--hue-vivid, var(--v-green)); }
+  .slide-foot {
+    position: absolute; inset-inline: 128px; bottom: 44px; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-mono); font-size: 20px; color: var(--muted);
+  }
+  .slide-foot .n::after { content: counter(slide); }
+  .slide .kicker { font-family: var(--font-mono); font-size: 26px; color: var(--hue); display: flex; align-items: center; gap: 14px; }
+  .slide .kicker .dot { inline-size: 16px; block-size: 16px; border-radius: 99px; background: var(--hue-vivid); }
+  .slide h1 { font-size: 112px; line-height: 1.02; margin: 28px 0 0; max-width: 15em; }
+  .slide h2 { font-size: 68px; line-height: 1.06; margin: 20px 0 0; max-width: 20em; }
+  .slide h2.small { font-size: 46px; }
+  .slide .lede { font-size: 34px; line-height: 1.4; color: var(--muted); margin: 28px 0 0; max-width: 32em; }
+  .slide .points { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 26px; }
+  .slide .points li { position: relative; padding-inline-start: 38px; font-size: 30px; line-height: 1.42; }
+  .slide .points li::before { content: ''; position: absolute; inset-inline-start: 4px; top: 0.55em; inline-size: 14px; block-size: 14px; border-radius: 99px; background: var(--hue-vivid); }
+  .slide .points.two { grid-template-columns: 1fr 1fr; column-gap: 72px; }
+  .slide blockquote.q { margin: 40px 0 0; padding-inline-start: 34px; border-inline-start: 6px solid var(--hue-vivid); }
+  .slide blockquote.q p { margin: 0; font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 40px; line-height: 1.2; }
+  .slide blockquote.q .orig { margin-top: 14px; font-family: var(--font-sans); font-weight: 400; font-style: italic; font-size: 26px; color: var(--muted); line-height: 1.35; }
+  .slide blockquote.q .cite { margin-top: 12px; font-family: var(--font-mono); font-size: 22px; color: var(--muted); }
+  .slide figure { margin: 0; }
+  .slide .fig img { display: block; inline-size: 100%; block-size: auto; border-radius: 24px; border: 1px solid var(--line); }
+  .slide .stats { display: grid; gap: 36px; margin-top: 36px; }
+  .slide .stat { border-top: 6px solid var(--hue-vivid); padding-top: 18px; }
+  .slide .stat b { display: block; font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: 76px; line-height: 1; color: var(--hue); }
+  .slide .stat span { display: block; margin-top: 12px; font-size: 26px; line-height: 1.35; color: var(--muted); }
+  .slide a { color: inherit; text-decoration: none; }
+  .slide .links { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; font-size: 26px; line-height: 1.35; }
+  .slide .links li b { color: var(--hue); font-weight: 600; }
+</style>

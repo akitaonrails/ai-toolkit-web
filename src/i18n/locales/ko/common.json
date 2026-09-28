@@ -165,5 +165,9 @@
     "text": "이 사이트는 방문 수를 세려고 Google Analytics를 씁니다. 광고는 없고 다른 사이트까지 따라가지도 않습니다. 괜찮으신가요?",
     "decline": "거부",
     "accept": "동의"
+  },
+  "deck": {
+    "download": "상사에게 보내세요",
+    "format": "PDF 슬라이드"
   }
 }

@@ -1,0 +1,14 @@
+---
+// A generated diagram for a slide: the reader's language when a translated copy exists, English otherwise (same
+// rule as Figure). Loaded eagerly, because the PDF printer does not scroll to trigger lazy images.
+import { Image } from 'astro:assets';
+import { useI18n } from '@/i18n';
+interface Props { name: string; alt: string }
+const { name, alt } = Astro.props;
+const { locale } = useI18n(Astro);
+const originals = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/gen/*.webp', { eager: true });
+const localized = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/gen/*/*.webp', { eager: true });
+const image = localized[`/src/assets/img/gen/${locale}/${name}.webp`]?.default ?? originals[`/src/assets/img/gen/${name}.webp`]?.default;
+if (!image) throw new Error(`DeckFigure: no image for name="${name}"`);
+---
+<figure class="fig" dir="ltr"><Image src={image} alt={alt} widths={[1600]} sizes="1600px" quality={85} loading="eager" /></figure>

@@ -6,7 +6,8 @@ import { join, relative, dirname } from 'node:path';
 
 const dist = new URL('../dist/', import.meta.url).pathname;
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? walk(p) : [p]; });
-const pages = walk(dist).filter((p) => p.endsWith('index.html'));
+// The slide decks under /deck/ are print sources for the PDFs (noindex), not pages to rank.
+const pages = walk(dist).filter((p) => p.endsWith('index.html') && !p.includes('/deck/'));
 const known = new Set(pages.map((p) => `/${relative(dist, dirname(p))}/`.replace('//', '/')));
 const decode = (s) => s.replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&');
 let failed = 0;

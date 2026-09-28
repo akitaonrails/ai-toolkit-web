@@ -1,0 +1,203 @@
+---
+// Turns one of the essay pages (/agi/, /students/) into 16:9 slides, from the same catalog and data the web page
+// uses, so every language comes for free. Rules that keep the PDF readable and the breaks clean:
+//   - every slide is one fixed 1920x1080 page (layouts/Deck.astro); nothing breaks inside a slide;
+//   - a section opens with its title, lede and diagram (or its big numbers), then its points in two columns,
+//     split across slides in the browser (layouts/Deck.astro) by measuring, never in the middle of a point;
+//   - fonts never go below 26px on a 1920px slide (20px only for the footer);
+//   - a section's quote rides on its last points slide when it fits there, otherwise it keeps its own slide;
+//   - posts and sources are collected into a clickable "Read more" appendix at the end.
+// scripts/build-decks.mjs prints the result and fails if any slide overflows. See docs/pdf.md.
+import DeckFigure from './DeckFigure.astro';
+import AgiNetwork from '@/components/AgiNetwork.astro';
+import { Image } from 'astro:assets';
+import { articles, articleUrl, type ArticleId } from '@/data/articles';
+import { site, type Hue } from '@/data/site';
+import { useI18n } from '@/i18n';
+
+interface Section {
+  id: string; figure?: string; network?: boolean; posts: ArticleId[]; sources: { id: string; href: string }[];
+  stats?: { key: string; n: number; prefix?: string; suffix?: string; display?: string }[];
+}
+interface Quote { text: string; original?: string; cite?: string }
+interface Props {
+  ns: 'agi' | 'students'; hue: Hue; path: string; sections: Section[];
+  opening?: Quote; closing?: Quote; videos?: { id: string; title: string; date: string; duration: string }[];
+}
+const { ns, hue, path, sections, opening, closing, videos } = Astro.props;
+const { t, raw, locale, number, href, date } = useI18n(Astro, ns);
+const { t: ta } = useI18n(Astro, 'articles');
+const thumbs = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/video/*.jpg', { eager: true });
+const has = (id: string, key: string) => key in raw<Record<string, unknown>>(`sections.${id}`);
+const s = (id: string, key: string) => t(`sections.${id}.${key}`);
+const pageUrl = new URL(href(path), site.url).href;
+const title = t('meta.title');
+
+const fmt = (x: NonNullable<Section['stats']>[number]) => x.display ?? `${x.prefix ?? ''}${number(x.n)}${x.suffix ?? ''}`;
+
+const plan = sections.map((sec) => ({
+  sec, points: raw<string[]>(`sections.${sec.id}.points`),
+  quote: has(sec.id, 'quote') ? { text: s(sec.id, 'quote'), original: has(sec.id, 'quoteOriginal') ? s(sec.id, 'quoteOriginal') : undefined, cite: has(sec.id, 'quoteCite') ? s(sec.id, 'quoteCite') : undefined } as Quote : undefined,
+  statsOnPoints: !!(sec.stats && (sec.figure || sec.network)),
+}));
+
+// The appendix: each section's posts and sources, packed into columns.
+type Block = { title: string; links: { label: string; href: string; post?: boolean }[] };
+const blocks: Block[] = sections.map((sec) => ({
+  title: s(sec.id, 'title'),
+  links: [
+    ...sec.posts.map((id) => ({ label: ta(`items.${id}.title`), href: articleUrl({ id, ...articles[id] }, locale), post: true })),
+    ...sec.sources.map((src) => ({ label: s(sec.id, `sources.${src.id}`), href: src.href })),
+  ],
+}));
+---
+<div data-hue={hue}>
+  <section class="slide cover">
+    <div class="rule"></div>
+    <div class="kicker"><span class="dot"></span>{t('hero.kicker')}</div>
+    <h1>{t('hero.title')}</h1>
+    <p class="lede">{t('hero.lede')}</p>
+    <p class="by">Fabio Akita · <a href={pageUrl}>{pageUrl.replace('https://', '')}</a></p>
+    <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+  </section>
+
+  {opening && (
+    <section class="slide quote-slide">
+      <div class="rule"></div>
+      <blockquote class="q big"><p>{opening.text}</p>{opening.original && opening.original !== opening.text && <p class="orig" lang="pt-BR">{opening.original}</p>}{opening.cite && <p class="cite">{opening.cite}</p>}</blockquote>
+      <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+    </section>
+  )}
+
+  {plan.map(({ sec, points, quote, statsOnPoints }) => (
+    <Fragment>
+      <section class:list={['slide', 'intro', sec.figure && 'has-fig']}>
+        <div class="rule"></div>
+        <div class="intro-text">
+          <div class="kicker"><span class="dot"></span>{s(sec.id, 'kicker')}</div>
+          <h2>{s(sec.id, 'title')}</h2>
+          <p class="lede">{s(sec.id, 'lede')}</p>
+          {sec.stats && !statsOnPoints && (
+            <div class="stats" style={`grid-template-columns: repeat(${sec.stats.length}, 1fr)`}>
+              {sec.stats.map((x) => <div class="stat"><b>{fmt(x)}</b><span>{s(sec.id, `stats.${x.key}`)}</span></div>)}
+            </div>
+          )}
+        </div>
+        {sec.figure && <div class="intro-fig"><DeckFigure name={sec.figure} alt={s(sec.id, 'alt')} /></div>}
+        <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+      </section>
+
+      {sec.network && (
+        <section class="slide net-slide">
+          <div class="rule"></div>
+          <div class="kicker"><span class="dot"></span>{s(sec.id, 'kicker')}</div>
+          <div class="net-wrap"><AgiNetwork /></div>
+          <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+        </section>
+      )}
+
+      <section class="slide pts">
+        <div class="rule"></div>
+        <div class="kicker"><span class="dot"></span>{s(sec.id, 'kicker')}</div>
+        <h2 class="small">{s(sec.id, 'title')}</h2>
+        {statsOnPoints && (
+          <div class="stats" style={`grid-template-columns: repeat(${sec.stats!.length}, 1fr)`}>
+            {sec.stats!.map((x) => <div class="stat"><b>{fmt(x)}</b><span>{s(sec.id, `stats.${x.key}`)}</span></div>)}
+          </div>
+        )}
+        <ul class="points two" data-flow>{points.map((p) => <li>{p}</li>)}</ul>
+        <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+      </section>
+
+      {quote && (
+        <section class="slide quote-slide" data-ride>
+          <div class="rule"></div>
+          <div class="kicker"><span class="dot"></span>{s(sec.id, 'kicker')}</div>
+          <blockquote class="q big"><p>{quote.text}</p>{quote.original && quote.original !== quote.text && <p class="orig" lang="pt-BR">{quote.original}</p>}{quote.cite && <p class="cite">{quote.cite}</p>}</blockquote>
+          <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+        </section>
+      )}
+    </Fragment>
+  ))}
+
+  {videos && (
+    <section class="slide vids">
+      <div class="rule"></div>
+      <div class="kicker"><span class="dot"></span>{t('akitando.kicker')}</div>
+      <h2 class="small">{t('akitando.title')}</h2>
+      <ul class="vid-grid">
+        {videos.map((v) => <li><a href={`https://www.youtube.com/watch?v=${v.id}`}><Image src={thumbs[`/src/assets/img/video/${v.id}.jpg`].default} alt="" widths={[640]} sizes="640px" loading="eager" /></a><p lang="pt-BR">{v.title}</p><span>{date(v.date, { year: 'numeric', month: 'short' })} · {v.duration}</span></li>)}
+      </ul>
+      <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+    </section>
+  )}
+
+  <section class="slide takeaways">
+    <div class="rule"></div>
+    <h2>{t('takeaways.title')}</h2>
+    <ol class="cards" data-flow style={`grid-template-columns: repeat(${Math.min(4, Math.ceil(raw<string[]>('takeaways.items').length / 2))}, 1fr)`}>
+      {raw<string[]>('takeaways.items').map((item, i) => <li><b>{i + 1}</b><p>{item}</p></li>)}
+    </ol>
+    <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+  </section>
+
+  {closing && (
+    <section class="slide quote-slide">
+      <div class="rule"></div>
+      <blockquote class="q big"><p>{closing.text}</p>{closing.original && closing.original !== closing.text && <p class="orig" lang="pt-BR">{closing.original}</p>}</blockquote>
+      <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+    </section>
+  )}
+
+  <section class="slide appendix">
+    <div class="rule"></div>
+    <h2 class="small">{t('deckReadMore')}</h2>
+    <div class="cols" data-flow>
+      {blocks.map((b) => <div class="blk"><h3>{b.title}</h3><ul>{b.links.map((l) => <li class:list={[l.post && 'post']}><a href={l.href}>{l.label}</a></li>)}</ul></div>)}
+    </div>
+    <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+  </section>
+
+  <section class="slide cover end">
+    <div class="rule"></div>
+    <h2>{t('deckEnd')}</h2>
+    <p class="lede"><a href={pageUrl}>{pageUrl.replace('https://', '')}</a></p>
+    <p class="by">Fabio Akita · akitaonrails.com · x.com/AkitaOnRails</p>
+    <footer class="slide-foot"><span><bdi>Akita's AI Lair</bdi> · <bdi>{title}</bdi></span><span class="n"></span></footer>
+  </section>
+</div>
+
+<style>
+  .cover { display: flex; flex-direction: column; justify-content: center; }
+  .cover .by { margin-top: 56px; font-family: var(--font-mono); font-size: 28px; color: var(--hue); }
+  .end h2 { font-size: 80px; }
+  .quote-slide { display: flex; flex-direction: column; justify-content: center; }
+  .q.big p:first-child { font-size: 58px; line-height: 1.15; }
+  .q.big .orig { font-size: 30px; }
+  .intro.has-fig { display: grid; grid-template-columns: 0.85fr 1.25fr; gap: 72px; align-items: center; }
+  .intro.has-fig h2 { font-size: 60px; }
+  .intro.has-fig .lede { font-size: 32px; }
+  .intro:not(.has-fig) { display: flex; flex-direction: column; justify-content: center; }
+  .net-slide { display: flex; flex-direction: column; }
+  .net-wrap { flex: 1; min-block-size: 0; display: grid; place-items: center; margin-top: 12px; }
+  .net-wrap :global(.net) { inline-size: 1200px; }
+  .net-wrap :global(figcaption .block) { display: none; }
+  .net-wrap :global(.net-draw) { display: block; }
+  .net-wrap :global(.net-list) { display: none; }
+  .net-wrap :global(figcaption) { font-size: 26px; max-width: none; }
+  .vid-grid { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, 400px); gap: 28px 64px; }
+  .vid-grid :global(img) { display: block; inline-size: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); }
+  .vid-grid p { margin: 12px 0 0; font-size: 26px; line-height: 1.25; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .vid-grid span { font-family: var(--font-mono); font-size: 20px; color: var(--muted); }
+  .takeaways .cards { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 24px; }
+  .takeaways .cards li { background: var(--surface); border: 2px solid var(--line); border-radius: 22px; padding: 26px 28px; }
+  .takeaways .cards b { font-family: var(--font-display); font-size: 44px; line-height: 1; color: var(--hue); }
+  .takeaways .cards p { margin: 10px 0 0; font-size: 27px; line-height: 1.35; }
+  .appendix .cols { columns: 2; column-gap: 72px; column-fill: auto; block-size: 740px; overflow: hidden; margin-top: 30px; }
+  .appendix .blk { break-inside: avoid; padding-bottom: 22px; }
+  .appendix h3 { margin: 0; font-size: 28px; color: var(--hue); font-family: var(--font-display); }
+  .appendix ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 4px; }
+  .appendix li { font-size: 26px; line-height: 1.3; color: var(--muted); padding-inline-start: 22px; position: relative; }
+  .appendix li::before { content: '↗'; position: absolute; inset-inline-start: 0; color: var(--hue); font-size: 20px; }
+  .appendix li.post { color: var(--text); }
+</style>

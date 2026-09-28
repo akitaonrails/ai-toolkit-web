@@ -1,0 +1,13 @@
+---
+// Print source for the /agi/ PDF deck (noindex, not in the sitemap). scripts/build-decks.mjs prints it.
+import DeckLayout from '@/layouts/Deck.astro';
+import Deck from '@/components/deck/Deck.astro';
+import { agi } from '@/data/agi';
+import { localePaths, useI18n } from '@/i18n';
+export const getStaticPaths = localePaths;
+const { t, raw } = useI18n(Astro, 'agi');
+const motto = raw<{ text: string; original: string }>('motto');
+---
+<DeckLayout title={t('meta.title')}>
+  <Deck ns="agi" hue="red" path="/agi/" sections={agi.sections} opening={{ text: motto.text, original: motto.original }} />
+</DeckLayout>

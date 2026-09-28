@@ -3,6 +3,7 @@
 // and outside sources. Structure in src/data/agi.ts, words in the `agi` catalog (English only until reviewed).
 import Base from '@/layouts/Base.astro';
 import PageHero from '@/components/PageHero.astro';
+import DeckLink from '@/components/DeckLink.astro';
 import Figure from '@/components/Figure.astro';
 import Stats from '@/components/Stats.astro';
 import AgiNetwork from '@/components/AgiNetwork.astro';
@@ -26,6 +27,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
   <PageHero hue="red" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#takeaways" class="btn btn-primary">{t('hero.primary')}</a>
     <a href={articleUrl({ id: 'misleadingAds', ...articles.misleadingAds }, locale)} class="btn btn-ghost">{t('hero.secondary')}</a>
+    <DeckLink deck="agi" />
   </PageHero>
 
   <section class="wrap pb-8" data-hue="red">
@@ -75,6 +77,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
           <li class="cell"><span class="font-display font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
         ))}
       </ol>
+      <div class="mt-12"><DeckLink deck="agi" /></div>
     </div>
   </section>
 

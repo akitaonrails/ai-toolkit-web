@@ -165,5 +165,9 @@
     "text": "Este sitio usa Google Analytics para contar visitas. No muestra anuncios y no te sigue a otros sitios. ¿Te parece bien?",
     "decline": "Rechazar",
     "accept": "Aceptar"
+  },
+  "deck": {
+    "download": "Mándaselo a tu jefe",
+    "format": "diapositivas en PDF"
   }
 }

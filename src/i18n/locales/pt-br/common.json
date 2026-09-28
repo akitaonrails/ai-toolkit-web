@@ -165,5 +165,9 @@
     "text": "Este site usa o Google Analytics pra contar visitas. Não mostra anúncios e não segue você por outros sites. Tudo bem?",
     "decline": "Recusar",
     "accept": "Aceitar"
+  },
+  "deck": {
+    "download": "Mande pro seu chefe",
+    "format": "slides em PDF"
   }
 }
