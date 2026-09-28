@@ -204,6 +204,10 @@
     "driveclub": {
       "title": "Cómo DriveClub y shadPS4 casi nos vencen a la IA y a mí: cómo aprender",
       "summary": "La IA solo encuentra lo que ya sabes preguntar. Cómo aprende un junior hoy, y por qué los fundamentos de siempre siguen rindiendo."
+    },
+    "llmLimits": {
+      "title": "Los límites de los LLMs: buenos para reproducir lo que existe, caros para lo que no",
+      "summary": "El 81,5% de la actividad en GitHub es privada y nada de eso entrenó ningún modelo. Cuatro proyectos retro muestran dónde se atasca la máquina: sin referencia, sin oráculo, fuerza bruta dirigida."
     }
   },
   "related": {

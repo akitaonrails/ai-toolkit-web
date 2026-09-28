@@ -136,5 +136,14 @@
     "Docs": "문서",
     "Tests": "테스트",
     "Weeks of review": "몇 주의 리뷰"
+  },
+  "agi-frontier": {
+    "Public code": "공개 코드",
+    "Private & new": "비공개·신규",
+    "Reproduce": "재현",
+    "Long loops": "긴 루프",
+    "Hand-fed knowledge": "떠먹인 지식",
+    "Oracles": "오라클",
+    "Objective tests": "객관적 테스트"
   }
 }

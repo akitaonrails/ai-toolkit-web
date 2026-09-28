@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinión",
     "title": "Por qué la AGI no importa",
-    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Ocho puntos breves sobre por qué, con enlaces a las versiones largas.",
+    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Nueve puntos breves sobre por qué, con enlaces a las versiones largas.",
     "primary": "Ir a las conclusiones",
     "secondary": "La versión larga en mi blog"
   },
@@ -59,8 +59,40 @@
         "nadella": "Dwarkesh Patel: Satya Nadella"
       }
     },
+    "frontier": {
+      "kicker": "3. La frontera",
+      "title": "Bueno en lo que existe, caro en lo que no",
+      "lede": "Todo modelo aprendió de lo que es público. Cuando un problema sale de ese mapa, el progreso se vuelve prueba y error, y la cuenta crece rápido.",
+      "alt": "Un mapa: a la izquierda una cuadrícula clara y cartografiada etiquetada Código público, un camino rápido etiquetado Reproducir que la cruza, y luego una niebla oscura etiquetada Privado y nuevo donde el camino se enreda en espirales etiquetadas Bucles largos. Tres faros en el borde de la niebla, etiquetados Conocimiento aportado, Oráculos y Tests objetivos, vuelven a enderezar el camino.",
+      "stats": {
+        "private": "de las contribuciones en GitHub ocurren en repositorios privados (Octoverse 2025)",
+        "stack": "del código público en The Stack v2, de 104 millones de repositorios públicos",
+        "arc": "para LLMs puros en ARC-AGI-2, donde cada tarea es nueva",
+        "navier": "tokens de salida, unos 15 millones de dólares, para una sola demostración de Navier-Stokes"
+      },
+      "points": [
+        "El entrenamiento solo ve código público. Lo que escribe la mayoría de las empresas, y el código fuente de todo producto propietario, juego comercial y sistema embebido, nunca entró.",
+        "Donde hay mapa, vuela. Clientes nativos de Spotify y WhatsApp escritos por una sola persona, mi FrankMD, mi fork de Geary: alguien ya había resuelto cada uno antes, y ahora volver a recorrer el camino es barato.",
+        "Donde se acaba el mapa, da vueltas. Mi recompilador de NES a Master System llevó 349 commits y cuatro generaciones de Claude, y solo se terminó Super Mario Bros., el único juego con un desensamblado público completo. La solución de verdad estaba en la cabeza de quien escribió el juego en 1985.",
+        "Bucles largos sin recompensa: 436 millones de tokens de entrada en un sprint de cuatro días, 46 millones de pasos de aprendizaje por refuerzo atascados en las mismas fases del castillo y mensajes de commit como \"attempt reverted\". Sin una forma de decir qué está bien, lo que tienes es fuerza bruta dirigida, que sigue siendo prueba y error.",
+        "Tres cosas ayudan. Dale a mano lo que nunca vio: un desensamblado, un paper viejo, trabajo previo que nadie publicó. Dale un oráculo: una imagen de referencia, una trayectoria grabada, un emulador que se comporte exactamente como el hardware. Y escribe tests con metas objetivas, para que cada paso se pueda verificar.",
+        "Así también ocurrieron los avances famosos. AlphaEvolve y o3 encontraron cosas nuevas con búsqueda sobre un verificador barato, a un precio altísimo. La investigación coincide: el rendimiento cae en problemas de programación publicados después del corte de entrenamiento. Solo media docena de empresas pueden pagar la novedad a esa escala."
+      ],
+      "quote": "Los LLMs pueden replicar lo que es abierto, pero no pueden adivinar lo que es privado.",
+      "quoteOriginal": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
+      "sources": {
+        "stack": "The Stack v2: el dataset de código público",
+        "octoverse": "GitHub Octoverse 2025: 81,5% privado",
+        "nesToSms": "nes-to-sms: el recompilador que pausé",
+        "arc": "ARC Prize: ARC-AGI-2",
+        "gsm": "Apple: GSM-Symbolic",
+        "lcb": "LiveCodeBench: problemas posteriores al corte",
+        "alphaevolve": "DeepMind: AlphaEvolve",
+        "navier": "New Scientist: 15 M$ de esfuerzo de IA para Navier-Stokes"
+      }
+    },
     "marketing": {
-      "kicker": "3. El dinero",
+      "kicker": "4. El dinero",
       "title": "Es una palabra de marketing",
       "lede": "En mi opinión, AGI es un término de marketing, vago a propósito, para poder anunciarlo cuando el dinero lo necesite.",
       "alt": "Un ciclo de cinco cajas alrededor de la palabra AGI: Hype, Valoración, IPO, Datacenters y GPUs, cada flecha alimenta a la siguiente y la última vuelve a Hype.",
@@ -81,7 +113,7 @@
       }
     },
     "attacks": {
-      "kicker": "4. Las historias de miedo",
+      "kicker": "5. Las historias de miedo",
       "title": "Los \"ataques de IA\" fueron decisiones humanas",
       "lede": "Todos los titulares de \"una IA hackeó a alguien\" hasta ahora tienen la misma trama: una persona dejó la puerta abierta o apuntó la herramienta al objetivo.",
       "alt": "Una herramienta violeta dentro de un sandbox naranja con la puerta colgando, etiquetada Abierta; una terminal etiquetada Decisión humana está conectada a la puerta, una llave etiquetada Credenciales queda afuera y una línea va desde la herramienta, por la puerta abierta, hasta unos servidores etiquetados Servidores reales.",
@@ -112,7 +144,7 @@
       }
     },
     "doom": {
-      "kicker": "5. El apocalipsis",
+      "kicker": "6. El apocalipsis",
       "title": "Los profetas del apocalipsis no traen pruebas",
       "lede": "Cada pocos meses alguien deja un laboratorio y advierte al mundo. A mi entender, ninguno ha mostrado nada que se pueda verificar.",
       "points": [
@@ -138,7 +170,7 @@
       }
     },
     "history": {
-      "kicker": "6. La historia",
+      "kicker": "7. La historia",
       "title": "Ya vimos esta película",
       "lede": "Esta es la segunda burbuja de la IA. La primera hizo las mismas promesas y terminó en un invierno.",
       "alt": "Una línea de tiempo con un primer pico etiquetado 1958 Perceptrón, un largo valle etiquetado Invierno IA, una subida marcada 2017 y un pico más alto etiquetado 2026 que termina en un signo de interrogación.",
@@ -154,7 +186,7 @@
       }
     },
     "tool": {
-      "kicker": "7. Lo que importa",
+      "kicker": "8. Lo que importa",
       "title": "Una herramienta fantástica que hace lo que le digo",
       "lede": "No necesito que sea general. Necesito que haga lo que le pido, rápido, y eso ya lo hace.",
       "alt": "Una terminal etiquetada Yo decido envía trabajo a una máquina etiquetada Herramienta, que produce una pila de documentos etiquetada Resultado; una flecha etiquetada Revisión vuelve a la terminal.",
@@ -168,7 +200,7 @@
       "quoteCite": "Yo en X, 26 de septiembre de 2026"
     },
     "efficiency": {
-      "kicker": "8. Lo que falta",
+      "kicker": "9. Lo que falta",
       "title": "Eficiencia, no inteligencia",
       "lede": "Hoy hacen falta prácticamente todos los datacenters del mundo, con medio billón de dólares de pedidos todavía por construir, y es un cuello de botella para todos los fabricantes de hardware para servidores.",
       "alt": "Filas de racks de datacenter etiquetadas Hoy a la izquierda, un solo chip pequeño etiquetado Necesario a la derecha y una flecha verde entre ellos etiquetada Menos cómputo y Menor precio.",
@@ -184,6 +216,7 @@
     "items": [
       "La AGI no tiene una definición acordada. La que se escribió en un contrato era una meta de ganancias, y la eliminaron.",
       "Sin definición no hay prueba. Los benchmarks se saturan y el siguiente los reemplaza.",
+      "Los modelos reproducen lo que es público. Lo privado o nuevo exige oráculos, conocimiento aportado a mano y mucho dinero.",
       "La palabra sirve para vender chips, rondas de inversión e IPOs. Por eso la siguen anunciando.",
       "Los aterradores \"ataques de IA\" fueron personas que dejaron puertas abiertas. La herramienta hizo aquello a lo que la apuntaron.",
       "El apocalipsis también es marketing. Los profetas traen sentimientos y pronósticos, nunca pruebas que puedas verificar.",

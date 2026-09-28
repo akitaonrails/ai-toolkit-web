@@ -136,5 +136,14 @@
     "Docs": "תיעוד",
     "Tests": "בדיקות",
     "Weeks of review": "שבועות של בדיקה"
+  },
+  "agi-frontier": {
+    "Public code": "קוד ציבורי",
+    "Private & new": "פרטי וחדש",
+    "Reproduce": "שחזור",
+    "Long loops": "לולאות ארוכות",
+    "Hand-fed knowledge": "ידע מוזן ידנית",
+    "Oracles": "אורקלים",
+    "Objective tests": "בדיקות אובייקטיביות"
   }
 }

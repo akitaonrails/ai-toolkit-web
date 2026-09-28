@@ -96,3 +96,10 @@ Terms decided while translating. One English term maps to one target term across
 | foundations (CS fundamentals) | 基礎 |
 | preprint / peer review | プレプリント / 査読 |
 | descriptive / causal | 記述的 / 因果的 |
+| disassembly | 逆アセンブル |
+| oracle (reference to check against) | オラクル |
+| hand-fed knowledge | 手渡しの知識 |
+| directed brute force | 狙いを定めた力技 |
+| training cutoff | 学習のカットオフ |
+| verifier | 検証器 |
+| trial and error | 試行錯誤 |

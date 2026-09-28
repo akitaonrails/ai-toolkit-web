@@ -64,6 +64,7 @@ export const articles = {
   talkClaude: { path: '/en/2026/04/15/how-to-talk-to-claude-code-effectively/', ptPath: '/2026/04/15/como-falar-com-o-claude-code-efetivamente/', date: '2026-04-15', hue: 'violet' },
   tvClipboard: { path: '/en/2026/01/28/vibe-code-built-a-little-app-fully-with-glm-4-7-tv-clipboard/', ptPath: '/2026/01/28/vibe-code-eu-fiz-um-appzinho-100-com-glm-4-7-tv-clipboard/', date: '2026-01-28', hue: 'violet' },
   driveclub: { path: '/en/2026/04/23/driveclub-shadps4-e-ia-como-aprender/', ptPath: '/2026/04/23/driveclub-shadps4-e-ia-como-aprender/', date: '2026-04-23', hue: 'orange' },
+  llmLimits: { path: '/en/2026/09/28/llms-are-good-at-reproducing-what-exists-what-about-new-things/', ptPath: '/2026/09/28/llms-sao-boas-em-reproduzir-o-que-existe-e-coisas-novas/', date: '2026-09-28', hue: 'red' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;

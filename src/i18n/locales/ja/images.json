@@ -136,5 +136,14 @@
     "Docs": "ドキュメント",
     "Tests": "テスト",
     "Weeks of review": "数週間のレビュー"
+  },
+  "agi-frontier": {
+    "Public code": "公開コード",
+    "Private & new": "非公開と新規",
+    "Reproduce": "再現",
+    "Long loops": "長いループ",
+    "Hand-fed knowledge": "手渡しの知識",
+    "Oracles": "オラクル",
+    "Objective tests": "客観的テスト"
   }
 }

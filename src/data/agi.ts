@@ -3,7 +3,9 @@
 import type { ArticleId } from './articles';
 
 // `network` draws the AgiNetwork map instead of a generated figure. `x` links the owner's post on X quoted in that section; `jail` adds a link to ai-jail, the sandbox he uses.
-export interface AgiSection { id: string; figure?: string; network?: boolean; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
+export interface AgiSection { id: string; figure?: string; network?: boolean;
+  // Numbers shown as a Stats strip under the figure; labels in the catalog under sections.<id>.stats.<key>.
+  stats?: { key: string; n: number; suffix?: string; display?: string }[]; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
 
 export const agi = {
   sections: [
@@ -23,6 +25,21 @@ export const agi = {
       { id: 'swebench', href: 'https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/' },
       { id: 'arena', href: 'https://arxiv.org/abs/2504.20879' },
       { id: 'nadella', href: 'https://www.dwarkesh.com/p/satya-nadella' },
+    ] },
+    { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits', 'nesToSms'], stats: [
+      { key: 'private', n: 81.5, suffix: '%', display: '81.5%' },
+      { key: 'stack', n: 67.5, display: '67.5 TB' },
+      { key: 'arc', n: 0, suffix: '%', display: '0%' },
+      { key: 'navier', n: 130, display: '130B' },
+    ], sources: [
+      { id: 'stack', href: 'https://huggingface.co/datasets/bigcode/the-stack-v2' },
+      { id: 'octoverse', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
+      { id: 'nesToSms', href: 'https://github.com/akitaonrails/nes-to-sms' },
+      { id: 'arc', href: 'https://arcprize.org/' },
+      { id: 'gsm', href: 'https://arxiv.org/abs/2410.05229' },
+      { id: 'lcb', href: 'https://arxiv.org/abs/2403.07974' },
+      { id: 'alphaevolve', href: 'https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/' },
+      { id: 'navier', href: 'https://www.newscientist.com/article/2588063-openai-has-solved-the-navier-stokes-millennium-problem-using-15m-of-ai-effort/' },
     ] },
     { id: 'marketing', figure: 'agi-money-loop', posts: ['misleadingAds', 'fableSoap', 'businessModels'], sources: [
       { id: 'huang', href: 'https://www.foxbusiness.com/technology/nvidia-ceo-jensen-huang-declares-agi-has-arrived-after-openai-unveils-gpt-6-astra' },

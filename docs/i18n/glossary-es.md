@@ -75,3 +75,13 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | peer reviewed / preprint | revisado por pares / preprint |
 | transcript | transcripción |
 | directives / fences (ai-memory layers) | directivas / barreras |
+| frontier (AGI section) | frontera |
+| oracle (reference to check against) | oráculo |
+| hand-fed knowledge | conocimiento aportado (a mano) |
+| disassembly | desensamblado |
+| recompiler | recompilador |
+| training cutoff | corte de entrenamiento |
+| brute force / directed brute force | fuerza bruta / fuerza bruta dirigida |
+| reinforcement learning | aprendizaje por refuerzo |
+| trial and error | prueba y error |
+| long loops | bucles largos |

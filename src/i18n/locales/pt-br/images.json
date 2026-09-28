@@ -136,5 +136,14 @@
     "Docs": "Docs",
     "Tests": "Testes",
     "Weeks of review": "Semanas de review"
+  },
+  "agi-frontier": {
+    "Public code": "Código público",
+    "Private & new": "Privado e novo",
+    "Reproduce": "Reproduzir",
+    "Long loops": "Loops longos",
+    "Hand-fed knowledge": "Contexto alimentado",
+    "Oracles": "Oráculos",
+    "Objective tests": "Testes objetivos"
   }
 }

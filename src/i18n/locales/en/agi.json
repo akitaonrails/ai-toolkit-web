@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "Why AGI doesn't matter",
-    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Eight short points on why, with links to the long versions.",
+    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Nine short points on why, with links to the long versions.",
     "primary": "Skip to the takeaways",
     "secondary": "The long version on my blog"
   },
@@ -59,8 +59,40 @@
         "nadella": "Dwarkesh Patel: Satya Nadella"
       }
     },
+    "frontier": {
+      "kicker": "3. The frontier",
+      "title": "Good at what exists, expensive for what doesn't",
+      "lede": "Every model learned from what's public. When a problem leaves that map, progress turns into trial and error, and the bill grows fast.",
+      "alt": "A map: a bright charted grid labeled Public code on the left, a fast path labeled Reproduce crossing it, then a dark fog labeled Private & new where the path tangles into spirals labeled Long loops. Three beacons at the edge of the fog, labeled Hand-fed knowledge, Oracles and Objective tests, straighten the path again.",
+      "stats": {
+        "private": "of GitHub contributions happen in private repositories (Octoverse 2025)",
+        "stack": "of public code in The Stack v2, from 104 million public repositories",
+        "arc": "for pure LLMs on ARC-AGI-2, where every task is new",
+        "navier": "output tokens, about $15 million, for one Navier-Stokes proof"
+      },
+      "points": [
+        "Training sees public code only. What most companies write, and the source of every proprietary product, commercial game and embedded system, never went in.",
+        "Where a map exists, it flies. Native Spotify and WhatsApp clients written by one person, my FrankMD, my Geary fork: someone had solved each of these before, and now retracing the path is cheap.",
+        "Where the map runs out, it spins. My NES-to-Master System recompiler took 349 commits and four generations of Claude, and only Super Mario Bros. got finished, the one game with a complete public disassembly. The real fix lived in the head of whoever wrote the game in 1985.",
+        "Long loops with no reward: 436 million input tokens in a four-day sprint, 46 million reinforcement steps stuck on the same castle stages, and commit messages like \"attempt reverted\". Without a way to say what's right, you get directed brute force, which is still trial and error.",
+        "Three things help. Hand-feed what it never saw: a disassembly, an old paper, prior work nobody published. Give it an oracle: a reference image, a recorded trajectory, an emulator that behaves exactly like the hardware. And write tests with objective targets, so every step can be checked.",
+        "That's also how the famous breakthroughs happened. AlphaEvolve and o3 found new things through search over a cheap verifier, at a steep price. The research agrees: performance drops on coding problems published after the training cutoff. Only half a dozen companies can pay for novelty at that scale."
+      ],
+      "quote": "LLMs can replicate what's open, but they can't guess what's private.",
+      "quoteOriginal": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
+      "sources": {
+        "stack": "The Stack v2: the public code dataset",
+        "octoverse": "GitHub Octoverse 2025: 81.5% private",
+        "nesToSms": "nes-to-sms: the recompiler I paused",
+        "arc": "ARC Prize: ARC-AGI-2",
+        "gsm": "Apple: GSM-Symbolic",
+        "lcb": "LiveCodeBench: problems after the cutoff",
+        "alphaevolve": "DeepMind: AlphaEvolve",
+        "navier": "New Scientist: $15M of AI effort for Navier-Stokes"
+      }
+    },
     "marketing": {
-      "kicker": "3. The money",
+      "kicker": "4. The money",
       "title": "It's a marketing word",
       "lede": "In my opinion, AGI is a marketing term, vague on purpose, so it can be announced whenever the money needs it.",
       "alt": "A loop of five boxes around the word AGI: Hype, Valuation, IPO, Datacenters and GPUs, each arrow feeding the next and the last one returning to Hype.",
@@ -81,7 +113,7 @@
       }
     },
     "attacks": {
-      "kicker": "4. The scary stories",
+      "kicker": "5. The scary stories",
       "title": "The \"AI attacks\" were human decisions",
       "lede": "Every \"AI hacked someone\" headline so far has the same plot: a person left the door open, or pointed the tool at the target.",
       "alt": "A violet tool sits inside an orange sandbox whose door hangs open; a terminal labeled Human decision is wired to the door, a key labeled Credentials lies outside, and a line runs from the tool through the open door to servers labeled Real servers.",
@@ -112,7 +144,7 @@
       }
     },
     "doom": {
-      "kicker": "5. The doom",
+      "kicker": "6. The doom",
       "title": "The prophets of doom bring no evidence",
       "lede": "Every few months someone quits a lab and warns the world. In my reading, none of them has shown anything you can check.",
       "points": [
@@ -138,7 +170,7 @@
       }
     },
     "history": {
-      "kicker": "6. The history",
+      "kicker": "7. The history",
       "title": "We've seen this movie before",
       "lede": "This is the second AI bubble. The first one made the same promises, and it ended in a winter.",
       "alt": "A timeline with a first peak labeled 1958 Perceptron, a long valley labeled AI winter, a rise marked 2017 and a higher peak labeled 2026 ending in a question mark.",
@@ -154,7 +186,7 @@
       }
     },
     "tool": {
-      "kicker": "7. What matters",
+      "kicker": "8. What matters",
       "title": "A fantastic tool, doing what I tell it",
       "lede": "I don't need it to be general. I need it to do what I ask, fast, and it already does.",
       "alt": "A terminal labeled I decide sends work to a machine labeled Tool, which produces a stack of documents labeled Result; an arrow labeled Review returns to the terminal.",
@@ -168,7 +200,7 @@
       "quoteCite": "Me on X, September 26, 2026"
     },
     "efficiency": {
-      "kicker": "8. What's missing",
+      "kicker": "9. What's missing",
       "title": "Efficiency, not intelligence",
       "lede": "Today it takes practically every datacenter in the world, with half a trillion dollars of backlog still to build, and it bottlenecks every maker of server hardware.",
       "alt": "Rows of datacenter racks labeled Today on the left, a single small chip labeled Needed on the right, and a green arrow between them labeled Less compute and Lower price.",
@@ -184,6 +216,7 @@
     "items": [
       "AGI has no agreed definition. The one written into a contract was a profit target, and it was dropped.",
       "Without a definition there's no test. Benchmarks fill up and get replaced by the next one.",
+      "Models reproduce what's public. What's private or new takes oracles, hand-fed knowledge and a lot of money.",
       "The word is useful for selling chips, funding rounds and IPOs. That's why it keeps being announced.",
       "The scary \"AI attacks\" were people leaving doors open. The tool did what it was pointed at.",
       "Doom is marketing too. The prophets bring feelings and forecasts, never evidence you can check.",

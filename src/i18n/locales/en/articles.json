@@ -204,6 +204,10 @@
     "driveclub": {
       "title": "How DriveClub and shadPS4 almost defeated AI and me: how to learn",
       "summary": "AI only finds what you already know to ask about. How a junior learns today, and why the old foundations still pay."
+    },
+    "llmLimits": {
+      "title": "The limits of LLMs: good at reproducing what exists, expensive for what doesn't",
+      "summary": "81.5% of GitHub activity is private and none of it trained any model. Four retro projects show where the machine stalls: no reference, no oracle, directed brute force."
     }
   },
   "related": {
