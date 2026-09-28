@@ -1,6 +1,7 @@
 ---
 // A strip of numbers that count up once. Numbers come from src/data, never typed into a page.
-// `display` replaces the counting number with fixed text, for figures too wide to show in full ("1.08M").
+// `display` replaces the counting number with fixed text, for figures too wide to show in full ("1.08M"). Prefix and
+// suffix still wrap it, so `display` never carries the symbol itself.
 interface Item { n: number; label: string; prefix?: string; suffix?: string; display?: string }
 import { useI18n } from '@/i18n';
 interface Props { items: Item[]; cols?: number }

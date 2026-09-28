@@ -33,7 +33,8 @@ const s = (id: string, key: string) => t(`sections.${id}.${key}`);
 const pageUrl = new URL(href(path), site.url).href;
 const title = t('meta.title');
 
-const fmt = (x: NonNullable<Section['stats']>[number]) => x.display ?? `${x.prefix ?? ''}${number(x.n)}${x.suffix ?? ''}`;
+// Same as Stats: prefix and suffix wrap the number, or the fixed `display` text when there is one.
+const fmt = (x: NonNullable<Section['stats']>[number]) => `${x.prefix ?? ''}${x.display ?? number(x.n)}${x.suffix ?? ''}`;
 
 const plan = sections.map((sec) => ({
   sec, points: raw<string[]>(`sections.${sec.id}.points`),

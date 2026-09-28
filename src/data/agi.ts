@@ -27,9 +27,9 @@ export const agi = {
       { id: 'nadella', href: 'https://www.dwarkesh.com/p/satya-nadella' },
     ] },
     { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits'], stats: [
-      { key: 'private', n: 81.5, suffix: '%', display: '81.5%' },
+      { key: 'private', n: 81.5, suffix: '%', display: '81.5' },
       { key: 'stack', n: 67.5, display: '67.5 TB' },
-      { key: 'arc', n: 0, suffix: '%', display: '0%' },
+      { key: 'arc', n: 0, suffix: '%', display: '0' },
       { key: 'navier', n: 130, display: '130B' },
     ], sources: [
       { id: 'stack', href: 'https://huggingface.co/datasets/bigcode/the-stack-v2' },
