@@ -26,8 +26,12 @@
         "A IA é o seu espelho. Se você é incompetente, ela produz coisa ruim mais rápido. Se você é competente, ela produz coisa boa mais rápido.",
         "Quem entende sistemas operacionais, bancos de dados, redes, estruturas de dados e compiladores usa agentes como exoesqueleto. Quem não entende usa como muleta. Exoesqueleto amplifica a força; muleta só esconde a fraqueza.",
         "O relatório DORA 2025 do Google viu a mesma coisa em times: \"a IA não conserta um time; ela amplifica o que já está lá.\"",
-        "E alguém tem que conferir o resultado. No teste da Veracode de 2025 com mais de 100 modelos, 45% das amostras de código falharam nos testes de segurança e introduziram vulnerabilidades do OWASP Top 10."
+        "E alguém tem que conferir o resultado. No teste da Veracode de 2025 com mais de 100 modelos, 45% das amostras de código falharam nos testes de segurança e introduziram vulnerabilidades do OWASP Top 10.",
+        "Se você é experiente e ainda está resistindo, pare. Não tem mérito nenhum em escrever um Dockerfile ou um Makefile na mão pela centésima vez. As tarefas chatas vão pra IA; os fundamentos não."
       ],
+      "quote": "Programador bem preparado não vai ser substituído. Disse claramente: \"EU\" nunca vou ser.",
+      "quoteOriginal": "Programador bem preparado não vai ser substituído. Disse claramente: \"EU\" nunca vou ser.",
+      "quoteCite": "Eu no X, 28 de setembro de 2026",
       "sources": {
         "dora": "Google DORA 2025: a IA amplifica o que já existe",
         "veracode": "Veracode: falhas de segurança em código gerado por IA"
@@ -42,6 +46,7 @@
         "Os formados em bootcamp cresceram umas oito vezes entre 2013 e 2018. A Lambda School anunciava taxas de colocação \"de até 86 por cento\"; o Consumer Financial Protection Bureau viu que os números internos dela ficavam mais perto de 50%, às vezes tão baixos quanto 30%.",
         "Aí o dinheiro barato acabou. Bootcamps fecharam em 2023 e 2024, a 2U anunciou no fim de 2024 que ia sair do negócio, e a indústria de tecnologia cortou mais de 150 mil vagas só naquele ano.",
         "Eu comecei o Akitando em 2018 exatamente pra isso: preparar programadores de verdade pra sobreviver ao estouro da bolha. Em 2022 eu estava dizendo pro pessoal cancelar os cursos e parar de acreditar em influencer.",
+        "O que esses cursos ensinavam, formulários, CRUD, relatórios e cópias da mesma UI, é exatamente o que os LLMs replicam melhor. A maioria dessas vagas já foi cortada depois de 2022.",
         "Agora a mesma promessa voltou com cara nova: você não precisa aprender a programar, a IA faz por você. Ninguém vira engenheiro num bootcamp de um mês, e ninguém vira engenheiro escrevendo prompt também."
       ],
       "sources": {
@@ -199,7 +204,9 @@
       "A IA não adivinha seu objetivo, seus limites ou seus trade-offs. Saber isso é o trabalho.",
       "A IA replica o que é público. As lacunas que ela deixa, no trabalho privado e novo, são o trabalho, e os fundamentos difíceis são como você preenche elas.",
       "Escreva na mão, deixe a IA com as tarefas chatas, revise tudo e coloque as horas."
-    ]
+    ],
+    "quote": "A única coisa que importa é realidade objetiva.",
+    "quoteOriginal": "A única coisa que importa é realidade objetiva."
   },
   "next": [
     {

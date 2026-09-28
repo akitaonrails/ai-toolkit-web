@@ -26,8 +26,12 @@
         "AI is your mirror. If you're incompetent, it produces bad things faster. If you're competent, it produces good things faster.",
         "People who understand operating systems, databases, networks, data structures and compilers use agents as an exoskeleton. People who don't use them as a crutch. An exoskeleton amplifies strength; a crutch only hides weakness.",
         "Google's DORA 2025 report found the same in teams: \"AI doesn't fix a team; it amplifies what's already there.\"",
-        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the code samples failed security tests and introduced OWASP Top 10 vulnerabilities."
+        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the code samples failed security tests and introduced OWASP Top 10 vulnerabilities.",
+        "If you're experienced and still resisting, stop. There's no merit in writing a Dockerfile or a Makefile by hand for the hundredth time. The chores go to AI; the foundations don't."
       ],
+      "quote": "A well-prepared programmer won't be replaced. I said it clearly: I never will be.",
+      "quoteOriginal": "Programador bem preparado não vai ser substituído. Disse claramente: \"EU\" nunca vou ser.",
+      "quoteCite": "Me on X, September 28, 2026",
       "sources": {
         "dora": "Google DORA 2025: AI amplifies what's there",
         "veracode": "Veracode: security flaws in AI-generated code"
@@ -42,6 +46,7 @@
         "Bootcamp graduates grew about eightfold between 2013 and 2018. Lambda School advertised placement rates \"as high as 86 percent\"; the Consumer Financial Protection Bureau found its internal numbers closer to 50%, sometimes as low as 30%.",
         "Then the cheap money ran out. Bootcamps closed in 2023 and 2024, 2U announced in late 2024 it was leaving the business, and the tech industry cut more than 150,000 jobs that year alone.",
         "I started Akitando in 2018 for exactly this: to prepare real programmers to survive the bubble popping. In 2022 I was telling people to cancel the courses and stop believing influencers.",
+        "What those courses taught, forms, CRUD, reports and copies of the same UI, is exactly what LLMs replicate best. Most of those jobs were already cut after 2022.",
         "Now the same promise is back with a new face: you don't need to learn to code, the AI does it for you. Nobody becomes an engineer in a one-month bootcamp, and nobody becomes one by prompting either."
       ],
       "sources": {
@@ -199,7 +204,9 @@
       "AI can't guess your goal, your limits or your trade-offs. Knowing them is the job.",
       "AI replicates what's public. The gaps it leaves, in private and new work, are the job, and the hard foundations are how you fill them.",
       "Write by hand, let AI do the chores, review everything, and put in the hours."
-    ]
+    ],
+    "quote": "The only thing that matters is objective reality.",
+    "quoteOriginal": "A única coisa que importa é realidade objetiva."
   },
   "next": [
     {

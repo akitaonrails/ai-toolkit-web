@@ -25,7 +25,7 @@ export const students = {
     '0TndL-Nh6Ok': 'https://akitaonrails.com/2022/07/01/akitando-121-entendendo-transferencia-de-sinais-digitais-introducao-a-redes-parte-1/',
   } as Record<string, string>,
   sections: [
-    { id: 'multiplier', figure: 'students-multiplier', posts: ['zeroToPost', 'punchCard', 'marathon'], sources: [
+    { id: 'multiplier', figure: 'students-multiplier', x: 'https://x.com/AkitaOnRails/status/2104602262219771929', posts: ['zeroToPost', 'punchCard', 'shipMore'], sources: [
       { id: 'dora', href: 'https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report' },
       { id: 'veracode', href: 'https://www.veracode.com/blog/genai-code-security-report/' },
     ] },
@@ -37,7 +37,7 @@ export const students = {
       { id: 'layoffs', href: 'https://techcrunch.com/2024/12/31/a-comprehensive-archive-of-2024-tech-layoffs/' },
       { id: 'ep132', href: 'https://akitaonrails.com/2022/11/22/akitando-132-rant-a-bolha-de-startups-estourou/' },
     ] },
-    { id: 'evidence', posts: ['punchCard', 'driveclub'], stats: [
+    { id: 'evidence', posts: ['benchmarkPart1', 'punchCard', 'driveclub'], stats: [
       { key: 'anthropic', n: 17, suffix: ' pts' },
       { key: 'bastani', n: 17, suffix: '%' },
       { key: 'metr', n: 19, suffix: '%' },

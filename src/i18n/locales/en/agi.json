@@ -45,7 +45,7 @@
         "ARC-AGI-3 launched in March 2026 with the best AI at about 0.5%. By September a custom harness took it to 99.9% for $19,000. The ARC Prize team itself wrote that saturating it is not proof of AGI.",
         "The same model scores 57% or 24% on the \"Definition of AGI\" test, depending on how you average the numbers.",
         "Humanity's Last Exam shipped with about 29% of its biology and chemistry answers likely wrong. OpenAI stopped reporting SWE-bench Verified because the tests were flawed and models had seen the solutions. Meta put a specially tuned Llama 4 on LMArena.",
-        "My own benchmark saturated twice before I rebuilt it around hidden sabotage. Several models now tie at 100. What's left to compare is cost, speed and discipline, not a leap in intelligence."
+        "My own benchmark saturated twice before I rebuilt it around hidden sabotage. Several models now tie at 100: the frontier is hitting the ceiling. What's left to compare is cost, speed and discipline."
       ],
       "quote": "Us self-claiming some AGI milestone, that's just nonsensical benchmark hacking to me.",
       "quoteCite": "Satya Nadella, Microsoft CEO",
