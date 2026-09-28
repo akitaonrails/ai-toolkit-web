@@ -71,19 +71,16 @@
         "navier": "output tokens, about $15 million, for one Navier-Stokes proof"
       },
       "points": [
-        "Training sees public code only. What most companies write, and the source of every proprietary product, commercial game and embedded system, never went in.",
-        "Where a map exists, it flies. Native Spotify and WhatsApp clients written by one person, my FrankMD, my Geary fork: someone had solved each of these before, and now retracing the path is cheap.",
-        "Where the map runs out, it spins. My NES-to-Master System recompiler took 349 commits and four generations of Claude, and only Super Mario Bros. got finished, the one game with a complete public disassembly. The real fix lived in the head of whoever wrote the game in 1985.",
-        "Long loops with no reward: 436 million input tokens in a four-day sprint, 46 million reinforcement steps stuck on the same castle stages, and commit messages like \"attempt reverted\". Without a way to say what's right, you get directed brute force, which is still trial and error.",
-        "Three things help. Hand-feed what it never saw: a disassembly, an old paper, prior work nobody published. Give it an oracle: a reference image, a recorded trajectory, an emulator that behaves exactly like the hardware. And write tests with objective targets, so every step can be checked.",
-        "That's also how the famous breakthroughs happened. AlphaEvolve and o3 found new things through search over a cheap verifier, at a steep price. The research agrees: performance drops on coding problems published after the training cutoff. Only half a dozen companies can pay for novelty at that scale."
+        "Training sees public code only. What companies keep private, and the source of every proprietary product, commercial game and embedded system, never went in.",
+        "When something similar was in the training data, the model reproduces it fast and cheap: forms, CRUD, integrations, native apps for services that already exist. Someone solved it before, somewhere, and retracing the path is now cheap.",
+        "When it wasn't, progress turns into long loops with no reward: try, regress, revert, try again. That's directed brute force, and novelty costs dearly. OpenAI's Navier-Stokes proof took about 10,000 agents running for 88 hours and around 130 billion output tokens, some $15 million at list price, and it still leaned on decades of published mathematics.",
+        "What helps: hand-feed what the model never saw, like references and prior work nobody published; give it an oracle that says what's right; and write tests with objective targets. That's also how AlphaEvolve and o3 found new things, through search over a cheap verifier, which only half a dozen companies can afford at scale."
       ],
       "quote": "LLMs can replicate what's open, but they can't guess what's private.",
       "quoteOriginal": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
       "sources": {
         "stack": "The Stack v2: the public code dataset",
         "octoverse": "GitHub Octoverse 2025: 81.5% private",
-        "nesToSms": "nes-to-sms: the recompiler I paused",
         "arc": "ARC Prize: ARC-AGI-2",
         "gsm": "Apple: GSM-Symbolic",
         "lcb": "LiveCodeBench: problems after the cutoff",

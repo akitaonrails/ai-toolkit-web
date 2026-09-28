@@ -26,7 +26,7 @@ export const agi = {
       { id: 'arena', href: 'https://arxiv.org/abs/2504.20879' },
       { id: 'nadella', href: 'https://www.dwarkesh.com/p/satya-nadella' },
     ] },
-    { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits', 'nesToSms'], stats: [
+    { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits'], stats: [
       { key: 'private', n: 81.5, suffix: '%', display: '81.5%' },
       { key: 'stack', n: 67.5, display: '67.5 TB' },
       { key: 'arc', n: 0, suffix: '%', display: '0%' },
@@ -34,7 +34,6 @@ export const agi = {
     ], sources: [
       { id: 'stack', href: 'https://huggingface.co/datasets/bigcode/the-stack-v2' },
       { id: 'octoverse', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
-      { id: 'nesToSms', href: 'https://github.com/akitaonrails/nes-to-sms' },
       { id: 'arc', href: 'https://arcprize.org/' },
       { id: 'gsm', href: 'https://arxiv.org/abs/2410.05229' },
       { id: 'lcb', href: 'https://arxiv.org/abs/2403.07974' },

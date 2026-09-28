@@ -71,19 +71,16 @@
         "navier": "tokens de salida, unos 15 millones de dólares, para una sola demostración de Navier-Stokes"
       },
       "points": [
-        "El entrenamiento solo ve código público. Lo que escribe la mayoría de las empresas, y el código fuente de todo producto propietario, juego comercial y sistema embebido, nunca entró.",
-        "Donde hay mapa, vuela. Clientes nativos de Spotify y WhatsApp escritos por una sola persona, mi FrankMD, mi fork de Geary: alguien ya había resuelto cada uno antes, y ahora volver a recorrer el camino es barato.",
-        "Donde se acaba el mapa, da vueltas. Mi recompilador de NES a Master System llevó 349 commits y cuatro generaciones de Claude, y solo se terminó Super Mario Bros., el único juego con un desensamblado público completo. La solución de verdad estaba en la cabeza de quien escribió el juego en 1985.",
-        "Bucles largos sin recompensa: 436 millones de tokens de entrada en un sprint de cuatro días, 46 millones de pasos de aprendizaje por refuerzo atascados en las mismas fases del castillo y mensajes de commit como \"attempt reverted\". Sin una forma de decir qué está bien, lo que tienes es fuerza bruta dirigida, que sigue siendo prueba y error.",
-        "Tres cosas ayudan. Dale a mano lo que nunca vio: un desensamblado, un paper viejo, trabajo previo que nadie publicó. Dale un oráculo: una imagen de referencia, una trayectoria grabada, un emulador que se comporte exactamente como el hardware. Y escribe tests con metas objetivas, para que cada paso se pueda verificar.",
-        "Así también ocurrieron los avances famosos. AlphaEvolve y o3 encontraron cosas nuevas con búsqueda sobre un verificador barato, a un precio altísimo. La investigación coincide: el rendimiento cae en problemas de programación publicados después del corte de entrenamiento. Solo media docena de empresas pueden pagar la novedad a esa escala."
+        "El entrenamiento solo ve código público. Lo que las empresas mantienen en privado, y el código fuente de todo producto propietario, juego comercial y sistema embebido, nunca entró.",
+        "Cuando había algo parecido en los datos de entrenamiento, el modelo lo reproduce rápido y barato: formularios, CRUD, integraciones, apps nativas para servicios que ya existen. Alguien ya lo resolvió antes, en algún lugar, y ahora volver a recorrer el camino es barato.",
+        "Cuando no lo había, el progreso se vuelve bucles largos sin recompensa: intentar, retroceder, revertir, intentar de nuevo. Eso es fuerza bruta dirigida, y la novedad sale cara. La demostración de Navier-Stokes de OpenAI necesitó unos 10.000 agentes funcionando durante 88 horas y alrededor de 130.000 millones de tokens de salida, unos 15 millones de dólares a precio de lista, y aun así se apoyó en décadas de matemáticas publicadas.",
+        "Lo que ayuda: dale a mano lo que el modelo nunca vio, como referencias y trabajo previo que nadie publicó; dale un oráculo que diga qué está bien; y escribe tests con metas objetivas. Así también encontraron cosas nuevas AlphaEvolve y o3, con búsqueda sobre un verificador barato, algo que solo media docena de empresas pueden pagar a escala."
       ],
       "quote": "Los LLMs pueden replicar lo que es abierto, pero no pueden adivinar lo que es privado.",
       "quoteOriginal": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
       "sources": {
         "stack": "The Stack v2: el dataset de código público",
         "octoverse": "GitHub Octoverse 2025: 81,5% privado",
-        "nesToSms": "nes-to-sms: el recompilador que pausé",
         "arc": "ARC Prize: ARC-AGI-2",
         "gsm": "Apple: GSM-Symbolic",
         "lcb": "LiveCodeBench: problemas posteriores al corte",
