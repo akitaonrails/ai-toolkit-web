@@ -145,5 +145,12 @@
     "Hand-fed knowledge": "Contexto alimentado",
     "Oracles": "Oráculos",
     "Objective tests": "Testes objetivos"
+  },
+  "students-gap": {
+    "Public code": "Código público",
+    "Private & new": "Privado e novo",
+    "AI stops here": "A IA para aqui",
+    "Fundamentals": "Fundamentos",
+    "The gap": "A lacuna"
   }
 }

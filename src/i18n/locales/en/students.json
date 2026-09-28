@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "AI and students",
-    "lede": "I'm a senior and I vibe code 100%. If you're a student or a junior, don't copy me yet. Seven short points on why, and where to start.",
+    "lede": "I'm a senior and I vibe code 100%. If you're a student or a junior, don't copy me yet. Eight short points on why, and where to start.",
     "primary": "What to do",
     "secondary": "The Akitando archive"
   },
@@ -109,8 +109,28 @@
         "Even for a tiny app, anything built by vibe coding that goes to production must be reviewed by an experienced programmer. That isn't optional."
       ]
     },
+    "why": {
+      "kicker": "6. The question",
+      "title": "If AI can do all the programming, why learn it?",
+      "lede": "Because it can't do all of it. It reproduces what it has seen, and what it hasn't seen is exactly where the next jobs are.",
+      "alt": "Two cliffs across a chasm labeled The gap: a teal cliff labeled Public code and a violet, fogged cliff labeled Private & new. A bridge built by AI from the left stops halfway, labeled AI stops here, and amber blocks labeled Fundamentals complete the rest of the span.",
+      "points": [
+        "Models learned from public code. Most of the world's code is private, 81.5% of GitHub contributions alone, and a problem nobody solved before isn't in any training set.",
+        "Where something similar was published, AI replicates it fast. Where it wasn't, it spins in long, expensive loops, and someone has to take over: define what \"right\" means, build the oracle, write tests with objective targets, find the reference nobody published, and notice when the agent starts going in circles.",
+        "Legacy is the same story. There's no big open source COBOL community: the code that runs banks, insurers and governments is private, and the models have barely seen it.",
+        "Every one of those jobs needs someone who understands the problem from the bottom: how computers, operating systems, compilers, networks and databases really work. That's the hard knowledge most people skip.",
+        "In my view, that's the opportunity. The fewer people willing to learn the foundations the hard way, the more valuable the ones who do. They'll be the generation that closes the gaps the models can't close on their own."
+      ],
+      "quote": "The skill the machine needs most from you is the one it can least learn from its training.",
+      "quoteOriginal": "A habilidade que a máquina mais precisa de você é a que ela menos consegue aprender com o treino dela.",
+      "sources": {
+        "octoverse": "GitHub Octoverse 2025: 81.5% private",
+        "cobol": "arXiv (2026): LLMs and COBOL, code that is rarely public",
+        "arc": "ARC Prize: new tasks, 0% for pure LLMs"
+      }
+    },
     "memory": {
-      "kicker": "6. A real example",
+      "kicker": "7. A real example",
       "title": "What \"the AI did it\" actually took",
       "lede": "ai-memory, my open source memory system for coding agents, is mostly written by AI. Everything that keeps it correct came from my review and direction, week after week.",
       "alt": "A core labeled AI output wrapped in five rings labeled Directives, Fences, Lessons, Docs and Tests, with a timeline underneath labeled Weeks of review.",
@@ -133,7 +153,7 @@
       "quoteCite": "Me on X, September 25, 2026"
     },
     "practice": {
-      "kicker": "7. What to do",
+      "kicker": "8. What to do",
       "title": "If you're a student or a junior",
       "lede": "Use AI the way a senior uses an intern: for the chores. The learning has to go through your own hands.",
       "alt": "A loop of four steps, Write by hand, Break it, Debug and Review, around a growing stack labeled Foundations, with a small separate lane labeled AI: chores off to the side.",
@@ -177,6 +197,7 @@
       "Learning on autopilot doesn't stick. The studies so far agree.",
       "The jobs left go to people who can judge the output, and entry-level hiring is shrinking.",
       "AI can't guess your goal, your limits or your trade-offs. Knowing them is the job.",
+      "AI replicates what's public. The gaps it leaves, in private and new work, are the job, and the hard foundations are how you fill them.",
       "Write by hand, let AI do the chores, review everything, and put in the hours."
     ]
   },

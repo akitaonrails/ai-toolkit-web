@@ -145,5 +145,12 @@
     "Hand-fed knowledge": "떠먹인 지식",
     "Oracles": "오라클",
     "Objective tests": "객관적 테스트"
+  },
+  "students-gap": {
+    "Public code": "공개 코드",
+    "Private & new": "비공개·신규",
+    "AI stops here": "AI는 여기까지",
+    "Fundamentals": "기초",
+    "The gap": "빈틈"
   }
 }

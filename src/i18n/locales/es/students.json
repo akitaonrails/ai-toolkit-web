@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinión",
     "title": "La IA y los estudiantes",
-    "lede": "Soy senior y hago 100% vibe coding. Si eres estudiante o junior, no me copies todavía. Siete puntos breves sobre por qué, y por dónde empezar.",
+    "lede": "Soy senior y hago 100% vibe coding. Si eres estudiante o junior, no me copies todavía. Ocho puntos breves sobre por qué, y por dónde empezar.",
     "primary": "Qué hacer",
     "secondary": "El archivo de Akitando"
   },
@@ -109,8 +109,28 @@
         "Incluso para una app diminuta, todo lo hecho con vibe coding que va a producción tiene que revisarlo un programador experimentado. Eso no es opcional."
       ]
     },
+    "why": {
+      "kicker": "6. La pregunta",
+      "title": "Si la IA puede programar todo, ¿para qué aprender?",
+      "lede": "Porque no puede programar todo. Reproduce lo que ya vio, y lo que no vio es justo donde están los próximos empleos.",
+      "alt": "Dos acantilados separados por un abismo con la etiqueta La brecha: un acantilado verde azulado con la etiqueta Código público y uno violeta, cubierto de niebla, con la etiqueta Privado y nuevo. Un puente construido por la IA desde la izquierda se detiene a mitad de camino, con la etiqueta Aquí para la IA, y bloques ámbar con la etiqueta Fundamentos completan el resto del tramo.",
+      "points": [
+        "Los modelos aprendieron de código público. La mayor parte del código del mundo es privado, el 81,5% de las contribuciones solo en GitHub, y un problema que nadie resolvió antes no está en ningún conjunto de entrenamiento.",
+        "Donde se publicó algo parecido, la IA lo replica rápido. Donde no, gira en bucles largos y caros, y alguien tiene que tomar el control: definir qué significa \"correcto\", construir el oráculo, escribir tests con objetivos claros, encontrar la referencia que nadie publicó y darse cuenta de cuándo el agente empieza a dar vueltas en círculo.",
+        "Con el legado pasa lo mismo. No hay una gran comunidad open source de COBOL: el código que mueve bancos, aseguradoras y gobiernos es privado, y los modelos casi no lo vieron.",
+        "Cada uno de esos trabajos necesita a alguien que entienda el problema desde abajo: cómo funcionan de verdad las computadoras, los sistemas operativos, los compiladores, las redes y las bases de datos. Ese es el conocimiento difícil que la mayoría se salta.",
+        "En mi opinión, ahí está la oportunidad. Cuanta menos gente esté dispuesta a aprender los fundamentos por el camino difícil, más valdrán quienes sí lo hagan. Serán la generación que cierre las brechas que los modelos no pueden cerrar solos."
+      ],
+      "quote": "La habilidad que la máquina más necesita de ti es la que menos puede aprender de su entrenamiento.",
+      "quoteOriginal": "A habilidade que a máquina mais precisa de você é a que ela menos consegue aprender com o treino dela.",
+      "sources": {
+        "octoverse": "GitHub Octoverse 2025: 81,5% privado",
+        "cobol": "arXiv (2026): los LLM y COBOL, un código que casi nunca es público",
+        "arc": "ARC Prize: tareas nuevas, 0% para LLM puros"
+      }
+    },
     "memory": {
-      "kicker": "6. Un ejemplo real",
+      "kicker": "7. Un ejemplo real",
       "title": "Lo que de verdad costó \"lo hizo la IA\"",
       "lede": "ai-memory, mi sistema de memoria open source para agentes de programación, está escrito mayormente por IA. Todo lo que lo mantiene correcto salió de mi revisión y mi dirección, semana tras semana.",
       "alt": "Un núcleo con la etiqueta Salida de la IA rodeado por cinco anillos con las etiquetas Directivas, Barreras, Lecciones, Docs y Tests, con una línea de tiempo debajo con la etiqueta Semanas de revisión.",
@@ -133,7 +153,7 @@
       "quoteCite": "Yo en X, 25 de septiembre de 2026"
     },
     "practice": {
-      "kicker": "7. Qué hacer",
+      "kicker": "8. Qué hacer",
       "title": "Si eres estudiante o junior",
       "lede": "Usa la IA como un senior usa a un pasante: para las tareas rutinarias. El aprendizaje tiene que pasar por tus propias manos.",
       "alt": "Un ciclo de cuatro pasos, Escribir a mano, Romperlo, Depurar y Revisar, alrededor de una pila creciente con la etiqueta Fundamentos, con un carril pequeño y aparte con la etiqueta IA: rutina.",
@@ -177,6 +197,7 @@
       "Aprender en piloto automático no se fija. Los estudios hasta ahora coinciden.",
       "Los empleos que quedan son para quien sabe juzgar el resultado, y la contratación de nivel inicial se achica.",
       "La IA no adivina tu objetivo, tus límites ni tus trade-offs. Conocerlos es el trabajo.",
+      "La IA replica lo que es público. Los huecos que deja, en el trabajo privado y nuevo, son el trabajo, y los fundamentos difíciles son la forma de llenarlos.",
       "Escribe a mano, deja las tareas rutinarias a la IA, revísalo todo y pon las horas."
     ]
   },

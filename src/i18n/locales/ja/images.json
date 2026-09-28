@@ -145,5 +145,12 @@
     "Hand-fed knowledge": "手渡しの知識",
     "Oracles": "オラクル",
     "Objective tests": "客観的テスト"
+  },
+  "students-gap": {
+    "Public code": "公開コード",
+    "Private & new": "非公開と新規",
+    "AI stops here": "AIはここまで",
+    "Fundamentals": "基礎",
+    "The gap": "すき間"
   }
 }

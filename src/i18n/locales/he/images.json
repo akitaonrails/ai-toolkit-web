@@ -145,5 +145,12 @@
     "Hand-fed knowledge": "ידע מוזן ידנית",
     "Oracles": "אורקלים",
     "Objective tests": "בדיקות אובייקטיביות"
+  },
+  "students-gap": {
+    "Public code": "קוד ציבורי",
+    "Private & new": "פרטי וחדש",
+    "AI stops here": "כאן AI נעצר",
+    "Fundamentals": "יסודות",
+    "The gap": "הפער"
   }
 }

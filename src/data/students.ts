@@ -59,6 +59,11 @@ export const students = {
       { id: 'bls', href: 'https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm' },
     ] },
     { id: 'guess', figure: 'students-guess', posts: ['llmsFail', 'talkClaude', 'tvClipboard'], sources: [] },
+    { id: 'why', figure: 'students-gap', posts: ['llmLimits', 'punchCard', 'aiKilled'], sources: [
+      { id: 'octoverse', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
+      { id: 'cobol', href: 'https://arxiv.org/abs/2604.03986' },
+      { id: 'arc', href: 'https://arcprize.org/' },
+    ] },
     { id: 'memory', figure: 'students-guardrails', memory: true, x: 'https://x.com/AkitaOnRails/status/2103322331745604001', posts: ['aiMemory2', 'neverDone'], stats: [
       // Measured on the ai-memory checkout at 49147a5d, 2026-09-27 (docs/sources.md, section 12).
       { key: 'words', n: 4743 },

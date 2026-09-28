@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "IA e estudantes",
-    "lede": "Eu sou sênior e faço 100% vibe coding. Se você é estudante ou júnior, não me copie ainda. Sete pontos curtos sobre o porquê, e por onde começar.",
+    "lede": "Eu sou sênior e faço 100% vibe coding. Se você é estudante ou júnior, não me copie ainda. Oito pontos curtos sobre o porquê, e por onde começar.",
     "primary": "O que fazer",
     "secondary": "O arquivo do Akitando"
   },
@@ -109,8 +109,28 @@
         "Mesmo num app minúsculo, qualquer coisa feita com vibe coding que vai pra produção precisa ser revisada por um programador experiente. Isso não é opcional."
       ]
     },
+    "why": {
+      "kicker": "6. A pergunta",
+      "title": "Se a IA pode programar tudo, por que aprender?",
+      "lede": "Porque ela não pode fazer tudo. Ela reproduz o que já viu, e o que ela não viu é justamente onde estão os próximos empregos.",
+      "alt": "Dois penhascos separados por um abismo com o rótulo A lacuna: um penhasco verde-azulado com o rótulo Código público e um penhasco violeta, coberto de névoa, com o rótulo Privado e novo. Uma ponte construída pela IA a partir da esquerda para no meio, com o rótulo A IA para aqui, e blocos âmbar com o rótulo Fundamentos completam o resto do vão.",
+      "points": [
+        "Os modelos aprenderam com código público. A maior parte do código do mundo é privada, 81,5% das contribuições só no GitHub, e um problema que ninguém resolveu antes não está em nenhum dado de treino.",
+        "Onde algo parecido foi publicado, a IA replica rápido. Onde não foi, ela gira em loops longos e caros, e alguém tem que assumir: definir o que é \"certo\", construir o oráculo, escrever testes com alvos objetivos, caçar a referência que ninguém publicou e perceber quando o agente começou a girar em círculos.",
+        "Legado é a mesma história. Não existe uma comunidade open source grande de COBOL: o código que roda banco, seguradora e governo é privado, e os modelos quase nunca viram ele.",
+        "Cada um desses trabalhos precisa de alguém que entende o problema de baixo pra cima: como computadores, sistemas operacionais, compiladores, redes e bancos de dados funcionam de verdade. É o conhecimento difícil que a maioria pula.",
+        "Na minha opinião, essa é a oportunidade. Quanto menos gente disposta a aprender os fundamentos do jeito difícil, mais valem os que aprendem. Eles vão ser a geração que fecha as lacunas que os modelos não conseguem fechar sozinhos."
+      ],
+      "quote": "A habilidade que a máquina mais precisa de você é a que ela menos consegue aprender com o treino dela.",
+      "quoteOriginal": "A habilidade que a máquina mais precisa de você é a que ela menos consegue aprender com o treino dela.",
+      "sources": {
+        "octoverse": "GitHub Octoverse 2025: 81,5% privado",
+        "cobol": "arXiv (2026): LLMs e COBOL, código que raramente é público",
+        "arc": "ARC Prize: tarefas inéditas, 0% pra LLMs puros"
+      }
+    },
     "memory": {
-      "kicker": "6. Um exemplo real",
+      "kicker": "7. Um exemplo real",
       "title": "O que \"a IA fez\" custou de verdade",
       "lede": "O ai-memory, meu sistema de memória open source pra agentes de código, é escrito na maior parte por IA. Tudo que mantém ele correto veio da minha review e da minha direção, semana após semana.",
       "alt": "Um núcleo com o rótulo Saída da IA envolto em cinco anéis com os rótulos Diretivas, Cercas, Lições, Docs e Testes, com uma linha do tempo embaixo com o rótulo Semanas de review.",
@@ -133,7 +153,7 @@
       "quoteCite": "Eu no X, 25 de setembro de 2026"
     },
     "practice": {
-      "kicker": "7. O que fazer",
+      "kicker": "8. O que fazer",
       "title": "Se você é estudante ou júnior",
       "lede": "Use a IA do jeito que um sênior usa um estagiário: pras tarefas chatas. O aprendizado tem que passar pelas suas mãos.",
       "alt": "Um ciclo de quatro passos, Escrever na mão, Quebrar, Debugar e Revisar, em volta de uma pilha crescente com o rótulo Fundamentos, com uma pequena faixa separada ao lado com o rótulo IA: tarefas chatas.",
@@ -177,6 +197,7 @@
       "Aprender no piloto automático não fixa. Os estudos até agora concordam.",
       "As vagas que sobram vão pra quem sabe julgar o resultado, e a contratação de nível de entrada está encolhendo.",
       "A IA não adivinha seu objetivo, seus limites ou seus trade-offs. Saber isso é o trabalho.",
+      "A IA replica o que é público. As lacunas que ela deixa, no trabalho privado e novo, são o trabalho, e os fundamentos difíceis são como você preenche elas.",
       "Escreva na mão, deixe a IA com as tarefas chatas, revise tudo e coloque as horas."
     ]
   },

@@ -145,5 +145,12 @@
     "Hand-fed knowledge": "Hand-fed knowledge",
     "Oracles": "Oracles",
     "Objective tests": "Objective tests"
+  },
+  "students-gap": {
+    "Public code": "Public code",
+    "Private & new": "Private & new",
+    "AI stops here": "AI stops here",
+    "Fundamentals": "Fundamentals",
+    "The gap": "The gap"
   }
 }
