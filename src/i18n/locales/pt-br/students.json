@@ -67,6 +67,9 @@
         "bastani": "nota menor na prova pra alunos que praticaram com o GPT-4 puro, depois que ele foi tirado",
         "metr": "mais lentos: desenvolvedores experientes com IA, que ainda achavam que estavam mais rápidos"
       },
+      "units": {
+        "anthropic": "{n} pts"
+      },
       "points": [
         "O próprio estudo da Anthropic, janeiro de 2026: engenheiros, a maioria júnior, aprendendo uma biblioteca nova (Trio) com IA tiraram 50% no quiz, contra 67% de quem programou na mão, sem economia de tempo significativa. Quem usou a IA pra explicar conceitos manteve a maior parte do aprendizado; quem entregou o código pra ela ficou entre as notas mais baixas.",
         "Num estudo da PNAS com cerca de 1.000 alunos do ensino médio, o GPT-4 puro aumentou as notas nos exercícios em 48% e depois derrubou as notas na prova em 17% quando foi tirado. Um tutor feito pra fazer eles pensarem evitou a perda em grande parte.",

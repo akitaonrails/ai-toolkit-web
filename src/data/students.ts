@@ -1,11 +1,13 @@
 // The "AI and students" essay page. Structure only: each section's diagram or numbers, its outside sources and the
 // owner's posts it links. Words live in the `students` catalog. Where every fact comes from: docs/sources.md, section 12.
 import type { ArticleId } from './articles';
+import { percent, type SectionStat } from './stats';
+
 
 export interface StudentsSection {
   id: string; figure?: string; posts: ArticleId[]; sources: { id: string; href: string }[];
   // Numbers shown as a Stats strip; labels in the catalog under sections.<id>.stats.<key>.
-  stats?: { key: string; n: number; prefix?: string; suffix?: string; display?: string }[];
+  stats?: SectionStat[];
   x?: string; memory?: boolean;
 }
 
@@ -38,9 +40,9 @@ export const students = {
       { id: 'ep132', href: 'https://akitaonrails.com/2022/11/22/akitando-132-rant-a-bolha-de-startups-estourou/' },
     ] },
     { id: 'evidence', posts: ['benchmarkPart1', 'punchCard', 'driveclub'], stats: [
-      { key: 'anthropic', n: 17, suffix: ' pts' },
-      { key: 'bastani', n: 17, suffix: '%' },
-      { key: 'metr', n: 19, suffix: '%' },
+      { key: 'anthropic', n: 17 },
+      { key: 'bastani', n: 17, format: percent },
+      { key: 'metr', n: 19, format: percent },
     ], sources: [
       { id: 'anthropic', href: 'https://www.anthropic.com/research/AI-assistance-coding-skills' },
       { id: 'bastani', href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12232635/' },
@@ -48,9 +50,9 @@ export const students = {
       { id: 'mit', href: 'https://arxiv.org/abs/2506.08872' },
     ] },
     { id: 'market', posts: ['aiKilled'], stats: [
-      { key: 'newGrads', n: 65, suffix: '%' },
-      { key: 'entry', n: 4.5, suffix: '%', display: '4.5' },
-      { key: 'young', n: 19, suffix: '%' },
+      { key: 'newGrads', n: 65, format: percent },
+      { key: 'entry', n: 4.5, format: percent },
+      { key: 'young', n: 19, format: percent },
     ], sources: [
       { id: 'signalfire', href: 'https://www.signalfire.com/blog/signalfire-state-of-talent-report-2026' },
       { id: 'indeed', href: 'https://hiringlab.indeed.com/2026/07/23/the-labor-market-is-tilting-toward-seniority/' },
@@ -71,8 +73,8 @@ export const students = {
       // 23 rows in docs/security-boundaries.md, one of them a proposal: 22 enforced.
       { key: 'boundaries', n: 22 },
       // Test attributes counted with grep (3,028 to 3,029 unit, 614 integration, depending on the pattern).
-      { key: 'unit', n: 3000, suffix: '+', display: '3,000' },
-      { key: 'integration', n: 600, suffix: '+', display: '600' },
+      { key: 'unit', n: 3000, suffix: '+' },
+      { key: 'integration', n: 600, suffix: '+' },
     ], sources: [] },
     { id: 'practice', figure: 'students-practice', posts: ['driveclub', 'akitaCaved', 'marathon'], sources: [
       { id: 'anthropicStuck', href: 'https://www.anthropic.com/research/AI-assistance-coding-skills' },

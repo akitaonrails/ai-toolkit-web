@@ -1,11 +1,13 @@
 // The "Why AGI doesn't matter" essay page. Structure only: each section's diagram, its outside sources and the
 // owner's posts it links. Words live in the `agi` catalog. Where every fact comes from: docs/sources.md, section 11.
 import type { ArticleId } from './articles';
+import { percent, type SectionStat } from './stats';
 
 // `network` draws the AgiNetwork map instead of a generated figure. `x` links the owner's post on X quoted in that section; `jail` adds a link to ai-jail, the sandbox he uses.
 export interface AgiSection { id: string; figure?: string; network?: boolean;
-  // Numbers shown as a Stats strip under the figure; labels in the catalog under sections.<id>.stats.<key>.
-  stats?: { key: string; n: number; suffix?: string; display?: string }[]; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
+  // Numbers shown as a Stats strip under the figure, formatted per language with `format` (Intl options, see Stats);
+  // labels in the catalog under sections.<id>.stats.<key>.
+  stats?: SectionStat[]; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
 
 export const agi = {
   sections: [
@@ -27,10 +29,10 @@ export const agi = {
       { id: 'nadella', href: 'https://www.dwarkesh.com/p/satya-nadella' },
     ] },
     { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits'], stats: [
-      { key: 'private', n: 81.5, suffix: '%', display: '81.5' },
-      { key: 'stack', n: 67.5, display: '67.5 TB' },
-      { key: 'arc', n: 0, suffix: '%', display: '0' },
-      { key: 'navier', n: 130, display: '130B' },
+      { key: 'private', n: 81.5, format: percent },
+      { key: 'stack', n: 67.5, format: { style: 'unit', unit: 'terabyte' } },
+      { key: 'arc', n: 0, format: percent },
+      { key: 'navier', n: 130e9, format: { notation: 'compact' } },
     ], sources: [
       { id: 'stack', href: 'https://huggingface.co/datasets/bigcode/the-stack-v2' },
       { id: 'octoverse', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },

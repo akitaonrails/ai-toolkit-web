@@ -12,6 +12,7 @@ import Related from '@/components/Related.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import { agi } from '@/data/agi';
+import { statItems } from '@/data/stats';
 import { sisterUrl } from '@/data/site';
 import { articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
@@ -41,7 +42,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
         <h2 class="text-3xl mt-4 max-w-[18em]">{s(sec.id, 'title')}</h2>
         <p class="lede mt-6">{s(sec.id, 'lede')}</p>
         <div class="mt-10">{sec.network ? <AgiNetwork /> : <Figure name={sec.figure!} alt={s(sec.id, 'alt')} />}</div>
-        {sec.stats && <div class="mt-10"><Stats cols={sec.stats.length} items={sec.stats.map((x) => ({ n: x.n, suffix: x.suffix, display: x.display, label: t(`sections.${sec.id}.stats.${x.key}`) }))} /></div>}
+        {sec.stats && <div class="mt-10"><Stats cols={sec.stats.length} items={statItems(sec.id, sec.stats, { t, raw })} /></div>}
         <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] mt-10 items-start">
           <div>
             <ul class="ticks text-lg">{raw<string[]>(`sections.${sec.id}.points`).map((p) => <li>{p}</li>)}</ul>

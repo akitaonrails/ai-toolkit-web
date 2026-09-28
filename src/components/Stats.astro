@@ -1,17 +1,18 @@
 ---
 // A strip of numbers that count up once. Numbers come from src/data, never typed into a page.
-// `display` replaces the counting number with fixed text, for figures too wide to show in full ("1.08M"). Prefix and
-// suffix still wrap it, so `display` never carries the symbol itself.
-interface Item { n: number; label: string; prefix?: string; suffix?: string; display?: string }
+// Every number goes through Intl in the reader's language: `format` carries the options (percent, units, compact
+// notation), so 4.5% reads "4,5 %" in Spanish and 130 billion reads "1300億" in Japanese. Never pass pre-formatted
+// text. `prefix`/`suffix` are for what Intl has no form for ("+"), or a unit word from the catalog.
+export interface Stat { n: number; label: string; format?: Intl.NumberFormatOptions; prefix?: string; suffix?: string }
 import { useI18n } from '@/i18n';
-interface Props { items: Item[]; cols?: number }
+interface Props { items: Stat[]; cols?: number }
 const { items, cols = items.length } = Astro.props;
 const { number } = useI18n(Astro);
 ---
 <dl class="stats" style={`--cols:${cols}`} data-reveal="children">
   {items.map((f) => (
     <div>
-      <dd>{f.prefix}{f.display ? <span title={number(f.n)}>{f.display}</span> : <span data-count={f.n}>{number(f.n)}</span>}{f.suffix}</dd>
+      <dd>{f.prefix}<span data-count={f.n} data-format={f.format && JSON.stringify(f.format)}>{number(f.n, f.format)}</span>{f.suffix}</dd>
       <dt>{f.label}</dt>
     </div>
   ))}

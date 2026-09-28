@@ -29,7 +29,7 @@
       },
       "sherlock": {
         "name": "Frank Sherlock",
-        "text": "Apúntalo a una carpeta de fotos, PDFs y videos, y un modelo de visión local describe cada archivo, lee el texto con OCR e indexa todo. Después busca \"recibo del súper de $42.00\". También encuentra duplicados y agrupa caras. Nada sale de la máquina.",
+        "text": "Apúntalo a una carpeta de fotos, PDFs y videos, y un modelo de visión local describe cada archivo, lee el texto con OCR e indexa todo. Después busca \"recibo del súper de $42,00\". También encuentra duplicados y agrupa caras. Nada sale de la máquina.",
         "itch": "encontrar una imagen entre miles en mi NAS sin mandarlas a ningún lado."
       },
       "yomik": {

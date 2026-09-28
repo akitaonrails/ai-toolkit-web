@@ -10,6 +10,13 @@ The site is Fabio Akita's personal hub for his AI work: small open source tools 
 - `{placeholders}` stay exactly as written (`{year}`, `{date}`, `{n}`, `{name}`, `{email}`, `{linkedin}`), placed where the target grammar wants them.
 - HTML tags and attributes stay exactly as written (`<code>`, `<a class="link" href="...">`, `<a href="/workflow/">`); never change an href. Translate the text between tags. Everything inside `<code>...</code>` stays byte-for-byte identical.
 - Do NOT translate: product and project names (Akita's AI Lair, ai-usagebar, ghpending, tclock, clock-tui, ai-memory, ai-jail, my-skills, omarchy-games-menu, distrobox-gaming, Omarchy, Hyprland, Waybar, tmux, Herdr, Conductor, Claude Squad, Claude Code, Codex, OpenCode, Kimi, GitHub, Dependabot, Steam, Proton, Ansible, distrobox, NERV, Evangelion, M.Arvin, The M.Akita Chronicles, Flow Podcast, Cortes do Flow, Spotify, LinkedIn, X, Instagram, YouTube, Akitando), skill names (pr-audit, iss-audit, github-resolution, security-audit, pr-bump, pr-post-audit, release when it names the skill), commands, flags, file names, env vars, URLs, version numbers, people's names. The brand name "Akita's AI Lair" stays in English everywhere, including the page titles.
+- Numbers in running text are written the way the target language writes them. The value never changes, only the separators and the placement of symbols and units:
+  - pt-br: `4,5`, `10.000`, `81,5%`, `US$ 4.000`, `R$ 42,00`; large amounts in words (`130 bilhões`, `US$ 852 bilhões`).
+  - es: `4,5`, `10.000`, `81,5 %` (space before `%`); large amounts in words (`130.000 millones`).
+  - he: `4.5`, `10,000`, `81.5%`, like English.
+  - ja: `4.5`, `10,000`, `81.5%`; large amounts with 万/億 (`1300億`).
+  - ko: `4.5`, `10,000`, `81.5%`; large amounts with 만/억 (`1300억`).
+  Version numbers (`Opus 5.5`, `GLM 4.7`, `ai-memory 2.0`), years, commands and anything inside `<code>` stay exactly as in English. Unit words that sit next to a number in a catalog come as a pattern (`"{n} pts"`): keep `{n}` and put the unit where the language wants it (`{n}ポイント`, `{n}점`).
 - Valid UTF-8 JSON. Escape double quotes inside values. Use the language's real typography (accents, punctuation, full-width punctuation in Japanese), never ASCII approximations.
 - `quote.original` values are already in Portuguese: copy them unchanged in every language.
 - After each file, run `node scripts/check-i18n.mjs <locale>` and fix every ERROR. "Identical to English" warnings are fine for names and commands. Do NOT run `--stamp`.

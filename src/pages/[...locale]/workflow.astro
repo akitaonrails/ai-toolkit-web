@@ -72,7 +72,7 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills }, locale);
       { n: tally.totals.commits, label: t('numbers.commits') },
       { n: tally.totals.prs, label: t('numbers.prs') },
       { n: tally.totals.issues, label: t('numbers.issues') },
-      { n: tally.totals.code_added, label: t('numbers.code'), display: number(tally.totals.code_added, { notation: 'compact', maximumFractionDigits: 2 }) },
+      { n: tally.totals.code_added, label: t('numbers.code'), format: { notation: 'compact', maximumFractionDigits: 2 } },
       { n: tally.totals.posts, label: t('numbers.posts') },
     ]} />
     <p class="mt-10 text-sm text-muted max-w-[52em]">{t('numbers.method')}</p>

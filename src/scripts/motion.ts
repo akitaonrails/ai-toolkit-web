@@ -3,7 +3,8 @@
 //   data-zoom            media grows from 86% with soft corners to full size (scrubbed)
 //   data-parallax="0.2"  element drifts against the scroll (scrubbed)
 //   data-reveal          children (or the element) settle in once, on first view
-//   data-count="7209"    number counts up once, on first view
+//   data-count="7209"    number counts up once, on first view, formatted for the page's language with the
+//                        Intl options in data-format (JSON) and as many decimals as the final number has
 //   data-draw            SVG paths inside draw themselves (scrubbed)
 //   data-exit            the section recedes (scales down, dims) as the next one scrolls over it (scrubbed)
 //   data-scene="5"       a tall section with a sticky stage; gets data-step="0..4" from the scroll position,
@@ -107,7 +108,9 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
 
   document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => {
     const end = Number(el.dataset.count);
-    const fmt = (n: number) => Math.round(n).toLocaleString(document.documentElement.lang);
+    const decimals = String(end).split('.')[1]?.length ?? 0;
+    const opts: Intl.NumberFormatOptions = { minimumFractionDigits: decimals, maximumFractionDigits: decimals, ...JSON.parse(el.dataset.format ?? '{}') };
+    const fmt = (n: number) => n.toLocaleString(document.documentElement.lang, opts);
     const state = { n: 0 };
     gsap.to(state, {
       n: end, duration: 1.6, ease: 'power2.out', onUpdate: () => (el.textContent = fmt(state.n)),

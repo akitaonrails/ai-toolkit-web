@@ -67,6 +67,9 @@
         "bastani": "lower exam scores for students who practiced with plain GPT-4, once it was gone",
         "metr": "slower: experienced developers with AI, who still believed they were faster"
       },
+      "units": {
+        "anthropic": "{n} pts"
+      },
       "points": [
         "Anthropic's own study, January 2026: mostly junior engineers learning a new library (Trio) with AI scored 50% on the quiz, against 67% for those who coded by hand, with no significant time saved. Those who used AI to explain concepts kept most of the learning; those who handed off the code scored among the lowest.",
         "In a PNAS study with about 1,000 high school students, plain GPT-4 raised practice scores by 48% and then cut exam scores by 17% once it was taken away. A tutor built to make them think largely avoided the loss.",

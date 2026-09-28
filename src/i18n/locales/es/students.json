@@ -67,6 +67,9 @@
         "bastani": "peores notas de examen para estudiantes que practicaron con GPT-4 sin más, una vez que se lo quitaron",
         "metr": "más lentos: desarrolladores experimentados con IA, que igual creían ser más rápidos"
       },
+      "units": {
+        "anthropic": "{n} pts"
+      },
       "points": [
         "El propio estudio de Anthropic, enero de 2026: ingenieros mayormente junior que aprendían una librería nueva (Trio) con IA sacaron 50% en el quiz, contra 67% de quienes programaron a mano, sin un ahorro de tiempo significativo. Quienes usaron la IA para que les explicara conceptos conservaron la mayor parte del aprendizaje; quienes le delegaron el código quedaron entre las notas más bajas.",
         "En un estudio de PNAS con unos 1.000 estudiantes de secundaria, GPT-4 sin más subió las notas de práctica un 48% y luego bajó las de examen un 17% cuando se lo quitaron. Un tutor hecho para obligarlos a pensar evitó en gran parte esa pérdida.",
