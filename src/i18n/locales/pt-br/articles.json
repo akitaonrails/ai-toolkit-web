@@ -220,6 +220,10 @@
     "languages": {
       "title": "Existem Linguagens Melhores pra programar com LLMs?",
       "summary": "112 tentativas em 7 linguagens e 4 modelos: nenhum ranking de linguagem se sustentou, o Ruby enxuto gastou tantos tokens quanto Rust, e os testes mudaram o resultado."
+    },
+    "bookMakingOf": {
+      "title": "Auto-publiquei meu próprio Livro/e-book: Competente o Suficiente",
+      "summary": "Como 131 posts viraram um livro com agentes: um inventário selado, uma marcação de origem em cada parágrafo, checagem de fatos contra fontes primárias e o pipeline com Quarto, Typst e Pandoc."
     }
   },
   "related": {

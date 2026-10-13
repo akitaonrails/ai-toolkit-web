@@ -99,13 +99,17 @@
     "extras": "Además, dos interludios, un apéndice opcional sobre cómo funciona la máquina por dentro (sin matemáticas), una cronología, listas de verificación prácticas y la lista de los artículos originales detrás de cada capítulo."
   },
   "made": {
-    "title": "Cómo está hecho",
-    "lede": "El libro vive en un repositorio abierto, junto a las herramientas que lo mantienen sincronizado con mi blog.",
+    "title": "Making-of",
+    "lede": "Cómo 131 posts del blog, casi medio millón de palabras, se convirtieron en un libro escrito con agentes, sin perder el control de lo que dice.",
     "points": [
-      "Cada párrafo registra de qué artículo salió. Cuando un artículo cambia, un comando muestra qué capítulos afecta.",
-      "Los diagramas se dibujan como código. Las ilustraciones generadas con IA se declaran en los créditos de imagen, y las fotos reales llevan sus licencias.",
-      "Cada build corre una suite de regresión y una verificación de integridad de referencias cruzadas, citas, figuras y de que la edición en inglés esté a la par del original en portugués."
+      "Cada post entró en un inventario sellado con un hash, y un mapa de linaje indica qué post reemplazó a cuál, así el libro cuenta el estado más reciente de lo que medí.",
+      "Cada párrafo lleva una marca invisible del post del que salió. Cuando edito un post, un comando lista los párrafos que debo revisar.",
+      "Revisé cada número, fecha y nombre contra los posts, los proyectos de referencia y las fuentes primarias. Algunas correcciones fueron a mi propio blog.",
+      "Los agentes escribieron los borradores. Leer, recortar, corregir y aprobar cada capítulo siguió siendo tarea mía."
     ],
+    "quote": "Los agentes fueron lo bastante competentes para escribir el borrador. Decidir lo que decía siguió siendo trabajo mío.",
+    "quoteOriginal": "Os agentes foram competentes o suficiente pra escrever o rascunho. Decidir o que ele dizia continuou sendo trabalho meu.",
+    "post": "Lee el making-of",
     "repo": "El código fuente en GitHub"
   },
   "next": [

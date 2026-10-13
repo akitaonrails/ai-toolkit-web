@@ -99,14 +99,18 @@
     "extras": "Mais dois interlúdios, um apêndice opcional sobre como a máquina funciona por dentro (sem matemática), uma linha do tempo, checklists práticos e a lista dos artigos originais por trás de cada capítulo."
   },
   "made": {
-    "title": "Como é feito",
-    "lede": "O livro vive num repositório aberto, junto com as ferramentas que mantêm ele sincronizado com o meu blog.",
+    "title": "Making-of",
+    "lede": "Como 131 posts do blog, quase meio milhão de palavras, viraram um livro escrito com agentes, sem eu perder o controle do que ele diz.",
     "points": [
-      "Cada parágrafo registra de qual artigo veio. Quando um artigo muda, um comando mostra quais capítulos ele afeta.",
-      "Os diagramas são desenhados como código. As ilustrações geradas por IA estão indicadas nos créditos das imagens, e as fotos reais trazem suas licenças.",
-      "Todo build roda uma suíte de regressão e uma checagem de integridade das referências cruzadas, citações, figuras e da paridade da edição em inglês com o original em português."
+      "Cada post entrou num inventário selado com hash, e um mapa de linhagem diz qual post substituiu qual. Assim o livro conta o estado mais recente do que eu medi.",
+      "Cada parágrafo carrega uma marcação invisível do post de onde veio. Quando eu edito um post, um comando lista os parágrafos que preciso revisar.",
+      "Cada número, data e nome foi checado contra os posts, os projetos de referência e as fontes primárias. Algumas das correções foram no meu próprio blog.",
+      "Os agentes escreveram os rascunhos. Ler, cortar, corrigir e aprovar cada capítulo ficou comigo."
     ],
-    "repo": "O fonte no GitHub"
+    "quote": "Os agentes foram competentes o suficiente pra escrever o rascunho. Decidir o que ele dizia continuou sendo trabalho meu.",
+    "quoteOriginal": "Os agentes foram competentes o suficiente pra escrever o rascunho. Decidir o que ele dizia continuou sendo trabalho meu.",
+    "post": "Leia o making-of",
+    "repo": "O código-fonte no GitHub"
   },
   "next": [
     {

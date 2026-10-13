@@ -220,6 +220,10 @@
     "languages": {
       "title": "Are There Better Languages for Programming with LLMs?",
       "summary": "112 attempts across 7 languages and 4 models: no language ranking held up, concise Ruby cost as many tokens as Rust, and tests changed the outcome."
+    },
+    "bookMakingOf": {
+      "title": "I Self-Published My Own Book/e-book: Competent Enough",
+      "summary": "How 131 posts became a book with agents: a sealed inventory, a source marker on every paragraph, fact-checks against primary sources, and the Quarto, Typst and Pandoc pipeline."
     }
   },
   "related": {

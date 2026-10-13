@@ -10,6 +10,8 @@ import Callout from '@/components/Callout.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import BookReader from '@/components/BookReader.astro';
+import PullQuote from '@/components/PullQuote.astro';
+import { articles, articleUrl } from '@/data/articles';
 import { Image } from 'astro:assets';
 import bookEn from '@/assets/img/book/book-en.png';
 import bookPt from '@/assets/img/book/book-pt.png';
@@ -79,9 +81,13 @@ const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/
     <p class="mt-10 text-muted max-w-[46em]">{t('inside.extras')}</p>
   </Section>
 
-  <Section title={t('made.title')} lede={t('made.lede')} hue="rose" tint>
+  <Section id="making-of" title={t('made.title')} lede={t('made.lede')} hue="rose" tint>
     <ul class="ticks text-lg max-w-[46em]">{raw<string[]>('made.points').map((p) => <li>{p}</li>)}</ul>
-    <a href={book.repo} class="btn btn-ghost mt-8">{t('made.repo')}</a>
+    <div class="mt-10 max-w-[46em]"><PullQuote text={t('made.quote')} original={t('made.quoteOriginal')} /></div>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href={articleUrl({ id: 'bookMakingOf', ...articles.bookMakingOf }, locale)} class="btn btn-primary">{t('made.post')}</a>
+      <a href={book.repo} class="btn btn-ghost">{t('made.repo')}</a>
+    </div>
   </Section>
 
   <NextPages title={t('next.title')} items={next} />

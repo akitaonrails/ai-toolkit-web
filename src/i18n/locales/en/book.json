@@ -99,13 +99,17 @@
     "extras": "Plus two interludes, an optional appendix on how the machine works inside (no math), a timeline, practical checklists and the list of the original articles behind each chapter."
   },
   "made": {
-    "title": "How it's made",
-    "lede": "The book lives in an open repository, next to the tooling that keeps it in sync with my blog.",
+    "title": "Making-of",
+    "lede": "How 131 blog posts, almost half a million words, became one book written with agents, without losing control of what it says.",
     "points": [
-      "Every paragraph records which article it came from. When an article changes, one command shows which chapters it affects.",
-      "Diagrams are drawn as code. AI-generated illustrations are disclosed in the image credits, and real photos carry their licenses.",
-      "Every build runs a regression suite and an integrity check of cross-references, citations, figures and the English edition's parity with the Portuguese original."
+      "Every post went into a sealed inventory with a hash, and a lineage map says which post superseded which, so the book tells the latest state of what I measured.",
+      "Every paragraph carries an invisible marker of the post it came from. When I edit a post, one command lists the paragraphs to review.",
+      "Every number, date and name was checked against the posts, the reference projects and primary sources. Some of the corrections were to my own blog.",
+      "Agents wrote the drafts. Reading, cutting, correcting and approving every chapter stayed with me."
     ],
+    "quote": "The agents were competent enough to write the draft. Deciding what it said remained my job.",
+    "quoteOriginal": "Os agentes foram competentes o suficiente pra escrever o rascunho. Decidir o que ele dizia continuou sendo trabalho meu.",
+    "post": "Read the making-of",
     "repo": "The source on GitHub"
   },
   "next": [

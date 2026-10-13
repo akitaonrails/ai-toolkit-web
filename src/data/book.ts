@@ -3,20 +3,23 @@
 // catalog. Where every fact comes from: docs/sources.md, section 14.
 //
 // Downloads point at a fixed tag: every release so far is a GitHub pre-release, and /releases/latest skips those.
-// When a new edition ships, update `tag` (and `label` if the version name changes) and the numbers below.
+// When a new edition ships, update `tag` (and `label` if the version name changes) and the numbers below. The book repo
+// keeps only its two newest releases, so a tag two releases old stops existing: the build fails loudly then
+// (scripts/fetch-book.mjs), which is the cue to update it here.
 export const book = {
   repo: 'https://github.com/akitaonrails/ai-book-2026',
   issues: 'https://github.com/akitaonrails/ai-book-2026/issues',
   // The version as the owner names it on the page; the release it points to.
   label: '1.0-preview',
-  tag: 'v1.0.0-preview.2',
+  tag: 'v1.0.0-preview.3',
   released: '2026-10-13',
   editions: [
-    { id: 'en', file: 'Competent-Enough', pages: 459 },
-    { id: 'pt', file: 'Competente-o-Suficiente', pages: 466 },
+    { id: 'en', file: 'Competent-Enough', pages: 462 },
+    { id: 'pt', file: 'Competente-o-Suficiente', pages: 467 },
   ],
-  // Read on 2026-10-13 from the release's README and CHANGELOG and the print PDFs (pdfinfo).
-  numbers: { chapters: 20, parts: 5, glossary: 144, references: 292, figures: 50 },
+  // Read on 2026-10-13 at the tag: print PDFs (pdfinfo), book/back/glossary-*.yml (146 entries in each edition),
+  // book/back/references.yaml (295), book/outline.yml (20 chapters, 5 parts). The README's 144 and 292 lag behind.
+  numbers: { chapters: 20, parts: 5, glossary: 146, references: 295 },
 } as const;
 
 export type BookFormat = 'epub' | 'ebook' | 'print';

@@ -64,6 +64,7 @@ export const articles = {
   talkClaude: { path: '/en/2026/04/15/how-to-talk-to-claude-code-effectively/', ptPath: '/2026/04/15/como-falar-com-o-claude-code-efetivamente/', date: '2026-04-15', hue: 'violet' },
   tvClipboard: { path: '/en/2026/01/28/vibe-code-built-a-little-app-fully-with-glm-4-7-tv-clipboard/', ptPath: '/2026/01/28/vibe-code-eu-fiz-um-appzinho-100-com-glm-4-7-tv-clipboard/', date: '2026-01-28', hue: 'violet' },
   driveclub: { path: '/en/2026/04/23/driveclub-shadps4-e-ia-como-aprender/', ptPath: '/2026/04/23/driveclub-shadps4-e-ia-como-aprender/', date: '2026-04-23', hue: 'orange' },
+  bookMakingOf: { path: '/en/2026/10/13/i-self-published-my-own-book-ebook-competent-enough/', ptPath: '/2026/10/13/auto-publiquei-meu-proprio-livro-ebook-competente-o-suficiente/', date: '2026-10-13', hue: 'rose' },
   adobeRe: { path: '/en/2026/10/13/ai-reverse-engineering-is-adobe-dead/', ptPath: '/2026/10/13/engenharia-reversa-com-ia-a-adobe-morreu/', date: '2026-10-13', hue: 'blue' },
   competentEnough: { path: '/en/2026/10/12/llms-agents-competent-enough/', ptPath: '/2026/10/12/llms-agentes-competente-o-suficiente/', date: '2026-10-12', hue: 'red' },
   languages: { path: '/en/2026/10/11/are-there-better-languages-for-programming-with-llms/', ptPath: '/2026/10/11/existem-linguagens-melhores-pra-programar-com-llms/', date: '2026-10-11', hue: 'rose' },
