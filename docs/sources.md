@@ -253,5 +253,7 @@ Asked for by the owner on 2026-10-13. The book is *Competent Enough* (English) /
 
 **Numbers, read 2026-10-13.** Pages from `pdfinfo` on the release's own files: print PDF (6 × 9 in) 459 pages in English and 466 in Portuguese, ebook PDF 434 and 445. The owner had guessed about 350; the 3D model uses the real thickness. Chapters (20), parts (5), glossary terms (144) and references (292) from the README and CHANGELOG. The five parts and their questions from the README and `_quarto-en.yml` / `book/outline.yml`. "How it's made" from the README (provenance per paragraph, `rake drift`, diagrams as code, disclosed AI illustrations) and the 1.0.0-preview.2 CHANGELOG (integrity checker and regression suite run before every build).
 
+**Reading online.** The page embeds the book with epub.js (`src/components/BookReader.astro`). GitHub serves release files without CORS headers, so `scripts/fetch-book.mjs` (npm `prebuild` and `predev`) downloads the tag's EPUBs and unpacks them into `public/book/read/<edition>/`, which is not committed. The reader resumes where the visitor stopped (last edition and last page per edition, in that browser's localStorage). Checked 2026-10-13 under the production CSP and `X-Frame-Options: DENY`: no violations from the reader.
+
 **Gap signal.** A new tag in the book repository: update `tag`, `released`, the page counts and, if the version name changes, `label`; re-render the 3D covers when the cover changes.
 

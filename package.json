@@ -7,7 +7,9 @@
   "author": "Fabio Akita",
   "license": "UNLICENSED",
   "scripts": {
+    "predev": "node scripts/fetch-book.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/fetch-book.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "check:colors": "node scripts/check-contrast.mjs",
@@ -18,7 +20,8 @@
     "videos:refresh": "node scripts/refresh-videos.mjs",
     "check:seo": "node scripts/check-seo.mjs",
     "build:decks": "node scripts/build-decks.mjs",
-    "check:decks": "node scripts/build-decks.mjs --check"
+    "check:decks": "node scripts/build-decks.mjs --check",
+    "fetch:book": "node scripts/fetch-book.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -31,7 +34,9 @@
     "@fontsource-variable/rubik": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.4",
+    "epubjs": "^0.3.93",
     "gsap": "^3.15.0",
+    "jszip": "^3.10.2",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3"
   },

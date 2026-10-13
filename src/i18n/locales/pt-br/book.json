@@ -30,6 +30,23 @@
     "issues": "Abrir uma issue",
     "notes": "Notas da release"
   },
+  "reader": {
+    "title": "Leia aqui",
+    "lede": "O livro inteiro, página por página, sem baixar nada. Em tela cheia aparecem duas páginas lado a lado, e a leitura continua de onde você parou.",
+    "label": "Páginas do livro",
+    "edition": "Edição",
+    "editions": {
+      "en": "English",
+      "pt": "Português"
+    },
+    "contents": "Sumário",
+    "prev": "Página anterior",
+    "next": "Próxima página",
+    "full": "Tela cheia",
+    "exit": "Sair da tela cheia",
+    "loading": "Abrindo o livro…",
+    "error": "O leitor não conseguiu abrir o livro. Os downloads abaixo continuam funcionando."
+  },
   "downloads": {
     "title": "Download",
     "lede": "As duas edições, três formatos cada, direto do GitHub. Sem cadastro.",

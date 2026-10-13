@@ -8,3 +8,6 @@ research-assets/
 *.log
 .DS_Store
 .cache/
+
+# The book, unpacked from its release at build time (scripts/fetch-book.mjs)
+public/book/read/

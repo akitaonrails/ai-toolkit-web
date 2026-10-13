@@ -9,6 +9,7 @@ import Stats from '@/components/Stats.astro';
 import Callout from '@/components/Callout.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
+import BookReader from '@/components/BookReader.astro';
 import { Image } from 'astro:assets';
 import bookEn from '@/assets/img/book/book-en.png';
 import bookPt from '@/assets/img/book/book-pt.png';
@@ -49,6 +50,10 @@ const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/
       </div>
     </div>
   </section>
+
+  <Section id="read" title={t('reader.title')} lede={t('reader.lede')} hue="rose">
+    <BookReader />
+  </Section>
 
   <Section id="downloads" title={t('downloads.title')} lede={t('downloads.lede')} hue="rose" tint>
     <div class="grid gap-6 md:grid-cols-2">

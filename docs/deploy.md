@@ -1,6 +1,6 @@
 # Deploying
 
-The site is static Astro output, deployed by Netlify on every push to `main`. `netlify.toml` holds everything Netlify needs: build command (`npm run build`), publish folder (`dist`), Node 22, cache headers, security headers and a Content Security Policy.
+The site is static Astro output, deployed by Netlify on every push to `main`. `netlify.toml` holds everything Netlify needs: build command (`npm run build`), publish folder (`dist`), Node 22, cache headers, security headers and a Content Security Policy. Before the build, `npm run build` runs `prebuild` (`scripts/fetch-book.mjs`), which downloads the book's EPUBs from their GitHub release and unpacks them into `public/book/read/` for the reader on `/book/`; the build needs network access to github.com for that (about 50 MB).
 
 ## First deploy
 

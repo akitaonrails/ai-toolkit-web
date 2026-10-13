@@ -30,6 +30,23 @@
     "issues": "Open an issue",
     "notes": "Release notes"
   },
+  "reader": {
+    "title": "Read it here",
+    "lede": "The whole book, page by page, without downloading anything. Full screen shows two pages side by side, and the reader picks up where you stopped.",
+    "label": "Book pages",
+    "edition": "Edition",
+    "editions": {
+      "en": "English",
+      "pt": "Português"
+    },
+    "contents": "Contents",
+    "prev": "Previous page",
+    "next": "Next page",
+    "full": "Full screen",
+    "exit": "Exit full screen",
+    "loading": "Opening the book…",
+    "error": "The reader couldn't open the book. The downloads below still work."
+  },
   "downloads": {
     "title": "Download",
     "lede": "Both editions, three formats each, straight from GitHub. No sign-up.",
