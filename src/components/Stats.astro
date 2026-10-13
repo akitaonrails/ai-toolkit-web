@@ -8,10 +8,14 @@ import { useI18n } from '@/i18n';
 interface Props { items: Stat[]; cols?: number }
 const { items, cols = items.length } = Astro.props;
 const { number } = useI18n(Astro);
+// How wide the final figure is, in rough character widths (CJK glyphs are about 1.7 Latin ones), so CSS
+// can shrink a long figure ("US$ 165 mil") to its column while short ones keep the full size.
+const width = (f: Stat) => [...`${f.prefix ?? ''}${number(f.n, f.format)}${f.suffix ?? ''}`]
+  .reduce((w, c) => w + (/[\u3000-\u9fff\uac00-\ud7af\uff00-\uffef]/.test(c) ? 1.7 : 1), 0);
 ---
 <dl class="stats" style={`--cols:${cols}`} data-reveal="children">
   {items.map((f) => (
-    <div>
+    <div style={`--chars:${width(f)}`}>
       <dd>{f.prefix}<span data-count={f.n} data-format={f.format && JSON.stringify(f.format)}>{number(f.n, f.format)}</span>{f.suffix}</dd>
       <dt>{f.label}</dt>
     </div>
@@ -20,8 +24,11 @@ const { number } = useI18n(Astro);
 <style>
   .stats { display: grid; gap: 2.2rem 2rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   @media (min-width: 48rem) { .stats { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
-  /* Each number sizes to its own column (cqi), capped at the page's largest size, so a long figure never runs into the next. */
+  /* Each number sizes to its own column (cqi) and to its own length (--chars), capped at the page's largest size, so a
+     long figure never runs into the next. A display glyph is about 0.62em wide; 150cqi / chars fills the column with some room. */
   .stats > div { border-block-start: 3px solid var(--hue-vivid, var(--v-green)); padding-block-start: 1rem; container-type: inline-size; }
-  .stats dd { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; font-size: min(var(--text-4xl), 21cqi); white-space: nowrap; }
+  .stats dd { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; font-size: min(var(--text-4xl), 21cqi, calc(150cqi / var(--chars, 5))); white-space: nowrap; }
+  /* A shrunken figure keeps the full-size slot, sitting on the same baseline, so the labels in a row stay aligned. */
+  .stats dd { min-block-size: min(var(--text-4xl), 21cqi); display: flex; align-items: flex-end; }
   .stats dt { margin-block-start: 0.6rem; color: var(--muted); }
 </style>
