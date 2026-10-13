@@ -84,6 +84,10 @@
     "limits": {
       "label": "LLMの限界",
       "note": "AIがコピーできるもの、できないもの"
+    },
+    "book": {
+      "label": "書籍『Competent Enough』",
+      "note": "AIを1年間試した記録"
     }
   },
   "kicker": {

@@ -1,0 +1,93 @@
+---
+// The book: "Competent Enough" / "Competente o Suficiente". Downloads of the current preview in both languages, the
+// 3D cover (rendered by scripts/render-book.py from the official cover), what is inside and how it is made.
+// Structure and links in src/data/book.ts, words in the `book` catalog.
+import Base from '@/layouts/Base.astro';
+import PageHero from '@/components/PageHero.astro';
+import Section from '@/components/Section.astro';
+import Stats from '@/components/Stats.astro';
+import Callout from '@/components/Callout.astro';
+import NextPages from '@/components/NextPages.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { Image } from 'astro:assets';
+import bookEn from '@/assets/img/book/book-en.png';
+import bookPt from '@/assets/img/book/book-pt.png';
+import { book, bookFile, bookEdition, type BookFormat } from '@/data/book';
+import { localePaths, useI18n, withText } from '@/i18n';
+export const getStaticPaths = localePaths;
+
+const { t, raw, locale, date } = useI18n(Astro, 'book');
+type Text = { title: string; text: string };
+const mine = book.editions.find((e) => e.id === bookEdition(locale))!;
+const covers = { en: bookEn, pt: bookPt };
+const formats: BookFormat[] = ['epub', 'ebook', 'print'];
+const parts = raw<{ title: string; question: string }[]>('inside.parts');
+const stats = [
+  { n: mine.pages, label: t('inside.stats.pages') },
+  { n: book.numbers.chapters, label: t('inside.stats.chapters') },
+  { n: book.numbers.glossary, label: t('inside.stats.glossary') },
+  { n: book.numbers.references, label: t('inside.stats.references') },
+];
+const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/agi/' }] as const, raw<Text[]>('next'));
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+  <PageHero hue="rose" kicker={t('hero.kicker')} title={t(`editions.${mine.id}.title`)} lede={t(`editions.${mine.id}.subtitle`)}>
+    <a href={bookFile(mine.file, 'epub')} class="btn btn-primary">{t('hero.epub')}</a>
+    <a href={bookFile(mine.file, 'ebook')} class="btn btn-ghost">{t('hero.pdf')}</a>
+    <a href="#downloads" class="btn btn-ghost">{t('hero.all')}</a>
+  </PageHero>
+
+  <section class="wrap pb-16" data-hue="rose">
+    <div class="grid gap-12 lg:grid-cols-[1fr_1fr] items-center">
+      <Image src={covers[mine.id]} alt={t(`editions.${mine.id}.alt`)} widths={[480, 720, 960, 1217]} sizes="(min-width: 1024px) 36rem, 94vw" loading="eager" class="book3d" />
+      <div>
+        <p class="lede">{t('intro')}</p>
+        <Callout title={t('preview.title', { version: book.label })} hue="rose" level={2}>
+          <p>{t('preview.text', { date: date(book.released) })}</p>
+          <p class="mt-3"><a class="link" href={book.issues}>{t('preview.issues')}</a> · <a class="link" href={`${book.repo}/releases/tag/${book.tag}`}>{t('preview.notes')}</a></p>
+        </Callout>
+      </div>
+    </div>
+  </section>
+
+  <Section id="downloads" title={t('downloads.title')} lede={t('downloads.lede')} hue="rose" tint>
+    <div class="grid gap-6 md:grid-cols-2">
+      {book.editions.map((e) => (
+        <div class="cell">
+          <div class="kicker"><span class="dot" aria-hidden="true"></span>{t(`editions.${e.id}.language`)}</div>
+          <h3 class="text-2xl mt-3">{t(`editions.${e.id}.title`)}</h3>
+          <ul class="mt-5 grid gap-2">
+            {formats.map((f) => (
+              <li><a class="dl" href={bookFile(e.file, f)}><span class="font-semibold">{t(`downloads.formats.${f}.name`)}</span><span class="text-muted text-sm">{t(`downloads.formats.${f}.for`)}</span></a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section title={t('inside.title')} lede={t('inside.lede')} hue="rose">
+    <Stats items={stats} />
+    <ol class="parts mt-14">
+      {parts.map((p) => <li><h3 class="text-xl">{p.title}</h3><p class="mt-1 text-muted">{p.question}</p></li>)}
+    </ol>
+    <p class="mt-10 text-muted max-w-[46em]">{t('inside.extras')}</p>
+  </Section>
+
+  <Section title={t('made.title')} lede={t('made.lede')} hue="rose" tint>
+    <ul class="ticks text-lg max-w-[46em]">{raw<string[]>('made.points').map((p) => <li>{p}</li>)}</ul>
+    <a href={book.repo} class="btn btn-ghost mt-8">{t('made.repo')}</a>
+  </Section>
+
+  <NextPages title={t('next.title')} items={next} />
+  <CtaBand />
+</Base>
+<style>
+  .book3d { inline-size: 100%; block-size: auto; max-inline-size: 36rem; margin-inline: auto; }
+  .dl { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--line); min-block-size: 2.75rem; align-items: center; }
+  .dl:hover { border-color: var(--hue-vivid); }
+  .parts { display: grid; gap: 1.75rem 3rem; counter-reset: part; }
+  @media (min-width: 48rem) { .parts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .parts li { counter-increment: part; padding-inline-start: 3rem; position: relative; }
+  .parts li::before { content: counter(part, upper-roman); position: absolute; inset-inline-start: 0; font-family: var(--font-display); font-weight: 800; color: var(--hue); font-size: 1.4rem; }
+</style>

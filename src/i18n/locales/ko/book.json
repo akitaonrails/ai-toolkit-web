@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "AI 책 Competent Enough",
+    "description": "Competent Enough는 두려움도 과대광고도 없이 AI를 시험한 1년을 담은 제 책입니다. EPUB과 PDF 프리뷰를 영어와 포르투갈어로 무료로 받을 수 있습니다."
+  },
+  "hero": {
+    "kicker": "책",
+    "epub": "EPUB 다운로드",
+    "pdf": "PDF 다운로드",
+    "all": "모든 형식"
+  },
+  "editions": {
+    "en": {
+      "title": "Competent Enough",
+      "subtitle": "A year putting artificial intelligence to the test, without fear and without hype.",
+      "language": "영어",
+      "alt": "3D 페이퍼백으로 본 Competent Enough. 지친 둥근 얼굴의 거대한 레트로퓨처 로봇이 1950년대 만국박람회에서 무릎을 꿇고 있고 군중이 지켜봅니다. 제목은 남색 책등을 따라 적혀 있습니다."
+    },
+    "pt": {
+      "title": "Competente o Suficiente",
+      "subtitle": "Um ano colocando a inteligência artificial à prova, sem medo e sem propaganda.",
+      "language": "브라질 포르투갈어",
+      "alt": "3D 페이퍼백으로 본 Competente o Suficiente. 지친 둥근 얼굴의 거대한 레트로퓨처 로봇이 1950년대 만국박람회에서 무릎을 꿇고 있고 군중이 지켜봅니다. 제목은 남색 책등을 따라 적혀 있습니다."
+    }
+  },
+  "intro": "올해 블로그에 쓴 글을 모아 하나의 이야기로 다시 구성하고 고쳐 썼습니다. 사실 확인도 다시 했고 그림도 넣었습니다. AI 때문에 불안하거나 혼란스러운 사람을 위한 책입니다. 대체될까 걱정하는 직장인, AGI가 2년 뒤에 온다는 기사를 읽은 부모, \"AI 전환\"을 권유받는 관리자 같은 사람들입니다.",
+  "preview": {
+    "title": "지금 버전은 {version}입니다",
+    "text": "이 책은 아직 작업 중이고, 완성본이라고 부를 때까지 새 버전이 계속 나옵니다. 이번 프리뷰는 {date}에 나왔습니다. 오타든 사실 관계든 틀린 곳을 찾으면 누구든 GitHub에 이슈를 열어 주세요.",
+    "issues": "이슈 열기",
+    "notes": "릴리스 노트"
+  },
+  "downloads": {
+    "title": "다운로드",
+    "lede": "두 판 모두 형식 세 가지씩, GitHub에서 바로 받습니다. 가입은 필요 없습니다.",
+    "formats": {
+      "epub": {
+        "name": "EPUB",
+        "for": "Kindle, Kobo, Apple Books 등 모든 전자책 단말기"
+      },
+      "ebook": {
+        "name": "화면용 PDF",
+        "for": "컴퓨터나 태블릿에서 읽기"
+      },
+      "print": {
+        "name": "인쇄용 PDF",
+        "for": "6 × 9인치 판형, 바로 인쇄 가능"
+      }
+    }
+  },
+  "inside": {
+    "title": "책의 구성",
+    "lede": "다섯 부로 나뉘고, 각 부는 사람들이 AI에 대해 저에게 계속 묻는 질문 하나에 답합니다.",
+    "stats": {
+      "pages": "인쇄판 쪽수",
+      "chapters": "장",
+      "glossary": "용어 해설 항목",
+      "references": "참고 문헌"
+    },
+    "parts": [
+      {
+        "title": "도대체 이건 뭘까",
+        "question": "지능이 있을까? AGI가 오고 있을까?"
+      },
+      {
+        "title": "마라톤",
+        "question": "정말 쓸모가 있을까, 아니면 다 데모일까?"
+      },
+      {
+        "title": "숫자와 선전",
+        "question": "어떤 AI가 최고일까? 발표를 믿어도 될까?"
+      },
+      {
+        "title": "열쇠는 누가 쥐고 있나",
+        "question": "내 것을 만지게 둬도 위험하지 않을까?"
+      },
+      {
+        "title": "내 일은 어떻게 되나?",
+        "question": "내 일자리를 가져갈까? 그다음은?"
+      }
+    ],
+    "extras": "막간 두 편, 기계 내부가 어떻게 돌아가는지 다룬 선택 부록(수식 없음), 연표, 실용 체크리스트, 각 장의 바탕이 된 원래 글 목록도 들어 있습니다."
+  },
+  "made": {
+    "title": "만드는 방법",
+    "lede": "책은 공개 저장소에 있고, 블로그와 맞춰 주는 도구도 같은 곳에 있습니다.",
+    "points": [
+      "문단마다 어느 글에서 왔는지 기록합니다. 글이 바뀌면 명령 하나로 어떤 장이 영향을 받는지 볼 수 있습니다.",
+      "다이어그램은 코드로 그립니다. AI로 만든 그림은 이미지 출처에 밝히고, 실제 사진에는 라이선스를 붙입니다.",
+      "빌드할 때마다 회귀 테스트와 무결성 검사를 돌립니다. 상호 참조, 인용, 그림, 그리고 영어판이 포르투갈어 원본과 맞는지 확인합니다."
+    ],
+    "repo": "GitHub의 소스"
+  },
+  "next": [
+    {
+      "title": "LLM의 한계",
+      "text": "AI가 잘 베끼는 것과 베끼지 못하는 것."
+    },
+    {
+      "title": "AGI가 중요하지 않은 이유",
+      "text": "정체기, 마케팅, 그리고 무서운 이야기들."
+    }
+  ]
+}

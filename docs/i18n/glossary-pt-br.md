@@ -74,6 +74,11 @@ Decisões de tradução além do glossário do brief (`docs/research/I18N-TRANSL
 | reinforcement learning | aprendizado por reforço |
 | locked file (model) | arquivo trancado |
 | ceiling (diagram) | teto |
+| Competent Enough (book) | Competente o Suficiente (título real da edição em português) |
+| hype (book subtitle) | propaganda (como no subtítulo real) |
+| preview (book version) | preview |
+| print edition / for screens | edição impressa / pra tela |
+| release notes | notas da release |
 
 ## Deliberate differences from English
 

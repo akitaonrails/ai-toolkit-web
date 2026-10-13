@@ -84,6 +84,10 @@
     "limits": {
       "label": "הגבולות של מודלי LLM",
       "note": "מה AI יכול להעתיק, ומה לא"
+    },
+    "book": {
+      "label": "Competent Enough, הספר",
+      "note": "שנה שבה העמדתי את ה-AI במבחן"
     }
   },
   "kicker": {

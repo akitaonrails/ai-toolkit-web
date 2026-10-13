@@ -68,3 +68,11 @@ Terms decided while translating the Hebrew catalogs. One English term maps to on
 | port (game port) | פורט |
 | job postings | מודעות דרושים |
 | The limits of LLMs (page, nav) | הגבולות של מודלי LLM |
+| book (kicker, nav) | ספר (nav: Competent Enough, הספר; the title stays in Latin letters) |
+| edition (of the book) | מהדורה |
+| preview (1.0-preview) | תצוגה מקדימה ("1.0-preview" kept as written) |
+| release notes | הערות גרסה |
+| build (book build) | build (kept) |
+| interlude | אינטרלוד |
+| checklist | צ׳קליסט |
+| hype | הייפ |

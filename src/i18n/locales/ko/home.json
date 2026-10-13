@@ -151,6 +151,12 @@
     "label": "추천 페이지",
     "items": [
       {
+        "kicker": "책",
+        "title": "Competent Enough",
+        "text": "두려움도 과대광고도 없이 AI를 시험한 1년을 담은 제 책입니다. 1.0-preview를 영어와 포르투갈어로 무료로 받을 수 있습니다.",
+        "cta": "책 받기"
+      },
+      {
         "kicker": "의견",
         "title": "LLM의 한계",
         "text": "PhotoCraft와 매일 나오는 게임 포트가 Adobe가 끝났다거나 다음은 프로그래머 차례라는 뜻은 아닙니다. AI가 잘 베끼는 것과 베끼지 못하는 것.",

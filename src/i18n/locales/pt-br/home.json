@@ -151,6 +151,12 @@
     "label": "Páginas em destaque",
     "items": [
       {
+        "kicker": "Livro",
+        "title": "Competente o Suficiente",
+        "text": "Meu livro sobre um ano colocando a IA à prova, sem medo e sem propaganda. A 1.0-preview já saiu em português e inglês, de graça pra baixar.",
+        "cta": "Baixar o livro"
+      },
+      {
         "kicker": "Opinião",
         "title": "Os limites das LLMs",
         "text": "PhotoCraft e os ports de games que saem todo dia não querem dizer que a Adobe morreu nem que os programadores são os próximos. O que a IA copia bem, e o que ela não consegue.",

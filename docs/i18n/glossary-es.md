@@ -103,3 +103,11 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | VW Beetle (quote) | Escarabajo |
 | "X is dead" (headline) | "X murió" |
 | percent in new strings | `81,5 %` (espacio antes de %) |
+| book titles (Competent Enough / Competente o Suficiente) | sin traducir (el libro solo existe en inglés y portugués) |
+| preview (book version) | vista previa (la versión `1.0-preview` se escribe tal cual) |
+| release notes | notas de la versión |
+| e-reader | lector electrónico |
+| typo | errata |
+| fact-check (verb) | verificar los hechos |
+| build (book build) | build |
+| regression suite | suite de regresión |

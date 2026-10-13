@@ -19,12 +19,12 @@ This site is an umbrella: many small tools, one person, one workflow. There is n
 | ghpending, podcasts | amber | `amber` |
 | tclock | red | `red` |
 | ai-memory | teal | `teal` |
-| Writing, the benchmark, the newsletter | rose | `rose` |
+| Writing, the benchmark, the newsletter, the book | rose | `rose` |
 | Games, ai-jail | orange | `orange` |
 | The limits of LLMs (`/limits/`) | blue | `blue` |
 | Setup (third-party tools), ai-memory's punchline | teal | `teal` |
 
-The mapping for pages lives in `src/data/site.ts` (`nav`, `extras`, `sisters`, `social`). The top bar groups pages into dropdowns with `navGroups`: Tools (the tool pages plus the sister sites) and Writing (the writing page, Why AGI doesn't matter, AI and students, The limits of LLMs); the drawer shows the same groups under headings. Put `data-hue` on an element and its children can use `var(--hue)` (text-safe), `var(--hue-soft)` (fill) and `var(--hue-vivid)` (dots, rules, glows; never text).
+The mapping for pages lives in `src/data/site.ts` (`nav`, `extras`, `sisters`, `social`). The top bar groups pages into dropdowns with `navGroups`: Tools (the tool pages plus the sister sites) and Writing (the writing page, the book, Why AGI doesn't matter, AI and students, The limits of LLMs); the drawer shows the same groups under headings. Put `data-hue` on an element and its children can use `var(--hue)` (text-safe), `var(--hue-soft)` (fill) and `var(--hue-vivid)` (dots, rules, glows; never text).
 
 ## Type
 

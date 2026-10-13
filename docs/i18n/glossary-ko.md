@@ -68,3 +68,10 @@ Terms decided while translating. One English term maps to one target term across
 | mixture of experts | 전문가 혼합(MoE) |
 | job postings / entry-level | 채용 공고 / 신입 |
 | slopcomps | "slopcomps" (kept, quoted) |
+| book (kicker, nav) | 책 |
+| Competent Enough / Competente o Suficiente (book titles) | kept as published, not translated |
+| preview (book release) | 프리뷰 (version strings like 1.0-preview kept) |
+| edition (of the book) | 판 (영어판, 인쇄판) |
+| interlude | 막간 |
+| release notes | 릴리스 노트 |
+| e-reader | 전자책 단말기 |

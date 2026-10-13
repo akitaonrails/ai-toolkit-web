@@ -20,6 +20,9 @@ import tclockShot from '@/assets/img/shots/tclock-nerv.png';
 import { sisters, sisterUrl, site, social } from '@/data/site';
 import { pick, articles, articleUrl } from '@/data/articles';
 import { genImage } from '@/data/gen-image';
+import { bookEdition } from '@/data/book';
+import bookEn from '@/assets/img/book/book-en.png';
+import bookPt from '@/assets/img/book/book-pt.png';
 import videos from '@/data/videos.json';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
@@ -42,9 +45,10 @@ const bigger = withText([
   { hue: 'violet', href: '/workflow/' },
 ] as const, raw<(Text & { link: string })[]>('sisters.items'));
 // The hero carousel: the intro first, then the pages I most want a new reader to find, each in its subject's hue
-// with that page's own picture (the newest TV appearance for the podcasts). Words in home.json `carousel.items`.
+// with that page's own picture (the 3D book for the book, the newest TV appearance for the podcasts). Words in home.json `carousel.items`.
 const thumbs = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/video/*.jpg', { eager: true });
 const featured = withText([
+  { id: 'book', hue: 'rose', href: '/book/', image: bookEdition(locale) === 'pt' ? bookPt : bookEn, bare: true },
   { id: 'limits', hue: 'blue', href: '/limits/', image: genImage('limits-facade', locale) },
   { id: 'agi', hue: 'red', href: '/agi/', image: genImage('agi-plateau', locale) },
   { id: 'students', hue: 'amber', href: '/students/', image: genImage('students-multiplier', locale) },
@@ -88,7 +92,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
                 <a href={href(f.href)} class="btn btn-primary">{f.cta}</a>
               </div>
             </div>
-            <a href={href(f.href)} class="slide-art" tabindex="-1" aria-hidden="true">
+            <a href={href(f.href)} class:list={['slide-art', 'bare' in f && 'bare']} tabindex="-1" aria-hidden="true">
               <Image src={f.image} alt="" widths={[480, 720, 960, 1280]} sizes="(min-width: 1024px) 36rem, 94vw" quality={82} loading="lazy" />
             </a>
           </div>
@@ -201,6 +205,9 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   .hue-rule { block-size: 3px; border-radius: 99px; background: var(--hue-vivid); }
   .slide-art { display: block; border-radius: 1.25rem; overflow: hidden; background: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow); }
   .slide-art :global(img) { display: block; inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  /* The 3D book is a cut-out with its own shadow: no frame, no crop. */
+  .slide-art.bare { background: none; border: 0; box-shadow: none; border-radius: 0; max-inline-size: 30rem; justify-self: center; }
+  .slide-art.bare :global(img) { aspect-ratio: auto; object-fit: contain; }
 
   .desk-steps { display: grid; gap: 2.5rem 3rem; margin-block-start: 1rem; }
   @media (min-width: 48rem) { .desk-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

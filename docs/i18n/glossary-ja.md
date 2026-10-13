@@ -122,3 +122,11 @@ Terms decided while translating. One English term maps to one target term across
 | postings (job) | 求人 |
 | Generative Fill / Neural Filters | 生成塗りつぶし / ニューラルフィルター（Adobeの日本語名） |
 | money amounts of 10,000 and up | 万/億で書く（16万5000ドル、1300億）。それ未満は1,650ドル |
+| book (kicker, nav) | 書籍（本文では「本」） |
+| book title (Competent Enough) | 英語のまま、『』で囲む（『Competent Enough』） |
+| edition (print / English) | 版（印刷版 / 英語版） |
+| preview (1.0-preview) | プレビュー（バージョン名は英語のまま） |
+| part (of the book) / chapter / interlude / appendix | 部 / 章 / 幕間 / 付録 |
+| fact-check | ファクトチェック |
+| release notes | リリースノート |
+| without fear and without hype | 恐れもハイプもなしに |

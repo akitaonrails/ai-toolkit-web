@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Competent Enough, the book",
+    "description": "Competent Enough, my book on a year of putting AI to the test without fear and without hype. A free EPUB and PDF preview, in English and Portuguese."
+  },
+  "hero": {
+    "kicker": "Book",
+    "epub": "Download the EPUB",
+    "pdf": "Download the PDF",
+    "all": "All formats"
+  },
+  "editions": {
+    "en": {
+      "title": "Competent Enough",
+      "subtitle": "A year putting artificial intelligence to the test, without fear and without hype.",
+      "language": "English",
+      "alt": "Competent Enough as a 3D paperback: a giant retro-futurist robot with a weary round face kneels at a 1950s World's Fair while a crowd watches. The title runs down the navy spine."
+    },
+    "pt": {
+      "title": "Competente o Suficiente",
+      "subtitle": "Um ano colocando a inteligência artificial à prova, sem medo e sem propaganda.",
+      "language": "Brazilian Portuguese",
+      "alt": "Competente o Suficiente as a 3D paperback: a giant retro-futurist robot with a weary round face kneels at a 1950s World's Fair while a crowd watches. The title runs down the navy spine."
+    }
+  },
+  "intro": "I took the year's articles from my blog, reorganized and rewrote them as one story, fact-checked them again and illustrated them. It's for anyone anxious or confused about AI: the professional afraid of being replaced, the parent who read that AGI is two years away, the manager being sold an \"AI transformation\".",
+  "preview": {
+    "title": "This is {version}",
+    "text": "The book is still a work in progress, and new versions will follow until I call it final. This preview came out on {date}. If you find anything wrong, from a typo to a fact, anyone is welcome to open an issue on GitHub.",
+    "issues": "Open an issue",
+    "notes": "Release notes"
+  },
+  "downloads": {
+    "title": "Download",
+    "lede": "Both editions, three formats each, straight from GitHub. No sign-up.",
+    "formats": {
+      "epub": {
+        "name": "EPUB",
+        "for": "Kindle, Kobo, Apple Books, any e-reader"
+      },
+      "ebook": {
+        "name": "PDF for screens",
+        "for": "Reading on a computer or tablet"
+      },
+      "print": {
+        "name": "PDF for print",
+        "for": "6 × 9 in pages, ready to print"
+      }
+    }
+  },
+  "inside": {
+    "title": "What's inside",
+    "lede": "Five parts, each answering a question people keep asking me about AI.",
+    "stats": {
+      "pages": "pages in the print edition",
+      "chapters": "chapters",
+      "glossary": "terms in the glossary",
+      "references": "references"
+    },
+    "parts": [
+      {
+        "title": "What is this thing, anyway",
+        "question": "Is it intelligent? Is AGI coming?"
+      },
+      {
+        "title": "The marathon",
+        "question": "Does it actually work, or is it all demo?"
+      },
+      {
+        "title": "Numbers and propaganda",
+        "question": "Which AI is best? Should I believe the announcements?"
+      },
+      {
+        "title": "Who holds the keys",
+        "question": "Is it dangerous to let it touch my things?"
+      },
+      {
+        "title": "What about my job?",
+        "question": "Will it take my job? What comes next?"
+      }
+    ],
+    "extras": "Plus two interludes, an optional appendix on how the machine works inside (no math), a timeline, practical checklists and the list of the original articles behind each chapter."
+  },
+  "made": {
+    "title": "How it's made",
+    "lede": "The book lives in an open repository, next to the tooling that keeps it in sync with my blog.",
+    "points": [
+      "Every paragraph records which article it came from. When an article changes, one command shows which chapters it affects.",
+      "Diagrams are drawn as code. AI-generated illustrations are disclosed in the image credits, and real photos carry their licenses.",
+      "Every build runs a regression suite and an integrity check of cross-references, citations, figures and the English edition's parity with the Portuguese original."
+    ],
+    "repo": "The source on GitHub"
+  },
+  "next": [
+    {
+      "title": "The limits of LLMs",
+      "text": "What AI copies well, and what it can't."
+    },
+    {
+      "title": "Why AGI doesn't matter",
+      "text": "The plateau, the marketing and the scary stories."
+    }
+  ]
+}

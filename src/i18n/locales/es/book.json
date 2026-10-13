@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Competent Enough, el libro",
+    "description": "Competent Enough, mi libro sobre un año poniendo a prueba la IA sin miedo y sin hype. Vista previa gratis en EPUB y PDF, en inglés y portugués."
+  },
+  "hero": {
+    "kicker": "Libro",
+    "epub": "Descargar el EPUB",
+    "pdf": "Descargar el PDF",
+    "all": "Todos los formatos"
+  },
+  "editions": {
+    "en": {
+      "title": "Competent Enough",
+      "subtitle": "A year putting artificial intelligence to the test, without fear and without hype.",
+      "language": "Inglés",
+      "alt": "Competent Enough como libro de bolsillo en 3D: un robot gigante retrofuturista, de cara redonda y cansada, se arrodilla en una Feria Mundial de los años 50 mientras la multitud lo mira. El título recorre el lomo azul marino."
+    },
+    "pt": {
+      "title": "Competente o Suficiente",
+      "subtitle": "Um ano colocando a inteligência artificial à prova, sem medo e sem propaganda.",
+      "language": "Portugués de Brasil",
+      "alt": "Competente o Suficiente como libro de bolsillo en 3D: un robot gigante retrofuturista, de cara redonda y cansada, se arrodilla en una Feria Mundial de los años 50 mientras la multitud lo mira. El título recorre el lomo azul marino."
+    }
+  },
+  "intro": "Tomé los artículos del año de mi blog, los reorganicé y reescribí como una sola historia, volví a verificar los hechos y los ilustré. Es para quien está ansioso o confundido con la IA: el profesional con miedo a ser reemplazado, el padre que leyó que la AGI llega en dos años, el gerente al que le están vendiendo una \"transformación con IA\".",
+  "preview": {
+    "title": "Esta es la {version}",
+    "text": "El libro sigue en desarrollo y saldrán nuevas versiones hasta que lo dé por terminado. Esta vista previa salió el {date}. Si encuentras algún error, desde una errata hasta un dato, cualquiera puede abrir un issue en GitHub.",
+    "issues": "Abrir un issue",
+    "notes": "Notas de la versión"
+  },
+  "downloads": {
+    "title": "Descargar",
+    "lede": "Las dos ediciones, en inglés y portugués, tres formatos cada una, directo desde GitHub. Sin registro.",
+    "formats": {
+      "epub": {
+        "name": "EPUB",
+        "for": "Kindle, Kobo, Apple Books, cualquier lector electrónico"
+      },
+      "ebook": {
+        "name": "PDF para pantalla",
+        "for": "Para leer en la computadora o la tableta"
+      },
+      "print": {
+        "name": "PDF para imprimir",
+        "for": "Páginas de 6 × 9 pulgadas, listas para imprimir"
+      }
+    }
+  },
+  "inside": {
+    "title": "Qué hay dentro",
+    "lede": "Cinco partes, y cada una responde una pregunta que me hacen todo el tiempo sobre la IA.",
+    "stats": {
+      "pages": "páginas en la edición impresa",
+      "chapters": "capítulos",
+      "glossary": "términos en el glosario",
+      "references": "referencias"
+    },
+    "parts": [
+      {
+        "title": "Al final, qué es esto",
+        "question": "¿Es inteligente? ¿Viene la AGI?"
+      },
+      {
+        "title": "La maratón",
+        "question": "¿Funciona de verdad o es todo demo?"
+      },
+      {
+        "title": "Números y propaganda",
+        "question": "¿Cuál es la mejor IA? ¿Me creo los anuncios?"
+      },
+      {
+        "title": "Quién tiene las llaves",
+        "question": "¿Es peligroso dejar que toque mis cosas?"
+      },
+      {
+        "title": "¿Y mi trabajo?",
+        "question": "¿Me va a quitar el trabajo? ¿Qué viene después?"
+      }
+    ],
+    "extras": "Además, dos interludios, un apéndice opcional sobre cómo funciona la máquina por dentro (sin matemáticas), una cronología, listas de verificación prácticas y la lista de los artículos originales detrás de cada capítulo."
+  },
+  "made": {
+    "title": "Cómo está hecho",
+    "lede": "El libro vive en un repositorio abierto, junto a las herramientas que lo mantienen sincronizado con mi blog.",
+    "points": [
+      "Cada párrafo registra de qué artículo salió. Cuando un artículo cambia, un comando muestra qué capítulos afecta.",
+      "Los diagramas se dibujan como código. Las ilustraciones generadas con IA se declaran en los créditos de imagen, y las fotos reales llevan sus licencias.",
+      "Cada build corre una suite de regresión y una verificación de integridad de referencias cruzadas, citas, figuras y de que la edición en inglés esté a la par del original en portugués."
+    ],
+    "repo": "El código fuente en GitHub"
+  },
+  "next": [
+    {
+      "title": "Los límites de los LLMs",
+      "text": "Lo que la IA copia bien, y lo que no puede."
+    },
+    {
+      "title": "Por qué la AGI no importa",
+      "text": "La meseta, el marketing y las historias de miedo."
+    }
+  ]
+}

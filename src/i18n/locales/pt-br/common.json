@@ -84,6 +84,10 @@
     "limits": {
       "label": "Os limites das LLMs",
       "note": "O que a IA consegue copiar, e o que não consegue"
+    },
+    "book": {
+      "label": "Competente o Suficiente, o livro",
+      "note": "Um ano colocando a IA à prova"
     }
   },
   "kicker": {

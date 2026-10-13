@@ -150,6 +150,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `/games/` | distrobox-gaming and omarchy-games-menu repos |
 | `/agi/` | The owner's 2026 posts and his X post of 2026-09-26, plus the outside sources in section 11 |
 | `/students/` | The owner's two X posts of 2026-09-25, his 2026 posts, Akitando, the ai-memory repository, and the outside sources in section 12 |
+| `/book/` | The book repository (`~/Projects/ai-book-2026`): README, CHANGELOG, `book/outline.yml`, the release and its PDFs (section 14) |
 | `/limits/` | The owner's posts of 2026-09-28, 2026-10-11, 2026-10-12 and 2026-10-13, the PhotoCraft and REA repositories, and the outside sources in section 13 |
 | `/frank/` | The six Frank repos and their blog posts (section 10), owner's words on the name |
 
@@ -243,4 +244,14 @@ Asked for by the owner on 2026-10-13, for readers who came from "Adobe is dead",
 **Outside sources, fetched 2026-10-13.** Bun's post (535,496 lines of Zig, 1,448 files, 11 days from May 3 to May 14, about 64 Claudes at a time on a pre-release Claude Fable 5, about $165,000 at API prices, about 60,000 tests per platform with over a million `expect()` calls, 19 regressions fixed, "3 engineers with full context about a year"). Anthropic's C compiler (2026-02-05: 16 agents, nearly 2,000 sessions, under $20,000, builds Linux 6.9 on three architectures; no own assembler and linker, calls GCC for 16-bit boot code, output slower than GCC with optimizations off). DecompileBench (arXiv 2505.11340: LLM decompilers more readable, 52.2% lower functional correctness, 23,400 functions). Kotaku, 2026-10-05, on "slopcomps" (the Banjo-Tooie port "entirely AI-generated", patching from the wrong side, the recomp teams' no-AI stance). Indeed Hiring Lab, 2026-07-08 (see section 12). Prices: GPT-4 at launch (March 2023, $30/$60 per million tokens) against Fable 5.1 and GPT-6 Astra ($10/$50), from the vendors' pricing pages as cited in the owner's post; Epoch AI on the price of a fixed quality level (9 to 900 times a year in 2025, "very roughly 5 to 10 times per year" in its 2026 review). The history milestones (Phoenix BIOS, Sega v. Accolade, Sony v. Connectix, Ghidra, the Mario 64 decomp, Zelda 64: Recompiled), GIMP and CMYK, Adobe's cloud-only features, Camera Raw profiles and Pantone come from the owner's post and the links in it.
 
 **Checked and corrected before publishing.** A research pass reported PhotoCraft as "ArtCraft" with other star counts and found no Gizmodo review; the GitHub API confirmed `storytold/photocraft` as the owner's post describes it, and the page does not cite the press reviews. Left out as unverified or contested: Amodei's Davos 2026 "six to 12 months" (secondary sources only), METR time horizons above 16 hours, claims that flagship token prices rose, and the September 2026 paper on LLM refinement of Ghidra output (cited in the owner's post, not re-checked).
+
+## 14. The book (`/book/`)
+
+Asked for by the owner on 2026-10-13. The book is *Competent Enough* (English) / *Competente o Suficiente* (Portuguese), source at https://github.com/akitaonrails/ai-book-2026, local checkout `~/Projects/ai-book-2026`. Structure and links in `src/data/book.ts`, words in `en/book.json`, the 3D covers in `src/assets/img/book/` (docs/images.md, "Book").
+
+**Version.** The owner calls it "1.0-preview" and asked the page to say it is a work in progress and that anyone may open an issue. The downloads point at the release `v1.0.0-preview.2` (2026-10-13), the newest; every release so far is a GitHub pre-release, so `/releases/latest` does not work and the tag is fixed in `book.ts`. All six asset URLs and the issues page answered 200 on 2026-10-13.
+
+**Numbers, read 2026-10-13.** Pages from `pdfinfo` on the release's own files: print PDF (6 × 9 in) 459 pages in English and 466 in Portuguese, ebook PDF 434 and 445. The owner had guessed about 350; the 3D model uses the real thickness. Chapters (20), parts (5), glossary terms (144) and references (292) from the README and CHANGELOG. The five parts and their questions from the README and `_quarto-en.yml` / `book/outline.yml`. "How it's made" from the README (provenance per paragraph, `rake drift`, diagrams as code, disclosed AI illustrations) and the 1.0.0-preview.2 CHANGELOG (integrity checker and regression suite run before every build).
+
+**Gap signal.** A new tag in the book repository: update `tag`, `released`, the page counts and, if the version name changes, `label`; re-render the 3D covers when the cover changes.
 
