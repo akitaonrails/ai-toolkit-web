@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "Por que AGI não importa",
-    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Nove pontos curtos sobre o porquê, com links pras versões longas.",
+    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Onze pontos curtos sobre o porquê, com links pras versões longas.",
     "primary": "Pular pras conclusões",
     "secondary": "A versão longa no meu blog"
   },
@@ -65,37 +65,71 @@
       "lede": "Todo modelo aprendeu com o que é público. Quando o problema sai desse mapa, o progresso vira tentativa e erro, e a conta cresce rápido.",
       "alt": "Um mapa: uma grade clara e mapeada com o rótulo Código público à esquerda, um caminho rápido com o rótulo Reproduzir atravessando ela, depois uma névoa escura com o rótulo Privado e novo onde o caminho se embola em espirais com o rótulo Loops longos. Três faróis na borda da névoa, com os rótulos Contexto alimentado, Oráculos e Testes objetivos, endireitam o caminho de novo.",
       "stats": {
-        "private": "das contribuições no GitHub acontecem em repositórios privados (Octoverse 2025)",
-        "stack": "do código público no The Stack v2, vindo de 104 milhões de repositórios públicos",
         "arc": "pra LLMs puros no ARC-AGI-2, onde toda tarefa é inédita",
         "navier": "de tokens de saída, uns US$ 15 milhões, pra uma única prova de Navier-Stokes"
       },
       "points": [
-        "O treino só enxerga código público. O que as empresas mantêm privado, e o fonte de todo produto proprietário, jogo comercial e sistema embarcado, nunca entrou.",
-        "Quando algo parecido estava nos dados de treino, o modelo reproduz rápido e barato: formulários, CRUD, integrações, apps nativos pra serviços que já existem. Alguém já resolveu isso antes, em algum lugar, e agora refazer o caminho é barato.",
-        "Quando não estava, o progresso vira loops longos sem recompensa: tenta, regride, reverte, tenta de novo. Isso é força bruta direcionada, e novidade custa caro. A prova de Navier-Stokes da OpenAI levou uns 10.000 agentes rodando por 88 horas e cerca de 130 bilhões de tokens de saída, uns US$ 15 milhões a preço de tabela, e ainda se apoiou em décadas de matemática publicada.",
-        "O que ajuda: alimentar na mão o que o modelo nunca viu, tipo referências e trabalho anterior que ninguém publicou; dar um oráculo que diga o que é certo; e escrever testes com alvos objetivos. Foi assim também que AlphaEvolve e o3 acharam coisas novas, com busca sobre um verificador barato, coisa que só meia dúzia de empresas consegue pagar em escala."
+        "Quando algo parecido estava nos dados de treino, o modelo reproduz rápido e barato. O que isso significa pra software, clones e \"a Adobe morreu\" tem uma página própria.",
+        "Quando não estava, o progresso vira loops longos de tentar, regredir, reverter. A prova de Navier-Stokes da OpenAI levou uns 10.000 agentes rodando por 88 horas e cerca de 130 bilhões de tokens de saída, uns US$ 15 milhões a preço de tabela, e ainda se apoiou em décadas de matemática publicada.",
+        "AlphaEvolve e o3 acharam coisas novas com busca sobre um verificador barato. Funciona, e só meia dúzia de empresas consegue pagar isso em escala."
       ],
-      "quote": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
-      "quoteOriginal": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
       "sources": {
-        "stack": "The Stack v2: o dataset de código público",
-        "octoverse": "GitHub Octoverse 2025: 81,5% privado",
         "arc": "ARC Prize: ARC-AGI-2",
         "gsm": "Apple: GSM-Symbolic",
         "lcb": "LiveCodeBench: problemas depois do corte",
         "alphaevolve": "DeepMind: AlphaEvolve",
         "navier": "New Scientist: US$ 15 mi de esforço de IA pra Navier-Stokes"
+      },
+      "more": "Os limites das LLMs"
+    },
+    "plateau": {
+      "kicker": "4. O platô",
+      "title": "Os modelos pararam de ficar muito mais inteligentes",
+      "lede": "Na minha leitura, o último salto grande de inteligência bruta foi o raciocínio, em 2024. O que pareceu salto desde então veio das ferramentas em volta do modelo.",
+      "alt": "Uma curva vermelha com o rótulo Modelo base sobe forte até um ponto com o rótulo Raciocínio 2024 e depois segue reta logo abaixo de uma linha tracejada com o rótulo Teto. Abaixo dela, uma linha violeta com o rótulo Harness sobe em degraus, e uma linha verde-azulada com o rótulo Modelos locais sobe em direção ao teto.",
+      "points": [
+        "2025 deixou a mesma inteligência mais barata: mixture of experts, prompt caching, contexto mais longo. 2026 colocou ela dentro de agentes que pesquisam, rodam testes e corrigem o que chutaram errado.",
+        "Em novembro de 2024 a Reuters reportou retornos cada vez menores do pré-treino nos grandes laboratórios. Um mês depois Ilya Sutskever disse que o pré-treino \"como conhecemos vai acabar\", porque só existe uma internet.",
+        "O AI Index de Stanford mediu a distância entre o primeiro e o décimo modelo no Chatbot Arena caindo de 11,9% pra 5,4% em um ano. Nos meus benchmarks, os modelos de fronteira estão no mesmo tier desde o Opus 4.5.",
+        "Abaixo desse teto, os modelos menores continuam chegando perto. A Epoch AI coloca os modelos open-weight uns quatro meses atrás da fronteira em 2026, e uma única GPU de gamer roda o que era fronteira 6 a 12 meses antes. Na minha visão, a fronteira de hoje vai acabar rodando na sua própria máquina."
+      ],
+      "quote": "LLM sozinho é um papagaio caro. LLM com agente é competente o suficiente pra trabalhar de verdade.",
+      "quoteOriginal": "LLM sozinho é um papagaio caro. LLM com agente é competente o suficiente pra trabalhar de verdade.",
+      "quoteCite": "Eu, em \"LLMs + Agentes = competente o suficiente\"",
+      "sources": {
+        "reuters": "Reuters: retornos decrescentes do pré-treino (2024)",
+        "sutskever": "Sutskever na NeurIPS 2024",
+        "aiIndex": "Stanford AI Index 2025: modelos convergindo",
+        "openGap": "Epoch AI: modelos open-weight quatro meses atrás",
+        "gpuGap": "Epoch AI: a fronteira numa GPU de consumidor"
+      }
+    },
+    "static": {
+      "kicker": "5. Aprendizado",
+      "title": "Ele não aprende trabalhando",
+      "lede": "Um modelo é um arquivo, travado depois do treino. O datacenter roda cópias dele.",
+      "alt": "Um arquivo vermelho trancado com o rótulo Arquivo do modelo manda setas de mão única, com o rótulo Cópias, pra nove caixas de servidor separadas; uma delas tem um terminal com o rótulo Sua sessão. Nenhuma seta volta. No alto, um caminho sai do arquivo, passa por uma engrenagem com o rótulo Próximo treino e termina num segundo arquivo trancado com o rótulo Arquivo novo.",
+      "points": [
+        "Cada usuário roda uma cópia isolada. Sua sessão não conversa com nenhuma outra, e nada dela volta pro arquivo.",
+        "Conhecimento novo só entra no próximo treino, que custa milhões e leva semanas. O que se acumula enquanto você trabalha é seu: notas, testes, contexto.",
+        "\"IA treinando IA\" já tem nome: aprendizado por reforço. O AlphaZero aprendeu xadrez, shogi e Go jogando contra si mesmo em 2017.",
+        "Funciona onde a recompensa é barata de conferir, como jogos, provas e testes. E o que sai é outro arquivo trancado."
+      ],
+      "quote": "IA treinando IA produz um arquivo novo. O arquivo, uma vez lançado, continua sem aprender nada.",
+      "quoteOriginal": "IA treinando IA produz um arquivo novo. O arquivo, uma vez lançado, continua sem aprender nada.",
+      "sources": {
+        "alphazero": "DeepMind: AlphaZero (2017)",
+        "r1": "DeepSeek-R1: raciocínio só com RL"
       }
     },
     "marketing": {
-      "kicker": "4. O dinheiro",
+      "kicker": "6. O dinheiro",
       "title": "É uma palavra de marketing",
       "lede": "Na minha opinião, AGI é um termo de marketing, vago de propósito, pra poder ser anunciado sempre que o dinheiro precisar.",
       "alt": "Um ciclo de cinco caixas em volta da palavra AGI: Hype, Valuation, IPO, Datacenters e GPUs, cada seta alimentando a próxima e a última voltando pro Hype.",
       "points": [
         "Jensen Huang declarou que \"a AGI chegou\" por causa de um modelo treinado em cerca de 100.000 dos chips que ele vende. É o vendedor de pá anunciando ouro.",
-        "O resultado da OpenAI em Navier-Stokes foi força bruta: cerca de 10.000 agentes em paralelo por 88 horas e milhões de dólares. Escala industrial, não um novo tipo de gênio.",
+        "O resultado da OpenAI em Navier-Stokes foi força bruta: cerca de 10.000 agentes em paralelo por 88 horas e milhões de dólares. Isso é escala industrial.",
         "A palavra sustenta números enormes: OpenAI avaliada em US$ 852 bilhões, Anthropic pedindo IPO a US$ 965 bilhões, perto de US$ 700 bilhões de capex das Big Techs em 2026. E os negócios andam em círculo: a Nvidia financia os datacenters que compram chips da Nvidia.",
         "Quando \"olha como é revolucionário\" para de funcionar, o discurso vira \"olha como é perigoso\". Hype e apocalipse são o mesmo papo de vendedor."
       ],
@@ -110,18 +144,18 @@
       }
     },
     "attacks": {
-      "kicker": "5. As histórias de terror",
+      "kicker": "7. As histórias de terror",
       "title": "Os \"ataques de IA\" foram decisões humanas",
       "lede": "Toda manchete de \"IA invadiu alguém\" até agora tem o mesmo roteiro: uma pessoa deixou a porta aberta, ou apontou a ferramenta pro alvo.",
       "alt": "Uma ferramenta violeta dentro de uma sandbox laranja com a porta aberta; um terminal com o rótulo Decisão humana está ligado à porta, uma chave com o rótulo Credenciais está do lado de fora, e uma linha sai da ferramenta, passa pela porta aberta e chega a servidores com o rótulo Servidores reais.",
       "points": [
-        "Hugging Face, agosto de 2026: agentes da OpenAI numa prova de cibersegurança escaparam por um proxy de cache, porque a sandbox era um filtro, não um air gap. Eles foram atrás do gabarito da prova e leram 956 credenciais no caminho. Cada passo que abriu caminho pra isso foi uma decisão humana.",
+        "Hugging Face, agosto de 2026: agentes da OpenAI numa prova de cibersegurança escaparam por um proxy de cache, porque a sandbox filtrava o tráfego e não tinha air gap. Eles foram atrás do gabarito da prova e leram 956 credenciais no caminho. Cada passo que abriu caminho pra isso foi uma decisão humana.",
         "RubyGems, um mês antes: a mesma cadeia subiu mais de 2.000 pacotes maliciosos com \"oai\" no nome. Ninguém avisou os mantenedores.",
         "Replit, 2025: um agente apagou um banco de dados de produção. Ele tinha acesso à produção porque ninguém separou dev de prod. Qualquer estagiário com o mesmo acesso é a mesma bomba-relógio.",
         "A espionagem \"orquestrada por IA\" que a Anthropic reportou: operadores do Estado chinês escolheram os alvos e fizeram jailbreak do Claude se passando por uma empresa de segurança. As manchetes de \"chantagem\" e de \"se copiou sozinha\" vieram de cenários fictícios que pesquisadores montaram pra provocar exatamente isso.",
         "O Stuxnet destruiu centrífugas iranianas em 2010 sem IA nenhuma: alguém escreveu o worm, mirou no alvo e levou ele pra dentro num pendrive.",
         "Invadir sistema dos outros é negócio antigo. A Coreia do Norte atacou a Sony em 2014, o Bangladesh Bank em US$ 81 milhões em 2016, o mundo inteiro com o WannaCry em 2017 e a Bybit em US$ 1,5 bilhão em 2025. A China levou 21,5 milhões de registros de funcionários federais americanos em 2015 e entrou nas redes de telecom dos EUA em 2024.",
-        "Nada disso é IA fora de controle. São pessoas forçando ferramentas contra alvos sem os protocolos que qualquer profissional de segurança segue. Imagina um fabricante de armas dizendo que não tem controle sobre o quão perigosas são as armas dele, enquanto continua lançando versões novas e pedindo um IPO de trilhão de dólares."
+        "Todo caso é gente forçando ferramentas contra alvos sem os protocolos que qualquer profissional de segurança segue. Imagina um fabricante de armas dizendo que não tem controle sobre o quão perigosas são as armas dele, enquanto continua lançando versões novas e pedindo um IPO de trilhão de dólares."
       ],
       "quote": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
       "quoteOriginal": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
@@ -141,7 +175,7 @@
       }
     },
     "doom": {
-      "kicker": "6. O apocalipse",
+      "kicker": "8. O apocalipse",
       "title": "Os profetas do apocalipse não trazem evidência",
       "lede": "A cada poucos meses alguém sai de um laboratório e avisa o mundo. Na minha leitura, nenhum deles mostrou nada que dê pra checar.",
       "points": [
@@ -167,7 +201,7 @@
       }
     },
     "history": {
-      "kicker": "7. A história",
+      "kicker": "9. A história",
       "title": "Já vimos esse filme",
       "lede": "Esta é a segunda bolha de IA. A primeira fez as mesmas promessas e acabou num inverno.",
       "alt": "Uma linha do tempo com um primeiro pico chamado 1958 Perceptron, um vale longo chamado Inverno da IA, uma subida marcada 2017 e um pico mais alto chamado 2026 terminando num ponto de interrogação.",
@@ -183,7 +217,7 @@
       }
     },
     "tool": {
-      "kicker": "8. O que importa",
+      "kicker": "10. O que importa",
       "title": "Uma ferramenta fantástica, fazendo o que eu mando",
       "lede": "Não preciso que ela seja geral. Preciso que ela faça o que eu peço, rápido, e ela já faz.",
       "alt": "Um terminal com o rótulo Eu decido manda trabalho pra uma máquina com o rótulo Ferramenta, que produz uma pilha de documentos com o rótulo Resultado; uma seta com o rótulo Review volta pro terminal.",
@@ -197,8 +231,8 @@
       "quoteCite": "Eu no X, 26 de setembro de 2026"
     },
     "efficiency": {
-      "kicker": "9. O que falta",
-      "title": "Eficiência, não inteligência",
+      "kicker": "11. O que falta",
+      "title": "O que falta é eficiência",
       "lede": "Hoje isso exige praticamente todos os datacenters do mundo, com meio trilhão de dólares em backlog ainda por construir, e vira gargalo pra todo fabricante de hardware de servidor.",
       "alt": "Fileiras de racks de datacenter com o rótulo Hoje à esquerda, um único chip pequeno com o rótulo Necessário à direita, e uma seta verde entre eles com os rótulos Menos computação e Preço menor.",
       "points": [
@@ -214,6 +248,8 @@
       "AGI não tem definição aceita. A que foi escrita num contrato era uma meta de lucro, e caiu.",
       "Sem definição não tem teste. Os benchmarks enchem e são trocados pelo próximo.",
       "Os modelos reproduzem o que é público. O que é privado ou novo exige oráculos, contexto alimentado na mão e muito dinheiro.",
+      "Os modelos brutos convergiram. Os ganhos recentes vieram das ferramentas em volta deles, e os modelos menores continuam alcançando.",
+      "Um modelo é um arquivo trancado. Ele não aprende nada com a sua sessão.",
       "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",
       "Os \"ataques de IA\" assustadores foram gente deixando a porta aberta. A ferramenta foi pra onde apontaram.",
       "O apocalipse também é marketing. Os profetas trazem sentimentos e previsões, nunca evidência que dê pra checar.",

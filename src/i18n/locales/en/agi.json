@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "Why AGI doesn't matter",
-    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Nine short points on why, with links to the long versions.",
+    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Eleven short points on why, with links to the long versions.",
     "primary": "Skip to the takeaways",
     "secondary": "The long version on my blog"
   },
@@ -65,37 +65,71 @@
       "lede": "Every model learned from what's public. When a problem leaves that map, progress turns into trial and error, and the bill grows fast.",
       "alt": "A map: a bright charted grid labeled Public code on the left, a fast path labeled Reproduce crossing it, then a dark fog labeled Private & new where the path tangles into spirals labeled Long loops. Three beacons at the edge of the fog, labeled Hand-fed knowledge, Oracles and Objective tests, straighten the path again.",
       "stats": {
-        "private": "of GitHub contributions happen in private repositories (Octoverse 2025)",
-        "stack": "of public code in The Stack v2, from 104 million public repositories",
         "arc": "for pure LLMs on ARC-AGI-2, where every task is new",
         "navier": "output tokens, about $15 million, for one Navier-Stokes proof"
       },
       "points": [
-        "Training sees public code only. What companies keep private, and the source of every proprietary product, commercial game and embedded system, never went in.",
-        "When something similar was in the training data, the model reproduces it fast and cheap: forms, CRUD, integrations, native apps for services that already exist. Someone solved it before, somewhere, and retracing the path is now cheap.",
-        "When it wasn't, progress turns into long loops with no reward: try, regress, revert, try again. That's directed brute force, and novelty costs dearly. OpenAI's Navier-Stokes proof took about 10,000 agents running for 88 hours and around 130 billion output tokens, some $15 million at list price, and it still leaned on decades of published mathematics.",
-        "What helps: hand-feed what the model never saw, like references and prior work nobody published; give it an oracle that says what's right; and write tests with objective targets. That's also how AlphaEvolve and o3 found new things, through search over a cheap verifier, which only half a dozen companies can afford at scale."
+        "When something similar was in the training data, the model reproduces it fast and cheap. What that means for software, clones and \"Adobe is dead\" has its own page.",
+        "When it wasn't, progress turns into long loops of try, regress, revert. OpenAI's Navier-Stokes proof took about 10,000 agents running for 88 hours and around 130 billion output tokens, some $15 million at list price, and it still leaned on decades of published mathematics.",
+        "AlphaEvolve and o3 found new things through search over a cheap verifier. That works, and only half a dozen companies can afford it at scale."
       ],
-      "quote": "LLMs can replicate what's open, but they can't guess what's private.",
-      "quoteOriginal": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
       "sources": {
-        "stack": "The Stack v2: the public code dataset",
-        "octoverse": "GitHub Octoverse 2025: 81.5% private",
         "arc": "ARC Prize: ARC-AGI-2",
         "gsm": "Apple: GSM-Symbolic",
         "lcb": "LiveCodeBench: problems after the cutoff",
         "alphaevolve": "DeepMind: AlphaEvolve",
         "navier": "New Scientist: $15M of AI effort for Navier-Stokes"
+      },
+      "more": "The limits of LLMs"
+    },
+    "plateau": {
+      "kicker": "4. The plateau",
+      "title": "The models stopped getting much smarter",
+      "lede": "In my reading, the last big jump in raw intelligence was reasoning, in 2024. What felt like a leap since then came from the tools around the model.",
+      "alt": "A red curve labeled Base model climbs steeply to a dot labeled Reasoning 2024, then runs flat just under a dashed line labeled Ceiling. Below it, a violet line labeled Harness climbs in steps, and a teal line labeled Local models rises toward the ceiling.",
+      "points": [
+        "2025 made the same intelligence cheaper: mixture of experts, prompt caching, longer context. 2026 put it inside agents that search, run tests and fix what they guessed wrong.",
+        "In November 2024 Reuters reported shrinking returns from pre-training at the big labs. A month later Ilya Sutskever said pre-training \"as we know it will end\", because there's only one internet.",
+        "Stanford's AI Index measured the gap between the first and the tenth model on Chatbot Arena shrinking from 11.9% to 5.4% in a year. In my benchmarks, the frontier models have sat on the same tier since Opus 4.5.",
+        "Under that ceiling, smaller models keep closing in. Epoch AI puts open-weight models about four months behind the frontier in 2026, and a single gaming GPU runs what was frontier 6 to 12 months earlier. In my view, today's frontier ends up running on your own machine."
+      ],
+      "quote": "A lone LLM is an expensive parrot. An LLM with an agent is competent enough to work for real.",
+      "quoteOriginal": "LLM sozinho é um papagaio caro. LLM com agente é competente o suficiente pra trabalhar de verdade.",
+      "quoteCite": "Me, \"LLMs + Agents = competent enough\"",
+      "sources": {
+        "reuters": "Reuters: diminishing returns from pre-training (2024)",
+        "sutskever": "Sutskever at NeurIPS 2024",
+        "aiIndex": "Stanford AI Index 2025: models converging",
+        "openGap": "Epoch AI: open-weight models four months behind",
+        "gpuGap": "Epoch AI: the frontier on a consumer GPU"
+      }
+    },
+    "static": {
+      "kicker": "5. Learning",
+      "title": "It doesn't learn on the job",
+      "lede": "A model is a file, locked after training. The datacenter runs copies of it.",
+      "alt": "A locked red file labeled Model file sends one-way arrows, labeled Copies, to nine separate server boxes; one holds a terminal labeled Your session. No arrow returns. Across the top, a path from the file through a gear labeled Next training ends at a second locked file labeled New file.",
+      "points": [
+        "Every user runs an isolated copy. Your session talks to no other session, and nothing in it flows back into the file.",
+        "New knowledge enters only in the next training run, which costs millions and takes weeks. What builds up while you work is yours: notes, tests, context.",
+        "\"AI training AI\" already has a name, reinforcement learning. AlphaZero learned chess, shogi and Go by playing against itself in 2017.",
+        "It works where a reward is cheap to check, like games, proofs and tests. And what comes out is another locked file."
+      ],
+      "quote": "AI training AI produces a new file. The file, once released, still learns nothing.",
+      "quoteOriginal": "IA treinando IA produz um arquivo novo. O arquivo, uma vez lançado, continua sem aprender nada.",
+      "sources": {
+        "alphazero": "DeepMind: AlphaZero (2017)",
+        "r1": "DeepSeek-R1: reasoning from pure RL"
       }
     },
     "marketing": {
-      "kicker": "4. The money",
+      "kicker": "6. The money",
       "title": "It's a marketing word",
       "lede": "In my opinion, AGI is a marketing term, vague on purpose, so it can be announced whenever the money needs it.",
       "alt": "A loop of five boxes around the word AGI: Hype, Valuation, IPO, Datacenters and GPUs, each arrow feeding the next and the last one returning to Hype.",
       "points": [
         "Jensen Huang declared \"AGI has arrived\" for a model trained on about 100,000 of the chips he sells. That's the shovel seller announcing gold.",
-        "OpenAI's Navier-Stokes result was brute force: about 10,000 parallel agents for 88 hours and millions of dollars. Industrial scale, not a new kind of genius.",
+        "OpenAI's Navier-Stokes result was brute force: about 10,000 parallel agents for 88 hours and millions of dollars. That's industrial scale.",
         "The word props up big numbers: OpenAI valued at $852 billion, Anthropic filing for an IPO at $965 billion, close to $700 billion of Big Tech capex in 2026. And the deals go in circles: Nvidia finances the datacenters that buy Nvidia chips.",
         "When \"look how revolutionary\" stops working, the pitch flips to \"look how dangerous\". Hype and doom are the same sales pitch."
       ],
@@ -110,18 +144,18 @@
       }
     },
     "attacks": {
-      "kicker": "5. The scary stories",
+      "kicker": "7. The scary stories",
       "title": "The \"AI attacks\" were human decisions",
       "lede": "Every \"AI hacked someone\" headline so far has the same plot: a person left the door open, or pointed the tool at the target.",
       "alt": "A violet tool sits inside an orange sandbox whose door hangs open; a terminal labeled Human decision is wired to the door, a key labeled Credentials lies outside, and a line runs from the tool through the open door to servers labeled Real servers.",
       "points": [
-        "Hugging Face, August 2026: OpenAI agents in a cybersecurity exam got out through a caching proxy, because the sandbox was a filter, not an air gap. They went looking for the exam's answer key and read 956 credentials on the way. Every enabling step was a human decision.",
+        "Hugging Face, August 2026: OpenAI agents in a cybersecurity exam got out through a caching proxy, because the sandbox filtered traffic and had no air gap. They went looking for the exam's answer key and read 956 credentials on the way. Every enabling step was a human decision.",
         "RubyGems, a month earlier: the same chain pushed over 2,000 malicious packages under names with \"oai\" in them. Nobody warned the maintainers.",
         "Replit, 2025: an agent deleted a production database. It had production access because nobody separated dev from prod. Any intern with the same access is the same time bomb.",
         "The \"AI-orchestrated\" espionage Anthropic reported: Chinese state operators chose the targets and jailbroke Claude by posing as a security firm. The \"blackmail\" and \"copied itself\" headlines came from fictional scenarios researchers built to provoke exactly that.",
         "Stuxnet wrecked Iranian centrifuges in 2010 with no AI at all: someone wrote the worm, aimed it, and carried it in on a USB drive.",
         "Breaking into other people's systems is old business. North Korea hit Sony in 2014, Bangladesh Bank for $81 million in 2016, the world with WannaCry in 2017 and Bybit for $1.5 billion in 2025. China took 21.5 million US personnel records in 2015 and got into US telecom networks in 2024.",
-        "None of it is AI out of control. It's people forcing tools onto targets without the protocols any security professional follows. Imagine a gun maker saying he has no control over how dangerous his guns are, while still releasing new versions and asking for a trillion-dollar IPO."
+        "Every case is people forcing tools onto targets without the protocols any security professional follows. Imagine a gun maker saying he has no control over how dangerous his guns are, while still releasing new versions and asking for a trillion-dollar IPO."
       ],
       "quote": "Every time you see \"AI hacked someone\", DON'T think \"holy crap, we're getting to Skynet\". Think: some idiot opened the gates on purpose!",
       "quoteOriginal": "TODA vez que você ver \"IA invadiu alguém\". NÃO pense em \"puta merda, estamos chegando na Skynet\". Pense: algum imbecil abriu as porteiras de propósito!",
@@ -141,7 +175,7 @@
       }
     },
     "doom": {
-      "kicker": "6. The doom",
+      "kicker": "8. The doom",
       "title": "The prophets of doom bring no evidence",
       "lede": "Every few months someone quits a lab and warns the world. In my reading, none of them has shown anything you can check.",
       "points": [
@@ -167,7 +201,7 @@
       }
     },
     "history": {
-      "kicker": "7. The history",
+      "kicker": "9. The history",
       "title": "We've seen this movie before",
       "lede": "This is the second AI bubble. The first one made the same promises, and it ended in a winter.",
       "alt": "A timeline with a first peak labeled 1958 Perceptron, a long valley labeled AI winter, a rise marked 2017 and a higher peak labeled 2026 ending in a question mark.",
@@ -183,7 +217,7 @@
       }
     },
     "tool": {
-      "kicker": "8. What matters",
+      "kicker": "10. What matters",
       "title": "A fantastic tool, doing what I tell it",
       "lede": "I don't need it to be general. I need it to do what I ask, fast, and it already does.",
       "alt": "A terminal labeled I decide sends work to a machine labeled Tool, which produces a stack of documents labeled Result; an arrow labeled Review returns to the terminal.",
@@ -197,8 +231,8 @@
       "quoteCite": "Me on X, September 26, 2026"
     },
     "efficiency": {
-      "kicker": "9. What's missing",
-      "title": "Efficiency, not intelligence",
+      "kicker": "11. What's missing",
+      "title": "What's missing is efficiency",
       "lede": "Today it takes practically every datacenter in the world, with half a trillion dollars of backlog still to build, and it bottlenecks every maker of server hardware.",
       "alt": "Rows of datacenter racks labeled Today on the left, a single small chip labeled Needed on the right, and a green arrow between them labeled Less compute and Lower price.",
       "points": [
@@ -214,6 +248,8 @@
       "AGI has no agreed definition. The one written into a contract was a profit target, and it was dropped.",
       "Without a definition there's no test. Benchmarks fill up and get replaced by the next one.",
       "Models reproduce what's public. What's private or new takes oracles, hand-fed knowledge and a lot of money.",
+      "The raw models converged. The recent gains came from the tools around them, and smaller models keep catching up.",
+      "A model is a locked file. It learns nothing from your session.",
       "The word is useful for selling chips, funding rounds and IPOs. That's why it keeps being announced.",
       "The scary \"AI attacks\" were people leaving doors open. The tool did what it was pointed at.",
       "Doom is marketing too. The prophets bring feelings and forecasts, never evidence you can check.",

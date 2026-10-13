@@ -152,5 +152,52 @@
     "AI stops here": "A IA para aqui",
     "Fundamentals": "Fundamentos",
     "The gap": "A lacuna"
+  },
+  "limits-timeline": {
+    "1984 PC BIOS": "1984 BIOS do PC",
+    "1993 Wine": "1993 Wine",
+    "2000 Emulators legal": "2000 Emuladores legais",
+    "2019 Ghidra": "2019 Ghidra",
+    "2019 Mario 64 decomp": "2019 Decomp Mario 64",
+    "2024 Zelda recomp": "2024 Recomp Zelda",
+    "2026 Agents": "2026 Agentes"
+  },
+  "limits-retro": {
+    "Old game": "Game antigo",
+    "Mapped": "Mapeado",
+    "Frozen": "Congelado",
+    "Live product": "Produto vivo",
+    "Cloud": "Nuvem",
+    "Moves every month": "Muda todo mês"
+  },
+  "limits-facade": {
+    "The screenshot": "O screenshot",
+    "Cloud features": "Recursos na nuvem",
+    "Camera profiles": "Perfis de câmera",
+    "Color science": "Ciência de cor",
+    "Licenses": "Licenças"
+  },
+  "limits-bun": {
+    "Rewrite": "Reescrita",
+    "Author": "Autor",
+    "Source code": "Código-fonte",
+    "Tests": "Testes",
+    "Budget": "Orçamento",
+    "Clone": "Clone",
+    "Tokens": "Tokens"
+  },
+  "agi-plateau": {
+    "Base model": "Modelo base",
+    "Reasoning 2024": "Raciocínio 2024",
+    "Ceiling": "Teto",
+    "Harness": "Harness",
+    "Local models": "Modelos locais"
+  },
+  "agi-static": {
+    "Model file": "Arquivo do modelo",
+    "Copies": "Cópias",
+    "Your session": "Sua sessão",
+    "Next training": "Próximo treino",
+    "New file": "Arquivo novo"
   }
 }

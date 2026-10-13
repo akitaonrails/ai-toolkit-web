@@ -15,10 +15,10 @@ export const getStaticPaths = localePaths;
 const { t, raw, locale, href } = useI18n(Astro, 'writing');
 // Which posts go under which heading. Adding a post: data in src/data/articles.ts, words in articles.json.
 const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: ArticleId[] }[] = [
-  { id: 'benchmarks', hue: 'rose', posts: ['benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
+  { id: 'benchmarks', hue: 'rose', posts: ['languages', 'benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
   { id: 'agents', hue: 'violet', posts: ['skills', 'shipMore', 'openSourceAi', 'bestPractices', 'cleanCode', 'protect'] },
   { id: 'experiments', hue: 'orange', posts: ['nesToSms', 'dayToDay', 'aiMemory2', 'chronicles'] },
-  { id: 'opinions', hue: 'red', posts: ['hotTake', 'aiKilled'] },
+  { id: 'opinions', hue: 'red', posts: ['adobeRe', 'competentEnough', 'llmLimits', 'hotTake', 'aiKilled'] },
 ];
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
@@ -31,7 +31,7 @@ const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: Ar
 
   {groups.map((g, i) => (
     <Section title={t(`sections.${g.id}.title`)} lede={t(`sections.${g.id}.lede`)} hue={g.hue} tint={i % 2 === 1} id={g.id}>
-      {g.id === 'opinions' && <div class="mb-12"><PullQuote {...raw<{ text: string }>('sections.opinions.quote')} /><div class="flex flex-wrap gap-3 mt-8"><a href={href('/agi/')} class="btn btn-ghost">{t('sections.opinions.agi')}</a><a href={href('/students/')} class="btn btn-ghost">{t('sections.opinions.students')}</a></div></div>}
+      {g.id === 'opinions' && <div class="mb-12"><PullQuote {...raw<{ text: string }>('sections.opinions.quote')} /><div class="flex flex-wrap gap-3 mt-8"><a href={href('/agi/')} class="btn btn-ghost">{t('sections.opinions.agi')}</a><a href={href('/students/')} class="btn btn-ghost">{t('sections.opinions.students')}</a><a href={href('/limits/')} class="btn btn-ghost">{t('sections.opinions.limits')}</a></div></div>}
       <ArticleList items={pick(...g.posts)} />
     </Section>
   ))}

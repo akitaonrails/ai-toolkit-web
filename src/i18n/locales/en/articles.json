@@ -208,6 +208,18 @@
     "llmLimits": {
       "title": "The limits of LLMs: good at reproducing what exists, expensive for what doesn't",
       "summary": "81.5% of GitHub activity is private and none of it trained any model. Four retro projects show where the machine stalls: no reference, no oracle, directed brute force."
+    },
+    "adobeRe": {
+      "title": "AI Reverse Engineering: Is Adobe Dead?",
+      "summary": "PhotoCraft is an alpha with hundreds of open issues, REA needs the binary and Ghidra, and retro moves fast because an 8 MB ROM is small. Rewriting Bun cost $165,000."
+    },
+    "competentEnough": {
+      "title": "LLMs + Agents = competent enough",
+      "summary": "The models converged near the ceiling of the transformer. The leap of 2025 and 2026 came from the agent harness, and that is already enough for real engineering."
+    },
+    "languages": {
+      "title": "Are There Better Languages for Programming with LLMs?",
+      "summary": "112 attempts across 7 languages and 4 models: no language ranking held up, concise Ruby cost as many tokens as Rust, and tests changed the outcome."
     }
   },
   "related": {

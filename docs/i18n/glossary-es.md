@@ -85,3 +85,21 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | reinforcement learning | aprendizaje por refuerzo |
 | trial and error | prueba y error |
 | long loops | bucles largos |
+| plateau (AGI section) | meseta |
+| ceiling (model capability) | techo |
+| pre-training | preentrenamiento |
+| open-weight models | modelos de pesos abiertos |
+| reverse engineering | ingeniería inversa |
+| fair use | uso legítimo (fair use) |
+| clean room | sala limpia |
+| rewrite | reescritura |
+| grunt work | trabajo pesado |
+| decomp / recomp (noun, masculine) | el decomp / el recomp |
+| slopcomps | slopcomps (sin traducir, entre comillas) |
+| screenshot | captura (de pantalla) |
+| job postings | ofertas |
+| lens (camera) | objetivo |
+| Generative Fill / Neural Filters | Relleno generativo / Filtros neurales (nombres de Adobe en español) |
+| VW Beetle (quote) | Escarabajo |
+| "X is dead" (headline) | "X murió" |
+| percent in new strings | `81,5 %` (espacio antes de %) |

@@ -1,5 +1,5 @@
 ---
-// Turns one of the essay pages (/agi/, /students/) into 16:9 slides, from the same catalog and data the web page
+// Turns one of the essay pages (/agi/, /students/, /limits/) into 16:9 slides, from the same catalog and data the web page
 // uses, so every language comes for free. Rules that keep the PDF readable and the breaks clean:
 //   - every slide is one fixed 1920x1080 page (layouts/Deck.astro); nothing breaks inside a slide;
 //   - a section opens with its title, lede and diagram (or its big numbers), then its points in two columns,
@@ -22,7 +22,7 @@ interface Section {
 }
 interface Quote { text: string; original?: string; cite?: string }
 interface Props {
-  ns: 'agi' | 'students'; hue: Hue; path: string; sections: Section[];
+  ns: 'agi' | 'students' | 'limits'; hue: Hue; path: string; sections: Section[];
   opening?: Quote; closing?: Quote; videos?: { id: string; title: string; date: string; duration: string }[];
 }
 const { ns, hue, path, sections, opening, closing, videos } = Astro.props;

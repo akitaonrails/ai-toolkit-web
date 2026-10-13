@@ -64,7 +64,7 @@
         "text": "Un widget para la barra superior, una interfaz de terminal y apps nativas de bandeja que muestran cuota, saldo y hora de reinicio de Claude, Codex, GitHub Copilot, Z.AI, OpenRouter y 19 proveedores más.",
         "points": [
           "Omarchy Quattro, Waybar, GNOME, KDE Plasma 6, macOS y Windows",
-          "Un aviso de escritorio cuando una ventana de uso pasa del 97%",
+          "Un aviso de escritorio cuando una ventana de uso pasa del 97 %",
           "Un solo ítem de la barra puede rotar entre todos los proveedores que pagas"
         ],
         "shotAlt": "El panel de ai-usagebar abierto en la barra superior de Omarchy, con el uso de Z.AI GLM Coding Pro: sesión, semanal y herramientas MCP mensuales, cada una con su hora de reinicio, y pestañas para Claude, Codex, Z.AI, OpenRouter y Kimi."

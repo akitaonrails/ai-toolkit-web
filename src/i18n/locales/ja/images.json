@@ -152,5 +152,52 @@
     "AI stops here": "AIはここまで",
     "Fundamentals": "基礎",
     "The gap": "すき間"
+  },
+  "limits-timeline": {
+    "1984 PC BIOS": "1984 PC BIOS",
+    "1993 Wine": "1993 Wine",
+    "2000 Emulators legal": "2000 エミュレーター合法",
+    "2019 Ghidra": "2019 Ghidra",
+    "2019 Mario 64 decomp": "2019 Mario 64デコンプ",
+    "2024 Zelda recomp": "2024 Zeldaリコンプ",
+    "2026 Agents": "2026 エージェント"
+  },
+  "limits-retro": {
+    "Old game": "古いゲーム",
+    "Mapped": "解析済み",
+    "Frozen": "不変",
+    "Live product": "現役の製品",
+    "Cloud": "クラウド",
+    "Moves every month": "毎月変わる"
+  },
+  "limits-facade": {
+    "The screenshot": "スクリーンショット",
+    "Cloud features": "クラウド機能",
+    "Camera profiles": "カメラプロファイル",
+    "Color science": "色の科学",
+    "Licenses": "ライセンス"
+  },
+  "limits-bun": {
+    "Rewrite": "書き直し",
+    "Author": "作者",
+    "Source code": "ソースコード",
+    "Tests": "テスト",
+    "Budget": "予算",
+    "Clone": "クローン",
+    "Tokens": "トークン"
+  },
+  "agi-plateau": {
+    "Base model": "ベースモデル",
+    "Reasoning 2024": "推論 2024",
+    "Ceiling": "天井",
+    "Harness": "ハーネス",
+    "Local models": "ローカルモデル"
+  },
+  "agi-static": {
+    "Model file": "モデルファイル",
+    "Copies": "コピー",
+    "Your session": "あなたのセッション",
+    "Next training": "次の学習",
+    "New file": "新しいファイル"
   }
 }

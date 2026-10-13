@@ -7,12 +7,12 @@
     "title": "Sabe cuánta IA te queda antes de que se acabe",
     "lede": "ai-usagebar lee el uso de cada plan desde el proveedor y lo muestra donde ya miras: la barra superior, una interfaz de terminal o la bandeja del sistema. Empezó como un port a Rust de claudebar y hoy cubre 24 proveedores.",
     "primary": "Instalar",
-    "shotAlt": "El panel de ai-usagebar abierto bajo la barra superior de Omarchy: Z.AI GLM Coding Pro con cuotas de sesión, semanal y herramientas MCP mensuales al 1%, sus horas de reinicio y pestañas para Claude, Codex, Z.AI, OpenRouter y Kimi."
+    "shotAlt": "El panel de ai-usagebar abierto bajo la barra superior de Omarchy: Z.AI GLM Coding Pro con cuotas de sesión, semanal y herramientas MCP mensuales al 1 %, sus horas de reinicio y pestañas para Claude, Codex, Z.AI, OpenRouter y Kimi."
   },
   "why": {
     "title": "Por qué lo construí",
     "lede": "Pago varios planes de programación y cada uno mide distinto: una ventana de 5 horas aquí, un tope semanal allá, un saldo prepago en otro lado. Abrir cinco paneles para decidir qué agente se lleva la próxima tarea era absurdo. Ahora me basta un vistazo a la barra.",
-    "alt": "Siete chips de proveedores, Claude, Codex, Copilot, Z.AI, OpenRouter, Kimi y DeepSeek, alimentan una barra con un indicador. El panel ampliado muestra tres medidores, el primero casi lleno con una marca roja que dice Aviso al 97%, y un reloj Se reinicia en.",
+    "alt": "Siete chips de proveedores, Claude, Codex, Copilot, Z.AI, OpenRouter, Kimi y DeepSeek, alimentan una barra con un indicador. El panel ampliado muestra tres medidores, el primero casi lleno con una marca roja que dice Aviso al 97 %, y un reloj Se reinicia en.",
     "link": "Cómo encaja en mi flujo de trabajo"
   },
   "surfaces": {
@@ -22,7 +22,7 @@
       {
         "title": "Interfaz de terminal",
         "text": "<code>ai-usagebar-tui</code>: una pestaña por proveedor, actualizada cada 60 segundos, con un panel de configuración.",
-        "alt": "La TUI de ai-usagebar en la pestaña de OpenAI: ventana de 5 horas de Codex al 6% y semanal al 1%, con horas de reinicio y ritmo, y una sección de créditos."
+        "alt": "La TUI de ai-usagebar en la pestaña de OpenAI: ventana de 5 horas de Codex al 6 % y semanal al 1 %, con horas de reinicio y ritmo, y una sección de créditos."
       },
       {
         "title": "Barra de menús de macOS",
@@ -46,7 +46,7 @@
     "items": [
       {
         "title": "Avisos antes del muro",
-        "text": "Una notificación de escritorio cuando una ventana de uso pasa del 97%, una crítica al 100% y un aviso 48 horas antes de que venzan los créditos de reinicio acumulados. El umbral lo cambias tú."
+        "text": "Una notificación de escritorio cuando una ventana de uso pasa del 97 %, una crítica al 100 % y un aviso 48 horas antes de que venzan los créditos de reinicio acumulados. El umbral lo cambias tú."
       },
       {
         "title": "Encuentra tus cuentas",

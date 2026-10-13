@@ -80,6 +80,10 @@
     "students": {
       "label": "IA e estudantes",
       "note": "Por que os fundamentos importam mais do que nunca"
+    },
+    "limits": {
+      "label": "Os limites das LLMs",
+      "note": "O que a IA consegue copiar, e o que não consegue"
     }
   },
   "kicker": {

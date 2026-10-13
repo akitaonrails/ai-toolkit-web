@@ -2,7 +2,7 @@
 
 Akita's AI Lair: one site for Fabio Akita's AI tools, workflow, writing, newsletter and podcast appearances. Astro 7, Tailwind 4, GSAP, deployed on Netlify. It is the umbrella over the sister sites `~/Projects/ai-jail-web` (aijail.io) and `~/Projects/ai-memory-web` and shares their structure and scripts.
 
-Read before changing anything: `docs/design-system.md`, `docs/color-study.md`, `docs/sources.md`.
+Read before changing anything: `docs/design-system.md`, `docs/color-study.md`, `docs/sources.md`. Before touching the essay pages (`/agi/`, `/students/`, `/limits/`), read `docs/essays.md`: who they are for, the owner's voice, and the AI-isms to remove.
 
 ## When asked to update the site
 
@@ -19,5 +19,5 @@ Start from `docs/sources.md`. It lists every source (GitHub repos, blog posts, t
 - Diagrams: `docs/images.md`. Look at every generated image before committing it.
 - Videos: edit `src/data/videos.config.json`, run `node scripts/refresh-videos.mjs`.
 - Yearly numbers on the workflow page: `python3 scripts/tally-projects.py`, method and exclusions in `docs/sources.md` section 9. Sanity-check outliers before publishing.
-- PDF decks: `/agi/` and `/students/` ship as slide PDFs in every language (`docs/pdf.md`). Any change to their words, data, diagrams or videos means `npm run build:decks`, a look at the result, and committing `public/pdf/` in the same change.
+- PDF decks: `/agi/`, `/students/` and `/limits/` ship as slide PDFs in every language (`docs/pdf.md`). Any change to their words, data, diagrams or videos means `npm run build:decks`, a look at the result, and committing `public/pdf/` in the same change.
 - Before pushing: `npm run check:colors && npm run check:i18n && npm run build && npm run check:seo && npm run check:decks`. `main` deploys to production through Netlify (`docs/deploy.md`).

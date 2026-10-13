@@ -103,3 +103,22 @@ Terms decided while translating. One English term maps to one target term across
 | training cutoff | 学習のカットオフ |
 | verifier | 検証器 |
 | trial and error | 試行錯誤 |
+| plateau (models) | 頭打ち |
+| raw / base model | 素のモデル / ベースモデル |
+| pre-training | 事前学習 |
+| reinforcement learning | 強化学習 |
+| open-weight model | オープンウェイトモデル |
+| local models | ローカルモデル |
+| locked file (a trained model) | 固定されたファイル |
+| reverse engineering | リバースエンジニアリング |
+| decomp / recomp (in prose and labels) | デコンプ / リコンプ |
+| rewrite (Bun) | 書き直し |
+| port (game port) | 移植 |
+| grunt work | 地道な作業 |
+| clone (of a program) | クローン |
+| facade (diagram) | ハリボテ |
+| fair use | フェアユース |
+| live product | 現役の製品 |
+| postings (job) | 求人 |
+| Generative Fill / Neural Filters | 生成塗りつぶし / ニューラルフィルター（Adobeの日本語名） |
+| money amounts of 10,000 and up | 万/億で書く（16万5000ドル、1300億）。それ未満は1,650ドル |

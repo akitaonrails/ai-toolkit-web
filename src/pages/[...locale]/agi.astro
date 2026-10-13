@@ -18,7 +18,7 @@ import { articles, articleUrl } from '@/data/articles';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
-const { t, raw, locale } = useI18n(Astro, 'agi');
+const { t, raw, locale, href } = useI18n(Astro, 'agi');
 type Text = { title: string; text: string };
 const s = (id: string, key: string) => t(`sections.${id}.${key}`);
 const has = (id: string, key: string) => key in raw<Record<string, unknown>>(`sections.${id}`);
@@ -47,6 +47,7 @@ const next = withText([{ hue: 'rose', href: '/writing/' }, { hue: 'violet', href
           <div>
             <ul class="ticks text-lg">{raw<string[]>(`sections.${sec.id}.points`).map((p) => <li>{p}</li>)}</ul>
             {sec.jail && <a href={sisterUrl('jail', locale)} class="btn btn-ghost mt-8">{s(sec.id, 'jail')}</a>}
+            {sec.more && <a href={href(sec.more)} class="btn btn-ghost mt-8">{s(sec.id, 'more')}</a>}
             {has(sec.id, 'quote') && (
               <div class="mt-10">
                 <PullQuote text={s(sec.id, 'quote')} original={has(sec.id, 'quoteOriginal') ? s(sec.id, 'quoteOriginal') : undefined} cite={has(sec.id, 'quoteCite') ? s(sec.id, 'quoteCite') : undefined} />

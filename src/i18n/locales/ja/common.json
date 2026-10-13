@@ -80,6 +80,10 @@
     "students": {
       "label": "AIと学生",
       "note": "基礎がこれまで以上に大事な理由"
+    },
+    "limits": {
+      "label": "LLMの限界",
+      "note": "AIがコピーできるもの、できないもの"
     }
   },
   "kicker": {

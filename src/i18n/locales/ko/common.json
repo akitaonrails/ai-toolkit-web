@@ -80,6 +80,10 @@
     "students": {
       "label": "AI와 학생",
       "note": "기초가 그 어느 때보다 중요한 이유"
+    },
+    "limits": {
+      "label": "LLM의 한계",
+      "note": "AI가 베낄 수 있는 것과 없는 것"
     }
   },
   "kicker": {

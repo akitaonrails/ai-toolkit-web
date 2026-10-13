@@ -54,3 +54,17 @@ Terms decided while translating. One English term maps to one target term across
 | effort (model reasoning effort) | effort (e.g. medium effort) |
 | context (carried between agents) | 맥락 |
 | Kaizen in diagram labels | Kaizen (brief rule); 카이젠 in running text |
+| reverse engineering | 리버스 엔지니어링 |
+| rewrite (noun, Bun) | 재작성 |
+| clone (noun) | 클론 |
+| author (of a project) | 원작자 |
+| screenshot | 스크린숏 |
+| live product (vs old game) | 운영 중인 제품 |
+| plateau | 정체기 |
+| pre-training | 사전 학습 |
+| reinforcement learning | 강화 학습 |
+| open-weight | 오픈 웨이트 |
+| context (model context window) | 컨텍스트 |
+| mixture of experts | 전문가 혼합(MoE) |
+| job postings / entry-level | 채용 공고 / 신입 |
+| slopcomps | "slopcomps" (kept, quoted) |

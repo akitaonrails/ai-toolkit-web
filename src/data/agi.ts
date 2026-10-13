@@ -7,7 +7,9 @@ import { percent, type SectionStat } from './stats';
 export interface AgiSection { id: string; figure?: string; network?: boolean;
   // Numbers shown as a Stats strip under the figure, formatted per language with `format` (Intl options, see Stats);
   // labels in the catalog under sections.<id>.stats.<key>.
-  stats?: SectionStat[]; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean }
+  stats?: SectionStat[]; sources: { id: string; href: string }[]; posts: ArticleId[]; x?: string; jail?: boolean;
+  // A button to another page of this site that says the full version (`more` in the section's catalog entry).
+  more?: string }
 
 export const agi = {
   sections: [
@@ -28,19 +30,26 @@ export const agi = {
       { id: 'arena', href: 'https://arxiv.org/abs/2504.20879' },
       { id: 'nadella', href: 'https://www.dwarkesh.com/p/satya-nadella' },
     ] },
-    { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits'], stats: [
-      { key: 'private', n: 81.5, format: percent },
-      { key: 'stack', n: 67.5, format: { style: 'unit', unit: 'terabyte' } },
+    { id: 'frontier', figure: 'agi-frontier', posts: ['llmLimits'], more: '/limits/', stats: [
       { key: 'arc', n: 0, format: percent },
       { key: 'navier', n: 130e9, format: { notation: 'compact' } },
     ], sources: [
-      { id: 'stack', href: 'https://huggingface.co/datasets/bigcode/the-stack-v2' },
-      { id: 'octoverse', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
       { id: 'arc', href: 'https://arcprize.org/' },
       { id: 'gsm', href: 'https://arxiv.org/abs/2410.05229' },
       { id: 'lcb', href: 'https://arxiv.org/abs/2403.07974' },
       { id: 'alphaevolve', href: 'https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/' },
       { id: 'navier', href: 'https://www.newscientist.com/article/2588063-openai-has-solved-the-navier-stokes-millennium-problem-using-15m-of-ai-effort/' },
+    ] },
+    { id: 'plateau', figure: 'agi-plateau', posts: ['competentEnough', 'benchmarkLatest'], sources: [
+      { id: 'reuters', href: 'https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11/' },
+      { id: 'sutskever', href: 'https://www.youtube.com/watch?v=WQQdd6qGxNs' },
+      { id: 'aiIndex', href: 'https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance' },
+      { id: 'openGap', href: 'https://epoch.ai/data-insights/open-closed-eci-gap' },
+      { id: 'gpuGap', href: 'https://epoch.ai/data-insights/consumer-gpu-model-gap' },
+    ] },
+    { id: 'static', figure: 'agi-static', posts: ['llmLimits'], sources: [
+      { id: 'alphazero', href: 'https://arxiv.org/abs/1712.01815' },
+      { id: 'r1', href: 'https://arxiv.org/abs/2501.12948' },
     ] },
     { id: 'marketing', figure: 'agi-money-loop', posts: ['misleadingAds', 'fableSoap', 'businessModels'], sources: [
       { id: 'huang', href: 'https://www.foxbusiness.com/technology/nvidia-ceo-jensen-huang-declares-agi-has-arrived-after-openai-unveils-gpt-6-astra' },

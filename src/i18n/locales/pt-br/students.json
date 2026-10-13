@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "IA e estudantes",
-    "lede": "Eu sou sênior e faço 100% vibe coding. Se você é estudante ou júnior, não me copie ainda. Oito pontos curtos sobre o porquê, e por onde começar.",
+    "lede": "Eu sou sênior e faço 100% vibe coding. Se você é estudante ou júnior, não me copie ainda. Nove pontos curtos sobre o porquê, e por onde começar.",
     "primary": "O que fazer",
     "secondary": "O arquivo do Akitando"
   },
@@ -94,7 +94,7 @@
       },
       "points": [
         "SignalFire, 2026: a contratação de recém-formados caiu cerca de 65% nas big techs e 76% em startups em estágio inicial em comparação com 2019, enquanto a contratação de engenharia nas big techs caiu só 11%.",
-        "Indeed: vagas de nível de entrada eram 4,5% dos anúncios de desenvolvimento de software no início de 2026. Vagas sênior eram 69%.",
+        "Indeed: vagas de nível de entrada eram 4,5% dos anúncios de software no início de 2026. Os anúncios cresceram quase 15% depois que o Claude Code foi lançado em fevereiro de 2025, e 71% desse crescimento foi de vagas sênior.",
         "O estudo \"Canaries\" de Stanford: o emprego de jovens de 22 a 25 anos nos trabalhos mais expostos à IA, desenvolvedores de software incluídos, está 19% abaixo de onde estaria se tivesse acompanhado os trabalhos menos expostos, principalmente por causa de menos contratações. Os autores tomam o cuidado de chamar isso de descritivo, e não causal.",
         "Recém-formados em ciência da computação têm uma das maiores taxas de desemprego entre todos os cursos (7,0%), mas uma das menores taxas de subemprego (19%, contra 39% no geral): quando são contratados, geralmente é num emprego que exige o diploma. O caminho de entrada típico ainda é o bacharelado."
       ],
@@ -103,7 +103,8 @@
         "indeed": "Indeed: o mercado de trabalho pende pra senioridade",
         "canaries": "Stanford Digital Economy Lab: o abismo da IA pros trabalhadores jovens (agosto de 2026)",
         "nyfed": "Fed de Nova York: o mercado de trabalho pra recém-formados",
-        "bls": "BLS: desenvolvedores de software"
+        "bls": "BLS: desenvolvedores de software",
+        "indeedAi": "Indeed: vagas de software desde o Claude Code (julho de 2026)"
       }
     },
     "guess": {
@@ -117,8 +118,26 @@
         "Mesmo num app minúsculo, qualquer coisa feita com vibe coding que vai pra produção precisa ser revisada por um programador experiente. Isso não é opcional."
       ]
     },
+    "tests": {
+      "kicker": "6. O mito da linguagem",
+      "title": "Testes importam mais que a linguagem",
+      "lede": "Em outubro de 2026 eu dei a mesma tarefa difícil pra 4 modelos em 7 linguagens. Nenhuma linguagem saiu na frente.",
+      "stats": {
+        "attempts": "tentativas: 7 linguagens, 4 modelos, 2 condições, 2 rodadas cada",
+        "withTests": "resultados corretos dos dois modelos mais fracos quando eu dei os testes",
+        "withoutTests": "resultados corretos dos mesmos modelos sem os testes"
+      },
+      "points": [
+        "Os dois modelos de fronteira acertaram toda tentativa elegível, em todas as linguagens.",
+        "Toda falha quebrou uma regra do próprio problema. Nenhuma foi erro de tipo, então nenhum compilador teria pegado.",
+        "Aprenda a escrever testes e transforme todo bug em um teste. Isso funciona em qualquer linguagem, com qualquer modelo."
+      ],
+      "sources": {
+        "repo": "O benchmark: código, dados e método"
+      }
+    },
     "why": {
-      "kicker": "6. A pergunta",
+      "kicker": "7. A pergunta",
       "title": "Se a IA pode programar tudo, por que aprender?",
       "lede": "Porque ela não pode fazer tudo. Ela reproduz o que já viu, e o que ela não viu é justamente onde estão os próximos empregos.",
       "alt": "Dois penhascos separados por um abismo com o rótulo A lacuna: um penhasco verde-azulado com o rótulo Código público e um penhasco violeta, coberto de névoa, com o rótulo Privado e novo. Uma ponte construída pela IA a partir da esquerda para no meio, com o rótulo A IA para aqui, e blocos âmbar com o rótulo Fundamentos completam o resto do vão.",
@@ -138,7 +157,7 @@
       }
     },
     "memory": {
-      "kicker": "7. Um exemplo real",
+      "kicker": "8. Um exemplo real",
       "title": "O que \"a IA fez\" custou de verdade",
       "lede": "O ai-memory, meu sistema de memória open source pra agentes de código, é escrito na maior parte por IA. Tudo que mantém ele correto veio da minha review e da minha direção, semana após semana.",
       "alt": "Um núcleo com o rótulo Saída da IA envolto em cinco anéis com os rótulos Diretivas, Cercas, Lições, Docs e Testes, com uma linha do tempo embaixo com o rótulo Semanas de review.",
@@ -161,7 +180,7 @@
       "quoteCite": "Eu no X, 25 de setembro de 2026"
     },
     "practice": {
-      "kicker": "8. O que fazer",
+      "kicker": "9. O que fazer",
       "title": "Se você é estudante ou júnior",
       "lede": "Use a IA do jeito que um sênior usa um estagiário: pras tarefas chatas. O aprendizado tem que passar pelas suas mãos.",
       "alt": "Um ciclo de quatro passos, Escrever na mão, Quebrar, Debugar e Revisar, em volta de uma pilha crescente com o rótulo Fundamentos, com uma pequena faixa separada ao lado com o rótulo IA: tarefas chatas.",
@@ -205,6 +224,7 @@
       "Aprender no piloto automático não fixa. Os estudos até agora concordam.",
       "As vagas que sobram vão pra quem sabe julgar o resultado, e a contratação de nível de entrada está encolhendo.",
       "A IA não adivinha seu objetivo, seus limites ou seus trade-offs. Saber isso é o trabalho.",
+      "No meu benchmark, dar testes pro modelo mudou os resultados. Escolha a linguagem que serve pro problema.",
       "A IA replica o que é público. As lacunas que ela deixa, no trabalho privado e novo, são o trabalho, e os fundamentos difíceis são como você preenche elas.",
       "Escreva na mão, deixe a IA com as tarefas chatas, revise tudo e coloque as horas."
     ],

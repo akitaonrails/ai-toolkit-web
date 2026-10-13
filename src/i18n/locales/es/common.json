@@ -38,14 +38,6 @@
       "label": "Proyectos Frank",
       "note": "Experimentos para mis propias necesidades"
     },
-    "agi": {
-      "label": "Por qué la AGI no importa",
-      "note": "Una opinión, con fuentes"
-    },
-    "students": {
-      "label": "La IA y los estudiantes",
-      "note": "Por qué los fundamentos importan más que nunca"
-    },
     "writing": {
       "label": "Textos",
       "note": "El blog y el benchmark de LLMs"
@@ -80,6 +72,18 @@
     "jail": {
       "label": "ai-jail",
       "note": "Un sandbox del sistema para agentes de programación con IA"
+    },
+    "agi": {
+      "label": "Por qué la AGI no importa",
+      "note": "Una opinión, con fuentes"
+    },
+    "students": {
+      "label": "La IA y los estudiantes",
+      "note": "Por qué los fundamentos importan más que nunca"
+    },
+    "limits": {
+      "label": "Los límites de los LLMs",
+      "note": "Lo que la IA puede copiar, y lo que no"
     }
   },
   "kicker": {

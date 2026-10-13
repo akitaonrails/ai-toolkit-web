@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "Os limites das LLMs",
+    "description": "Fabio Akita sobre PhotoCraft, REA, recomps de games e \"programador morreu\": o que a IA copia bem, o que ela não consegue e quanto custa reescrever de verdade."
+  },
+  "hero": {
+    "kicker": "Opinião",
+    "title": "Os limites das LLMs",
+    "lede": "PhotoCraft, REA e um port novo de game toda semana convenceram muita gente de que a Adobe morreu e os programadores são os próximos. Eu li o código e os números. Sete pontos curtos sobre o que a IA copia bem e o que ela não consegue.",
+    "primary": "Pular pras conclusões",
+    "secondary": "A versão longa no meu blog"
+  },
+  "motto": {
+    "text": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado.",
+    "original": "LLM consegue replicar o que é aberto, mas não adivinha o que é privado."
+  },
+  "sourcesTitle": "Fontes",
+  "sections": {
+    "copy": {
+      "kicker": "1. Onde ela é boa",
+      "title": "Copiar o que já é público",
+      "lede": "Os modelos aprenderam com código público. Quando algo parecido foi publicado, um agente reconstrói rápido e barato.",
+      "stats": {
+        "private": "das contribuições no GitHub acontecem em repositórios privados (Octoverse 2025)",
+        "stack": "de código público no The Stack v2, o tipo de dado com que os modelos treinam"
+      },
+      "points": [
+        "Por isso uma pessoa sozinha hoje consegue lançar um cliente nativo de Spotify ou WhatsApp em Rust. O serviço, as bibliotecas e o caminho já existiam. Refazer um caminho conhecido ficou barato.",
+        "O código que paga salários é quase todo privado. Nenhum modelo viu esse código, e nenhum modelo consegue adivinhar.",
+        "Onde não existe nada parecido, o agente cai na tentativa e erro. O que ajuda é o que falta ao modelo: referências que ninguém publicou, um oráculo que diga o que é certo e testes com alvos objetivos."
+      ],
+      "sources": {
+        "octoverse": "GitHub Octoverse 2025: 81,5% privado",
+        "stack": "The Stack v2: o dataset de código público"
+      }
+    },
+    "history": {
+      "kicker": "2. Engenharia reversa",
+      "title": "Desmontar binário é coisa de 40 anos",
+      "lede": "Todo emulador que você já usou existe porque alguém desmontou um binário. A IA entrou numa linha de montagem que já estava rodando.",
+      "alt": "Uma linha do tempo com sete marcos: 1984 BIOS do PC, 1993 Wine, 2000 Emuladores legais, 2019 Ghidra, 2019 Decomp Mario 64, 2024 Recomp Zelda, e uma seta verde até o último, 2026 Agentes.",
+      "points": [
+        "Os tribunais americanos resolveram o básico em 1992 (Sega v. Accolade) e em 2000 (Sony v. Connectix): desmontar código pra entender como ele funciona é fair use.",
+        "As ferramentas são maduras, e muitas são gratuitas. A NSA liberou o Ghidra em 2019, o mesmo ano em que a decompilação do Super Mario 64 ficou pública.",
+        "Decompiladores com LLM escrevem código mais legível que os comerciais, com 52% menos correção funcional (DecompileBench, 2025). Os assistentes usados de verdade dão nome às variáveis em cima do que o Ghidra ou o IDA produziram.",
+        "O REA, com quase 200 mil estrelas no GitHub, entrega essas mesmas ferramentas pro seu agente. Você precisa do binário, das ferramentas instaladas e de muito token: o próprio teste dele com SQLite levou 42 chamadas de ferramenta e 300 mil tokens de entrada. A documentação manda nunca dizer que ele clona um programa."
+      ],
+      "sources": {
+        "phoenix": "A Phoenix e a BIOS de PC em clean room",
+        "sega": "Sega v. Accolade (1992)",
+        "connectix": "Sony v. Connectix (2000)",
+        "ghidra": "Ghidra, da NSA",
+        "decompileBench": "DecompileBench: LLM contra decompiladores comerciais",
+        "rea": "REA no GitHub",
+        "reaCost": "REA: quanto custa uma análise"
+      }
+    },
+    "retro": {
+      "kicker": "3. Games antigos",
+      "title": "Por que os games antigos caem primeiro",
+      "lede": "Sai um port retrô novo quase todo dia. Games antigos têm todas as vantagens que um produto vivo não tem.",
+      "alt": "À esquerda: um cartucho minúsculo com o rótulo 8 MB, congelado numa grade toda mapeada, com os rótulos Game antigo, Mapeado e Congelado. À direita: uma pilha gigante de servidores subindo até uma nuvem, com os rótulos Produto vivo, Nuvem e Muda todo mês.",
+      "points": [
+        "O binário é minúsculo. Super Mario 64 tem 8 MB. Baldur's Gate 3 tem 150 GB.",
+        "O hardware foi mapeado instrução por instrução ao longo de 25 anos, e o alvo nunca muda. Ninguém está atualizando o Zelda de 1998.",
+        "PS4, PS5, Xbox e Switch são PCs ou celulares em outra carcaça. Seu processador já roda o código deles, e Wine, DXVK e Proton resolveram a maior parte da tradução gráfica anos atrás.",
+        "A IA acelerou o trabalho braçal. Os desenvolvedores dos recomps de Zelda e Banjo chamam os ports feitos por agente de \"slopcomps\": sem testes, e remendados de um jeito que complica a manutenção."
+      ],
+      "sources": {
+        "zelda": "Zelda 64: Recompiled",
+        "shadps4": "shadPS4: um emulador de PS4",
+        "kotaku": "Kotaku: a briga dos \"slopcomps\""
+      }
+    },
+    "clones": {
+      "kicker": "4. Os clones da Adobe",
+      "title": "Um screenshot do Photoshop",
+      "lede": "O PhotoCraft parece Photoshop num screenshot. O que as pessoas pagam pra Adobe mora em outro lugar.",
+      "alt": "Uma fachada de set de filmagem pintada como a janela de um editor de fotos, escorada por vigas, com o rótulo O screenshot. Bem atrás dela ficam quatro prédios fechados que ela nunca alcança: Recursos na nuvem, Perfis de câmera, Ciência de cor e Licenças.",
+      "stats": {
+        "issues": "issues abertos no PhotoCraft, lidos em 13 de outubro de 2026",
+        "days": "dias depois da criação do repositório"
+      },
+      "points": [
+        "O PhotoCraft foi escrito em Rust com Claude. O próprio README diz early alpha. Imagens acima de 8.192 pixels caem pra CPU, o gerenciamento de cor é básico, e uns 100 issues abertos são sobre arquivos PSD.",
+        "O Generative Fill e vários Neural Filters rodam nos servidores da Adobe. Esse código nunca chega na sua máquina, então não tem nada pra desmontar.",
+        "O Camera Raw carrega 20 anos de perfis pra cada câmera e lente. Um clone tem esses dados ou não tem.",
+        "Cor de impressão é um campo à parte. O GIMP nasceu em 1995 e ainda não edita CMYK na versão 3.0. As cores Pantone são licenciadas, e até a Adobe perdeu elas em 2022.",
+        "A maior parte do software hoje roda como serviço. O código por trás do Google Docs nunca sai dos servidores do Google, então nem existe binário."
+      ],
+      "quote": "O PhotoCraft hoje é aquela réplica de Ferrari montada em cima de um Fusca: a carroceria tem a forma certa, você tira uma foto e a maioria das pessoas diz \"uau, uma Ferrari\". Aí você liga e sai o motor de Fusca.",
+      "quoteOriginal": "O PhotoCraft hoje é aquela réplica de Ferrari montada em cima de um Fusca: a carroceria tem a forma certa, você tira uma foto e a maioria das pessoas diz \"uau, uma Ferrari\". Aí você liga e sai o motor de Fusca.",
+      "sources": {
+        "photocraft": "PhotoCraft no GitHub",
+        "neural": "Adobe: Neural Filters precisam da nuvem",
+        "lenses": "Adobe: perfis de lente do Camera Raw",
+        "gimp": "Roadmap do GIMP: CMYK ainda em andamento",
+        "pantone": "PetaPixel: a Pantone sai do Photoshop"
+      }
+    },
+    "cost": {
+      "kicker": "5. O custo real",
+      "title": "Quanto custa uma reescrita grande",
+      "lede": "O melhor número público vem do Bun, o runtime de JavaScript, reescrito de Zig pra Rust com agentes em maio de 2026.",
+      "alt": "À esquerda: uma plataforma nivelada com o rótulo Reescrita sobre quatro pilares, Autor, Código-fonte, Testes e Orçamento. À direita: a mesma plataforma com o rótulo Clone, inclinada sobre um único pilar com o rótulo Tokens.",
+      "stats": {
+        "cost": "a preço de API",
+        "days": "dias, 535 mil linhas de Zig",
+        "agents": "agentes Claude no pico"
+      },
+      "points": [
+        "Funcionou por quatro coisas: o próprio autor do Bun no controle, o fonte completo funcionando, uns 60 mil testes por plataforma pra conferir cada mudança, e a Anthropic, dona do Bun, pagando.",
+        "O compilador C da Anthropic, fevereiro de 2026: 16 agentes, menos de US$ 20 mil, e ele compila o Linux. Ainda pega emprestado o assembler e o linker do GCC, e o código que ele gera roda mais devagar que o do GCC com todas as otimizações desligadas.",
+        "Um clone do Photoshop não tem nenhuma das quatro. Não tem fonte pra portar, não tem suíte de testes que diga \"igual ao Photoshop\" e não tem autor. E o Photoshop é um produto de 36 anos, muito maior que um runtime."
+      ],
+      "sources": {
+        "bun": "Bun: a reescrita em Rust, com números",
+        "compiler": "Anthropic: um compilador C feito por agentes"
+      }
+    },
+    "price": {
+      "kicker": "6. O preço",
+      "title": "\"Em dois anos vai ser de graça\"",
+      "lede": "O preço dos melhores modelos quase não mexeu desde 2023. O que caiu rápido foi o preço de um nível de qualidade que já ficou velho.",
+      "stats": {
+        "then": "por milhão de tokens de saída, GPT-4, março de 2023",
+        "now": "por milhão de tokens de saída, os melhores modelos, outubro de 2026"
+      },
+      "points": [
+        "A fronteira ficou de 1,2 a 3 vezes mais barata em três anos e meio, dependendo se são tokens de entrada ou de saída.",
+        "Um nível fixo de qualidade fica umas 5 a 10 vezes mais barato por ano, pela estimativa da Epoch AI, e eles esperam que isso desacelere.",
+        "Faça a conta no Bun: US$ 165 mil dividido por 100 dá US$ 1.650, pra um port com o fonte, os testes e o autor na mão. Barato e trivial são coisas diferentes.",
+        "Os modelos em si convergiram, e os ganhos recentes vieram das ferramentas de agente em volta deles. Eu explico isso na página de AGI."
+      ],
+      "sources": {
+        "claude": "Anthropic: preços da API",
+        "openai": "OpenAI: preços da API",
+        "epoch": "Epoch AI: tendências de preço de inferência",
+        "epochBurden": "Epoch AI: quanto tempo dura o peso do custo"
+      }
+    },
+    "job": {
+      "kicker": "7. A profissão",
+      "title": "Programador morreu?",
+      "lede": "Toda reescrita e todo decomp que funciona tem um engenheiro no controle.",
+      "units": {
+        "postings": "+{n}"
+      },
+      "stats": {
+        "postings": "nas vagas de software nos EUA desde o lançamento do Claude Code em fevereiro de 2025, enquanto o total de vagas caiu 7% (Indeed, julho de 2026)",
+        "senior": "desse crescimento veio de vagas sênior"
+      },
+      "points": [
+        "As vagas de software ainda estão uns 27,5% abaixo de fevereiro de 2020. Menos gente é contratada pra digitar. Quem sabe julgar o resultado continua sendo contratado.",
+        "Reescrever o Bun precisou do autor do Bun. Os decomps que funcionam têm gente que conhece o hardware pilotando o agente.",
+        "No meu benchmark com 7 linguagens, dar testes pros modelos mais fracos mudou mais os resultados do que qualquer linguagem.",
+        "Engenharia reversa ficou mais barata e mais acessível, como ficou quando o Ghidra saiu em 2019. Continua sendo trabalho de engenheiro."
+      ],
+      "quote": "Manchete de \"acabou\" rende clique e não compila.",
+      "quoteOriginal": "Manchete de \"acabou\" rende clique e não compila.",
+      "sources": {
+        "indeed": "Indeed Hiring Lab: vagas de software, julho de 2026"
+      }
+    }
+  },
+  "takeaways": {
+    "title": "As conclusões",
+    "items": [
+      "A IA copia rápido o que é público. A maior parte do código que importa é privada.",
+      "Engenharia reversa existe há décadas. Os agentes aceleraram o trabalho braçal.",
+      "Games antigos caem primeiro: são pequenos, mapeados há décadas e nunca mudam.",
+      "O screenshot de um clone é fácil. Os serviços na nuvem, os dados e as licenças não estão em binário nenhum.",
+      "A reescrita do Bun precisou do autor, do fonte, dos testes e de US$ 165 mil.",
+      "Os melhores modelos quase não ficaram mais baratos, e convergiram.",
+      "O trabalho que cresceu é julgamento: testes, oráculos e review."
+    ]
+  },
+  "next": [
+    {
+      "title": "Por que AGI não importa",
+      "text": "O platô, o marketing e as histórias de terror."
+    },
+    {
+      "title": "IA e estudantes",
+      "text": "Por que os fundamentos importam mais do que nunca."
+    }
+  ],
+  "deckReadMore": "Leia mais: meus posts e as fontes",
+  "deckEnd": "Cada ponto, com todos os links, na web"
+}

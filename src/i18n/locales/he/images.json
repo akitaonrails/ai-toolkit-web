@@ -152,5 +152,52 @@
     "AI stops here": "כאן AI נעצר",
     "Fundamentals": "יסודות",
     "The gap": "הפער"
+  },
+  "limits-timeline": {
+    "1984 PC BIOS": "1984 PC BIOS",
+    "1993 Wine": "1993 Wine",
+    "2000 Emulators legal": "2000 אמולטורים חוקיים",
+    "2019 Ghidra": "2019 Ghidra",
+    "2019 Mario 64 decomp": "2019 decomp של Mario 64",
+    "2024 Zelda recomp": "2024 recomp של Zelda",
+    "2026 Agents": "2026 סוכנים"
+  },
+  "limits-retro": {
+    "Old game": "משחק ישן",
+    "Mapped": "ממופה",
+    "Frozen": "קפוא",
+    "Live product": "מוצר חי",
+    "Cloud": "ענן",
+    "Moves every month": "משתנה כל חודש"
+  },
+  "limits-facade": {
+    "The screenshot": "צילום המסך",
+    "Cloud features": "פיצ׳רים בענן",
+    "Camera profiles": "פרופילי מצלמה",
+    "Color science": "מדע הצבע",
+    "Licenses": "רישיונות"
+  },
+  "limits-bun": {
+    "Rewrite": "שכתוב",
+    "Author": "היוצר",
+    "Source code": "קוד מקור",
+    "Tests": "בדיקות",
+    "Budget": "תקציב",
+    "Clone": "שיבוט",
+    "Tokens": "טוקנים"
+  },
+  "agi-plateau": {
+    "Base model": "מודל בסיס",
+    "Reasoning 2024": "Reasoning 2024",
+    "Ceiling": "תקרה",
+    "Harness": "Harness",
+    "Local models": "מודלים מקומיים"
+  },
+  "agi-static": {
+    "Model file": "קובץ המודל",
+    "Copies": "עותקים",
+    "Your session": "הסשן שלכם",
+    "Next training": "האימון הבא",
+    "New file": "קובץ חדש"
   }
 }

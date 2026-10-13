@@ -80,6 +80,10 @@
     "students": {
       "label": "AI and students",
       "note": "Why foundations matter more than ever"
+    },
+    "limits": {
+      "label": "The limits of LLMs",
+      "note": "What AI can copy, and what it can't"
     }
   },
   "kicker": {

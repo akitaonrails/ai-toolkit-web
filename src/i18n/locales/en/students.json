@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "AI and students",
-    "lede": "I'm a senior and I vibe code 100%. If you're a student or a junior, don't copy me yet. Eight short points on why, and where to start.",
+    "lede": "I'm a senior and I vibe code 100%. If you're a student or a junior, don't copy me yet. Nine short points on why, and where to start.",
     "primary": "What to do",
     "secondary": "The Akitando archive"
   },
@@ -94,7 +94,7 @@
       },
       "points": [
         "SignalFire, 2026: new-grad hiring is down about 65% at the big tech companies and 76% at early-stage startups compared with 2019, while engineering hiring at the big tech companies is down only 11%.",
-        "Indeed: entry-level roles were 4.5% of software development postings in early 2026. Senior roles were 69%.",
+        "Indeed: entry-level roles were 4.5% of software postings in early 2026. Postings grew almost 15% after Claude Code launched in February 2025, and 71% of that growth was senior roles.",
         "Stanford's \"Canaries\" study: employment for 22 to 25 year-olds in the most AI-exposed jobs, software developers included, is 19% below where it would be had it kept pace with less-exposed jobs, mostly through fewer hires. The authors are careful to call it descriptive rather than causal.",
         "Recent computer science graduates have one of the highest unemployment rates of any major (7.0%) but one of the lowest underemployment rates (19%, against 39% overall): when they're hired, it's usually into a job that needs the degree. The typical entry path is still a bachelor's degree."
       ],
@@ -103,7 +103,8 @@
         "indeed": "Indeed: the labor market tilts toward seniority",
         "canaries": "Stanford Digital Economy Lab: the AI gap for young workers (August 2026)",
         "nyfed": "New York Fed: the labor market for recent graduates",
-        "bls": "BLS: software developers"
+        "bls": "BLS: software developers",
+        "indeedAi": "Indeed: software postings since Claude Code (July 2026)"
       }
     },
     "guess": {
@@ -117,8 +118,26 @@
         "Even for a tiny app, anything built by vibe coding that goes to production must be reviewed by an experienced programmer. That isn't optional."
       ]
     },
+    "tests": {
+      "kicker": "6. The language myth",
+      "title": "Tests matter more than the language",
+      "lede": "In October 2026 I gave 4 models the same hard task in 7 languages. No language came out ahead.",
+      "stats": {
+        "attempts": "attempts: 7 languages, 4 models, 2 conditions, 2 runs each",
+        "withTests": "correct results from the two weaker models when I gave them the tests",
+        "withoutTests": "correct results from the same models without the tests"
+      },
+      "points": [
+        "The two frontier models got every eligible attempt right, in every language.",
+        "Every failure broke a rule of the problem itself. None was a type error, so no compiler would have caught them.",
+        "Learn to write tests and turn every bug into one. That skill works in any language, with any model."
+      ],
+      "sources": {
+        "repo": "The benchmark: code, data and method"
+      }
+    },
     "why": {
-      "kicker": "6. The question",
+      "kicker": "7. The question",
       "title": "If AI can do all the programming, why learn it?",
       "lede": "Because it can't do all of it. It reproduces what it has seen, and what it hasn't seen is exactly where the next jobs are.",
       "alt": "Two cliffs across a chasm labeled The gap: a teal cliff labeled Public code and a violet, fogged cliff labeled Private & new. A bridge built by AI from the left stops halfway, labeled AI stops here, and amber blocks labeled Fundamentals complete the rest of the span.",
@@ -138,7 +157,7 @@
       }
     },
     "memory": {
-      "kicker": "7. A real example",
+      "kicker": "8. A real example",
       "title": "What \"the AI did it\" actually took",
       "lede": "ai-memory, my open source memory system for coding agents, is mostly written by AI. Everything that keeps it correct came from my review and direction, week after week.",
       "alt": "A core labeled AI output wrapped in five rings labeled Directives, Fences, Lessons, Docs and Tests, with a timeline underneath labeled Weeks of review.",
@@ -161,7 +180,7 @@
       "quoteCite": "Me on X, September 25, 2026"
     },
     "practice": {
-      "kicker": "8. What to do",
+      "kicker": "9. What to do",
       "title": "If you're a student or a junior",
       "lede": "Use AI the way a senior uses an intern: for the chores. The learning has to go through your own hands.",
       "alt": "A loop of four steps, Write by hand, Break it, Debug and Review, around a growing stack labeled Foundations, with a small separate lane labeled AI: chores off to the side.",
@@ -205,6 +224,7 @@
       "Learning on autopilot doesn't stick. The studies so far agree.",
       "The jobs left go to people who can judge the output, and entry-level hiring is shrinking.",
       "AI can't guess your goal, your limits or your trade-offs. Knowing them is the job.",
+      "In my benchmark, giving the model tests changed the results. Pick the language that fits the problem.",
       "AI replicates what's public. The gaps it leaves, in private and new work, are the job, and the hard foundations are how you fill them.",
       "Write by hand, let AI do the chores, review everything, and put in the hours."
     ],

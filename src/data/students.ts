@@ -56,12 +56,21 @@ export const students = {
     ], sources: [
       { id: 'signalfire', href: 'https://www.signalfire.com/blog/signalfire-state-of-talent-report-2026' },
       { id: 'indeed', href: 'https://hiringlab.indeed.com/2026/07/23/the-labor-market-is-tilting-toward-seniority/' },
+      { id: 'indeedAi', href: 'https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/' },
       { id: 'canaries', href: 'https://digitaleconomy.stanford.edu/news/canariesaug26/' },
       { id: 'nyfed', href: 'https://www.newyorkfed.org/research/college-labor-market' },
       { id: 'bls', href: 'https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm' },
     ] },
     { id: 'guess', figure: 'students-guess', posts: ['llmsFail', 'talkClaude', 'tvClipboard'], sources: [] },
-    { id: 'why', figure: 'students-gap', posts: ['llmLimits', 'punchCard', 'aiKilled'], sources: [
+    { id: 'tests', posts: ['languages'], stats: [
+      // From the owner's languages benchmark (2026-10-11): 112 attempts; Kimi and GLM correct with the public tests (T1) vs without (T0).
+      { key: 'attempts', n: 112 },
+      { key: 'withTests', n: 24 },
+      { key: 'withoutTests', n: 16 },
+    ], sources: [
+      { id: 'repo', href: 'https://github.com/akitaonrails/vibe-coding-benchmarks' },
+    ] },
+    { id: 'why', figure: 'students-gap', posts: ['llmLimits', 'adobeRe', 'punchCard'], sources: [
       { id: 'octoverse', href: 'https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/' },
       { id: 'cobol', href: 'https://arxiv.org/abs/2604.03986' },
       { id: 'arc', href: 'https://arcprize.org/' },

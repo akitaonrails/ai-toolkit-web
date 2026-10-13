@@ -1,7 +1,7 @@
 ---
 // Download link for an essay page's slide deck (public/pdf/<deck>-<locale>.pdf, made by `npm run build:decks`).
 import { useI18n } from '@/i18n';
-interface Props { deck: 'agi' | 'students' }
+interface Props { deck: 'agi' | 'students' | 'limits' }
 const { deck } = Astro.props;
 const { t, locale } = useI18n(Astro);
 ---

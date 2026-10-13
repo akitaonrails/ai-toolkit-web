@@ -31,7 +31,8 @@ const localeFonts = { he: fontsHe, ja: fontsJa, ko: fontsKo }[locale as string];
         await document.fonts.ready;
         await Promise.all([...document.images].map((i) => i.complete || new Promise((r) => { i.onload = i.onerror = r; })));
         const fits = (s) => {
-          const limit = s.getBoundingClientRect().bottom - 110;
+          // The slide's bottom padding (120px): content past it makes scrollHeight exceed the page, which the print check rejects.
+          const limit = s.getBoundingClientRect().bottom - 120;
           return [...s.children].every((el) => el.matches('.rule, .slide-foot') || el.getBoundingClientRect().bottom <= limit)
             && [...s.querySelectorAll('[data-flow]')].every((f) => f.scrollWidth <= f.clientWidth + 1);
         };

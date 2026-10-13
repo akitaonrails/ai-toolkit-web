@@ -152,5 +152,52 @@
     "AI stops here": "AI는 여기까지",
     "Fundamentals": "기초",
     "The gap": "빈틈"
+  },
+  "limits-timeline": {
+    "1984 PC BIOS": "1984 PC BIOS",
+    "1993 Wine": "1993 Wine",
+    "2000 Emulators legal": "2000 에뮬레이터 합법",
+    "2019 Ghidra": "2019 Ghidra",
+    "2019 Mario 64 decomp": "2019 Mario 64 디컴프",
+    "2024 Zelda recomp": "2024 Zelda 리컴프",
+    "2026 Agents": "2026 에이전트"
+  },
+  "limits-retro": {
+    "Old game": "옛날 게임",
+    "Mapped": "분석 완료",
+    "Frozen": "고정",
+    "Live product": "운영 중인 제품",
+    "Cloud": "클라우드",
+    "Moves every month": "매달 바뀜"
+  },
+  "limits-facade": {
+    "The screenshot": "스크린숏",
+    "Cloud features": "클라우드 기능",
+    "Camera profiles": "카메라 프로파일",
+    "Color science": "색 과학",
+    "Licenses": "라이선스"
+  },
+  "limits-bun": {
+    "Rewrite": "재작성",
+    "Author": "원작자",
+    "Source code": "소스 코드",
+    "Tests": "테스트",
+    "Budget": "예산",
+    "Clone": "클론",
+    "Tokens": "토큰"
+  },
+  "agi-plateau": {
+    "Base model": "기본 모델",
+    "Reasoning 2024": "추론 2024",
+    "Ceiling": "천장",
+    "Harness": "하네스",
+    "Local models": "로컬 모델"
+  },
+  "agi-static": {
+    "Model file": "모델 파일",
+    "Copies": "복사본",
+    "Your session": "내 세션",
+    "Next training": "다음 학습",
+    "New file": "새 파일"
   }
 }

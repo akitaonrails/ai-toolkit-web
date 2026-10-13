@@ -198,7 +198,7 @@
       "summary": "Qué quiero, cómo, qué no quiero y cómo lo comprobamos: la IA no puede leer lo que tienes en la cabeza."
     },
     "tvClipboard": {
-      "title": "Vibe code: hice una pequeña app 100% con GLM 4.7 (TV Clipboard)",
+      "title": "Vibe code: hice una pequeña app 100 % con GLM 4.7 (TV Clipboard)",
       "summary": "Escrito para principiantes y profesores: un pasante motivado, y código que tiene que revisar un programador experimentado."
     },
     "driveclub": {
@@ -207,7 +207,19 @@
     },
     "llmLimits": {
       "title": "Los límites de los LLMs: buenos para reproducir lo que existe, caros para lo que no",
-      "summary": "El 81,5% de la actividad en GitHub es privada y nada de eso entrenó ningún modelo. Cuatro proyectos retro muestran dónde se atasca la máquina: sin referencia, sin oráculo, fuerza bruta dirigida."
+      "summary": "El 81,5 % de la actividad en GitHub es privada y nada de eso entrenó ningún modelo. Cuatro proyectos retro muestran dónde se atasca la máquina: sin referencia, sin oráculo, fuerza bruta dirigida."
+    },
+    "adobeRe": {
+      "title": "Ingeniería inversa con IA: ¿Adobe murió?",
+      "summary": "PhotoCraft es una alfa con cientos de issues abiertos, REA necesita el binario y Ghidra, y lo retro avanza rápido porque una ROM de 8 MB es pequeña. Reescribir Bun costó 165.000 dólares."
+    },
+    "competentEnough": {
+      "title": "LLMs + agentes = lo bastante competentes",
+      "summary": "Los modelos convergieron cerca del techo del transformer. El salto de 2025 y 2026 vino del harness del agente, y eso ya basta para ingeniería de verdad."
+    },
+    "languages": {
+      "title": "¿Hay lenguajes mejores para programar con LLMs?",
+      "summary": "112 intentos en 7 lenguajes y 4 modelos: ningún ranking de lenguajes se sostuvo, el conciso Ruby gastó tantos tokens como Rust, y los tests cambiaron el resultado."
     }
   },
   "related": {

@@ -1,4 +1,4 @@
-// Prints the slide decks (PDF versions of /agi/ and /students/) in every language, from the built site.
+// Prints the slide decks (PDF versions of /agi/, /students/ and /limits/) in every language, from the built site.
 //   npm run build:decks          build the site, print 12 PDFs into public/pdf/, write public/pdf/manifest.json
 //   npm run check:decks          exit 1 when the PDFs are older than the content they were made from
 // Every slide is a fixed 1920x1080 page (src/layouts/Deck.astro). Before printing, each slide is measured in the
@@ -16,17 +16,17 @@ const dist = join(root, 'dist');
 const out = join(root, 'public/pdf');
 const languages = JSON.parse(readFileSync(join(root, 'src/i18n/languages.json'), 'utf8'));
 const locales = Object.keys(languages);
-export const decks = ['agi', 'students'];
+export const decks = ['agi', 'students', 'limits'];
 
 // Everything a deck is made from. A change to any of these makes the PDFs stale.
 export function inputsHash() {
   const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? walk(p) : [p]; });
   const files = [
-    ...locales.flatMap((l) => ['agi', 'students', 'articles', 'common'].map((ns) => `src/i18n/locales/${l}/${ns}.json`)),
-    'src/data/agi.ts', 'src/data/students.ts', 'src/data/articles.ts', 'src/data/videos.json',
+    ...locales.flatMap((l) => ['agi', 'students', 'limits', 'articles', 'common'].map((ns) => `src/i18n/locales/${l}/${ns}.json`)),
+    'src/data/agi.ts', 'src/data/students.ts', 'src/data/limits.ts', 'src/data/stats.ts', 'src/data/articles.ts', 'src/data/videos.json',
     'src/layouts/Deck.astro', 'src/components/AgiNetwork.astro',
     ...walk(join(root, 'src/components/deck')).map((p) => relative(root, p)),
-    ...walk(join(root, 'src/assets/img/gen')).map((p) => relative(root, p)).filter((p) => /\/(agi|students)-[^/]+\.webp$/.test(p)),
+    ...walk(join(root, 'src/assets/img/gen')).map((p) => relative(root, p)).filter((p) => /\/(agi|students|limits)-[^/]+\.webp$/.test(p)),
   ].filter((p) => existsSync(join(root, p))).sort();
   const h = createHash('sha256');
   for (const f of files) h.update(f).update(readFileSync(join(root, f)));

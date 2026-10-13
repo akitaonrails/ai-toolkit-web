@@ -59,6 +59,21 @@ Decisões de tradução além do glossário do brief (`docs/research/I18N-TRANSL
 | exoskeleton / crutch | exoesqueleto / muleta |
 | deliberate practice | prática deliberada |
 | preprint / peer review | preprint / revisão por pares |
+| The limits of LLMs (page, nav) | Os limites das LLMs (mesmo título do post) |
+| issue (GitHub), gender | masculino: os issues abertos |
+| the source (source code) | o fonte / código-fonte (diagrama) |
+| grunt work | trabalho braçal |
+| live product | produto vivo |
+| screenshot | screenshot |
+| fair use | fair use |
+| reverse engineering | engenharia reversa |
+| plateau | platô |
+| pre-training / training run | pré-treino / treino |
+| reasoning (models) | raciocínio |
+| open-weight | open-weight |
+| reinforcement learning | aprendizado por reforço |
+| locked file (model) | arquivo trancado |
+| ceiling (diagram) | teto |
 
 ## Deliberate differences from English
 

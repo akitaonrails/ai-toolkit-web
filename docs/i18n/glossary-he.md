@@ -54,3 +54,17 @@ Terms decided while translating the Hebrew catalogs. One English term maps to on
 | effort (model reasoning effort) | רמת מאמץ |
 | daily driver | סוס העבודה היומי |
 | analytics | אנליטיקס |
+| plateau (AGI page) | הפלאטו |
+| reasoning (model capability, diagram label "Reasoning 2024") | reasoning (kept) |
+| pre-training / reinforcement learning / open-weight | kept in English |
+| locked file (static model) | קובץ נעול |
+| reverse engineering | הנדסה לאחור |
+| clone (software clone, diagram) | שיבוט |
+| rewrite (Bun) | שכתוב |
+| author (Bun's author, diagram "Author") | היוצר |
+| runtime (Bun) | סביבת ריצה |
+| decompiler | דקומפיילר |
+| grunt work / chores | העבודה השחורה |
+| port (game port) | פורט |
+| job postings | מודעות דרושים |
+| The limits of LLMs (page, nav) | הגבולות של מודלי LLM |

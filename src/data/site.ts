@@ -30,6 +30,7 @@ export const nav: NavLink[] = [
   { id: 'writing', href: '/writing/', hue: 'rose' },
   { id: 'agi', href: '/agi/', hue: 'red' },
   { id: 'students', href: '/students/', hue: 'amber' },
+  { id: 'limits', href: '/limits/', hue: 'blue' },
   { id: 'newsletter', href: '/newsletter/', hue: 'rose' },
   { id: 'podcasts', href: '/podcasts/', hue: 'amber' },
   { id: 'games', href: '/games/', hue: 'orange' },
@@ -43,7 +44,7 @@ export const toolIds = ['usagebar', 'ghpending', 'tclock', 'frank'];
     `label` is the catalog key of the button. Tools also lists the external sites after its own pages. */
 export const navGroups: { id: string; label: string; ids: string[]; external?: boolean }[] = [
   { id: 'tools', label: 'nav.tools.label', ids: toolIds, external: true },
-  { id: 'texts', label: 'nav.writing.label', ids: ['writing', 'agi', 'students'] },
+  { id: 'texts', label: 'nav.writing.label', ids: ['writing', 'agi', 'students', 'limits'] },
 ];
 
 /** Repositories whose stars and latest release the build reads (src/data/github.ts). The list is JSON so the
@@ -52,10 +53,10 @@ export const repos = reposJson;
 export type RepoId = keyof typeof repos;
 export const repoUrl = (id: RepoId) => `https://github.com/${repos[id]}`;
 
-/** The two tools with their own sites. ai-memory's address is temporary until aimemory.io is live. */
+/** The two tools with their own sites. */
 export const sisters = {
   jail: { url: 'https://aijail.io', hue: 'orange' as Hue },
-  memory: { url: 'https://aimemorybr.netlify.app', hue: 'teal' as Hue },
+  memory: { url: 'https://aimemory.sh', hue: 'teal' as Hue },
 };
 export type SisterId = keyof typeof sisters;
 /** Both sister sites use the same routes as this one (English at the root, the rest under /<locale>/), so readers stay in their language. */

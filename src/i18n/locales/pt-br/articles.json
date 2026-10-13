@@ -208,6 +208,18 @@
     "llmLimits": {
       "title": "Os Limites das LLMs: Boas em reproduzir o que existe. Caras pro que não existe",
       "summary": "81,5% da atividade no GitHub é privada e nada disso treinou modelo nenhum. Quatro projetos de retrocomputação mostram onde a máquina trava: sem referência, sem oráculo, força bruta direcionada."
+    },
+    "adobeRe": {
+      "title": "Engenharia Reversa com IA: a Adobe morreu?",
+      "summary": "O PhotoCraft é um alpha com centenas de issues abertos, o REA precisa do binário e do Ghidra, e o retrô anda rápido porque uma ROM de 8 MB é pequena. Reescrever o Bun custou US$ 165 mil."
+    },
+    "competentEnough": {
+      "title": "LLMs + Agentes = competente o suficiente",
+      "summary": "Os modelos convergiram perto do teto do transformer. O salto de 2025 e 2026 veio do harness de agente, e isso já basta pra engenharia de verdade."
+    },
+    "languages": {
+      "title": "Existem Linguagens Melhores pra programar com LLMs?",
+      "summary": "112 tentativas em 7 linguagens e 4 modelos: nenhum ranking de linguagem se sustentou, o Ruby enxuto gastou tantos tokens quanto Rust, e os testes mudaram o resultado."
     }
   },
   "related": {
