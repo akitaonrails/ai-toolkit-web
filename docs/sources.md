@@ -138,7 +138,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 
 | Page | Built from |
 |---|---|
-| `/` | Blog post on skills (desk, loop), ai-memory README (switch), the three tool repos (tool blocks), sister sites, benchmark posts, blog highlights, owner's words (phrases next to the loop, the writing and the independence note; social) |
+| `/` | The hero carousel (the intro, then /limits/, /agi/, /students/, /workflow/, /podcasts/, /newsletter/: kickers and titles reuse each page's own strings, the one-line texts summarize those pages), blog post on skills (desk, loop), ai-memory README (switch), the three tool repos (tool blocks), sister sites, benchmark posts, blog highlights, owner's words (phrases next to the loop, the writing and the independence note; social) |
 | `/workflow/` | my-skills repo, skills blog post, ai-memory README, the tally (section 9) |
 | `/setup/` | Owner's words and the third-party sources in section 6b |
 | `/ai-usagebar/` | ai-usagebar repo |

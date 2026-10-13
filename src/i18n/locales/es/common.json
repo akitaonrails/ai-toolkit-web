@@ -173,5 +173,14 @@
   "deck": {
     "download": "Mándaselo a tu jefe",
     "format": "diapositivas en PDF"
+  },
+  "carousel": {
+    "role": "carrusel",
+    "slide": "diapositiva",
+    "prev": "Diapositiva anterior",
+    "next": "Diapositiva siguiente",
+    "pause": "Pausar el carrusel",
+    "play": "Reanudar el carrusel",
+    "go": "Diapositiva {n} de {total}"
   }
 }

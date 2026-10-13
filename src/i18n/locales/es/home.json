@@ -146,5 +146,46 @@
     "text": "Escríbeme a <a class=\"link\" href=\"mailto:{email}\">{email}</a>.",
     "warningTitle": "Antes de escribir",
     "warning": "No intentes venderme nada ni ofrecerme patrocinios: no respondo esos mensajes. No hay respuesta automática de \"recibido\". Si no contesto, es que no me interesó."
+  },
+  "carousel": {
+    "label": "Páginas destacadas",
+    "items": [
+      {
+        "kicker": "Opinión",
+        "title": "Los límites de los LLMs",
+        "text": "PhotoCraft y los ports de juegos que salen cada día no significan que Adobe haya muerto ni que los programadores sean los siguientes. Lo que la IA copia bien y lo que no puede copiar.",
+        "cta": "Leer"
+      },
+      {
+        "kicker": "Opinión",
+        "title": "Por qué la AGI no importa",
+        "text": "Sin una definición común, sin una prueba real y con modelos que dejaron de volverse mucho más inteligentes. Las herramientas son excelentes de todos modos.",
+        "cta": "Leer"
+      },
+      {
+        "kicker": "Opinión",
+        "title": "La IA y los estudiantes",
+        "text": "Hago vibe coding todo el día porque pasé décadas aprendiendo por el camino difícil. Si estás empezando, no me copies todavía.",
+        "cta": "Leer"
+      },
+      {
+        "kicker": "Flujo de trabajo",
+        "title": "Cómo trabajo con agentes",
+        "text": "Un agente por proyecto, una sola línea cada mañana y skills que sigo refinando. Así mantengo en marcha más de 40 repositorios.",
+        "cta": "Ver el flujo de trabajo"
+      },
+      {
+        "kicker": "Podcasts",
+        "title": "Conversaciones largas sobre IA",
+        "text": "Ya no hago videos, pero todavía acepto algunas invitaciones a conversaciones largas. Estas valen tus horas.",
+        "cta": "Verlas"
+      },
+      {
+        "kicker": "Newsletter",
+        "title": "The M.Akita Chronicles",
+        "text": "Cada lunes: los enlaces que valió la pena leer en la semana, con mis comentarios y un robot muy deprimido. Escrita en portugués.",
+        "cta": "Ver la newsletter"
+      }
+    ]
   }
 }

@@ -146,5 +146,46 @@
     "text": "Escreva para <a class=\"link\" href=\"mailto:{email}\">{email}</a>.",
     "warningTitle": "Antes de escrever",
     "warning": "Não tente me vender nada e não ofereça patrocínio: eu não respondo. Não existe resposta automática de \"recebido\". Se eu não responder, é porque não me interessou."
+  },
+  "carousel": {
+    "label": "Páginas em destaque",
+    "items": [
+      {
+        "kicker": "Opinião",
+        "title": "Os limites das LLMs",
+        "text": "PhotoCraft e os ports de games que saem todo dia não querem dizer que a Adobe morreu nem que os programadores são os próximos. O que a IA copia bem, e o que ela não consegue.",
+        "cta": "Ler"
+      },
+      {
+        "kicker": "Opinião",
+        "title": "Por que AGI não importa",
+        "text": "Sem definição em comum, sem teste de verdade, e com modelos que pararam de ficar muito mais inteligentes. As ferramentas são excelentes mesmo assim.",
+        "cta": "Ler"
+      },
+      {
+        "kicker": "Opinião",
+        "title": "IA e estudantes",
+        "text": "Eu faço vibe coding o dia inteiro porque passei décadas aprendendo do jeito difícil. Se você está começando, não me copie ainda.",
+        "cta": "Ler"
+      },
+      {
+        "kicker": "Workflow",
+        "title": "Como eu trabalho com agentes",
+        "text": "Um agente por projeto, uma linha por manhã e skills que eu vivo refinando. É assim que eu mantenho mais de 40 repositórios andando.",
+        "cta": "Ver o workflow"
+      },
+      {
+        "kicker": "Podcasts",
+        "title": "Conversas longas sobre IA",
+        "text": "Não faço mais vídeos, mas ainda aceito alguns convites pra conversas longas. Estas valem as suas horas.",
+        "cta": "Assistir"
+      },
+      {
+        "kicker": "Newsletter",
+        "title": "The M.Akita Chronicles",
+        "text": "Toda segunda-feira: os links que valeram a leitura na semana, com meus comentários e um robô muito deprimido.",
+        "cta": "Ver a newsletter"
+      }
+    ]
   }
 }

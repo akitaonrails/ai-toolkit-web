@@ -1,0 +1,105 @@
+---
+// A row of full-width slides (the home page hero). Each child of the slot is one slide: give it an `id` and the
+// class `c-slide`, and pass the same ids in `ids`, in order.
+// Without JavaScript it is a horizontal scroll-snap strip (swipe, or the dots, which are plain anchor links).
+// With JavaScript: previous/next buttons, dots that follow the scroll, and autoplay that holds while a slide is hovered or focused,
+// or the strip is off screen or the tab hidden; it stops for good once the reader takes over, and never starts
+// under prefers-reduced-motion. A pause button is shown while it runs (WCAG 2.2.2). Words in common.json `carousel`.
+import { useI18n } from '@/i18n';
+interface Props { ids: string[]; label: string; interval?: number }
+const { ids, label, interval = 8000 } = Astro.props;
+const { t } = useI18n(Astro);
+---
+<div class="carousel" data-carousel data-interval={interval} role="region" aria-roledescription={t('carousel.role')} aria-label={label}>
+  <div class="track" data-track tabindex="0">
+    <slot />
+  </div>
+  <div class="wrap controls">
+    <button type="button" class="ctl" data-prev aria-label={t('carousel.prev')} hidden>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+    </button>
+    <ol class="dots">
+      {ids.map((id, i) => <li><a href={`#${id}`} data-dot aria-label={t('carousel.go', { n: i + 1, total: ids.length })} aria-current={i === 0 ? 'true' : undefined}></a></li>)}
+    </ol>
+    <button type="button" class="ctl" data-next aria-label={t('carousel.next')} hidden>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+    </button>
+    <button type="button" class="ctl" data-pause aria-label={t('carousel.pause')} data-label-play={t('carousel.play')} data-label-pause={t('carousel.pause')} hidden>
+      <svg class="i-pause" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>
+      <svg class="i-play" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" /></svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  .track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .track::-webkit-scrollbar { display: none; }
+  .track:focus-visible { outline: 2px solid var(--action); outline-offset: -4px; }
+  .track > :global(.c-slide) { flex: 0 0 100%; min-inline-size: 0; scroll-snap-align: start; scroll-snap-stop: always; display: flex; align-items: center; }
+  .controls { display: flex; align-items: center; gap: 0.5rem; padding-block: 0 2.5rem; }
+  .dots { display: flex; gap: 0.15rem; margin: 0 0.25rem; padding: 0; list-style: none; }
+  /* The dot is small; the link around it is a 40px target. */
+  .dots a { display: grid; place-items: center; inline-size: 1.75rem; block-size: 2.5rem; }
+  .dots a::before { content: ''; inline-size: 0.6rem; block-size: 0.6rem; border-radius: 99px; background: var(--line); transition: inline-size 0.3s, background 0.3s; }
+  .dots a[aria-current='true']::before { inline-size: 1.4rem; background: var(--text); }
+  .dots a:hover::before { background: var(--muted); }
+  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 99px; border: 1.5px solid var(--line); color: var(--text); background: var(--surface); transition: border-color 0.2s; }
+  .ctl:hover { border-color: var(--muted); }
+  .ctl[hidden] { display: none; }
+  [data-pause] .i-play, [data-pause][data-paused] .i-pause { display: none; }
+  [data-pause][data-paused] .i-play { display: block; }
+  :global([dir='rtl']) .ctl svg:not(.i-pause, .i-play) { transform: scaleX(-1); }
+</style>
+
+<script>
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  for (const root of document.querySelectorAll<HTMLElement>('[data-carousel]')) {
+    const track = root.querySelector<HTMLElement>('[data-track]')!;
+    const slides = [...track.children] as HTMLElement[];
+    const dots = [...root.querySelectorAll<HTMLAnchorElement>('[data-dot]')];
+    const pause = root.querySelector<HTMLButtonElement>('[data-pause]')!;
+    root.querySelectorAll<HTMLButtonElement>('[data-prev], [data-next]').forEach((b) => (b.hidden = false));
+    let index = 0;
+
+    // Offsets relative to the first slide, so the same math works right to left (where scrollLeft goes negative).
+    const go = (i: number) => {
+      index = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[index].offsetLeft - slides[0].offsetLeft, behavior: reduced.matches ? 'auto' : 'smooth' });
+    };
+    let frame = 0;
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        index = Math.round(Math.abs(track.scrollLeft) / track.clientWidth);
+        dots.forEach((d, i) => (i === index ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current')));
+        slides.forEach((s, i) => (s.inert = i !== index));
+      });
+    }, { passive: true });
+    slides.forEach((s, i) => (s.inert = i !== 0));
+
+    // Autoplay: runs only while nobody is reading or touching the strip, and stops for good once the reader takes over.
+    let stopped = reduced.matches, visible = true, timer = 0;
+    // Holds while the reader points at or focuses a slide (not the controls, so Play takes effect at once).
+    const hold = () => track.matches(':hover, :focus-within') || document.hidden || !visible;
+    const tick = () => { if (!stopped && !hold()) go(index + 1); };
+    const run = () => { clearInterval(timer); if (!stopped) timer = window.setInterval(tick, Number(root.dataset.interval)); };
+    const stop = () => {
+      stopped = true; clearInterval(timer);
+      pause.dataset.paused = ''; pause.setAttribute('aria-label', pause.dataset.labelPlay!);
+    };
+    const takeOver = (fn: () => void) => () => { stop(); fn(); };
+    root.querySelector('[data-prev]')!.addEventListener('click', takeOver(() => go(index - 1)));
+    root.querySelector('[data-next]')!.addEventListener('click', takeOver(() => go(index + 1)));
+    dots.forEach((d, i) => d.addEventListener('click', (e) => { e.preventDefault(); stop(); go(i); }));
+    track.addEventListener('pointerdown', stop);
+    track.addEventListener('wheel', (e) => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) stop(); }, { passive: true });
+    track.addEventListener('keydown', (e) => { if (e.key.startsWith('Arrow')) stop(); });
+    pause.addEventListener('click', () => {
+      if (stopped) {
+        stopped = false; delete pause.dataset.paused; pause.setAttribute('aria-label', pause.dataset.labelPause!); run();
+      } else stop();
+    });
+    new IntersectionObserver(([entry]) => (visible = entry.isIntersecting), { threshold: 0.5 }).observe(root);
+    if (!stopped) { pause.hidden = false; run(); }
+  }
+</script>

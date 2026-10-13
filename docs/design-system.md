@@ -47,6 +47,7 @@ Hubot Sans for headlines (800, width 112%; the home h1 goes to 118%), Mona Sans 
 | Component | Use |
 |---|---|
 | `Base` (layout) | Every page. Props: `title`, `description` (140 to 160 characters), `schema`, `noindex`. |
+| `Carousel` | The home page hero: full-width slides (the intro, then the featured pages in their hues). Scroll-snap strip without JavaScript; with it, arrows, dots and autoplay that holds on hover or focus, stops once the reader takes over, never runs under reduced motion, and has a pause button. Props: `ids`, `label`, `interval`. Words in `common.json` `carousel`, slides in `home.json` `carousel.items`. |
 | `PageHero` | Top of every detail page. Props: `hue`, `kicker`, `title`, `lede`. Slot: one or two buttons. |
 | `Section` | A band with an h2. Props: `title`, `lede`, `hue`, `id`, `tint`, `narrow`, `fill` (scroll-lit lede, one per page), `ink`. |
 | `Figure` | A generated diagram from `src/assets/img/gen/`. Props: `name`, `alt`, `caption`. |

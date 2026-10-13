@@ -5,16 +5,12 @@
 // Pass `src` for any other imported image (screenshots).
 import { Image } from 'astro:assets';
 import { useI18n } from '@/i18n';
+import { genImage } from '@/data/gen-image';
 interface Props { name?: string; src?: ImageMetadata; alt: string; caption?: string; zoom?: boolean }
 const { name, src, alt, caption, zoom = true } = Astro.props;
 const { locale } = useI18n(Astro);
 
-const originals = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/gen/*.webp', { eager: true });
-const localized = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/gen/*/*.webp', { eager: true });
-const image = src
-  ?? localized[`/src/assets/img/gen/${locale}/${name}.webp`]?.default
-  ?? originals[`/src/assets/img/gen/${name}.webp`]?.default;
-if (!image) throw new Error(`Figure: no image for name="${name}"`);
+const image = src ?? genImage(name!, locale);
 ---
 <figure class="fig">
   {/* Diagrams read left to right in every language, like the logo. */}

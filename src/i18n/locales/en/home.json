@@ -146,5 +146,46 @@
     "text": "Write to <a class=\"link\" href=\"mailto:{email}\">{email}</a>.",
     "warningTitle": "Before you write",
     "warning": "Do not try to sell me anything, and do not offer sponsorships: I will not answer those. There is no automatic \"received\" reply. If I do not answer, I was not interested."
+  },
+  "carousel": {
+    "label": "Featured pages",
+    "items": [
+      {
+        "kicker": "Opinion",
+        "title": "The limits of LLMs",
+        "text": "PhotoCraft and the daily game ports don't mean Adobe is dead or that programmers are next. What AI copies well, and what it can't.",
+        "cta": "Read it"
+      },
+      {
+        "kicker": "Opinion",
+        "title": "Why AGI doesn't matter",
+        "text": "No agreed definition, no real test, and models that stopped getting much smarter. The tools are excellent anyway.",
+        "cta": "Read it"
+      },
+      {
+        "kicker": "Opinion",
+        "title": "AI and students",
+        "text": "I vibe code all day because I spent decades learning the hard way. If you're starting out, don't copy me yet.",
+        "cta": "Read it"
+      },
+      {
+        "kicker": "Workflow",
+        "title": "How I work with agents",
+        "text": "One agent per project, a single line each morning, and skills I keep refining. That's how I keep more than 40 repositories moving.",
+        "cta": "See the workflow"
+      },
+      {
+        "kicker": "Podcasts",
+        "title": "Long conversations about AI",
+        "text": "I no longer make videos, but I still accept a few long-form invitations. These are the ones worth your hours.",
+        "cta": "Watch them"
+      },
+      {
+        "kicker": "Newsletter",
+        "title": "The M.Akita Chronicles",
+        "text": "Every Monday: the links I found worth reading that week, with my comments and a very depressed robot. Written in Portuguese.",
+        "cta": "See the newsletter"
+      }
+    ]
   }
 }

@@ -11,16 +11,21 @@ import Social from '@/components/Social.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import Portrait from '@/components/Portrait.astro';
+import Carousel from '@/components/Carousel.astro';
+import { Image } from 'astro:assets';
 import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
 import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
 import tclockShot from '@/assets/img/shots/tclock-nerv.png';
 import { sisters, sisterUrl, site, social } from '@/data/site';
 import { pick, articles, articleUrl } from '@/data/articles';
+import { genImage } from '@/data/gen-image';
+import videos from '@/data/videos.json';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
 const { t, raw, href, locale } = useI18n(Astro, 'home');
+const { t: tc } = useI18n(Astro);
 type Text = { title: string; text: string };
 type Quote = { text: string; original?: string; cite?: string };
 type Tool = { tagline: string; text: string; points: string[]; shotAlt: string };
@@ -36,26 +41,60 @@ const bigger = withText([
   { hue: sisters.jail.hue, href: sisterUrl('jail', locale) },
   { hue: 'violet', href: '/workflow/' },
 ] as const, raw<(Text & { link: string })[]>('sisters.items'));
+// The hero carousel: the intro first, then the pages I most want a new reader to find, each in its subject's hue
+// with that page's own picture (the newest TV appearance for the podcasts). Words in home.json `carousel.items`.
+const thumbs = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/video/*.jpg', { eager: true });
+const featured = withText([
+  { id: 'limits', hue: 'blue', href: '/limits/', image: genImage('limits-facade', locale) },
+  { id: 'agi', hue: 'red', href: '/agi/', image: genImage('agi-plateau', locale) },
+  { id: 'students', hue: 'amber', href: '/students/', image: genImage('students-multiplier', locale) },
+  { id: 'workflow', hue: 'violet', href: '/workflow/', image: genImage('workflow-pipeline', locale) },
+  { id: 'podcasts', hue: 'amber', href: '/podcasts/', image: thumbs[`/src/assets/img/video/${videos.tv[0].id}.jpg`].default },
+  { id: 'newsletter', hue: 'rose', href: '/newsletter/', image: genImage('newsletter-pipeline', locale) },
+] as const, raw<{ kicker: string; title: string; text: string; cta: string }[]>('carousel.items'));
+const slides = [{ id: 'slide-intro' }, ...featured.map((f) => ({ id: `slide-${f.id}` }))];
 const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cleanCode');
 ---
 <Base description={t('meta.description')}>
   <section class="hero" data-exit>
-    <div class="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] pt-32 pb-16 md:pt-40 md:pb-24">
-      <div>
-        <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{t('hero.kicker')}</div>
-        <h1 class="text-4xl hero-title" data-reveal>{t('hero.title')}</h1>
-        <div class="spectrum-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
-        <p class="intro mt-7" set:html={t('hero.intro', { linkedin: social.find((s) => s.id === 'linkedin')!.url })} />
-        <p class="lede mt-4 !text-[1.3rem]">{t('hero.lede')}</p>
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a href={href('/workflow/')} class="btn btn-primary">{t('hero.primary')}</a>
-          <a href="#follow" class="btn btn-ghost">{t('hero.secondary')}</a>
+    <Carousel ids={slides.map((x) => x.id)} label={t('carousel.label')}>
+      <div id="slide-intro" class="c-slide" role="group" aria-roledescription={tc('carousel.slide')} aria-label={tc('carousel.go', { n: 1, total: slides.length })}>
+        <div class="wrap slide-grid">
+          <div>
+            <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{t('hero.kicker')}</div>
+            <h1 class="text-4xl hero-title" data-reveal>{t('hero.title')}</h1>
+            <div class="spectrum-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
+            <p class="intro mt-7" set:html={t('hero.intro', { linkedin: social.find((s) => s.id === 'linkedin')!.url })} />
+            <p class="lede mt-4 !text-[1.3rem]">{t('hero.lede')}</p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href={href('/workflow/')} class="btn btn-primary">{t('hero.primary')}</a>
+              <a href="#follow" class="btn btn-ghost">{t('hero.secondary')}</a>
+            </div>
+          </div>
+          <div class="justify-self-center lg:justify-self-end">
+            <Portrait alt={t('hero.portraitAlt')} />
+          </div>
         </div>
       </div>
-      <div class="justify-self-center lg:justify-self-end">
-        <Portrait alt={t('hero.portraitAlt')} />
-      </div>
-    </div>
+      {featured.map((f, i) => (
+        <div id={`slide-${f.id}`} class="c-slide" data-hue={f.hue} role="group" aria-roledescription={tc('carousel.slide')} aria-label={tc('carousel.go', { n: i + 2, total: slides.length })}>
+          <div class="wrap slide-grid">
+            <div>
+              <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{f.kicker}</div>
+              <h2 class="text-4xl hero-title">{f.title}</h2>
+              <div class="hue-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
+              <p class="lede mt-7 !text-[1.3rem]">{f.text}</p>
+              <div class="mt-9 flex flex-wrap gap-3">
+                <a href={href(f.href)} class="btn btn-primary">{f.cta}</a>
+              </div>
+            </div>
+            <a href={href(f.href)} class="slide-art" tabindex="-1" aria-hidden="true">
+              <Image src={f.image} alt="" widths={[480, 720, 960, 1280]} sizes="(min-width: 1024px) 36rem, 94vw" quality={82} loading="lazy" />
+            </a>
+          </div>
+        </div>
+      ))}
+    </Carousel>
   </section>
 
   <Section title={t('desk.title')} lede={t('desk.lede')} hue="violet" fill>
@@ -156,6 +195,12 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   .intro { font-size: var(--text-lg); line-height: 1.5; max-width: 34em; }
   .intro :global(a) { color: var(--blue); }
   .hero-title { font-stretch: 118%; letter-spacing: -0.03em; }
+  .slide-grid { display: grid; align-items: center; gap: 3rem; padding-block: 8rem 2.5rem; }
+  @media (min-width: 48rem) { .slide-grid { padding-block-start: 10rem; } }
+  @media (min-width: 64rem) { .slide-grid { grid-template-columns: 1.15fr 1fr; } }
+  .hue-rule { block-size: 3px; border-radius: 99px; background: var(--hue-vivid); }
+  .slide-art { display: block; border-radius: 1.25rem; overflow: hidden; background: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .slide-art :global(img) { display: block; inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 
   .desk-steps { display: grid; gap: 2.5rem 3rem; margin-block-start: 1rem; }
   @media (min-width: 48rem) { .desk-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

@@ -173,5 +173,14 @@
   "deck": {
     "download": "Mande pro seu chefe",
     "format": "slides em PDF"
+  },
+  "carousel": {
+    "role": "carrossel",
+    "slide": "slide",
+    "prev": "Slide anterior",
+    "next": "Próximo slide",
+    "pause": "Pausar o carrossel",
+    "play": "Retomar o carrossel",
+    "go": "Slide {n} de {total}"
   }
 }

@@ -173,5 +173,14 @@
   "deck": {
     "download": "Send this to your boss",
     "format": "PDF slides"
+  },
+  "carousel": {
+    "role": "carousel",
+    "slide": "slide",
+    "prev": "Previous slide",
+    "next": "Next slide",
+    "pause": "Pause the slideshow",
+    "play": "Play the slideshow",
+    "go": "Slide {n} of {total}"
   }
 }
