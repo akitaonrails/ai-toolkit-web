@@ -2,6 +2,7 @@
 // Reads the book on the page with epub.js (github.com/futurepress/epub.js). The EPUBs are unpacked into
 // /book/read/<edition>/ at build time (scripts/fetch-book.mjs), so the reader fetches one chapter at a time.
 // In the card it shows one page; full screen shows two pages side by side when the screen is wide enough.
+// Pages turn with the buttons, the arrow keys, a swipe, or a tap or click on the page's outer third, like an e-reader.
 // epub.js loads only when the card comes near the screen. Pages take the site's own colors (light or dark).
 // It resumes where the reader stopped: the last edition opened and the last page of each, kept in this browser's
 // localStorage (nothing leaves the browser; a private window simply starts at the cover). Words in book.json `reader`.
@@ -51,7 +52,7 @@ const first = bookEdition(locale);
   .ctl .i-exit, .reader:fullscreen .ctl .i-full, .reader.max .ctl .i-full { display: none; }
   .reader:fullscreen .ctl .i-exit, .reader.max .ctl .i-exit { display: inline; }
   .stage { flex: 1; min-block-size: 0; display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: minmax(0, 1fr); gap: 0.5rem; }
-  .view { block-size: 100%; min-inline-size: 0; inline-size: 100%; position: relative; border-radius: 0.5rem; justify-self: center; }
+  .view { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; block-size: 100%; min-inline-size: 0; inline-size: 100%; position: relative; border-radius: 0.5rem; justify-self: center; }
   /* In the card, one page at a readable width; full screen gets the whole width for two pages. */
   .reader:not(:fullscreen, .max) .view { max-inline-size: 42rem; }
   .view:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
@@ -100,7 +101,12 @@ const first = bookEdition(locale);
       rendition.themes.override('background', c.bg);
       rendition.themes.override('color', c.fg);
       // Links in the page's accent, readable on both themes (the EPUB leaves them in the browser's default blue).
-      rendition.themes.default({ a: { color: `${c.link} !important` } });
+      rendition.themes.default({
+        a: { color: `${c.link} !important` },
+        // Horizontal swipes belong to the reader: without this, a swipe to the right can trigger the browser's own
+        // back gesture and leave the page (Chrome on Android).
+        'html, body': { 'touch-action': 'pan-y pinch-zoom', 'overscroll-behavior-x': 'none' },
+      });
     };
     // Draws the loaded book into the card (one page) or the full screen (two pages when wide enough), at `at`.
     // epub.js keeps already-drawn pages at their old size after a resize, so a layout change draws them anew.
@@ -119,6 +125,17 @@ const first = bookEdition(locale);
       let x0 = 0;
       rendition.on('touchstart', (e: TouchEvent) => { x0 = e.changedTouches[0].screenX; });
       rendition.on('touchend', (e: TouchEvent) => { const dx = e.changedTouches[0].screenX - x0; if (Math.abs(dx) > 40) (dx < 0 ? rendition!.next() : rendition!.prev()); });
+      // Tap or click the outer third of the page to turn it, like an e-reader; links and the middle are left alone.
+      rendition.on('click', (e: MouseEvent) => {
+        const target = e.target as Element;
+        if (target.closest?.('a') || target.ownerDocument.getSelection()?.toString()) return;
+        // The chapter iframe is as wide as all its pages, so place the click in the visible view, in page coordinates.
+        const frame = target.ownerDocument.defaultView?.frameElement?.getBoundingClientRect();
+        if (!frame) return;
+        const r = view.getBoundingClientRect();
+        const x = (frame.left + e.clientX - r.left) / r.width;
+        if (x > 2 / 3) rendition!.next(); else if (x < 1 / 3) rendition!.prev();
+      });
       await rendition.display(at);
     }
     const fit = () => {

@@ -47,7 +47,7 @@ Hubot Sans for headlines (800, width 112%; the home h1 goes to 118%), Mona Sans 
 | Component | Use |
 |---|---|
 | `Base` (layout) | Every page. Props: `title`, `description` (140 to 160 characters), `schema`, `noindex`. |
-| `BookReader` | The book read on the page with epub.js: one page in a card, two side by side in full screen, edition switch, contents, resume where the reader stopped. Loads only when near the screen. Words in `book.json` `reader`. |
+| `BookReader` | The book read on the page with epub.js: one page in a card, two side by side in full screen, edition switch, contents, resume where the reader stopped. Pages turn with the arrow buttons (hidden on phones), the arrow keys, a swipe, or a tap or click on the page's outer third; links and the middle third are left alone, and horizontal swipes never reach the browser's back gesture. Loads only when near the screen. Words in `book.json` `reader`. |
 | `Carousel` | The home page hero: full-width slides (the intro, then the featured pages in their hues). Scroll-snap strip without JavaScript; with it, arrows, dots and autoplay that holds on hover or focus, stops once the reader takes over, never runs under reduced motion, and has a pause button. Props: `ids`, `label`, `interval`. Words in `common.json` `carousel`, slides in `home.json` `carousel.items`. |
 | `PageHero` | Top of every detail page. Props: `hue`, `kicker`, `title`, `lede`. Slot: one or two buttons. |
 | `Section` | A band with an h2. Props: `title`, `lede`, `hue`, `id`, `tint`, `narrow`, `fill` (scroll-lit lede, one per page), `ink`. |
