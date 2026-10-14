@@ -11,14 +11,14 @@ export const book = {
   issues: 'https://github.com/akitaonrails/ai-book-2026/issues',
   // The version as the owner names it on the page; the release it points to.
   label: '1.0-preview',
-  tag: 'v1.0.0-preview.5',
+  tag: 'v1.0.0-preview.6',
   released: '2026-10-14',
   editions: [
-    { id: 'en', file: 'Competent-Enough', pages: 487 },
-    { id: 'pt', file: 'Competente-o-Suficiente', pages: 500 },
+    { id: 'en', file: 'Competent-Enough', pages: 491 },
+    { id: 'pt', file: 'Competente-o-Suficiente', pages: 506 },
   ],
   // Read on 2026-10-14 at the tag: print PDFs (pdfinfo), book/back/glossary-*.yml (144 entries in each edition),
-  // book/back/references.yaml (315), book/outline.yml (20 chapters, 5 parts, 10 appendices).
+  // book/back/references.yaml (315), book/outline.yml (20 chapters, 5 parts, 11 appendices).
   numbers: { chapters: 20, parts: 5, glossary: 144, references: 315 },
 } as const;
 
