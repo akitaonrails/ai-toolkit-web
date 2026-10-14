@@ -66,6 +66,13 @@
     },
     "version": "Version {version}, released {date}"
   },
+  "free": {
+    "title": "Free, and it stays free",
+    "text": "The EPUB and the PDFs are free to download and read, today and in every future version. The book holds years of my research and experiments, and I'm giving it away because I want a new generation of computer scientists to start from what I learned and go further.",
+    "soon": "A hardcover edition is coming to Amazon soon, for anyone who wants a copy on the shelf. I'll link it here as soon as it's out.",
+    "hardcover": "For anyone who wants a copy on the shelf, there's a hardcover edition on Amazon.",
+    "buy": "{title}, hardcover on Amazon"
+  },
   "inside": {
     "title": "What's inside",
     "lede": "Five parts, each answering a question people keep asking me about AI.",

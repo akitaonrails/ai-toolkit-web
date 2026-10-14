@@ -17,6 +17,9 @@ export const book = {
     { id: 'en', file: 'Competent-Enough', pages: 505 },
     { id: 'pt', file: 'Competente-o-Suficiente', pages: 518 },
   ],
+  // The hardcover, per edition: the owner said on 2026-10-14 it will be on Amazon shortly. Paste the product URLs when
+  // they exist; until then the page says it is coming and shows no link.
+  hardcover: { en: '', pt: '' } as Record<'en' | 'pt', string>,
   // Read on 2026-10-14 at the tag: print PDFs (pdfinfo), book/back/glossary-*.yml (146 entries in each edition),
   // book/back/references.yaml (310), book/outline.yml (21 chapters, 5 parts, 10 appendices).
   numbers: { chapters: 21, parts: 5, glossary: 146, references: 310 },

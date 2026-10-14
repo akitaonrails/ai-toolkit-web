@@ -66,6 +66,13 @@
     },
     "version": "Versão {version}, publicada em {date}"
   },
+  "free": {
+    "title": "De graça, e continua de graça",
+    "text": "O EPUB e os PDFs são de graça pra baixar e ler, hoje e em todas as próximas versões. O livro reúne anos da minha pesquisa e dos meus experimentos, e eu estou dando ele porque quero que uma nova geração de cientistas da computação comece do que eu aprendi e vá mais longe.",
+    "soon": "Uma edição em capa dura vai sair na Amazon em breve, pra quem quiser um exemplar na estante. Eu coloco o link aqui assim que ela sair.",
+    "hardcover": "Pra quem quiser um exemplar na estante, tem uma edição em capa dura na Amazon.",
+    "buy": "{title}, capa dura na Amazon"
+  },
   "inside": {
     "title": "O que tem dentro",
     "lede": "Cinco partes, cada uma respondendo a uma pergunta que as pessoas vivem me fazendo sobre IA.",
