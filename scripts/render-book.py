@@ -1,16 +1,16 @@
 # Renders the book page's 3D mockup of Fabio Akita's book (~/Projects/ai-book-2026) from its official cover, in
 # Blender, headless:
-#   blender -b -P scripts/render-book.py -- <cover.png> <out.png> "<SPINE TITLE>" [book-repo]
-# The model is a 6 x 9 in paperback, 1.15 in thick: the print PDFs of 1.0.0-preview.2 have 459 (en) and 466 (pt)
-# pages, about 0.0025 in per page. The spine is drawn here from the cover's own colors and title face (Limelight,
+#   blender -b -P scripts/render-book.py -- <cover.png> <out.png> "<SPINE TITLE>" <print pages> [book-repo]
+# The model is a 6 x 9 in paperback as thick as the print edition: about 0.0025 in per page (pages from pdfinfo on
+# the release's print PDF, the same numbers as src/data/book.ts). The spine is drawn here from the cover's own colors and title face (Limelight,
 # cream on navy, from the book repo's scripts/compose_cover.rb), so no image model ever redraws the cover.
 # Output: a transparent PNG with a soft floor shadow. docs/images.md, "Book".
 import bpy, math, sys, os, subprocess, tempfile
 
 args = sys.argv[sys.argv.index('--') + 1:]
-cover, out, title = args[0], args[1], args[2]
-repo = os.path.expanduser(args[3] if len(args) > 3 else '~/Projects/ai-book-2026')
-W, H, T = 6.0, 9.0, 1.15          # inches: width, height, thickness
+cover, out, title, pages = args[0], args[1], args[2], int(args[3])
+repo = os.path.expanduser(args[4] if len(args) > 4 else '~/Projects/ai-book-2026')
+W, H, T = 6.0, 9.0, pages * 0.0025   # inches: width, height, thickness
 BOARD = 0.025                     # cover stock
 NAVY, CREAM = '#0E2433', '#F4E9D0'
 
@@ -19,8 +19,11 @@ tmp = tempfile.mkdtemp()
 spine = os.path.join(tmp, 'spine.png')
 sw, sh = round(1600 * T / W), 2560
 fonts = os.path.join(repo, 'assets/fonts')
+# The title fills the spine's width, but never so long that it runs into the author at the foot: about 62% of the
+# spine's length is free for it, and a Limelight capital is about 0.75 em wide.
+title_pt = min(sw * 0.42, sh * 0.62 / (len(title) * 0.75))
 subprocess.run(['magick', '-size', f'{sh}x{sw}', f'xc:{NAVY}',
-  '-font', os.path.join(fonts, 'Limelight-Regular.ttf'), '-pointsize', str(round(sw * 0.42)), '-fill', CREAM,
+  '-font', os.path.join(fonts, 'Limelight-Regular.ttf'), '-pointsize', str(round(title_pt)), '-fill', CREAM,
   '-gravity', 'west', '-annotate', f'+{round(sh * 0.06)}+0', title,
   '-font', os.path.join(fonts, 'NotoSans-SemiBold.ttf'), '-pointsize', str(round(sw * 0.2)), '-kerning', '6',
   '-gravity', 'east', '-annotate', f'+{round(sh * 0.05)}+0', 'FABIO AKITA',

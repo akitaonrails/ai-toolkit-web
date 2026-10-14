@@ -63,7 +63,8 @@
         "name": "PDF for print",
         "for": "6 × 9 in pages, ready to print"
       }
-    }
+    },
+    "version": "Version {version}, released {date}"
   },
   "inside": {
     "title": "What's inside",
@@ -96,7 +97,7 @@
         "question": "Will it take my job? What comes next?"
       }
     ],
-    "extras": "Plus two interludes, an optional appendix on how the machine works inside (no math), a timeline, practical checklists and the list of the original articles behind each chapter."
+    "extras": "Plus two interludes and ten appendices, from how the machine works inside (no math) and three bubbles, dot-com to AI, to studying with AI at your side, a safety kit for agents and the behind-the-scenes for programmers."
   },
   "made": {
     "title": "Making-of",

@@ -63,7 +63,8 @@
         "name": "PDF para imprimir",
         "for": "Páginas de 6 × 9 pulgadas, listas para imprimir"
       }
-    }
+    },
+    "version": "Versión {version}, publicada el {date}"
   },
   "inside": {
     "title": "Qué hay dentro",
@@ -96,7 +97,7 @@
         "question": "¿Me va a quitar el trabajo? ¿Qué viene después?"
       }
     ],
-    "extras": "Además, dos interludios, un apéndice opcional sobre cómo funciona la máquina por dentro (sin matemáticas), una cronología, listas de verificación prácticas y la lista de los artículos originales detrás de cada capítulo."
+    "extras": "Además, dos interludios y diez apéndices, desde cómo funciona la máquina por dentro (sin matemáticas) y tres burbujas, de las puntocom a la IA, hasta cómo estudiar con la IA al lado, un kit de seguridad para agentes y los bastidores para quien programa."
   },
   "made": {
     "title": "Making-of",

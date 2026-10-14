@@ -82,12 +82,12 @@ Plain flood fill does not work on this image: the white shirt touches the edge a
 `src/assets/img/book/book-en.png` and `book-pt.png` are 3D renders of the book's official covers, made in Blender (no image model touches the cover):
 
 ```bash
-blender -b -P scripts/render-book.py -- ~/Projects/ai-book-2026/assets/cover/cover-en.png /tmp/book-en.png "COMPETENT ENOUGH"
-blender -b -P scripts/render-book.py -- ~/Projects/ai-book-2026/assets/cover/cover.png /tmp/book-pt.png "COMPETENTE O SUFICIENTE"
+blender -b -P scripts/render-book.py -- ~/Projects/ai-book-2026/assets/cover/cover-en.png /tmp/book-en.png "COMPETENT ENOUGH" 487
+blender -b -P scripts/render-book.py -- ~/Projects/ai-book-2026/assets/cover/cover.png /tmp/book-pt.png "COMPETENTE O SUFICIENTE" 500
 # The shadow-catching floor leaves a faint haze; drop it, then crop to the book and its shadow.
 magick /tmp/book-en.png -channel A -level 14%,100% +channel /tmp/clean.png
 magick /tmp/clean.png -crop $(magick /tmp/clean.png -alpha extract -threshold 1% -format %@ info:) +repage -bordercolor none -border 24 src/assets/img/book/book-en.png
 ```
 
-The model is a 6 × 9 in paperback 1.15 in thick (about 460 pages, the print edition). The spine is drawn by the script in the cover's own navy, cream and Limelight title face. Made 2026-10-13 from the 1.0.0-preview.2 covers; checked on dark and light grounds. Re-render when the cover changes.
+The model is a 6 × 9 in paperback as thick as the print edition, about 0.0025 in per page (the last argument; pages from `src/data/book.ts`). The spine is drawn by the script in the cover's own navy, cream and Limelight title face. Made 2026-10-13 from the 1.0.0-preview.2 covers and re-rendered 2026-10-14 for preview.5's thickness (487 and 500 pages); checked on dark and light grounds. Re-render when the cover changes or the page count moves by more than a few dozen pages.
 

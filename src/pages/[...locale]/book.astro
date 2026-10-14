@@ -15,7 +15,7 @@ import { articles, articleUrl } from '@/data/articles';
 import { Image } from 'astro:assets';
 import bookEn from '@/assets/img/book/book-en.png';
 import bookPt from '@/assets/img/book/book-pt.png';
-import { book, bookFile, bookEdition, type BookFormat } from '@/data/book';
+import { book, bookFile, bookEdition, bookVersion, type BookFormat } from '@/data/book';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
@@ -31,6 +31,7 @@ const stats = [
   { n: book.numbers.glossary, label: t('inside.stats.glossary') },
   { n: book.numbers.references, label: t('inside.stats.references') },
 ];
+const version = t('downloads.version', { version: bookVersion, date: date(book.released) });
 const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/agi/' }] as const, raw<Text[]>('next'));
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
@@ -38,6 +39,7 @@ const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/
     <a href={bookFile(mine.file, 'epub')} class="btn btn-primary">{t('hero.epub')}</a>
     <a href={bookFile(mine.file, 'ebook')} class="btn btn-ghost">{t('hero.pdf')}</a>
     <a href="#downloads" class="btn btn-ghost">{t('hero.all')}</a>
+    <p class="version basis-full">{version}</p>
   </PageHero>
 
   <section class="wrap pb-16" data-hue="rose">
@@ -63,6 +65,7 @@ const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/
         <div class="cell">
           <div class="kicker"><span class="dot" aria-hidden="true"></span>{t(`editions.${e.id}.language`)}</div>
           <h3 class="text-2xl mt-3">{t(`editions.${e.id}.title`)}</h3>
+          <p class="version mt-1">{version}</p>
           <ul class="mt-5 grid gap-2">
             {formats.map((f) => (
               <li><a class="dl" href={bookFile(e.file, f)}><span class="font-semibold">{t(`downloads.formats.${f}.name`)}</span><span class="text-muted text-sm">{t(`downloads.formats.${f}.for`)}</span></a></li>
@@ -94,6 +97,7 @@ const next = withText([{ hue: 'blue', href: '/limits/' }, { hue: 'red', href: '/
   <CtaBand />
 </Base>
 <style>
+  .version { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--muted); }
   .book3d { inline-size: 100%; block-size: auto; max-inline-size: 36rem; margin-inline: auto; }
   .dl { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--line); min-block-size: 2.75rem; align-items: center; }
   .dl:hover { border-color: var(--hue-vivid); }
