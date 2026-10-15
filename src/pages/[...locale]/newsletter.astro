@@ -42,7 +42,7 @@ const next = withText([{ hue: 'mauve', href: '/writing/' }, { hue: 'amethyst', h
 
   <Section title={t('pipeline.title')} lede={t('pipeline.lede')} hue="mauve" fill>
     <Figure name="newsletter-pipeline" alt={t('pipeline.alt')} />
-    <ol class="nl-steps" data-focus-list>
+    <ol class="nl-steps">
       {steps.map((s, i) => (
         <li>
           <span class="num" aria-hidden="true">{i + 1}</span>
@@ -79,7 +79,6 @@ const next = withText([{ hue: 'mauve', href: '/writing/' }, { hue: 'amethyst', h
 <style>
   .nl-steps { display: grid; gap: 2.2rem 3rem; }
   @media (min-width: 48rem) { .nl-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .nl-steps > li { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; transition: opacity 0.4s; }
+  .nl-steps > li { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; }
   .nl-steps .num { display: grid; place-items: center; inline-size: 2.4rem; block-size: 2.4rem; border-radius: 0.2rem; font-family: var(--font-display); font-size: 1.2rem; background: var(--hue-soft); color: var(--hue); box-shadow: 0 0 0 1.5px var(--hue-vivid), 0 0 0 4px var(--bg), 0 0 0 5px color-mix(in oklab, var(--hue-vivid) 50%, transparent); }
-  .nl-steps[data-focus-ready] > li[data-state='ahead'] { opacity: 0.45; }
 </style>

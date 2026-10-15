@@ -8,8 +8,6 @@
 //   data-exit            the section recedes (scales down, dims) as the next one scrolls over it (scrubbed)
 //   data-scene="5"       a tall section with a sticky stage; gets data-step="0..4" from the scroll position,
 //                        and CSS does the rest. Without this script the stage shows its final state.
-//   data-focus-list      each child gets data-state="ahead|active|past" as it crosses the reading line;
-//                        the list gets data-focus-ready, so CSS only dims items when this script is running
 // Everything is skipped under prefers-reduced-motion; content is fully visible without JS.
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -70,24 +68,6 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
         scrollTrigger: { trigger: svg, start: 'top 80%', end: 'bottom 55%', scrub: 0.6 },
       });
     });
-  });
-
-  document.querySelectorAll<HTMLElement>('[data-focus-list]').forEach((list) => {
-    const items = [...list.children] as HTMLElement[];
-    items.forEach((el) => (el.dataset.state = 'ahead'));
-    list.setAttribute('data-focus-ready', '');
-    items.forEach((el) => {
-      ScrollTrigger.create({
-        // One reading line at 58% of the viewport. The end reaches across the gap to the next item,
-        // so exactly one item is active at a time.
-        trigger: el, start: 'top 58%', end: () => `bottom+=${parseFloat(getComputedStyle(list).rowGap) || 0} 58%`,
-        onEnter: () => (el.dataset.state = 'active'),
-        onEnterBack: () => (el.dataset.state = 'active'),
-        onLeave: () => (el.dataset.state = 'past'),
-        onLeaveBack: () => (el.dataset.state = 'ahead'),
-      });
-    });
-    return () => { list.removeAttribute('data-focus-ready'); items.forEach((el) => delete el.dataset.state); };
   });
 
   document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => {
