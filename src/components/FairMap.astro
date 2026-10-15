@@ -5,12 +5,13 @@
 // map scrolls sideways and opens centered on the plaza. Colors are the pavilions' own (src/data/site.ts).
 import { useI18n } from '@/i18n';
 const { t, href } = useI18n(Astro, 'home');
+const { t: tc } = useI18n(Astro);
 const L = (k: string) => t(`map.places.${k}.name`);
 const S = (k: string) => t(`map.places.${k}.note`);
 ---
 <div class="fair-map">
-  <div class="map-scroll" data-map dir="ltr">
-    <svg viewBox="0 0 1200 640" role="img" aria-labelledby="fair-map-desc">
+  <nav class="map-scroll" data-map dir="ltr" aria-label={t('map.alt')}>
+    <svg viewBox="0 0 1200 640" aria-labelledby="fair-map-desc">
       <title id="fair-map-desc">{t('map.alt')}</title>
       <g class="waves" aria-hidden="true">
         <path d="M0 590 q 25 -12 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0" />
@@ -27,9 +28,9 @@ const S = (k: string) => t(`map.places.${k}.note`);
         <path class="fin" d="M552 125 L 560 70 L 560 125Z M648 125 L 640 70 L 640 125Z" />
         <text class="name" x="662" y="62">{L('book')}</text><text class="note" x="662" y="82">{S('book')}</text>
       </a>
-      <a href={href('/agi/')} data-hue="pennant"><path class="pav" d="M140 190 V 142 A 24 24 0 0 1 188 142 V 190 Z" /></a>
-      <a href={href('/limits/')} data-hue="cerulean"><path class="pav" d="M193 190 V 128 A 29 29 0 0 1 251 128 V 190 Z" /></a>
-      <a href={href('/students/')} data-hue="jade"><path class="pav" d="M256 190 V 142 A 24 24 0 0 1 304 142 V 190 Z" /></a>
+      <a href={href('/agi/')} data-hue="pennant" aria-label={tc('nav.agi.label')}><path class="pav" d="M140 190 V 142 A 24 24 0 0 1 188 142 V 190 Z" /></a>
+      <a href={href('/limits/')} data-hue="cerulean" aria-label={tc('nav.limits.label')}><path class="pav" d="M193 190 V 128 A 29 29 0 0 1 251 128 V 190 Z" /></a>
+      <a href={href('/students/')} data-hue="jade" aria-label={tc('nav.students.label')}><path class="pav" d="M256 190 V 142 A 24 24 0 0 1 304 142 V 190 Z" /></a>
       <text class="name" x="140" y="220">{L('opinions')}</text><text class="note" x="140" y="240">{S('opinions')}</text>
       <a href={href('/#tools')} data-hue="cerulean">
         <path class="pav" d="M885 190 V 168 A 70 60 0 0 1 1025 168 V 190 Z" /><circle class="core" cx="955" cy="152" r="15" />
@@ -62,7 +63,7 @@ const S = (k: string) => t(`map.places.${k}.note`);
       </a>
       <g class="flags" aria-hidden="true"><path d="M360 570 v-40 l18 8 -18 8z" /><path d="M420 570 v-40 l18 8 -18 8z" /><path d="M780 570 v-40 l18 8 -18 8z" /><path d="M840 570 v-40 l18 8 -18 8z" /></g>
     </svg>
-  </div>
+  </nav>
   <p class="map-note">{t('map.note')}</p>
 </div>
 

@@ -1,5 +1,4 @@
 // Scroll-driven motion, declared in markup so any page can use it:
-//   data-fill            words light up as the block crosses the viewport (scrubbed)
 //   data-zoom            media grows from 86% with soft corners to full size (scrubbed)
 //   data-parallax="0.2"  element drifts against the scroll (scrubbed)
 //   data-reveal          children (or the element) settle in once, on first view
@@ -19,21 +18,6 @@ gsap.registerPlugin(ScrollTrigger);
 const mm = gsap.matchMedia();
 
 mm.add('(prefers-reduced-motion: no-preference)', () => {
-  document.querySelectorAll<HTMLElement>('[data-fill]').forEach((el) => {
-    // Japanese has no spaces between words, so ask the browser where the words are.
-    const text = el.textContent!.trim().replace(/\s+/g, ' ');
-    const lang = document.documentElement.lang;
-    const words = 'Segmenter' in Intl && /^(ja|zh|th)/.test(lang)
-      ? [...new Intl.Segmenter(lang, { granularity: 'word' }).segment(text)].map((s) => s.segment)
-      : text.split(/(?<= )/);
-    el.setAttribute('aria-label', text);
-    el.innerHTML = words.map((w) => `<span aria-hidden="true" style="opacity:.16">${w}</span>`).join('');
-    gsap.to(el.children, {
-      opacity: 1, stagger: 0.1, ease: 'none',
-      scrollTrigger: { trigger: el, start: 'top 82%', end: 'bottom 45%', scrub: 0.4 },
-    });
-  });
-
   document.querySelectorAll<HTMLElement>('[data-zoom]').forEach((el) => {
     gsap.fromTo(el, { scale: 0.86, borderRadius: '2.5rem', opacity: 0.6 }, {
       scale: 1, borderRadius: '1.25rem', opacity: 1, ease: 'none',
