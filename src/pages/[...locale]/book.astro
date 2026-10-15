@@ -47,7 +47,9 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
     <div class="grid gap-12 lg:grid-cols-[1fr_1fr] items-center">
       <Image src={covers[mine.id]} alt={t(`editions.${mine.id}.alt`)} widths={[480, 720, 960, 1217]} sizes="(min-width: 1024px) 36rem, 94vw" loading="eager" class="book3d" />
       <div>
-        <p class="lede">{t('intro')}</p>
+        <Callout title={t('audience')} hue="mauve" level={2}>
+          <p>{t('intro')}</p>
+        </Callout>
         <Callout title={t('preview.title', { version: book.label })} hue="mauve" level={2}>
           <p>{t('preview.text', { date: date(book.released) })}</p>
           <p class="mt-3"><a class="link" href={book.issues}>{t('preview.issues')}</a> · <a class="link" href={`${book.repo}/releases/tag/${book.tag}`}>{t('preview.notes')}</a></p>
