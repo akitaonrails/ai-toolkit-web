@@ -143,6 +143,10 @@
   .wrap { width: min(76rem, 100% - 2rem); margin-inline: auto; }
   .wrap-narrow { width: min(52rem, 100% - 2rem); margin-inline: auto; }
   .band { padding-block: clamp(4.5rem, 10vw, 8.5rem); }
+  /* A standalone visual between the hero and the next band shares that band's opening space, so it sits midway
+     between the hero rule and the following heading instead of clinging to the rule. */
+  .after-hero { padding-block-start: clamp(2.25rem, 5vw, 4.25rem); }
+  .after-hero + .band { padding-block-start: clamp(2.25rem, 5vw, 4.25rem); }
   .lede { font-size: var(--text-lg); line-height: 1.5; color: var(--muted); max-width: 38em; }
   .kicker { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-sign); font-weight: 600; letter-spacing: 0.04em; color: var(--hue, var(--muted)); font-size: var(--text-sm); }
 
