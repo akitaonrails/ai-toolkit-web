@@ -39,8 +39,11 @@
       "note": "Experimentos pras minhas próprias coceiras"
     },
     "writing": {
-      "label": "Textos",
+      "label": "Blog e benchmark",
       "note": "O blog e o benchmark de LLMs"
+    },
+    "learn": {
+      "label": "Aprenda"
     },
     "newsletter": {
       "label": "Newsletter",
@@ -87,7 +90,7 @@
     },
     "book": {
       "label": "Competente o Suficiente, o livro",
-      "note": "Um ano colocando a IA à prova"
+      "note": "AGI, empregos e aprendizado sem medo nem propaganda"
     }
   },
   "kicker": {
@@ -119,7 +122,13 @@
     "title": "Tudo aqui é open source",
     "text": "As ferramentas, as skills e o benchmark são repositórios públicos. Faça um fork e monte a versão que encaixa no seu jeito de trabalhar.",
     "github": "Ver todos os meus repositórios",
-    "blog": "Ler o blog"
+    "blog": "Ler o blog",
+    "learn": {
+      "title": "Continue aprendendo sem propaganda",
+      "text": "O livro gratuito conecta os argumentos sobre AGI, empregos, educação e uso prático. O workflow mostra como eu aplico essas ideias no trabalho de verdade.",
+      "primary": "Ler o livro gratuito",
+      "secondary": "Ver o workflow"
+    }
   },
   "social": {
     "title": "Onde me seguir",
@@ -152,6 +161,7 @@
   "footer": {
     "about": "As ferramentas que eu fiz e como eu uso cada uma. Sem patrocinadores, sem anúncios, sem assinaturas pagas: faço isso por puro prazer.",
     "tools": "Ferramentas",
+    "learn": "Aprenda",
     "more": "Mais",
     "sisters": "Sites irmãos",
     "theme": {
@@ -176,7 +186,7 @@
     "accept": "Aceitar"
   },
   "deck": {
-    "download": "Mande pro seu chefe",
+    "download": "Baixar o resumo em PDF",
     "format": "slides em PDF"
   },
   "carousel": {

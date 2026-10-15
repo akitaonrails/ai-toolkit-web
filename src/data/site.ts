@@ -27,11 +27,11 @@ export const nav: NavLink[] = [
   { id: 'ghpending', href: '/ghpending/', hue: 'jade' },
   { id: 'tclock', href: '/clock-tui/', hue: 'pennant' },
   { id: 'frank', href: '/frank/', hue: 'amethyst' },
-  { id: 'writing', href: '/writing/', hue: 'mauve' },
-  { id: 'agi', href: '/agi/', hue: 'pennant' },
-  { id: 'students', href: '/students/', hue: 'jade' },
-  { id: 'limits', href: '/limits/', hue: 'cerulean' },
   { id: 'book', href: '/book/', hue: 'jade' },
+  { id: 'agi', href: '/agi/', hue: 'pennant' },
+  { id: 'limits', href: '/limits/', hue: 'cerulean' },
+  { id: 'students', href: '/students/', hue: 'jade' },
+  { id: 'writing', href: '/writing/', hue: 'mauve' },
   { id: 'newsletter', href: '/newsletter/', hue: 'mauve' },
   { id: 'podcasts', href: '/podcasts/', hue: 'jade' },
   { id: 'games', href: '/games/', hue: 'copper' },
@@ -67,7 +67,7 @@ export const toolIds = ['usagebar', 'ghpending', 'tclock', 'frank'];
     `label` is the catalog key of the button. Tools also lists the external sites after its own pages. */
 export const navGroups: { id: string; label: string; ids: string[]; external?: boolean }[] = [
   { id: 'tools', label: 'nav.tools.label', ids: toolIds, external: true },
-  { id: 'texts', label: 'nav.writing.label', ids: ['writing', 'book', 'agi', 'students', 'limits'] },
+  { id: 'learn', label: 'nav.learn.label', ids: ['book', 'agi', 'limits', 'students', 'writing'] },
 ];
 
 /** Repositories whose stars and latest release the build reads (src/data/github.ts). The list is JSON so the

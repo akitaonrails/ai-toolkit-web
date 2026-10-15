@@ -3,17 +3,28 @@
 import { site } from '@/data/site';
 import { blogHome } from '@/data/articles';
 import { useI18n } from '@/i18n';
-interface Props { title?: string; text?: string }
-const { t, locale } = useI18n(Astro);
-const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
+interface Props { title?: string; text?: string; kind?: 'code' | 'learn' }
+const { t, href, locale } = useI18n(Astro);
+const { kind = 'code' } = Astro.props;
+const prefix = kind === 'learn' ? 'cta.learn' : 'cta';
+const { title = t(`${prefix}.title`), text = t(`${prefix}.text`) } = Astro.props;
 ---
 <section class="on-ink band text-center relative overflow-hidden motif motif-sunburst cta">
   <div class="wrap-narrow relative">
     <h2 class="text-3xl mx-auto max-w-[16em]">{title}</h2>
     <p class="lede mx-auto mt-5">{text}</p>
     <div class="mt-9 flex flex-wrap justify-center gap-3">
-      <a href={site.github} class="btn btn-primary">{t('cta.github')}</a>
-      <a href={blogHome(locale)} class="btn btn-ghost">{t('cta.blog')}</a>
+      {kind === 'learn' ? (
+        <>
+          <a href={href('/book/')} class="btn btn-primary">{t('cta.learn.primary')}</a>
+          <a href={href('/workflow/')} class="btn btn-ghost">{t('cta.learn.secondary')}</a>
+        </>
+      ) : (
+        <>
+          <a href={site.github} class="btn btn-primary">{t('cta.github')}</a>
+          <a href={blogHome(locale)} class="btn btn-ghost">{t('cta.blog')}</a>
+        </>
+      )}
     </div>
   </div>
 </section>

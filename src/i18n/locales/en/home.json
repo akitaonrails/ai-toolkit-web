@@ -5,13 +5,35 @@
   "hero": {
     "kicker": "A lair with the doors open",
     "title": "Akita's AI Lair",
-    "lede": "I maintain more than 40 open source repositories with AI agents doing most of the typing. These are the tools I built to keep that manageable, the workflow that ties them together, and the writing where I document what I learn.",
+    "lede": "A coding agent is an AI model that can inspect files, edit code and run commands. I use them across more than 40 open source repositories. These are the tools that keep the work manageable, the workflow that checks it and the writing where I document what I learn.",
     "primary": "See the workflow",
-    "secondary": "Where to follow me",
+    "secondary": "New to AI? Read the book",
     "shotAlt": "My second monitor: tclock showing 16:10:22 in large red digits, a GitHub pending widget listing open pull requests and issues for ai-memory and ai-usagebar, a Google Calendar widget and a system health strip.",
     "shotCaption": "My second monitor on a normal Thursday. 43 repositories checked, 6 with something waiting.",
     "portraitAlt": "Illustrated portrait of Fabio Akita: grey hair, round glasses, white shirt and a dark tie, looking up with a confident half smile.",
     "intro": "I am Fabio Akita: a programmer for more than 30 years, entrepreneur, speaker, writer and former YouTuber. <a class=\"link\" href=\"{linkedin}\">My LinkedIn</a> has the long version."
+  },
+  "start": {
+    "title": "Start with your question",
+    "lede": "You do not need to know my tools or write code to use this site. Pick the question that brought you here.",
+    "items": [
+      {
+        "title": "I want to understand AI",
+        "text": "Start with the free book. It explains what current AI can do, where it fails, and what that means for work and learning."
+      },
+      {
+        "title": "I want to use coding agents",
+        "text": "Begin with the smallest safe workflow: a bounded task, written constraints, human review and tests."
+      },
+      {
+        "title": "I am worried about AGI",
+        "text": "Read the short version first, then inspect the evidence behind each claim about capability, risk and control."
+      },
+      {
+        "title": "I heard AI will replace programmers",
+        "text": "See what software agents copy well, where they still need experienced people, and what the public examples actually cost."
+      }
+    ]
   },
   "desk": {
     "title": "One desk, two monitors, many agents",

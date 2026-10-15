@@ -26,14 +26,19 @@ const skills = withText(skillIds.map((id) => ({ hue: id === 'release' ? 'mauve' 
   .map((s) => ({ ...s, title: `<code>${s.title}</code>` }));
 const kaizen = withText([{ hue: 'amethyst' }, { hue: 'patina' }, { hue: 'cerulean' }, { hue: 'copper' }] as const, raw<Text[]>('kaizen.items'));
 const knowledge = withText([{ hue: 'patina' }, { hue: 'amethyst' }, { hue: 'jade' }, { hue: 'mauve' }] as const, raw<Text[]>('knowledge.items'));
+const basics = withText([{ hue: 'amethyst' }, { hue: 'patina' }, { hue: 'jade' }, { hue: 'cerulean' }] as const, raw<Text[]>('basics.items'));
 const next = withText([{ hue: 'cerulean', href: '/ai-usagebar/' }, { hue: 'jade', href: '/ghpending/' }, { hue: 'mauve', href: '/writing/' }] as const, raw<Text[]>('next'));
 const skillsPost = articleUrl({ id: 'skills', ...articles.skills }, locale);
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
   <PageHero pavilion="workflow" hue="amethyst" kicker={t('kicker.workflow')} title={t('hero.title')} lede={t('hero.lede')}>
-    <a href={repoUrl('skills')} class="btn btn-primary">{t('hero.primary')}</a>
+    <a href="#basics" class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#copy" class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
+
+  <Section title={t('basics.title')} lede={t('basics.lede')} hue="amethyst" id="basics">
+    <FeatureGrid items={basics} cols={2} />
+  </Section>
 
   <Section title={t('start.title')} lede={t('start.lede')} hue="amethyst" fill>
     <div class="grid gap-10 lg:grid-cols-2 items-start">

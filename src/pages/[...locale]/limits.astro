@@ -30,8 +30,16 @@ const next = withText([{ hue: 'pennant', href: '/agi/' }, { hue: 'jade', href: '
     <DeckLink deck="limits" />
   </PageHero>
 
-  <section class="wrap pb-8" data-hue="cerulean">
-    <PullQuote {...raw<{ text: string; original: string }>('motto')} large />
+  <section id="takeaways" class="band scroll-mt-16" data-hue="cerulean">
+    <div class="wrap">
+      <h2 class="text-3xl">{t('takeaways.title')}</h2>
+      <ol class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
+        {raw<string[]>('takeaways.items').map((item, i) => (
+          <li class="cell"><span class="font-sign font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
+        ))}
+      </ol>
+      <div class="mt-12"><DeckLink deck="limits" /></div>
+    </div>
   </section>
 
   {limits.sections.map((sec, i) => (
@@ -67,18 +75,10 @@ const next = withText([{ hue: 'pennant', href: '/agi/' }, { hue: 'jade', href: '
     </section>
   ))}
 
-  <section id="takeaways" class="band scroll-mt-16" data-hue="cerulean">
-    <div class="wrap">
-      <h2 class="text-3xl">{t('takeaways.title')}</h2>
-      <ol class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
-        {raw<string[]>('takeaways.items').map((item, i) => (
-          <li class="cell"><span class="font-sign font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
-        ))}
-      </ol>
-      <div class="mt-12"><DeckLink deck="limits" /></div>
-    </div>
+  <section class="wrap pb-16" data-hue="cerulean">
+    <PullQuote {...raw<{ text: string; original: string }>('motto')} large />
   </section>
 
   <NextPages title={t('next.title')} items={next} />
-  <CtaBand />
+  <CtaBand kind="learn" />
 </Base>

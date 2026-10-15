@@ -5,13 +5,35 @@
   "hero": {
     "kicker": "Um covil de portas abertas",
     "title": "Akita's AI Lair",
-    "lede": "Eu mantenho mais de 40 repositórios open source com agentes de IA fazendo a maior parte da digitação. Aqui estão as ferramentas que eu criei pra dar conta disso, o workflow que junta tudo e os textos onde eu documento o que aprendo.",
+    "lede": "Um agente de código com IA é um modelo de IA que consegue inspecionar arquivos, editar código e rodar comandos. Eu uso esses agentes em mais de 40 repositórios open source. Aqui estão as ferramentas que mantêm o trabalho sob controle, o workflow que confere tudo e os textos onde eu documento o que aprendo.",
     "primary": "Ver o workflow",
-    "secondary": "Onde me seguir",
+    "secondary": "Novo em IA? Leia o livro",
     "shotAlt": "Meu segundo monitor: o tclock mostrando 16:10:22 em dígitos vermelhos grandes, um widget de pendências do GitHub listando pull requests e issues abertos do ai-memory e do ai-usagebar, um widget do Google Calendar e uma faixa de saúde do sistema.",
     "shotCaption": "Meu segundo monitor numa quinta-feira normal. 43 repositórios checados, 6 com alguma coisa esperando.",
     "portraitAlt": "Retrato ilustrado de Fabio Akita: cabelo grisalho, óculos redondos, camisa branca e gravata escura, olhando pra cima com um meio sorriso confiante.",
     "intro": "Olá pessoal, Fabio Akita, sou programador há mais de 30 anos, empreendedor, palestrante, escritor e ex-YouTuber. <a class=\"link\" href=\"{linkedin}\">Meu LinkedIn</a> tem a versão longa."
+  },
+  "start": {
+    "title": "Comece pela sua pergunta",
+    "lede": "Você não precisa conhecer minhas ferramentas nem programar pra usar este site. Escolha a pergunta que trouxe você até aqui.",
+    "items": [
+      {
+        "title": "Quero entender a IA",
+        "text": "Comece pelo livro gratuito. Ele explica o que a IA atual consegue fazer, onde ela falha e o que isso significa pro trabalho e pro aprendizado."
+      },
+      {
+        "title": "Quero usar agentes de código",
+        "text": "Comece pelo menor workflow seguro: uma tarefa limitada, restrições por escrito, review humano e testes."
+      },
+      {
+        "title": "Tenho receio da AGI",
+        "text": "Leia primeiro a versão curta e depois examine as evidências por trás de cada afirmação sobre capacidade, risco e controle."
+      },
+      {
+        "title": "Ouvi que a IA vai substituir programadores",
+        "text": "Veja o que os agentes de software copiam bem, onde ainda precisam de gente experiente e quanto os exemplos públicos realmente custaram."
+      }
+    ]
   },
   "desk": {
     "title": "Uma mesa, dois monitores, muitos agentes",

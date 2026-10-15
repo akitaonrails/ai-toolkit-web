@@ -39,8 +39,11 @@
       "note": "Experiments that scratch my own itches"
     },
     "writing": {
-      "label": "Writing",
+      "label": "Blog & benchmark",
       "note": "The blog and the LLM benchmark"
+    },
+    "learn": {
+      "label": "Learn"
     },
     "newsletter": {
       "label": "Newsletter",
@@ -87,7 +90,7 @@
     },
     "book": {
       "label": "Competent Enough, the book",
-      "note": "A year of putting AI to the test"
+      "note": "AGI, jobs and learning without fear or hype"
     }
   },
   "kicker": {
@@ -119,7 +122,13 @@
     "title": "Everything here is open source",
     "text": "The tools, the skills and the benchmark are public repositories. Fork them and build the version that fits the way you work.",
     "github": "See all my repositories",
-    "blog": "Read the blog"
+    "blog": "Read the blog",
+    "learn": {
+      "title": "Keep learning without the hype",
+      "text": "The free book connects the arguments on AGI, jobs, education and practical use. The workflow shows how I apply those ideas to real work.",
+      "primary": "Read the free book",
+      "secondary": "See the workflow"
+    }
   },
   "social": {
     "title": "Where to follow me",
@@ -152,6 +161,7 @@
   "footer": {
     "about": "The tools I built and the way I use them. No sponsors, no ads, no paid subscriptions: I do this for my own pleasure.",
     "tools": "Tools",
+    "learn": "Learn",
     "more": "More",
     "sisters": "Sister sites",
     "theme": {
@@ -176,7 +186,7 @@
     "accept": "Accept"
   },
   "deck": {
-    "download": "Send this to your boss",
+    "download": "Download the PDF summary",
     "format": "PDF slides"
   },
   "carousel": {

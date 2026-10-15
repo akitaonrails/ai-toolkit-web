@@ -44,6 +44,12 @@ const bigger = withText([
   { hue: sisters.jail.hue, href: sisterUrl('jail', locale) },
   { hue: 'amethyst', href: '/workflow/' },
 ] as const, raw<(Text & { link: string })[]>('sisters.items'));
+const startingPoints = withText([
+  { hue: 'jade', href: '/book/' },
+  { hue: 'amethyst', href: '/workflow/' },
+  { hue: 'pennant', href: '/agi/' },
+  { hue: 'cerulean', href: '/limits/' },
+] as const, raw<Text[]>('start.items'));
 // The hero carousel: the intro first, then the pages I most want a new reader to find, each in its subject's hue
 // with that pavilion's poster in the brass arch (the 3D book for the book). Words in home.json `carousel.items`.
 // Each slide shows its pavilion's poster in the brass arch; until a poster exists, the page's main diagram.
@@ -73,7 +79,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
             <p class="lede mt-4 !text-[1.3rem]">{t('hero.lede')}</p>
             <div class="mt-9 flex flex-wrap gap-3">
               <a href={href('/workflow/')} class="btn btn-primary">{t('hero.primary')}</a>
-              <a href="#follow" class="btn btn-ghost">{t('hero.secondary')}</a>
+              <a href={href('/book/')} class="btn btn-ghost">{t('hero.secondary')}</a>
             </div>
           </div>
           <div class="justify-self-center lg:justify-self-end">
@@ -101,6 +107,10 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
       ))}
     </Carousel>
   </section>
+
+  <Section title={t('start.title')} lede={t('start.lede')} id="start" hue="jade">
+    <FeatureGrid items={startingPoints} cols={2} />
+  </Section>
 
   <Section title={t('map.title')} lede={t('map.lede')} id="map">
     <FairMap />
