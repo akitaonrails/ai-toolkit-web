@@ -8,15 +8,12 @@ import { pavilions } from '@/data/site';
 interface Props { hue: Hue; kicker: string; title: string; lede: string; pavilion?: string }
 const { hue, kicker, title, lede, pavilion } = Astro.props;
 const pav = pavilion ? pavilions[pavilion] : undefined;
-const spacing = pavilion === 'book'
-  ? 'pt-36 pb-8 md:pt-44 md:pb-10'
-  : 'pt-32 pb-12 md:pt-40 md:pb-16';
 // Posters are generated art (docs/images.md); a page whose poster is not drawn yet simply shows none.
 const posters = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/gen/poster-*.webp', { eager: true });
 const poster = pav && posters[`/src/assets/img/gen/${pav.poster}.webp`]?.default;
 ---
 <section data-hue={hue} class:list={['page-hero', pav && ['motif', `motif-${pav.motif}`]]}>
-  <div class:list={['wrap', spacing, poster && 'hero-grid']}>
+  <div class:list={['wrap pt-32 pb-12 md:pt-40 md:pb-16', poster && 'hero-grid']}>
     <div>
       <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{kicker}</div>
       <h1 class="text-4xl max-w-[15em]" data-reveal>{title}</h1>

@@ -43,7 +43,7 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
     <p class="version basis-full">{version}</p>
   </PageHero>
 
-  <section class="wrap pb-16" data-hue="mauve">
+  <section class="wrap pt-12 lg:pt-[6.25rem]" data-hue="mauve">
     <div class="grid gap-12 lg:grid-cols-[1fr_1fr] items-center">
       <Image src={covers[mine.id]} alt={t(`editions.${mine.id}.alt`)} widths={[480, 720, 960, 1217]} sizes="(min-width: 1024px) 36rem, 94vw" loading="eager" class="book3d" />
       <div>
@@ -105,12 +105,14 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
   <CtaBand kind="learn" />
 </Base>
 <style>
+  :global(#read) { padding-block-start: 3rem; }
   .version { font-family: var(--font-sign); font-size: var(--text-sm); color: var(--muted); }
   .book3d { inline-size: 100%; block-size: auto; max-inline-size: 36rem; margin-inline: auto; }
   .dl { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--line); min-block-size: 2.75rem; align-items: center; }
   .dl:hover { border-color: var(--hue-vivid); }
   .parts { display: grid; gap: 1.75rem 3rem; counter-reset: part; }
   @media (min-width: 48rem) { .parts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 64rem) { :global(#read) { padding-block-start: 6.25rem; } }
   .parts li { counter-increment: part; padding-inline-start: 3rem; position: relative; }
   .parts li::before { content: counter(part, upper-roman); position: absolute; inset-inline-start: 0; font-family: var(--font-display); font-weight: 800; color: var(--hue); font-size: 1.4rem; }
 </style>
