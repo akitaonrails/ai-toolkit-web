@@ -100,7 +100,7 @@ export const languageLinks = (pathname: string) => {
 
 /**
  * Pages keep structure (hue, href, id) in code and words in the catalog. This joins the two by position:
- *   withText([{ href: '/install/', hue: 'amber' }], raw('next'))  ->  [{ href, hue, title, text }]
+ *   withText([{ href: '/install/', hue: 'jade' }], raw('next'))  ->  [{ href, hue, title, text }]
  */
 export const withText = <M extends object, T extends object>(meta: readonly M[], text: readonly T[]): (M & T)[] =>
   meta.map((m, i) => ({ ...m, ...text[i] }));

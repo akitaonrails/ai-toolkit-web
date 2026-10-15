@@ -16,8 +16,9 @@ function block(selector) {
 }
 
 const root = block(':root');
-const themes = { light: root, dark: { ...root, ...block("\\[data-theme='dark'\\]") } };
-const hues = ['red', 'orange', 'amber', 'teal', 'blue', 'violet', 'rose'];
+// The night fair (dark) is the root; the day fair (light) overrides it.
+const themes = { dark: root, light: { ...root, ...block("\\[data-theme='light'\\]") } };
+const hues = ['pennant', 'copper', 'jade', 'patina', 'cerulean', 'amethyst', 'mauve'];
 
 let failed = 0;
 const md = process.argv.includes('--md');
@@ -26,7 +27,8 @@ for (const [name, t] of Object.entries(themes)) {
     ['text', 'bg', 7], ['text', 'surface', 7], ['text', 'tint', 7],
     ['muted', 'bg', 4.5], ['muted', 'surface', 4.5], ['muted', 'tint', 4.5],
     ...hues.flatMap((h) => [[h, 'bg', 4.5], [h, 'surface', 4.5], [h, 'tint', 4.5], [h, `${h}-soft`, 4.5]]),
-    ['green', 'bg', 4.5], ['green', 'surface', 4.5],
+    ['brass', 'bg', 4.5], ['brass', 'surface', 4.5],
+    ['on-paper', 'paper', 7],
     ['on-action', 'action', 7], ['on-action', 'action-hi', 7], ['on-ink', 'ink', 7], ['on-ink', 'ink-raised', 7], ['on-ink-muted', 'ink-raised', 4.5],
     ['line', 'bg', 1.2],
   ];
@@ -46,7 +48,7 @@ for (const [name, t] of Object.entries(themes)) {
 // Distance is Euclidean in OKLab; about 0.1 is a clear difference, under 0.05 is easy to confuse. Report only:
 // hue is never the only cue on the site (every hue pairs with a label or a position).
 const dist = differenceEuclidean('oklab');
-const vivid = Object.fromEntries(Object.entries(root).filter(([k]) => k.startsWith('v-') && k !== 'v-green').map(([k, v]) => [k.slice(2), parse(v)]));
+const vivid = Object.fromEntries(Object.entries(root).filter(([k]) => k.startsWith('v-') && k !== 'v-brass').map(([k, v]) => [k.slice(2), parse(v)]));
 const sims = { normal: (c) => c, protan: filterDeficiencyProt(1), deutan: filterDeficiencyDeuter(1), tritan: filterDeficiencyTrit(1) };
 console.log(md ? '\n### Closest pair of subject hues\n\n| Vision | Closest pair | OKLab distance |\n|---|---|---|' : '\n== closest subject hues (OKLab distance) ==');
 for (const [name, sim] of Object.entries(sims)) {

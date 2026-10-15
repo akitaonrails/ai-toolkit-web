@@ -76,3 +76,8 @@ Terms decided while translating the Hebrew catalogs. One English term maps to on
 | interlude | אינטרלוד |
 | checklist | צ׳קליסט |
 | hype | הייפ |
+| fair map / pavilion | מפת היריד / ביתן |
+| Book Tower / Hall of Opinions / Hall of Machines / The Workshop | מגדל הספר / היכל הדעות / היכל המכונות / הסדנה |
+| Broadcast Tower / Press House / Control Room / The Arcade | מגדל השידור / בית העיתונות / חדר הבקרה / אולם המשחקים |
+| Plaza 42 / Information | כיכר 42 / מודיעין |
+| Mostly harmless. (footer) | בעיקר לא מזיק. |

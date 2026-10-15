@@ -5,9 +5,31 @@
   },
   "hero": {
     "title": "How one person keeps 40 repositories moving",
-    "lede": "Every morning I open one agent per project in tmux, give it a single line, and review what comes back. The heavy lifting lives in skills: plain text prompts I keep refining.",
-    "primary": "Read the skills",
+    "lede": "Every morning I open one coding agent per project, give it a single line, and review what comes back. A coding agent can inspect files, edit code and run checks. My reusable instructions are plain text files called skills.",
+    "primary": "Start with the basics",
     "secondary": "Why not copy them"
+  },
+  "basics": {
+    "title": "The smallest version of this workflow",
+    "lede": "My full setup grew over time. You can start with one project, one task and four habits.",
+    "items": [
+      {
+        "title": "Choose a bounded task",
+        "text": "Pick work with a clear finish and a result you can check. Keep the first change small enough to review."
+      },
+      {
+        "title": "Write down the constraints",
+        "text": "Tell the agent what must stay true, which commands verify the work and what it must not touch."
+      },
+      {
+        "title": "Review the change",
+        "text": "Read the diff, question its assumptions and run the project checks. A person remains responsible for accepting it."
+      },
+      {
+        "title": "Keep the lesson",
+        "text": "Turn a failure into a test or a written rule. The next session should not repeat the same mistake."
+      }
+    ]
   },
   "start": {
     "title": "One line to start the day",
@@ -31,7 +53,7 @@
   },
   "pipeline": {
     "title": "The pipeline",
-    "lede": "Nothing a contributor writes is taken as true. Every claim gets checked, every approved fix gets a test first, and nothing is tagged without green CI on that exact commit.",
+    "lede": "Every claim is checked, whether it came from a person or an agent. Every approved fix gets a regression test, and a release waits for all automated checks to pass on that exact version.",
     "alt": "A left to right pipeline: Open PRs and issues split into pr-audit and iss-audit, which merge after an Approved check into github-resolution, then pr-post-audit, then release, then Kaizen, with an arrow from Kaizen back to the start. An ai-memory bar runs under all of it.",
     "caption": "pr-post-audit runs when a session resolved more than three tickets. The release skill runs only when I ask for one."
   },

@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinión",
     "title": "Por qué la AGI no importa",
-    "lede": "Cada pocas semanas alguien anuncia la AGI. Uso estas herramientas todos los días y me da igual si son \"generales\". Once puntos breves sobre por qué, con enlaces a las versiones largas.",
+    "lede": "AGI significa inteligencia artificial general: un sistema propuesto capaz de abordar la mayoría de las tareas intelectuales. Los laboratorios aún discrepan sobre qué cuenta y cómo probarlo. Uso las herramientas actuales todos los días; esta página separa lo que pueden demostrar de lo que la gente pronostica.",
     "primary": "Ir a las conclusiones",
     "secondary": "La versión larga en mi blog"
   },
@@ -146,7 +146,7 @@
     "attacks": {
       "kicker": "7. Las historias de miedo",
       "title": "Los \"ataques de IA\" fueron decisiones humanas",
-      "lede": "Todos los titulares de \"una IA hackeó a alguien\" hasta ahora tienen la misma trama: una persona dejó la puerta abierta o apuntó la herramienta al objetivo.",
+      "lede": "Los casos siguientes comparten un fallo operativo: personas concedieron acceso o dirigieron la herramienta sin controles adecuados.",
       "alt": "Una herramienta violeta dentro de un sandbox naranja con la puerta colgando, etiquetada Abierta; una terminal etiquetada Decisión humana está conectada a la puerta, una llave etiquetada Credenciales queda afuera y una línea va desde la herramienta, por la puerta abierta, hasta unos servidores etiquetados Servidores reales.",
       "points": [
         "Hugging Face, agosto de 2026: agentes de OpenAI en un examen de ciberseguridad se escaparon a través de un proxy de caché, porque el sandbox filtraba el tráfico y no tenía air gap. Fueron a buscar las respuestas del examen y de paso leyeron 956 credenciales. Cada paso que lo hizo posible fue una decisión humana.",
@@ -176,8 +176,8 @@
     },
     "doom": {
       "kicker": "8. El apocalipsis",
-      "title": "Los profetas del apocalipsis no traen pruebas",
-      "lede": "Cada pocos meses alguien deja un laboratorio y advierte al mundo. A mi entender, ninguno ha mostrado nada que se pueda verificar.",
+      "title": "Cómo evaluar pronósticos catastróficos",
+      "lede": "Periódicamente, algunas personas dejan laboratorios de IA y advierten al mundo. Busqué pruebas que alguien de fuera pueda inspeccionar, reproducir o comprobar.",
       "points": [
         "Jacob Coxon, septiembre de 2026: cuatro meses en Anthropic y luego un hilo advirtiendo que la IA podría matar a todo el mundo antes de que termine la década. Más de 100 millones de vistas, y la prensa dijo que renunció a sus acciones. En Anthropic el vesting empieza a los seis meses. No había nada a qué renunciar.",
         "Después salieron los detalles. Según se informó, grupos financiados por los mismos donantes de la seguridad de la IA lo amplificaron en cuestión de minutos, y Pirate Wires informó que una agencia de relaciones públicas cuyos clientes incluyen a catastrofistas conocidos le estaba agendando entrevistas al día siguiente. Él le había dicho a Fox News que no había terceros involucrados.",
@@ -251,8 +251,8 @@
       "Los modelos en bruto convergieron. Las mejoras recientes vinieron de las herramientas alrededor, y los modelos más pequeños siguen alcanzándolos.",
       "Un modelo es un archivo cerrado. No aprende nada de tu sesión.",
       "La palabra sirve para vender chips, rondas de inversión e IPOs. Por eso la siguen anunciando.",
-      "Los aterradores \"ataques de IA\" fueron personas que dejaron puertas abiertas. La herramienta hizo aquello a lo que la apuntaron.",
-      "El apocalipsis también es marketing. Los profetas traen sentimientos y pronósticos, nunca pruebas que puedas verificar.",
+      "Los incidentes tratados aquí implicaron a personas que concedieron acceso o dirigieron la herramienta. Los permisos y la supervisión humana son riesgos que ya podemos gestionar.",
+      "Los pronósticos catastróficos necesitan pruebas que se puedan inspeccionar. Los sentimientos y las predicciones no son pruebas.",
       "Las herramientas son reales y excelentes. Hacen lo que les dices, y el control sigue siendo tuyo.",
       "Lo que importa ahora es la eficiencia: el mismo trabajo con menos hardware y precios más bajos."
     ]

@@ -40,10 +40,11 @@ const { t } = useI18n(Astro);
   .dots { display: flex; gap: 0.15rem; margin: 0 0.25rem; padding: 0; list-style: none; }
   /* The dot is small; the link around it is a 40px target. */
   .dots a { display: grid; place-items: center; inline-size: 1.75rem; block-size: 2.5rem; }
-  .dots a::before { content: ''; inline-size: 0.6rem; block-size: 0.6rem; border-radius: 99px; background: var(--line); transition: inline-size 0.3s, background 0.3s; }
-  .dots a[aria-current='true']::before { inline-size: 1.4rem; background: var(--text); }
+  /* Dots are the fair's diamonds; the current one is filled brass. */
+  .dots a::before { content: ''; inline-size: 0.55rem; block-size: 0.55rem; rotate: 45deg; border: 1.5px solid var(--muted); transition: background 0.3s, border-color 0.3s; }
+  .dots a[aria-current='true']::before { background: var(--v-brass); border-color: var(--v-brass); }
   .dots a:hover::before { background: var(--muted); }
-  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 99px; border: 1.5px solid var(--line); color: var(--text); background: var(--surface); transition: border-color 0.2s; }
+  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 0.2rem; border: 1.5px solid color-mix(in oklab, var(--v-brass) 60%, transparent); color: var(--text); background: var(--surface); transition: border-color 0.2s; }
   .ctl:hover { border-color: var(--muted); }
   .ctl[hidden] { display: none; }
   [data-pause] .i-play, [data-pause][data-paused] .i-pause { display: none; }

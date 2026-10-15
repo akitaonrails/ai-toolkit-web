@@ -9,7 +9,7 @@ export const getStaticPaths = localePaths;
 const { t } = useI18n(Astro, 'students');
 ---
 <DeckLayout title={t('meta.title')}>
-  <Deck ns="students" hue="amber" path="/students/" sections={students.sections}
+  <Deck ns="students" hue="jade" path="/students/" sections={students.sections}
     opening={{ text: t('quote.text'), original: t('quote.original'), cite: t('quote.cite') }}
     closing={{ text: t('takeaways.quote'), original: t('takeaways.quoteOriginal') }}
     videos={videos.akitando} />

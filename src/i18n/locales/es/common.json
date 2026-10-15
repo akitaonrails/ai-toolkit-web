@@ -2,7 +2,7 @@
   "site": {
     "tagline": "Las herramientas, el flujo de trabajo y los textos detrás de cómo trabajo con IA",
     "description": "La guarida de herramientas de IA de código abierto de Fabio Akita: ai-usagebar, ghpending, tclock, skills para agentes y ai-memory, más el benchmark de LLMs.",
-    "ogAlt": "Akita's AI Lair: herramientas, flujo de trabajo y textos. Un pequeño panel con un reloj rojo de píxeles, una lista ámbar, un indicador azul y un chip violeta.",
+    "ogAlt": "Akita's AI Lair: herramientas, flujo de trabajo y escritos. Un cartel de Feria Mundial: un robot gigante y cansado detrás de un pabellón escalonado, rayos dorados y banderines rojos.",
     "homeTitle": "Akita's AI Lair: herramientas de IA y benchmarks de LLM"
   },
   "a11y": {
@@ -39,8 +39,11 @@
       "note": "Experimentos para mis propias necesidades"
     },
     "writing": {
-      "label": "Textos",
+      "label": "Blog y benchmark",
       "note": "El blog y el benchmark de LLMs"
+    },
+    "learn": {
+      "label": "Aprende"
     },
     "newsletter": {
       "label": "Newsletter",
@@ -87,7 +90,7 @@
     },
     "book": {
       "label": "Competent Enough, el libro",
-      "note": "Un año poniendo a prueba la IA"
+      "note": "AGI, empleo y aprendizaje sin miedo ni hype"
     }
   },
   "kicker": {
@@ -119,7 +122,13 @@
     "title": "Todo lo que hay aquí es código abierto",
     "text": "Las herramientas, las skills y el benchmark son repositorios públicos. Haz un fork y arma la versión que encaje con tu forma de trabajar.",
     "github": "Ver todos mis repositorios",
-    "blog": "Leer el blog"
+    "blog": "Leer el blog",
+    "learn": {
+      "title": "Sigue aprendiendo sin hype",
+      "text": "El libro gratuito conecta los argumentos sobre la AGI, el empleo, la educación y el uso práctico. El flujo de trabajo muestra cómo aplico esas ideas al trabajo real.",
+      "primary": "Leer el libro gratis",
+      "secondary": "Ver el flujo de trabajo"
+    }
   },
   "social": {
     "title": "Dónde seguirme",
@@ -152,6 +161,7 @@
   "footer": {
     "about": "Las herramientas que construí y cómo las uso. Sin patrocinadores, sin anuncios, sin suscripciones pagas: hago esto por gusto.",
     "tools": "Herramientas",
+    "learn": "Aprende",
     "more": "Más",
     "sisters": "Sitios hermanos",
     "theme": {
@@ -161,7 +171,8 @@
     },
     "cookieSettings": "Configuración de cookies",
     "contact": "Contacto",
-    "rights": "Todos los derechos reservados. Cada herramienta mantiene su propia licencia de código abierto."
+    "rights": "Todos los derechos reservados. Cada herramienta mantiene su propia licencia de código abierto.",
+    "harmless": "Fundamentalmente inofensivo."
   },
   "notfound": {
     "title": "Nada pendiente por aquí",
@@ -175,7 +186,7 @@
     "accept": "Aceptar"
   },
   "deck": {
-    "download": "Mándaselo a tu jefe",
+    "download": "Descargar el resumen en PDF",
     "format": "diapositivas en PDF"
   },
   "carousel": {

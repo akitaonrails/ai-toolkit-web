@@ -2,55 +2,63 @@
 // For every hue it finds the highest chroma that still fits sRGB at the role's lightness, then caps it, so all
 // hues carry the same visual weight. Run with --write to replace the block between the PALETTE markers in
 // src/styles/global.css, then `npm run check:colors`.   See docs/color-study.md.
-import { readFileSync, writeFileSync } from 'node:fs';
+//
+// The World's Fair palette (2026-10-15), taken from the owner's book cover: a Rapture-deep navy ground, poster
+// cream paper, brass for everything you can press, and one pavilion color per subject, muted like printed enamel.
+import { writeFileSync, readFileSync } from 'node:fs';
 import { clampChroma } from 'culori';
 
-// One hue per subject, sampled from the terminal colors of the tools themselves (tclock's red digits, ghpending's
-// amber repo headers, the Omarchy panel's blue, and so on). Green is not a subject: it is the one action color.
-export const hues = { red: 27, orange: 52, amber: 80, teal: 190, blue: 250, violet: 288, rose: 350 };
-const ACTION = 150; // phosphor green: tclock's "all systems healthy" dot, and Evangelion Unit-01's green on its purple
-const NEUTRAL = 310; // dark aubergine purple. ai-memory's ground is indigo (282), ai-jail's is maroon (355); this sits between
+// One pavilion color per subject. Names are the materials they stand for, so a page reads as its own building.
+export const hues = { pennant: 28, copper: 55, jade: 162, patina: 196, cerulean: 240, amethyst: 305, mauve: 355 };
+const ACTION = 86;   // brass: buttons, focus, the one thing on a page you press. No subject uses it.
+const GROUND = 238;  // Rapture navy, the night fair
+const PAPER = 84;    // poster cream, the day fair
 
 const fit = (l, c, h) => { const k = clampChroma({ mode: 'oklch', l, c, h }, 'oklch'); return `oklch(${l} ${Math.min(c, k.c).toFixed(3)} ${h})`; };
+// Pavilion colors are enamel, not neon: lower chroma caps than a screen palette.
 const roles = {
-  light: { ink: [0.48, 0.16], soft: [0.955, 0.035] },
-  dark: { ink: [0.83, 0.13], soft: [0.27, 0.055] },
+  light: { ink: [0.45, 0.13], soft: [0.92, 0.04] },
+  dark: { ink: [0.82, 0.1], soft: [0.28, 0.05] },
 };
-// Signal colors, the same in both themes, never used for text: rules, dots, bars, glows.
-const vivid = { red: [0.65, 0.23], orange: [0.74, 0.18], amber: [0.84, 0.17], teal: [0.8, 0.13], blue: [0.7, 0.17], violet: [0.57, 0.22], rose: [0.7, 0.2] };
+// Signal colors, the same in both themes, never used for text: rules, dots, bars, plates.
+// Lightness spread so each pair stays apart under every color-vision deficiency (check:colors reports the closest pair).
+const vivid = { pennant: [0.52, 0.19], copper: [0.72, 0.14], jade: [0.58, 0.13], patina: [0.76, 0.11], cerulean: [0.68, 0.12], amethyst: [0.48, 0.13], mauve: [0.66, 0.1] };
 
+// [lightness, chroma, hue]: day is cream paper with navy ink, night is navy with cream ink.
 const neutrals = {
-  light: { bg: [0.983, 0.008], surface: [1, 0], tint: [0.955, 0.016], line: [0.88, 0.028], text: [0.2, 0.045], muted: [0.45, 0.045] },
-  dark: { bg: [0.16, 0.05], surface: [0.205, 0.055], tint: [0.24, 0.058], line: [0.35, 0.06], text: [0.96, 0.012], muted: [0.78, 0.035] },
+  light: { bg: [0.945, 0.03, PAPER], surface: [0.975, 0.018, PAPER], tint: [0.91, 0.038, PAPER], line: [0.8, 0.045, PAPER - 4], text: [0.25, 0.055, GROUND], muted: [0.44, 0.045, GROUND] },
+  dark: { bg: [0.19, 0.045, GROUND], surface: [0.235, 0.05, GROUND], tint: [0.265, 0.052, GROUND], line: [0.4, 0.05, GROUND], text: [0.93, 0.035, PAPER], muted: [0.8, 0.04, PAPER] },
 };
 
 function theme(name) {
   const out = [];
-  for (const [k, [l, c]] of Object.entries(neutrals[name])) out.push(`  --${k}: ${fit(l, c, NEUTRAL)};`);
+  for (const [k, [l, c, h]] of Object.entries(neutrals[name])) out.push(`  --${k}: ${fit(l, c, h)};`);
   for (const [k, h] of Object.entries(hues)) {
     out.push(`  --${k}: ${fit(...roles[name].ink, h)};`, `  --${k}-soft: ${fit(...roles[name].soft, h)};`);
   }
-  out.push(`  --green: ${fit(...roles[name].ink, ACTION)};`);
+  // Brass as text (links, kickers on the action color's behalf), readable on each theme's paper.
+  out.push(`  --brass: ${name === 'light' ? fit(0.47, 0.1, ACTION) : fit(0.8, 0.12, ACTION)};`);
   return out.join('\n');
 }
 const shared = [
   ...Object.entries(hues).map(([k, h]) => `  --v-${k}: ${fit(...vivid[k], h)};`),
-  `  --ink: ${fit(0.16, 0.05, NEUTRAL)};`, `  --ink-raised: ${fit(0.21, 0.055, NEUTRAL)};`, `  --ink-line: ${fit(0.35, 0.06, NEUTRAL)};`,
-  `  --on-ink: ${fit(0.96, 0.012, NEUTRAL)};`, `  --on-ink-muted: ${fit(0.78, 0.035, NEUTRAL)};`,
-  `  --veil: oklch(0.16 0.05 ${NEUTRAL} / 0.6);`, `  --shade: oklch(0 0 0 / 0.15);`,
-  // Phosphor green is roughly the complement of the purple ground, and nothing decorative uses it,
-  // so a single green button is the loudest thing on a page.
-  `  --v-green: ${fit(0.85, 0.2, ACTION)};`,
-  `  --action: ${fit(0.85, 0.2, ACTION)};`, `  --action-hi: ${fit(0.91, 0.17, ACTION)};`, `  --on-action: ${fit(0.22, 0.05, ACTION + 10)};`,
+  // The always-dark ground: figures, terminals, the night strip under the day theme.
+  `  --ink: ${fit(0.19, 0.045, GROUND)};`, `  --ink-raised: ${fit(0.24, 0.05, GROUND)};`, `  --ink-line: ${fit(0.4, 0.05, GROUND)};`,
+  `  --on-ink: ${fit(0.93, 0.035, PAPER)};`, `  --on-ink-muted: ${fit(0.8, 0.04, PAPER)};`,
+  `  --veil: oklch(0.19 0.045 ${GROUND} / 0.6);`, `  --shade: oklch(0.12 0.03 ${GROUND} / 0.22);`,
+  // Brass: the gilt on the fair's signs. Nothing decorative fills with it, so a brass button is the loudest thing.
+  `  --v-brass: ${fit(0.76, 0.12, ACTION)};`,
+  `  --action: ${fit(0.76, 0.12, ACTION)};`, `  --action-hi: ${fit(0.83, 0.12, ACTION)};`, `  --on-action: ${fit(0.19, 0.045, GROUND)};`,
+  `  --paper: ${fit(0.93, 0.035, PAPER)};`, `  --on-paper: ${fit(0.25, 0.055, GROUND)};`,
 ].join('\n');
 
 const css = `/* PALETTE:START generated by scripts/build-palette.mjs, do not edit by hand */
 :root {
 ${shared}
-${theme('light')}
-}
-[data-theme='dark'] {
 ${theme('dark')}
+}
+[data-theme='light'] {
+${theme('light')}
 }
 /* PALETTE:END */`;
 

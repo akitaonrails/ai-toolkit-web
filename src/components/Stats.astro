@@ -26,8 +26,8 @@ const width = (f: Stat) => [...`${f.prefix ?? ''}${number(f.n, f.format)}${f.suf
   @media (min-width: 48rem) { .stats { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
   /* Each number sizes to its own column (cqi) and to its own length (--chars), capped at the page's largest size, so a
      long figure never runs into the next. A display glyph is about 0.62em wide; 150cqi / chars fills the column with some room. */
-  .stats > div { border-block-start: 3px solid var(--hue-vivid, var(--v-green)); padding-block-start: 1rem; container-type: inline-size; }
-  .stats dd { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; font-size: min(var(--text-4xl), 21cqi, calc(150cqi / var(--chars, 5))); white-space: nowrap; }
+  .stats > div { border-block-start: 3px solid var(--hue-vivid, var(--v-brass)); padding-block-start: 1rem; container-type: inline-size; }
+  .stats dd { font-family: var(--font-display); font-weight: 800; color: var(--hue, var(--text)); line-height: 1; font-variant-numeric: tabular-nums; font-size: min(var(--text-4xl), 21cqi, calc(150cqi / var(--chars, 5))); white-space: nowrap; }
   /* A shrunken figure keeps the full-size slot, sitting on the same baseline, so the labels in a row stay aligned. */
   .stats dd { min-block-size: min(var(--text-4xl), 21cqi); display: flex; align-items: flex-end; }
   .stats dt { margin-block-start: 0.6rem; color: var(--muted); }

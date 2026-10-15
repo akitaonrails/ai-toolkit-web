@@ -5,9 +5,31 @@
   },
   "hero": {
     "title": "Cómo una persona mantiene 40 repositorios en marcha",
-    "lede": "Cada mañana abro un agente por proyecto en tmux, le doy una sola línea y reviso lo que vuelve. El trabajo pesado está en las skills: prompts en texto plano que sigo puliendo.",
-    "primary": "Leer las skills",
+    "lede": "Cada mañana abro un agente de programación con IA por proyecto, le doy una sola línea y reviso lo que devuelve. Un agente de programación puede inspeccionar archivos, editar código y ejecutar verificaciones. Mis instrucciones reutilizables son archivos de texto plano llamados skills.",
+    "primary": "Empieza por lo básico",
     "secondary": "Por qué no copiarlas"
+  },
+  "basics": {
+    "title": "La versión más pequeña de este flujo",
+    "lede": "Mi setup completo creció con el tiempo. Puedes empezar con un proyecto, una tarea y cuatro hábitos.",
+    "items": [
+      {
+        "title": "Elige una tarea acotada",
+        "text": "Elige un trabajo con un final claro y un resultado que puedas verificar. Mantén el primer cambio lo bastante pequeño para revisarlo."
+      },
+      {
+        "title": "Escribe las restricciones",
+        "text": "Dile al agente qué debe seguir siendo cierto, qué comandos verifican el trabajo y qué no debe tocar."
+      },
+      {
+        "title": "Revisa el cambio",
+        "text": "Lee el diff, cuestiona sus supuestos y ejecuta las verificaciones del proyecto. Una persona sigue siendo responsable de aceptarlo."
+      },
+      {
+        "title": "Conserva la lección",
+        "text": "Convierte un fallo en un test o una regla escrita. La siguiente sesión no debe repetir el mismo error."
+      }
+    ]
   },
   "start": {
     "title": "Una línea para empezar el día",
@@ -31,7 +53,7 @@
   },
   "pipeline": {
     "title": "El pipeline",
-    "lede": "Nada de lo que escribe un colaborador se da por cierto. Cada afirmación se verifica, cada arreglo aprobado tiene primero un test, y nada recibe un tag sin CI en verde en ese commit exacto.",
+    "lede": "Cada afirmación se verifica, ya venga de una persona o de un agente. Cada arreglo aprobado recibe un test de regresión, y la versión espera a que pasen todas las verificaciones automatizadas sobre esa versión exacta.",
     "alt": "Un pipeline de izquierda a derecha: PRs e issues abiertos se dividen en pr-audit e iss-audit, que se juntan tras un control Aprobado en github-resolution, luego pr-post-audit, luego release y luego Kaizen, con una flecha de Kaizen de vuelta al inicio. Una barra de ai-memory corre por debajo de todo.",
     "caption": "pr-post-audit corre cuando una sesión resolvió más de tres tickets. La skill release corre solo cuando pido una versión."
   },

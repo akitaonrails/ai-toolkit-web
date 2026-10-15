@@ -2,7 +2,7 @@
   "site": {
     "tagline": "제가 AI와 일하는 방식 뒤에 있는 도구, 워크플로, 글",
     "description": "Fabio Akita의 오픈 소스 AI 도구 아지트입니다. ai-usagebar, ghpending, tclock, 에이전트 스킬과 ai-memory, 그리고 LLM 벤치마크와 그 뒤의 글을 모았습니다.",
-    "ogAlt": "Akita's AI Lair: 도구, 워크플로, 글. 빨간 픽셀 시계, 호박색 목록, 파란 게이지, 보라색 칩이 있는 작은 대시보드.",
+    "ogAlt": "Akita's AI Lair: 도구, 워크플로, 글. 만국박람회 포스터. 계단식 전시관 뒤의 지친 얼굴의 거대 로봇, 황동빛 햇살 무늬, 붉은 삼각기.",
     "homeTitle": "Akita's AI Lair: AI 코딩 도구, 워크플로, 벤치마크"
   },
   "a11y": {
@@ -39,8 +39,11 @@
       "note": "제 가려운 곳을 긁는 실험들"
     },
     "writing": {
-      "label": "글",
+      "label": "블로그와 벤치마크",
       "note": "블로그와 LLM 벤치마크"
+    },
+    "learn": {
+      "label": "배우기"
     },
     "newsletter": {
       "label": "뉴스레터",
@@ -87,7 +90,7 @@
     },
     "book": {
       "label": "책 Competent Enough",
-      "note": "AI를 시험한 1년"
+      "note": "두려움과 과대광고 없이 보는 AGI, 일자리, 학습"
     }
   },
   "kicker": {
@@ -119,7 +122,13 @@
     "title": "여기 있는 건 전부 오픈 소스",
     "text": "도구, 스킬, 벤치마크 모두 공개 저장소입니다. 포크해서 자기 방식에 맞는 버전을 만드세요.",
     "github": "제 저장소 전체 보기",
-    "blog": "블로그 읽기"
+    "blog": "블로그 읽기",
+    "learn": {
+      "title": "과대광고 없이 계속 배우기",
+      "text": "무료 책은 AGI, 일자리, 교육, 실제 활용에 관한 주장을 하나로 잇습니다. 워크플로에서는 제가 그 생각을 실제 작업에 어떻게 적용하는지 보여 줍니다.",
+      "primary": "무료 책 읽기",
+      "secondary": "워크플로 보기"
+    }
   },
   "social": {
     "title": "저를 팔로우하는 곳",
@@ -152,6 +161,7 @@
   "footer": {
     "about": "제가 만든 도구와 그걸 쓰는 방식입니다. 후원도, 광고도, 유료 구독도 없습니다. 제가 좋아서 합니다.",
     "tools": "도구",
+    "learn": "배우기",
     "more": "더 보기",
     "sisters": "자매 사이트",
     "theme": {
@@ -161,7 +171,8 @@
     },
     "cookieSettings": "쿠키 설정",
     "contact": "연락처",
-    "rights": "모든 권리 보유. 각 도구는 자체 오픈 소스 라이선스를 따릅니다."
+    "rights": "모든 권리 보유. 각 도구는 자체 오픈 소스 라이선스를 따릅니다.",
+    "harmless": "대체로 무해함."
   },
   "notfound": {
     "title": "여기엔 쌓인 일이 없습니다",
@@ -175,7 +186,7 @@
     "accept": "동의"
   },
   "deck": {
-    "download": "상사에게 보내세요",
+    "download": "PDF 요약 다운로드",
     "format": "PDF 슬라이드"
   },
   "carousel": {

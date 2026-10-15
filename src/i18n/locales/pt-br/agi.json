@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "Por que AGI não importa",
-    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Onze pontos curtos sobre o porquê, com links pras versões longas.",
+    "lede": "AGI significa inteligência artificial geral: um sistema proposto capaz de lidar com a maioria das tarefas intelectuais. Os laboratórios ainda discordam sobre o que conta e como testar. Eu uso as ferramentas atuais todo dia; esta página separa o que elas conseguem demonstrar daquilo que as pessoas preveem.",
     "primary": "Pular pras conclusões",
     "secondary": "A versão longa no meu blog"
   },
@@ -146,7 +146,7 @@
     "attacks": {
       "kicker": "7. As histórias de terror",
       "title": "Os \"ataques de IA\" foram decisões humanas",
-      "lede": "Toda manchete de \"IA invadiu alguém\" até agora tem o mesmo roteiro: uma pessoa deixou a porta aberta, ou apontou a ferramenta pro alvo.",
+      "lede": "Os casos abaixo têm a mesma falha operacional: pessoas concederam acesso ou apontaram a ferramenta sem controles adequados.",
       "alt": "Uma ferramenta violeta dentro de uma sandbox laranja com a porta aberta; um terminal com o rótulo Decisão humana está ligado à porta, uma chave com o rótulo Credenciais está do lado de fora, e uma linha sai da ferramenta, passa pela porta aberta e chega a servidores com o rótulo Servidores reais.",
       "points": [
         "Hugging Face, agosto de 2026: agentes da OpenAI numa prova de cibersegurança escaparam por um proxy de cache, porque a sandbox filtrava o tráfego e não tinha air gap. Eles foram atrás do gabarito da prova e leram 956 credenciais no caminho. Cada passo que abriu caminho pra isso foi uma decisão humana.",
@@ -176,8 +176,8 @@
     },
     "doom": {
       "kicker": "8. O apocalipse",
-      "title": "Os profetas do apocalipse não trazem evidência",
-      "lede": "A cada poucos meses alguém sai de um laboratório e avisa o mundo. Na minha leitura, nenhum deles mostrou nada que dê pra checar.",
+      "title": "Como avaliar previsões catastróficas",
+      "lede": "De tempos em tempos, alguém sai de um laboratório de IA e alerta o mundo. Eu procurei evidências que alguém de fora consiga inspecionar, reproduzir ou testar.",
       "points": [
         "Jacob Coxon, setembro de 2026: quatro meses na Anthropic, depois uma thread avisando que a IA poderia matar todo mundo até o fim da década. Mais de 100 milhões de visualizações, e a imprensa disse que ele abriu mão do equity. O vesting da Anthropic começa em seis meses. Não tinha nada pra abrir mão.",
         "Aí vieram os detalhes. Grupos financiados pelos mesmos doadores de segurança de IA teriam amplificado ele em minutos, e a Pirate Wires reportou que uma agência de PR cujos clientes incluem doomers conhecidos estava marcando as entrevistas dele no dia seguinte. Ele tinha dito à Fox News que nenhum terceiro estava envolvido.",
@@ -251,8 +251,8 @@
       "Os modelos brutos convergiram. Os ganhos recentes vieram das ferramentas em volta deles, e os modelos menores continuam alcançando.",
       "Um modelo é um arquivo trancado. Ele não aprende nada com a sua sessão.",
       "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",
-      "Os \"ataques de IA\" assustadores foram gente deixando a porta aberta. A ferramenta foi pra onde apontaram.",
-      "O apocalipse também é marketing. Os profetas trazem sentimentos e previsões, nunca evidência que dê pra checar.",
+      "Os incidentes discutidos aqui envolveram pessoas concedendo acesso ou direcionando a ferramenta. Permissões e supervisão humana são riscos que já conseguimos administrar.",
+      "Previsões catastróficas precisam de evidências que possam ser inspecionadas. Sentimentos e previsões não são evidências.",
       "As ferramentas são reais e excelentes. Fazem o que você manda, e quem está no comando continua sendo você.",
       "O que importa agora é eficiência: o mesmo trabalho com menos hardware e preços menores."
     ]

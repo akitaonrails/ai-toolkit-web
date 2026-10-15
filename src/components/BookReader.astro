@@ -38,28 +38,28 @@ const first = bookEdition(locale);
 </div>
 
 <style>
-  .reader { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; border-radius: 1.25rem; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); block-size: min(46rem, 82svh); }
+  .reader { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); block-size: min(46rem, 82svh); }
   .reader:fullscreen, .reader.max { block-size: 100%; border-radius: 0; border: 0; padding: 1rem 1.5rem; background: var(--bg); }
   .reader.max { position: fixed; inset: 0; z-index: 100; block-size: 100svh; }
   .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
-  .editions { display: flex; gap: 0.25rem; padding: 0.2rem; border-radius: 99px; background: var(--tint, var(--bg)); }
-  .editions button { padding: 0.45rem 0.9rem; border-radius: 99px; font-size: var(--text-sm); font-weight: 600; color: var(--muted); min-block-size: 2.5rem; }
+  .editions { display: flex; gap: 0.25rem; padding: 0.2rem; border-radius: 0.2rem; background: var(--tint, var(--bg)); }
+  .editions button { padding: 0.45rem 0.9rem; border-radius: 0.2rem; font-size: var(--text-sm); font-weight: 600; color: var(--muted); min-block-size: 2.5rem; }
   .editions button[aria-pressed='true'] { background: var(--surface); color: var(--text); box-shadow: 0 0 0 1.5px var(--hue-vivid); }
   .toc { flex: 1 1 12rem; min-inline-size: 0; }
-  .toc select { inline-size: 100%; min-block-size: 2.5rem; padding-inline: 0.75rem; border-radius: 0.75rem; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: var(--text-sm); }
-  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 99px; border: 1.5px solid var(--line); color: var(--text); }
+  .toc select { inline-size: 100%; min-block-size: 2.5rem; padding-inline: 0.75rem; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: var(--text-sm); }
+  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 0.2rem; border: 1.5px solid var(--line); color: var(--text); }
   .ctl:hover { border-color: var(--muted); }
   .ctl .i-exit, .reader:fullscreen .ctl .i-full, .reader.max .ctl .i-full { display: none; }
   .reader:fullscreen .ctl .i-exit, .reader.max .ctl .i-exit { display: inline; }
   .stage { flex: 1; min-block-size: 0; display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: minmax(0, 1fr); gap: 0.5rem; }
-  .view { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; block-size: 100%; min-inline-size: 0; inline-size: 100%; position: relative; border-radius: 0.5rem; justify-self: center; }
+  .view { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; block-size: 100%; min-inline-size: 0; inline-size: 100%; position: relative; border-radius: var(--radius); justify-self: center; }
   /* In the card, one page at a readable width; full screen gets the whole width for two pages. */
   .reader:not(:fullscreen, .max) .view { max-inline-size: 42rem; }
   .view:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
-  .turn { display: grid; place-items: center; align-self: center; inline-size: 2.75rem; block-size: 4.5rem; border-radius: 0.75rem; color: var(--muted); }
+  .turn { display: grid; place-items: center; align-self: center; inline-size: 2.75rem; block-size: 4.5rem; border-radius: var(--radius); color: var(--muted); }
   .turn:hover { color: var(--text); background: var(--tint, var(--bg)); }
   .status { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); text-align: center; padding: 1rem; }
-  .where { min-block-size: 1.4em; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--muted); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .where { min-block-size: 1.4em; font-family: var(--font-sign); font-size: var(--text-sm); color: var(--muted); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   @media (max-width: 40rem) {
     .reader { padding: 0.75rem; }
     .stage { grid-template-columns: 1fr; }

@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "Why AGI doesn't matter",
-    "lede": "Every few weeks someone announces AGI. I use these tools every day, and I don't care whether they are \"general\". Eleven short points on why, with links to the long versions.",
+    "lede": "AGI means artificial general intelligence: a proposed system able to handle most intellectual tasks. Labs still disagree on what counts and how to test it. I use today's tools every day; this page separates what they can demonstrate from what people forecast.",
     "primary": "Skip to the takeaways",
     "secondary": "The long version on my blog"
   },
@@ -146,7 +146,7 @@
     "attacks": {
       "kicker": "7. The scary stories",
       "title": "The \"AI attacks\" were human decisions",
-      "lede": "Every \"AI hacked someone\" headline so far has the same plot: a person left the door open, or pointed the tool at the target.",
+      "lede": "The cases below share an operational failure: people granted access or aimed the tool without adequate controls.",
       "alt": "A violet tool sits inside an orange sandbox whose door hangs open; a terminal labeled Human decision is wired to the door, a key labeled Credentials lies outside, and a line runs from the tool through the open door to servers labeled Real servers.",
       "points": [
         "Hugging Face, August 2026: OpenAI agents in a cybersecurity exam got out through a caching proxy, because the sandbox filtered traffic and had no air gap. They went looking for the exam's answer key and read 956 credentials on the way. Every enabling step was a human decision.",
@@ -176,8 +176,8 @@
     },
     "doom": {
       "kicker": "8. The doom",
-      "title": "The prophets of doom bring no evidence",
-      "lede": "Every few months someone quits a lab and warns the world. In my reading, none of them has shown anything you can check.",
+      "title": "How to evaluate catastrophic forecasts",
+      "lede": "People periodically leave AI labs and warn the world. I looked for evidence that an outsider can inspect, reproduce or test.",
       "points": [
         "Jacob Coxon, September 2026: four months at Anthropic, then a thread warning that AI could kill everyone by the end of the decade. Over 100 million views, and the press said he gave up his equity. Anthropic's vesting starts at six months. There was nothing to give up.",
         "Then the details came out. Groups funded by the same AI-safety donors reportedly amplified him within minutes, and Pirate Wires reported that a PR firm whose clients include well-known doomers was booking his interviews the day after. He had told Fox News no third parties were involved.",
@@ -251,8 +251,8 @@
       "The raw models converged. The recent gains came from the tools around them, and smaller models keep catching up.",
       "A model is a locked file. It learns nothing from your session.",
       "The word is useful for selling chips, funding rounds and IPOs. That's why it keeps being announced.",
-      "The scary \"AI attacks\" were people leaving doors open. The tool did what it was pointed at.",
-      "Doom is marketing too. The prophets bring feelings and forecasts, never evidence you can check.",
+      "The incidents covered here involved people granting access or directing the tool. Permissions and human oversight are risks we can manage now.",
+      "Catastrophic forecasts need evidence that can be inspected. Feelings and predictions are not evidence.",
       "The tools are real and excellent. They do what you tell them, and you're still in charge.",
       "What matters next is efficiency: the same work with less hardware and lower prices."
     ]

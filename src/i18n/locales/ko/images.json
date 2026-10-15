@@ -34,8 +34,7 @@
     "Your repos": "내 저장소",
     "One digest": "요약 하나",
     "Fork": "포크",
-    "Upstream": "업스트림",
-    "follows pull requests on the original project": "원래 프로젝트의 풀 리퀘스트를 따라감"
+    "Upstream": "업스트림"
   },
   "tclock-widgets": {
     "Any command": "아무 명령어나"

@@ -34,8 +34,7 @@
     "Your repos": "自分のリポジトリ",
     "One digest": "1つの一覧",
     "Fork": "フォーク",
-    "Upstream": "本家",
-    "follows pull requests on the original project": "本家プロジェクトのプルリクエストを追跡"
+    "Upstream": "本家"
   },
   "tclock-widgets": {
     "Any command": "任意のコマンド"

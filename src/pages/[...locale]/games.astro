@@ -21,25 +21,25 @@ export const getStaticPaths = localePaths;
 
 const { t, raw, date } = useI18n(Astro, 'games');
 type Text = { title: string; text: string };
-const box = raw<Text[]>('box.items').map((b) => ({ ...b, hue: 'orange' as const }));
-const next = withText([{ hue: 'teal', href: '/setup/' }, { hue: 'violet', href: '/workflow/' }] as const, raw<Text[]>('next'));
+const box = raw<Text[]>('box.items').map((b) => ({ ...b, hue: 'copper' as const }));
+const next = withText([{ hue: 'patina', href: '/setup/' }, { hue: 'amethyst', href: '/workflow/' }] as const, raw<Text[]>('next'));
 // From the distrobox-gaming README's Quick Start and Commands sections.
 const playbooks = 'ansible-playbook site.yml                 # the whole box, from scratch\nansible-playbook site.yml                 # again: nothing changes\nansible-playbook reset-configs.yml --tags esde   # reset one frontend\nansible-playbook backup.yml && ansible-playbook restore.yml\nansible-playbook site.yml --tags verify   # post-setup checks';
 const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu   # or bind it: bind = SUPER, G, exec, games-menu';
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
-  <PageHero hue="orange" kicker={t('kicker.games')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="games" hue="copper" kicker={t('kicker.games')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href={repoUrl('distrobox')} class="btn btn-primary">{t('hero.primary')}</a>
     <a href={repoUrl('gamesMenu')} class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
   <div class="wrap"><Shot src={menuShot} alt={t('hero.shotAlt')} caption={t('hero.caption')} eager zoom={false} /></div>
 
-  <Section title={t('clean.title')} lede={t('clean.lede')} hue="orange" fill>
+  <Section title={t('clean.title')} lede={t('clean.lede')} hue="copper" fill>
     <Figure name="games-clean-host" alt={t('clean.alt')} />
     <ul class="ticks grid gap-4 md:grid-cols-2 !gap-x-12">{raw<string[]>('clean.points').map((p) => <li>{p}</li>)}</ul>
   </Section>
 
-  <Section title={t('idempotent.title')} lede={t('idempotent.lede')} hue="orange" tint>
+  <Section title={t('idempotent.title')} lede={t('idempotent.lede')} hue="copper" tint>
     <div class="grid gap-10 lg:grid-cols-[1.3fr_1fr] items-start">
       <CodeBlock title={t('idempotent.codeTitle')} code={playbooks} />
       <Stats cols={1} items={[
@@ -49,11 +49,11 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
     </div>
   </Section>
 
-  <Section title={t('research.title')} lede={t('research.lede')} hue="orange">
+  <Section title={t('research.title')} lede={t('research.lede')} hue="copper">
     <a href={`${repoUrl('distrobox')}/tree/master/docs`} class="btn btn-ghost">{t('research.link')}</a>
   </Section>
 
-  <Section title={t('use.title')} lede={t('use.lede')} hue="orange" tint id="use">
+  <Section title={t('use.title')} lede={t('use.lede')} hue="copper" tint id="use">
     <div class="grid gap-8 lg:grid-cols-2 items-start">
       <CodeBlock title={t('use.codeTitle')} code={'git clone https://github.com/akitaonrails/distrobox-gaming\ncd distrobox-gaming\nclaude'} />
       <div>
@@ -63,12 +63,12 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
     </div>
   </Section>
 
-  <Section title={t('box.title')} hue="orange">
+  <Section title={t('box.title')} hue="copper">
     <FeatureGrid items={box} cols={2} />
     <div class="mt-10"><RepoMeta id="distrobox" /></div>
   </Section>
 
-  <Section title={t('menu.title')} lede={t('menu.lede')} hue="orange" id="launcher">
+  <Section title={t('menu.title')} lede={t('menu.lede')} hue="copper" id="launcher">
     <Figure name="games-stack" alt={t('menu.alt')} />
     <div class="grid gap-10 lg:grid-cols-2 items-start">
       <ul class="ticks">{raw<string[]>('menu.points').map((p) => <li>{p}</li>)}</ul>
@@ -77,15 +77,15 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
   </Section>
 
   <section class="wrap">
-    <Callout title={t('note.title')} hue="orange"><p>{t('note.text')}</p></Callout>
+    <Callout title={t('note.title')} hue="copper"><p>{t('note.text')}</p></Callout>
   </section>
 
-  <Related ids={related.games} hue="orange" />
+  <Related ids={related.games} hue="copper" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />
 </Base>
 
 <style>
-  .prompt-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--orange); background: var(--orange-soft); padding: 0.8rem 1rem; border-radius: 0.6rem; }
+  .prompt-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--copper); background: var(--copper-soft); padding: 0.8rem 1rem; border-radius: 0.6rem; }
 </style>

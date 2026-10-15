@@ -5,13 +5,35 @@
   "hero": {
     "kicker": "Una guarida con las puertas abiertas",
     "title": "Akita's AI Lair",
-    "lede": "Mantengo más de 40 repositorios de código abierto con agentes de IA escribiendo la mayor parte del código. Estas son las herramientas que construí para que eso sea manejable, el flujo de trabajo que las une y los textos donde documento lo que aprendo.",
+    "lede": "Un agente de programación con IA es un modelo de IA que puede inspeccionar archivos, editar código y ejecutar comandos. Los uso en más de 40 repositorios de código abierto. Estas son las herramientas que mantienen el trabajo bajo control, el flujo que lo verifica y los textos donde documento lo que aprendo.",
     "primary": "Ver el flujo de trabajo",
-    "secondary": "Dónde seguirme",
+    "secondary": "¿Nuevo en IA? Lee el libro",
     "shotAlt": "Mi segundo monitor: tclock mostrando 16:10:22 en grandes dígitos rojos, un widget de pendientes de GitHub con los pull requests e issues abiertos de ai-memory y ai-usagebar, un widget de Google Calendar y una franja con el estado del sistema.",
     "shotCaption": "Mi segundo monitor un jueves normal. 43 repositorios revisados, 6 con algo esperando.",
     "portraitAlt": "Retrato ilustrado de Fabio Akita: pelo canoso, lentes redondos, camisa blanca y corbata oscura, mirando hacia arriba con media sonrisa segura.",
     "intro": "Soy Fabio Akita: programador desde hace más de 30 años, emprendedor, conferencista, escritor y ex youtuber. <a class=\"link\" href=\"{linkedin}\">Mi LinkedIn</a> tiene la versión larga."
+  },
+  "start": {
+    "title": "Empieza por tu pregunta",
+    "lede": "No necesitas conocer mis herramientas ni programar para usar este sitio. Elige la pregunta que te trajo hasta aquí.",
+    "items": [
+      {
+        "title": "Quiero entender la IA",
+        "text": "Empieza por el libro gratuito. Explica qué puede hacer la IA actual, dónde falla y qué significa eso para el trabajo y el aprendizaje."
+      },
+      {
+        "title": "Quiero usar agentes de programación",
+        "text": "Empieza por el flujo de trabajo seguro más pequeño: una tarea acotada, restricciones por escrito, revisión humana y tests."
+      },
+      {
+        "title": "Me preocupa la AGI",
+        "text": "Lee primero la versión breve y luego examina las pruebas detrás de cada afirmación sobre capacidad, riesgo y control."
+      },
+      {
+        "title": "Oí que la IA reemplazará a los programadores",
+        "text": "Mira qué copian bien los agentes de software, dónde aún necesitan personas con experiencia y cuánto costaron realmente los ejemplos públicos."
+      }
+    ]
   },
   "desk": {
     "title": "Un escritorio, dos monitores, muchos agentes",
@@ -193,5 +215,48 @@
         "cta": "Ver la newsletter"
       }
     ]
+  },
+  "map": {
+    "title": "El mapa de la feria",
+    "lede": "Cada página de este sitio es un pabellón. La información está en la Plaza 42, en el centro. Dónde más.",
+    "alt": "Un mapa del sitio dibujado como un recinto ferial de los años sesenta: los caminos salen de la Plaza 42, en el centro, hacia la Torre del Libro, el Salón de Opiniones, el Salón de Máquinas, el Taller, la Torre de Transmisión, la Casa de Prensa, la Sala de Control y el Salón de Juegos, con un monorriel alrededor y una laguna.",
+    "note": "El mapa se desplaza hacia los lados; todos los pabellones también están en el menú.",
+    "places": {
+      "book": {
+        "name": "Torre del Libro",
+        "note": "Competent Enough, gratis"
+      },
+      "opinions": {
+        "name": "Salón de Opiniones",
+        "note": "AGI, los límites de los LLM, estudiantes"
+      },
+      "machines": {
+        "name": "Salón de Máquinas",
+        "note": "ai-usagebar, ghpending, tclock"
+      },
+      "workshop": {
+        "name": "El Taller",
+        "note": "Cómo trabajo con agentes"
+      },
+      "broadcast": {
+        "name": "Torre de Transmisión",
+        "note": "Podcasts y charlas"
+      },
+      "press": {
+        "name": "Casa de Prensa",
+        "note": "La newsletter"
+      },
+      "control": {
+        "name": "Sala de Control",
+        "note": "Mi setup de escritorio"
+      },
+      "arcade": {
+        "name": "Salón de Juegos",
+        "note": "Juegos, fuera de horario"
+      },
+      "plaza": {
+        "name": "Información"
+      }
+    }
   }
 }
