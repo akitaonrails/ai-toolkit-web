@@ -11,8 +11,8 @@ export const book = {
   issues: 'https://github.com/akitaonrails/ai-book-2026/issues',
   // The version as the owner names it on the page; the release it points to.
   label: '1.0-preview',
-  tag: 'v1.0.0-preview.7',
-  released: '2026-10-14',
+  tag: 'v1.0.0-preview.8',
+  released: '2026-10-15',
   editions: [
     { id: 'en', file: 'Competent-Enough', pages: 505 },
     { id: 'pt', file: 'Competente-o-Suficiente', pages: 518 },
@@ -20,7 +20,7 @@ export const book = {
   // The hardcover, per edition: the owner said on 2026-10-14 it will be on Amazon shortly. Paste the product URLs when
   // they exist; until then the page says it is coming and shows no link.
   hardcover: { en: '', pt: '' } as Record<'en' | 'pt', string>,
-  // Read on 2026-10-14 at the tag: print PDFs (pdfinfo), book/back/glossary-*.yml (146 entries in each edition),
+  // Read on 2026-10-15 at the tag: print PDFs (release notes), book/back/glossary-*.yml (146 entries in each edition),
   // book/back/references.yaml (310), book/outline.yml (21 chapters, 5 parts, 10 appendices).
   numbers: { chapters: 21, parts: 5, glossary: 146, references: 310 },
 } as const;
