@@ -19,6 +19,7 @@
   "watch": "Assistir no YouTube",
   "items": {
     "7uFqDMwQ4_8": "Participação no News Manhã, do SBT News. Os riscos da IA entraram no debate da Assembleia Geral da ONU nesta semana, e eu comentei os alertas das próprias empresas de IA, os riscos à segurança global e o uso de IA e deepfakes nas eleições brasileiras.",
+    "N3eU-2VIByQ": "Quatro horas sobre IA e programação na prática: pra onde vai o ChatGPT, as polêmicas entre os desenvolvedores de hoje, erros que podem acabar com uma carreira, os velhos truques dos hackers brasileiros e um desvio por jogos e hardware absurdo.",
     "U3bZavG8qQY": "Lições de 37 dias de imersão total em vibe coding: 653 commits, cerca de 144.000 linhas e 8 projetos em produção. O que os agentes conseguem e não conseguem fazer, quais modelos de negócio fazem sentido e por que o prompt one-shot é um mito.",
     "4c7pbOxYn_A": "Quase cinco horas sobre como a IA mudou em um ano: o ponto de virada, o que os donos dos maiores modelos não contam, por que pergunta burra queima mais tokens, empregos, e qual IA é a melhor pra programador.",
     "9aWa-eCmWYE": "O fim da era do hype. Por que a empolgação com IA é inversamente proporcional a saber como ela funciona, e como eu usei modelos de fronteira pra multiplicar minha produção em sete projetos reais sem substituir o engenheiro.",
@@ -42,9 +43,10 @@
     "open": "Abrir a playlist no YouTube"
   },
   "cuts": {
-    "title": "Cortes do Flow",
-    "lede": "A equipe do Flow cortou os dois episódios em clipes curtos no canal Cortes do Flow. Se quatro horas é demais, comece por aqui.",
+    "title": "Cortes e shorts do Flow",
+    "lede": "A equipe do Flow transforma cada episódio completo em cortes mais curtos. Se quatro horas é demais, comece por aqui.",
     "episode": {
+      "N3eU-2VIByQ": "Do Flow #663, outubro de 2026",
       "4c7pbOxYn_A": "Do Flow #588, abril de 2026",
       "sf4Gxf0LiKo": "Do episódio de junho de 2025"
     },

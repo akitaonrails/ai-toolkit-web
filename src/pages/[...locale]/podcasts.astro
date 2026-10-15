@@ -88,7 +88,11 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
         </ul>
       </div>
     ))}
-    <p class="text-sm text-muted">{t('cuts.note', { date: date(videos.fetchedAt.slice(0, 10)) })} <a class="link" href="https://www.youtube.com/@cortesdoflow">{t('cuts.channel')}</a></p>
+    <p class="text-sm text-muted">
+      {t('cuts.note', { date: date(videos.fetchedAt.slice(0, 10)) })}
+      <a class="link" href="https://www.youtube.com/@cortesdoflow">Cortes do Flow</a> ·
+      <a class="link" href="https://www.youtube.com/@TalkFlow/videos">Talk Flow</a>
+    </p>
   </Section>
   <CtaBand />
 </Base>
