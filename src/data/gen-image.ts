@@ -8,3 +8,8 @@ export function genImage(name: string, locale: string): ImageMetadata {
   if (!image) throw new Error(`no generated image named "${name}"`);
   return image;
 }
+
+/** The image if it has been generated, else undefined: for art that may not exist yet, like a new page's poster. */
+export function maybeGenImage(name: string, locale: string): ImageMetadata | undefined {
+  return localized[`/src/assets/img/gen/${locale}/${name}.webp`]?.default ?? originals[`/src/assets/img/gen/${name}.webp`]?.default;
+}

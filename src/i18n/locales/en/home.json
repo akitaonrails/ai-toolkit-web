@@ -193,5 +193,48 @@
         "cta": "See the newsletter"
       }
     ]
+  },
+  "map": {
+    "title": "The fair map",
+    "lede": "Every page of this site is a pavilion. Information is at Plaza 42, in the middle, where else.",
+    "alt": "A map of the site drawn as a 1960s fairground: walkways lead from Plaza 42 in the middle to the Book Tower, the Hall of Opinions, the Hall of Machines, the Workshop, the Broadcast Tower, the Press House, the Control Room and the Arcade, with a monorail loop and a lagoon.",
+    "note": "The map scrolls sideways; every pavilion is also in the menu.",
+    "places": {
+      "book": {
+        "name": "Book Tower",
+        "note": "Competent Enough, free"
+      },
+      "opinions": {
+        "name": "Hall of Opinions",
+        "note": "AGI, the limits of LLMs, students"
+      },
+      "machines": {
+        "name": "Hall of Machines",
+        "note": "ai-usagebar, ghpending, tclock"
+      },
+      "workshop": {
+        "name": "The Workshop",
+        "note": "How I work with agents"
+      },
+      "broadcast": {
+        "name": "Broadcast Tower",
+        "note": "Podcasts and talks"
+      },
+      "press": {
+        "name": "Press House",
+        "note": "The newsletter"
+      },
+      "control": {
+        "name": "Control Room",
+        "note": "My desktop setup"
+      },
+      "arcade": {
+        "name": "The Arcade",
+        "note": "Games, after hours"
+      },
+      "plaza": {
+        "name": "Information"
+      }
+    }
   }
 }

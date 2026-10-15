@@ -21,12 +21,12 @@ const schema = [{ '@type': 'ItemList', itemListElement: [...videos.tv, ...videos
 const compact = (n: number) => number(n, { notation: 'compact', maximumFractionDigits: 1 });
 ---
 <Base title={t('meta.title')} description={t('meta.description')} schema={schema}>
-  <PageHero hue="amber" kicker={t('meta.title')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="podcasts" hue="jade" kicker={t('meta.title')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#episodes" class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#cuts" class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
 
-  <section id="tv" class="wrap pb-20 scroll-mt-20" data-hue="amber">
+  <section id="tv" class="wrap pb-20 scroll-mt-20" data-hue="jade">
     <h2 class="text-2xl mb-8">{t('tv.title')}</h2>
     {videos.tv.map((v) => (
       <div class="ep tv grid gap-8 lg:grid-cols-[1.25fr_1fr] items-center">
@@ -34,7 +34,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
         <div>
           <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('kind.tv')} · {v.channel}</div>
           <h3 class="text-2xl mt-3 !leading-tight">{v.title}</h3>
-          <p class="mt-2 font-mono text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
+          <p class="mt-2 font-sign text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
           <p class="mt-4 text-muted">{t(`items.${v.id}`)}</p>
           <a class="link mt-2 inline-block py-2.5" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
         </div>
@@ -42,7 +42,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
     ))}
   </section>
 
-  <section id="episodes" class="wrap pb-20 scroll-mt-20" data-hue="amber">
+  <section id="episodes" class="wrap pb-20 scroll-mt-20" data-hue="jade">
     <ol class="grid gap-16 md:gap-20">
       {videos.appearances.map((v) => (
         <li class="ep grid gap-8 lg:grid-cols-[1.25fr_1fr] items-center">
@@ -50,7 +50,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
           <div>
             <div class="kicker"><span class="dot" aria-hidden="true"></span>{talks.has(v.id) ? t('kind.talk') : t('kind.podcast')} · {v.channel}</div>
             <h2 class="text-2xl mt-3 !leading-tight">{v.title}</h2>
-            <p class="mt-2 font-mono text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
+            <p class="mt-2 font-sign text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
             <p class="mt-4 text-muted">{t(`items.${v.id}`)}</p>
             <a class="link mt-2 inline-block py-2.5" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
           </div>
@@ -59,12 +59,12 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
     </ol>
   </section>
 
-  <Section title={t('all.title')} lede={t('all.lede')} hue="amber" id="all">
+  <Section title={t('all.title')} lede={t('all.lede')} hue="jade" id="all">
     <ul class="grid gap-5 md:grid-cols-2">
       {(['talks', 'interviews'] as const).map((id) => (
         <li>
-          <a href={playlists[id]} class="cell h-full" data-hue="amber">
-            <span class="font-display font-bold text-xl" style="font-stretch:110%">{t(`all.${id}.name`)}</span>
+          <a href={playlists[id]} class="cell h-full" data-hue="jade">
+            <span class="font-sign font-bold text-xl" style="">{t(`all.${id}.name`)}</span>
             <p class="mt-3 text-muted">{t(`all.${id}.text`)}</p>
             <span class="link mt-3 inline-block">{t('all.open')}</span>
           </a>
@@ -73,7 +73,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
     </ul>
   </Section>
 
-  <Section title={t('cuts.title')} lede={t('cuts.lede')} hue="amber" id="cuts" tint>
+  <Section title={t('cuts.title')} lede={t('cuts.lede')} hue="jade" id="cuts" tint>
     {Object.entries(videos.cuts).map(([episode, list]) => (
       <div class="mb-16">
         <h3 class="text-xl mb-6">{t(`cuts.episode.${episode}`)}</h3>
@@ -82,7 +82,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
             <li>
               <Video id={v.id} title={v.title} play={t('play')} sizes="(min-width: 1024px) 24rem, (min-width: 640px) 46vw, 94vw" />
               <p class="mt-3 font-semibold leading-snug">{v.title}</p>
-              <p class="mt-1 font-mono text-xs text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
+              <p class="mt-1 font-sign text-xs text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
             </li>
           ))}
         </ul>

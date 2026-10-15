@@ -11,10 +11,11 @@ const { text, original, cite, large } = Astro.props;
 </figure>
 <style>
   .pq { position: relative; padding-inline-start: 1.5rem; max-width: 44rem; }
-  .pq::before { content: ''; position: absolute; inset-inline-start: 0; inset-block: 0.3rem; inline-size: 4px; border-radius: 99px; background: var(--hue-vivid, var(--v-green)); box-shadow: 0 0 16px var(--hue-vivid, var(--v-green)); }
-  .pq-text { font-family: var(--font-display); font-weight: 750; font-stretch: 108%; font-size: var(--text-xl); line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
+  /* A double gilt rule beside the quote, like the edge of a fair placard. */
+  .pq::before { content: ''; position: absolute; inset-inline-start: 0; inset-block: 0.3rem; inline-size: 6px; border-inline: 2px solid var(--hue-vivid, var(--v-brass)); }
+  .pq-text { font-family: var(--font-sans); font-style: italic; font-weight: 600; font-size: var(--text-xl); line-height: 1.35; text-wrap: balance; }
   .pq-large { max-width: 56rem; }
-  .pq-large .pq-text { font-size: var(--text-2xl); line-height: 1.15; }
+  .pq-large .pq-text { font-size: var(--text-2xl); line-height: 1.25; }
   .pq-orig { margin-block-start: 0.7rem; color: var(--muted); font-style: italic; }
-  .pq-cite { margin-block-start: 0.6rem; color: var(--muted); font-family: var(--font-mono); font-size: var(--text-sm); }
+  .pq-cite { margin-block-start: 0.6rem; color: var(--muted); font-family: var(--font-sign); font-weight: 600; letter-spacing: 0.02em; font-size: var(--text-sm); }
 </style>

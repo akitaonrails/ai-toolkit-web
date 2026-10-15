@@ -12,6 +12,7 @@ import PullQuote from '@/components/PullQuote.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import Portrait from '@/components/Portrait.astro';
 import Carousel from '@/components/Carousel.astro';
+import FairMap from '@/components/FairMap.astro';
 import { Image } from 'astro:assets';
 import desk from '@/assets/img/shots/desk-second-monitor.png';
 import usagebarShot from '@/assets/img/shots/omarchy-quattro-panel-crop.png';
@@ -19,11 +20,10 @@ import ghpendingShot from '@/assets/img/shots/ghpending-digest.png';
 import tclockShot from '@/assets/img/shots/tclock-nerv.png';
 import { sisters, sisterUrl, site, social } from '@/data/site';
 import { pick, articles, articleUrl } from '@/data/articles';
-import { genImage } from '@/data/gen-image';
+import { genImage, maybeGenImage } from '@/data/gen-image';
 import { bookEdition } from '@/data/book';
 import bookEn from '@/assets/img/book/book-en.png';
 import bookPt from '@/assets/img/book/book-pt.png';
-import videos from '@/data/videos.json';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
@@ -33,41 +33,42 @@ type Text = { title: string; text: string };
 type Quote = { text: string; original?: string; cite?: string };
 type Tool = { tagline: string; text: string; points: string[]; shotAlt: string };
 
-const steps = withText([{ hue: 'red' }, { hue: 'violet' }, { hue: 'teal' }, { hue: 'blue' }] as const, raw<Text[]>('desk.steps'));
+const steps = withText([{ hue: 'pennant' }, { hue: 'amethyst' }, { hue: 'patina' }, { hue: 'cerulean' }] as const, raw<Text[]>('desk.steps'));
 const tools = withText([
-  { id: 'usagebar', name: 'ai-usagebar', hue: 'blue', href: '/ai-usagebar/', post: 'usagebarPost', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo install ai-usagebar' },
-  { id: 'ghpending', name: 'ghpending', hue: 'amber', href: '/ghpending/', post: 'ghpendingPost', shot: ghpendingShot, install: 'brew tap akitaonrails/tap && brew install ghpending\nghpending add' },
-  { id: 'tclock', name: 'tclock', hue: 'red', href: '/clock-tui/', post: 'dayToDay', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
+  { id: 'usagebar', name: 'ai-usagebar', hue: 'cerulean', href: '/ai-usagebar/', post: 'usagebarPost', shot: usagebarShot, install: 'yay -S ai-usagebar-bin\n# or, on any Linux or macOS\ncargo install ai-usagebar' },
+  { id: 'ghpending', name: 'ghpending', hue: 'jade', href: '/ghpending/', post: 'ghpendingPost', shot: ghpendingShot, install: 'brew tap akitaonrails/tap && brew install ghpending\nghpending add' },
+  { id: 'tclock', name: 'tclock', hue: 'pennant', href: '/clock-tui/', post: 'dayToDay', shot: tclockShot, install: 'yay -S clock-tui-bin\ntclock --theme nerv' },
 ] as const, raw<Tool[]>('tools.items'));
 const bigger = withText([
   { hue: sisters.memory.hue, href: sisterUrl('memory', locale) },
   { hue: sisters.jail.hue, href: sisterUrl('jail', locale) },
-  { hue: 'violet', href: '/workflow/' },
+  { hue: 'amethyst', href: '/workflow/' },
 ] as const, raw<(Text & { link: string })[]>('sisters.items'));
 // The hero carousel: the intro first, then the pages I most want a new reader to find, each in its subject's hue
-// with that page's own picture (the 3D book for the book, the newest TV appearance for the podcasts). Words in home.json `carousel.items`.
-const thumbs = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/video/*.jpg', { eager: true });
+// with that pavilion's poster in the brass arch (the 3D book for the book). Words in home.json `carousel.items`.
+// Each slide shows its pavilion's poster in the brass arch; until a poster exists, the page's main diagram.
+const poster = (id: string, fallback: string) => maybeGenImage(`poster-${id}`, locale) ?? genImage(fallback, locale);
 const featured = withText([
-  { id: 'book', hue: 'rose', href: '/book/', image: bookEdition(locale) === 'pt' ? bookPt : bookEn, bare: true },
-  { id: 'limits', hue: 'blue', href: '/limits/', image: genImage('limits-facade', locale) },
-  { id: 'agi', hue: 'red', href: '/agi/', image: genImage('agi-plateau', locale) },
-  { id: 'students', hue: 'amber', href: '/students/', image: genImage('students-multiplier', locale) },
-  { id: 'workflow', hue: 'violet', href: '/workflow/', image: genImage('workflow-pipeline', locale) },
-  { id: 'podcasts', hue: 'amber', href: '/podcasts/', image: thumbs[`/src/assets/img/video/${videos.tv[0].id}.jpg`].default },
-  { id: 'newsletter', hue: 'rose', href: '/newsletter/', image: genImage('newsletter-pipeline', locale) },
+  { id: 'book', hue: 'jade', href: '/book/', image: bookEdition(locale) === 'pt' ? bookPt : bookEn, bare: true },
+  { id: 'limits', hue: 'cerulean', href: '/limits/', image: poster('limits', 'limits-facade') },
+  { id: 'agi', hue: 'pennant', href: '/agi/', image: poster('agi', 'agi-plateau') },
+  { id: 'students', hue: 'jade', href: '/students/', image: poster('students', 'students-multiplier') },
+  { id: 'workflow', hue: 'amethyst', href: '/workflow/', image: poster('workflow', 'workflow-pipeline') },
+  { id: 'podcasts', hue: 'jade', href: '/podcasts/', image: poster('podcasts', 'newsletter-pipeline') },
+  { id: 'newsletter', hue: 'mauve', href: '/newsletter/', image: poster('newsletter', 'newsletter-pipeline') },
 ] as const, raw<{ kicker: string; title: string; text: string; cta: string }[]>('carousel.items'));
 const slides = [{ id: 'slide-intro' }, ...featured.map((f) => ({ id: `slide-${f.id}` }))];
 const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cleanCode');
 ---
 <Base description={t('meta.description')}>
-  <section class="hero" data-exit>
+  <section class="hero motif motif-sunburst" data-exit>
     <Carousel ids={slides.map((x) => x.id)} label={t('carousel.label')}>
       <div id="slide-intro" class="c-slide" role="group" aria-roledescription={tc('carousel.slide')} aria-label={tc('carousel.go', { n: 1, total: slides.length })}>
         <div class="wrap slide-grid">
           <div>
             <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{t('hero.kicker')}</div>
             <h1 class="text-4xl hero-title" data-reveal>{t('hero.title')}</h1>
-            <div class="spectrum-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
+            <div class="rule mt-7" aria-hidden="true"></div>
             <p class="intro mt-7" set:html={t('hero.intro', { linkedin: social.find((s) => s.id === 'linkedin')!.url })} />
             <p class="lede mt-4 !text-[1.3rem]">{t('hero.lede')}</p>
             <div class="mt-9 flex flex-wrap gap-3">
@@ -86,7 +87,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
             <div>
               <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{f.kicker}</div>
               <h2 class="text-4xl hero-title">{f.title}</h2>
-              <div class="hue-rule mt-7 max-w-[18rem]" aria-hidden="true"></div>
+              <div class="rule mt-7" aria-hidden="true"></div>
               <p class="lede mt-7 !text-[1.3rem]">{f.text}</p>
               <div class="mt-9 flex flex-wrap gap-3">
                 <a href={href(f.href)} class="btn btn-primary">{f.cta}</a>
@@ -101,7 +102,11 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
     </Carousel>
   </section>
 
-  <Section title={t('desk.title')} lede={t('desk.lede')} hue="violet" fill>
+  <Section title={t('map.title')} lede={t('map.lede')} id="map">
+    <FairMap />
+  </Section>
+
+  <Section title={t('desk.title')} lede={t('desk.lede')} hue="amethyst" fill>
     <Shot src={desk} alt={t('hero.shotAlt')} caption={t('hero.shotCaption')} />
     <Figure name="home-desk" alt={t('desk.alt')} />
     <ol class="desk-steps" data-focus-list>
@@ -117,15 +122,15 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
     </ol>
   </Section>
 
-  <Section title={t('loop.title')} lede={t('loop.lede')} hue="violet" tint>
+  <Section title={t('loop.title')} lede={t('loop.lede')} hue="amethyst" tint>
     <Figure name="home-loop" alt={t('loop.alt')} caption={t('loop.caption')} />
     <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
-      <div data-hue="rose"><PullQuote {...raw<Quote>('loop.quote')} /></div>
+      <div data-hue="mauve"><PullQuote {...raw<Quote>('loop.quote')} /></div>
       <a href={href('/workflow/')} class="btn btn-ghost justify-self-start">{t('loop.link')}</a>
     </div>
   </Section>
 
-  <Section title={t('switch.title')} lede={t('switch.lede')} hue="teal">
+  <Section title={t('switch.title')} lede={t('switch.lede')} hue="patina">
     <Figure name="home-switch" alt={t('switch.alt')} />
     <div class="flex flex-wrap gap-3">
       <a href={sisterUrl('memory', locale)} class="btn btn-ghost">{t('switch.memory')}</a>
@@ -146,7 +151,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
     <FeatureGrid items={bigger} />
   </Section>
 
-  <Section title={t('writing.title')} lede={t('writing.lede')} hue="rose" id="writing" tint>
+  <Section title={t('writing.title')} lede={t('writing.lede')} hue="mauve" id="writing" tint>
     <div class="mb-20"><PullQuote {...raw<Quote>('writing.quote')} large /></div>
     <Benchmark compact />
     <h3 class="text-2xl mt-24 mb-8">{t('writing.postsTitle')}</h3>
@@ -155,13 +160,13 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   </Section>
 
   <section class="wrap my-16 grid gap-6 md:grid-cols-2">
-    <div data-hue="rose" class="pair cell !p-8">
+    <div data-hue="mauve" class="pair cell !p-8">
       <div class="kicker"><span class="dot" aria-hidden="true"></span>The M.Akita Chronicles</div>
       <h2 class="text-2xl mt-3">{t('newsletter.title')}</h2>
       <p class="mt-3 text-muted">{t('newsletter.text')}</p>
       <a href={href('/newsletter/')} class="btn btn-ghost mt-6">{t('newsletter.link')}</a>
     </div>
-    <div data-hue="amber" class="pair cell !p-8">
+    <div data-hue="jade" class="pair cell !p-8">
       <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('kicker.podcasts')}</div>
       <h2 class="text-2xl mt-3">{t('podcasts.title')}</h2>
       <p class="mt-3 text-muted">{t('podcasts.text')}</p>
@@ -171,7 +176,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 
   <Section title={t('social.title')} lede={t('social.lede')} id="follow">
     <Social />
-    <aside class="indie mt-14" data-hue="teal">
+    <aside class="indie mt-14" data-hue="patina">
       <span class="dot" aria-hidden="true"></span>
       <div>
         <h3 class="text-xl">{t('independence.title')}</h3>
@@ -184,8 +189,8 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
         <h3 class="text-2xl">{t('contact.title')}</h3>
         <p class="mt-3 text-lg" set:html={t('contact.text', { email: site.email })} />
       </div>
-      <aside data-hue="red" class="warn">
-        <h4 class="font-display font-bold text-lg" style="color:var(--hue)">{t('contact.warningTitle')}</h4>
+      <aside data-hue="pennant" class="warn">
+        <h4 class="font-sign font-bold text-lg" style="color:var(--hue)">{t('contact.warningTitle')}</h4>
         <p class="mt-2">{t('contact.warning')}</p>
       </aside>
     </div>
@@ -195,24 +200,24 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 </Base>
 
 <style>
-  .hero { background: var(--bg); transform-origin: 50% 100%; }
+  .hero { transform-origin: 50% 100%; }
   .intro { font-size: var(--text-lg); line-height: 1.5; max-width: 34em; }
-  .intro :global(a) { color: var(--blue); }
-  .hero-title { font-stretch: 118%; letter-spacing: -0.03em; }
+  .intro :global(a) { color: var(--cerulean); }
+  .hero-title { letter-spacing: -0.03em; }
   .slide-grid { display: grid; align-items: center; gap: 3rem; padding-block: 8rem 2.5rem; }
   @media (min-width: 48rem) { .slide-grid { padding-block-start: 10rem; } }
   @media (min-width: 64rem) { .slide-grid { grid-template-columns: 1.15fr 1fr; } }
-  .hue-rule { block-size: 3px; border-radius: 99px; background: var(--hue-vivid); }
-  .slide-art { display: block; border-radius: 1.25rem; overflow: hidden; background: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow); }
-  .slide-art :global(img) { display: block; inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  /* Each slide's poster stands in the fair's brass arch, like the pavilion heroes (PageHero). */
+  .slide-art { display: block; justify-self: center; inline-size: min(22rem, 72vw); aspect-ratio: 3 / 4; overflow: hidden; background: var(--ink); border: 3px solid var(--v-brass); border-radius: 50% 50% 0.3rem 0.3rem / 34% 34% 0.3rem 0.3rem; box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px color-mix(in oklab, var(--v-brass) 60%, transparent), var(--shadow); }
+  .slide-art :global(img) { display: block; inline-size: 100%; block-size: 100%; object-fit: cover; }
   /* The 3D book is a cut-out with its own shadow: no frame, no crop. */
-  .slide-art.bare { background: none; border: 0; box-shadow: none; border-radius: 0; max-inline-size: 30rem; justify-self: center; }
+  .slide-art.bare { background: none; border: 0; box-shadow: none; border-radius: 0; aspect-ratio: auto; inline-size: auto; max-inline-size: 30rem; overflow: visible; }
   .slide-art.bare :global(img) { aspect-ratio: auto; object-fit: contain; }
 
   .desk-steps { display: grid; gap: 2.5rem 3rem; margin-block-start: 1rem; }
   @media (min-width: 48rem) { .desk-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .desk-steps > li { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: start; transition: opacity 0.4s; }
-  .desk-steps .num { display: grid; place-items: center; inline-size: 2.4rem; block-size: 2.4rem; border-radius: 99px; font-family: var(--font-mono); font-weight: 700; background: var(--hue-soft); color: var(--hue); box-shadow: 0 0 0 1.5px var(--hue-vivid); }
+  .desk-steps .num { display: grid; place-items: center; inline-size: 2.4rem; block-size: 2.4rem; border-radius: 0.2rem; font-family: var(--font-display); font-size: 1.2rem; background: var(--hue-soft); color: var(--hue); box-shadow: 0 0 0 1.5px var(--hue-vivid), 0 0 0 4px var(--bg), 0 0 0 5px color-mix(in oklab, var(--hue-vivid) 50%, transparent); }
   .desk-steps :global(a) { color: var(--hue); text-decoration: underline; text-underline-offset: 0.2em; }
   .desk-steps[data-focus-ready] > li[data-state='ahead'] { opacity: 0.45; }
   .warn { padding: 1.4rem 1.6rem; border-radius: var(--radius); background: var(--hue-soft); border-inline-start: 4px solid var(--hue-vivid); }

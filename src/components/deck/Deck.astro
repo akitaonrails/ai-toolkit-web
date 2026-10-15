@@ -169,7 +169,7 @@ const blocks: Block[] = sections.map((sec) => ({
 
 <style>
   .cover { display: flex; flex-direction: column; justify-content: center; }
-  .cover .by { margin-top: 56px; font-family: var(--font-mono); font-size: 28px; color: var(--hue); }
+  .cover .by { margin-top: 56px; font-family: var(--font-sign); font-weight: 600; font-size: 28px; color: var(--hue); }
   .end h2 { font-size: 80px; }
   .quote-slide { display: flex; flex-direction: column; justify-content: center; }
   .q.big p:first-child { font-size: 58px; line-height: 1.15; }
@@ -188,14 +188,16 @@ const blocks: Block[] = sections.map((sec) => ({
   .vid-grid { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, 400px); gap: 28px 64px; }
   .vid-grid :global(img) { display: block; inline-size: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); }
   .vid-grid p { margin: 12px 0 0; font-size: 26px; line-height: 1.25; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .vid-grid span { font-family: var(--font-mono); font-size: 20px; color: var(--muted); }
+  .vid-grid span { font-family: var(--font-sign); font-size: 20px; color: var(--muted); }
   .takeaways .cards { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 24px; }
   .takeaways .cards li { background: var(--surface); border: 2px solid var(--line); border-radius: 22px; padding: 26px 28px; }
   .takeaways .cards b { font-family: var(--font-display); font-size: 44px; line-height: 1; color: var(--hue); }
   .takeaways .cards p { margin: 10px 0 0; font-size: 27px; line-height: 1.35; }
+  /* The appendix title stays on one line (Limelight runs wide), so the fixed-height columns below always fit. */
+  .appendix h2.small { max-width: none; }
   .appendix .cols { columns: 2; column-gap: 72px; column-fill: auto; block-size: 740px; overflow: hidden; margin-top: 30px; }
   .appendix .blk { break-inside: avoid; padding-bottom: 22px; }
-  .appendix h3 { margin: 0; font-size: 28px; color: var(--hue); font-family: var(--font-display); }
+  .appendix h3 { margin: 0; font-size: 28px; color: var(--hue); font-family: var(--font-sign); font-weight: 700; }
   .appendix ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 4px; }
   .appendix li { font-size: 26px; line-height: 1.3; color: var(--muted); padding-inline-start: 22px; position: relative; }
   .appendix li::before { content: '↗'; position: absolute; inset-inline-start: 0; color: var(--hue); font-size: 20px; }

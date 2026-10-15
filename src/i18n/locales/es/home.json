@@ -193,5 +193,48 @@
         "cta": "Ver la newsletter"
       }
     ]
+  },
+  "map": {
+    "title": "El mapa de la feria",
+    "lede": "Cada página de este sitio es un pabellón. La información está en la Plaza 42, en el centro. Dónde más.",
+    "alt": "Un mapa del sitio dibujado como un recinto ferial de los años sesenta: los caminos salen de la Plaza 42, en el centro, hacia la Torre del Libro, el Salón de Opiniones, el Salón de Máquinas, el Taller, la Torre de Transmisión, la Casa de Prensa, la Sala de Control y el Salón de Juegos, con un monorriel alrededor y una laguna.",
+    "note": "El mapa se desplaza hacia los lados; todos los pabellones también están en el menú.",
+    "places": {
+      "book": {
+        "name": "Torre del Libro",
+        "note": "Competent Enough, gratis"
+      },
+      "opinions": {
+        "name": "Salón de Opiniones",
+        "note": "AGI, los límites de los LLM, estudiantes"
+      },
+      "machines": {
+        "name": "Salón de Máquinas",
+        "note": "ai-usagebar, ghpending, tclock"
+      },
+      "workshop": {
+        "name": "El Taller",
+        "note": "Cómo trabajo con agentes"
+      },
+      "broadcast": {
+        "name": "Torre de Transmisión",
+        "note": "Podcasts y charlas"
+      },
+      "press": {
+        "name": "Casa de Prensa",
+        "note": "La newsletter"
+      },
+      "control": {
+        "name": "Sala de Control",
+        "note": "Mi setup de escritorio"
+      },
+      "arcade": {
+        "name": "Salón de Juegos",
+        "note": "Juegos, fuera de horario"
+      },
+      "plaza": {
+        "name": "Información"
+      }
+    }
   }
 }

@@ -75,3 +75,8 @@ Terms decided while translating. One English term maps to one target term across
 | interlude | 막간 |
 | release notes | 릴리스 노트 |
 | e-reader | 전자책 단말기 |
+| fair map / pavilion | 박람회 안내도 / 전시관 |
+| Book Tower / Hall of Opinions / Hall of Machines / The Workshop | 책의 탑 / 의견관 / 기계관 / 공방 |
+| Broadcast Tower / Press House / Control Room / The Arcade | 방송탑 / 신문관 / 관제실 / 오락실 |
+| Plaza 42 / Information | 42번 광장 / 안내소 |
+| Mostly harmless. (footer) | 대체로 무해함. (published title of book 5) |

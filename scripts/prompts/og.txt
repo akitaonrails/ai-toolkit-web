@@ -1,5 +1,7 @@
-A wide social share card. On the left two thirds, in large bold expanded sans-serif lettering, off-white (#F4F0F8): "Akita's AI Lair". Directly under it, smaller, in warm grey (#B7AFAA): "Tools, workflow and writing". Under that, a thin horizontal rule made of a spectrum gradient going red, amber, teal, blue, violet, rose.
+A wide social share card designed like a vintage World's Fair poster. On the left two thirds, in large art deco display lettering with a brass drop shadow, poster cream: "Akita's AI Lair". Directly under it, smaller, in a clean geometric sans serif, brass gold: "Tools, workflow and writing". Under that, a thin double brass rule.
 
-On the right third, a compact abstract composition: a small blocky pixel clock in signal red, a short amber list panel, a blue gauge bar and a violet chip, arranged like a mini dashboard, all resting on a teal glowing slab.
+On the right third, a giant retro-futurist robot with a round, weary face stands behind a small stepped pavilion, brass sunburst rays fanning up behind it, a few pennant red flags on poles, a dashed brass monorail curving in front.
 
 Only these texts: "Akita's AI Lair", "Tools, workflow and writing".
+
+The title lettering is a geometric art deco display face (tall, streamlined, Futura or Broadway-like, not a western or circus style), and the flags and every other surface carry no marks, emblems or letters.

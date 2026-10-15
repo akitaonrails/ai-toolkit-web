@@ -7,7 +7,7 @@
 | A unique title per page, 60 characters or fewer with the " \| Akita's AI Lair" suffix (page titles in `meta.title` stay under about 43 characters); the home page uses `site.homeTitle` | `Base.astro`, each namespace's `meta` |
 | A meta description per page, 140 to 160 characters | each namespace's `meta.description`, `common.json` `site.description` as the fallback |
 | Canonical URL on every page, trailing slash | `Base.astro`, `trailingSlash: 'always'` |
-| Open Graph and Twitter card with a 1200x630 image | `Base.astro`, `src/assets/img/og.png` |
+| Open Graph and Twitter card with a 1200x630 image | `Base.astro`, `src/assets/img/og.jpg` |
 | Structured data: WebSite, Person (with `sameAs` for every social profile), WebPage; SoftwareApplication on the three tool pages; an ItemList of VideoObject on the podcasts page | `src/lib/schema.ts`, the pages' `schema` prop |
 | One h1 per page, no skipped heading levels | page templates; `Benchmark` takes `level` |
 | `alt` on every image; decorative video thumbnails inside a labelled link use an empty `alt` | components |

@@ -9,5 +9,5 @@ const { t, raw } = useI18n(Astro, 'limits');
 const motto = raw<{ text: string; original: string }>('motto');
 ---
 <DeckLayout title={t('meta.title')}>
-  <Deck ns="limits" hue="blue" path="/limits/" sections={limits.sections} opening={{ text: motto.text, original: motto.original }} closing={{ text: t('sections.job.quote'), original: t('sections.job.quoteOriginal') }} />
+  <Deck ns="limits" hue="cerulean" path="/limits/" sections={limits.sections} opening={{ text: motto.text, original: motto.original }} closing={{ text: t('sections.job.quote'), original: t('sections.job.quoteOriginal') }} />
 </DeckLayout>

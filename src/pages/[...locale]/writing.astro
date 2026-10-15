@@ -14,15 +14,15 @@ export const getStaticPaths = localePaths;
 
 const { t, raw, locale, href } = useI18n(Astro, 'writing');
 // Which posts go under which heading. Adding a post: data in src/data/articles.ts, words in articles.json.
-const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: ArticleId[] }[] = [
-  { id: 'benchmarks', hue: 'rose', posts: ['languages', 'benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
-  { id: 'agents', hue: 'violet', posts: ['skills', 'shipMore', 'openSourceAi', 'bestPractices', 'cleanCode', 'protect'] },
-  { id: 'experiments', hue: 'orange', posts: ['nesToSms', 'dayToDay', 'aiMemory2', 'chronicles'] },
-  { id: 'opinions', hue: 'red', posts: ['adobeRe', 'competentEnough', 'llmLimits', 'hotTake', 'aiKilled'] },
+const groups: { id: string; hue: 'mauve' | 'amethyst' | 'copper' | 'pennant'; posts: ArticleId[] }[] = [
+  { id: 'benchmarks', hue: 'mauve', posts: ['languages', 'benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
+  { id: 'agents', hue: 'amethyst', posts: ['skills', 'shipMore', 'openSourceAi', 'bestPractices', 'cleanCode', 'protect'] },
+  { id: 'experiments', hue: 'copper', posts: ['nesToSms', 'dayToDay', 'aiMemory2', 'chronicles'] },
+  { id: 'opinions', hue: 'pennant', posts: ['adobeRe', 'competentEnough', 'llmLimits', 'hotTake', 'aiKilled'] },
 ];
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
-  <PageHero hue="rose" kicker={t('kicker.writing')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="writing" hue="mauve" kicker={t('kicker.writing')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href={blogHome(locale)} class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#benchmark" class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
@@ -37,7 +37,7 @@ const groups: { id: string; hue: 'rose' | 'violet' | 'orange' | 'red'; posts: Ar
   ))}
 
   <section class="wrap pb-16">
-    <Callout title={t('more.title')} hue="rose">
+    <Callout title={t('more.title')} hue="mauve">
       <p>{t('more.text')}</p>
       <p><a class="link" href={blogArchive(locale)}>{t('more.archive')}</a></p>
     </Callout>

@@ -13,13 +13,13 @@ export const getStaticPaths = localePaths;
 
 const { t, raw, href, locale } = useI18n(Astro, 'setup');
 type Text = { title: string; text: string };
-const models = withText([{ hue: 'rose' }, { hue: 'teal' }] as const, raw<Text[]>('models.items'));
-const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { hue: 'rose', href: thirdParty.claudeSquad }] as const, raw<Text[]>('orchestration.items'));
+const models = withText([{ hue: 'mauve' }, { hue: 'patina' }] as const, raw<Text[]>('models.items'));
+const orchestrators = withText([{ hue: 'mauve', href: thirdParty.conductor }, { hue: 'mauve', href: thirdParty.claudeSquad }] as const, raw<Text[]>('orchestration.items'));
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
-  <PageHero hue="teal" kicker={t('kicker.setup')} title={t('hero.title')} lede={t('hero.lede')} />
+  <PageHero pavilion="setup" hue="patina" kicker={t('kicker.setup')} title={t('hero.title')} lede={t('hero.lede')} />
 
-  <Section title={t('omarchy.title')} lede={t('omarchy.lede')} hue="blue" tint>
+  <Section title={t('omarchy.title')} lede={t('omarchy.lede')} hue="cerulean" tint>
     <ul class="ticks max-w-[44em]">{raw<string[]>('omarchy.points').map((p) => <li>{p}</li>)}</ul>
     <p class="mt-8 max-w-[44em]">{t('omarchy.donation')}</p>
     <div class="mt-8 flex flex-wrap gap-3">
@@ -30,7 +30,7 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
     <div class="mt-14 max-w-3xl"><Related ids={related.omarchy} /></div>
   </Section>
 
-  <Section title={t('tmux.title')} lede={t('tmux.lede')} hue="amber">
+  <Section title={t('tmux.title')} lede={t('tmux.lede')} hue="jade">
     <div class="grid gap-8 lg:grid-cols-2 items-start">
       <CodeBlock title={t('tmux.codeTitle')} code={'tmux new -s work       # start a named session\n# ...terminal closed by accident...\ntmux attach -t work    # everything is still there'} />
       <div>
@@ -40,7 +40,7 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
     </div>
   </Section>
 
-  <Section title={t('models.title')} lede={t('models.lede')} hue="rose" id="models">
+  <Section title={t('models.title')} lede={t('models.lede')} hue="mauve" id="models">
     <FeatureGrid items={models} cols={2} />
     <div class="mt-10 flex flex-wrap gap-3">
       <a href={href('/writing/#benchmark')} class="btn btn-ghost">{t('models.benchmark')}</a>
@@ -48,18 +48,18 @@ const orchestrators = withText([{ hue: 'rose', href: thirdParty.conductor }, { h
     </div>
   </Section>
 
-  <Section title={t('herdr.title')} lede={t('herdr.lede')} hue="rose" tint>
+  <Section title={t('herdr.title')} lede={t('herdr.lede')} hue="mauve" tint>
     <p class="max-w-[44em]">{t('herdr.text')}</p>
     <a href={thirdParty.herdr} class="link mt-2 inline-block py-2.5">{t('herdr.link')}</a>
   </Section>
 
-  <Section title={t('orchestration.title')} lede={t('orchestration.lede')} hue="rose">
+  <Section title={t('orchestration.title')} lede={t('orchestration.lede')} hue="mauve">
     <FeatureGrid items={orchestrators} cols={2} />
     <p class="mt-10 max-w-[44em]">{t('orchestration.text')}</p>
     <div class="mt-14 max-w-3xl"><Related ids={related.orchestration} /></div>
   </Section>
 
-  <Section title={t('memory.title')} lede={t('memory.lede')} hue="teal" tint fill>
+  <Section title={t('memory.title')} lede={t('memory.lede')} hue="patina" tint fill>
     <div class="flex flex-wrap gap-3">
       <a href={sisterUrl('memory', locale)} class="btn btn-primary">{t('memory.site')}</a>
       <a href={href('/workflow/')} class="btn btn-ghost">{t('memory.workflow')}</a>

@@ -1,14 +1,43 @@
 ---
-// Top of every detail page. Slot: one or two buttons.
+// Top of every detail page: the pavilion's entrance. The hero wears the page's pattern (its `motif`, drawn in the
+// page's own color) and, when the pavilion has one, its poster standing in a brass deco arch. Slot: the buttons.
+// Pavilions are declared in src/data/site.ts (`pavilions`); see docs/design-system.md, "Pavilions".
+import { Image } from 'astro:assets';
 import type { Hue } from '@/data/site';
-interface Props { hue: Hue; kicker: string; title: string; lede: string }
-const { hue, kicker, title, lede } = Astro.props;
+import { pavilions } from '@/data/site';
+interface Props { hue: Hue; kicker: string; title: string; lede: string; pavilion?: string }
+const { hue, kicker, title, lede, pavilion } = Astro.props;
+const pav = pavilion ? pavilions[pavilion] : undefined;
+// Posters are generated art (docs/images.md); a page whose poster is not drawn yet simply shows none.
+const posters = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/gen/poster-*.webp', { eager: true });
+const poster = pav && posters[`/src/assets/img/gen/${pav.poster}.webp`]?.default;
 ---
-<section data-hue={hue} class="pt-36 pb-10 md:pt-44">
-  <div class="wrap">
-    <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{kicker}</div>
-    <h1 class="text-4xl max-w-[15em]" data-reveal>{title}</h1>
-    <p class="lede mt-7 !text-[1.35rem]">{lede}</p>
-    {Astro.slots.has('default') && <div class="mt-9 flex flex-wrap gap-3"><slot /></div>}
+<section data-hue={hue} class:list={['page-hero', pav && ['motif', `motif-${pav.motif}`]]}>
+  <div class:list={['wrap pt-32 pb-12 md:pt-40 md:pb-16', poster && 'hero-grid']}>
+    <div>
+      <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{kicker}</div>
+      <h1 class="text-4xl max-w-[15em]" data-reveal>{title}</h1>
+      <div class="rule mt-7" aria-hidden="true"></div>
+      <p class="lede mt-7 !text-[1.3rem]">{lede}</p>
+      {Astro.slots.has('default') && <div class="mt-9 flex flex-wrap gap-3"><slot /></div>}
+    </div>
+    {poster && (
+      <div class="arch" aria-hidden="true">
+        <div class="arch-frame"><Image src={poster} alt="" widths={[360, 540, 720]} sizes="(min-width: 1024px) 24rem, 70vw" loading="eager" /></div>
+        <div class="arch-plinth"></div>
+      </div>
+    )}
   </div>
 </section>
+<style>
+  .page-hero { position: relative; border-block-end: 5px double var(--hue-vivid, var(--v-brass)); }
+  /* The pattern fades out under the text, so the title always sits on plain ground. */
+  .page-hero.motif::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--bg) 30%, color-mix(in oklab, var(--bg) 55%, transparent) 70%, transparent); pointer-events: none; }
+  .hero-grid { display: grid; gap: 3rem; align-items: end; }
+  @media (min-width: 64rem) { .hero-grid { grid-template-columns: 1.3fr 0.9fr; } }
+  /* The deco arch: a round-topped doorway with three gilt frames, standing on a brass plinth. */
+  .arch { justify-self: center; inline-size: min(22rem, 72vw); position: relative; margin-block-end: 1.1rem; }
+  .arch-frame { aspect-ratio: 3 / 4; border-radius: 50% 50% 0.3rem 0.3rem / 34% 34% 0.3rem 0.3rem; overflow: hidden; border: 3px solid var(--v-brass); background: var(--ink); box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px color-mix(in oklab, var(--v-brass) 60%, transparent), var(--shadow); }
+  .arch-frame :global(img) { inline-size: 100%; block-size: 100%; object-fit: cover; display: block; }
+  .arch-plinth { position: absolute; inset: auto -7% -1.1rem; block-size: 1.1rem; background: var(--v-brass); clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%); }
+</style>

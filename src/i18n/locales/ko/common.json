@@ -2,7 +2,7 @@
   "site": {
     "tagline": "제가 AI와 일하는 방식 뒤에 있는 도구, 워크플로, 글",
     "description": "Fabio Akita의 오픈 소스 AI 도구 아지트입니다. ai-usagebar, ghpending, tclock, 에이전트 스킬과 ai-memory, 그리고 LLM 벤치마크와 그 뒤의 글을 모았습니다.",
-    "ogAlt": "Akita's AI Lair: 도구, 워크플로, 글. 빨간 픽셀 시계, 호박색 목록, 파란 게이지, 보라색 칩이 있는 작은 대시보드.",
+    "ogAlt": "Akita's AI Lair: 도구, 워크플로, 글. 만국박람회 포스터. 계단식 전시관 뒤의 지친 얼굴의 거대 로봇, 황동빛 햇살 무늬, 붉은 삼각기.",
     "homeTitle": "Akita's AI Lair: AI 코딩 도구, 워크플로, 벤치마크"
   },
   "a11y": {
@@ -161,7 +161,8 @@
     },
     "cookieSettings": "쿠키 설정",
     "contact": "연락처",
-    "rights": "모든 권리 보유. 각 도구는 자체 오픈 소스 라이선스를 따릅니다."
+    "rights": "모든 권리 보유. 각 도구는 자체 오픈 소스 라이선스를 따릅니다.",
+    "harmless": "대체로 무해함."
   },
   "notfound": {
     "title": "여기엔 쌓인 일이 없습니다",

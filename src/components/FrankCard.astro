@@ -18,7 +18,7 @@ const { t: ta } = useI18n(Astro, 'articles');
   </a>
   <div class="frank-body">
     <h3 class={small ? 'text-xl' : 'text-2xl'}><a href={repoUrl(p.repo)}>{t(`projects.items.${p.id}.name`)}</a></h3>
-    <p class="font-mono text-xs text-muted" dir="ltr">{p.stack}</p>
+    <p class="font-sign text-xs text-muted" dir="ltr">{p.stack}</p>
     <p class:list={['text-muted', small && 'text-sm']}>{t(`projects.items.${p.id}.text`)}</p>
     <p class="text-sm"><span class="font-semibold">{t('projects.itch')}</span> <span class="text-muted">{t(`projects.items.${p.id}.itch`)}</span></p>
     {p.posts.length > 0 && (

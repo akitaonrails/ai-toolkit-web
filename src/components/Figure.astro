@@ -21,6 +21,7 @@ const image = src ?? genImage(name!, locale);
 </figure>
 <style>
   .fig { margin-block: clamp(2.5rem, 6vw, 5rem); }
-  .frame { border-radius: 1.25rem; overflow: hidden; background: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow); will-change: transform; }
-  figcaption { margin-top: 1rem; color: var(--muted); font-size: .95rem; max-width: 46em; }
+  /* Figures hang like exhibit posters: a brass frame, a hairline of ground, a second gilt line around it. */
+  .frame { border-radius: var(--radius); overflow: hidden; background: var(--ink); border: 2px solid var(--v-brass); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px color-mix(in oklab, var(--v-brass) 55%, transparent), var(--shadow); will-change: transform; }
+  figcaption { margin-top: 1.1rem; color: var(--muted); font-size: .95rem; font-style: italic; max-width: 46em; }
 </style>

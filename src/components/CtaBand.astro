@@ -7,8 +7,7 @@ interface Props { title?: string; text?: string }
 const { t, locale } = useI18n(Astro);
 const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
 ---
-<section class="on-ink band text-center relative overflow-hidden">
-  <div class="cta-glow" aria-hidden="true"></div>
+<section class="on-ink band text-center relative overflow-hidden motif motif-sunburst cta">
   <div class="wrap-narrow relative">
     <h2 class="text-3xl mx-auto max-w-[16em]">{title}</h2>
     <p class="lede mx-auto mt-5">{text}</p>
@@ -19,5 +18,7 @@ const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
   </div>
 </section>
 <style>
-  .cta-glow { position: absolute; inset-inline: 10%; bottom: -60%; height: 100%; background: var(--spectrum); filter: blur(120px); opacity: 0.25; border-radius: 50%; }
+  /* Brass rays rise behind the closing call, like the sunburst behind a fair's main gate. */
+  .cta { --motif: color-mix(in oklab, var(--v-brass) 14%, var(--ink)); background-color: var(--ink); }
+  .cta.motif-sunburst { --pattern: repeating-conic-gradient(from -90deg at 50% 120%, var(--motif) 0deg 4deg, transparent 4deg 9deg); }
 </style>

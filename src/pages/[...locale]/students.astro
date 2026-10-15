@@ -23,22 +23,22 @@ const { t, raw, locale, date } = useI18n(Astro, 'students');
 type Text = { title: string; text: string };
 const s = (id: string, key: string) => t(`sections.${id}.${key}`);
 const has = (id: string, key: string) => key in raw<Record<string, unknown>>(`sections.${id}`);
-const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/workflow/' }] as const, raw<Text[]>('next'));
+const next = withText([{ hue: 'pennant', href: '/agi/' }, { hue: 'amethyst', href: '/workflow/' }] as const, raw<Text[]>('next'));
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
-  <PageHero hue="amber" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="students" hue="jade" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#practice" class="btn btn-primary">{t('hero.primary')}</a>
     <a href="#akitando" class="btn btn-ghost">{t('hero.secondary')}</a>
     <DeckLink deck="students" />
   </PageHero>
 
-  <section class="wrap pb-8" data-hue="amber">
+  <section class="wrap pb-8" data-hue="jade">
     <PullQuote text={t('quote.text')} original={t('quote.original')} cite={t('quote.cite')} large />
     <a class="link text-sm mt-3 inline-block ms-6" href={students.xStudents}>x.com/AkitaOnRails</a>
   </section>
 
   {students.sections.map((sec, i) => (
-    <section id={sec.id} data-hue="amber" class:list={['band scroll-mt-16', i % 2 === 1 && 'bg-tint']}>
+    <section id={sec.id} data-hue="jade" class:list={['band scroll-mt-16', i % 2 === 1 && 'bg-tint']}>
       <div class="wrap">
         <div class="kicker"><span class="dot" aria-hidden="true"></span>{s(sec.id, 'kicker')}</div>
         <h2 class="text-3xl mt-4 max-w-[18em]">{s(sec.id, 'title')}</h2>
@@ -77,7 +77,7 @@ const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/w
     </section>
   ))}
 
-  <section id="akitando" class="band scroll-mt-16 bg-tint" data-hue="amber">
+  <section id="akitando" class="band scroll-mt-16 bg-tint" data-hue="jade">
     <div class="wrap">
       <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('akitando.kicker')}</div>
       <h2 class="text-3xl mt-4 max-w-[18em]">{t('akitando.title')}</h2>
@@ -87,7 +87,7 @@ const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/w
           <li>
             <Video id={v.id} title={v.title} play={t('akitando.play')} sizes="(min-width: 1024px) 24rem, (min-width: 640px) 46vw, 94vw" />
             <p class="mt-3 font-semibold leading-snug" lang="pt-BR">{v.title}</p>
-            <p class="mt-1 font-mono text-xs text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration}</p>
+            <p class="mt-1 font-sign text-xs text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration}</p>
             <p class="mt-2 text-sm text-muted">{t(`akitando.episodes.${v.id}`)}</p>
             <a class="link text-sm mt-1 inline-block py-1" href={students.episodes[v.id]}>{t('akitando.transcript')}</a>
           </li>
@@ -100,12 +100,12 @@ const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'violet', href: '/w
     </div>
   </section>
 
-  <section id="takeaways" class="band scroll-mt-16" data-hue="amber">
+  <section id="takeaways" class="band scroll-mt-16" data-hue="jade">
     <div class="wrap">
       <h2 class="text-3xl">{t('takeaways.title')}</h2>
       <ol class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
         {raw<string[]>('takeaways.items').map((item, i) => (
-          <li class="cell"><span class="font-display font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
+          <li class="cell"><span class="font-sign font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
         ))}
       </ol>
       <div class="mt-14"><PullQuote text={t('takeaways.quote')} original={t('takeaways.quoteOriginal')} large /></div>

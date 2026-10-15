@@ -193,5 +193,48 @@
         "cta": "Ver a newsletter"
       }
     ]
+  },
+  "map": {
+    "title": "O mapa da feira",
+    "lede": "Cada página deste site é um pavilhão. As informações ficam na Praça 42, no meio. Onde mais seria.",
+    "alt": "Um mapa do site desenhado como um parque de exposições dos anos 1960: caminhos saem da Praça 42, no meio, para a Torre do Livro, o Salão das Opiniões, o Salão das Máquinas, a Oficina, a Torre de Transmissão, a Casa da Imprensa, a Sala de Controle e o Fliperama, com um monotrilho em volta e uma lagoa.",
+    "note": "O mapa rola para os lados; todo pavilhão também está no menu.",
+    "places": {
+      "book": {
+        "name": "Torre do Livro",
+        "note": "Competent Enough, de graça"
+      },
+      "opinions": {
+        "name": "Salão das Opiniões",
+        "note": "AGI, os limites dos LLMs, estudantes"
+      },
+      "machines": {
+        "name": "Salão das Máquinas",
+        "note": "ai-usagebar, ghpending, tclock"
+      },
+      "workshop": {
+        "name": "A Oficina",
+        "note": "Como eu trabalho com agentes"
+      },
+      "broadcast": {
+        "name": "Torre de Transmissão",
+        "note": "Podcasts e palestras"
+      },
+      "press": {
+        "name": "Casa da Imprensa",
+        "note": "A newsletter"
+      },
+      "control": {
+        "name": "Sala de Controle",
+        "note": "Meu setup de desktop"
+      },
+      "arcade": {
+        "name": "O Fliperama",
+        "note": "Jogos, fora do expediente"
+      },
+      "plaza": {
+        "name": "Informações"
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
   "site": {
     "tagline": "As ferramentas, o workflow e os textos por trás de como eu trabalho com IA",
     "description": "O covil de ferramentas open source de IA do Fabio Akita: ai-usagebar, ghpending, tclock, skills de agentes e ai-memory, além do benchmark de LLMs e dos posts.",
-    "ogAlt": "Akita's AI Lair: ferramentas, workflow e textos. Um pequeno dashboard com um relógio de pixels vermelho, uma lista âmbar, um medidor azul e um chip violeta.",
+    "ogAlt": "Akita's AI Lair: ferramentas, fluxo de trabalho e textos. Um cartaz de Feira Mundial: um robô gigante e cansado atrás de um pavilhão escalonado, raios dourados e flâmulas vermelhas.",
     "homeTitle": "Akita's AI Lair: ferramentas de IA e benchmarks de LLM"
   },
   "a11y": {
@@ -161,7 +161,8 @@
     },
     "cookieSettings": "Configurar cookies",
     "contact": "Contato",
-    "rights": "Todos os direitos reservados. Cada ferramenta mantém sua própria licença open source."
+    "rights": "Todos os direitos reservados. Cada ferramenta mantém sua própria licença open source.",
+    "harmless": "Praticamente inofensivo."
   },
   "notfound": {
     "title": "Nada pendente aqui",
