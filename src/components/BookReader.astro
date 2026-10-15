@@ -110,7 +110,10 @@ const first = bookEdition(locale);
     };
     // Draws the loaded book into the card (one page) or the full screen (two pages when wide enough), at `at`.
     // epub.js keeps already-drawn pages at their old size after a resize, so a layout change draws them anew.
+    // Each draw has a number: a newer one (the size changed again) wins, and an older one stops quietly.
+    let drawn = 0;
     async function render(id: string, at?: string) {
+      const mine = ++drawn;
       rendition?.destroy();
       rendition = book!.renderTo(view, { width: '100%', height: '100%', flow: 'paginated', spread: wide() ? 'auto' : 'none', minSpreadWidth: 900, allowScriptedContent: false });
       paint();
@@ -136,14 +139,34 @@ const first = bookEdition(locale);
         const x = (frame.left + e.clientX - r.left) / r.width;
         if (x > 2 / 3) rendition!.next(); else if (x < 1 / 3) rendition!.prev();
       });
-      await rendition.display(at);
+      const r = rendition;
+      try {
+        await r.display(at);
+      } catch (err) {
+        if (mine !== drawn) return;
+        // A saved page that no longer exists (a new version of the book) opens at the start instead of a blank view.
+        if (!at) throw err;
+        await r.display();
+      }
     }
     const fit = () => {
       if (!rendition) return;
       const at = (rendition.currentLocation() as unknown as { start?: { cfi: string } })?.start?.cfi;
-      // Wait a frame so the full-screen layout has its final size before measuring.
-      requestAnimationFrame(() => render(edition, at ?? store.get(`book-cfi-${edition}`) ?? undefined));
+      render(edition, at ?? store.get(`book-cfi-${edition}`) ?? undefined).catch((err) => {
+        console.error(err);
+        status.hidden = false; status.textContent = status.dataset.error!;
+      });
     };
+    // Draw again once the view settles on a new size. Entering full screen resizes it several times while the
+    // browser animates (macOS), so wait until it stops changing instead of measuring the first frame.
+    let size = '', settle: ReturnType<typeof setTimeout> | undefined;
+    new ResizeObserver(([e]) => {
+      const next = `${Math.round(e.contentRect.width)}x${Math.round(e.contentRect.height)}`;
+      if (next === size) return;
+      const first = !size; size = next;
+      if (first) return;
+      clearTimeout(settle); settle = setTimeout(fit, 200);
+    }).observe(view);
 
     async function open(id: string) {
       edition = id; store.set('book-edition', id);
@@ -186,10 +209,10 @@ const first = bookEdition(locale);
         if (document.fullscreenElement) await document.exitFullscreen(); else await root.requestFullscreen();
       } else {
         root.classList.toggle('max'); document.documentElement.style.overflow = root.classList.contains('max') ? 'hidden' : '';
-        fit(); label();
+        label();
       }
     });
-    document.addEventListener('fullscreenchange', () => { fit(); label(); });
+    document.addEventListener('fullscreenchange', label);
     root.addEventListener('keyup', (e) => { if (e.key === 'Escape' && root.classList.contains('max')) fsButton.click(); });
     // Follow the site's theme switch.
     new MutationObserver(paint).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class'] });
