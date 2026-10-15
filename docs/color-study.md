@@ -60,7 +60,7 @@ Text lightness 0.93 on ground 0.19 at night, 0.25 on 0.945 by day. Figures, term
 
 ## 5. Type
 
-Limelight (the book cover's title face) for titles, Josefin Sans for signage and controls, Source Serif 4 (the book's body face) for reading, JetBrains Mono for code. Details in [design-system.md](design-system.md).
+Limelight (the book cover's title face) for major titles, Newsreader for exhibit and card headings, Josefin Sans for signage and controls, Source Serif 4 (the book's body face) for reading, JetBrains Mono for code. Details in [design-system.md](design-system.md).
 
 ## 6. Generated images
 

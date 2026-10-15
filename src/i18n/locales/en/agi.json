@@ -110,8 +110,8 @@
       "lede": "A model is a file, locked after training. The datacenter runs copies of it.",
       "alt": "A locked red file labeled Model file sends one-way arrows, labeled Copies, to nine separate server boxes; one holds a terminal labeled Your session. No arrow returns. Across the top, a path from the file through a gear labeled Next training ends at a second locked file labeled New file.",
       "points": [
-        "Every user runs an isolated copy. Your session talks to no other session, and nothing in it flows back into the file.",
-        "New knowledge enters only in the next training run, which costs millions and takes weeks. What builds up while you work is yours: notes, tests, context.",
+        "Each session runs against fixed model weights. A provider may still retain prompts, files and tool output according to its plan and settings. A product may also feed saved memory into later sessions.",
+        "The weights change in a later training run. Notes, tests and context saved while you work sit around the model and can return in later sessions. The weights remain unchanged.",
         "\"AI training AI\" already has a name, reinforcement learning. AlphaZero learned chess, shogi and Go by playing against itself in 2017.",
         "It works where a reward is cheap to check, like games, proofs and tests. And what comes out is another locked file."
       ],
@@ -247,14 +247,25 @@
     "items": [
       "AGI has no agreed definition. The one written into a contract was a profit target, and it was dropped.",
       "Without a definition there's no test. Benchmarks fill up and get replaced by the next one.",
-      "Models reproduce what's public. What's private or new takes oracles, hand-fed knowledge and a lot of money.",
+      "Models reproduce what's public. Private or new work needs an objective check, often called an oracle, plus supplied knowledge and money.",
       "The raw models converged. The recent gains came from the tools around them, and smaller models keep catching up.",
-      "A model is a locked file. It learns nothing from your session.",
+      "A model's weights do not update during your session. Products can still retain data or feed saved memory back later, depending on their settings.",
       "The word is useful for selling chips, funding rounds and IPOs. That's why it keeps being announced.",
       "The incidents covered here involved people granting access or directing the tool. Permissions and human oversight are risks we can manage now.",
       "Catastrophic forecasts need evidence that can be inspected. Feelings and predictions are not evidence.",
-      "The tools are real and excellent. They do what you tell them, and you're still in charge.",
+      "The tools are real and excellent. They still need instructions, permissions and review, with a person accountable for the result.",
       "What matters next is efficiency: the same work with less hardware and lower prices."
+    ]
+  },
+  "contentsTitle": "On this page",
+  "today": {
+    "title": "What to worry about today",
+    "lede": "Current risks deserve practical controls while the arguments about future systems continue.",
+    "items": [
+      "Jobs change task by task. Test one repetitive task, measure the result and keep human judgment and accountability where mistakes matter.",
+      "Treat an urgent voice message, video or payment request as unverified. Confirm it through a channel you already trust.",
+      "Keep personal, school and company data out of a service until you understand its retention, training and deletion settings.",
+      "Use AI for explanations and drafts. Verify health, legal, financial and school decisions with a qualified person or a reliable primary source."
     ]
   },
   "next": [

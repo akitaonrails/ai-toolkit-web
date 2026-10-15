@@ -26,8 +26,8 @@
       },
       "points": [
         "That's why one person can now ship a native Spotify or WhatsApp client in Rust. The service, the libraries and the path already existed. Retracing a known path got cheap.",
-        "The code that pays salaries is mostly private. No model has seen it, and no model can guess it.",
-        "Where nothing similar exists, the agent falls back on trial and error. What helps is what the model lacks: references nobody published, an oracle that says what's right, and tests with objective targets."
+        "The code that pays salaries is mostly private. A general model was not trained on it by default. It can analyze code you provide through an approved tool, with the right context and access controls.",
+        "Where nothing similar exists, the agent falls back on trial and error. It needs unpublished references, tests and an objective check, often called an oracle, that says whether the result is right."
       ],
       "sources": {
         "octoverse": "GitHub Octoverse 2025: 81.5% private",
@@ -172,9 +172,10 @@
       "A clone's screenshot is easy. The cloud services, the data and the licenses aren't in any binary.",
       "Bun's rewrite took its author, its source, its tests and $165,000.",
       "The best models barely got cheaper, and they converged.",
-      "The work that grew is judgment: tests, oracles and review."
+      "The work that grew is judgment: tests, objective checks called oracles, and review."
     ]
   },
+  "contentsTitle": "On this page",
   "next": [
     {
       "title": "Why AGI doesn't matter",

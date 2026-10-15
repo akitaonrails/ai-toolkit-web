@@ -45,7 +45,9 @@
     "full": "Pantalla completa",
     "exit": "Salir de pantalla completa",
     "loading": "Abriendo el libro…",
-    "error": "El lector no pudo abrir el libro. Las descargas de abajo siguen funcionando."
+    "error": "El lector no pudo abrir el libro. Puedes reintentarlo o descargar el archivo.",
+    "retry": "Reintentar",
+    "downloadFallback": "Descargar el EPUB"
   },
   "downloads": {
     "title": "Descargar",

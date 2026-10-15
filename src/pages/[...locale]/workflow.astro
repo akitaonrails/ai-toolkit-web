@@ -40,7 +40,17 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills }, locale);
     <FeatureGrid items={basics} cols={2} />
   </Section>
 
+  <section class="wrap scroll-mt-20" id="company">
+    <Callout title={t('company.title')} hue="copper" level={2}>
+      <p>{t('company.lede')}</p>
+      <ul class="ticks mt-5">{raw<string[]>('company.items').map((item) => <li>{item}</li>)}</ul>
+    </Callout>
+  </section>
+
   <Section title={t('start.title')} lede={t('start.lede')} hue="amethyst" fill>
+    <Callout title={t('start.safetyTitle')} hue="pennant" level={3}>
+      <p>{t('start.safety')}</p>
+    </Callout>
     <div class="grid gap-10 lg:grid-cols-2 items-start">
       <CodeBlock title={t('start.codeTitle')} code={'cd ~/Projects/ai-usagebar\nai-memory run claude\n# quota gone? same workstream, another agent\nai-memory run codex --yolo'} />
       <div>
@@ -106,17 +116,17 @@ const skillsPost = articleUrl({ id: 'skills', ...articles.skills }, locale);
     <div class="mt-16"><PullQuote {...raw<{ text: string }>('numbers.quote')} /></div>
   </Section>
 
-  <Section title={t('links.title')} lede={t('links.lede')} hue="amethyst">
-    <Figure name="workflow-symlinks" alt={t('links.alt')} />
-    <div class="max-w-2xl"><CodeBlock title={t('links.codeTitle')} code={'mkdir ~/Projects/my-skills/<name>   # add a SKILL.md\nfor h in ~/.claude/skills ~/.agents/skills ~/.codex/skills; do\n  ln -s ~/Projects/my-skills/<name> "$h/<name>"\ndone'} /></div>
-  </Section>
-
   <section class="wrap" id="copy">
     <Callout title={t('copy.title')} hue="pennant">
       <p>{t('copy.text')}</p>
       <p><a class="link" href={skillsPost}>{t('copy.link')}</a></p>
     </Callout>
   </section>
+
+  <Section title={t('links.title')} lede={t('links.lede')} hue="amethyst">
+    <Figure name="workflow-symlinks" alt={t('links.alt')} />
+    <div class="max-w-2xl"><CodeBlock title={t('links.codeTitle')} code={'mkdir ~/Projects/my-skills/<name>   # add a SKILL.md\nfor h in ~/.claude/skills ~/.agents/skills ~/.codex/skills; do\n  ln -s ~/Projects/my-skills/<name> "$h/<name>"\ndone'} /></div>
+  </Section>
 
   <Section title={t('knowledge.title')} lede={t('knowledge.lede')} hue="patina">
     <FeatureGrid items={knowledge} cols={2} />

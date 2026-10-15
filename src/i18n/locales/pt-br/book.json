@@ -45,7 +45,9 @@
     "full": "Tela cheia",
     "exit": "Sair da tela cheia",
     "loading": "Abrindo o livro…",
-    "error": "O leitor não conseguiu abrir o livro. Os downloads abaixo continuam funcionando."
+    "error": "O leitor não conseguiu abrir o livro. Você pode tentar de novo ou baixar o arquivo.",
+    "retry": "Tentar de novo",
+    "downloadFallback": "Baixar o EPUB"
   },
   "downloads": {
     "title": "Download",

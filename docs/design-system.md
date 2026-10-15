@@ -41,10 +41,11 @@ The pattern utilities are in `src/styles/global.css` (`.motif` plus one of `.mot
 
 ## Type
 
-Three faces, each with one job, loaded from `@fontsource`:
+Four faces, each with one job, loaded from `@fontsource`:
 
 - **Limelight** (the book cover's title face): page and section titles (`h1`, `h2`), big numbers in Stats, the plaza's 42. It has one weight; `font-synthesis-weight: none` keeps browsers from faking a bold. Never for sentences.
-- **Josefin Sans** (the fair's signage): `h3`, buttons, navigation, kickers, badges, captions of data, dates and other metadata (`font-sign`).
+- **Newsreader** (the exhibit face): card titles and repeated content headings (`h3`, `h4`, and `font-card`). It keeps the period character without making dense groups hard to scan.
+- **Josefin Sans** (the fair's signage): buttons, navigation, kickers, badges, captions of data, dates and other metadata (`font-sign`).
 - **Source Serif 4** (the book's body face): all reading text, ledes, pull quotes in italic.
 - JetBrains Mono only for code and commands.
 
@@ -66,7 +67,7 @@ Sizes are Tailwind utilities backed by tokens: `text-4xl` (page h1), `text-3xl` 
 
 - `.wrap` is the 76rem column, `.wrap-narrow` is 52rem. `.band` is the vertical rhythm. `tint` on a `Section` marks a change of subject; do not alternate every section.
 - Left aligned. Only the closing CTA band is centered.
-- Open layouts over boxes. `.cell` is for things you click (an exhibit case: a hairline, and a gilt inner frame on hover).
+- Open layouts over boxes. `.cell` is for things you click (an airy exhibit placard: a hairline frame and a pavilion-colored ticket edge).
 - Mobile first. Every grid collapses to one column. Standalone links and buttons are at least about 40px tall for touch (links inside running text are exempt). The page must never scroll sideways at 360px (`document.documentElement.scrollWidth === innerWidth`); the fair map scrolls inside its own frame.
 - The inline nav appears at `xl` (1280px); below that, the drawer. The tool pages (`toolIds` in `src/data/site.ts`) sit under one "Tools" menu in the top bar and under a "Tools" heading in the drawer, followed by the tools with their own sites (`externalTools`: ai-memory, ai-jail), marked with an arrow.
 

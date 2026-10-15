@@ -32,12 +32,16 @@
       {
         "title": "Oí que la IA reemplazará a los programadores",
         "text": "Mira qué copian bien los agentes de software, dónde aún necesitan personas con experiencia y cuánto costaron realmente los ejemplos públicos."
+      },
+      {
+        "title": "Quiero usar IA en el trabajo",
+        "text": "Empieza con un piloto acotado, protege los datos de la empresa, define el éxito y deja a una persona responsable del resultado."
       }
     ]
   },
   "desk": {
     "title": "Un escritorio, dos monitores, muchos agentes",
-    "lede": "El segundo monitor me dice qué necesita atención. El primero corre un agente por proyecto. Debajo de todos hay una memoria compartida, y un indicador en la barra superior me avisa cuándo cambiar de proveedor.",
+    "lede": "Esta es mi configuración madura, no un requisito. Un proyecto y un agente bastan para empezar. El segundo monitor muestra qué necesita atención mientras el primero ejecuta un agente por proyecto.",
     "alt": "Dos monitores sobre un escritorio. El monitor 2 muestra un reloj rojo de píxeles y una lista de ghpending. El monitor 1 muestra tmux dividido en cuatro paneles de agentes, con ai-usagebar en la barra superior. Una losa verde azulado llamada ai-memory debajo del escritorio alimenta los cuatro paneles.",
     "steps": [
       {

@@ -13,6 +13,7 @@ const posters = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/ge
 const poster = pav && posters[`/src/assets/img/gen/${pav.poster}.webp`]?.default;
 ---
 <section data-hue={hue} class:list={['page-hero', pav && ['motif', `motif-${pav.motif}`]]}>
+  <div class="fair-lights" aria-hidden="true"><span class="fair-light"></span><span class="fair-light"></span><span class="fair-light"></span></div>
   <div class:list={['wrap pt-32 pb-12 md:pt-40 md:pb-16', poster && 'hero-grid']}>
     <div>
       <div class="kicker mb-6"><span class="dot" aria-hidden="true"></span>{kicker}</div>
@@ -30,13 +31,17 @@ const poster = pav && posters[`/src/assets/img/gen/${pav.poster}.webp`]?.default
   </div>
 </section>
 <style>
-  .page-hero { position: relative; border-block-end: 5px double var(--hue-vivid, var(--v-brass)); }
+  .page-hero { position: relative; overflow: hidden; border-block-end: 5px double var(--hue-vivid, var(--v-brass)); }
+  .page-hero > .wrap { position: relative; z-index: 1; }
   /* The pattern fades out under the text, so the title always sits on plain ground. */
   .page-hero.motif::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--bg) 30%, color-mix(in oklab, var(--bg) 55%, transparent) 70%, transparent); pointer-events: none; }
   .hero-grid { display: grid; gap: 3rem; align-items: end; }
   @media (min-width: 64rem) { .hero-grid { grid-template-columns: 1.3fr 0.9fr; } }
   /* The deco arch: a round-topped doorway with three gilt frames, standing on a brass plinth. */
-  .arch { justify-self: center; inline-size: min(22rem, 72vw); position: relative; margin-block-end: 1.1rem; }
+  .arch { justify-self: center; inline-size: min(22rem, 72vw); position: relative; margin-block-end: 1.1rem; filter: drop-shadow(0 1.5rem 2rem var(--shade)); }
+  .arch::before, .arch::after { content: ''; position: absolute; z-index: -1; inset-block-end: -0.65rem; inline-size: 24%; block-size: 66%; border-block-start: 2px solid color-mix(in oklab, var(--v-brass) 72%, transparent); background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--hue-vivid, var(--v-brass)) 12%, transparent)); }
+  .arch::before { inset-inline-start: -14%; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+  .arch::after { inset-inline-end: -14%; scale: -1 1; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
   .arch-frame { aspect-ratio: 3 / 4; border-radius: 50% 50% 0.3rem 0.3rem / 34% 34% 0.3rem 0.3rem; overflow: hidden; border: 3px solid var(--v-brass); background: var(--ink); box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px color-mix(in oklab, var(--v-brass) 60%, transparent), var(--shadow); }
   .arch-frame :global(img) { inline-size: 100%; block-size: 100%; object-fit: cover; display: block; }
   .arch-plinth { position: absolute; inset: auto -7% -1.1rem; block-size: 1.1rem; background: var(--v-brass); clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%); }

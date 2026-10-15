@@ -8,6 +8,8 @@ import Figure from '@/components/Figure.astro';
 import Stats from '@/components/Stats.astro';
 import AgiNetwork from '@/components/AgiNetwork.astro';
 import PullQuote from '@/components/PullQuote.astro';
+import Callout from '@/components/Callout.astro';
+import EssayNav from '@/components/EssayNav.astro';
 import Related from '@/components/Related.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
@@ -40,6 +42,13 @@ const next = withText([{ hue: 'mauve', href: '/writing/' }, { hue: 'amethyst', h
         ))}
       </ol>
       <div class="mt-12"><DeckLink deck="agi" /></div>
+      <EssayNav label={t('contentsTitle')} items={agi.sections.map((sec) => ({ id: sec.id, title: s(sec.id, 'title') }))} />
+      <div class="mt-10" id="today">
+        <Callout title={t('today.title')} hue="pennant" level={3}>
+          <p>{t('today.lede')}</p>
+          <ul class="ticks mt-5">{raw<string[]>('today.items').map((item) => <li>{item}</li>)}</ul>
+        </Callout>
+      </div>
     </div>
   </section>
 

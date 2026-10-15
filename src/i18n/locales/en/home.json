@@ -32,12 +32,16 @@
       {
         "title": "I heard AI will replace programmers",
         "text": "See what software agents copy well, where they still need experienced people, and what the public examples actually cost."
+      },
+      {
+        "title": "I want to use AI at work",
+        "text": "Start with a bounded pilot, protect company data, define success and keep one person accountable for the result."
       }
     ]
   },
   "desk": {
     "title": "One desk, two monitors, many agents",
-    "lede": "The second monitor tells me what needs attention. The first one runs one agent per project. A shared memory sits under all of them, and a gauge in the top bar tells me when to change providers.",
+    "lede": "This is my mature setup, not a requirement. One project and one agent are enough to start. My second monitor shows what needs attention while the first runs one agent per project.",
     "alt": "Two monitors on a desk. Monitor 2 shows a red pixel clock and a ghpending list. Monitor 1 shows tmux split into four agent panes, with ai-usagebar in the top bar. A teal slab labelled ai-memory under the desk feeds all four panes.",
     "steps": [
       {

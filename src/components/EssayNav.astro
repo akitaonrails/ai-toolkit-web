@@ -1,0 +1,17 @@
+---
+interface Item { id: string; title: string }
+interface Props { label: string; items: Item[] }
+const { label, items } = Astro.props;
+---
+<nav class="essay-nav" aria-label={label}>
+  <ol>
+    {items.map((item, i) => <li><a href={`#${item.id}`}><span aria-hidden="true">{i + 1}</span>{item.title}</a></li>)}
+  </ol>
+</nav>
+<style>
+  .essay-nav { margin-block-start: 2.5rem; padding-block: 1rem; border-block: 1px solid var(--line); }
+  ol { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+  a { display: inline-flex; align-items: baseline; gap: 0.45rem; min-block-size: 2.5rem; padding-block: 0.45rem; font-family: var(--font-card); font-weight: 600; color: var(--muted); }
+  a:hover { color: var(--hue); }
+  span { font-family: var(--font-sign); font-size: var(--text-sm); color: var(--hue); }
+</style>

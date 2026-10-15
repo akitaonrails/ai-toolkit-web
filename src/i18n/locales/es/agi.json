@@ -110,8 +110,8 @@
       "lede": "Un modelo es un archivo, cerrado después del entrenamiento. El datacenter corre copias de él.",
       "alt": "Un archivo rojo con candado etiquetado Archivo del modelo envía flechas de un solo sentido, etiquetadas Copias, a nueve cajas de servidor separadas; una contiene una terminal etiquetada Tu sesión. Ninguna flecha vuelve. Arriba, un camino sale del archivo, pasa por un engranaje etiquetado Próximo entrenamiento y termina en un segundo archivo con candado etiquetado Archivo nuevo.",
       "points": [
-        "Cada usuario corre una copia aislada. Tu sesión no habla con ninguna otra, y nada de ella vuelve al archivo.",
-        "El conocimiento nuevo solo entra en el próximo entrenamiento, que cuesta millones y lleva semanas. Lo que se acumula mientras trabajas es tuyo: notas, tests, contexto.",
+        "Cada sesión usa pesos fijos del modelo. El proveedor aún puede retener prompts, archivos y resultados de herramientas según el plan y la configuración. El producto también puede devolver memoria guardada a sesiones posteriores.",
+        "Los pesos cambian en un entrenamiento posterior. Las notas, los tests y el contexto guardados durante el trabajo quedan alrededor del modelo y pueden volver en sesiones posteriores. Los pesos siguen iguales.",
         "\"IA entrenando IA\" ya tiene nombre: aprendizaje por refuerzo. AlphaZero aprendió ajedrez, shogi y go jugando contra sí mismo en 2017.",
         "Funciona donde una recompensa es barata de verificar, como juegos, demostraciones y tests. Y lo que sale es otro archivo cerrado."
       ],
@@ -247,14 +247,25 @@
     "items": [
       "La AGI no tiene una definición acordada. La que se escribió en un contrato era una meta de ganancias, y la eliminaron.",
       "Sin definición no hay prueba. Los benchmarks se saturan y el siguiente los reemplaza.",
-      "Los modelos reproducen lo que es público. Lo privado o nuevo exige oráculos, conocimiento aportado a mano y mucho dinero.",
+      "Los modelos reproducen lo público. El trabajo privado o nuevo necesita una comprobación objetiva, a menudo llamada oráculo, además de conocimiento aportado y dinero.",
       "Los modelos en bruto convergieron. Las mejoras recientes vinieron de las herramientas alrededor, y los modelos más pequeños siguen alcanzándolos.",
-      "Un modelo es un archivo cerrado. No aprende nada de tu sesión.",
+      "Los pesos del modelo no cambian durante tu sesión. El producto puede retener datos o devolver memoria guardada después, según su configuración.",
       "La palabra sirve para vender chips, rondas de inversión e IPOs. Por eso la siguen anunciando.",
       "Los incidentes tratados aquí implicaron a personas que concedieron acceso o dirigieron la herramienta. Los permisos y la supervisión humana son riesgos que ya podemos gestionar.",
       "Los pronósticos catastróficos necesitan pruebas que se puedan inspeccionar. Los sentimientos y las predicciones no son pruebas.",
-      "Las herramientas son reales y excelentes. Hacen lo que les dices, y el control sigue siendo tuyo.",
+      "Las herramientas son reales y excelentes. Aún necesitan instrucciones, permisos y revisión, con una persona responsable del resultado.",
       "Lo que importa ahora es la eficiencia: el mismo trabajo con menos hardware y precios más bajos."
+    ]
+  },
+  "contentsTitle": "En esta página",
+  "today": {
+    "title": "De qué preocuparse hoy",
+    "lede": "Los riesgos actuales requieren controles prácticos mientras continúa el debate sobre sistemas futuros.",
+    "items": [
+      "Los empleos cambian tarea por tarea. Prueba una tarea repetitiva, mide el resultado y conserva el criterio y la responsabilidad humanos donde los errores importan.",
+      "Trata como no verificado cualquier mensaje urgente de voz, video o pago. Confírmalo por un canal que ya conozcas.",
+      "No envíes datos personales, escolares o de la empresa hasta entender la retención, el entrenamiento y el borrado del servicio.",
+      "Usa IA para explicaciones y borradores. Verifica decisiones médicas, legales, financieras y escolares con una persona cualificada o una fuente primaria fiable."
     ]
   },
   "next": [

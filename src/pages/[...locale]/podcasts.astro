@@ -49,7 +49,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
           <Video id={v.id} title={v.title} play={t('play')} />
           <div>
             <div class="kicker"><span class="dot" aria-hidden="true"></span>{talks.has(v.id) ? t('kind.talk') : t('kind.podcast')} · {v.channel}</div>
-            <h2 class="text-2xl mt-3 !leading-tight">{v.title}</h2>
+            <h2 class="font-card font-semibold text-2xl mt-3 !leading-tight">{v.title}</h2>
             <p class="mt-2 font-sign text-sm text-muted"><time datetime={v.date}>{date(v.date)}</time> · {v.duration} · {t('views', { n: compact(v.views) })}</p>
             <p class="mt-4 text-muted">{t(`items.${v.id}`)}</p>
             <a class="link mt-2 inline-block py-2.5" href={`https://www.youtube.com/watch?v=${v.id}`}>{t('watch')}</a>
@@ -64,7 +64,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
       {(['talks', 'interviews'] as const).map((id) => (
         <li>
           <a href={playlists[id]} class="cell h-full" data-hue="jade">
-            <span class="font-sign font-bold text-xl" style="">{t(`all.${id}.name`)}</span>
+            <span class="font-card font-semibold text-xl">{t(`all.${id}.name`)}</span>
             <p class="mt-3 text-muted">{t(`all.${id}.text`)}</p>
             <span class="link mt-3 inline-block">{t('all.open')}</span>
           </a>
@@ -74,9 +74,9 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
   </Section>
 
   <Section title={t('cuts.title')} lede={t('cuts.lede')} hue="jade" id="cuts" tint>
-    {Object.entries(videos.cuts).map(([episode, list]) => (
-      <div class="mb-16">
-        <h3 class="text-xl mb-6">{t(`cuts.episode.${episode}`)}</h3>
+    {Object.entries(videos.cuts).map(([episode, list], i) => (
+      <details class="cut-group mb-6" open={i === 0}>
+        <summary><h3 class="text-xl">{t(`cuts.episode.${episode}`)}</h3><span class="font-sign text-sm text-muted">{list.length}</span></summary>
         <ul class="cuts grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((v) => (
             <li>
@@ -86,7 +86,7 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
             </li>
           ))}
         </ul>
-      </div>
+      </details>
     ))}
     <p class="text-sm text-muted">
       {t('cuts.note', { date: date(videos.fetchedAt.slice(0, 10)) })}
@@ -96,3 +96,11 @@ const compact = (n: number) => number(n, { notation: 'compact', maximumFractionD
   </Section>
   <CtaBand />
 </Base>
+<style>
+  .cut-group { border-block-start: 1px solid var(--line); padding-block-start: 1rem; }
+  .cut-group summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; cursor: pointer; list-style: none; padding-block: 0.5rem 1.25rem; }
+  .cut-group summary::-webkit-details-marker { display: none; }
+  .cut-group summary::after { content: '+'; font-family: var(--font-sign); color: var(--hue); }
+  .cut-group[open] summary::after { content: '−'; }
+  .cut-group[open] summary span { margin-inline-start: auto; }
+</style>

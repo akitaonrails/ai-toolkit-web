@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@fontsource/limelight/400.css';
+@import '@fontsource-variable/newsreader/wght.css';
 @import '@fontsource-variable/josefin-sans/wght.css';
 @import '@fontsource-variable/source-serif-4/opsz.css';
 @import '@fontsource-variable/source-serif-4/opsz-italic.css';
@@ -107,14 +108,16 @@
   --color-on-ink: var(--on-ink);
   --color-hue: var(--hue);
   --color-hue-soft: var(--hue-soft);
-  /* Limelight: the book cover's title face, for page and section titles only. Josefin Sans: the fair's signage,
-     for buttons, navigation, kickers and small headings. Source Serif 4: the book's body face, for reading. */
+  /* Limelight: the book cover's title face, for page and section titles only. Newsreader: expressive but readable
+     exhibit and card headings. Josefin Sans: the fair's signage, for buttons, navigation and kickers. Source Serif 4:
+     the book's body face, for reading. */
   --font-display: 'Limelight', Georgia, serif;
+  --font-card: 'Newsreader Variable', 'Newsreader', Georgia, serif;
   --font-sign: 'Josefin Sans Variable', 'Josefin Sans', system-ui, sans-serif;
   --font-sans: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
   --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
   --text-sm: 0.9rem;
-  --text-base: 1.0625rem;
+  --text-base: 1.125rem;
   --text-lg: 1.25rem;
   --text-xl: 1.45rem;
   --text-2xl: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem);
@@ -129,7 +132,7 @@
   * { min-width: 0; }
   /* Limelight has one weight and wide capitals: set it at weight 400, a touch of tracking, no fake bold. */
   h1, h2 { font-family: var(--font-display); font-weight: 400; line-height: 1.05; letter-spacing: 0.005em; text-wrap: balance; overflow-wrap: break-word; }
-  h3 { font-family: var(--font-sign); font-weight: 700; line-height: 1.2; letter-spacing: 0; text-wrap: balance; }
+  h3, h4 { font-family: var(--font-card); font-weight: 650; line-height: 1.18; letter-spacing: -0.012em; text-wrap: balance; }
   p { text-wrap: pretty; }
   code, pre, kbd { font-family: var(--font-mono); }
   :where(p, li, td, dd, figcaption, summary) code { font-size: 0.88em; background: var(--tint); border: 1px solid var(--line); border-radius: 0.4em; padding: 0.08em 0.36em; overflow-wrap: anywhere; }
@@ -148,6 +151,7 @@
   .after-hero { padding-block-start: clamp(2.25rem, 5vw, 4.25rem); }
   .after-hero + .band { padding-block-start: clamp(2.25rem, 5vw, 4.25rem); }
   .lede { font-size: var(--text-lg); line-height: 1.5; color: var(--muted); max-width: 38em; }
+  .font-card { font-family: var(--font-card); }
   .kicker { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-sign); font-weight: 600; letter-spacing: 0.04em; color: var(--hue, var(--muted)); font-size: var(--text-sm); }
 
   /* The diamond: the fair's one ornament, a gilt lozenge like the jewel on a deco sign. Same class as the old dot. */
@@ -167,9 +171,9 @@
   .link, .prose-site a { color: var(--hue, var(--brass)); text-decoration: underline; text-decoration-color: color-mix(in oklch, currentColor 45%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: 0.2em; }
   .link:hover, .prose-site a:hover { text-decoration-color: currentColor; }
 
-  /* A cell: an exhibit case. A hairline frame, and on hover a second gilt frame inside it. */
-  .cell { display: block; position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; transition: border-color 0.25s, box-shadow 0.25s; }
-  a.cell:hover { border-color: var(--hue-vivid, var(--v-brass)); box-shadow: inset 0 0 0 4px var(--surface), inset 0 0 0 5px var(--hue-vivid, var(--v-brass)); }
+  /* A cell: an airy exhibit placard with a subject-colored ticket edge. */
+  .cell { display: block; position: relative; background: color-mix(in oklab, var(--surface) 88%, transparent); border: 1px solid var(--line); border-inline-start: 3px solid var(--hue-vivid, var(--v-brass)); border-radius: var(--radius); padding: clamp(1.5rem, 2.4vw, 2rem); transition: border-color 0.25s, background 0.25s, box-shadow 0.25s, translate 0.25s; }
+  a.cell:hover { border-color: color-mix(in oklab, var(--hue-vivid, var(--v-brass)) 75%, var(--line)); background: var(--surface); box-shadow: 0 16px 38px -28px var(--hue-vivid, var(--v-brass)); translate: 0 -2px; }
   .badge { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-sign); font-size: var(--text-sm); font-weight: 600; padding: 0.25rem 0.7rem 0.15rem; border-radius: 0.15rem; background: var(--hue-soft, var(--tint)); color: var(--hue, var(--text)); }
 
   .ticks { display: grid; gap: 0.7rem; }
@@ -202,6 +206,14 @@
   .motif-fans { --pattern: radial-gradient(circle at 50% 100%, var(--motif) 0 8px, transparent 8px 16px, var(--motif) 16px 20px, transparent 20px 30px, var(--motif) 30px 33px, transparent 33px); --pattern-size: 72px 36px; }
   .motif-chevrons { --pattern: linear-gradient(135deg, var(--motif) 25%, transparent 25%), linear-gradient(225deg, var(--motif) 25%, transparent 25%); --pattern-size: 48px 48px; --pattern-mask: linear-gradient(90deg, transparent 30%, black); }
 
+  /* Searchlights and a warm crown of light make each entrance feel like a World's Fair pavilion. */
+  .fair-lights { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  .fair-lights::before { content: ''; position: absolute; inline-size: min(44rem, 78vw); aspect-ratio: 1; inset-inline-end: -8rem; inset-block-start: -25rem; border-radius: 50%; background: radial-gradient(circle, color-mix(in oklab, var(--hue-vivid, var(--v-brass)) 24%, transparent), transparent 68%); filter: blur(10px); }
+  .fair-light { position: absolute; inset-block-start: -18%; inline-size: clamp(7rem, 14vw, 13rem); block-size: 116%; transform-origin: 50% 0; background: linear-gradient(180deg, color-mix(in oklab, var(--hue-vivid, var(--v-brass)) 17%, transparent), transparent 72%); clip-path: polygon(44% 0, 56% 0, 100% 100%, 0 100%); opacity: 0.7; }
+  .fair-light:nth-child(1) { inset-inline-end: 7%; rotate: 13deg; }
+  .fair-light:nth-child(2) { inset-inline-end: 25%; rotate: -8deg; opacity: 0.46; }
+  .fair-light:nth-child(3) { inset-inline-end: 43%; rotate: 5deg; opacity: 0.28; }
+
   /* Always-dark ground: terminals, diagrams, screenshots and the closing band, as on a real desktop. */
   .on-ink { background: var(--ink); color: var(--on-ink); --text: var(--on-ink); --muted: var(--on-ink-muted); --line: var(--ink-line); --surface: var(--ink-raised); --tint: var(--ink-raised); }
 }
@@ -209,12 +221,12 @@
 /* Motion start states. Only applied when the motion script is running (html.motion). */
 html.motion [data-reveal]:not([data-reveal='children']), html.motion [data-reveal='children'] > * { opacity: 0; }
 
-/* Languages. Limelight, Josefin and Source Serif cover Latin only. Japanese and Korean keep them first, so names and
+/* Languages. Limelight, Newsreader, Josefin and Source Serif cover Latin only. Japanese and Korean keep them first, so names and
    Latin words keep the fair's faces, and fall through to Noto for their own script; Hebrew switches to Rubik for titles
    and signage and Heebo for text (fonts-*.css). */
-:lang(he) { --font-display: 'Rubik Variable', system-ui, sans-serif; --font-sign: 'Rubik Variable', system-ui, sans-serif; --font-sans: 'Heebo Variable', system-ui, sans-serif; }
-:lang(ja) { --font-display: 'Limelight', 'Noto Sans JP Variable', system-ui, sans-serif; --font-sign: 'Josefin Sans Variable', 'Noto Sans JP Variable', system-ui, sans-serif; --font-sans: 'Source Serif 4 Variable', 'Noto Sans JP Variable', system-ui, serif; }
-:lang(ko) { --font-display: 'Limelight', 'Noto Sans KR Variable', system-ui, sans-serif; --font-sign: 'Josefin Sans Variable', 'Noto Sans KR Variable', system-ui, sans-serif; --font-sans: 'Source Serif 4 Variable', 'Noto Sans KR Variable', system-ui, serif; }
+:lang(he) { --font-display: 'Rubik Variable', system-ui, sans-serif; --font-card: 'Rubik Variable', system-ui, sans-serif; --font-sign: 'Rubik Variable', system-ui, sans-serif; --font-sans: 'Heebo Variable', system-ui, sans-serif; }
+:lang(ja) { --font-display: 'Limelight', 'Noto Sans JP Variable', system-ui, sans-serif; --font-card: 'Newsreader Variable', 'Noto Sans JP Variable', system-ui, serif; --font-sign: 'Josefin Sans Variable', 'Noto Sans JP Variable', system-ui, sans-serif; --font-sans: 'Source Serif 4 Variable', 'Noto Sans JP Variable', system-ui, serif; }
+:lang(ko) { --font-display: 'Limelight', 'Noto Sans KR Variable', system-ui, sans-serif; --font-card: 'Newsreader Variable', 'Noto Sans KR Variable', system-ui, serif; --font-sign: 'Josefin Sans Variable', 'Noto Sans KR Variable', system-ui, sans-serif; --font-sans: 'Source Serif 4 Variable', 'Noto Sans KR Variable', system-ui, serif; }
 :lang(he) :is(h1, h2), :lang(ja) :is(h1, h2), :lang(ko) :is(h1, h2) { letter-spacing: 0; line-height: 1.25; font-weight: 700; }
 :lang(ja) body, :lang(ko) body, :lang(he) body { line-height: 1.8; }
 :lang(ja) { line-break: strict; word-break: normal; overflow-wrap: anywhere; }
@@ -223,3 +235,8 @@ html.motion [data-reveal]:not([data-reveal='children']), html.motion [data-revea
 :lang(ja) :is(h1, h2, h3, .fill-lede) { word-break: auto-phrase; }
 :lang(ja) .text-4xl { font-size: clamp(1.9rem, 1rem + 3vw, 3rem); line-height: 1.3; }
 :lang(ko) .text-4xl { font-size: clamp(2.2rem, 1.2rem + 4vw, 4.25rem); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cell { transition: none; }
+  a.cell:hover { translate: none; }
+}

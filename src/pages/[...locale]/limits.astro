@@ -8,6 +8,7 @@ import DeckLink from '@/components/DeckLink.astro';
 import Figure from '@/components/Figure.astro';
 import Stats from '@/components/Stats.astro';
 import PullQuote from '@/components/PullQuote.astro';
+import EssayNav from '@/components/EssayNav.astro';
 import Related from '@/components/Related.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
@@ -39,6 +40,7 @@ const next = withText([{ hue: 'pennant', href: '/agi/' }, { hue: 'jade', href: '
         ))}
       </ol>
       <div class="mt-12"><DeckLink deck="limits" /></div>
+      <EssayNav label={t('contentsTitle')} items={limits.sections.map((sec) => ({ id: sec.id, title: s(sec.id, 'title') }))} />
     </div>
   </section>
 

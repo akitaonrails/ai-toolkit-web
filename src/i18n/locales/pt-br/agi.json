@@ -110,8 +110,8 @@
       "lede": "Um modelo é um arquivo, travado depois do treino. O datacenter roda cópias dele.",
       "alt": "Um arquivo vermelho trancado com o rótulo Arquivo do modelo manda setas de mão única, com o rótulo Cópias, pra nove caixas de servidor separadas; uma delas tem um terminal com o rótulo Sua sessão. Nenhuma seta volta. No alto, um caminho sai do arquivo, passa por uma engrenagem com o rótulo Próximo treino e termina num segundo arquivo trancado com o rótulo Arquivo novo.",
       "points": [
-        "Cada usuário roda uma cópia isolada. Sua sessão não conversa com nenhuma outra, e nada dela volta pro arquivo.",
-        "Conhecimento novo só entra no próximo treino, que custa milhões e leva semanas. O que se acumula enquanto você trabalha é seu: notas, testes, contexto.",
+        "Cada sessão usa pesos fixos do modelo. O provedor ainda pode reter prompts, arquivos e saídas de ferramentas conforme o plano e as configurações. O produto também pode devolver memórias salvas a sessões futuras.",
+        "Os pesos mudam numa rodada posterior de treinamento. Notas, testes e contexto salvos durante o trabalho ficam ao redor do modelo e podem voltar em sessões futuras. Os pesos permanecem iguais.",
         "\"IA treinando IA\" já tem nome: aprendizado por reforço. O AlphaZero aprendeu xadrez, shogi e Go jogando contra si mesmo em 2017.",
         "Funciona onde a recompensa é barata de conferir, como jogos, provas e testes. E o que sai é outro arquivo trancado."
       ],
@@ -247,14 +247,25 @@
     "items": [
       "AGI não tem definição aceita. A que foi escrita num contrato era uma meta de lucro, e caiu.",
       "Sem definição não tem teste. Os benchmarks enchem e são trocados pelo próximo.",
-      "Os modelos reproduzem o que é público. O que é privado ou novo exige oráculos, contexto alimentado na mão e muito dinheiro.",
+      "Modelos reproduzem o que é público. Trabalho privado ou novo exige uma verificação objetiva, muitas vezes chamada de oráculo, além de conhecimento fornecido e dinheiro.",
       "Os modelos brutos convergiram. Os ganhos recentes vieram das ferramentas em volta deles, e os modelos menores continuam alcançando.",
-      "Um modelo é um arquivo trancado. Ele não aprende nada com a sua sessão.",
+      "Os pesos do modelo não mudam durante a sua sessão. O produto ainda pode reter dados ou devolver memórias salvas depois, conforme as configurações.",
       "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",
       "Os incidentes discutidos aqui envolveram pessoas concedendo acesso ou direcionando a ferramenta. Permissões e supervisão humana são riscos que já conseguimos administrar.",
       "Previsões catastróficas precisam de evidências que possam ser inspecionadas. Sentimentos e previsões não são evidências.",
-      "As ferramentas são reais e excelentes. Fazem o que você manda, e quem está no comando continua sendo você.",
+      "As ferramentas são reais e excelentes. Ainda precisam de instruções, permissões e review, com uma pessoa responsável pelo resultado.",
       "O que importa agora é eficiência: o mesmo trabalho com menos hardware e preços menores."
+    ]
+  },
+  "contentsTitle": "Nesta página",
+  "today": {
+    "title": "Com o que se preocupar hoje",
+    "lede": "Os riscos atuais pedem controles práticos enquanto a discussão sobre sistemas futuros continua.",
+    "items": [
+      "Empregos mudam tarefa por tarefa. Teste uma tarefa repetitiva, meça o resultado e mantenha julgamento e responsabilidade humanos onde os erros importam.",
+      "Trate mensagens urgentes de voz, vídeo ou pagamento como não verificadas. Confirme por um canal em que você já confia.",
+      "Não envie dados pessoais, escolares ou da empresa antes de entender as configurações de retenção, treinamento e exclusão do serviço.",
+      "Use IA para explicações e rascunhos. Confirme decisões de saúde, jurídicas, financeiras e escolares com uma pessoa qualificada ou uma fonte primária confiável."
     ]
   },
   "next": [

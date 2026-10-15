@@ -49,6 +49,7 @@ const startingPoints = withText([
   { hue: 'amethyst', href: '/workflow/' },
   { hue: 'pennant', href: '/agi/' },
   { hue: 'cerulean', href: '/limits/' },
+  { hue: 'copper', href: '/workflow/#company' },
 ] as const, raw<Text[]>('start.items'));
 // The hero carousel: the intro first, then the pages I most want a new reader to find, each in its subject's hue
 // with that pavilion's poster in the brass arch (the 3D book for the book). Words in home.json `carousel.items`.
@@ -68,6 +69,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 ---
 <Base description={t('meta.description')}>
   <section class="hero motif motif-sunburst" data-exit>
+    <div class="fair-lights" aria-hidden="true"><span class="fair-light"></span><span class="fair-light"></span><span class="fair-light"></span></div>
     <Carousel ids={slides.map((x) => x.id)} label={t('carousel.label')}>
       <div id="slide-intro" class="c-slide" role="group" aria-roledescription={tc('carousel.slide')} aria-label={tc('carousel.go', { n: 1, total: slides.length })}>
         <div class="wrap slide-grid">
@@ -172,13 +174,13 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
   <section class="wrap my-16 grid gap-6 md:grid-cols-2">
     <div data-hue="mauve" class="pair cell !p-8">
       <div class="kicker"><span class="dot" aria-hidden="true"></span>The M.Akita Chronicles</div>
-      <h2 class="text-2xl mt-3">{t('newsletter.title')}</h2>
+      <h2 class="font-card font-semibold text-2xl mt-3">{t('newsletter.title')}</h2>
       <p class="mt-3 text-muted">{t('newsletter.text')}</p>
       <a href={href('/newsletter/')} class="btn btn-ghost mt-6">{t('newsletter.link')}</a>
     </div>
     <div data-hue="jade" class="pair cell !p-8">
       <div class="kicker"><span class="dot" aria-hidden="true"></span>{t('kicker.podcasts')}</div>
-      <h2 class="text-2xl mt-3">{t('podcasts.title')}</h2>
+      <h2 class="font-card font-semibold text-2xl mt-3">{t('podcasts.title')}</h2>
       <p class="mt-3 text-muted">{t('podcasts.text')}</p>
       <a href={href('/podcasts/')} class="btn btn-ghost mt-6">{t('podcasts.link')}</a>
     </div>
@@ -200,7 +202,7 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
         <p class="mt-3 text-lg" set:html={t('contact.text', { email: site.email })} />
       </div>
       <aside data-hue="pennant" class="warn">
-        <h4 class="font-sign font-bold text-lg" style="color:var(--hue)">{t('contact.warningTitle')}</h4>
+        <h4 class="font-card font-semibold text-lg" style="color:var(--hue)">{t('contact.warningTitle')}</h4>
         <p class="mt-2">{t('contact.warning')}</p>
       </aside>
     </div>
@@ -210,7 +212,8 @@ const posts = pick('skills', 'shipMore', 'dayToDay', 'protect', 'aiMemory2', 'cl
 </Base>
 
 <style>
-  .hero { transform-origin: 50% 100%; }
+  .hero { transform-origin: 50% 100%; overflow: hidden; }
+  .hero > :global(:not(.fair-lights)) { position: relative; z-index: 1; }
   .intro { font-size: var(--text-lg); line-height: 1.5; max-width: 34em; }
   .intro :global(a) { color: var(--cerulean); }
   .hero-title { letter-spacing: -0.03em; }

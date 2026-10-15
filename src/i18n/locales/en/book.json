@@ -45,7 +45,9 @@
     "full": "Full screen",
     "exit": "Exit full screen",
     "loading": "Opening the book…",
-    "error": "The reader couldn't open the book. The downloads below still work."
+    "error": "The reader couldn't open the book. You can retry or download it instead.",
+    "retry": "Retry",
+    "downloadFallback": "Download the EPUB"
   },
   "downloads": {
     "title": "Download",

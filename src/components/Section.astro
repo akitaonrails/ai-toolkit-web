@@ -6,11 +6,16 @@ const { title, lede, hue, id, tint, narrow, fill, ink } = Astro.props;
 ---
 <section id={id} data-hue={hue} class:list={['band scroll-mt-16', tint && 'bg-tint', ink && 'on-ink']}>
   <div class={narrow ? 'wrap-narrow' : 'wrap'}>
-    <h2 class="text-3xl max-w-[18em]">{title}</h2>
-    {lede && <p class:list={['mt-6', fill ? 'fill-lede' : 'lede']} set:html={lede} />}
+    <header class="section-head">
+      <h2 class="text-3xl max-w-[18em]">{title}</h2>
+      {lede && <p class:list={['mt-6', fill ? 'fill-lede' : 'lede']} set:html={lede} />}
+    </header>
     <div class="mt-10"><slot /></div>
   </div>
 </section>
 <style is:global>
+  .section-head { position: relative; padding-inline-start: clamp(1rem, 2vw, 1.5rem); }
+  .section-head::before { content: ''; position: absolute; inset-inline-start: 0; inset-block: 0.2rem; inline-size: 3px; background: linear-gradient(var(--hue-vivid, var(--v-brass)), transparent); }
+  .section-head::after { content: ''; display: block; inline-size: min(12rem, 35vw); block-size: 5px; margin-block-start: 1.5rem; border-block: 1px solid color-mix(in oklab, var(--hue-vivid, var(--v-brass)) 72%, transparent); }
   .fill-lede { font-family: var(--font-sans); font-style: italic; font-weight: 600; font-size: var(--text-2xl); line-height: 1.3; max-width: 26em; }
 </style>

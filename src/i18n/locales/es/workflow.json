@@ -32,9 +32,11 @@
     ]
   },
   "start": {
-    "title": "Una línea para empezar el día",
-    "lede": "Cada ventana de tmux es un proyecto. Lanzo el agente a través de ai-memory, así llega con la memoria de ese proyecto y sus hooks ya conectados.",
-    "codeTitle": "una ventana de tmux, cada mañana",
+    "title": "El comando desde el que empiezo",
+    "lede": "Esta es mi configuración madura de ingeniería. Cada ventana de tmux es un proyecto. ai-memory inicia el agente con las decisiones guardadas y los hooks de ese proyecto. El flujo mínimo de arriba no necesita nada de esto.",
+    "codeTitle": "mi configuración técnica exacta",
+    "safetyTitle": "Ejecuta esto dentro de un límite",
+    "safety": "Esta es mi configuración personal. La opción --yolo solo corresponde a un entorno aislado, con copias de seguridad, credenciales restringidas y sin acceso a producción ni a datos de clientes.",
     "prompts": "Después escribo una de tres líneas, según cómo esté la cola:",
     "items": [
       {
@@ -49,6 +51,16 @@
         "code": "run pr-bump and release",
         "text": "Los días en que la única cola es Dependabot."
       }
+    ]
+  },
+  "company": {
+    "title": "La versión del flujo para responsables de equipo",
+    "lede": "Los mismos cuatro hábitos funcionan fuera del software. Trata el primer uso como un piloto controlado, con una persona responsable.",
+    "items": [
+      "Elige una tarea reversible con un resultado que el equipo pueda comprobar.",
+      "Empieza con datos no sensibles. Revisa la retención, el entrenamiento, el acceso, la residencia y el borrado del proveedor antes de enviar datos de la empresa.",
+      "Define una prueba de aceptación, un plazo y un presupuesto antes de iniciar el piloto.",
+      "Mide la calidad, el tiempo ahorrado y la tasa de fallos. Amplía solo cuando el resultado se sostenga."
     ]
   },
   "pipeline": {
@@ -119,7 +131,7 @@
     "codeTitle": "agregar una skill"
   },
   "copy": {
-    "title": "Por favor, no copies mis skills",
+    "title": "No instales esto a ciegas",
     "text": "Están moldeadas a mis proyectos, mis lenguajes y mi nivel de paranoia con la cadena de suministro. Correr a ciegas la skill de otro es instalar sus instrucciones con tus permisos, en tus repositorios, con tus tokens. Lee las mías para ver la estructura y el razonamiento, y después pídele a tu propio agente que escriba las tuyas.",
     "link": "El post donde lo explico"
   },
