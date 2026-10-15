@@ -18,9 +18,8 @@ export const site = {
 export type Hue = 'pennant' | 'copper' | 'jade' | 'patina' | 'cerulean' | 'amethyst' | 'mauve';
 export interface NavLink { id: string; href: string; hue: Hue }
 
-// Labels and notes live in common.json under nav.<id>. One hue per subject, everywhere that subject appears.
-// The hues come from the tools' own terminals: tclock's red digits, ghpending's amber headers, the blue gauge
-// in the Omarchy panel. Green is never a subject: it is the one action color. See docs/design-system.md.
+// Labels and notes live in common.json under nav.<id>. One pavilion color per subject, everywhere that subject
+// appears. Brass is never a subject: it is the one action color. See docs/design-system.md.
 export const nav: NavLink[] = [
   { id: 'workflow', href: '/workflow/', hue: 'amethyst' },
   { id: 'usagebar', href: '/ai-usagebar/', hue: 'cerulean' },

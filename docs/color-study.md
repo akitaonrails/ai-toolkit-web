@@ -52,7 +52,7 @@ Vivid is identical in both themes. Its lightness is spread on purpose (pennant 0
 
 `check:colors` simulates protanopia, deuteranopia and tritanopia at full severity and reports the closest pair of vivid subject colors as a Euclidean distance in OKLab. About 0.1 is a clear difference; under 0.05 is easy to confuse.
 
-The first fair palette failed: jade and mauve fell to 0.027 under deuteranopia, jade and cerulean to 0.027 under tritanopia, and the book (jade) sits next to the newsletter (mauve) in the Writing menu. Spreading the vivid lightness (section 2) lifted the closest pair to 0.075 (jade and mauve under protanopia), without touching the text tokens.
+The first fair palette failed: jade and mauve fell to 0.027 under deuteranopia, jade and cerulean to 0.027 under tritanopia, and the book (jade) sits near writing (mauve) in the Learn menu. Spreading the vivid lightness (section 2) lifted the closest pair to 0.075 (jade and mauve under protanopia), without touching the text tokens.
 
 ## 4. Night and day
 

@@ -7,7 +7,7 @@ const path = Astro.url.pathname;
 const languages = languageLinks(path);
 // The language menu appears once there is a second language to pick.
 const multilingual = languages.length > 1;
-// The top bar groups some pages under dropdown menus (Tools, Writing); the drawer lists them under headings.
+// The top bar groups some pages under dropdown menus (Tools, Learn); the drawer lists them under headings.
 const groups = navGroups.map((g) => {
   const pages = nav.filter((l) => g.ids.includes(l.id));
   return { ...g, pages, first: nav.findIndex((l) => g.ids.includes(l.id)), last: nav.findLastIndex((l) => g.ids.includes(l.id)), current: pages.some((l) => path === href(l.href)) };
