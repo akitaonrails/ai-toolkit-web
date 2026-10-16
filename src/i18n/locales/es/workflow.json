@@ -5,14 +5,38 @@
   },
   "hero": {
     "title": "Cómo una persona mantiene 40 repositorios en marcha",
-    "lede": "Cada mañana abro un agente por proyecto en tmux, le doy una sola línea y reviso lo que vuelve. El trabajo pesado está en las skills: prompts en texto plano que sigo puliendo.",
-    "primary": "Leer las skills",
+    "lede": "Cada mañana abro un agente de programación con IA por proyecto, le doy una sola línea y reviso lo que devuelve. Un agente de programación puede inspeccionar archivos, editar código y ejecutar verificaciones. Mis instrucciones reutilizables son archivos de texto plano llamados skills.",
+    "primary": "Empieza por lo básico",
     "secondary": "Por qué no copiarlas"
   },
+  "basics": {
+    "title": "La versión más pequeña de este flujo",
+    "lede": "Mi setup completo creció con el tiempo. Puedes empezar con un proyecto, una tarea y cuatro hábitos.",
+    "items": [
+      {
+        "title": "Elige una tarea acotada",
+        "text": "Elige un trabajo con un final claro y un resultado que puedas verificar. Mantén el primer cambio lo bastante pequeño para revisarlo."
+      },
+      {
+        "title": "Escribe las restricciones",
+        "text": "Dile al agente qué debe seguir siendo cierto, qué comandos verifican el trabajo y qué no debe tocar."
+      },
+      {
+        "title": "Revisa el cambio",
+        "text": "Lee el diff, cuestiona sus supuestos y ejecuta las verificaciones del proyecto. Una persona sigue siendo responsable de aceptarlo."
+      },
+      {
+        "title": "Conserva la lección",
+        "text": "Convierte un fallo en un test o una regla escrita. La siguiente sesión no debe repetir el mismo error."
+      }
+    ]
+  },
   "start": {
-    "title": "Una línea para empezar el día",
-    "lede": "Cada ventana de tmux es un proyecto. Lanzo el agente a través de ai-memory, así llega con la memoria de ese proyecto y sus hooks ya conectados.",
-    "codeTitle": "una ventana de tmux, cada mañana",
+    "title": "El comando desde el que empiezo",
+    "lede": "Esta es mi configuración madura de ingeniería. Cada ventana de tmux es un proyecto. ai-memory inicia el agente con las decisiones guardadas y los hooks de ese proyecto. El flujo mínimo de arriba no necesita nada de esto.",
+    "codeTitle": "mi configuración técnica exacta",
+    "safetyTitle": "Ejecuta esto dentro de un límite",
+    "safety": "Esta es mi configuración personal. La opción --yolo solo corresponde a un entorno aislado, con copias de seguridad, credenciales restringidas y sin acceso a producción ni a datos de clientes.",
     "prompts": "Después escribo una de tres líneas, según cómo esté la cola:",
     "items": [
       {
@@ -29,9 +53,19 @@
       }
     ]
   },
+  "company": {
+    "title": "La versión del flujo para responsables de equipo",
+    "lede": "Los mismos cuatro hábitos funcionan fuera del software. Trata el primer uso como un piloto controlado, con una persona responsable.",
+    "items": [
+      "Elige una tarea reversible con un resultado que el equipo pueda comprobar.",
+      "Empieza con datos no sensibles. Revisa la retención, el entrenamiento, el acceso, la residencia y el borrado del proveedor antes de enviar datos de la empresa.",
+      "Define una prueba de aceptación, un plazo y un presupuesto antes de iniciar el piloto.",
+      "Mide la calidad, el tiempo ahorrado y la tasa de fallos. Amplía solo cuando el resultado se sostenga."
+    ]
+  },
   "pipeline": {
     "title": "El pipeline",
-    "lede": "Nada de lo que escribe un colaborador se da por cierto. Cada afirmación se verifica, cada arreglo aprobado tiene primero un test, y nada recibe un tag sin CI en verde en ese commit exacto.",
+    "lede": "Cada afirmación se verifica, ya venga de una persona o de un agente. Cada arreglo aprobado recibe un test de regresión, y la versión espera a que pasen todas las verificaciones automatizadas sobre esa versión exacta.",
     "alt": "Un pipeline de izquierda a derecha: PRs e issues abiertos se dividen en pr-audit e iss-audit, que se juntan tras un control Aprobado en github-resolution, luego pr-post-audit, luego release y luego Kaizen, con una flecha de Kaizen de vuelta al inicio. Una barra de ai-memory corre por debajo de todo.",
     "caption": "pr-post-audit corre cuando una sesión resolvió más de tres tickets. La skill release corre solo cuando pido una versión."
   },
@@ -97,7 +131,7 @@
     "codeTitle": "agregar una skill"
   },
   "copy": {
-    "title": "Por favor, no copies mis skills",
+    "title": "No instales esto a ciegas",
     "text": "Están moldeadas a mis proyectos, mis lenguajes y mi nivel de paranoia con la cadena de suministro. Correr a ciegas la skill de otro es instalar sus instrucciones con tus permisos, en tus repositorios, con tus tokens. Lee las mías para ver la estructura y el razonamiento, y después pídele a tu propio agente que escriba las tuyas.",
     "link": "El post donde lo explico"
   },

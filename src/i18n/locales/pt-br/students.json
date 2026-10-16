@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "IA e estudantes",
-    "lede": "Eu sou sênior e faço 100% vibe coding. Se você é estudante ou júnior, não me copie ainda. Nove pontos curtos sobre o porquê, e por onde começar.",
+    "lede": "Eu uso IA na maior parte do meu trabalho de programação porque passei décadas aprendendo os fundamentos primeiro. Estudantes e iniciantes precisam de outra abordagem: usar a IA como apoio sem entregar o raciocínio.",
     "primary": "O que fazer",
     "secondary": "O arquivo do Akitando"
   },
@@ -23,7 +23,7 @@
       "lede": "A mesma ferramenta dá ao sênior mais trabalho bom, mais rápido, e dá ao iniciante mais do que o iniciante já tem, erros incluídos.",
       "alt": "Duas linhas: uma pilha fina de conhecimento com o rótulo Júnior, multiplicada por × IA, gera um cartão de resultado minúsculo; uma pilha alta de conhecimento com o rótulo Sênior, multiplicada pelo mesmo × IA, gera uma pilha alta de resultado.",
       "points": [
-        "A IA é o seu espelho. Se você é incompetente, ela produz coisa ruim mais rápido. Se você é competente, ela produz coisa boa mais rápido.",
+        "A IA pode multiplicar erros quando os fundamentos são fracos. Com fundamentos fortes, ela consegue multiplicar trabalho útil.",
         "Quem entende sistemas operacionais, bancos de dados, redes, estruturas de dados e compiladores usa agentes como exoesqueleto. Quem não entende usa como muleta. Exoesqueleto amplifica a força; muleta só esconde a fraqueza.",
         "O relatório DORA 2025 do Google viu a mesma coisa em times: \"a IA não conserta um time; ela amplifica o que já está lá.\"",
         "E alguém tem que conferir o resultado. No teste da Veracode de 2025 com mais de 100 modelos, 45% das amostras de código falharam nos testes de segurança e introduziram vulnerabilidades do OWASP Top 10.",
@@ -85,7 +85,7 @@
     },
     "market": {
       "kicker": "4. O mercado",
-      "title": "As vagas que sobram vão pra quem sabe julgar o resultado",
+      "title": "O caminho de entrada ficou mais estreito",
       "lede": "As empresas ainda contratam quem sabe revisar e decidir. Contratam bem menos iniciantes pra digitar.",
       "stats": {
         "newGrads": "menos contratação de recém-formados nas big techs do que em 2019",
@@ -222,7 +222,7 @@
       "A IA multiplica o que você já sabe. Com pouco pra multiplicar, você recebe muito pouco.",
       "Atalhos vendidos como carreira já tiveram um crash. O novo é a mesma promessa.",
       "Aprender no piloto automático não fixa. Os estudos até agora concordam.",
-      "As vagas que sobram vão pra quem sabe julgar o resultado, e a contratação de nível de entrada está encolhendo.",
+      "O trabalho que continua valioso precisa de gente capaz de julgar o resultado, enquanto a contratação de nível de entrada está encolhendo.",
       "A IA não adivinha seu objetivo, seus limites ou seus trade-offs. Saber isso é o trabalho.",
       "No meu benchmark, dar testes pro modelo mudou os resultados. Escolha a linguagem que serve pro problema.",
       "A IA replica o que é público. As lacunas que ela deixa, no trabalho privado e novo, são o trabalho, e os fundamentos difíceis são como você preenche elas.",

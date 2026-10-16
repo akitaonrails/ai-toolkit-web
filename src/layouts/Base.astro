@@ -7,7 +7,7 @@ import Nav from '@/components/Nav.astro';
 import Footer from '@/components/Footer.astro';
 import Analytics from '@/components/Analytics.astro';
 import { site } from '@/data/site';
-import ogImage from '@/assets/img/og.png';
+import ogImage from '@/assets/img/og.jpg';
 import { siteGraph } from '@/lib/schema';
 import { useI18n, localizePath, stripLocale } from '@/i18n';
 import { defaultLocale, localeCodes, locales } from '@/i18n/config';
@@ -54,8 +54,9 @@ const detect = locale === defaultLocale && !noindex && localeCodes.length > 1
     <meta name="robots" content={noindex ? 'noindex' : 'index, follow, max-image-preview:large'} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbf8fe" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14061d" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6ecd7" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#001624" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:locale" content={locales[locale].og} />

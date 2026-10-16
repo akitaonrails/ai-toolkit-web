@@ -79,6 +79,11 @@ Decisões de tradução além do glossário do brief (`docs/research/I18N-TRANSL
 | preview (book version) | preview |
 | print edition / for screens | edição impressa / pra tela |
 | release notes | notas da release |
+| fair map / pavilion | mapa da feira / pavilhão |
+| Book Tower / Hall of Opinions / Hall of Machines / The Workshop | Torre do Livro / Salão das Opiniões / Salão das Máquinas / A Oficina |
+| Broadcast Tower / Press House / Control Room / The Arcade | Torre de Transmissão / Casa da Imprensa / Sala de Controle / O Fliperama |
+| Plaza 42 / Information | Praça 42 / Informações |
+| Mostly harmless. (footer) | Praticamente inofensivo. (Earth entry in the published translation: "Praticamente inofensiva") |
 
 ## Deliberate differences from English
 

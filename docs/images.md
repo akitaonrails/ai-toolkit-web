@@ -1,54 +1,60 @@
 # Images
 
-## Diagrams
+All generated art follows one art direction (October 2026): a 1950s-60s World's Fair poster in art deco style, with the brass, glass and portholes of an undersea art-deco city and a dry sense of humor, painted in gouache on a deep navy ground with the pavilion colors (color-study.md). It lives in `scripts/prompts/_style.txt`, which is appended to every prompt; never restate the style in a prompt.
 
-Generated with Google's Gemini image model (`gemini-3-pro-image`), then checked by eye. A generated diagram can misspell a label or draw something the tool does not do, so nothing ships unseen.
+Generated with Google's Gemini image model (`gemini-3-pro-image`), then checked by eye. A generated image can misspell a label, add text nobody asked for, or draw something untrue, so nothing ships unseen.
 
 ```bash
 export GEMINI_API_KEY=...          # https://aistudio.google.com/apikey
 $EDITOR scripts/prompts/home-loop.txt
-node scripts/gen-image.mjs home-loop                     # 16:9, 1920 px WebP into src/assets/img/gen/
-node scripts/gen-image.mjs home-loop --aspect 4:3        # also 1:1, 21:9, 3:2
+node scripts/gen-image.mjs home-loop                       # 16:9, 1920 px WebP into src/assets/img/gen/
+node scripts/gen-image.mjs poster-book --aspect 3:4        # posters are portrait
 node scripts/gen-image.mjs tclock-widgets --ref ~/Projects/clock-tui/assets/screenshot-clock-widgets.png
 ```
 
-Every request gets `scripts/prompts/_style.txt` appended: the dark purple ground, which hue belongs to which tool, green only for flow and status, short off-white labels. The site has no logo, so there is no default reference image; `--ref` attaches a real screenshot when a drawing should echo a tool's interface.
+## Posters
 
-Writing a prompt that works:
+Every page has a poster (`poster-<id>`, 3:4): one building or interior that says what the page is about, dominated by the page's pavilion color, standing in the brass arch of its hero (`PageHero`) and on the home carousel. Posters carry no text at all, so they are generated once and never localized. Their prompts end with the same no-text paragraph; the generation of October 2026 also needed, in several prompts, "the navy runs to all four edges, no cream margin" and "no labels or title". The table of pavilions and posters is in design-system.md.
+
+Check before committing a poster: no letters, numbers or sign text anywhere (zoom in on signs, spines, screens and tapes); the named color is the clear accent; the subject reads at phone width; no real person's likeness. The weary round-faced robot may appear; never a named copyrighted character.
+
+## Diagrams
+
+Diagrams explain something and carry short labels. Writing a prompt that works:
 
 - Describe layout and objects. Leave style to `_style.txt`.
 - Put every label in double quotes, one to three words each, and end with "Only these labels: ...". Eight labels is about the limit before one goes missing.
-- Say which way it reads and name the hue of each part by its subject.
+- Say which way it reads and name each part's color by its subject (pennant red, copper, jade green, patina teal, cerulean blue, amethyst, mauve; brass gold for arrows and flow; cream for labels).
 
 Check before committing:
 
-1. Every label is present and spelled right. (The first `workflow-symlinks` dropped "Kimi" and was regenerated.)
+1. Every label is present, spelled right, and appears once. No other text.
 2. The picture says nothing untrue about the tool.
 3. It reads at phone width.
 4. The `alt` text says what the diagram says, in a sentence.
 
-| Image | Used on |
-|---|---|
-| `home-desk` | home |
-| `home-loop` | home |
-| `home-switch` | home |
-| `workflow-pipeline` | workflow |
-| `workflow-symlinks` | workflow |
-| `usagebar-providers` | ai-usagebar |
-| `ghpending-digest` | ghpending |
-| `tclock-widgets` | clock-tui |
-| `newsletter-pipeline` | newsletter |
-| `games-stack` | games |
-| `games-clean-host` | games (regenerated once: the first try printed the prompt's own words, "LEFT PANEL", as labels; never name layout parts in quotes-free prose that could be read as text) |
-| `agi-definitions`, `agi-benchmarks`, `agi-frontier`, `agi-money-loop`, `agi-attacks`, `agi-history`, `agi-tool`, `agi-efficiency` | agi. Localized on 2026-09-26. Gemini kept filling the empty "Next one" bar in `agi-benchmarks` (es, pt-br), which is the point of the drawing, so those two copies were made by painting the new label over the English original with ImageMagick (Noto Sans 47, `#EEE8F6`, centered under the bar). `agi-money-loop` has no pt-br copy: its labels stay in English there. |
-| `students-multiplier`, `students-bubbles`, `students-guess`, `students-gap`, `students-practice`, `students-guardrails` | students. Localized on 2026-09-27; the pt-br `students-guardrails` was regenerated (the first copy printed "Testes" twice) and the es copy kept "Directives" after two tries, so "Directivas" was painted over the original label with ImageMagick (Noto Sans Mono 29, `#D9DAE3`). The first `students-practice` and `students-guardrails` printed the prompt's closing "The picture says..." sentence as a caption; prompts no longer carry that sentence. |
-| `agi-plateau`, `agi-static` | agi, sections 4 and 5. Made and localized 2026-10-13. Gemini kept "Copies" in the es `agi-static` twice, so "Copias" was painted over it with ImageMagick (old text masked and filled with a 31px median, Noto Sans 33, `#F1EDF4`). |
-| `limits-timeline`, `limits-retro`, `limits-facade`, `limits-bun` | limits. Made and localized 2026-10-13, every label checked in all five languages. `limits-retro` took three tries: the first printed "Frozen" twice and drew a floppy disk, the second fixed the labels and kept the floppy; the prompt now describes a Nintendo 64 cartridge and forbids disks. |
-| `og` (cropped to `src/assets/img/og.png`, 1200x630) | share card |
-
 Generation costs a few cents per image and is not part of the build.
 
-Every diagram with translatable labels also has a copy per language in `src/assets/img/gen/<locale>/`, made by `scripts/localize-image.mjs` from the labels in `images.json` (see `docs/i18n.md`). All 53 copies were checked label by label on 2026-09-23. `home-desk` has no Portuguese or Spanish copy: its only labels ("Monitor 1", "Monitor 2") read the same. When an English diagram is regenerated, delete its copies and localize again.
+Every diagram with translatable labels also has a copy per language in `src/assets/img/gen/<locale>/`, made by `scripts/localize-image.mjs` from the labels in `images.json` (see `docs/i18n.md`). When an English diagram is regenerated, delete its copies and localize again, then compare every label with `images.json`; Hebrew, Japanese and Korean are where a model most often drops or swaps a character. If a label keeps failing, paint it over the English original with ImageMagick (mask the old text, fill it from a median of the surrounding background, draw the new label in a matching font and color), or delete the copy so the English one shows.
+
+## The October 2026 set
+
+All 31 diagrams, 16 posters and the share card were regenerated on 2026-10-15 for the World's Fair redesign, and every localized copy was checked label by label. Notes from that pass:
+
+- Gemini often sets deco labels in capitals (frontier, attacks, tool, efficiency, bubbles, guardrails); spelling is checked, case is accepted.
+- It adds a thin cream margin; agi-definitions, agi-benchmarks and agi-money-loop were cropped back to navy edge to edge.
+- Prompts no longer end with a "The picture says..." sentence: Gemini printed it as a caption.
+- `home-desk` keeps "PR"/"ISS" pills and a pixel clock, and `tclock-widgets` a readable time, because the reference screenshot makes the model draw digits every time.
+- The Hebrew `limits-timeline` had its Mario label words painted back into right-to-left order.
+- `agi-money-loop` has no pt-br copy: its labels read the same in Portuguese.
+
+## Share card
+
+`og` is generated at 16:9 like the diagrams, then cropped to `src/assets/img/og.jpg` (1200x630, JPEG, under 300 KB so WhatsApp shows the preview): `magick src/assets/img/gen/og.webp -resize 1200x630^ -gravity center -extent 1200x630 -quality 86 src/assets/img/og.jpg`. Its alt text is `site.ogAlt` in `common.json`.
+
+## Favicon
+
+`public/favicon.svg` is drawn by hand: the weary round-faced robot from the book cover (a silver dome, green eyes under heavy lids, a small frown) in a brass ring on the navy ground. `public/apple-touch-icon.png` is the same SVG rendered at 180 px: `magick -background none -density 600 public/favicon.svg -resize 180x180 public/apple-touch-icon.png`.
 
 ## Screenshots
 

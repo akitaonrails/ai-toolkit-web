@@ -9,15 +9,15 @@ const { t, dir } = useI18n(Astro, 'agi');
 
 type Node = { id: string; name: string; x: number; y: number; hue: Hue };
 const nodes: Node[] = [
-  { id: 'goodVentures', name: 'Good Ventures', x: 190, y: 110, hue: 'amber' },
-  { id: 'dey', name: 'DEY.', x: 600, y: 110, hue: 'orange' },
-  { id: 'tallinn', name: 'Jaan Tallinn · SFF', x: 1010, y: 110, hue: 'amber' },
-  { id: 'coefficient', name: 'Coefficient Giving', x: 190, y: 370, hue: 'amber' },
-  { id: 'anthropic', name: 'Anthropic', x: 600, y: 370, hue: 'rose' },
-  { id: 'groups', name: t('network.groupsName'), x: 1010, y: 370, hue: 'orange' },
-  { id: 'karnofsky', name: 'Holden Karnofsky', x: 190, y: 630, hue: 'violet' },
-  { id: 'daniela', name: 'Daniela Amodei', x: 600, y: 630, hue: 'violet' },
-  { id: 'coxon', name: 'Jacob Coxon', x: 1010, y: 630, hue: 'red' },
+  { id: 'goodVentures', name: 'Good Ventures', x: 190, y: 110, hue: 'jade' },
+  { id: 'dey', name: 'DEY.', x: 600, y: 110, hue: 'copper' },
+  { id: 'tallinn', name: 'Jaan Tallinn · SFF', x: 1010, y: 110, hue: 'jade' },
+  { id: 'coefficient', name: 'Coefficient Giving', x: 190, y: 370, hue: 'jade' },
+  { id: 'anthropic', name: 'Anthropic', x: 600, y: 370, hue: 'mauve' },
+  { id: 'groups', name: t('network.groupsName'), x: 1010, y: 370, hue: 'copper' },
+  { id: 'karnofsky', name: 'Holden Karnofsky', x: 190, y: 630, hue: 'amethyst' },
+  { id: 'daniela', name: 'Daniela Amodei', x: 600, y: 630, hue: 'amethyst' },
+  { id: 'coxon', name: 'Jacob Coxon', x: 1010, y: 630, hue: 'pennant' },
 ];
 const at = Object.fromEntries(nodes.map((n) => [n.id, n]));
 const W = 300, H = 92;
@@ -82,7 +82,7 @@ const mid = (e: Edge) => ({ x: e.lx ?? (at[e.from].x + at[e.to].x) / 2, y: e.ly 
   .edge-label.reported { font-style: italic; }
   .node rect { fill: var(--ink-raised); stroke: var(--hue-vivid); stroke-width: 2.5; filter: drop-shadow(0 0 10px var(--hue-soft)); }
   .node .dot { fill: var(--hue-vivid); }
-  .node-name { font: 700 24px var(--font-display); fill: var(--text); }
+  .node-name { font: 700 24px var(--font-sign); fill: var(--text); }
   .node-note { font: 500 17px var(--font-sans); fill: var(--muted); }
   .net-list { display: grid; gap: 0.6rem; border-inline-start: 3px solid var(--line); padding-inline-start: 1rem; }
   .net-list li.reported { border-inline-start: 2px dashed var(--line); padding-inline-start: 0.6rem; font-style: italic; }

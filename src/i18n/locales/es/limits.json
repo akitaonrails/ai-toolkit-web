@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinión",
     "title": "Los límites de los LLMs",
-    "lede": "PhotoCraft, REA y un port de juego nuevo cada semana convencieron a mucha gente de que Adobe murió y los programadores son los siguientes. Leí el código y los números. Siete puntos breves sobre lo que la IA copia bien y lo que no puede copiar.",
+    "lede": "PhotoCraft, un editor de imágenes inicial construido con IA, REA, un toolkit de ingeniería inversa, y un port nuevo de juego retro cada semana convencieron a mucha gente de que Adobe murió y los programadores son los siguientes. Leí el código y los números.",
     "primary": "Ir a las conclusiones",
     "secondary": "La versión larga en mi blog"
   },
@@ -26,8 +26,8 @@
       },
       "points": [
         "Por eso una sola persona ya puede sacar un cliente nativo de Spotify o WhatsApp en Rust. El servicio, las bibliotecas y el camino ya existían. Volver a recorrer un camino conocido se volvió barato.",
-        "El código que paga sueldos es casi todo privado. Ningún modelo lo vio, y ningún modelo puede adivinarlo.",
-        "Donde no existe nada parecido, el agente cae en prueba y error. Ayuda lo que al modelo le falta: referencias que nadie publicó, un oráculo que diga qué está bien y tests con metas objetivas."
+        "El código que paga sueldos es casi todo privado. Un modelo general no fue entrenado con él por defecto. Puede analizar el código que entregues mediante una herramienta aprobada, con el contexto y los controles de acceso adecuados.",
+        "Donde no existe nada parecido, el agente cae en prueba y error. Necesita referencias no publicadas, tests y una comprobación objetiva, a menudo llamada oráculo, que diga si el resultado es correcto."
       ],
       "sources": {
         "octoverse": "GitHub Octoverse 2025: 81,5 % privado",
@@ -172,9 +172,10 @@
       "La captura de un clon es fácil. Los servicios en la nube, los datos y las licencias no están en ningún binario.",
       "La reescritura de Bun necesitó a su autor, su código fuente, sus tests y 165.000 dólares.",
       "Los mejores modelos casi no se abarataron, y convergieron.",
-      "El trabajo que creció es el criterio: tests, oráculos y revisión."
+      "El trabajo que creció es el criterio: tests, comprobaciones objetivas llamadas oráculos y revisión."
     ]
   },
+  "contentsTitle": "En esta página",
   "next": [
     {
       "title": "Por qué la AGI no importa",

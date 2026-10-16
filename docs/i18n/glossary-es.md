@@ -111,3 +111,8 @@ Decisions for the Spanish (neutral, "tú") catalogs beyond the table in `docs/re
 | fact-check (verb) | verificar los hechos |
 | build (book build) | build |
 | regression suite | suite de regresión |
+| fair map / pavilion | mapa de la feria / pabellón |
+| Book Tower / Hall of Opinions / Hall of Machines / The Workshop | Torre del Libro / Salón de Opiniones / Salón de Máquinas / El Taller |
+| Broadcast Tower / Press House / Control Room / The Arcade | Torre de Transmisión / Casa de Prensa / Sala de Control / Salón de Juegos |
+| Plaza 42 / Information | Plaza 42 / Información |
+| Mostly harmless. (footer) | Fundamentalmente inofensivo. (Earth entry in the Spanish translation: "Fundamentalmente inofensiva") |

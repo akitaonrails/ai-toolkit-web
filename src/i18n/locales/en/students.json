@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinion",
     "title": "AI and students",
-    "lede": "I'm a senior and I vibe code 100%. If you're a student or a junior, don't copy me yet. Nine short points on why, and where to start.",
+    "lede": "I use AI for most of my coding because I spent decades learning the foundations first. Students and beginners need a different approach: use AI to support the work without handing over the thinking.",
     "primary": "What to do",
     "secondary": "The Akitando archive"
   },
@@ -23,7 +23,7 @@
       "lede": "The same tool gives a senior more good work, faster, and gives a beginner more of whatever the beginner has, mistakes included.",
       "alt": "Two rows: a thin knowledge stack labeled Junior, multiplied by × AI, gives one tiny output card; a tall knowledge stack labeled Senior, multiplied by the same × AI, gives a tall stack of output.",
       "points": [
-        "AI is your mirror. If you're incompetent, it produces bad things faster. If you're competent, it produces good things faster.",
+        "AI can multiply mistakes when the foundations are weak. With strong foundations, it can multiply useful work.",
         "People who understand operating systems, databases, networks, data structures and compilers use agents as an exoskeleton. People who don't use them as a crutch. An exoskeleton amplifies strength; a crutch only hides weakness.",
         "Google's DORA 2025 report found the same in teams: \"AI doesn't fix a team; it amplifies what's already there.\"",
         "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the code samples failed security tests and introduced OWASP Top 10 vulnerabilities.",
@@ -85,7 +85,7 @@
     },
     "market": {
       "kicker": "4. The market",
-      "title": "The jobs left go to people who can judge the output",
+      "title": "The entry-level path is narrower",
       "lede": "Companies still hire people who can review and decide. They hire far fewer beginners to type.",
       "stats": {
         "newGrads": "less new-grad hiring at the big tech companies than in 2019",
@@ -222,7 +222,7 @@
       "AI multiplies what you already know. With little to multiply, you get very little.",
       "Shortcuts sold as careers already had one crash. The new one is the same promise.",
       "Learning on autopilot doesn't stick. The studies so far agree.",
-      "The jobs left go to people who can judge the output, and entry-level hiring is shrinking.",
+      "The work that remains valuable needs people who can judge the output, while entry-level hiring is shrinking.",
       "AI can't guess your goal, your limits or your trade-offs. Knowing them is the job.",
       "In my benchmark, giving the model tests changed the results. Pick the language that fits the problem.",
       "AI replicates what's public. The gaps it leaves, in private and new work, are the job, and the hard foundations are how you fill them.",

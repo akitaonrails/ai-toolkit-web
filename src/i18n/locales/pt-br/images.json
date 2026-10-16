@@ -34,8 +34,7 @@
     "Your repos": "Seus repos",
     "One digest": "Uma lista",
     "Fork": "Fork",
-    "Upstream": "Upstream",
-    "follows pull requests on the original project": "segue os pull requests no projeto original"
+    "Upstream": "Upstream"
   },
   "tclock-widgets": {
     "Any command": "Qualquer comando"

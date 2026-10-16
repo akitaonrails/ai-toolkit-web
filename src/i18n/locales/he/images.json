@@ -34,8 +34,7 @@
     "Your repos": "המאגרים שלכם",
     "One digest": "תקציר אחד",
     "Fork": "ה-fork",
-    "Upstream": "המקור",
-    "follows pull requests on the original project": "עוקב אחרי pull requests בפרויקט המקורי"
+    "Upstream": "המקור"
   },
   "tclock-widgets": {
     "Any command": "כל פקודה"

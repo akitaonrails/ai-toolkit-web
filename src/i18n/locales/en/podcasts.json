@@ -19,6 +19,7 @@
   "watch": "Watch on YouTube",
   "items": {
     "7uFqDMwQ4_8": "A segment on SBT News's News Manhã. The UN General Assembly took up the risks of AI this week, and I talked about the warnings from the AI companies themselves, the risks to global security, and AI and deepfakes in the Brazilian elections.",
+    "N3eU-2VIByQ": "Four hours on AI and programming in practice: where ChatGPT is headed, the controversies around today's developers, mistakes that can end a career, old-school Brazilian hacking, and a detour through games and absurd hardware.",
     "U3bZavG8qQY": "Lessons from 37 days of full immersion in vibe coding: 653 commits, about 144,000 lines and 8 projects in production. What agents can and cannot do, which business models make sense, and why the one-shot prompt is a myth.",
     "4c7pbOxYn_A": "Almost five hours on how AI changed in a year: the tipping point, what the owners of the biggest models do not say, why dumb questions burn more tokens, jobs, and which AI is best for programmers.",
     "9aWa-eCmWYE": "The end of the hype era. Why excitement about AI is inversely proportional to knowing how it works, and how I used frontier models to multiply my output on seven real projects without replacing the engineer.",
@@ -42,9 +43,10 @@
     "open": "Open the playlist on YouTube"
   },
   "cuts": {
-    "title": "Cortes do Flow",
-    "lede": "The Flow team cut both episodes into short clips on their Cortes do Flow channel. If four hours is too much, start here.",
+    "title": "Flow clips and shorts",
+    "lede": "The Flow team turns each full episode into shorter clips. If four hours is too much, start here.",
     "episode": {
+      "N3eU-2VIByQ": "From Flow #663, October 2026",
       "4c7pbOxYn_A": "From Flow #588, April 2026",
       "sf4Gxf0LiKo": "From the June 2025 episode"
     },

@@ -30,27 +30,27 @@ const [tuiSurface, ...trays] = withText([{ src: tui }, { src: mac }, { src: win 
 // The tray captures are cropped at card boundaries (docs/sources.md, section 7). Column widths follow each image's
 // aspect ratio, so the three frames come out exactly the same height.
 const trayCols = trays.map((s) => `${(s.src.width / s.src.height).toFixed(3)}fr`).join(' ');
-const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'blue' as const }));
-const next = withText([{ hue: 'violet', href: '/workflow/' }, { hue: 'amber', href: '/ghpending/' }, { hue: 'red', href: '/clock-tui/' }] as const, raw<Text[]>('next'));
+const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'cerulean' as const }));
+const next = withText([{ hue: 'amethyst', href: '/workflow/' }, { hue: 'jade', href: '/ghpending/' }, { hue: 'pennant', href: '/clock-tui/' }] as const, raw<Text[]>('next'));
 const info = await repo('usagebar');
 const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.description'), repo: repoUrl('usagebar'), os: 'Linux, macOS, Windows', version: info.release?.tag, home: new URL('/', site.url).href });
 ---
 <Base title={t('meta.title')} description={t('meta.description')} schema={[schema]}>
-  <PageHero hue="blue" kicker={t('kicker.usagebar')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="usagebar" hue="cerulean" kicker={t('kicker.usagebar')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#install" class="btn btn-primary">{t('hero.primary')}</a>
     <a href={repoUrl('usagebar')} class="btn btn-ghost">GitHub</a>
   </PageHero>
-  <div class="wrap" data-hue="blue">
+  <div class="wrap after-hero" data-hue="cerulean">
     <RepoMeta id="usagebar" />
     <div class="mt-10"><Shot src={panel} alt={t('hero.shotAlt')} eager zoom={false} /></div>
   </div>
 
-  <Section title={t('why.title')} lede={t('why.lede')} hue="blue" fill>
+  <Section title={t('why.title')} lede={t('why.lede')} hue="cerulean" fill>
     <Figure name="usagebar-providers" alt={t('why.alt')} />
     <a href={href('/workflow/')} class="btn btn-ghost">{t('why.link')}</a>
   </Section>
 
-  <Section title={t('surfaces.title')} lede={t('surfaces.lede')} hue="blue" tint>
+  <Section title={t('surfaces.title')} lede={t('surfaces.lede')} hue="cerulean" tint>
     <Shot src={tuiSurface.src} alt={tuiSurface.alt} />
     <h3 class="text-xl mt-6">{tuiSurface.title}</h3>
     <p class="mt-2 text-muted max-w-[40em]" set:html={tuiSurface.text} />
@@ -65,17 +65,17 @@ const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.descripti
     </div>
   </Section>
 
-  <Section title={t('features.title')} hue="blue">
+  <Section title={t('features.title')} hue="cerulean">
     <FeatureGrid items={features} />
   </Section>
 
-  <Section title={t('providers.title')} lede={t('providers.lede')} hue="blue" tint>
+  <Section title={t('providers.title')} lede={t('providers.lede')} hue="cerulean" tint>
     <ul class="flex flex-wrap gap-2.5" data-reveal="children">
       {providers.map((p) => <li class="badge !text-[0.95rem] !py-1.5 !px-3.5">{p}</li>)}
     </ul>
   </Section>
 
-  <Section title={t('install.title')} lede={t('install.lede')} hue="blue" id="install">
+  <Section title={t('install.title')} lede={t('install.lede')} hue="cerulean" id="install">
     <Tabs id="usagebar-install" labels={raw<string[]>('install.tabs')}>
       <div slot="0" class="max-w-3xl"><CodeBlock code={install[0]} /></div>
       <div slot="1" class="max-w-3xl"><CodeBlock code={install[1]} /></div>
@@ -88,7 +88,7 @@ const schema = softwareApp({ name: 'ai-usagebar', description: t('meta.descripti
     <a href={`${repoUrl('usagebar')}#readme`} class="btn btn-ghost mt-8">{t('install.readme')}</a>
   </Section>
 
-  <Related ids={related.usagebar} hue="blue" />
+  <Related ids={related.usagebar} hue="cerulean" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />

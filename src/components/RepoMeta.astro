@@ -14,7 +14,7 @@ const info = await repo(id);
   {info.release && <li><a href={`${repoUrl(id)}/releases/latest`} class="hover:text-text">{t('repo.release', { tag: info.release.tag })}</a></li>}
 </ul>
 <style>
-  .repo-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: var(--text-sm); color: var(--muted); font-family: var(--font-mono); }
+  .repo-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: var(--text-sm); color: var(--muted); font-family: var(--font-sign); }
   .repo-meta li { display: inline-flex; align-items: center; gap: 0.45rem; }
-  .repo-meta li::before { content: ''; inline-size: 0.4rem; block-size: 0.4rem; border-radius: 99px; background: var(--hue-vivid, var(--v-green)); }
+  .repo-meta li::before { content: ''; inline-size: 0.4rem; block-size: 0.4rem; rotate: 45deg; background: var(--hue-vivid, var(--v-brass)); }
 </style>

@@ -23,8 +23,8 @@ export const getStaticPaths = localePaths;
 
 const { t, raw } = useI18n(Astro, 'tclock');
 type Text = { title: string; text: string };
-const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'red' as const }));
-const next = withText([{ hue: 'amber', href: '/ghpending/' }, { hue: 'violet', href: '/workflow/' }, { hue: 'blue', href: '/ai-usagebar/' }] as const, raw<Text[]>('next'));
+const features = raw<Text[]>('features.items').map((f) => ({ ...f, hue: 'pennant' as const }));
+const next = withText([{ hue: 'jade', href: '/ghpending/' }, { hue: 'amethyst', href: '/workflow/' }, { hue: 'cerulean', href: '/ai-usagebar/' }] as const, raw<Text[]>('next'));
 // The owner's real config, trimmed (mount exclusions removed). Keep in step with docs/sources.md.
 const config = `[clock]
 widget_themes = ["nerv", "evangelion", "default"]
@@ -55,11 +55,11 @@ const info = await repo('tclock');
 const schema = softwareApp({ name: 'tclock (clock-tui)', description: t('meta.description'), repo: repoUrl('tclock'), os: 'Linux', version: info.release?.tag, home: new URL('/', site.url).href });
 ---
 <Base title={t('meta.title')} description={t('meta.description')} schema={[schema]}>
-  <PageHero hue="red" kicker={t('kicker.tclock')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="tclock" hue="pennant" kicker={t('kicker.tclock')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#install" class="btn btn-primary">{t('hero.primary')}</a>
     <a href={repoUrl('tclock')} class="btn btn-ghost">GitHub</a>
   </PageHero>
-  <div class="wrap" data-hue="red">
+  <div class="wrap after-hero" data-hue="pennant">
     <RepoMeta id="tclock" />
     <div class="grid gap-6 md:grid-cols-2 mt-10">
       <Shot src={eva} alt={t('hero.evaAlt')} eager zoom={false} sizes="(min-width: 768px) 38rem, 94vw" />
@@ -68,19 +68,19 @@ const schema = softwareApp({ name: 'tclock (clock-tui)', description: t('meta.de
     <p class="mt-4 text-muted text-[0.95rem]">{t('hero.caption')}</p>
   </div>
 
-  <Section title={t('widgets.title')} lede={t('widgets.lede')} hue="red" fill>
+  <Section title={t('widgets.title')} lede={t('widgets.lede')} hue="pennant" fill>
     <Figure name="tclock-widgets" alt={t('widgets.alt')} />
   </Section>
 
-  <Section title={t('config.title')} lede={t('config.lede')} hue="red" tint>
+  <Section title={t('config.title')} lede={t('config.lede')} hue="pennant" tint>
     <div class="max-w-3xl"><CodeBlock title={t('config.codeTitle')} code={config} /></div>
   </Section>
 
-  <Section title={t('features.title')} hue="red">
+  <Section title={t('features.title')} hue="pennant">
     <FeatureGrid items={features} />
   </Section>
 
-  <Section title={t('modes.title')} lede={t('modes.lede')} hue="red" tint>
+  <Section title={t('modes.title')} lede={t('modes.lede')} hue="pennant" tint>
     <div class="grid gap-8 md:grid-cols-2">
       <Clip src="/media/tclock-clock.mp4" poster="/media/tclock-clock.jpg" width={1714} height={876} label={t('modes.clockLabel')} />
       <Clip src="/media/tclock-timer.mp4" poster="/media/tclock-timer.jpg" width={1714} height={876} label={t('modes.timerLabel')} />
@@ -88,7 +88,7 @@ const schema = softwareApp({ name: 'tclock (clock-tui)', description: t('meta.de
     <div class="max-w-3xl mt-10"><CodeBlock title={t('modes.codeTitle')} code={examples} /></div>
   </Section>
 
-  <Section title={t('install.title')} hue="red" id="install">
+  <Section title={t('install.title')} hue="pennant" id="install">
     <Tabs id="tclock-install" labels={raw<string[]>('install.tabs')}>
       <div slot="0" class="max-w-3xl"><CodeBlock code={install[0]} /></div>
       <div slot="1" class="max-w-3xl"><CodeBlock code={install[1]} /></div>
@@ -97,7 +97,7 @@ const schema = softwareApp({ name: 'tclock (clock-tui)', description: t('meta.de
     <p class="mt-10 text-muted max-w-[40em] prose-site" set:html={t('install.credit')} />
   </Section>
 
-  <Related ids={related.tclock} hue="red" />
+  <Related ids={related.tclock} hue="pennant" />
 
   <NextPages title={t('next.title')} items={next} />
   <CtaBand />

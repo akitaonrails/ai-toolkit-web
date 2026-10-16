@@ -80,31 +80,32 @@ const localeFonts = { he: fontsHe, ja: fontsJa, ko: fontsKo }[locale as string];
     font-family: var(--font-sans); font-size: 30px; line-height: 1.45;
   }
   .slide:last-child { break-after: auto; }
-  .slide .rule { position: absolute; inset-inline: 0; top: 0; inline-size: auto; border-radius: 0; block-size: 10px; background: var(--hue-vivid, var(--v-green)); }
+  /* Every slide opens under the fair's double rule, in the essay's pavilion color. */
+  .slide .rule { position: absolute; inset-inline: 0; top: 0; inline-size: auto; border-radius: 0; block-size: 14px; border-block: 4px solid var(--hue-vivid, var(--v-brass)); background: none; }
   .slide-foot {
     position: absolute; inset-inline: 128px; bottom: 44px; display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--font-mono); font-size: 20px; color: var(--muted);
+    font-family: var(--font-sign); font-size: 20px; color: var(--muted);
   }
   .slide-foot .n::after { content: counter(slide); }
-  .slide .kicker { font-family: var(--font-mono); font-size: 26px; color: var(--hue); display: flex; align-items: center; gap: 14px; }
-  .slide .kicker .dot { inline-size: 16px; block-size: 16px; border-radius: 99px; background: var(--hue-vivid); }
+  .slide .kicker { font-family: var(--font-sign); font-weight: 600; letter-spacing: 0.04em; font-size: 26px; color: var(--hue); display: flex; align-items: center; gap: 14px; }
+  .slide .kicker .dot { inline-size: 14px; block-size: 14px; rotate: 45deg; background: var(--hue-vivid); }
   .slide h1 { font-size: 112px; line-height: 1.02; margin: 28px 0 0; max-width: 15em; }
   .slide h2 { font-size: 68px; line-height: 1.06; margin: 20px 0 0; max-width: 20em; }
   .slide h2.small { font-size: 46px; }
   .slide .lede { font-size: 34px; line-height: 1.4; color: var(--muted); margin: 28px 0 0; max-width: 32em; }
   .slide .points { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 26px; }
   .slide .points li { position: relative; padding-inline-start: 38px; font-size: 30px; line-height: 1.42; }
-  .slide .points li::before { content: ''; position: absolute; inset-inline-start: 4px; top: 0.55em; inline-size: 14px; block-size: 14px; border-radius: 99px; background: var(--hue-vivid); }
+  .slide .points li::before { content: ''; position: absolute; inset-inline-start: 6px; top: 0.6em; inline-size: 11px; block-size: 11px; rotate: 45deg; background: var(--hue-vivid); }
   .slide .points.two { grid-template-columns: 1fr 1fr; column-gap: 72px; }
-  .slide blockquote.q { margin: 40px 0 0; padding-inline-start: 34px; border-inline-start: 6px solid var(--hue-vivid); }
-  .slide blockquote.q p { margin: 0; font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 40px; line-height: 1.2; }
+  .slide blockquote.q { margin: 40px 0 0; padding-inline-start: 34px; border-inline-start: 8px double var(--hue-vivid); }
+  .slide blockquote.q p { margin: 0; font-family: var(--font-sans); font-style: italic; font-weight: 600; font-size: 40px; line-height: 1.25; }
   .slide blockquote.q .orig { margin-top: 14px; font-family: var(--font-sans); font-weight: 400; font-style: italic; font-size: 26px; color: var(--muted); line-height: 1.35; }
-  .slide blockquote.q .cite { margin-top: 12px; font-family: var(--font-mono); font-size: 22px; color: var(--muted); }
+  .slide blockquote.q .cite { margin-top: 12px; font-family: var(--font-sign); font-weight: 600; font-size: 22px; color: var(--muted); }
   .slide figure { margin: 0; }
   .slide .fig img { display: block; inline-size: 100%; block-size: auto; border-radius: 24px; border: 1px solid var(--line); }
   .slide .stats { display: grid; gap: 36px; margin-top: 36px; }
   .slide .stat { border-top: 6px solid var(--hue-vivid); padding-top: 18px; }
-  .slide .stat b { display: block; font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: 76px; line-height: 1; color: var(--hue); }
+  .slide .stat b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 76px; line-height: 1; color: var(--hue); }
   .slide .stat span { display: block; margin-top: 12px; font-size: 26px; line-height: 1.35; color: var(--muted); }
   .slide a { color: inherit; text-decoration: none; }
   .slide .links { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; font-size: 26px; line-height: 1.35; }

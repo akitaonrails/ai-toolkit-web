@@ -2,7 +2,7 @@
   "site": {
     "tagline": "As ferramentas, o workflow e os textos por trás de como eu trabalho com IA",
     "description": "O covil de ferramentas open source de IA do Fabio Akita: ai-usagebar, ghpending, tclock, skills de agentes e ai-memory, além do benchmark de LLMs e dos posts.",
-    "ogAlt": "Akita's AI Lair: ferramentas, workflow e textos. Um pequeno dashboard com um relógio de pixels vermelho, uma lista âmbar, um medidor azul e um chip violeta.",
+    "ogAlt": "Akita's AI Lair: ferramentas, fluxo de trabalho e textos. Um cartaz de Feira Mundial: um robô gigante e cansado atrás de um pavilhão escalonado, raios dourados e flâmulas vermelhas.",
     "homeTitle": "Akita's AI Lair: ferramentas de IA e benchmarks de LLM"
   },
   "a11y": {
@@ -39,8 +39,11 @@
       "note": "Experimentos pras minhas próprias coceiras"
     },
     "writing": {
-      "label": "Textos",
+      "label": "Blog e benchmark",
       "note": "O blog e o benchmark de LLMs"
+    },
+    "learn": {
+      "label": "Aprenda"
     },
     "newsletter": {
       "label": "Newsletter",
@@ -87,7 +90,7 @@
     },
     "book": {
       "label": "Competente o Suficiente, o livro",
-      "note": "Um ano colocando a IA à prova"
+      "note": "AGI, empregos e aprendizado sem medo nem propaganda"
     }
   },
   "kicker": {
@@ -119,7 +122,13 @@
     "title": "Tudo aqui é open source",
     "text": "As ferramentas, as skills e o benchmark são repositórios públicos. Faça um fork e monte a versão que encaixa no seu jeito de trabalhar.",
     "github": "Ver todos os meus repositórios",
-    "blog": "Ler o blog"
+    "blog": "Ler o blog",
+    "learn": {
+      "title": "Continue aprendendo sem propaganda",
+      "text": "O livro gratuito conecta os argumentos sobre AGI, empregos, educação e uso prático. O workflow mostra como eu aplico essas ideias no trabalho de verdade.",
+      "primary": "Ler o livro gratuito",
+      "secondary": "Ver o workflow"
+    }
   },
   "social": {
     "title": "Onde me seguir",
@@ -152,6 +161,7 @@
   "footer": {
     "about": "As ferramentas que eu fiz e como eu uso cada uma. Sem patrocinadores, sem anúncios, sem assinaturas pagas: faço isso por puro prazer.",
     "tools": "Ferramentas",
+    "learn": "Aprenda",
     "more": "Mais",
     "sisters": "Sites irmãos",
     "theme": {
@@ -161,7 +171,8 @@
     },
     "cookieSettings": "Configurar cookies",
     "contact": "Contato",
-    "rights": "Todos os direitos reservados. Cada ferramenta mantém sua própria licença open source."
+    "rights": "Todos os direitos reservados. Cada ferramenta mantém sua própria licença open source.",
+    "harmless": "Praticamente inofensivo."
   },
   "notfound": {
     "title": "Nada pendente aqui",
@@ -175,7 +186,7 @@
     "accept": "Aceitar"
   },
   "deck": {
-    "download": "Mande pro seu chefe",
+    "download": "Baixar o resumo em PDF",
     "format": "slides em PDF"
   },
   "carousel": {

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-27T16:56:48.381Z",
+  "fetchedAt": "2026-10-15T18:40:48.993Z",
   "tv": [
     {
       "id": "7uFqDMwQ4_8",
@@ -7,7 +7,7 @@
       "channel": "SBT News",
       "date": "2026-09-25",
       "duration": "17:34",
-      "views": 29825
+      "views": 39465
     }
   ],
   "akitando": [
@@ -17,7 +17,7 @@
       "channel": "Fabio Akita",
       "date": "2020-02-19",
       "duration": "32:22",
-      "views": 340499
+      "views": 341824
     },
     {
       "id": "oUPaJxk6TZ0",
@@ -25,7 +25,7 @@
       "channel": "Fabio Akita",
       "date": "2020-04-01",
       "duration": "1:04:37",
-      "views": 1246599
+      "views": 1253815
     },
     {
       "id": "8G80nuEyDN4",
@@ -33,7 +33,7 @@
       "channel": "Fabio Akita",
       "date": "2020-06-04",
       "duration": "1:18:28",
-      "views": 389082
+      "views": 392677
     },
     {
       "id": "Gp2m8ZuXoPg",
@@ -41,7 +41,7 @@
       "channel": "Fabio Akita",
       "date": "2021-03-06",
       "duration": "1:09:22",
-      "views": 316529
+      "views": 318066
     },
     {
       "id": "SNyh-cubxaU",
@@ -49,7 +49,7 @@
       "channel": "Fabio Akita",
       "date": "2022-04-15",
       "duration": "1:11:44",
-      "views": 195212
+      "views": 196379
     },
     {
       "id": "0TndL-Nh6Ok",
@@ -57,17 +57,25 @@
       "channel": "Fabio Akita",
       "date": "2022-07-01",
       "duration": "37:59",
-      "views": 309208
+      "views": 314593
     }
   ],
   "appearances": [
+    {
+      "id": "N3eU-2VIByQ",
+      "title": "FABIO AKITA - Flow #663",
+      "channel": "Flow Podcast",
+      "date": "2026-10-15",
+      "duration": "4:17:27",
+      "views": 411719
+    },
     {
       "id": "U3bZavG8qQY",
       "title": "Fabio Akita: Minha Experiência com Agile Vibe Coding",
       "channel": "Tropical on Rails",
       "date": "2026-05-28",
       "duration": "58:50",
-      "views": 120650
+      "views": 126278
     },
     {
       "id": "4c7pbOxYn_A",
@@ -75,7 +83,7 @@
       "channel": "Flow Podcast",
       "date": "2026-04-14",
       "duration": "4:44:12",
-      "views": 690964
+      "views": 712706
     },
     {
       "id": "9aWa-eCmWYE",
@@ -83,7 +91,7 @@
       "channel": "Fernando Ulrich",
       "date": "2026-03-08",
       "duration": "1:27:18",
-      "views": 328072
+      "views": 331626
     },
     {
       "id": "_Hl9wiLkns4",
@@ -91,7 +99,7 @@
       "channel": "Inteligência Ltda",
       "date": "2025-07-10",
       "duration": "4:25:25",
-      "views": 382240
+      "views": 384511
     },
     {
       "id": "sf4Gxf0LiKo",
@@ -99,10 +107,76 @@
       "channel": "Flow Podcast",
       "date": "2025-06-14",
       "duration": "4:40:55",
-      "views": 767958
+      "views": 771037
     }
   ],
   "cuts": {
+    "N3eU-2VIByQ": [
+      {
+        "id": "hki3MH4AhVQ",
+        "title": "PLAYSTATION 5 DESBLOQUEADO: FABIO AKITA SE EMPOLGOU DEMAIS no FLOW",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "32:58",
+        "views": 176324
+      },
+      {
+        "id": "keS_2MNwiK8",
+        "title": "AGORA A COISA FICOU SÉRIA: É O FIM do CHAT GPT? [com FABIO AKITA]",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "15:41",
+        "views": 48598
+      },
+      {
+        "id": "qXaRnsm368s",
+        "title": "\"NÃO TEM MAIS O QUE FAZER\": A NOVA POLÊMICA dos DESENVOLVEDORES no MUNDO da PROGRAMAÇÃO [com AKITA]",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "21:57",
+        "views": 48226
+      },
+      {
+        "id": "Mf6Pe8GS6BQ",
+        "title": "O SIMPLES ERRO de PROGRAMAÇÃO que PODE ACABAR COM A VIDA do DESENVOLVEDOR [com FABIO AKITA]",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "19:22",
+        "views": 39027
+      },
+      {
+        "id": "V31Z144dqWE",
+        "title": "FABIO AKITA EXPÕE PELA 1ª VEZ O TRUQUE + ANTIGO dos PRIMEIROS HACKERS BRASILEIROS",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "17:25",
+        "views": 25592
+      },
+      {
+        "id": "ESXYzDUNPm4",
+        "title": "FABIO AKITA TESTA e ANALISA AO VIVO O JOGO que o IGOR CRIOU",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "24:49",
+        "views": 13658
+      },
+      {
+        "id": "lY_jnxJ-0VQ",
+        "title": "O PROBLEMA REAL da INTELIGÊNCIA ARTIFICIAL que ESTÁ PRESTES A EXPLODIR...",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "15:31",
+        "views": 11159
+      },
+      {
+        "id": "BtwTBz_VF8k",
+        "title": "\"SÓ 100 MIL REAIS\": QUAL A PLACA DE VÍDEO + APELONA de 2026? [com FABIO AKITA]",
+        "channel": "Talk Flow",
+        "date": "2026-10-15",
+        "duration": "16:48",
+        "views": 4919
+      }
+    ],
     "4c7pbOxYn_A": [
       {
         "id": "-HIrbrd-O5A",
@@ -110,7 +184,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-15",
         "duration": "17:24",
-        "views": 73114
+        "views": 73930
       },
       {
         "id": "Coi2-MBtkH8",
@@ -118,7 +192,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:30",
-        "views": 134409
+        "views": 142528
       },
       {
         "id": "fwYzEDPtdA0",
@@ -126,7 +200,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "10:16",
-        "views": 126451
+        "views": 127002
       },
       {
         "id": "5nKAHOSSgqY",
@@ -134,7 +208,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:20",
-        "views": 79650
+        "views": 82850
       },
       {
         "id": "xIjInGjJLFE",
@@ -142,7 +216,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:51",
-        "views": 40312
+        "views": 40524
       },
       {
         "id": "JmmrjgHFErQ",
@@ -150,7 +224,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:25",
-        "views": 37223
+        "views": 37808
       },
       {
         "id": "hJ2hqU0Cvmo",
@@ -158,7 +232,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "13:46",
-        "views": 32302
+        "views": 34662
       },
       {
         "id": "UJrT-KieiiQ",
@@ -166,7 +240,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:35",
-        "views": 32171
+        "views": 32184
       },
       {
         "id": "9ArApZStyzI",
@@ -174,7 +248,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:20",
-        "views": 23667
+        "views": 24040
       },
       {
         "id": "7dAKzagCklo",
@@ -182,7 +256,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "13:43",
-        "views": 17553
+        "views": 19189
       },
       {
         "id": "U_-g8zGu6wM",
@@ -190,7 +264,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "15:14",
-        "views": 15653
+        "views": 15708
       },
       {
         "id": "jaL7rXRcj1o",
@@ -198,7 +272,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:04",
-        "views": 5967
+        "views": 5980
       },
       {
         "id": "7YRNS4Q6kb0",
@@ -206,7 +280,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "10:11",
-        "views": 5698
+        "views": 5745
       },
       {
         "id": "yBBkP2k0lKg",
@@ -214,7 +288,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "9:02",
-        "views": 5254
+        "views": 5288
       },
       {
         "id": "aA5nQJnOUxc",
@@ -222,7 +296,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:13",
-        "views": 3110
+        "views": 3120
       },
       {
         "id": "PWpUC8wEUY0",
@@ -230,7 +304,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:21",
-        "views": 2648
+        "views": 2687
       },
       {
         "id": "LhjqBaEuezg",
@@ -238,7 +312,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "11:29",
-        "views": 2171
+        "views": 2181
       },
       {
         "id": "v9xg3A_eiIA",
@@ -246,7 +320,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-14",
         "duration": "8:11",
-        "views": 1194
+        "views": 1202
       },
       {
         "id": "8dANZrq-z1I",
@@ -254,7 +328,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "16:17",
-        "views": 65259
+        "views": 66060
       },
       {
         "id": "ojCPRYw-AZ8",
@@ -262,7 +336,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "10:12",
-        "views": 44617
+        "views": 45349
       },
       {
         "id": "kJePoWn-DPk",
@@ -270,7 +344,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "8:25",
-        "views": 6136
+        "views": 6138
       },
       {
         "id": "xEh2xdW5Sus",
@@ -278,7 +352,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2026-04-13",
         "duration": "8:12",
-        "views": 3363
+        "views": 3367
       }
     ],
     "sf4Gxf0LiKo": [
@@ -288,7 +362,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "19:25",
-        "views": 143249
+        "views": 143266
       },
       {
         "id": "ZplyjiCon4M",
@@ -296,7 +370,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "10:16",
-        "views": 60579
+        "views": 60591
       },
       {
         "id": "PsNun0DABL8",
@@ -304,7 +378,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "14:33",
-        "views": 48613
+        "views": 48621
       },
       {
         "id": "1_9xn-_ExVI",
@@ -312,7 +386,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "10:31",
-        "views": 37143
+        "views": 37307
       },
       {
         "id": "uUKUa8_TdYo",
@@ -320,7 +394,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "12:19",
-        "views": 33199
+        "views": 33208
       },
       {
         "id": "3kheUdwa3ro",
@@ -328,7 +402,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-16",
         "duration": "12:32",
-        "views": 14344
+        "views": 14350
       },
       {
         "id": "x8XFQA6fNQU",
@@ -336,7 +410,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:03",
-        "views": 1417728
+        "views": 1420102
       },
       {
         "id": "3ss_RUZqS4E",
@@ -344,7 +418,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:16",
-        "views": 176899
+        "views": 176911
       },
       {
         "id": "exfagaBE8kQ",
@@ -352,7 +426,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "16:34",
-        "views": 77685
+        "views": 77706
       },
       {
         "id": "5qD5Do_HriQ",
@@ -360,7 +434,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "8:58",
-        "views": 66719
+        "views": 67354
       },
       {
         "id": "q_hZY_1QcoU",
@@ -368,7 +442,7 @@
         "channel": "Cortes do Flow [OFICIAL]",
         "date": "2025-06-14",
         "duration": "11:55",
-        "views": 39857
+        "views": 39873
       }
     ]
   }

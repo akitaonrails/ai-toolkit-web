@@ -5,14 +5,38 @@
   },
   "hero": {
     "title": "Como uma pessoa só mantém 40 repositórios andando",
-    "lede": "Toda manhã eu abro um agente por projeto no tmux, passo uma única linha e reviso o que volta. O trabalho pesado fica nas skills: prompts em texto puro que eu vou refinando.",
-    "primary": "Ler as skills",
+    "lede": "Toda manhã eu abro um agente de código com IA por projeto, passo uma única linha e reviso o que volta. Um agente de código consegue inspecionar arquivos, editar código e rodar verificações. Minhas instruções reutilizáveis são arquivos de texto puro chamados skills.",
+    "primary": "Comece pelo básico",
     "secondary": "Por que não copiar"
   },
+  "basics": {
+    "title": "A menor versão deste workflow",
+    "lede": "Meu setup completo cresceu com o tempo. Você pode começar com um projeto, uma tarefa e quatro hábitos.",
+    "items": [
+      {
+        "title": "Escolha uma tarefa limitada",
+        "text": "Escolha um trabalho com um final claro e um resultado que você consiga conferir. Mantenha a primeira mudança pequena o bastante pra revisar."
+      },
+      {
+        "title": "Escreva as restrições",
+        "text": "Diga ao agente o que precisa continuar verdadeiro, quais comandos verificam o trabalho e no que ele não deve mexer."
+      },
+      {
+        "title": "Revise a mudança",
+        "text": "Leia o diff, questione as suposições e rode as verificações do projeto. Uma pessoa continua responsável por aceitar a mudança."
+      },
+      {
+        "title": "Guarde a lição",
+        "text": "Transforme uma falha num teste ou numa regra escrita. A próxima sessão não deve repetir o mesmo erro."
+      }
+    ]
+  },
   "start": {
-    "title": "Uma linha pra começar o dia",
-    "lede": "Cada janela do tmux é um projeto. Eu inicio o agente pelo ai-memory, então ele já chega com a memória daquele projeto e os hooks ligados.",
-    "codeTitle": "uma janela do tmux, toda manhã",
+    "title": "O comando de onde eu começo",
+    "lede": "Esta é a minha configuração madura de engenharia. Cada janela do tmux é um projeto. O ai-memory inicia o agente com as decisões salvas e os hooks daquele projeto. O workflow mínimo acima não precisa de nada disso.",
+    "codeTitle": "minha configuração técnica exata",
+    "safetyTitle": "Rode isto dentro de um limite",
+    "safety": "Esta é a minha configuração pessoal. A flag --yolo só cabe num ambiente isolado, com backups, credenciais restritas e sem acesso a produção ou dados de clientes.",
     "prompts": "Depois eu digito uma de três linhas, dependendo de como está a fila:",
     "items": [
       {
@@ -29,9 +53,19 @@
       }
     ]
   },
+  "company": {
+    "title": "A versão do workflow para gestores",
+    "lede": "Os mesmos quatro hábitos funcionam fora do software. Trate o primeiro uso como um piloto controlado, com uma pessoa responsável.",
+    "items": [
+      "Escolha uma tarefa reversível com um resultado que a equipe consiga conferir.",
+      "Comece com dados não sensíveis. Revise retenção, treinamento, acesso, residência e exclusão do provedor antes de enviar dados da empresa.",
+      "Defina um teste de aceitação, um prazo e um orçamento antes de começar o piloto.",
+      "Meça qualidade, tempo economizado e taxa de falhas. Só amplie depois que o resultado se sustentar."
+    ]
+  },
   "pipeline": {
     "title": "O pipeline",
-    "lede": "Nada que um contribuidor escreve é aceito como verdade. Toda afirmação é checada, toda correção aprovada ganha um teste antes, e nada recebe tag sem CI verde naquele commit exato.",
+    "lede": "Toda afirmação é checada, seja de uma pessoa ou de um agente. Toda correção aprovada ganha um teste de regressão, e a release espera todas as verificações automatizadas passarem naquela versão exata.",
     "alt": "Um pipeline da esquerda pra direita: PRs e issues abertos se dividem em pr-audit e iss-audit, que se juntam depois de uma checagem Aprovado no github-resolution, depois pr-post-audit, depois release, depois Kaizen, com uma seta do Kaizen de volta pro início. Uma barra ai-memory corre por baixo de tudo.",
     "caption": "O pr-post-audit roda quando uma sessão resolveu mais de três tickets. A skill release só roda quando eu peço."
   },
@@ -97,7 +131,7 @@
     "codeTitle": "adicionando uma skill"
   },
   "copy": {
-    "title": "Por favor, não copie minhas skills",
+    "title": "Não instale isto às cegas",
     "text": "Elas são moldadas em volta dos meus projetos, das minhas linguagens e do meu nível de paranoia com supply chain. Rodar a skill de outra pessoa às cegas é instalar as instruções dela com as suas permissões, nos seus repositórios, com os seus tokens. Leia as minhas pra entender a estrutura e o raciocínio, e depois peça pro seu agente escrever as suas.",
     "link": "O post onde eu explico isso"
   },

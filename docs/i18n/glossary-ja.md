@@ -130,3 +130,8 @@ Terms decided while translating. One English term maps to one target term across
 | fact-check | ファクトチェック |
 | release notes | リリースノート |
 | without fear and without hype | 恐れもハイプもなしに |
+| fair map / pavilion | 博覧会の案内図 / パビリオン |
+| Book Tower / Hall of Opinions / Hall of Machines / The Workshop | 本の塔 / 意見館 / 機械館 / 工房 |
+| Broadcast Tower / Press House / Control Room / The Arcade | 放送塔 / 新聞館 / 管制室 / ゲームセンター |
+| Plaza 42 / Information | 42番広場 / 案内所 |
+| Mostly harmless. (footer) | ほとんど無害。(published title of book 5) |

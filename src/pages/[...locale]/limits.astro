@@ -8,6 +8,7 @@ import DeckLink from '@/components/DeckLink.astro';
 import Figure from '@/components/Figure.astro';
 import Stats from '@/components/Stats.astro';
 import PullQuote from '@/components/PullQuote.astro';
+import EssayNav from '@/components/EssayNav.astro';
 import Related from '@/components/Related.astro';
 import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
@@ -21,21 +22,30 @@ const { t, raw, locale } = useI18n(Astro, 'limits');
 type Text = { title: string; text: string };
 const s = (id: string, key: string) => t(`sections.${id}.${key}`);
 const has = (id: string, key: string) => key in raw<Record<string, unknown>>(`sections.${id}`);
-const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'amber', href: '/students/' }] as const, raw<Text[]>('next'));
+const next = withText([{ hue: 'pennant', href: '/agi/' }, { hue: 'jade', href: '/students/' }] as const, raw<Text[]>('next'));
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
-  <PageHero hue="blue" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
+  <PageHero pavilion="limits" hue="cerulean" kicker={t('hero.kicker')} title={t('hero.title')} lede={t('hero.lede')}>
     <a href="#takeaways" class="btn btn-primary">{t('hero.primary')}</a>
     <a href={articleUrl({ id: 'adobeRe', ...articles.adobeRe }, locale)} class="btn btn-ghost">{t('hero.secondary')}</a>
     <DeckLink deck="limits" />
   </PageHero>
 
-  <section class="wrap pb-8" data-hue="blue">
-    <PullQuote {...raw<{ text: string; original: string }>('motto')} large />
+  <section id="takeaways" class="band scroll-mt-16" data-hue="cerulean">
+    <div class="wrap">
+      <h2 class="text-3xl">{t('takeaways.title')}</h2>
+      <ol class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
+        {raw<string[]>('takeaways.items').map((item, i) => (
+          <li class="cell"><span class="font-sign font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
+        ))}
+      </ol>
+      <div class="mt-12"><DeckLink deck="limits" /></div>
+      <EssayNav label={t('contentsTitle')} items={limits.sections.map((sec) => ({ id: sec.id, title: s(sec.id, 'title') }))} />
+    </div>
   </section>
 
   {limits.sections.map((sec, i) => (
-    <section id={sec.id} data-hue="blue" class:list={['band scroll-mt-16', i % 2 === 1 && 'bg-tint']}>
+    <section id={sec.id} data-hue="cerulean" class:list={['band scroll-mt-16', i % 2 === 1 && 'bg-tint']}>
       <div class="wrap">
         <div class="kicker"><span class="dot" aria-hidden="true"></span>{s(sec.id, 'kicker')}</div>
         <h2 class="text-3xl mt-4 max-w-[18em]">{s(sec.id, 'title')}</h2>
@@ -67,18 +77,10 @@ const next = withText([{ hue: 'red', href: '/agi/' }, { hue: 'amber', href: '/st
     </section>
   ))}
 
-  <section id="takeaways" class="band scroll-mt-16" data-hue="blue">
-    <div class="wrap">
-      <h2 class="text-3xl">{t('takeaways.title')}</h2>
-      <ol class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-reveal="children">
-        {raw<string[]>('takeaways.items').map((item, i) => (
-          <li class="cell"><span class="font-display font-bold text-3xl" style="color:var(--hue)">{i + 1}</span><p class="mt-3 text-lg">{item}</p></li>
-        ))}
-      </ol>
-      <div class="mt-12"><DeckLink deck="limits" /></div>
-    </div>
+  <section class="wrap pb-16" data-hue="cerulean">
+    <PullQuote {...raw<{ text: string; original: string }>('motto')} large />
   </section>
 
   <NextPages title={t('next.title')} items={next} />
-  <CtaBand />
+  <CtaBand kind="learn" />
 </Base>

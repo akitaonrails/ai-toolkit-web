@@ -1,6 +1,6 @@
 # Color study
 
-The palette is built in OKLCH, a color space where equal numeric steps look like equal steps. That lets seven subject hues sit side by side at the same visual weight, and makes the light and dark themes mirror images of each other.
+The palette is built in OKLCH, a color space where equal numeric steps look like equal steps. That lets seven pavilion colors sit side by side at the same visual weight, and makes the night and day themes mirror images of each other.
 
 No color value appears in a page or component. Every color is a token generated from a few decisions:
 
@@ -11,173 +11,166 @@ npm run check:colors                     # WCAG contrast, color-vision separatio
 
 ## 1. Where the colors come from
 
-The site has no logo, so the palette comes from the tools themselves. Every screenshot on the site is a terminal or a panel on a dark ground, and they share one visual language: the NERV control-room look of the `nerv` and `evangelion` themes in tclock and ghpending.
+Since October 2026 the site follows the owner's book, *Competent Enough*. Its cover is a 1950s World's Fair poster: a giant brass robot, a deep teal-navy sky with sunburst rays, cream lettering, pennants. The site is that fair at night, with an undersea art-deco city's brass and glass, and every page is a pavilion in its own enamel color.
 
-| Seen in | Color | Becomes |
+| Seen on the cover and in the genre | Color | Becomes |
 |---|---|---|
-| tclock's digits | pure signal red | `red`, tclock |
-| ghpending's repository headers, tclock's widget titles | amber | `amber`, ghpending (and the podcasts page) |
-| The Omarchy Quattro panel border, the usage gauges | blue | `blue`, ai-usagebar |
-| The Omarchy accent | violet, a bluer lavender than the ground | `violet`, the workflow and skills |
-| ai-memory's brand spectrum | teal | `teal`, ai-memory |
-| tclock's calendar text | orange | `orange`, the games page and ai-jail |
-| (the writing, set apart from the tools) | rose | `rose`, the blog, the benchmark, the newsletter |
-| tclock's "● all systems healthy" dot, and Unit-01's green on purple | phosphor green | the one action color |
-| Evangelion Unit-01's purple armor (the NERV look of the `nerv` and `evangelion` themes) | dark aubergine purple | the neutrals |
+| The night sky behind the robot, the ocean around an undersea city | Rapture navy, hue 238 | the night ground and the always-dark ink |
+| The cover's lettering, an old poster's paper | poster cream, hue 84 | night text and the day ground |
+| The robot's trim, the fair's signs, the gilt frames | brass, hue 86 | the one action color |
+| The pennants on the fairground | pennant red, 28 | AGI, tclock |
+| Copper roofs and arcade neon | copper, 55 | games, ai-jail |
+| A library's banker's lamps, garden pavilions | jade, 162 | the book, students, ghpending, podcasts |
+| Weathered bronze, the lagoon | patina, 196 | ai-memory, setup |
+| The undersea windows, the gauges | cerulean, 240 | ai-usagebar, the limits of LLMs |
+| Deco glass and stage curtains | amethyst, 305 | the workflow, the Frank projects |
+| Dusty deco rose | mauve, 355 | writing, the newsletter |
 
 ## 2. Decisions
 
-**Seven subject hues at fixed angles: 27, 52, 80, 190, 250, 288, 350.** The warm end has three hues about 25 degrees apart and the cool end four hues about 50 degrees apart, because warm hues at the same lightness are easier to tell apart than they look on paper, while cool hues need more distance. The gap between 80 and 190 is deliberate: it is where the action green lives, alone.
+**Seven pavilion colors, muted like printed enamel.** Chroma is capped lower than a screen palette (text tones at 0.13 in day, 0.10 at night), so the colors read as paint on a sign, not light from a screen. `build-palette.mjs` finds for each hue the highest chroma that fits sRGB at the role's lightness, then caps it, so no subject looks heavier than its neighbor.
 
-**Green means go, and nothing else.** `--action` is `oklch(0.85 0.2 150)`, the same in both themes, with dark `--on-action` text. It is the primary button, the focus ring, the text selection and the status dot of a code block. Nothing decorative is green. Green sits in the empty part of the wheel, so one green button is the loudest thing on any page without being large.
+**Brass means press, and nothing else.** `--action` is brass (`oklch(0.76 0.12 86)`), the same in both themes, with navy `--on-action` text. It is the primary button, the focus ring and the text selection. No subject is brass. Brass also appears as gilt frames and rules (`--v-brass`), which never look clickable because they are lines, not fills.
 
-**One lightness per role.** In a given theme all text-safe hues share one lightness: 0.48 in light mode, 0.83 in dark. `build-palette.mjs` finds, for each hue, the highest chroma that still fits sRGB at that lightness, then caps it. No subject looks heavier than its neighbor, which picking hex values by eye cannot guarantee: pure yellow and pure blue at the same HSL lightness differ enormously in perceived brightness.
+**Night is the default.** `:root` holds the night fair (navy `oklch(0.19 0.045 238)`, cream text); `[data-theme='light']` overrides it with the day fair (cream `oklch(0.945 0.03 84)`, navy text). The theme script still follows the system until the visitor picks one.
+
+**One lightness per role.** In a given theme all text-safe hues share one lightness: 0.45 by day, 0.82 by night. Ink tones pass 4.5:1 on every ground.
 
 **Three tiers per hue.**
 
 | Tier | Token | Use | Text-safe |
 |---|---|---|---|
-| Ink | `--blue` | text, links, icons, kickers | yes, 4.5:1 or better on every ground |
-| Soft | `--blue-soft` | fills behind that hue's content | ground only |
-| Vivid | `--v-blue` | dots, rules, glows, the spectrum | never for text |
+| Ink | `--jade` | text, links, icons, kickers | yes, 4.5:1 or better on every ground |
+| Soft | `--jade-soft` | plates behind that subject's content, the hero pattern | ground only |
+| Vivid | `--v-jade` | diamonds, rules, frames, map pavilions | never for text |
 
-Vivid is identical in both themes, because it is the color of the tool itself. Ink and soft flip with the theme.
+Vivid is identical in both themes. Its lightness is spread on purpose (pennant 0.52, amethyst 0.48, jade 0.58, mauve 0.66, cerulean 0.68, copper 0.72, patina 0.76), so subjects stay apart for every color vision (section 3).
 
-**Dark purple neutrals, hue 310.** Dark ground `oklch(0.16 0.05 310)` (#14061d), light ground `oklch(0.983 0.008 310)` (#fbf8fe). The first version used a warm graphite (hue 60, almost no chroma), and next to the sister sites it read as a cousin of ai-jail's maroon. The ground moved to a clearly purple aubergine with enough chroma (0.05) to be seen as a color, not a tinted black. It sits between the sister sites on the wheel: ai-memory's ground is indigo (hue 282, #0a0a1b) and ai-jail's is maroon (hue 355, #11070b), so the three are told apart by their grounds alone. Purple ground with a phosphor green action color is Evangelion Unit-01's scheme, the same NERV look the tools use in their terminals. The violet subject moved from 300 to 288 so it stays distinguishable from the ground.
-
-**The spectrum is interpolated in OKLCH.** `linear-gradient(90deg in oklch, ...)` keeps the midpoints saturated. The same stops in sRGB go grey between amber and teal.
-
-**Color is never the only cue.** Every hue travels with a label, a position or a shape: kickers are text, nav items are words, diagram labels are spelled out. The status dot is the only ornament, and it always sits next to words.
+**Color is never the only cue.** Every color travels with a label, a position or a shape: kickers are text, nav items are words, map pavilions are labelled and shaped differently, and each pavilion also has its own pattern.
 
 ## 3. Color vision
 
-`check:colors` simulates protanopia, deuteranopia and tritanopia at full severity (culori's deficiency filters) and reports the closest pair of vivid subject hues as a Euclidean distance in OKLab. About 0.1 is a clear difference; under 0.05 is easy to confuse.
+`check:colors` simulates protanopia, deuteranopia and tritanopia at full severity and reports the closest pair of vivid subject colors as a Euclidean distance in OKLab. About 0.1 is a clear difference; under 0.05 is easy to confuse.
 
-The first version failed this: under deuteranopia, blue (ai-usagebar) and violet (the workflow) fell to 0.030, and they sit next to each other in the navigation. Darkening vivid violet from L 0.66 to 0.57 opened the gap without touching the text tokens. The tightest pair now is red and orange under tritanopia, the rarest of the three, at 0.077.
+The first fair palette failed: jade and mauve fell to 0.027 under deuteranopia, jade and cerulean to 0.027 under tritanopia, and the book (jade) sits near writing (mauve) in the Learn menu. Spreading the vivid lightness (section 2) lifted the closest pair to 0.075 (jade and mauve under protanopia), without touching the text tokens.
 
-## 4. Light and dark
+## 4. Night and day
 
-Text lightness 0.2 on ground 0.983 in light mode, 0.96 on 0.16 in dark. Accent ink flips from 0.48 to 0.83. Terminals, screenshots, diagrams, the quotes band and the closing band stay on the dark ink ground in both themes (`.on-ink`), the way a terminal does on a real desktop. That also means every diagram is generated once.
-
-The theme follows the operating system until the visitor picks one; the footer has a "System" option that clears the choice. An inline script sets the theme before first paint, so there is no flash.
+Text lightness 0.93 on ground 0.19 at night, 0.25 on 0.945 by day. Figures, terminals, posters, the fair map and the closing band stay on the always-dark ink in both themes (`.on-ink`, `--ink`), the way a poster is printed once. That also means every image is generated once.
 
 ## 5. Type
 
-| Role | Family | Why |
-|---|---|---|
-| Headlines | Hubot Sans, weight 800, width 112% | GitHub's display face, made for the tools' home. The width axis gives headlines presence without making them taller, which keeps long headlines to two lines on a phone. |
-| Body and UI | Mona Sans, weight 400, width 100% | Hubot's text companion: same skeleton, tuned for reading, with tabular figures. |
-| Code only | JetBrains Mono | Omarchy's default terminal font, so the code blocks look like the screenshots next to them. |
-
-All three are variable fonts, self-hosted through Fontsource, with Latin Extended included for the Portuguese quote and a future Portuguese edition.
+Limelight (the book cover's title face) for major titles, Newsreader for exhibit and card headings, Josefin Sans for signage and controls, Source Serif 4 (the book's body face) for reading, JetBrains Mono for code. Details in [design-system.md](design-system.md).
 
 ## 6. Generated images
 
-The art direction in `scripts/prompts/_style.txt` names the same hex values and the same meanings: which hue belongs to which tool, green only for flow and status, the purple ground. Every diagram was regenerated when the ground moved to purple, so the images and the page share one ground.
+The art direction in `scripts/prompts/_style.txt` names the same colors in hex (vivid tier) and the navy ground, so posters and diagrams sit in the palette. When a vivid value changes here, update those hex codes too.
 
 ## 7. Measured values
 
-Regenerate with `node scripts/check-contrast.mjs --md`. Targets: 7:1 for body text (AAA), 4.5:1 for accents and muted text (AA).
-
-### light
-
-| Foreground | Background | Ratio | Target | |
-|---|---|---|---|---|
-| `text` #1c1025 | `bg` #fbf8fe | 17.37 | 7 | pass |
-| `text` #1c1025 | `surface` #ffffff | 18.28 | 7 | pass |
-| `text` #1c1025 | `tint` #f3edf8 | 15.97 | 7 | pass |
-| `muted` #5d4e68 | `bg` #fbf8fe | 7.21 | 4.5 | pass |
-| `muted` #5d4e68 | `surface` #ffffff | 7.58 | 4.5 | pass |
-| `muted` #5d4e68 | `tint` #f3edf8 | 6.62 | 4.5 | pass |
-| `red` #a52a26 | `bg` #fbf8fe | 6.75 | 4.5 | pass |
-| `red` #a52a26 | `surface` #ffffff | 7.10 | 4.5 | pass |
-| `red` #a52a26 | `tint` #f3edf8 | 6.20 | 4.5 | pass |
-| `red` #a52a26 | `red-soft` #ffebe8 | 6.18 | 4.5 | pass |
-| `orange` #924501 | `bg` #fbf8fe | 6.51 | 4.5 | pass |
-| `orange` #924501 | `surface` #ffffff | 6.85 | 4.5 | pass |
-| `orange` #924501 | `tint` #f3edf8 | 5.98 | 4.5 | pass |
-| `orange` #924501 | `orange-soft` #ffece1 | 5.97 | 4.5 | pass |
-| `amber` #7b5601 | `bg` #fbf8fe | 6.30 | 4.5 | pass |
-| `amber` #7b5601 | `surface` #ffffff | 6.63 | 4.5 | pass |
-| `amber` #7b5601 | `tint` #f3edf8 | 5.79 | 4.5 | pass |
-| `amber` #7b5601 | `amber-soft` #fdeed6 | 5.80 | 4.5 | pass |
-| `teal` #006c68 | `bg` #fbf8fe | 5.95 | 4.5 | pass |
-| `teal` #006c68 | `surface` #ffffff | 6.26 | 4.5 | pass |
-| `teal` #006c68 | `tint` #f3edf8 | 5.47 | 4.5 | pass |
-| `teal` #006c68 | `teal-soft` #d7f8f5 | 5.56 | 4.5 | pass |
-| `blue` #0060a6 | `bg` #fbf8fe | 6.22 | 4.5 | pass |
-| `blue` #0060a6 | `surface` #ffffff | 6.55 | 4.5 | pass |
-| `blue` #0060a6 | `tint` #f3edf8 | 5.72 | 4.5 | pass |
-| `blue` #0060a6 | `blue-soft` #e5f2ff | 5.75 | 4.5 | pass |
-| `violet` #5d48b1 | `bg` #fbf8fe | 6.62 | 4.5 | pass |
-| `violet` #5d48b1 | `surface` #ffffff | 6.97 | 4.5 | pass |
-| `violet` #5d48b1 | `tint` #f3edf8 | 6.09 | 4.5 | pass |
-| `violet` #5d48b1 | `violet-soft` #efeeff | 6.09 | 4.5 | pass |
-| `rose` #9b2b6a | `bg` #fbf8fe | 6.81 | 4.5 | pass |
-| `rose` #9b2b6a | `surface` #ffffff | 7.16 | 4.5 | pass |
-| `rose` #9b2b6a | `tint` #f3edf8 | 6.25 | 4.5 | pass |
-| `rose` #9b2b6a | `rose-soft` #ffe9f3 | 6.22 | 4.5 | pass |
-| `green` #007132 | `bg` #fbf8fe | 5.84 | 4.5 | pass |
-| `green` #007132 | `surface` #ffffff | 6.15 | 4.5 | pass |
-| `on-action` #002112 | `action` #52f184 | 11.58 | 7 | pass |
-| `on-action` #002112 | `action-hi` #8cffa7 | 13.79 | 7 | pass |
-| `on-ink` #f4f0f8 | `ink` #14061d | 17.36 | 7 | pass |
-| `on-ink` #f4f0f8 | `ink-raised` #20102b | 15.94 | 7 | pass |
-| `on-ink-muted` #beb2c9 | `ink-raised` #20102b | 8.87 | 4.5 | pass |
-| `line` #ddd3e6 | `bg` #fbf8fe | 1.38 | 1.2 | pass |
+Output of `node scripts/check-contrast.mjs --md` on 2026-10-15.
 
 ### dark
 
 | Foreground | Background | Ratio | Target | |
 |---|---|---|---|---|
-| `text` #f4f0f8 | `bg` #14061d | 17.36 | 7 | pass |
-| `text` #f4f0f8 | `surface` #1f0f2a | 16.10 | 7 | pass |
-| `text` #f4f0f8 | `tint` #281634 | 14.85 | 7 | pass |
-| `muted` #beb2c9 | `bg` #14061d | 9.66 | 4.5 | pass |
-| `muted` #beb2c9 | `surface` #1f0f2a | 8.96 | 4.5 | pass |
-| `muted` #beb2c9 | `tint` #281634 | 8.26 | 4.5 | pass |
-| `red` #ffb0a6 | `bg` #14061d | 11.19 | 4.5 | pass |
-| `red` #ffb0a6 | `surface` #1f0f2a | 10.38 | 4.5 | pass |
-| `red` #ffb0a6 | `tint` #281634 | 9.57 | 4.5 | pass |
-| `red` #ffb0a6 | `red-soft` #3d1b17 | 8.79 | 4.5 | pass |
-| `orange` #ffb486 | `bg` #14061d | 11.27 | 4.5 | pass |
-| `orange` #ffb486 | `surface` #1f0f2a | 10.45 | 4.5 | pass |
-| `orange` #ffb486 | `tint` #281634 | 9.64 | 4.5 | pass |
-| `orange` #ffb486 | `orange-soft` #3b1e0a | 8.80 | 4.5 | pass |
-| `amber` #f3bd5c | `bg` #14061d | 11.46 | 4.5 | pass |
-| `amber` #f3bd5c | `surface` #1f0f2a | 10.63 | 4.5 | pass |
-| `amber` #f3bd5c | `tint` #281634 | 9.80 | 4.5 | pass |
-| `amber` #f3bd5c | `amber-soft` #342301 | 8.87 | 4.5 | pass |
-| `teal` #3fe2da | `bg` #14061d | 12.20 | 4.5 | pass |
-| `teal` #3fe2da | `surface` #1f0f2a | 11.32 | 4.5 | pass |
-| `teal` #3fe2da | `tint` #281634 | 10.44 | 4.5 | pass |
-| `teal` #3fe2da | `teal-soft` #002e2b | 9.23 | 4.5 | pass |
-| `blue` #9cccff | `bg` #14061d | 11.65 | 4.5 | pass |
-| `blue` #9cccff | `surface` #1f0f2a | 10.81 | 4.5 | pass |
-| `blue` #9cccff | `tint` #281634 | 9.97 | 4.5 | pass |
-| `blue` #9cccff | `blue-soft` #0f2840 | 8.96 | 4.5 | pass |
-| `violet` #c4bfff | `bg` #14061d | 11.37 | 4.5 | pass |
-| `violet` #c4bfff | `surface` #1f0f2a | 10.54 | 4.5 | pass |
-| `violet` #c4bfff | `tint` #281634 | 9.72 | 4.5 | pass |
-| `violet` #c4bfff | `violet-soft` #252140 | 8.87 | 4.5 | pass |
-| `rose` #ffa9d2 | `bg` #14061d | 11.04 | 4.5 | pass |
-| `rose` #ffa9d2 | `surface` #1f0f2a | 10.24 | 4.5 | pass |
-| `rose` #ffa9d2 | `tint` #281634 | 9.44 | 4.5 | pass |
-| `rose` #ffa9d2 | `rose-soft` #3a1a2a | 8.69 | 4.5 | pass |
-| `green` #86df9a | `bg` #14061d | 12.15 | 4.5 | pass |
-| `green` #86df9a | `surface` #1f0f2a | 11.27 | 4.5 | pass |
-| `on-action` #002112 | `action` #52f184 | 11.58 | 7 | pass |
-| `on-action` #002112 | `action-hi` #8cffa7 | 13.79 | 7 | pass |
-| `on-ink` #f4f0f8 | `ink` #14061d | 17.36 | 7 | pass |
-| `on-ink` #f4f0f8 | `ink-raised` #20102b | 15.94 | 7 | pass |
-| `on-ink-muted` #beb2c9 | `ink-raised` #20102b | 8.87 | 4.5 | pass |
-| `line` #443152 | `bg` #14061d | 1.69 | 1.2 | pass |
+| `text` #f3e6ce | `bg` #001624 | 14.98 | 7 | pass |
+| `text` #f3e6ce | `surface` #022133 | 13.49 | 7 | pass |
+| `text` #f3e6ce | `tint` #06283b | 12.37 | 7 | pass |
+| `muted` #cabca1 | `bg` #001624 | 9.85 | 4.5 | pass |
+| `muted` #cabca1 | `surface` #022133 | 8.87 | 4.5 | pass |
+| `muted` #cabca1 | `tint` #06283b | 8.13 | 4.5 | pass |
+| `pennant` #feaba0 | `bg` #001624 | 10.16 | 4.5 | pass |
+| `pennant` #feaba0 | `surface` #022133 | 9.15 | 4.5 | pass |
+| `pennant` #feaba0 | `tint` #06283b | 8.39 | 4.5 | pass |
+| `pennant` #feaba0 | `pennant-soft` #3e1f1b | 8.20 | 4.5 | pass |
+| `copper` #f7b385 | `bg` #001624 | 10.29 | 4.5 | pass |
+| `copper` #f7b385 | `surface` #022133 | 9.27 | 4.5 | pass |
+| `copper` #f7b385 | `tint` #06283b | 8.50 | 4.5 | pass |
+| `copper` #f7b385 | `copper-soft` #3c220f | 8.26 | 4.5 | pass |
+| `jade` #86d9b0 | `bg` #001624 | 10.99 | 4.5 | pass |
+| `jade` #86d9b0 | `surface` #022133 | 9.90 | 4.5 | pass |
+| `jade` #86d9b0 | `tint` #06283b | 9.08 | 4.5 | pass |
+| `jade` #86d9b0 | `jade-soft` #0d3021 | 8.53 | 4.5 | pass |
+| `patina` #6cd8d9 | `bg` #001624 | 10.96 | 4.5 | pass |
+| `patina` #6cd8d9 | `surface` #022133 | 9.88 | 4.5 | pass |
+| `patina` #6cd8d9 | `tint` #06283b | 9.06 | 4.5 | pass |
+| `patina` #6cd8d9 | `patina-soft` #003031 | 8.53 | 4.5 | pass |
+| `cerulean` #86cdff | `bg` #001624 | 10.69 | 4.5 | pass |
+| `cerulean` #86cdff | `surface` #022133 | 9.63 | 4.5 | pass |
+| `cerulean` #86cdff | `tint` #06283b | 8.83 | 4.5 | pass |
+| `cerulean` #86cdff | `cerulean-soft` #0e2c3f | 8.42 | 4.5 | pass |
+| `amethyst` #d3b4f9 | `bg` #001624 | 10.22 | 4.5 | pass |
+| `amethyst` #d3b4f9 | `surface` #022133 | 9.21 | 4.5 | pass |
+| `amethyst` #d3b4f9 | `tint` #06283b | 8.44 | 4.5 | pass |
+| `amethyst` #d3b4f9 | `amethyst-soft` #2f223d | 8.23 | 4.5 | pass |
+| `mauve` #f8a9c7 | `bg` #001624 | 10.10 | 4.5 | pass |
+| `mauve` #f8a9c7 | `surface` #022133 | 9.10 | 4.5 | pass |
+| `mauve` #f8a9c7 | `tint` #06283b | 8.34 | 4.5 | pass |
+| `mauve` #f8a9c7 | `mauve-soft` #3c1e2a | 8.17 | 4.5 | pass |
+| `brass` #e0b85c | `bg` #001624 | 9.81 | 4.5 | pass |
+| `brass` #e0b85c | `surface` #022133 | 8.84 | 4.5 | pass |
+| `on-paper` #002539 | `paper` #f3e6ce | 12.94 | 7 | pass |
+| `on-action` #001624 | `action` #d3ab4e | 8.53 | 7 | pass |
+| `on-action` #001624 | `action-hi` #eac266 | 10.85 | 7 | pass |
+| `on-ink` #f3e6ce | `ink` #001624 | 14.98 | 7 | pass |
+| `on-ink` #f3e6ce | `ink-raised` #022234 | 13.31 | 7 | pass |
+| `on-ink-muted` #cabca1 | `ink-raised` #022234 | 8.75 | 4.5 | pass |
+| `line` #2d4c60 | `bg` #001624 | 2.02 | 1.2 | pass |
+
+### light
+
+| Foreground | Background | Ratio | Target | |
+|---|---|---|---|---|
+| `text` #002539 | `bg` #f6ecd7 | 13.54 | 7 | pass |
+| `text` #002539 | `surface` #fdf6e9 | 14.80 | 7 | pass |
+| `text` #002539 | `tint` #ede0c5 | 12.17 | 7 | pass |
+| `muted` #3b5669 | `bg` #f6ecd7 | 6.55 | 4.5 | pass |
+| `muted` #3b5669 | `surface` #fdf6e9 | 7.16 | 4.5 | pass |
+| `muted` #3b5669 | `tint` #ede0c5 | 5.89 | 4.5 | pass |
+| `pennant` #903129 | `bg` #f6ecd7 | 6.76 | 4.5 | pass |
+| `pennant` #903129 | `surface` #fdf6e9 | 7.39 | 4.5 | pass |
+| `pennant` #903129 | `tint` #ede0c5 | 6.07 | 4.5 | pass |
+| `pennant` #903129 | `pennant-soft` #fedbd6 | 6.19 | 4.5 | pass |
+| `copper` #834101 | `bg` #f6ecd7 | 6.59 | 4.5 | pass |
+| `copper` #834101 | `surface` #fdf6e9 | 7.20 | 4.5 | pass |
+| `copper` #834101 | `tint` #ede0c5 | 5.92 | 4.5 | pass |
+| `copper` #834101 | `copper-soft` #fbdecc | 6.06 | 4.5 | pass |
+| `jade` #006644 | `bg` #f6ecd7 | 6.01 | 4.5 | pass |
+| `jade` #006644 | `surface` #fdf6e9 | 6.57 | 4.5 | pass |
+| `jade` #006644 | `tint` #ede0c5 | 5.40 | 4.5 | pass |
+| `jade` #006644 | `jade-soft` #ceeddc | 5.66 | 4.5 | pass |
+| `patina` #006263 | `bg` #f6ecd7 | 6.09 | 4.5 | pass |
+| `patina` #006263 | `surface` #fdf6e9 | 6.66 | 4.5 | pass |
+| `patina` #006263 | `tint` #ede0c5 | 5.48 | 4.5 | pass |
+| `patina` #006263 | `patina-soft` #c7eded | 5.73 | 4.5 | pass |
+| `cerulean` #005b88 | `bg` #f6ecd7 | 6.25 | 4.5 | pass |
+| `cerulean` #005b88 | `surface` #fdf6e9 | 6.83 | 4.5 | pass |
+| `cerulean` #005b88 | `tint` #ede0c5 | 5.62 | 4.5 | pass |
+| `cerulean` #005b88 | `cerulean-soft` #cee9fd | 5.83 | 4.5 | pass |
+| `amethyst` #663e8e | `bg` #f6ecd7 | 6.73 | 4.5 | pass |
+| `amethyst` #663e8e | `surface` #fdf6e9 | 7.36 | 4.5 | pass |
+| `amethyst` #663e8e | `tint` #ede0c5 | 6.05 | 4.5 | pass |
+| `amethyst` #663e8e | `amethyst-soft` #ebdefb | 6.18 | 4.5 | pass |
+| `mauve` #892f59 | `bg` #f6ecd7 | 6.81 | 4.5 | pass |
+| `mauve` #892f59 | `surface` #fdf6e9 | 7.45 | 4.5 | pass |
+| `mauve` #892f59 | `tint` #ede0c5 | 6.12 | 4.5 | pass |
+| `mauve` #892f59 | `mauve-soft` #fcdae6 | 6.22 | 4.5 | pass |
+| `brass` #735601 | `bg` #f6ecd7 | 5.85 | 4.5 | pass |
+| `brass` #735601 | `surface` #fdf6e9 | 6.40 | 4.5 | pass |
+| `on-paper` #002539 | `paper` #f3e6ce | 12.94 | 7 | pass |
+| `on-action` #001624 | `action` #d3ab4e | 8.53 | 7 | pass |
+| `on-action` #001624 | `action-hi` #eac266 | 10.85 | 7 | pass |
+| `on-ink` #f3e6ce | `ink` #001624 | 14.98 | 7 | pass |
+| `on-ink` #f3e6ce | `ink-raised` #022234 | 13.31 | 7 | pass |
+| `on-ink-muted` #cabca1 | `ink-raised` #022234 | 8.75 | 4.5 | pass |
+| `line` #cdbb9e | `bg` #f6ecd7 | 1.59 | 1.2 | pass |
 
 ### Closest pair of subject hues
 
 | Vision | Closest pair | OKLab distance |
 |---|---|---|
-| normal | orange and amber | 0.130 |
-| protan | violet and rose | 0.127 |
-| deutan | teal and rose | 0.093 |
-| tritan | red and orange | 0.077 |
+| normal | patina and cerulean | 0.118 |
+| protan | jade and mauve | 0.075 |
+| deutan | patina and mauve | 0.087 |
+| tritan | patina and cerulean | 0.090 |

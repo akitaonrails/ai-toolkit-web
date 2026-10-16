@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "Os limites das LLMs",
-    "lede": "PhotoCraft, REA e um port novo de game toda semana convenceram muita gente de que a Adobe morreu e os programadores são os próximos. Eu li o código e os números. Sete pontos curtos sobre o que a IA copia bem e o que ela não consegue.",
+    "lede": "PhotoCraft, um editor de imagens em estágio inicial construído com IA, REA, um toolkit de engenharia reversa, e um port novo de game retrô toda semana convenceram muita gente de que a Adobe morreu e os programadores são os próximos. Eu li o código e os números.",
     "primary": "Pular pras conclusões",
     "secondary": "A versão longa no meu blog"
   },
@@ -26,8 +26,8 @@
       },
       "points": [
         "Por isso uma pessoa sozinha hoje consegue lançar um cliente nativo de Spotify ou WhatsApp em Rust. O serviço, as bibliotecas e o caminho já existiam. Refazer um caminho conhecido ficou barato.",
-        "O código que paga salários é quase todo privado. Nenhum modelo viu esse código, e nenhum modelo consegue adivinhar.",
-        "Onde não existe nada parecido, o agente cai na tentativa e erro. O que ajuda é o que falta ao modelo: referências que ninguém publicou, um oráculo que diga o que é certo e testes com alvos objetivos."
+        "O código que paga salários é quase todo privado. Um modelo geral não foi treinado nele por padrão. Ele pode analisar o código fornecido por uma ferramenta aprovada, com contexto e controles de acesso adequados.",
+        "Onde não existe nada parecido, o agente cai na tentativa e erro. Ele precisa de referências não publicadas, testes e uma verificação objetiva, muitas vezes chamada de oráculo, que diga se o resultado está certo."
       ],
       "sources": {
         "octoverse": "GitHub Octoverse 2025: 81,5% privado",
@@ -172,9 +172,10 @@
       "O screenshot de um clone é fácil. Os serviços na nuvem, os dados e as licenças não estão em binário nenhum.",
       "A reescrita do Bun precisou do autor, do fonte, dos testes e de US$ 165 mil.",
       "Os melhores modelos quase não ficaram mais baratos, e convergiram.",
-      "O trabalho que cresceu é julgamento: testes, oráculos e review."
+      "O trabalho que cresceu é julgamento: testes, verificações objetivas chamadas de oráculos e review."
     ]
   },
+  "contentsTitle": "Nesta página",
   "next": [
     {
       "title": "Por que AGI não importa",

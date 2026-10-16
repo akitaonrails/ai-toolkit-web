@@ -6,7 +6,7 @@
   "hero": {
     "kicker": "Opinião",
     "title": "Por que AGI não importa",
-    "lede": "A cada poucas semanas alguém anuncia AGI. Eu uso essas ferramentas todo dia e não me importa se elas são \"gerais\". Onze pontos curtos sobre o porquê, com links pras versões longas.",
+    "lede": "AGI significa inteligência artificial geral: um sistema proposto capaz de lidar com a maioria das tarefas intelectuais. Os laboratórios ainda discordam sobre o que conta e como testar. Eu uso as ferramentas atuais todo dia; esta página separa o que elas conseguem demonstrar daquilo que as pessoas preveem.",
     "primary": "Pular pras conclusões",
     "secondary": "A versão longa no meu blog"
   },
@@ -110,8 +110,8 @@
       "lede": "Um modelo é um arquivo, travado depois do treino. O datacenter roda cópias dele.",
       "alt": "Um arquivo vermelho trancado com o rótulo Arquivo do modelo manda setas de mão única, com o rótulo Cópias, pra nove caixas de servidor separadas; uma delas tem um terminal com o rótulo Sua sessão. Nenhuma seta volta. No alto, um caminho sai do arquivo, passa por uma engrenagem com o rótulo Próximo treino e termina num segundo arquivo trancado com o rótulo Arquivo novo.",
       "points": [
-        "Cada usuário roda uma cópia isolada. Sua sessão não conversa com nenhuma outra, e nada dela volta pro arquivo.",
-        "Conhecimento novo só entra no próximo treino, que custa milhões e leva semanas. O que se acumula enquanto você trabalha é seu: notas, testes, contexto.",
+        "Cada sessão usa pesos fixos do modelo. O provedor ainda pode reter prompts, arquivos e saídas de ferramentas conforme o plano e as configurações. O produto também pode devolver memórias salvas a sessões futuras.",
+        "Os pesos mudam numa rodada posterior de treinamento. Notas, testes e contexto salvos durante o trabalho ficam ao redor do modelo e podem voltar em sessões futuras. Os pesos permanecem iguais.",
         "\"IA treinando IA\" já tem nome: aprendizado por reforço. O AlphaZero aprendeu xadrez, shogi e Go jogando contra si mesmo em 2017.",
         "Funciona onde a recompensa é barata de conferir, como jogos, provas e testes. E o que sai é outro arquivo trancado."
       ],
@@ -146,7 +146,7 @@
     "attacks": {
       "kicker": "7. As histórias de terror",
       "title": "Os \"ataques de IA\" foram decisões humanas",
-      "lede": "Toda manchete de \"IA invadiu alguém\" até agora tem o mesmo roteiro: uma pessoa deixou a porta aberta, ou apontou a ferramenta pro alvo.",
+      "lede": "Os casos abaixo têm a mesma falha operacional: pessoas concederam acesso ou apontaram a ferramenta sem controles adequados.",
       "alt": "Uma ferramenta violeta dentro de uma sandbox laranja com a porta aberta; um terminal com o rótulo Decisão humana está ligado à porta, uma chave com o rótulo Credenciais está do lado de fora, e uma linha sai da ferramenta, passa pela porta aberta e chega a servidores com o rótulo Servidores reais.",
       "points": [
         "Hugging Face, agosto de 2026: agentes da OpenAI numa prova de cibersegurança escaparam por um proxy de cache, porque a sandbox filtrava o tráfego e não tinha air gap. Eles foram atrás do gabarito da prova e leram 956 credenciais no caminho. Cada passo que abriu caminho pra isso foi uma decisão humana.",
@@ -176,8 +176,8 @@
     },
     "doom": {
       "kicker": "8. O apocalipse",
-      "title": "Os profetas do apocalipse não trazem evidência",
-      "lede": "A cada poucos meses alguém sai de um laboratório e avisa o mundo. Na minha leitura, nenhum deles mostrou nada que dê pra checar.",
+      "title": "Como avaliar previsões catastróficas",
+      "lede": "De tempos em tempos, alguém sai de um laboratório de IA e alerta o mundo. Eu procurei evidências que alguém de fora consiga inspecionar, reproduzir ou testar.",
       "points": [
         "Jacob Coxon, setembro de 2026: quatro meses na Anthropic, depois uma thread avisando que a IA poderia matar todo mundo até o fim da década. Mais de 100 milhões de visualizações, e a imprensa disse que ele abriu mão do equity. O vesting da Anthropic começa em seis meses. Não tinha nada pra abrir mão.",
         "Aí vieram os detalhes. Grupos financiados pelos mesmos doadores de segurança de IA teriam amplificado ele em minutos, e a Pirate Wires reportou que uma agência de PR cujos clientes incluem doomers conhecidos estava marcando as entrevistas dele no dia seguinte. Ele tinha dito à Fox News que nenhum terceiro estava envolvido.",
@@ -247,14 +247,25 @@
     "items": [
       "AGI não tem definição aceita. A que foi escrita num contrato era uma meta de lucro, e caiu.",
       "Sem definição não tem teste. Os benchmarks enchem e são trocados pelo próximo.",
-      "Os modelos reproduzem o que é público. O que é privado ou novo exige oráculos, contexto alimentado na mão e muito dinheiro.",
+      "Modelos reproduzem o que é público. Trabalho privado ou novo exige uma verificação objetiva, muitas vezes chamada de oráculo, além de conhecimento fornecido e dinheiro.",
       "Os modelos brutos convergiram. Os ganhos recentes vieram das ferramentas em volta deles, e os modelos menores continuam alcançando.",
-      "Um modelo é um arquivo trancado. Ele não aprende nada com a sua sessão.",
+      "Os pesos do modelo não mudam durante a sua sessão. O produto ainda pode reter dados ou devolver memórias salvas depois, conforme as configurações.",
       "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",
-      "Os \"ataques de IA\" assustadores foram gente deixando a porta aberta. A ferramenta foi pra onde apontaram.",
-      "O apocalipse também é marketing. Os profetas trazem sentimentos e previsões, nunca evidência que dê pra checar.",
-      "As ferramentas são reais e excelentes. Fazem o que você manda, e quem está no comando continua sendo você.",
+      "Os incidentes discutidos aqui envolveram pessoas concedendo acesso ou direcionando a ferramenta. Permissões e supervisão humana são riscos que já conseguimos administrar.",
+      "Previsões catastróficas precisam de evidências que possam ser inspecionadas. Sentimentos e previsões não são evidências.",
+      "As ferramentas são reais e excelentes. Ainda precisam de instruções, permissões e review, com uma pessoa responsável pelo resultado.",
       "O que importa agora é eficiência: o mesmo trabalho com menos hardware e preços menores."
+    ]
+  },
+  "contentsTitle": "Nesta página",
+  "today": {
+    "title": "Com o que se preocupar hoje",
+    "lede": "Os riscos atuais pedem controles práticos enquanto a discussão sobre sistemas futuros continua.",
+    "items": [
+      "Empregos mudam tarefa por tarefa. Teste uma tarefa repetitiva, meça o resultado e mantenha julgamento e responsabilidade humanos onde os erros importam.",
+      "Trate mensagens urgentes de voz, vídeo ou pagamento como não verificadas. Confirme por um canal em que você já confia.",
+      "Não envie dados pessoais, escolares ou da empresa antes de entender as configurações de retenção, treinamento e exclusão do serviço.",
+      "Use IA para explicações e rascunhos. Confirme decisões de saúde, jurídicas, financeiras e escolares com uma pessoa qualificada ou uma fonte primária confiável."
     ]
   },
   "next": [

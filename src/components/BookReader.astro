@@ -7,14 +7,15 @@
 // It resumes where the reader stopped: the last edition opened and the last page of each, kept in this browser's
 // localStorage (nothing leaves the browser; a private window simply starts at the cover). Words in book.json `reader`.
 import { useI18n } from '@/i18n';
-import { book, bookEdition } from '@/data/book';
+import { book, bookEdition, bookFile } from '@/data/book';
 const { t, locale } = useI18n(Astro, 'book');
 const first = bookEdition(locale);
+const firstEdition = book.editions.find((e) => e.id === first)!;
 ---
 <div class="reader" data-reader data-default={first} data-label-full={t('reader.full')} data-label-exit={t('reader.exit')}>
   <div class="bar">
     <div class="editions" role="group" aria-label={t('reader.edition')}>
-      {book.editions.map((e) => <button type="button" data-edition={e.id} aria-pressed={e.id === first ? 'true' : 'false'}>{t(`reader.editions.${e.id}`)}</button>)}
+      {book.editions.map((e) => <button type="button" data-edition={e.id} data-download={bookFile(e.file, 'epub')} aria-pressed={e.id === first ? 'true' : 'false'}>{t(`reader.editions.${e.id}`)}</button>)}
     </div>
     <label class="toc"><span class="sr-only">{t('reader.contents')}</span>
       <select data-toc disabled><option value="">{t('reader.contents')}</option></select>
@@ -28,7 +29,13 @@ const first = bookEdition(locale);
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
     </button>
     <div class="view" data-view dir="ltr" tabindex="0" aria-label={t('reader.label')}>
-      <p class="status" data-status data-loading={t('reader.loading')} data-error={t('reader.error')}>{t('reader.loading')}</p>
+      <div class="status" data-status data-loading={t('reader.loading')} data-error={t('reader.error')}>
+        <p data-status-message>{t('reader.loading')}</p>
+        <div class="status-actions" data-status-actions hidden>
+          <button type="button" class="btn btn-primary" data-retry>{t('reader.retry')}</button>
+          <a class="btn btn-ghost" data-reader-download href={bookFile(firstEdition.file, 'epub')}>{t('reader.downloadFallback')}</a>
+        </div>
+      </div>
     </div>
     <button type="button" class="turn" data-next aria-label={t('reader.next')}>
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
@@ -38,28 +45,30 @@ const first = bookEdition(locale);
 </div>
 
 <style>
-  .reader { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; border-radius: 1.25rem; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); block-size: min(46rem, 82svh); }
+  .reader { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); block-size: min(46rem, 82svh); }
   .reader:fullscreen, .reader.max { block-size: 100%; border-radius: 0; border: 0; padding: 1rem 1.5rem; background: var(--bg); }
   .reader.max { position: fixed; inset: 0; z-index: 100; block-size: 100svh; }
   .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
-  .editions { display: flex; gap: 0.25rem; padding: 0.2rem; border-radius: 99px; background: var(--tint, var(--bg)); }
-  .editions button { padding: 0.45rem 0.9rem; border-radius: 99px; font-size: var(--text-sm); font-weight: 600; color: var(--muted); min-block-size: 2.5rem; }
+  .editions { display: flex; gap: 0.25rem; padding: 0.2rem; border-radius: 0.2rem; background: var(--tint, var(--bg)); }
+  .editions button { padding: 0.45rem 0.9rem; border-radius: 0.2rem; font-size: var(--text-sm); font-weight: 600; color: var(--muted); min-block-size: 2.5rem; }
   .editions button[aria-pressed='true'] { background: var(--surface); color: var(--text); box-shadow: 0 0 0 1.5px var(--hue-vivid); }
   .toc { flex: 1 1 12rem; min-inline-size: 0; }
-  .toc select { inline-size: 100%; min-block-size: 2.5rem; padding-inline: 0.75rem; border-radius: 0.75rem; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: var(--text-sm); }
-  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 99px; border: 1.5px solid var(--line); color: var(--text); }
+  .toc select { inline-size: 100%; min-block-size: 2.5rem; padding-inline: 0.75rem; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: var(--text-sm); }
+  .ctl { display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 0.2rem; border: 1.5px solid var(--line); color: var(--text); }
   .ctl:hover { border-color: var(--muted); }
   .ctl .i-exit, .reader:fullscreen .ctl .i-full, .reader.max .ctl .i-full { display: none; }
   .reader:fullscreen .ctl .i-exit, .reader.max .ctl .i-exit { display: inline; }
   .stage { flex: 1; min-block-size: 0; display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: minmax(0, 1fr); gap: 0.5rem; }
-  .view { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; block-size: 100%; min-inline-size: 0; inline-size: 100%; position: relative; border-radius: 0.5rem; justify-self: center; }
+  .view { touch-action: pan-y pinch-zoom; overscroll-behavior-x: contain; block-size: 100%; min-inline-size: 0; inline-size: 100%; position: relative; border-radius: var(--radius); justify-self: center; }
   /* In the card, one page at a readable width; full screen gets the whole width for two pages. */
   .reader:not(:fullscreen, .max) .view { max-inline-size: 42rem; }
   .view:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
-  .turn { display: grid; place-items: center; align-self: center; inline-size: 2.75rem; block-size: 4.5rem; border-radius: 0.75rem; color: var(--muted); }
+  .turn { display: grid; place-items: center; align-self: center; inline-size: 2.75rem; block-size: 4.5rem; border-radius: var(--radius); color: var(--muted); }
   .turn:hover { color: var(--text); background: var(--tint, var(--bg)); }
-  .status { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); text-align: center; padding: 1rem; }
-  .where { min-block-size: 1.4em; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--muted); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .status { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 1rem; color: var(--muted); text-align: center; padding: 1rem; }
+  .status-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .status-actions[hidden] { display: none; }
+  .where { min-block-size: 1.4em; font-family: var(--font-sign); font-size: var(--text-sm); color: var(--muted); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   @media (max-width: 40rem) {
     .reader { padding: 0.75rem; }
     .stage { grid-template-columns: 1fr; }
@@ -76,6 +85,10 @@ const first = bookEdition(locale);
   if (root) {
     const view = root.querySelector<HTMLElement>('[data-view]')!;
     const status = root.querySelector<HTMLElement>('[data-status]')!;
+    const statusMessage = root.querySelector<HTMLElement>('[data-status-message]')!;
+    const statusActions = root.querySelector<HTMLElement>('[data-status-actions]')!;
+    const retry = root.querySelector<HTMLButtonElement>('[data-retry]')!;
+    const download = root.querySelector<HTMLAnchorElement>('[data-reader-download]')!;
     const toc = root.querySelector<HTMLSelectElement>('[data-toc]')!;
     const where = root.querySelector<HTMLElement>('[data-where]')!;
     const fsButton = root.querySelector<HTMLButtonElement>('[data-fs]')!;
@@ -171,26 +184,38 @@ const first = bookEdition(locale);
     async function open(id: string) {
       edition = id; store.set('book-edition', id);
       editionButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.edition === id)));
+      download.href = editionButtons.find((b) => b.dataset.edition === id)!.dataset.download!;
       rendition?.destroy(); rendition = undefined; book?.destroy();
-      status.hidden = false; status.textContent = status.dataset.loading!; toc.disabled = true; where.textContent = '';
-      try {
-        book = ePub(`/book/read/${id}/`);
-        const nav = await book.loaded.navigation;
-        labels = new Map(); toc.replaceChildren(toc.options[0]);
-        const add = (items: NavItem[], depth: number) => items.forEach((it) => {
-          labels.set(it.href.split('#')[0], it.label.trim());
-          toc.add(new Option(`${'  '.repeat(depth)}${it.label.trim()}`, it.href));
-          if (it.subitems?.length && depth < 1) add(it.subitems, depth + 1);
-        });
-        add(nav.toc, 0);
-        toc.disabled = false;
-        await render(id, store.get(`book-cfi-${id}`) ?? undefined);
-        status.hidden = true;
-      } catch (err) {
-        console.error(err);
-        status.hidden = false; status.textContent = status.dataset.error!;
-      }
+      status.hidden = false; statusMessage.textContent = status.dataset.loading!; statusActions.hidden = true; toc.disabled = true; where.textContent = '';
+      book = ePub(`/book/read/${id}/`);
+      const nav = await book.loaded.navigation;
+      labels = new Map(); toc.replaceChildren(toc.options[0]);
+      const add = (items: NavItem[], depth: number) => items.forEach((it) => {
+        labels.set(it.href.split('#')[0], it.label.trim());
+        toc.add(new Option(`${'  '.repeat(depth)}${it.label.trim()}`, it.href));
+        if (it.subitems?.length && depth < 1) add(it.subitems, depth + 1);
+      });
+      add(nav.toc, 0);
+      toc.disabled = false;
+      await render(id, store.get(`book-cfi-${id}`) ?? undefined);
+      status.hidden = true;
     }
+
+    const fail = (err: unknown) => {
+      console.error(err);
+      status.hidden = false; statusMessage.textContent = status.dataset.error!; statusActions.hidden = false;
+    };
+    const withTimeout = <T,>(promise: Promise<T>, ms: number) => Promise.race<T>([
+      promise,
+      new Promise<T>((_, reject) => setTimeout(() => reject(new Error('Book reader timed out')), ms)),
+    ]);
+    const load = async () => {
+      status.hidden = false; statusMessage.textContent = status.dataset.loading!; statusActions.hidden = true;
+      try {
+        ePub ??= (await withTimeout(import('epubjs'), 12000)).default;
+        await withTimeout(open(edition), 12000);
+      } catch (err) { fail(err); }
+    };
 
     function key(e: KeyboardEvent) {
       if (e.key === 'ArrowRight' || e.key === 'PageDown') rendition?.next();
@@ -200,7 +225,8 @@ const first = bookEdition(locale);
     root.querySelector('[data-prev]')!.addEventListener('click', () => rendition?.prev());
     root.querySelector('[data-next]')!.addEventListener('click', () => rendition?.next());
     toc.addEventListener('change', () => { if (toc.value) rendition?.display(toc.value); });
-    editionButtons.forEach((b) => b.addEventListener('click', () => { if (b.dataset.edition !== edition) open(b.dataset.edition!); }));
+    editionButtons.forEach((b) => b.addEventListener('click', () => { if (b.dataset.edition !== edition) { edition = b.dataset.edition!; load(); } }));
+    retry.addEventListener('click', () => location.reload());
 
     // Full screen: the real thing where the browser allows it, a fixed overlay where it doesn't (iPhone Safari).
     const label = () => fsButton.setAttribute('aria-label', wide() ? root.dataset.labelExit! : root.dataset.labelFull!);
@@ -222,8 +248,7 @@ const first = bookEdition(locale);
     const io = new IntersectionObserver(async (entries) => {
       if (!entries.some((e) => e.isIntersecting)) return;
       io.disconnect();
-      ePub = (await import('epubjs')).default;
-      open(edition);
+      load();
     }, { rootMargin: '400px' });
     io.observe(root);
   }

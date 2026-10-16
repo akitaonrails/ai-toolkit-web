@@ -23,6 +23,7 @@
       "alt": "Competente o Suficiente como um livro de bolso em 3D: um robô gigante retrofuturista, de rosto redondo e cansado, ajoelhado numa Feira Mundial dos anos 1950 enquanto a multidão assiste. O título corre pela lombada azul-marinho."
     }
   },
+  "audience": "Para quem é este livro?",
   "intro": "Peguei os artigos do ano no meu blog, reorganizei e reescrevi tudo como uma história só, chequei os fatos de novo e ilustrei. É pra quem está ansioso ou confuso com IA: o profissional com medo de ser substituído, o pai que leu que a AGI chega em dois anos, o gerente a quem estão vendendo uma \"transformação com IA\".",
   "preview": {
     "title": "Esta é a {version}",
@@ -45,7 +46,9 @@
     "full": "Tela cheia",
     "exit": "Sair da tela cheia",
     "loading": "Abrindo o livro…",
-    "error": "O leitor não conseguiu abrir o livro. Os downloads abaixo continuam funcionando."
+    "error": "O leitor não conseguiu abrir o livro. Você pode tentar de novo ou baixar o arquivo.",
+    "retry": "Tentar de novo",
+    "downloadFallback": "Baixar o EPUB"
   },
   "downloads": {
     "title": "Download",

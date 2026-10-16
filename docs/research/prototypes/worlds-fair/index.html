@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akita's AI Lair, World's Fair prototype</title>
+<!-- Throwaway prototype for review (docs/research/prototypes/worlds-fair). Not part of the site build. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* From the book cover: Rapture-deep navy, patina teal, poster cream, brass, one pennant red. */
+    --abyss: #0B1E2B;      /* page ground, the deep end of the ocean */
+    --navy: #12324A;       /* raised navy panels */
+    --teal: #2E6E70;       /* patina: walkways, secondary plates */
+    --teal-glow: #7FC7BE;  /* Rapture glass light, only on lines and the map */
+    --cream: #F2E6CC;      /* poster paper */
+    --cream-dim: #CDBF9F;
+    --brass: #C9A04A;      /* gilt lines, the action color */
+    --brass-hi: #E2BE68;
+    --brass-ink: #6E5420;  /* brass text on cream, 4.5:1 */
+    --pennant: #C2412D;    /* one accent: flags and the 42 */
+    --ink: #13202A;        /* text on cream */
+    --display: 'Limelight', 'Georgia', serif;
+    --sign: 'Josefin Sans', system-ui, sans-serif;
+    --body: 'Source Serif 4', Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before { animation: none !important; transition: none !important; } }
+  body { margin: 0; background: var(--abyss); color: var(--cream); font: 400 1.125rem/1.6 var(--body); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--brass-hi); outline-offset: 3px; }
+  .wrap { inline-size: min(76rem, 100% - 2rem); margin-inline: auto; }
+
+  /* Marquee: the nav is the fair's entrance sign. A double brass rule above, ticket-booth links. */
+  .marquee { position: sticky; top: 0; z-index: 10; background: var(--abyss); border-block-end: 1px solid color-mix(in oklab, var(--brass) 45%, transparent); }
+  .marquee::before { content: ''; display: block; block-size: 6px; border-block: 1px solid var(--brass); margin-block-end: 1px; }
+  .marquee .wrap { display: flex; align-items: center; gap: 1.5rem; min-block-size: 3.5rem; }
+  .brand { font: 1.35rem var(--display); color: var(--cream); text-decoration: none; letter-spacing: 0.02em; }
+  .brand b { color: var(--brass); font-weight: 400; }
+  .marquee nav { display: flex; gap: 1.4rem; margin-inline-start: auto; font: 600 0.95rem var(--sign); }
+  .marquee nav a { text-decoration: none; color: var(--cream-dim); padding-block: 0.6rem; }
+  .marquee nav a:hover { color: var(--brass-hi); }
+  .ticket-btn { font: 700 0.95rem var(--sign); color: var(--abyss); background: var(--brass); padding: 0.55rem 1rem; text-decoration: none; clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%); }
+  .ticket-btn:hover { background: var(--brass-hi); }
+  @media (max-width: 56rem) { .marquee nav { display: none; } .ticket-btn { margin-inline-start: auto; } }
+
+  /* Hero: a fair poster. Sunburst rays from behind the arch, the title set like a pavilion sign. */
+  .hero { position: relative; overflow: hidden; background:
+      repeating-conic-gradient(from -90deg at 72% 108%, color-mix(in oklab, var(--teal) 30%, var(--abyss)) 0deg 4deg, var(--abyss) 4deg 9deg); }
+  .hero::after { content: ''; position: absolute; inset: auto 0 0; block-size: 40%; background: linear-gradient(transparent, var(--abyss)); pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; gap: 3rem; align-items: end; padding-block: 5rem 4rem; }
+  @media (min-width: 60rem) { .hero .wrap { grid-template-columns: 1.2fr 1fr; padding-block: 7rem 5rem; } }
+  .hero h1 { margin: 0; font: clamp(3.4rem, 9vw, 7.2rem)/0.95 var(--display); color: var(--cream); text-shadow: 0.05em 0.05em 0 var(--brass-ink), 0.1em 0.1em 0 color-mix(in oklab, var(--brass) 35%, transparent); }
+  .hero .sub { font: 600 clamp(1.05rem, 2.2vw, 1.3rem)/1.4 var(--sign); color: var(--brass-hi); margin: 1.6rem 0 0; max-inline-size: 30em; }
+  .hero p { max-inline-size: 34em; color: var(--cream-dim); }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-block-start: 2rem; }
+  .btn { display: inline-flex; align-items: center; min-block-size: 2.9rem; padding: 0 1.4rem; font: 700 1rem var(--sign); text-decoration: none; border: 2px solid var(--brass); color: var(--cream); }
+  .btn.primary { background: var(--brass); color: var(--abyss); }
+  .btn:hover { border-color: var(--brass-hi); }
+  .btn.primary:hover { background: var(--brass-hi); }
+
+  /* The deco arch: a stepped frame like a Rapture doorway, the portrait standing in it. */
+  .arch { justify-self: center; inline-size: min(26rem, 80vw); aspect-ratio: 3 / 4; position: relative; }
+  .arch .frame { position: absolute; inset: 0; border-radius: 50% 50% 0 0 / 38% 38% 0 0; border: 3px solid var(--brass); background:
+      radial-gradient(circle at 50% 38%, color-mix(in oklab, var(--teal-glow) 35%, var(--navy)), var(--navy) 62%); overflow: hidden; }
+  .arch .frame::before, .arch .frame::after { content: ''; position: absolute; inset: 10px; border-radius: inherit; border: 1px solid color-mix(in oklab, var(--brass) 60%, transparent); }
+  .arch .frame::after { inset: 20px; }
+  .arch img { position: absolute; inset-inline: 0; bottom: 0; inline-size: 100%; }
+  .arch .plinth { position: absolute; inset: auto -6% -1.2rem; block-size: 1.2rem; background: var(--brass); clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%); }
+
+  section { padding-block: clamp(4rem, 9vw, 7rem); }
+  h2 { font: clamp(2.2rem, 5vw, 3.4rem)/1.05 var(--display); margin: 0; color: var(--cream); }
+  .lede { max-inline-size: 38em; color: var(--cream-dim); margin: 1rem 0 0; }
+
+  /* The fair map: the site's directory drawn as a fairground. The one bold thing on the page. */
+  .map { margin-block-start: 3rem; background: var(--navy); border: 2px solid var(--brass); padding: clamp(0.5rem, 2vw, 1.25rem); }
+  .map svg { display: block; inline-size: 100%; block-size: auto; }
+  .map-scroll { overflow-x: auto; }
+  .map-scroll svg { min-inline-size: 44rem; }
+  .map .walk { fill: none; stroke: var(--teal); stroke-width: 14; stroke-linecap: round; }
+  .map .walk-edge { fill: none; stroke: color-mix(in oklab, var(--teal-glow) 50%, transparent); stroke-width: 1.5; stroke-dasharray: 2 6; }
+  .map .pav { fill: var(--abyss); stroke: var(--brass); stroke-width: 2.5; }
+  .map .pav-fill { fill: var(--teal); }
+  .map .fin { fill: var(--brass); }
+  .map .label { font: 700 17px var(--sign); fill: var(--cream); }
+  .map .small { font: 400 13.5px var(--sign); fill: var(--cream-dim); }
+  .map a:hover .pav, .map a:focus-visible .pav { stroke: var(--brass-hi); stroke-width: 4; }
+  .map a:hover .label, .map a:focus-visible .label { fill: var(--brass-hi); }
+  .map .plaza { fill: var(--pennant); stroke: var(--cream); stroke-width: 3; }
+  .map .plaza-num { font: 46px var(--display); fill: var(--cream); }
+  .map .flag { fill: var(--pennant); }
+  .map .waves path { fill: none; stroke: color-mix(in oklab, var(--teal-glow) 45%, transparent); stroke-width: 2; }
+  .map .rail { fill: none; stroke: var(--brass); stroke-width: 2; stroke-dasharray: 14 8; opacity: 0.7; }
+  .map-note { margin-block-start: 1rem; font: 400 0.95rem var(--sign); color: var(--cream-dim); }
+
+  /* The book exhibit: a cream poster panel, the only light surface on the page. */
+  .exhibit { background: var(--cream); color: var(--ink); position: relative; }
+  .exhibit::before { content: ''; position: absolute; inset: 0.8rem; border: 1px solid var(--brass-ink); pointer-events: none; }
+  .exhibit .wrap { display: grid; gap: 2.5rem; align-items: center; padding-inline: 1.25rem; }
+  @media (min-width: 56rem) { .exhibit .wrap { grid-template-columns: 0.9fr 1.1fr; } }
+  .exhibit h2 { color: var(--navy); }
+  .exhibit .lede { color: color-mix(in oklab, var(--ink) 80%, var(--cream)); }
+  .exhibit img { inline-size: min(28rem, 100%); justify-self: center; display: block; }
+  .exhibit .free { border-inline-start: 4px solid var(--pennant); padding: 0.2rem 0 0.2rem 1rem; margin-block: 1.6rem; }
+  .exhibit .free strong { font: 700 1.05rem var(--sign); display: block; color: var(--navy); }
+  .exhibit .btn { color: var(--navy); border-color: var(--navy); }
+  .exhibit .btn.primary { background: var(--navy); color: var(--cream); }
+  .exhibit .meta { font: 600 0.9rem var(--sign); color: var(--brass-ink); margin-block-start: 1rem; }
+
+  /* Essays as admission tickets: the stub carries the question each one answers. */
+  .tickets { display: grid; gap: 1.5rem; margin-block-start: 3rem; }
+  @media (min-width: 60rem) { .tickets { grid-template-columns: repeat(3, 1fr); } }
+  .ticket { --hole: 12px; display: grid; grid-template-rows: 1fr auto; text-decoration: none; background: var(--cream); color: var(--ink);
+    -webkit-mask: radial-gradient(var(--hole) at 0 calc(100% - 4.6rem), #0000 98%, #000) left / 51% 100% no-repeat, radial-gradient(var(--hole) at 100% calc(100% - 4.6rem), #0000 98%, #000) right / 51% 100% no-repeat;
+            mask: radial-gradient(var(--hole) at 0 calc(100% - 4.6rem), #0000 98%, #000) left / 51% 100% no-repeat, radial-gradient(var(--hole) at 100% calc(100% - 4.6rem), #0000 98%, #000) right / 51% 100% no-repeat;
+    transition: transform 0.2s; }
+  .ticket:hover { transform: translateY(-3px) rotate(-0.4deg); }
+  .ticket .face { padding: 1.6rem 1.6rem 1.2rem; border-block-start: 10px solid var(--c); }
+  .ticket h3 { font: 1.7rem/1.1 var(--display); margin: 0; color: var(--navy); }
+  .ticket p { margin: 0.8rem 0 0; font-size: 1.02rem; }
+  .ticket .stub { block-size: 4.6rem; padding: 0 1.6rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-block-start: 2px dashed color-mix(in oklab, var(--ink) 35%, transparent); font: 600 0.95rem/1.3 var(--sign); color: var(--brass-ink); }
+  .ticket .stub span:last-child { font: 1.15rem var(--display); color: var(--c); white-space: nowrap; }
+
+  /* Halls: the tools, as pavilion plaques on the dark ground. */
+  .halls { display: grid; gap: 0; margin-block-start: 3rem; border-block-start: 1px solid color-mix(in oklab, var(--brass) 50%, transparent); }
+  @media (min-width: 52rem) { .halls { grid-template-columns: repeat(3, 1fr); } }
+  .hall { padding: 1.8rem 1.6rem; border-block-end: 1px solid color-mix(in oklab, var(--brass) 50%, transparent); text-decoration: none; }
+  @media (min-width: 52rem) { .hall + .hall { border-inline-start: 1px solid color-mix(in oklab, var(--brass) 50%, transparent); } }
+  .hall h3 { font: 700 1.3rem var(--sign); margin: 0; color: var(--brass-hi); }
+  .hall p { margin: 0.5rem 0 0; color: var(--cream-dim); font-size: 1rem; }
+  .hall:hover h3 { text-decoration: underline; text-underline-offset: 0.2em; }
+
+  /* Footer: the fair at night. The answer to everything sits at the information desk. */
+  footer { border-block-start: 6px double var(--brass); padding-block: 3rem 4rem; color: var(--cream-dim); font: 400 1rem/1.6 var(--sign); }
+  footer .wrap { display: grid; gap: 2rem; }
+  @media (min-width: 52rem) { footer .wrap { grid-template-columns: 1.4fr 1fr 1fr; } }
+  footer h4 { font: 1.2rem var(--display); color: var(--cream); margin: 0 0 0.6rem; }
+  footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+  footer a { text-decoration: none; } footer a:hover { color: var(--brass-hi); }
+  .harmless { font-style: italic; font-family: var(--body); }
+</style>
+</head>
+<body>
+
+<header class="marquee">
+  <div class="wrap">
+    <a class="brand" href="#">Akita's <b>AI</b> Lair</a>
+    <nav aria-label="Main">
+      <a href="#map">The fair map</a>
+      <a href="#book">The book</a>
+      <a href="#essays">Essays</a>
+      <a href="#halls">Machines</a>
+      <a href="#">Podcasts</a>
+    </nav>
+    <a class="ticket-btn" href="#book">Get the book</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="title">
+    <div class="wrap">
+      <div>
+        <h1 id="title">Akita's AI Lair</h1>
+        <p class="sub">One programmer's year with AI, laid out like a world's fair. Walk the halls, try the machines, take the book home.</p>
+        <p>I'm Fabio Akita, a programmer for more than 30 years. I maintain more than 40 open source repositories with AI agents doing most of the typing. These are the tools I built, the workflow that ties them together, and what I learned, written down.</p>
+        <div class="actions">
+          <a class="btn primary" href="#map">See the fair map</a>
+          <a class="btn" href="#book">Read the book, free</a>
+        </div>
+      </div>
+      <div class="arch" aria-hidden="true">
+        <div class="frame"><img src="portrait.png" alt=""></div>
+        <div class="plinth"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map" aria-labelledby="map-title">
+    <div class="wrap">
+      <h2 id="map-title">The fair map</h2>
+      <p class="lede">Every page of the site is a pavilion. Information is at Plaza 42, in the middle, where else.</p>
+      <div class="map"><div class="map-scroll">
+        <svg viewBox="0 0 1200 640" role="img" aria-labelledby="map-desc">
+          <title id="map-desc">A fairground map. Walkways lead from Plaza 42 in the center to six pavilions: the Book Tower, the Hall of Opinions, the Hall of Machines, the Broadcast Tower, the Workshop and the Arcade.</title>
+          <!-- The lagoon: deco wave lines along the bottom edge -->
+          <g class="waves">
+            <path d="M0 585 q 25 -12 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0"/>
+            <path d="M-25 607 q 25 -12 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0"/>
+            <path d="M0 629 q 25 -12 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0 t 50 0"/>
+          </g>
+          <!-- The monorail: a dashed loop around the plaza, 1962 Seattle style -->
+          <ellipse class="rail" cx="600" cy="320" rx="300" ry="150"/>
+          <!-- Walkways from the plaza -->
+          <g>
+            <path class="walk" d="M600 320 L 600 120"/><path class="walk" d="M600 320 L 250 170"/><path class="walk" d="M600 320 L 950 170"/>
+            <path class="walk" d="M600 320 L 220 450"/><path class="walk" d="M600 320 L 980 450"/><path class="walk" d="M600 320 L 600 500"/>
+            <path class="walk-edge" d="M600 320 L 600 120 M600 320 L 250 170 M600 320 L 950 170 M600 320 L 220 450 M600 320 L 980 450 M600 320 L 600 500"/>
+          </g>
+          <!-- Book Tower: a stepped deco tower with fins -->
+          <a href="#book">
+            <path class="pav" d="M560 140 V 70 L 575 55 V 30 L 600 10 L 625 30 V 55 L 640 70 V 140 Z"/>
+            <path class="fin" d="M552 140 L 560 80 L 560 140Z M648 140 L 640 80 L 640 140Z"/>
+            <text class="label" x="660" y="70">Book Tower</text>
+            <text class="small" x="660" y="90">Competent Enough, free</text>
+          </a>
+          <!-- Hall of Opinions: three arches -->
+          <a href="#essays">
+            <path class="pav" d="M150 200 V 150 A 25 25 0 0 1 200 150 V 200 Z"/>
+            <path class="pav" d="M205 200 V 135 A 30 30 0 0 1 265 135 V 200 Z"/>
+            <path class="pav" d="M270 200 V 150 A 25 25 0 0 1 320 150 V 200 Z"/>
+            <text class="label" x="150" y="230">Hall of Opinions</text>
+            <text class="small" x="150" y="250">AGI, students, the limits of LLMs</text>
+          </a>
+          <!-- Hall of Machines: a dome with a gear -->
+          <a href="#halls">
+            <path class="pav" d="M880 200 V 175 A 70 60 0 0 1 1020 175 V 200 Z"/>
+            <circle class="pav-fill" cx="950" cy="160" r="16"/>
+            <text class="label" x="880" y="230">Hall of Machines</text>
+            <text class="small" x="880" y="250">ai-usagebar, ghpending, tclock</text>
+          </a>
+          <!-- Broadcast Tower: the needle with a saucer -->
+          <a href="#">
+            <path class="pav" d="M975 470 L 985 340 L 995 470 Z"/>
+            <ellipse class="pav" cx="985" cy="350" rx="45" ry="11"/>
+            <path class="fin" d="M984 300 L 986 300 L 986 340 L 984 340 Z"/>
+            <text class="label" x="1040" y="410">Broadcast Tower</text>
+            <text class="small" x="1040" y="430">Podcasts, newsletter</text>
+          </a>
+          <!-- Workshop: a saw-tooth roof -->
+          <a href="#">
+            <path class="pav" d="M140 480 V 430 L 175 410 V 430 L 210 410 V 430 L 245 410 V 430 L 280 410 V 480 Z"/>
+            <text class="label" x="110" y="510">The Workshop</text>
+            <text class="small" x="110" y="530">How I work with agents</text>
+          </a>
+          <!-- Arcade: a round kiosk -->
+          <a href="#">
+            <circle class="pav" cx="600" cy="510" r="34"/>
+            <circle class="pav-fill" cx="600" cy="510" r="14"/>
+            <text class="label" x="650" y="505">The Arcade</text>
+            <text class="small" x="650" y="525">Games, after hours</text>
+          </a>
+          <!-- Plaza 42 -->
+          <g>
+            <circle class="plaza" cx="600" cy="320" r="58"/>
+            <text class="plaza-num" x="600" y="337" text-anchor="middle">42</text>
+            <text class="small" x="600" y="405" text-anchor="middle">Information</text>
+          </g>
+          <!-- Pennants along the waterfront -->
+          <g class="flag"><path d="M360 560 v-40 l18 8 -18 8z"/><path d="M420 560 v-40 l18 8 -18 8z"/><path d="M820 560 v-40 l18 8 -18 8z"/><path d="M880 560 v-40 l18 8 -18 8z"/></g>
+        </svg>
+      </div></div>
+      <p class="map-note">On a phone the map scrolls sideways; the same pavilions are listed in the menu.</p>
+    </div>
+  </section>
+
+  <section id="book" class="exhibit" aria-labelledby="book-title">
+    <div class="wrap">
+      <img src="book.png" alt="Competent Enough as a 3D paperback: a giant retro-futurist robot kneels at a 1950s World's Fair while a crowd watches.">
+      <div>
+        <h2 id="book-title">Competent Enough</h2>
+        <p class="lede">A year putting artificial intelligence to the test, without fear and without hype. Twenty-one chapters for anyone anxious or confused about AI, in English and Portuguese.</p>
+        <div class="free"><strong>Free, and it stays free</strong>The EPUB and the PDFs cost nothing, today and in every future version. A hardcover is coming to Amazon for anyone who wants it on the shelf.</div>
+        <div class="actions" style="display:flex;flex-wrap:wrap;gap:.8rem">
+          <a class="btn primary" href="#">Download the EPUB</a>
+          <a class="btn" href="#">Read it here</a>
+        </div>
+        <p class="meta">Version 1.0.0-preview.7, released October 14, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="essays" aria-labelledby="essays-title">
+    <div class="wrap">
+      <h2 id="essays-title">Hall of Opinions</h2>
+      <p class="lede">Three essays for people who came from a headline. Each one answers a single question with sources you can check.</p>
+      <div class="tickets">
+        <a class="ticket" href="#" style="--c: var(--pennant)">
+          <div class="face"><h3>Why AGI doesn't matter</h3><p>No agreed definition, no real test, and models that stopped getting much smarter. The tools are excellent anyway.</p></div>
+          <div class="stub"><span>Is Skynet near?</span><span>Admit one</span></div>
+        </a>
+        <a class="ticket" href="#" style="--c: var(--teal)">
+          <div class="face"><h3>The limits of LLMs</h3><p>PhotoCraft and the daily game ports don't mean Adobe is dead. What AI copies well, and what it can't.</p></div>
+          <div class="stub"><span>Can AI clone anything?</span><span>Admit one</span></div>
+        </a>
+        <a class="ticket" href="#" style="--c: var(--brass-ink)">
+          <div class="face"><h3>AI and students</h3><p>I vibe code all day because I spent decades learning the hard way. If you're starting out, don't copy me yet.</p></div>
+          <div class="stub"><span>Should I still learn to code?</span><span>Admit one</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="halls" aria-labelledby="halls-title">
+    <div class="wrap">
+      <h2 id="halls-title">Hall of Machines</h2>
+      <p class="lede">Small tools I built to keep forty repositories manageable. All open source.</p>
+      <div class="halls">
+        <a class="hall" href="#"><h3>ai-usagebar</h3><p>How much of each AI subscription is left, in the top bar.</p></a>
+        <a class="hall" href="#"><h3>ghpending</h3><p>Every repository with something waiting on me, in one digest.</p></a>
+        <a class="hall" href="#"><h3>tclock</h3><p>A terminal clock with widgets, on the second monitor.</p></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Akita's AI Lair</h4>
+      <p>The tools I built and the way I use them. No sponsors, no ads, no paid subscriptions.</p>
+      <p class="harmless">Mostly harmless. Built by one human and some competent-enough agents.</p>
+    </div>
+    <div><h4>Pavilions</h4><ul><li><a href="#book">Book Tower</a></li><li><a href="#essays">Hall of Opinions</a></li><li><a href="#halls">Hall of Machines</a></li><li><a href="#">The Workshop</a></li></ul></div>
+    <div><h4>Elsewhere</h4><ul><li><a href="#">Blog</a></li><li><a href="#">GitHub</a></li><li><a href="#">X</a></li><li><a href="#">YouTube: Akitando</a></li></ul></div>
+  </div>
+</footer>
+<script>
+  // On narrow screens the map scrolls sideways; start it centered on Plaza 42.
+  const m = document.querySelector('.map-scroll');
+  if (m && m.scrollWidth > m.clientWidth) m.scrollLeft = (m.scrollWidth - m.clientWidth) / 2;
+</script>
+</body>
+</html>

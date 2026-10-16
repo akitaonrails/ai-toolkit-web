@@ -5,17 +5,43 @@
   "hero": {
     "kicker": "Um covil de portas abertas",
     "title": "Akita's AI Lair",
-    "lede": "Eu mantenho mais de 40 repositórios open source com agentes de IA fazendo a maior parte da digitação. Aqui estão as ferramentas que eu criei pra dar conta disso, o workflow que junta tudo e os textos onde eu documento o que aprendo.",
+    "lede": "Um agente de código com IA é um modelo de IA que consegue inspecionar arquivos, editar código e rodar comandos. Eu uso esses agentes em mais de 40 repositórios open source. Aqui estão as ferramentas que mantêm o trabalho sob controle, o workflow que confere tudo e os textos onde eu documento o que aprendo.",
     "primary": "Ver o workflow",
-    "secondary": "Onde me seguir",
+    "secondary": "Novo em IA? Leia o livro",
     "shotAlt": "Meu segundo monitor: o tclock mostrando 16:10:22 em dígitos vermelhos grandes, um widget de pendências do GitHub listando pull requests e issues abertos do ai-memory e do ai-usagebar, um widget do Google Calendar e uma faixa de saúde do sistema.",
     "shotCaption": "Meu segundo monitor numa quinta-feira normal. 43 repositórios checados, 6 com alguma coisa esperando.",
     "portraitAlt": "Retrato ilustrado de Fabio Akita: cabelo grisalho, óculos redondos, camisa branca e gravata escura, olhando pra cima com um meio sorriso confiante.",
     "intro": "Olá pessoal, Fabio Akita, sou programador há mais de 30 anos, empreendedor, palestrante, escritor e ex-YouTuber. <a class=\"link\" href=\"{linkedin}\">Meu LinkedIn</a> tem a versão longa."
   },
+  "start": {
+    "title": "Comece pela sua pergunta",
+    "lede": "Você não precisa conhecer minhas ferramentas nem programar pra usar este site. Escolha a pergunta que trouxe você até aqui.",
+    "items": [
+      {
+        "title": "Quero entender a IA",
+        "text": "Comece pelo livro gratuito. Ele explica o que a IA atual consegue fazer, onde ela falha e o que isso significa pro trabalho e pro aprendizado."
+      },
+      {
+        "title": "Quero usar agentes de código",
+        "text": "Comece pelo menor workflow seguro: uma tarefa limitada, restrições por escrito, review humano e testes."
+      },
+      {
+        "title": "Tenho receio da AGI",
+        "text": "Leia primeiro a versão curta e depois examine as evidências por trás de cada afirmação sobre capacidade, risco e controle."
+      },
+      {
+        "title": "Ouvi que a IA vai substituir programadores",
+        "text": "Veja o que os agentes de software copiam bem, onde ainda precisam de gente experiente e quanto os exemplos públicos realmente custaram."
+      },
+      {
+        "title": "Quero usar IA no trabalho",
+        "text": "Comece com um piloto limitado, proteja os dados da empresa, defina o sucesso e deixe uma pessoa responsável pelo resultado."
+      }
+    ]
+  },
   "desk": {
     "title": "Uma mesa, dois monitores, muitos agentes",
-    "lede": "O segundo monitor me diz o que precisa de atenção. O primeiro roda um agente por projeto. Uma memória compartilhada fica embaixo de todos eles, e um medidor na barra superior me avisa quando trocar de provedor.",
+    "lede": "Esta é a minha configuração madura, não um requisito. Um projeto e um agente bastam para começar. O segundo monitor mostra o que precisa de atenção enquanto o primeiro roda um agente por projeto.",
     "alt": "Dois monitores numa mesa. O Monitor 2 mostra um relógio de pixels vermelho e uma lista do ghpending. O Monitor 1 mostra o tmux dividido em quatro painéis de agentes, com o ai-usagebar na barra superior. Uma base verde-azulada chamada ai-memory embaixo da mesa alimenta os quatro painéis.",
     "steps": [
       {
@@ -193,5 +219,48 @@
         "cta": "Ver a newsletter"
       }
     ]
+  },
+  "map": {
+    "title": "O mapa da feira",
+    "lede": "Cada página deste site é um pavilhão. As informações ficam na Praça 42, no meio. Onde mais seria.",
+    "alt": "Um mapa do site desenhado como um parque de exposições dos anos 1960: caminhos saem da Praça 42, no meio, para a Torre do Livro, o Salão das Opiniões, o Salão das Máquinas, a Oficina, a Torre de Transmissão, a Casa da Imprensa, a Sala de Controle e o Fliperama, com um monotrilho em volta e uma lagoa.",
+    "note": "O mapa rola para os lados; todo pavilhão também está no menu.",
+    "places": {
+      "book": {
+        "name": "Torre do Livro",
+        "note": "Competent Enough, de graça"
+      },
+      "opinions": {
+        "name": "Salão das Opiniões",
+        "note": "AGI, os limites dos LLMs, estudantes"
+      },
+      "machines": {
+        "name": "Salão das Máquinas",
+        "note": "ai-usagebar, ghpending, tclock"
+      },
+      "workshop": {
+        "name": "A Oficina",
+        "note": "Como eu trabalho com agentes"
+      },
+      "broadcast": {
+        "name": "Torre de Transmissão",
+        "note": "Podcasts e palestras"
+      },
+      "press": {
+        "name": "Casa da Imprensa",
+        "note": "A newsletter"
+      },
+      "control": {
+        "name": "Sala de Controle",
+        "note": "Meu setup de desktop"
+      },
+      "arcade": {
+        "name": "O Fliperama",
+        "note": "Jogos, fora do expediente"
+      },
+      "plaza": {
+        "name": "Informações"
+      }
+    }
   }
 }
