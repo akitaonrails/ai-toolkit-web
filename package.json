@@ -19,6 +19,7 @@
     "snapshot:github": "node scripts/snapshot-github.mjs",
     "videos:refresh": "node scripts/refresh-videos.mjs",
     "check:seo": "node scripts/check-seo.mjs",
+    "check:reader": "node scripts/check-book-reader.mjs",
     "build:decks": "node scripts/build-decks.mjs",
     "check:decks": "node scripts/build-decks.mjs --check",
     "fetch:book": "node scripts/fetch-book.mjs"
