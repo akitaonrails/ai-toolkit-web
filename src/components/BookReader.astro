@@ -121,6 +121,10 @@ const firstEdition = book.editions.find((e) => e.id === first)!;
         'html, body': { 'touch-action': 'pan-y pinch-zoom', 'overscroll-behavior-x': 'none' },
       });
     };
+    const fail = (err: unknown) => {
+      console.error(err);
+      status.hidden = false; statusMessage.textContent = status.dataset.error!; statusActions.hidden = false;
+    };
     // Draws the loaded book into the card (one page) or the full screen (two pages when wide enough), at `at`.
     // epub.js keeps already-drawn pages at their old size after a resize, so a layout change draws them anew.
     // Each draw has a number: a newer one (the size changed again) wins, and an older one stops quietly.
@@ -130,13 +134,14 @@ const firstEdition = book.editions.find((e) => e.id === first)!;
       rendition?.destroy();
       rendition = book!.renderTo(view, { width: '100%', height: '100%', flow: 'paginated', spread: wide() ? 'auto' : 'none', minSpreadWidth: 900, allowScriptedContent: false });
       paint();
-      rendition.on('relocated', (loc: { start: { cfi: string; href: string } }) => {
+      const locate = (loc: { start: { cfi: string; href: string } }) => {
         store.set(`book-cfi-${id}`, loc.start.cfi);
         const file = loc.start.href.split('#')[0];
         where.textContent = labels.get(file) ?? '';
         const match = [...toc.options].find((o) => o.value && o.value.split('#')[0] === file);
         if (match) toc.value = match.value;
-      });
+      };
+      rendition.on('relocated', locate);
       rendition.on('keyup', key);
       let x0 = 0;
       rendition.on('touchstart', (e: TouchEvent) => { x0 = e.changedTouches[0].screenX; });
@@ -159,16 +164,21 @@ const firstEdition = book.editions.find((e) => e.id === first)!;
         if (mine !== drawn) return;
         // A saved page that no longer exists (a new version of the book) opens at the start instead of a blank view.
         if (!at) throw err;
-        await r.display();
+        try {
+          await r.display();
+        } catch (fallbackErr) {
+          if (mine !== drawn) return;
+          throw fallbackErr;
+        }
       }
+      if (mine !== drawn) return;
+      const current = r.currentLocation();
+      if (current && !Array.isArray(current)) locate(current as { start: { cfi: string; href: string } });
     }
     const fit = () => {
       if (!rendition) return;
       const at = (rendition.currentLocation() as unknown as { start?: { cfi: string } })?.start?.cfi;
-      render(edition, at ?? store.get(`book-cfi-${edition}`) ?? undefined).catch((err) => {
-        console.error(err);
-        status.hidden = false; status.textContent = status.dataset.error!;
-      });
+      render(edition, at ?? store.get(`book-cfi-${edition}`) ?? undefined).catch(fail);
     };
     // Draw again once the view settles on a new size. Entering full screen resizes it several times while the
     // browser animates (macOS), so wait until it stops changing instead of measuring the first frame.
@@ -201,10 +211,6 @@ const firstEdition = book.editions.find((e) => e.id === first)!;
       status.hidden = true;
     }
 
-    const fail = (err: unknown) => {
-      console.error(err);
-      status.hidden = false; statusMessage.textContent = status.dataset.error!; statusActions.hidden = false;
-    };
     const withTimeout = <T,>(promise: Promise<T>, ms: number) => Promise.race<T>([
       promise,
       new Promise<T>((_, reject) => setTimeout(() => reject(new Error('Book reader timed out')), ms)),
