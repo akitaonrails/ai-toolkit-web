@@ -1,11 +1,12 @@
 {
   "meta": {
     "title": "AI 책 Competent Enough",
-    "description": "Competent Enough는 두려움도 과대광고도 없이 AI를 시험한 1년을 담은 제 책입니다. EPUB과 PDF 프리뷰를 영어와 포르투갈어로 무료로 받을 수 있습니다."
+    "description": "Competent Enough는 AI를 시험한 1년을 담은 제 책입니다. EPUB는 무료이며 영어판과 포르투갈어판 인쇄본·Kindle판은 Amazon에서 구매할 수 있습니다."
   },
   "hero": {
     "kicker": "책",
     "epub": "EPUB 다운로드",
+    "amazon": "Amazon에서 구매",
     "pdf": "PDF 다운로드",
     "all": "모든 형식"
   },
@@ -69,12 +70,17 @@
     },
     "version": "버전 {version}, {date} 공개"
   },
+  "amazon": {
+    "buy": "Amazon에서 구매",
+    "formats": {
+      "en": "양장본, Kindle",
+      "pt": "양장본, 페이퍼백, Kindle"
+    }
+  },
   "free": {
-    "title": "무료이고, 앞으로도 무료입니다",
-    "text": "EPUB와 PDF는 지금도, 앞으로 나올 모든 버전도 무료로 내려받아 읽을 수 있습니다. 이 책에는 몇 년에 걸친 제 연구와 실험이 담겨 있고, 새로운 세대의 컴퓨터 과학자들이 제가 배운 것에서 출발해 더 멀리 가기를 바라서 무료로 내놓습니다.",
-    "soon": "양장본이 곧 Amazon에 나옵니다. 책장에 한 권 두고 싶은 분을 위한 판입니다. 나오는 대로 여기에 링크하겠습니다.",
-    "hardcover": "책장에 한 권 두고 싶은 분을 위해 Amazon에 양장본이 있습니다.",
-    "buy": "{title} 양장본(Amazon)"
+    "title": "무료 비영리 프로젝트이며 앞으로도 같습니다",
+    "text": "EPUB와 PDF는 지금도 무료이고 앞으로 나올 모든 버전도 계속 무료입니다. 유료 Kindle판과 내용은 같습니다. 최대한 많은 사람이 읽을 수 있도록 만든 비영리 프로젝트입니다.",
+    "cost": "Amazon의 모든 판은 원가로만 판매합니다. 인쇄본이나 Kindle 판매로 제가 얻는 수익은 없습니다."
   },
   "inside": {
     "title": "책의 구성",

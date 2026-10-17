@@ -1,11 +1,12 @@
 {
   "meta": {
     "title": "Competent Enough, el libro",
-    "description": "Competent Enough, mi libro sobre un año poniendo a prueba la IA sin miedo y sin hype. Vista previa gratis en EPUB y PDF, en inglés y portugués."
+    "description": "Competent Enough, mi libro sobre un año poniendo a prueba la IA. Lee el EPUB gratis o consigue las ediciones impresas y Kindle en Amazon."
   },
   "hero": {
     "kicker": "Libro",
     "epub": "Descargar el EPUB",
+    "amazon": "Comprar en Amazon",
     "pdf": "Descargar el PDF",
     "all": "Todos los formatos"
   },
@@ -69,12 +70,17 @@
     },
     "version": "Versión {version}, publicada el {date}"
   },
+  "amazon": {
+    "buy": "Comprar en Amazon",
+    "formats": {
+      "en": "Tapa dura y Kindle",
+      "pt": "Tapa dura, tapa blanda y Kindle"
+    }
+  },
   "free": {
-    "title": "Gratis, y seguirá siendo gratis",
-    "text": "El EPUB y los PDF se descargan y se leen gratis, hoy y en todas las versiones que vengan. El libro reúne años de mi investigación y mis experimentos, y lo regalo porque quiero que una nueva generación de científicos de la computación empiece desde lo que aprendí y llegue más lejos.",
-    "soon": "Pronto habrá una edición en tapa dura en Amazon, para quien quiera un ejemplar en la estantería. La enlazaré aquí en cuanto salga.",
-    "hardcover": "Para quien quiera un ejemplar en la estantería, hay una edición en tapa dura en Amazon.",
-    "buy": "{title}, tapa dura en Amazon"
+    "title": "Gratis, sin fines de lucro, y seguirá así",
+    "text": "El EPUB y los PDF son gratis hoy y seguirán siéndolo en todas las versiones futuras. Tienen el mismo contenido que la edición de pago para Kindle. Este es un proyecto sin fines de lucro: quiero que el libro llegue a la mayor cantidad de personas posible.",
+    "cost": "Todas las ediciones de Amazon se venden a precio de costo. No obtengo ganancias de las ventas impresas ni de Kindle."
   },
   "inside": {
     "title": "Qué hay dentro",

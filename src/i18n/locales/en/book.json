@@ -1,11 +1,12 @@
 {
   "meta": {
     "title": "Competent Enough, the book",
-    "description": "Competent Enough, my book on a year of putting AI to the test without fear and without hype. A free EPUB and PDF preview, in English and Portuguese."
+    "description": "Competent Enough, my book on a year of putting AI to the test. Read the free EPUB or get the English and Portuguese print and Kindle editions on Amazon."
   },
   "hero": {
     "kicker": "Book",
     "epub": "Download the EPUB",
+    "amazon": "Buy on Amazon",
     "pdf": "Download the PDF",
     "all": "All formats"
   },
@@ -69,12 +70,17 @@
     },
     "version": "Version {version}, released {date}"
   },
+  "amazon": {
+    "buy": "Buy on Amazon",
+    "formats": {
+      "en": "Hardcover and Kindle",
+      "pt": "Hardcover, paperback and Kindle"
+    }
+  },
   "free": {
-    "title": "Free, and it stays free",
-    "text": "The EPUB and the PDFs are free to download and read, today and in every future version. The book holds years of my research and experiments, and I'm giving it away because I want a new generation of computer scientists to start from what I learned and go further.",
-    "soon": "A hardcover edition is coming to Amazon soon, for anyone who wants a copy on the shelf. I'll link it here as soon as it's out.",
-    "hardcover": "For anyone who wants a copy on the shelf, there's a hardcover edition on Amazon.",
-    "buy": "{title}, hardcover on Amazon"
+    "title": "Free, nonprofit, and staying that way",
+    "text": "The EPUB and PDFs are free today and will stay free in every future version. They contain the same book as the paid Kindle edition. This is a nonprofit project: I want as many people as possible to have access to it.",
+    "cost": "Every Amazon edition is sold at cost. I make no profit from print or Kindle sales."
   },
   "inside": {
     "title": "What's inside",
