@@ -40,8 +40,11 @@
     "epubjs": "^0.3.93",
     "gsap": "^3.15.0",
     "jszip": "^3.10.2",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "^0.9.12"
   },
   "devDependencies": {
     "culori": "^4.0.2",

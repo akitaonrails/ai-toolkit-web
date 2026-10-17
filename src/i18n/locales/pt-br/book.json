@@ -28,7 +28,7 @@
   "intro": "Peguei os artigos do ano no meu blog, reorganizei e reescrevi tudo como uma história só, chequei os fatos de novo e ilustrei. É pra quem está ansioso ou confuso com IA: o profissional com medo de ser substituído, o pai que leu que a AGI chega em dois anos, o gerente a quem estão vendendo uma \"transformação com IA\".",
   "preview": {
     "title": "Esta é a {version}",
-    "text": "O livro ainda está em andamento, e vão sair novas versões até eu considerar ele pronto. Este preview saiu em {date}. Se achar qualquer coisa errada, de um erro de digitação a um fato, qualquer um pode abrir uma issue no GitHub.",
+    "text": "A versão 1.0 é a primeira edição estável, publicada em {date}. O livro continua aberto a correções: se achar qualquer coisa errada, de um erro de digitação a um fato, qualquer um pode abrir uma issue no GitHub.",
     "issues": "Abrir uma issue",
     "notes": "Notas da release"
   },
@@ -77,10 +77,14 @@
       "pt": "Capa dura, capa comum e Kindle"
     }
   },
+  "uiclap": {
+    "buy": "Comprar na UICLAP",
+    "format": "Impresso no Brasil"
+  },
   "free": {
     "title": "Grátis, sem fins lucrativos, e continua assim",
     "text": "O EPUB e os PDFs são gratuitos hoje e continuarão gratuitos em todas as próximas versões. Eles têm o mesmo conteúdo da edição paga do Kindle. Este é um projeto sem fins lucrativos: quero que o maior número possível de pessoas tenha acesso ao livro.",
-    "cost": "Todas as edições na Amazon são vendidas pelo preço de custo. Eu não tenho lucro com as vendas impressas nem com o Kindle."
+    "cost": "Todas as edições pagas são vendidas pelo preço de custo. Eu não tenho lucro com as vendas impressas nem com o Kindle."
   },
   "inside": {
     "title": "O que tem dentro",
