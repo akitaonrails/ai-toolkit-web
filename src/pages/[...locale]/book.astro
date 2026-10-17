@@ -11,6 +11,7 @@ import NextPages from '@/components/NextPages.astro';
 import CtaBand from '@/components/CtaBand.astro';
 import BookReader from '@/components/BookReader.astro';
 import PullQuote from '@/components/PullQuote.astro';
+import AmazonIcon from '@/components/AmazonIcon.astro';
 import { articles, articleUrl } from '@/data/articles';
 import bookEn from '@/assets/img/book/book-en.png';
 import bookPt from '@/assets/img/book/book-pt.png';
@@ -30,7 +31,6 @@ const stats = [
   { n: book.numbers.glossary, label: t('inside.stats.glossary') },
   { n: book.numbers.references, label: t('inside.stats.references') },
 ];
-const hardcovers = book.editions.filter((e) => book.hardcover[e.id]);
 const version = t('downloads.version', { version: bookVersion, date: date(book.released) });
 const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', href: '/agi/' }] as const, raw<Text[]>('next'));
 ---
@@ -46,12 +46,19 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
     artFit="contain"
   >
     <a href={bookFile(mine.file, 'epub')} class="btn btn-primary">{t('hero.epub')}</a>
+    <a href={book.amazon[mine.id]} class="btn btn-ghost amazon-button"><AmazonIcon />{t('hero.amazon')}</a>
     <a href={bookFile(mine.file, 'ebook')} class="btn btn-ghost">{t('hero.pdf')}</a>
     <a href="#downloads" class="btn btn-ghost">{t('hero.all')}</a>
     <p class="version basis-full">{version}</p>
   </PageHero>
 
-  <section class="wrap pt-12 lg:pt-[6.25rem]" data-hue="mauve">
+  <section class="wrap pt-8 lg:pt-12" data-hue="mauve">
+    <div class="free-card">
+      <Callout title={t('free.title')} hue="mauve" level={2}>
+        <p>{t('free.text')}</p>
+        <p class="mt-3">{t('free.cost')}</p>
+      </Callout>
+    </div>
     <div class="intro-cards grid gap-6 md:grid-cols-2 items-stretch">
       <Callout title={t('audience')} hue="mauve" level={2}>
         <p>{t('intro')}</p>
@@ -74,6 +81,10 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
           <div class="kicker"><span class="dot" aria-hidden="true"></span>{t(`editions.${e.id}.language`)}</div>
           <h3 class="text-2xl mt-3">{t(`editions.${e.id}.title`)}</h3>
           <p class="version mt-1">{version}</p>
+          <a class="amazon-listing" href={book.amazon[e.id]}>
+            <AmazonIcon size={22} />
+            <span><span class="font-semibold">{t('amazon.buy')}</span><span class="text-muted text-sm">{t(`amazon.formats.${e.id}`)}</span></span>
+          </a>
           <ul class="mt-5 grid gap-2">
             {formats.map((f) => (
               <li><a class="dl" href={bookFile(e.file, f)}><span class="font-semibold">{t(`downloads.formats.${f}.name`)}</span><span class="text-muted text-sm">{t(`downloads.formats.${f}.for`)}</span></a></li>
@@ -82,13 +93,6 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
         </div>
       ))}
     </div>
-    <Callout title={t('free.title')} hue="mauve">
-      <p>{t('free.text')}</p>
-      <p class="mt-3">{t(hardcovers.length ? 'free.hardcover' : 'free.soon')}</p>
-      {hardcovers.length > 0 && (
-        <p class="mt-3 flex flex-wrap gap-x-6 gap-y-1">{hardcovers.map((e) => <a href={book.hardcover[e.id]} class="link">{t('free.buy', { title: t(`editions.${e.id}.title`) })}</a>)}</p>
-      )}
-    </Callout>
   </Section>
 
   <Section title={t('inside.title')} lede={t('inside.lede')} hue="mauve">
@@ -114,7 +118,13 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
 <style>
   :global(#read) { padding-block-start: 3rem; }
   .version { font-family: var(--font-sign); font-size: var(--text-sm); color: var(--muted); }
+  .free-card :global(.callout) { margin-block: 0 1.5rem; }
   .intro-cards :global(.callout) { block-size: 100%; margin-block: 0; }
+  .amazon-button { gap: 0.55rem; }
+  .amazon-listing { display: flex; align-items: center; gap: 0.9rem; margin-block-start: 1.25rem; padding: 0.9rem 1rem; min-block-size: 3.5rem; border: 1px solid var(--action); background: var(--action); color: var(--on-action); border-radius: 0.2rem; }
+  .amazon-listing > span { display: grid; gap: 0.1rem; }
+  .amazon-listing .text-muted { color: inherit; opacity: 0.78; }
+  .amazon-listing:hover { background: var(--action-hi); }
   .dl { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--line); min-block-size: 2.75rem; align-items: center; }
   .dl:hover { border-color: var(--hue-vivid); }
   .parts { display: grid; gap: 1.75rem 3rem; counter-reset: part; }
