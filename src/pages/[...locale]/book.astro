@@ -1,5 +1,5 @@
 ---
-// The book: "Competent Enough" / "Competente o Suficiente". Downloads of the current preview in both languages, the
+// The book: "Competent Enough" / "Competente o Suficiente". Downloads of the current release in both languages, the
 // 3D cover (rendered by scripts/render-book.py from the official cover), what is inside and how it is made.
 // Structure and links in src/data/book.ts, words in the `book` catalog.
 import Base from '@/layouts/Base.astro';
@@ -12,6 +12,7 @@ import CtaBand from '@/components/CtaBand.astro';
 import BookReader from '@/components/BookReader.astro';
 import PullQuote from '@/components/PullQuote.astro';
 import AmazonIcon from '@/components/AmazonIcon.astro';
+import StoreIcon from '@/components/StoreIcon.astro';
 import { articles, articleUrl } from '@/data/articles';
 import bookEn from '@/assets/img/book/book-en.png';
 import bookPt from '@/assets/img/book/book-pt.png';
@@ -22,6 +23,13 @@ export const getStaticPaths = localePaths;
 const { t, raw, locale, date } = useI18n(Astro, 'book');
 type Text = { title: string; text: string };
 const mine = book.editions.find((e) => e.id === bookEdition(locale))!;
+const stores = {
+  en: { provider: 'amazon', url: book.amazon.en },
+  pt: locale === 'pt-br'
+    ? { provider: 'uiclap', url: book.uiclap }
+    : { provider: 'amazon', url: book.amazon.pt },
+} as const;
+const mineStore = stores[mine.id];
 const covers = { en: bookEn, pt: bookPt };
 const formats: BookFormat[] = ['epub', 'ebook', 'print'];
 const parts = raw<{ title: string; question: string }[]>('inside.parts');
@@ -46,7 +54,10 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
     artFit="contain"
   >
     <a href={bookFile(mine.file, 'epub')} class="btn btn-primary">{t('hero.epub')}</a>
-    <a href={book.amazon[mine.id]} class="btn btn-ghost amazon-button"><AmazonIcon />{t('hero.amazon')}</a>
+    <a href={mineStore.url} class="btn btn-ghost store-button">
+      {mineStore.provider === 'amazon' ? <AmazonIcon /> : <StoreIcon />}
+      {t(mineStore.provider === 'amazon' ? 'hero.amazon' : 'uiclap.buy')}
+    </a>
     <a href={bookFile(mine.file, 'ebook')} class="btn btn-ghost">{t('hero.pdf')}</a>
     <a href="#downloads" class="btn btn-ghost">{t('hero.all')}</a>
     <p class="version basis-full">{version}</p>
@@ -81,9 +92,12 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
           <div class="kicker"><span class="dot" aria-hidden="true"></span>{t(`editions.${e.id}.language`)}</div>
           <h3 class="text-2xl mt-3">{t(`editions.${e.id}.title`)}</h3>
           <p class="version mt-1">{version}</p>
-          <a class="amazon-listing" href={book.amazon[e.id]}>
-            <AmazonIcon size={22} />
-            <span><span class="font-semibold">{t('amazon.buy')}</span><span class="text-muted text-sm">{t(`amazon.formats.${e.id}`)}</span></span>
+          <a class="store-listing" href={stores[e.id].url}>
+            {stores[e.id].provider === 'amazon' ? <AmazonIcon size={22} /> : <StoreIcon size={22} />}
+            <span>
+              <span class="font-semibold">{t(stores[e.id].provider === 'amazon' ? 'amazon.buy' : 'uiclap.buy')}</span>
+              <span class="text-muted text-sm">{t(stores[e.id].provider === 'amazon' ? `amazon.formats.${e.id}` : 'uiclap.format')}</span>
+            </span>
           </a>
           <ul class="mt-5 grid gap-2">
             {formats.map((f) => (
@@ -120,11 +134,11 @@ const next = withText([{ hue: 'cerulean', href: '/limits/' }, { hue: 'pennant', 
   .version { font-family: var(--font-sign); font-size: var(--text-sm); color: var(--muted); }
   .free-card :global(.callout) { margin-block: 0 1.5rem; }
   .intro-cards :global(.callout) { block-size: 100%; margin-block: 0; }
-  .amazon-button { gap: 0.55rem; }
-  .amazon-listing { display: flex; align-items: center; gap: 0.9rem; margin-block-start: 1.25rem; padding: 0.9rem 1rem; min-block-size: 3.5rem; border: 1px solid var(--action); background: var(--action); color: var(--on-action); border-radius: 0.2rem; }
-  .amazon-listing > span { display: grid; gap: 0.1rem; }
-  .amazon-listing .text-muted { color: inherit; opacity: 0.78; }
-  .amazon-listing:hover { background: var(--action-hi); }
+  .store-button { gap: 0.55rem; }
+  .store-listing { display: flex; align-items: center; gap: 0.9rem; margin-block-start: 1.25rem; padding: 0.9rem 1rem; min-block-size: 3.5rem; border: 1px solid var(--action); background: var(--action); color: var(--on-action); border-radius: 0.2rem; }
+  .store-listing > span { display: grid; gap: 0.1rem; }
+  .store-listing .text-muted { color: inherit; opacity: 0.78; }
+  .store-listing:hover { background: var(--action-hi); }
   .dl { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--line); min-block-size: 2.75rem; align-items: center; }
   .dl:hover { border-color: var(--hue-vivid); }
   .parts { display: grid; gap: 1.75rem 3rem; counter-reset: part; }
