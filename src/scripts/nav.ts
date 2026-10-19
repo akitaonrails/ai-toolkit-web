@@ -12,7 +12,7 @@ document.addEventListener('click', (e) => {
   if (el.closest('[data-menu-trigger]') && menu) (menu.hasAttribute('data-open') ? close : open)(menu);
   if (el.closest('[data-drawer-open]')) drawer?.showModal();
   if (el.closest('[data-drawer-close]') || el === drawer || el.closest('#drawer a')) drawer?.close();
-  // The visitor's choice beats the browser language, at Netlify's edge and in the inline detector.
+  // The visitor's choice beats the browser language in the inline detector (Base.astro).
   const lang = el.closest<HTMLElement>('[data-set-lang]')?.dataset.setLang;
   if (lang) document.cookie = `nf_lang=${lang}; path=/; max-age=31536000; samesite=lax`;
 });
