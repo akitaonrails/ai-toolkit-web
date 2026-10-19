@@ -20,4 +20,4 @@ Start from `docs/sources.md`. It lists every source (GitHub repos, blog posts, t
 - Videos: edit `src/data/videos.config.json`, run `node scripts/refresh-videos.mjs`.
 - Yearly numbers on the workflow page: `python3 scripts/tally-projects.py`, method and exclusions in `docs/sources.md` section 9. Sanity-check outliers before publishing.
 - PDF decks: `/agi/`, `/students/` and `/limits/` ship as slide PDFs in every language (`docs/pdf.md`). Any change to their words, data, diagrams or videos means `npm run build:decks`, a look at the result, and committing `public/pdf/` in the same change.
-- Before pushing: `npm run check:colors && npm run check:i18n && npm run build && npm run check:reader && npm run check:seo && npm run check:decks`. `main` deploys to production through Netlify (`docs/deploy.md`).
+- Before pushing: `npm run check:colors && npm run check:i18n && npm run build && npm run check:reader && npm run check:language && npm run check:seo && npm run check:decks`. `main` deploys to production through Netlify (`docs/deploy.md`).
