@@ -147,7 +147,7 @@ Vibe Kanban was considered and left out: its repository announced it is being su
 | `/writing/` | Blog highlights and the benchmark posts |
 | `/newsletter/` | akitando-news repo, the two live newsletter sites, the six-days post |
 | `/podcasts/` | The SBT News TV segment, the five videos, the two complete playlists (`site.ts` `playlists`), Cortes do Flow |
-| `/games/` | distrobox-gaming and omarchy-games-menu repos; Fun to Drive (playmate-fun-to-drive: README, its v0.6.0 playthrough video (`docs/media/playthrough-v060.mp4`) copied to `public/media/fun-to-drive.mp4` on 2026-10-19, the README's Features list as of v0.7.0, the live GitHub Pages build; the README calls the car "the Roadster", the Tesla Roadster framing is the owner's words) |
+| `/games/` | distrobox-gaming and omarchy-games-menu repos; Fun to Drive (playmate-fun-to-drive: README, its v0.9.0 playthrough video (`docs/media/playthrough-v090.mp4`) copied to `public/media/fun-to-drive.mp4` on 2026-10-19, the README's Features list as of v0.9.0, the live GitHub Pages build; the README calls the car "the Roadster", the Tesla Roadster framing is the owner's words) |
 | `/agi/` | The owner's 2026 posts and his X post of 2026-09-26, plus the outside sources in section 11 |
 | `/students/` | The owner's two X posts of 2026-09-25, his 2026 posts, Akitando, the ai-memory repository, and the outside sources in section 12 |
 | `/book/` | The book repository (`~/Projects/ai-book-2026`): README, CHANGELOG, `book/outline.yml`, the release and its PDFs (section 14) |

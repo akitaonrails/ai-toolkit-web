@@ -18,12 +18,12 @@
       "Pick a two, six or ten minute run and pass as much traffic as you can before time runs out. Each run starts in the season and time of day of your own clock.",
       "Collect three cold-air charges to fire the thruster, and Jump Kicks to leap over traffic, unless you land on it.",
       "The toy reacts on the desk: the wheel turns, the gear lever moves, and the whole dashboard jolts when you crash.",
-      "Clear skies, rain and snow, seasonal scenery from sakura to bare winter trees, and backdrops from Tokyo neon to Paris. Watch for the rare ones: a hurricane that lifts traffic and a UFO abduction at night.",
+      "Clear skies, rain and snow, seasonal scenery from sakura to bare winter trees, and backdrops from Tokyo neon to Paris. Watch for the rare ones: a hurricane that lifts traffic, a UFO abduction at night and, if you hold 88 mph, a time machine.",
       "Play with a keyboard, a gamepad with rumble, or touch. It runs in the browser, written in Rust with Bevy and compiled to WebAssembly."
     ],
     "play": "Play it in your browser",
     "source": "Source on GitHub",
-    "videoLabel": "A 2:10 playthrough of Fun to Drive, with sound",
+    "videoLabel": "A 2:20 playthrough of Fun to Drive, with sound",
     "caption": "A full playthrough, with the game's own music."
   },
   "retro": {

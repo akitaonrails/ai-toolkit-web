@@ -18,12 +18,12 @@
       "Escolha uma corrida de dois, seis ou dez minutos e ultrapasse o máximo de carros antes de o tempo acabar. Cada corrida começa na estação do ano e na hora do dia do seu relógio.",
       "Junte três cargas de ar frio pra disparar o propulsor, e Jump Kicks pra pular por cima do trânsito, a não ser que você caia em cima dele.",
       "O brinquedo reage na mesa: o volante gira, a alavanca de câmbio mexe e o painel inteiro dá um tranco quando você bate.",
-      "Céu limpo, chuva e neve, paisagens de cada estação, das cerejeiras às árvores peladas do inverno, e cenários da Tóquio neon a Paris. Fique de olho nos eventos raros: um furacão que levanta os carros e uma abdução por OVNI à noite.",
+      "Céu limpo, chuva e neve, paisagens de cada estação, das cerejeiras às árvores peladas do inverno, e cenários da Tóquio neon a Paris. Fique de olho nos eventos raros: um furacão que levanta os carros, uma abdução por OVNI à noite e, se você segurar 88 mph, uma máquina do tempo.",
       "Dá pra jogar com teclado, controle com vibração ou toque. Roda no navegador, escrito em Rust com Bevy e compilado pra WebAssembly."
     ],
     "play": "Jogar no navegador",
     "source": "Código no GitHub",
-    "videoLabel": "Uma partida de 2:10 do Fun to Drive, com som",
+    "videoLabel": "Uma partida de 2:20 do Fun to Drive, com som",
     "caption": "Uma partida inteira, com a música do próprio jogo."
   },
   "retro": {

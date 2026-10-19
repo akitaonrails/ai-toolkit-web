@@ -18,12 +18,12 @@
       "Elige una carrera de dos, seis o diez minutos y adelanta a todo el tráfico que puedas antes de que se acabe el tiempo. Cada carrera empieza en la estación del año y la hora del día de tu reloj.",
       "Junta tres cargas de aire frío para disparar el propulsor, y Jump Kicks para saltar sobre el tráfico, salvo que caigas encima.",
       "El juguete reacciona sobre la mesa: el volante gira, la palanca de cambios se mueve y todo el tablero se sacude cuando chocas.",
-      "Cielo despejado, lluvia y nieve, paisajes de cada estación, de los cerezos en flor a los árboles desnudos del invierno, y fondos desde el Tokio de neón hasta París. Atento a los eventos raros: un huracán que levanta el tráfico y una abducción OVNI de noche.",
+      "Cielo despejado, lluvia y nieve, paisajes de cada estación, de los cerezos en flor a los árboles desnudos del invierno, y fondos desde el Tokio de neón hasta París. Atento a los eventos raros: un huracán que levanta el tráfico, una abducción OVNI de noche y, si aguantas 88 mph, una máquina del tiempo.",
       "Se juega con teclado, mando con vibración o pantalla táctil. Corre en el navegador, escrito en Rust con Bevy y compilado a WebAssembly."
     ],
     "play": "Jugar en el navegador",
     "source": "Código en GitHub",
-    "videoLabel": "Una partida de 2:10 de Fun to Drive, con sonido",
+    "videoLabel": "Una partida de 2:20 de Fun to Drive, con sonido",
     "caption": "Una partida completa, con la música del propio juego."
   },
   "retro": {

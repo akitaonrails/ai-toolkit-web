@@ -12,7 +12,7 @@ export const games = {
 };
 
 /** Fun to Drive, a small browser game vibe coded with AI agents (github.com/akitaonrails/playmate-fun-to-drive).
-    The playthrough video and its poster frame come from the repository's README (docs/media/playthrough-v060.mp4, 2:10, v0.6.0). */
+    The playthrough video and its poster frame come from the repository's README (docs/media/playthrough-v090.mp4, 2:20, v0.9.0). */
 export const funToDrive = {
   play: 'https://akitaonrails.github.io/playmate-fun-to-drive/',
   video: '/media/fun-to-drive.mp4',
