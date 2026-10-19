@@ -18,5 +18,6 @@
   "geary": "akitaonrails/frank_geary",
   "type": "akitaonrails/frank_type",
   "go": "akitaonrails/frank_go",
-  "lyrics": "akitaonrails/frank_lyrics"
+  "lyrics": "akitaonrails/frank_lyrics",
+  "funToDrive": "akitaonrails/playmate-fun-to-drive"
 }

@@ -1,17 +1,17 @@
 {
-  "fetchedAt": "2026-09-24T18:35:24.577Z",
+  "fetchedAt": "2026-10-19T06:02:33.907Z",
   "repos": {
     "usagebar": {
-      "stars": 561,
+      "stars": 696,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v1.22.0",
-        "date": "2026-09-23T18:20:04Z"
+        "tag": "v1.41.0",
+        "date": "2026-10-18T18:51:51Z"
       }
     },
     "ghpending": {
-      "stars": 45,
+      "stars": 54,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -20,7 +20,7 @@
       }
     },
     "tclock": {
-      "stars": 73,
+      "stars": 85,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -29,79 +29,79 @@
       }
     },
     "skills": {
-      "stars": 159,
+      "stars": 250,
       "language": "Python",
       "license": null,
       "release": null
     },
     "memory": {
-      "stars": 8313,
+      "stars": 10681,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v2.4.0",
-        "date": "2026-09-21T23:45:13Z"
+        "tag": "v3.1.1",
+        "date": "2026-10-17T18:09:02Z"
       }
     },
     "jail": {
-      "stars": 1290,
+      "stars": 1371,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
-        "tag": "v2.1.0",
-        "date": "2026-09-23T17:17:29Z"
+        "tag": "v2.10.0",
+        "date": "2026-10-16T15:02:26Z"
       }
     },
     "benchmark": {
-      "stars": 336,
+      "stars": 356,
       "language": "Python",
       "license": null,
       "release": null
     },
     "distrobox": {
-      "stars": 316,
-      "language": "Shell",
+      "stars": 394,
+      "language": "Python",
       "license": null,
       "release": null
     },
     "gamesMenu": {
-      "stars": 18,
+      "stars": 24,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v0.1.7",
-        "date": "2026-09-23T04:40:09Z"
+        "tag": "v0.1.8",
+        "date": "2026-10-01T19:38:59Z"
       }
     },
     "frankmd": {
-      "stars": 556,
+      "stars": 570,
       "language": "JavaScript",
       "license": null,
       "release": {
-        "tag": "v1.1.2",
-        "date": "2026-09-22T17:15:31Z"
+        "tag": "v1.9.0",
+        "date": "2026-10-11T02:35:27Z"
       }
     },
     "sherlock": {
-      "stars": 296,
+      "stars": 306,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
-        "tag": "v0.8.1",
-        "date": "2026-09-10T19:27:09Z"
+        "tag": "v0.8.2",
+        "date": "2026-09-29T16:22:33Z"
       }
     },
     "yomik": {
-      "stars": 196,
+      "stars": 209,
       "language": "Python",
       "license": "AGPL-3.0",
       "release": {
-        "tag": "v1.0.1",
-        "date": "2026-09-20T19:00:52Z"
+        "tag": "v2.0.2",
+        "date": "2026-10-10T14:03:42Z"
       }
     },
     "mega": {
-      "stars": 83,
+      "stars": 86,
       "language": "Ruby",
       "license": "AGPL-3.0",
       "release": {
@@ -110,7 +110,7 @@
       }
     },
     "karaoke": {
-      "stars": 78,
+      "stars": 83,
       "language": "Dart",
       "license": null,
       "release": {
@@ -119,7 +119,7 @@
       }
     },
     "scanlation": {
-      "stars": 63,
+      "stars": 64,
       "language": "JavaScript",
       "license": null,
       "release": {
@@ -128,25 +128,25 @@
       }
     },
     "mangaplus": {
-      "stars": 46,
+      "stars": 49,
       "language": "Rust",
       "license": null,
       "release": {
-        "tag": "v1.2.0",
-        "date": "2026-09-19T23:13:05Z"
+        "tag": "v1.3.1",
+        "date": "2026-10-15T06:15:13Z"
       }
     },
     "geary": {
-      "stars": 5,
+      "stars": 8,
       "language": "Vala",
       "license": "NOASSERTION",
       "release": {
-        "tag": "v46.0-frank.4",
-        "date": "2026-09-12T17:47:13Z"
+        "tag": "v46.0-frank.6",
+        "date": "2026-10-19T02:46:55Z"
       }
     },
     "type": {
-      "stars": 29,
+      "stars": 28,
       "language": "JavaScript",
       "license": "MIT",
       "release": {
@@ -155,21 +155,30 @@
       }
     },
     "go": {
-      "stars": 23,
+      "stars": 24,
       "language": "JavaScript",
       "license": "MIT",
       "release": {
-        "tag": "v0.3.17",
-        "date": "2026-09-19T14:40:25Z"
+        "tag": "v0.3.21",
+        "date": "2026-10-17T20:27:27Z"
       }
     },
     "lyrics": {
-      "stars": 9,
+      "stars": 11,
       "language": "JavaScript",
       "license": null,
       "release": {
         "tag": "v0.1.2",
         "date": "2026-07-12T21:58:20Z"
+      }
+    },
+    "funToDrive": {
+      "stars": 5,
+      "language": "Rust",
+      "license": null,
+      "release": {
+        "tag": "v0.6.0",
+        "date": "2026-10-19T05:58:04Z"
       }
     }
   }

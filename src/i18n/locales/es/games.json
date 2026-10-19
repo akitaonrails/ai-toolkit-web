@@ -11,6 +11,20 @@
     "shotAlt": "Mi lanzador de juegos en Omarchy: una cuadrícula a pantalla completa con 52 portadas, entre ellas Banjo-Kazooie Recompiled, OutRun, la serie Colin McRae Rally, Donkey Kong Country y DOOM 3, con chips de categoría y botones de orden arriba.",
     "caption": "El lanzador en mi escritorio: cada juego, port y emulador en una sola cuadrícula, corra sobre lo que corra por debajo."
   },
+  "drive": {
+    "title": "Fun to Drive: el nuevo Tesla Roadster en un juego de carreras de los 80",
+    "lede": "Un jueguito que hice con vibe coding y agentes de IA. El Tesla Roadster recién anunciado, con propulsor de aire frío y salto incluidos, corre por una carretera estilo Outrun en la pantalla de un tablero de juguete de los 80, como el Playmates Fun-to-Drive y el Turbo Video Driver de Tectoy.",
+    "points": [
+      "Elige una carrera de dos, seis o diez minutos y adelanta a todo el tráfico que puedas antes de que se acabe el tiempo. Cada carrera empieza en la estación del año y la hora del día de tu reloj.",
+      "Junta tres cargas de aire frío para disparar el propulsor, y Jump Kicks para saltar sobre el tráfico, salvo que caigas encima.",
+      "El juguete reacciona sobre la mesa: el volante gira, la palanca de cambios se mueve y todo el tablero se sacude cuando chocas.",
+      "Se juega con teclado, mando con vibración o pantalla táctil. Corre en el navegador, escrito en Rust con Bevy y compilado a WebAssembly."
+    ],
+    "play": "Jugar en el navegador",
+    "source": "Código en GitHub",
+    "videoLabel": "Una partida de 2:10 de Fun to Drive, con sonido",
+    "caption": "Una partida completa, con la música del propio juego."
+  },
   "clean": {
     "title": "El host queda limpio",
     "lede": "Los emuladores y los juegos de Windows arrastran bibliotecas de 32 bits, builds de Wine, paquetes del AUR y versiones de runtime que se pelean entre sí. Nada de eso toca mi escritorio. Todo vive en un distrobox de Arch Linux llamado gaming, Steam incluido, y el host guarda solo lo que el escritorio necesita.",

@@ -15,7 +15,7 @@ import Related from '@/components/Related.astro';
 import { related } from '@/data/articles';
 import menuShot from '@/assets/img/shots/games-menu.jpg';
 import { repoUrl } from '@/data/site';
-import { games } from '@/data/games';
+import { games, funToDrive } from '@/data/games';
 import { localePaths, useI18n, withText } from '@/i18n';
 export const getStaticPaths = localePaths;
 
@@ -32,6 +32,22 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
     <a href={repoUrl('distrobox')} class="btn btn-primary">{t('hero.primary')}</a>
     <a href={repoUrl('gamesMenu')} class="btn btn-ghost">{t('hero.secondary')}</a>
   </PageHero>
+  <Section title={t('drive.title')} lede={t('drive.lede')} hue="copper" id="fun-to-drive">
+    <div class="grid gap-10 lg:grid-cols-[1.35fr_1fr] items-start">
+      <figure>
+        <video class="drive-video" src={funToDrive.video} poster={funToDrive.poster} width={funToDrive.width} height={funToDrive.height} controls preload="none" playsinline aria-label={t('drive.videoLabel')}></video>
+        <figcaption class="mt-3 text-muted text-[0.95rem] italic">{t('drive.caption')}</figcaption>
+      </figure>
+      <div>
+        <ul class="ticks">{raw<string[]>('drive.points').map((p) => <li>{p}</li>)}</ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={funToDrive.play} class="btn btn-primary">{t('drive.play')}</a>
+          <a href={repoUrl('funToDrive')} class="btn btn-ghost">{t('drive.source')}</a>
+        </div>
+      </div>
+    </div>
+  </Section>
+
   <div class="wrap after-hero"><Shot src={menuShot} alt={t('hero.shotAlt')} caption={t('hero.caption')} eager zoom={false} /></div>
 
   <Section title={t('clean.title')} lede={t('clean.lede')} hue="copper" fill>
@@ -87,5 +103,6 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
 </Base>
 
 <style>
+  .drive-video { display: block; inline-size: 100%; block-size: auto; border-radius: var(--radius); border: 2px solid var(--v-brass); background: var(--ink); box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px color-mix(in oklab, var(--v-brass) 55%, transparent), var(--shadow); }
   .prompt-line { font-family: var(--font-mono); font-size: 0.95rem; color: var(--copper); background: var(--copper-soft); padding: 0.8rem 1rem; border-radius: 0.6rem; }
 </style>
