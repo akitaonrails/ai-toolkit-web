@@ -25,6 +25,9 @@
     "videoLabel": "Fun to Drive 2분 10초 플레이 영상, 소리 포함",
     "caption": "게임 자체 음악이 담긴 전체 플레이입니다."
   },
+  "retro": {
+    "title": "AI와 함께하는 레트로 게이밍"
+  },
   "clean": {
     "title": "호스트는 깨끗하게",
     "lede": "에뮬레이터와 Windows 게임은 32비트 라이브러리, Wine 빌드, AUR 패키지, 서로 충돌하는 런타임 버전을 끌고 들어옵니다. 그중 어느 것도 제 데스크톱에 닿지 않습니다. Steam까지 포함해 전부 gaming이라는 Arch Linux distrobox 하나에 들어 있고, 호스트에는 데스크톱에 필요한 것만 남습니다.",

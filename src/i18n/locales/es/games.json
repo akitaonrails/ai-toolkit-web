@@ -25,6 +25,9 @@
     "videoLabel": "Una partida de 2:10 de Fun to Drive, con sonido",
     "caption": "Una partida completa, con la música del propio juego."
   },
+  "retro": {
+    "title": "Retrogaming asistido por IA"
+  },
   "clean": {
     "title": "El host queda limpio",
     "lede": "Los emuladores y los juegos de Windows arrastran bibliotecas de 32 bits, builds de Wine, paquetes del AUR y versiones de runtime que se pelean entre sí. Nada de eso toca mi escritorio. Todo vive en un distrobox de Arch Linux llamado gaming, Steam incluido, y el host guarda solo lo que el escritorio necesita.",

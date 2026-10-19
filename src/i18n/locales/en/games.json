@@ -25,6 +25,9 @@
     "videoLabel": "A 2:10 playthrough of Fun to Drive, with sound",
     "caption": "A full playthrough, with the game's own music."
   },
+  "retro": {
+    "title": "AI Assisted Retro-Gaming"
+  },
   "clean": {
     "title": "The host stays clean",
     "lede": "Emulators and Windows games drag in 32-bit libraries, Wine builds, AUR packages and runtime versions that fight each other. None of that touches my desktop. It all lives in one Arch Linux distrobox called gaming, Steam included, and the host keeps only what the desktop needs.",

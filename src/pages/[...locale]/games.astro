@@ -48,7 +48,9 @@ const ogm = 'yay -S omarchy-games-menu-bin\nogm scan && ogm refresh\ngames-menu 
     </div>
   </Section>
 
-  <div class="wrap after-hero"><Shot src={menuShot} alt={t('hero.shotAlt')} caption={t('hero.caption')} eager zoom={false} /></div>
+  <Section title={t('retro.title')} hue="copper" tint id="retro-gaming">
+    <Shot src={menuShot} alt={t('hero.shotAlt')} caption={t('hero.caption')} zoom={false} />
+  </Section>
 
   <Section title={t('clean.title')} lede={t('clean.lede')} hue="copper" fill>
     <Figure name="games-clean-host" alt={t('clean.alt')} />
