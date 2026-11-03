@@ -224,6 +224,18 @@
     "bookMakingOf": {
       "title": "自分の本と電子書籍を自費出版しました：Competent Enough",
       "summary": "131本の記事をエージェントで1冊の本にした方法です。ハッシュで封印した一覧、全段落に付けた出典マーカー、一次資料でのファクトチェック、Quarto、Typst、Pandocによるパイプラインについて書きました。"
+    },
+    "cmr1Launcher": {
+      "title": "PCポートで遊ぶ：Colin McRae Rally 1",
+      "summary": "25万行のRust再実装をやめ、1998年のオリジナルを4K・ワイド画面・60fpsで動かす薄いランチャーに切り替えた理由。"
+    },
+    "racingLaunchers": {
+      "title": "AIで古いレースゲームをいくつも直した",
+      "summary": "ScreamerトリロジーからDiRT Rallyまで、10本のレースゲームに9つのランチャー。何が壊れていたか、どう配線し直したか、何を加えたか。"
+    },
+    "launcherSdk": {
+      "title": "AIのためのフレームワークをAIで作る：REA Launcher SDK",
+      "summary": "先にアプリ、フレームワークは後。7つのランチャーがSDKになった経緯、移行で見つかったバグ、自分のゲームのランチャーを作る方法。"
     }
   },
   "related": {

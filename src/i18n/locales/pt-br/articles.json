@@ -224,6 +224,18 @@
     "bookMakingOf": {
       "title": "Auto-publiquei meu próprio Livro/e-book: Competente o Suficiente",
       "summary": "Como 131 posts viraram um livro com agentes: um inventário selado, uma marcação de origem em cada parágrafo, checagem de fatos contra fontes primárias e o pipeline com Quarto, Typst e Pandoc."
+    },
+    "cmr1Launcher": {
+      "title": "Brincando de PC Ports com Colin McRae 1",
+      "summary": "Por que larguei uma reconstrução de 250 mil linhas em Rust por um launcher fino que roda o original de 1998 em 4K, widescreen e 60 fps."
+    },
+    "racingLaunchers": {
+      "title": "Consertei vários jogos de corrida antigos usando IA: Colin McRae 1, 3, 4, Sega Rally Revo e Outrun 2006, até a trilogia Screamer",
+      "summary": "Nove launchers pra dez jogos de corrida, da trilogia Screamer ao DiRT Rally: o que quebrou, como cada um é religado e o que ele acrescenta."
+    },
+    "launcherSdk": {
+      "title": "Criando um framework para IA com IA: REA Launcher SDK",
+      "summary": "Primeiro os apps, depois o framework: como sete launchers viraram um SDK, os bugs que a migração achou e como fazer o launcher do seu jogo."
     }
   },
   "related": {

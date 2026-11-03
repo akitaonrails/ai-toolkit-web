@@ -19,5 +19,16 @@
   "type": "akitaonrails/frank_type",
   "go": "akitaonrails/frank_go",
   "lyrics": "akitaonrails/frank_lyrics",
-  "funToDrive": "akitaonrails/playmate-fun-to-drive"
+  "funToDrive": "akitaonrails/playmate-fun-to-drive",
+  "launcherSdk": "akitaonrails/rea-launcher-sdk",
+  "launcherScreamer": "akitaonrails/rea-screamer-trilogy",
+  "launcherCmr1": "akitaonrails/rea-colin-mcrae",
+  "cmr1Recomp": "akitaonrails/rea-colin-mcrae-recomp",
+  "launcherCmr3": "akitaonrails/rea-colin-mcrae-3",
+  "launcherCmr4": "akitaonrails/rea-colin-mcrae-4",
+  "launcherCmr2005": "akitaonrails/rea-colin-mcrae-2005",
+  "launcherOutrun": "akitaonrails/rea-outrun-2006",
+  "launcherDirt": "akitaonrails/rea-dirt",
+  "launcherSegaRally": "akitaonrails/rea-sega-rally-revo",
+  "launcherDirtRally": "akitaonrails/rea-dirt-rally"
 }

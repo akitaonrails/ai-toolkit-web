@@ -224,6 +224,18 @@
     "bookMakingOf": {
       "title": "제 책이자 전자책을 직접 출판했습니다: Competent Enough",
       "summary": "블로그 글 131편을 에이전트와 함께 책으로 만든 과정입니다. 봉인된 목록, 문단마다 붙인 출처 표시, 1차 출처와의 사실 확인, Quarto, Typst, Pandoc 파이프라인을 다룹니다."
+    },
+    "cmr1Launcher": {
+      "title": "PC 포트 가지고 놀기: Colin McRae Rally 1",
+      "summary": "25만 줄짜리 Rust 재구현을 접고, 1998년 원작을 4K·와이드스크린·60fps로 돌리는 얇은 런처로 바꾼 이유."
+    },
+    "racingLaunchers": {
+      "title": "AI로 오래된 레이싱 게임 여러 개를 고쳤다",
+      "summary": "Screamer 3부작부터 DiRT Rally까지, 레이싱 게임 10개를 위한 런처 9개: 무엇이 망가졌고, 각각 어떻게 다시 연결했고, 무엇을 더했는지."
+    },
+    "launcherSdk": {
+      "title": "AI를 위한 프레임워크를 AI로 만들기: REA Launcher SDK",
+      "summary": "앱이 먼저, 프레임워크는 나중: 런처 7개가 SDK가 된 과정, 마이그레이션이 찾아낸 버그, 그리고 내 게임의 런처를 만드는 방법."
     }
   },
   "related": {

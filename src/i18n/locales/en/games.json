@@ -26,6 +26,146 @@
     "videoLabel": "A 2:20 playthrough of Fun to Drive, with sound",
     "caption": "A full playthrough, with the game's own music."
   },
+  "launchers": {
+    "title": "Old racing games, playable again",
+    "lede": "Some of my favorite racing games are abandonware: no store sells them, and they won't run on a modern PC without an afternoon of hacks. So I wrote a launcher for each one, with coding agents and my reverse engineering tool, REA. The original game stays untouched. The launcher fixes what aged around it, like graphics, controls, screen and Registry, then adds what a modern PC can do.",
+    "own": "You need your own copy of each game. No launcher ships game files.",
+    "was": "Before",
+    "sdkMade": "Made from the SDK",
+    "linuxOnly": "Linux only",
+    "release": "Release {tag}",
+    "source": "Source",
+    "post": "How I fixed them, on my blog",
+    "note": "They are experimental. I tested each one end to end on Linux, with an RTX 5090 and an Xbox-style controller. None has been tested on native Windows yet, so if you try one there, open an issue with the executable's SHA-256 and the log.",
+    "items": {
+      "screamer": {
+        "name": "Screamer trilogy",
+        "alt": "Screamer on a modern PC: a red sports car racing down a city street, with the original lap counter and speedometer.",
+        "was": "Three MS-DOS games. GOG's Screamer 2 ships a Windows Glide stub that doesn't work in DOS, and at full emulator speed the analog controls never register.",
+        "adds": [
+          "Real 3dfx Glide, with the emulated Voodoo drawing at twice the resolution",
+          "FSR upscaling, Hor+ widescreen and a longer draw distance",
+          "Analog controls and CD music",
+          "Experimental frame generation at 100 fps"
+        ]
+      },
+      "cmr1": {
+        "name": "Colin McRae Rally",
+        "alt": "Colin McRae Rally from 1998 in widescreen: the blue Subaru on a dry gravel stage.",
+        "was": "Made for Windows 95. On my machine it took Registry keys, XP compatibility mode, a screen locked at 800x600 and a keyboard bridge for the gamepad, and it still ran at 800x600 in 4:3.",
+        "adds": [
+          "4K, Hor+ widescreen and 60 fps, with the original 25 Hz physics",
+          "HD art redrawn with AI for the HUD, menus, skies, signs and cars",
+          "Up to three times the draw distance",
+          "Triggers as pedals, and rumble"
+        ],
+        "recomp": "The recomp in Rust",
+        "story": "The first launcher, in detail"
+      },
+      "cmr3": {
+        "name": "Colin McRae Rally 3",
+        "alt": "Colin McRae Rally 3 in widescreen: the Ford Focus on a forest stage.",
+        "was": "A washed-out picture, and an official 1.1 executable tied to disc copy protection.",
+        "adds": [
+          "SilentPatch widescreen at any aspect ratio, with an HD interface in 4K",
+          "Converts the 1.1 executable into the re-releases' DRM-free one",
+          "Anisotropic filtering up to 16x and an adjustable field of view",
+          "An optional color and gamma fix on Linux"
+        ]
+      },
+      "cmr4": {
+        "name": "Colin McRae Rally 04",
+        "alt": "Colin McRae Rally 04 in 16:9: a Mitsubishi Lancer Evolution on a dusty hillside stage.",
+        "was": "16:9 shows no extra scenery, the graphics menu stops at 2048x1536 and crashes, and Alt+F4 does nothing.",
+        "adds": [
+          "16:9 with the right geometry, through dgVoodoo",
+          "Picks the landscape monitor, and closing the window works",
+          "Analog triggers and a controller that comes configured",
+          "Optional fps cap and vsync"
+        ]
+      },
+      "cmr2005": {
+        "name": "Colin McRae Rally 2005",
+        "alt": "Colin McRae Rally 2005 in 16:9: a blue Subaru on a forest stage.",
+        "was": "Crashes at launch under Wine, and GOG's installer hangs there. The DVD editions use StarForce and aren't supported.",
+        "adds": [
+          "Installs straight from GOG's installer files",
+          "16:9 with the game's own wide view",
+          "DXVK on Linux: a stage that ran at about 20 fps now passes 1,000",
+          "Saves in their own folder"
+        ]
+      },
+      "outrun": {
+        "name": "OutRun 2006: Coast 2 Coast",
+        "alt": "OutRun 2006 in 4K: a silver convertible on a coastal city highway.",
+        "was": "The PC port needs community fixes and its disc DRM removed, and it lost the first two seconds of \"Rush a Difficulty\".",
+        "adds": [
+          "OutRun2006Tweaks installed for you, at a fixed, tested version",
+          "4K, 16x anisotropic filtering and a longer draw distance",
+          "The full \"Rush a Difficulty\"",
+          "Optional HD textures, rumble and full triggers"
+        ]
+      },
+      "dirt": {
+        "name": "Colin McRae: DiRT",
+        "alt": "Colin McRae: DiRT: a rally car kicking up dust on a gravel road through the forest.",
+        "was": "Crashes loading any race on a CPU with many threads, and the community fix resets every graphics setting.",
+        "adds": [
+          "Its own fix for the many-thread crash, with your settings kept",
+          "Large Address Aware, so the game can use more than 2 GB",
+          "Hard links instead of a second copy of 9 GB",
+          "The Ultra preset in 4K, and native XInput"
+        ]
+      },
+      "srr": {
+        "name": "Sega Rally Revo",
+        "alt": "Sega Rally Revo: a red Citroën leading the pack on a muddy jungle track.",
+        "was": "A constant microstutter from two timing bugs in patch 4.060, a black screen on PCs with two GPUs, and a settings tool that fails under Wine.",
+        "adds": [
+          "A clean-room stutter fix: the race clock stays within 1 ms of real time in 99.9% of frames",
+          "4K, Ultra quality, 21:9 and 32:9",
+          "A 60 or 120 fps cap",
+          "Native XInput and rumble"
+        ]
+      },
+      "dirtrally": {
+        "name": "DiRT Rally",
+        "alt": "DiRT Rally in full screen: a red Mini on a rocky mountain road.",
+        "was": "Feral's 2017 Linux port crashes at launch on Ryzen 5000 and newer, needs libraries modern Linux dropped, and was pulled from sale in 2022.",
+        "adds": [
+          "A small Rust library fixes the crash without touching the game",
+          "Brings the old libraries, for the game only",
+          "Skips Feral's pre-launch window and opens in 4K",
+          "Controllers like 8BitDo's show up in the game's own list"
+        ]
+      }
+    }
+  },
+  "sdk": {
+    "title": "Then the recipe became an SDK",
+    "lede": "Each launcher started as a copy of the last one, and every copy drifted with its own bugs. So I did what I always tell people to do: build the apps first, then extract the framework. rea-launcher-sdk holds what the launchers share, and it is written for a coding agent to drive.",
+    "stepsTitle": "The order I followed",
+    "steps": [
+      "Build several projects of the same kind, each one solving its real problem.",
+      "Compare them side by side.",
+      "Refactor until they all stand on the same foundation.",
+      "Only then extract the common parts into a framework."
+    ],
+    "stats": {
+      "launchers": "launchers built on it, for {games} games",
+      "tests": "tests across the SDK and the launchers, all passing",
+      "coverage": "line coverage of the SDK's own code, {tests} tests",
+      "hours": "hours for each launcher made from the SDK, against 8 to 18 before it"
+    },
+    "statsNote": "Counted in my post of {date}.",
+    "howTitle": "Make a launcher for your own game",
+    "how": "Clone the SDK, add REA to your agent, and point it at your installed game. The agent researches the community fixes, does the reverse engineering and writes the code. It stops at four checkpoints for your decisions and publishes nothing without your approval. It works with Claude Code, Codex, opencode or Cursor.",
+    "codeTitle": "the tools",
+    "prompt": "Create a new rea launcher for Need for Speed: Porsche Unleashed (PC, 2000) using the SDK in ~/Projects/rea-launcher-sdk. Read AGENTS.md, docs/STANDARDS.md and docs/playbooks/new-launcher.md and follow the playbook phase by phase. The game is installed in /mnt/games/NFSPU (read only, never copy it into the repo). Research community fixes first and show me what you found before writing code. Don't push or publish anything without asking me.",
+    "promptNote": "An example prompt, adapted from the SDK's README.",
+    "primary": "rea-launcher-sdk on GitHub",
+    "post": "How the SDK was made"
+  },
   "retro": {
     "title": "AI Assisted Retro-Gaming"
   },
@@ -65,7 +205,7 @@
       },
       {
         "title": "Windows games",
-        "text": "Wine-managed installs and fixes for games like Colin McRae Rally, OutRun 2006 and the Metal Gear Master Collection."
+        "text": "Wine-managed installs and fixes for games like the Metal Gear Master Collection. The old racing games now come in through my own launchers, above."
       },
       {
         "title": "Mods, reproducibly",

@@ -224,6 +224,18 @@
     "bookMakingOf": {
       "title": "Autopubliqué mi propio libro/e-book: Competent Enough",
       "summary": "Cómo 131 posts se convirtieron en un libro con agentes: un inventario sellado, una marca de origen en cada párrafo, fact-checks contra fuentes primarias y el pipeline de Quarto, Typst y Pandoc."
+    },
+    "cmr1Launcher": {
+      "title": "Jugando con ports de PC: Colin McRae Rally 1",
+      "summary": "Por qué dejé una reconstrucción de 250.000 líneas en Rust por un lanzador fino que corre el original de 1998 en 4K, panorámico y a 60 fps."
+    },
+    "racingLaunchers": {
+      "title": "Arreglé varios juegos de carreras antiguos usando IA",
+      "summary": "Nueve lanzadores para diez juegos de carreras, de la trilogía Screamer a DiRT Rally: qué se rompió, cómo se reconecta cada uno y qué añade."
+    },
+    "launcherSdk": {
+      "title": "Creando un framework para IA con IA: REA Launcher SDK",
+      "summary": "Primero las apps, después el framework: cómo siete lanzadores se convirtieron en un SDK, los bugs que encontró la migración y cómo hacer el lanzador de tu juego."
     }
   },
   "related": {

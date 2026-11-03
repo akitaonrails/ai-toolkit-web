@@ -26,6 +26,146 @@
     "videoLabel": "Una partida de 2:20 de Fun to Drive, con sonido",
     "caption": "Una partida completa, con la música del propio juego."
   },
+  "launchers": {
+    "title": "Juegos de carreras antiguos, jugables otra vez",
+    "lede": "Algunos de mis juegos de carreras favoritos son abandonware: ninguna tienda los vende y no corren en un PC moderno sin una tarde de parches caseros. Así que escribí un lanzador para cada uno, con agentes de programación y mi herramienta de ingeniería inversa, REA. El juego original queda intacto. El lanzador arregla lo que envejeció a su alrededor, como gráficos, mandos, pantalla y registro de Windows, y luego añade lo que un PC moderno puede hacer.",
+    "own": "Necesitas tu propia copia de cada juego. Ningún lanzador trae archivos del juego.",
+    "was": "Antes",
+    "sdkMade": "Hecho con el SDK",
+    "linuxOnly": "Solo Linux",
+    "release": "Versión {tag}",
+    "source": "Código",
+    "post": "Cómo los arreglé, en mi blog",
+    "note": "Son experimentales. Probé cada uno de punta a punta en Linux, con una RTX 5090 y un mando estilo Xbox. Ninguno se ha probado todavía en Windows nativo; si pruebas uno ahí, abre una issue con el SHA-256 del ejecutable y el log.",
+    "items": {
+      "screamer": {
+        "name": "Trilogía Screamer",
+        "alt": "Screamer en un PC moderno: un deportivo rojo corriendo por una calle de la ciudad, con el contador de vueltas y el velocímetro originales.",
+        "was": "Tres juegos de MS-DOS. El Screamer 2 de GOG trae un stub de Glide para Windows que no funciona en DOS, y con el emulador a máxima velocidad el mando analógico nunca responde.",
+        "adds": [
+          "3dfx Glide de verdad, con la Voodoo emulada dibujando al doble de resolución",
+          "Escalado FSR, panorámico Hor+ y más distancia de dibujado",
+          "Mando analógico y música del CD",
+          "Generación de fotogramas experimental a 100 fps"
+        ]
+      },
+      "cmr1": {
+        "name": "Colin McRae Rally",
+        "alt": "Colin McRae Rally de 1998 en panorámico: el Subaru azul en un tramo de grava seca.",
+        "was": "Hecho para Windows 95. En mi máquina pedía claves de registro, modo de compatibilidad con XP, una pantalla fija a 800x600 y un puente de teclado para el mando, y aun así corría a 800x600 en 4:3.",
+        "adds": [
+          "4K, panorámico Hor+ y 60 fps, con la física original a 25 Hz",
+          "Arte HD redibujado con IA para el HUD, los menús, los cielos, los carteles y los coches",
+          "Hasta tres veces la distancia de dibujado",
+          "Gatillos como pedales, y vibración"
+        ],
+        "recomp": "El recomp en Rust",
+        "story": "El primer lanzador, en detalle"
+      },
+      "cmr3": {
+        "name": "Colin McRae Rally 3",
+        "alt": "Colin McRae Rally 3 en panorámico: el Ford Focus en un tramo de bosque.",
+        "was": "Una imagen deslavada, y un ejecutable oficial 1.1 atado a la protección anticopia del disco.",
+        "adds": [
+          "Panorámico de SilentPatch en cualquier proporción, con interfaz HD en 4K",
+          "Convierte el ejecutable 1.1 en el ejecutable sin DRM de las reediciones",
+          "Filtrado anisotrópico hasta 16x y campo de visión ajustable",
+          "Corrección opcional de color y gamma en Linux"
+        ]
+      },
+      "cmr4": {
+        "name": "Colin McRae Rally 04",
+        "alt": "Colin McRae Rally 04 en 16:9: un Mitsubishi Lancer Evolution en un tramo polvoriento de ladera.",
+        "was": "El 16:9 no muestra más escenario, el menú gráfico se detiene en 2048x1536 y se cuelga, y Alt+F4 no hace nada.",
+        "adds": [
+          "16:9 con la geometría correcta, mediante dgVoodoo",
+          "Elige el monitor horizontal, y cerrar la ventana funciona",
+          "Gatillos analógicos y un mando ya configurado",
+          "Límite de fps y vsync opcionales"
+        ]
+      },
+      "cmr2005": {
+        "name": "Colin McRae Rally 2005",
+        "alt": "Colin McRae Rally 2005 en 16:9: un Subaru azul en un tramo de bosque.",
+        "was": "Se cae al arrancar en Wine, y el instalador de GOG se cuelga ahí. Las ediciones en DVD usan StarForce y no son compatibles.",
+        "adds": [
+          "Instala directamente desde los archivos del instalador de GOG",
+          "16:9 con la vista panorámica del propio juego",
+          "DXVK en Linux: un tramo que iba a unos 20 fps ahora pasa de 1000",
+          "Partidas guardadas en su propia carpeta"
+        ]
+      },
+      "outrun": {
+        "name": "OutRun 2006: Coast 2 Coast",
+        "alt": "OutRun 2006 en 4K: un descapotable plateado en una avenida de una ciudad costera.",
+        "was": "El port de PC necesita arreglos de la comunidad y quitar el DRM del disco, y perdió los dos primeros segundos de \"Rush a Difficulty\".",
+        "adds": [
+          "OutRun2006Tweaks instalado por ti, en una versión fija y probada",
+          "4K, filtrado anisotrópico 16x y más distancia de dibujado",
+          "\"Rush a Difficulty\" completa",
+          "Texturas HD opcionales, vibración y gatillos completos"
+        ]
+      },
+      "dirt": {
+        "name": "Colin McRae: DiRT",
+        "alt": "Colin McRae: DiRT: un coche de rally levantando polvo en un camino de grava por el bosque.",
+        "was": "Se cuelga al cargar cualquier carrera en un procesador con muchos hilos, y el arreglo de la comunidad restablece toda la configuración gráfica.",
+        "adds": [
+          "Su propio arreglo del fallo con muchos hilos, conservando tu configuración",
+          "Large Address Aware, para que el juego use más de 2 GB",
+          "Enlaces duros en lugar de una segunda copia de 9 GB",
+          "El preset Ultra en 4K y XInput nativo"
+        ]
+      },
+      "srr": {
+        "name": "Sega Rally Revo",
+        "alt": "Sega Rally Revo: un Citroën rojo encabezando el grupo en una pista embarrada en la selva.",
+        "was": "Un microtartamudeo constante por dos bugs de tiempo del parche 4.060, pantalla negra en PC con dos GPU y un configurador que falla en Wine.",
+        "adds": [
+          "Un arreglo del tartamudeo hecho en clean room: el reloj de carrera queda a menos de 1 ms del tiempo real en el 99,9 % de los fotogramas",
+          "4K, calidad Ultra, 21:9 y 32:9",
+          "Límite de 60 o 120 fps",
+          "XInput nativo y vibración"
+        ]
+      },
+      "dirtrally": {
+        "name": "DiRT Rally",
+        "alt": "DiRT Rally a pantalla completa: un Mini rojo en una carretera de montaña llena de rocas.",
+        "was": "El port de Linux de Feral, de 2017, se cae al arrancar en Ryzen 5000 o más nuevos, necesita bibliotecas que el Linux moderno abandonó y se retiró de la venta en 2022.",
+        "adds": [
+          "Una pequeña biblioteca en Rust corrige el fallo sin tocar el juego",
+          "Trae las bibliotecas antiguas, solo para el juego",
+          "Salta la ventana previa de Feral y abre en 4K",
+          "Mandos como los de 8BitDo aparecen en la lista del propio juego"
+        ]
+      }
+    }
+  },
+  "sdk": {
+    "title": "Después, la receta se volvió un SDK",
+    "lede": "Cada lanzador empezó como copia del anterior, y cada copia se fue desviando con sus propios bugs. Así que hice lo que siempre digo: primero las apps, después el framework. rea-launcher-sdk guarda lo que los lanzadores tienen en común, y está escrito para que lo maneje un agente de programación.",
+    "stepsTitle": "El orden que seguí",
+    "steps": [
+      "Hacer varios proyectos del mismo tipo, cada uno resolviendo su problema real.",
+      "Compararlos lado a lado.",
+      "Refactorizar hasta que todos compartan la misma base.",
+      "Solo entonces extraer las partes comunes a un framework."
+    ],
+    "stats": {
+      "launchers": "lanzadores construidos sobre él, para {games} juegos",
+      "tests": "tests en el SDK y los lanzadores, todos pasando",
+      "coverage": "de cobertura de líneas en el código del propio SDK, {tests} tests",
+      "hours": "horas por cada lanzador hecho con el SDK, frente a 8 a 18 antes"
+    },
+    "statsNote": "Contados en mi post del {date}.",
+    "howTitle": "Haz el lanzador de tu juego",
+    "how": "Clona el SDK, añade REA a tu agente y apúntalo a tu juego instalado. El agente investiga los arreglos de la comunidad, hace la ingeniería inversa y escribe el código. Se detiene en cuatro puntos de control para que decidas y no publica nada sin tu aprobación. Funciona con Claude Code, Codex, opencode o Cursor.",
+    "codeTitle": "las herramientas",
+    "prompt": "Crea un nuevo lanzador rea para Need for Speed: Porsche Unleashed (PC, 2000) usando el SDK en ~/Projects/rea-launcher-sdk. Lee AGENTS.md, docs/STANDARDS.md y docs/playbooks/new-launcher.md y sigue el playbook fase por fase. El juego está instalado en /mnt/games/NFSPU (solo lectura, nunca lo copies al repo). Investiga primero los arreglos de la comunidad y muéstrame lo que encontraste antes de escribir código. No hagas push ni publiques nada sin preguntarme.",
+    "promptNote": "Un prompt de ejemplo, adaptado del README del SDK.",
+    "primary": "rea-launcher-sdk en GitHub",
+    "post": "Cómo se hizo el SDK"
+  },
   "retro": {
     "title": "Retrogaming asistido por IA"
   },
@@ -65,7 +205,7 @@
       },
       {
         "title": "Juegos de Windows",
-        "text": "Instalaciones gestionadas con Wine y arreglos para juegos como Colin McRae Rally, OutRun 2006 y la Metal Gear Master Collection."
+        "text": "Instalaciones y arreglos gestionados con Wine para juegos como la Metal Gear Master Collection. Los juegos de carreras antiguos ahora entran por mis propios lanzadores, más arriba."
       },
       {
         "title": "Mods reproducibles",

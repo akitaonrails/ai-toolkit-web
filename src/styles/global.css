@@ -96,6 +96,8 @@
 [data-hue='cerulean'] { --hue: var(--cerulean); --hue-soft: var(--cerulean-soft); --hue-vivid: var(--v-cerulean); }
 [data-hue='amethyst'] { --hue: var(--amethyst); --hue-soft: var(--amethyst-soft); --hue-vivid: var(--v-amethyst); }
 [data-hue='mauve'] { --hue: var(--mauve); --hue-soft: var(--mauve-soft); --hue-vivid: var(--v-mauve); }
+/* A Section with `ink` keeps the night ground in both themes, so its subject color uses the vivid shade there. */
+.band.on-ink[data-hue] { --hue: var(--hue-vivid); --hue-soft: color-mix(in oklab, var(--hue-vivid) 16%, var(--ink)); }
 
 @theme inline {
   --color-bg: var(--bg);
