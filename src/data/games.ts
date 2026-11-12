@@ -25,10 +25,11 @@ export const funToDrive = {
 
 /** The REA launchers: thin launchers that keep each original game untouched and rewire what aged around it.
     Facts from the owner's posts of 2026-10-29 (Colin McRae Rally 1) and 2026-11-02 (the racing launchers and the SDK),
-    read on 2026-11-02; releases come from the GitHub snapshot. Words in `games.json` `launchers.items.<id>`.
+    read on 2026-11-02; Rad Mobile from its README, read 2026-11-12; releases come from the GitHub snapshot. Words in `games.json` `launchers.items.<id>`.
     `sdk: true` marks the two launchers generated from the SDK. In the order the games came out. */
 export interface Launcher { id: string; repo: RepoId; year: number; sdk?: boolean; linuxOnly?: boolean }
 export const launchers: Launcher[] = [
+  { id: 'radmobile', repo: 'launcherRadMobile', year: 1990 },
   { id: 'screamer', repo: 'launcherScreamer', year: 1995 },
   { id: 'cmr1', repo: 'launcherCmr1', year: 1998 },
   { id: 'cmr3', repo: 'launcherCmr3', year: 2003 },

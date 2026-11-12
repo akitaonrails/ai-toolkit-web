@@ -36,8 +36,19 @@
     "release": "Release {tag}",
     "source": "Source",
     "post": "How I fixed them, on my blog",
-    "note": "They are experimental. I tested each one end to end on Linux, with an RTX 5090 and an Xbox-style controller. None has been tested on native Windows yet, so if you try one there, open an issue with the executable's SHA-256 and the log.",
+    "note": "They are experimental. I tested each one end to end on Linux, with an RTX 5090 and an Xbox-style controller. Only Rad Mobile has been tested on native Windows so far, with a Fanatec wheel, so if you try another one there, open an issue with the executable's SHA-256 and the log.",
     "items": {
+      "radmobile": {
+        "name": "Rad Mobile",
+        "alt": "Rad Mobile in true widescreen: Las Vegas at night, seen from behind the wheel, with the casinos drawn past the original 4:3 edges.",
+        "was": "Sega's 1990 arcade game. MAME runs it, but a modern wheel has to turn to full lock before the car does, there is no force feedback, a gamepad stick keeps the car turning after you let go, and the picture is 4:3.",
+        "adds": [
+          "Reads your wheel itself, scaled to the cabinet's 270° steering lock",
+          "Force feedback the cabinet never had, made from the running game",
+          "Assisted stick steering for gamepads",
+          "True widescreen up to 4K, CRT filters and a cabinet bezel"
+        ]
+      },
       "screamer": {
         "name": "Screamer trilogy",
         "alt": "Screamer on a modern PC: a red sports car racing down a city street, with the original lap counter and speedometer.",

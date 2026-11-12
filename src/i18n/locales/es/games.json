@@ -36,8 +36,19 @@
     "release": "Versión {tag}",
     "source": "Código",
     "post": "Cómo los arreglé, en mi blog",
-    "note": "Son experimentales. Probé cada uno de punta a punta en Linux, con una RTX 5090 y un mando estilo Xbox. Ninguno se ha probado todavía en Windows nativo; si pruebas uno ahí, abre una issue con el SHA-256 del ejecutable y el log.",
+    "note": "Son experimentales. Probé cada uno de punta a punta en Linux, con una RTX 5090 y un mando estilo Xbox. Solo Rad Mobile se ha probado en Windows nativo hasta ahora, con un volante Fanatec; si pruebas otro ahí, abre una issue con el SHA-256 del ejecutable y el log.",
     "items": {
+      "radmobile": {
+        "name": "Rad Mobile",
+        "alt": "Rad Mobile en panorámico de verdad: Las Vegas de noche, vista desde detrás del volante, con los casinos dibujados más allá de los bordes 4:3 originales.",
+        "was": "El arcade de Sega de 1990. MAME lo ejecuta, pero un volante moderno tiene que girar hasta el tope antes de que el coche gire del todo, no hay force feedback, el stick de un mando deja el coche girando después de soltarlo y la imagen es 4:3.",
+        "adds": [
+          "Lee el volante directamente, escalado a los 270° de giro del mueble",
+          "Force feedback que el mueble nunca tuvo, generado a partir del juego en marcha",
+          "Dirección asistida con el stick para quien juega con mando",
+          "Panorámico de verdad hasta 4K, filtros CRT y marco de mueble arcade"
+        ]
+      },
       "screamer": {
         "name": "Trilogía Screamer",
         "alt": "Screamer en un PC moderno: un deportivo rojo corriendo por una calle de la ciudad, con el contador de vueltas y el velocímetro originales.",
