@@ -73,6 +73,17 @@
         "recomp": "Rustによるリコンプ",
         "story": "最初のランチャーの詳細"
       },
+      "initiald": {
+        "name": "Initial Dアーケードシリーズ",
+        "alt": "Initial D THE ARCADE Season 5。夜の暗い峠道を駆け上がるトレノ。",
+        "was": "2002年から2025年までのアーケード11作。定番のTeknoParrotは、コアが非公開で有料プランもあるWindowsの.NETプログラムです。オープンなローダーでは、Initial D 4はゲーム開始のたびにクラッシュし、Zeroはキャリブレーション画面から先に進みませんでした。",
+        "adds": [
+          "オープンなローダーだけを使い、Initial D 4とZeroを修正",
+          "シリーズ全体をひとつのハブで、LinuxとWindowsに対応",
+          "全作でハンコンとパッドに対応",
+          "最大4K、LinuxではFSR 1とNVIDIA Image Scalingも"
+        ]
+      },
       "cmr3": {
         "name": "Colin McRae Rally 3",
         "alt": "ワイド画面で動くColin McRae Rally 3。フォード・フォーカスが森のステージを走っている。",
@@ -137,6 +148,17 @@
           "4K、Ultra画質、21:9と32:9",
           "60fpsまたは120fpsの上限",
           "ネイティブXInputと振動"
+        ]
+      },
+      "wangan": {
+        "name": "Wangan Midnightシリーズ",
+        "alt": "4Kで描画したWangan Midnight Maximum Tune 3DX+。壁に囲まれた高速道路を走る銀色のスポーツカー。",
+        "was": "TeknoParrotのウィンドウは筐体のI/Oボードを兼ねるので、遊んでいる間ずっと開いておく必要があり、6と6RRのローダーは非公開です。Wineでは5と6の作品が最初のムービーでクラッシュし、6RRは起動時のチェックで止まりました。",
+        "adds": [
+          "独自のI/Oボードで、TeknoParrotも.NETも不要",
+          "Maximum Tune 6と6RRを修正、Wineでもムービーが再生される",
+          "Maximum Tune 3と3DX+を最大4Kでネイティブ描画",
+          "パッドとハンコンのためのハブと入力経路をひとつに"
         ]
       },
       "dirtrally": {

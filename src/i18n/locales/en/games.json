@@ -73,6 +73,17 @@
         "recomp": "The recomp in Rust",
         "story": "The first launcher, in detail"
       },
+      "initiald": {
+        "name": "Initial D Arcade series",
+        "alt": "Initial D THE ARCADE Season 5: a Trueno racing up a dark mountain road at night.",
+        "was": "Eleven arcade games, from 2002 to 2025. TeknoParrot, the usual way to play them, is a Windows .NET program with a closed core and paid tiers. With the open loaders, Initial D 4 crashed at the start of every game and Zero never left its calibration screen.",
+        "adds": [
+          "Open loaders only, with fixes for Initial D 4 and Zero",
+          "One hub for the whole series, on Linux and Windows",
+          "Wheel and pad support for every game",
+          "Up to 4K, with FSR 1 and NVIDIA Image Scaling on Linux"
+        ]
+      },
       "cmr3": {
         "name": "Colin McRae Rally 3",
         "alt": "Colin McRae Rally 3 in widescreen: the Ford Focus on a forest stage.",
@@ -137,6 +148,17 @@
           "4K, Ultra quality, 21:9 and 32:9",
           "A 60 or 120 fps cap",
           "Native XInput and rumble"
+        ]
+      },
+      "wangan": {
+        "name": "Wangan Midnight series",
+        "alt": "Wangan Midnight Maximum Tune 3DX+ drawn at 4K: a silver sports car on a walled expressway.",
+        "was": "TeknoParrot's window doubles as the cabinet's I/O board, so it has to stay open while you play, and the loader for 6 and 6RR is closed. Under Wine, the 5 and 6 games crashed on their first movie, and 6RR stopped at its boot checks.",
+        "adds": [
+          "Its own I/O board, so no TeknoParrot and no .NET",
+          "Fixes for Maximum Tune 6 and 6RR, and movies that play under Wine",
+          "Maximum Tune 3 and 3DX+ drawn natively at up to 4K",
+          "One hub and one input path for pads and wheels"
         ]
       },
       "dirtrally": {

@@ -73,6 +73,17 @@
         "recomp": "Rust로 만든 리컴프",
         "story": "첫 번째 런처, 자세히"
       },
+      "initiald": {
+        "name": "Initial D 아케이드 시리즈",
+        "alt": "Initial D THE ARCADE Season 5: 밤의 어두운 산길을 오르는 트레노.",
+        "was": "2002년부터 2025년까지 나온 아케이드 게임 11편. 흔히 쓰는 TeknoParrot은 코어가 비공개이고 유료 등급이 있는 Windows .NET 프로그램입니다. 오픈 로더로는 Initial D 4가 게임을 시작할 때마다 크래시했고, Zero는 보정 화면에서 넘어가지 않았습니다.",
+        "adds": [
+          "오픈 로더만 사용하고, Initial D 4와 Zero를 수정",
+          "시리즈 전체를 하나의 허브로, Linux와 Windows에서",
+          "모든 게임에서 휠과 게임패드 지원",
+          "최대 4K, Linux에서는 FSR 1과 NVIDIA Image Scaling까지"
+        ]
+      },
       "cmr3": {
         "name": "Colin McRae Rally 3",
         "alt": "와이드스크린으로 실행한 Colin McRae Rally 3: 포드 포커스가 숲 스테이지를 달린다.",
@@ -137,6 +148,17 @@
           "4K, Ultra 품질, 21:9와 32:9",
           "60 또는 120fps 제한",
           "네이티브 XInput과 진동"
+        ]
+      },
+      "wangan": {
+        "name": "Wangan Midnight 시리즈",
+        "alt": "4K로 그린 Wangan Midnight Maximum Tune 3DX+: 벽으로 둘러싸인 고속도로를 달리는 은색 스포츠카.",
+        "was": "TeknoParrot 창이 캐비닛의 I/O 보드 역할까지 해서 플레이하는 동안 계속 열어 둬야 하고, 6과 6RR용 로더는 비공개입니다. Wine에서는 5와 6 시리즈가 첫 동영상에서 크래시했고, 6RR은 부팅 점검에서 멈췄습니다.",
+        "adds": [
+          "자체 I/O 보드로 TeknoParrot도 .NET도 필요 없음",
+          "Maximum Tune 6과 6RR을 수정하고, Wine에서도 동영상 재생",
+          "Maximum Tune 3과 3DX+를 최대 4K로 네이티브 렌더링",
+          "게임패드와 휠을 위한 하나의 허브와 입력 경로"
         ]
       },
       "dirtrally": {

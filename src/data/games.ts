@@ -25,19 +25,22 @@ export const funToDrive = {
 
 /** The REA launchers: thin launchers that keep each original game untouched and rewire what aged around it.
     Facts from the owner's posts of 2026-10-29 (Colin McRae Rally 1) and 2026-11-02 (the racing launchers and the SDK),
-    read on 2026-11-02; Rad Mobile from its README, read 2026-11-12; releases come from the GitHub snapshot. Words in `games.json` `launchers.items.<id>`.
-    `sdk: true` marks the two launchers generated from the SDK. In the order the games came out. */
+    read on 2026-11-02; Rad Mobile from its README, read 2026-11-12; the Initial D and Wangan Midnight series from their READMEs, read
+    2026-11-14, each dated by its oldest game that plays (Arcade Stage Ver. 1, 2002; Maximum Tune 3, 2007); releases come from the GitHub snapshot. Words in `games.json` `launchers.items.<id>`.
+    `sdk: true` marks the launchers generated from the SDK. In the order the games came out. */
 export interface Launcher { id: string; repo: RepoId; year: number; sdk?: boolean; linuxOnly?: boolean }
 export const launchers: Launcher[] = [
   { id: 'radmobile', repo: 'launcherRadMobile', year: 1990 },
   { id: 'screamer', repo: 'launcherScreamer', year: 1995 },
   { id: 'cmr1', repo: 'launcherCmr1', year: 1998 },
+  { id: 'initiald', repo: 'launcherInitialD', year: 2002, sdk: true },
   { id: 'cmr3', repo: 'launcherCmr3', year: 2003 },
   { id: 'cmr4', repo: 'launcherCmr4', year: 2004 },
   { id: 'cmr2005', repo: 'launcherCmr2005', year: 2004, sdk: true },
   { id: 'outrun', repo: 'launcherOutrun', year: 2006 },
   { id: 'dirt', repo: 'launcherDirt', year: 2007 },
   { id: 'srr', repo: 'launcherSegaRally', year: 2007 },
+  { id: 'wangan', repo: 'launcherWangan', year: 2007, sdk: true },
   { id: 'dirtrally', repo: 'launcherDirtRally', year: 2015, sdk: true, linuxOnly: true },
 ];
 

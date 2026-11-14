@@ -73,6 +73,17 @@
         "recomp": "O recomp em Rust",
         "story": "O primeiro launcher, em detalhe"
       },
+      "initiald": {
+        "name": "Série Initial D Arcade",
+        "alt": "Initial D THE ARCADE Season 5: um Trueno subindo uma estrada de montanha escura, à noite.",
+        "was": "Onze jogos de arcade, de 2002 a 2025. O TeknoParrot, o jeito comum de jogar, é um programa .NET de Windows com núcleo fechado e planos pagos. Com os loaders abertos, o Initial D 4 crashava no começo de toda partida e o Zero nunca saía da tela de calibração.",
+        "adds": [
+          "Só loaders abertos, com correções pro Initial D 4 e pro Zero",
+          "Um hub pra série inteira, no Linux e no Windows",
+          "Volante e controle em todos os jogos",
+          "Até 4K, com FSR 1 e NVIDIA Image Scaling no Linux"
+        ]
+      },
       "cmr3": {
         "name": "Colin McRae Rally 3",
         "alt": "Colin McRae Rally 3 em widescreen: o Ford Focus numa etapa de floresta.",
@@ -137,6 +148,17 @@
           "4K, qualidade Ultra, 21:9 e 32:9",
           "Limite de 60 ou 120 fps",
           "XInput nativo e rumble"
+        ]
+      },
+      "wangan": {
+        "name": "Série Wangan Midnight",
+        "alt": "Wangan Midnight Maximum Tune 3DX+ em 4K: um esportivo prata numa via expressa entre muros.",
+        "was": "A janela do TeknoParrot faz o papel da placa de I/O do gabinete, então precisa ficar aberta enquanto você joga, e o loader do 6 e do 6RR é fechado. No Wine, os jogos 5 e 6 crashavam no primeiro vídeo, e o 6RR parava nas checagens de boot.",
+        "adds": [
+          "Placa de I/O própria, sem TeknoParrot e sem .NET",
+          "Correções pro Maximum Tune 6 e 6RR, e vídeos que rodam no Wine",
+          "Maximum Tune 3 e 3DX+ desenhados nativamente em até 4K",
+          "Um hub e um caminho de input só, pra controle e volante"
         ]
       },
       "dirtrally": {
