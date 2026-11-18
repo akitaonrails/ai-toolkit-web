@@ -28,7 +28,7 @@
   "intro": "Tomé los artículos del año de mi blog, los reorganicé y reescribí como una sola historia, volví a verificar los hechos y los ilustré. Es para quien está ansioso o confundido con la IA: el profesional con miedo a ser reemplazado, el padre que leyó que la AGI llega en dos años, el gerente al que le están vendiendo una \"transformación con IA\".",
   "preview": {
     "title": "Esta es la {version}",
-    "text": "La versión 1.0 es la primera edición estable, publicada el {date}. El libro sigue abierto a correcciones: si encuentras algún error, desde una errata hasta un dato, cualquiera puede abrir un issue en GitHub.",
+    "text": "La versión 1.1, publicada el {date}, corrige algunos errores de corrección en la edición en portugués, parte de ellos señalados en issues de GitHub. El texto en inglés es el mismo de la 1.0. El libro sigue abierto a correcciones: si encuentras algún error, desde una errata hasta un dato, cualquiera puede abrir un issue en GitHub.",
     "issues": "Abrir un issue",
     "notes": "Notas de la versión"
   },

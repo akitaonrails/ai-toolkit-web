@@ -10,9 +10,9 @@ export const book = {
   repo: 'https://github.com/akitaonrails/ai-book-2026',
   issues: 'https://github.com/akitaonrails/ai-book-2026/issues',
   // The version as the owner names it on the page; the release it points to.
-  label: '1.0',
-  tag: 'v1.0.0',
-  released: '2026-10-17',
+  label: '1.1',
+  tag: 'v1.1.0',
+  released: '2026-11-18',
   editions: [
     { id: 'en', file: 'Competent-Enough', pages: 517 },
     { id: 'pt', file: 'Competente-o-Suficiente', pages: 531 },

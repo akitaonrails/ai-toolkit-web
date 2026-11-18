@@ -28,7 +28,7 @@
   "intro": "I took the year's articles from my blog, reorganized and rewrote them as one story, fact-checked them again and illustrated them. It's for anyone anxious or confused about AI: the professional afraid of being replaced, the parent who read that AGI is two years away, the manager being sold an \"AI transformation\".",
   "preview": {
     "title": "This is {version}",
-    "text": "Version 1.0 is the first stable edition, released on {date}. The book remains open to corrections: if you find anything wrong, from a typo to a fact, anyone is welcome to open an issue on GitHub.",
+    "text": "Version 1.1, released on {date}, fixes a few copyedit errors in the Portuguese edition, some of them reported in GitHub issues. The English text is the same as in 1.0. The book remains open to corrections: if you find anything wrong, from a typo to a fact, anyone is welcome to open an issue on GitHub.",
     "issues": "Open an issue",
     "notes": "Release notes"
   },
