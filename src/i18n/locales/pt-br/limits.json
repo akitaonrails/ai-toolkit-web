@@ -130,7 +130,8 @@
         "A fronteira ficou de 1,2 a 3 vezes mais barata em três anos e meio, dependendo se são tokens de entrada ou de saída.",
         "Um nível fixo de qualidade fica umas 5 a 10 vezes mais barato por ano, pela estimativa da Epoch AI, e eles esperam que isso desacelere.",
         "Faça a conta no Bun: US$ 165 mil dividido por 100 dá US$ 1.650, pra um port com o fonte, os testes e o autor na mão. Barato e trivial são coisas diferentes.",
-        "Os modelos em si convergiram, e os ganhos recentes vieram das ferramentas de agente em volta deles. Eu explico isso na página de AGI."
+        "Os modelos em si convergiram, e os ganhos recentes vieram das ferramentas de agente em volta deles. Eu explico isso na página de AGI.",
+        "No meu Benchmark v5, todos os 16 modelos Tier A passaram enquanto o custo variou 95x (US$ 0,15 a US$ 14,19), puxado principalmente pelo prompt caching. Alugar GPUs de datacenter para hospedar modelos abertos grandes ainda custou de US$ 218 a US$ 864 por dia, contra cerca de US$ 1 por rodada em APIs na nuvem."
       ],
       "sources": {
         "claude": "Anthropic: preços da API",

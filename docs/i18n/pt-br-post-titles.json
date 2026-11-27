@@ -1,5 +1,11 @@
 {
-  "benchmarkLatest": "LLM Benchmark v4: Opus 5.5, GPT Sol/Luna 6, Mimo 2.6, Grok 4.7",
+  "benchmarkLatest": "LLM Benchmark v5: Quanto Custa ser Competente o Suficiente?",
+  "benchmarkV4Sep23": "LLM Benchmark v4: Opus 5.5, GPT Sol/Luna 6, Mimo 2.6, Grok 4.7",
+  "benchmarkV4Final": "LLM Benchmark v4: Gemini 4 Argon, GPT Sol 6.1 Terra, Kimi K3.1 Pro, Claude Sonnet 5.5",
+  "benchmarkHomeHw": "LLM Benchmark: Quais as melhores LLMs open source pra hardware caseiro?",
+  "benchmarkOsVerdict": "LLM Benchmark v4: o veredito de open source (até out/2026)",
+  "benchmarkB300": "LLM Benchmark v4: os top LLMs open source numa B300",
+  "inkling2Mini": "Novo competidor do Qwen 3.8 27bi: Inkling 2 Mini",
   "benchmarkPart1": "Novo LLM Benchmark v4: retestando TODOS os principais LLMs (Parte 1)",
   "benchmarkPart2": "Novo LLM Benchmark v4: retestando 39 LLMs (Parte 2)",
   "shipMore": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou. Entendam.",
@@ -58,5 +64,12 @@
   "cmr1Launcher": "Brincando de PC Ports com Colin McRae 1",
   "racingLaunchers": "Consertei vários jogos de corrida antigos usando IA: Colin McRae 1, 3, 4, Sega Rally Revo e Outrun 2006, até a trilogia Screamer",
   "launcherSdk": "Criando um framework para IA com IA: REA Launcher SDK",
-  "riemannProof": "Entendendo a suposta prova da hipótese de Riemann"
+  "riemannProof": "Entendendo a suposta prova da hipótese de Riemann",
+  "jensenHuang": "Por que eu não gosto do Jensen Huang",
+  "vibecodedSecurity": "Adicionando segurança de verdade nos seus apps GUI de Linux vibecoded",
+  "formalProofs": "Por que não fazemos provas formais definitivas pra ter código sem bug?",
+  "noMoreHtmlCss": "Estamos no Futuro: Carros voam e não temos mais que fazer HTML/CSS",
+  "trainedOwnModel": "Treinei meu próprio modelo de IA (Spoiler: é só pra estudo)",
+  "btrfsNotExt4": "Usuários Linux: sempre escolham BTRFS, não EXT4",
+  "jevBenchmark": "Qual modelo de decisão/classificador de IA tipo Jev é melhor?"
 }

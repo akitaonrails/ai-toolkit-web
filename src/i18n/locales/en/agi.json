@@ -112,8 +112,8 @@
       "points": [
         "2025 made the same intelligence cheaper: mixture of experts, prompt caching, longer context. 2026 put it inside agents that search, run tests and fix what they guessed wrong.",
         "In November 2024 Reuters reported shrinking returns from pre-training at the big labs. A month later Ilya Sutskever said pre-training \"as we know it will end\", because there's only one internet.",
-        "Stanford's AI Index measured the gap between the first and the tenth model on Chatbot Arena shrinking from 11.9% to 5.4% in a year. In my benchmarks, the frontier models have sat on the same tier since Opus 4.5.",
-        "Under that ceiling, smaller models keep closing in. Epoch AI puts open-weight models about four months behind the frontier in 2026, and a single gaming GPU runs what was frontier 6 to 12 months earlier. In my view, today's frontier ends up running on your own machine."
+        "Stanford's AI Index measured the gap between the first and the tenth model on Chatbot Arena shrinking from 11.9% to 5.4% in a year. In my Benchmark v5, all 16 Tier-A commercial models built the same Rails app with zero nudges.",
+        "Under that ceiling, local models keep closing in. Epoch AI puts open-weight models about four months behind the frontier in 2026, and on a single RTX 5090 I already ran Qwen3.8 Flash-Next (Basalt) and Inkling 2 Mini at 100/100 on my hard canary."
       ],
       "quote": "A lone LLM is an expensive parrot. An LLM with an agent is competent enough to work for real.",
       "quoteOriginal": "LLM sozinho é um papagaio caro. LLM com agente é competente o suficiente pra trabalhar de verdade.",
@@ -259,7 +259,7 @@
       "alt": "Rows of datacenter racks labeled Today on the left, a single small chip labeled Needed on the right, and a green arrow between them labeled Less compute and Lower price.",
       "points": [
         "Hyperscalers are spending over $650 billion this year, and about 7 of the 12 GW of US datacenters planned for 2026 are delayed or canceled.",
-        "Cheaper models already come close. In my benchmark DeepSeek V4.1 Flash scored 92.5 for $1.21, and a free model scored 94.",
+        "Cheaper and local models already match the result. In my Benchmark v5, all 16 Tier-A models passed, while costs spanned 95x ($0.15 on GPT-6 Luna to $14.19 on Grok 4.7), and open models like Qwen3.8 Flash-Next and Inkling 2 Mini already score 100/100 on one RTX 5090.",
         "What's needed now is massive optimization: far less compute per task, and prices that fall drastically. That would change more than any AGI announcement."
       ]
     }

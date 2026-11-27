@@ -30,7 +30,7 @@ export const limits = {
       { id: 'rea', href: 'https://github.com/morluto/rea' },
       { id: 'reaCost', href: 'https://github.com/morluto/rea/tree/main/experiments/analysis-efficiency' },
     ] },
-    { id: 'retro', figure: 'limits-retro', posts: ['adobeRe', 'driveclub'], sources: [
+    { id: 'retro', figure: 'limits-retro', posts: ['racingLaunchers', 'launcherSdk', 'adobeRe', 'driveclub'], sources: [
       { id: 'zelda', href: 'https://github.com/Zelda64Recomp/Zelda64Recomp' },
       { id: 'shadps4', href: 'https://github.com/shadps4-emu/shadPS4' },
       { id: 'kotaku', href: 'https://kotaku.com/zelda-and-banjo-recompiled-devs-go-to-war-with-ai-vibe-coded-slopcomps-2000739936' },
@@ -54,7 +54,7 @@ export const limits = {
       { id: 'bun', href: 'https://bun.com/blog/bun-in-rust' },
       { id: 'compiler', href: 'https://www.anthropic.com/engineering/building-c-compiler' },
     ] },
-    { id: 'price', posts: ['competentEnough', 'adobeRe'], stats: [
+    { id: 'price', posts: ['benchmarkLatest', 'benchmarkB300', 'competentEnough', 'adobeRe'], stats: [
       // US$ per million output tokens: GPT-4 at launch (March 2023), and Fable 5.1 / GPT-6 Astra (October 2026).
       { key: 'then', n: 60, format: usd },
       { key: 'now', n: 50, format: usd },

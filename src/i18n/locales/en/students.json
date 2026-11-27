@@ -26,7 +26,7 @@
         "AI can multiply mistakes when the foundations are weak. With strong foundations, it can multiply useful work.",
         "People who understand operating systems, databases, networks, data structures and compilers use agents as an exoskeleton. People who don't use them as a crutch. An exoskeleton amplifies strength; a crutch only hides weakness.",
         "Google's DORA 2025 report found the same in teams: \"AI doesn't fix a team; it amplifies what's already there.\"",
-        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the code samples failed security tests and introduced OWASP Top 10 vulnerabilities.",
+        "And someone has to check the output. In Veracode's 2025 test of over 100 models, 45% of the code samples failed security tests and introduced OWASP Top 10 vulnerabilities. Hardening a vibecoded local app still takes real engineering: SQLCipher, TPM2 keys and Bubblewrap sandboxing.",
         "If you're experienced and still resisting, stop. There's no merit in writing a Dockerfile or a Makefile by hand for the hundredth time. The chores go to AI; the foundations don't."
       ],
       "quote": "A well-prepared programmer won't be replaced. I said it clearly: I never will be.",

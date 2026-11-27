@@ -2,8 +2,32 @@
   "readOn": "akitaonrails.com에서 읽기",
   "items": {
     "benchmarkLatest": {
+      "title": "LLM Benchmark v5: 충분히 유능해지는 데 비용이 얼마나 들까?",
+      "summary": "Tier A 상용 모델 16개로 같은 신규 Rails 앱을 만들었습니다. 모두 개입 없이 통과했지만 프롬프트 캐싱이 청구서를 가르며 비용이 95배($0.15~$14.19) 벌어졌습니다."
+    },
+    "benchmarkV4Sep23": {
       "title": "LLM 벤치마크 v4: Opus 5.5, GPT 6 Sol과 Luna, MiMo 2.6, Grok 4.7",
       "summary": "v4 표에 새 모델 다섯 개가 들어갑니다. 업그레이드할 가치가 있는지, 그리고 Grok 4.7이 왜 전작보다 뒤처지는지 다룹니다."
+    },
+    "benchmarkV4Final": {
+      "title": "LLM Benchmark v4: Gemini 4 Argon, GPT-6.1 Sol·Terra, Kimi K3.1 Pro, Claude Sonnet 5.5",
+      "summary": "Muse Wonder가 높은 경계심으로 97.0을 기록하며 v4를 마무리했지만 할당량과 멈춤 때문에 실작업 126분이 거의 15일로 늘어졌습니다. 선두권은 여전히 촘촘합니다."
+    },
+    "benchmarkHomeHw": {
+      "title": "LLM Benchmark: 가정용 하드웨어 최고의 오픈 소스 LLM은?",
+      "summary": "RTX 5090에서 Qwen3.8 Flash-Next를 돌리며 Basalt와 Strata를 비교했습니다. Q2_0은 고난도 6회 모두 100점을 받았고 Basalt에서 400 tok/s를 기록했습니다."
+    },
+    "benchmarkOsVerdict": {
+      "title": "LLM Benchmark v4: 오픈 소스 최종 평가(2026년 10월 기준)",
+      "summary": "거의 70회 실행 끝에 최상위 오픈 모델이 Sonnet 5에 근접했지만, 가정용 GPU 속도는 상용 API에 못 미치고 데이터센터 카드는 서버 한 대 값입니다."
+    },
+    "benchmarkB300": {
+      "title": "LLM Benchmark v4: B300에서 돌린 최상위 오픈 소스 LLM",
+      "summary": "288 GB NVIDIA B300에서 대형 오픈 모델 14종을 테스트했습니다. 최상위는 92.5에 도달했지만 파드 비용이 하루 $218로 클라우드 API 회당 약 $1과 대조됩니다."
+    },
+    "inkling2Mini": {
+      "title": "Qwen 3.8 27B의 새 도전자: Inkling 2 Mini",
+      "summary": "Thinking Machines Lab의 루프 구조 Inkling 2 Mini를 RTX 5090과 Strix Halo에서 Qwen3.8 Flash-Next와 비교: 고난도 카나리아 100/100, RAM 오프로드 제로, 2.1초 TTFT."
     },
     "benchmarkPart1": {
       "title": "새 LLM 벤치마크 v4, 1부: 과정",
@@ -240,6 +264,34 @@
     "riemannProof": {
       "title": "리만 가설의 주장된 증명 이해하기",
       "summary": "Claude로 만든 1,740만 줄 규모의 Lean 4 증명은 독립 검증기를 통과했지만 수백만 줄의 죽은 발판이 남았고 일상적인 엔지니어링은 거의 달라지지 않습니다."
+    },
+    "jensenHuang": {
+      "title": "내가 젠슨 황을 좋아하지 않는 이유",
+      "summary": "Nvidia에서의 축출과 복귀부터 순환 투자, 동남아 수출 우회로, CUDA를 잠가 둔 채 퍼진 친오픈소스 Nvidia 신화까지."
+    },
+    "vibecodedSecurity": {
+      "title": "바이브 코딩한 리눅스 GUI 앱에 진짜 보안 적용하기",
+      "summary": "로컬 금융 앱을 단계별로 강화하는 가이드: SQLCipher 암호화, Polkit 기반 TPM2 봉인 키, Bubblewrap 브라우저 샌드박스, 검증된 백업."
+    },
+    "formalProofs": {
+      "title": "버그 없는 코드를 위해 왜 결정적 형식 증명을 쓰지 않을까?",
+      "summary": "Anthropic은 AI가 작성한 1억 8,000만 줄의 증명으로 오픈 소스 라이브러리 123개가 크래시하지 않음을 보였습니다. 형식 검증 비용, seL4의 20인년, Bend 2가 바꾸는 점."
+    },
+    "noMoreHtmlCss": {
+      "title": "우리는 미래에 산다: 차가 날고 더는 HTML/CSS를 쓰지 않아도 된다",
+      "summary": "에이전트가 웹·모바일·데스크톱을 처리하는 동안 하루 만에 사이트 여섯 개를 개편했습니다. 기계적인 프런트엔드 작업은 자동화가 됐고 커리어도 적응해야 합니다."
+    },
+    "trainedOwnModel": {
+      "title": "직접 AI 모델을 학습시켜 봤다(스포일러: 공부용이다)",
+      "summary": "Karpathy의 200줄 microgpt에서 출발해 RTX 5090 한 장으로 100억 토큰을 137시간, 전기료 약 80헤알에 3억 3,700만 파라미터 모델을 학습한 기록."
+    },
+    "btrfsNotExt4": {
+      "title": "리눅스 사용자라면 EXT4 말고 항상 BTRFS를 선택하라",
+      "summary": "스냅샷, 서브볼륨, reflink 중복 제거, 2.2 TB에서 630 GB를 아끼는 압축, 그리고 Rust 빌드·Docker·모델 캐시·에이전트 worktree 디스크 관리."
+    },
+    "jevBenchmark": {
+      "title": "Jev 계열 AI 결정·분류 모델 중 무엇이 가장 좋을까?",
+      "summary": "클라우드와 오픈 모델에서 22,000건 넘게 분류를 측정했습니다. 오픈 웨이트 2종이 99.4%로 공동 1위였고 Microsoft Decision-1은 97.6%로 Jev와 동점이면서 더 저렴했습니다."
     }
   },
   "related": {

@@ -112,8 +112,8 @@
       "points": [
         "2025 abarató la misma inteligencia: mixture of experts, prompt caching, contexto más largo. 2026 la puso dentro de agentes que buscan, corren tests y corrigen lo que adivinaron mal.",
         "En noviembre de 2024, Reuters informó que el preentrenamiento rendía cada vez menos en los grandes laboratorios. Un mes después, Ilya Sutskever dijo que el preentrenamiento \"como lo conocemos va a terminar\", porque solo hay un internet.",
-        "El AI Index de Stanford midió que la distancia entre el primer y el décimo modelo en Chatbot Arena se redujo del 11,9 % al 5,4 % en un año. En mis benchmarks, los modelos de frontera están en el mismo nivel desde Opus 4.5.",
-        "Bajo ese techo, los modelos más pequeños siguen acercándose. Epoch AI pone a los modelos de pesos abiertos unos cuatro meses detrás de la frontera en 2026, y una sola GPU gamer corre lo que era frontera entre 6 y 12 meses antes. En mi opinión, la frontera de hoy terminará corriendo en tu propia máquina."
+        "El AI Index de Stanford midió que la brecha entre el primer y el décimo modelo en Chatbot Arena se redujo del 11,9 % al 5,4 % en un año. En mi Benchmark v5, los 16 modelos comerciales Tier A construyeron la misma app Rails sin ningún empujón.",
+        "Bajo ese techo, los modelos locales siguen acercándose. Epoch AI sitúa los modelos de pesos abiertos unos cuatro meses detrás de la frontera en 2026, y en una sola RTX 5090 ya corrí Qwen3.8 Flash-Next (Basalt) e Inkling 2 Mini logrando 100/100 en mi canario exigente."
       ],
       "quote": "Un LLM solo es un loro caro. Un LLM con un agente es lo bastante competente para trabajar de verdad.",
       "quoteOriginal": "LLM sozinho é um papagaio caro. LLM com agente é competente o suficiente pra trabalhar de verdade.",
@@ -259,7 +259,7 @@
       "alt": "Filas de racks de datacenter etiquetadas Hoy a la izquierda, un solo chip pequeño etiquetado Necesario a la derecha y una flecha verde entre ellos etiquetada Menos cómputo y Menor precio.",
       "points": [
         "Los hyperscalers gastan más de 650.000 millones de dólares este año, y cerca de 7 de los 12 GW de datacenters planeados en EE. UU. para 2026 están retrasados o cancelados.",
-        "Los modelos más baratos ya se acercan. En mi benchmark DeepSeek V4.1 Flash sacó 92,5 por 1,21 dólares, y un modelo gratuito sacó 94.",
+        "Modelos más baratos y locales ya igualan el resultado. En mi Benchmark v5, los 16 modelos Tier A aprobaron mientras el costo varió 95x (de 0,15 dólares en GPT-6 Luna a 14,19 dólares en Grok 4.7), y modelos abiertos como Qwen3.8 Flash-Next e Inkling 2 Mini ya alcanzan 100/100 en una RTX 5090.",
         "Lo que hace falta ahora es optimización masiva: mucho menos cómputo por tarea y precios que bajen drásticamente. Eso cambiaría más que cualquier anuncio de AGI."
       ]
     }

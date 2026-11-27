@@ -2,8 +2,32 @@
   "readOn": "Leer en akitaonrails.com",
   "items": {
     "benchmarkLatest": {
+      "title": "LLM Benchmark v5: ¿Cuánto cuesta ser lo suficientemente competente?",
+      "summary": "Dieciséis modelos comerciales Tier A construyeron la misma app Rails desde cero: todos aprobaron sin empujones, mientras el costo varió 95x (0,15 a 14,19 dólares) con el prompt caching marcando la factura."
+    },
+    "benchmarkV4Sep23": {
       "title": "LLM Benchmark v4: Opus 5.5, GPT 6 Sol y Luna, MiMo 2.6, Grok 4.7",
       "summary": "Cinco modelos nuevos entran en la tabla v4. Si vale la pena actualizar y por qué Grok 4.7 retrocede frente a su propio predecesor."
+    },
+    "benchmarkV4Final": {
+      "title": "LLM Benchmark v4: Gemini 4 Argon, GPT-6.1 Sol y Terra, Kimi K3.1 Pro, Claude Sonnet 5.5",
+      "summary": "Muse Wonder cierra v4 con 97,0 y gran vigilancia, mientras las cuotas y bloqueos estiraron 126 minutos productivos a casi 15 días. Los líderes siguen pegados."
+    },
+    "benchmarkHomeHw": {
+      "title": "LLM Benchmark: ¿Cuáles son los mejores LLMs de código abierto para hardware doméstico?",
+      "summary": "Basalt frente a Strata sirviendo Qwen3.8 Flash-Next en una RTX 5090: Q2_0 sacó 100 en las seis corridas exigentes y llegó a 400 tokens por segundo en Basalt."
+    },
+    "benchmarkOsVerdict": {
+      "title": "LLM Benchmark v4: el veredicto del código abierto (a oct. 2026)",
+      "summary": "Casi 70 corridas acercaron a los mejores modelos abiertos a Sonnet 5, aunque la velocidad doméstica sigue detrás de las APIs y las tarjetas de datacenter cuestan como un servidor."
+    },
+    "benchmarkB300": {
+      "title": "LLM Benchmark v4: los mejores LLMs de código abierto en una B300",
+      "summary": "Catorce modelos abiertos grandes probados en una NVIDIA B300 de 288 GB: los mejores llegaron a 92,5, mientras el pod cuesta 218 dólares al día frente a cerca de 1 dólar por corrida en la nube."
+    },
+    "inkling2Mini": {
+      "title": "Un nuevo rival para Qwen 3.8 27B: Inkling 2 Mini",
+      "summary": "Inkling 2 Mini de Thinking Machines Lab frente a Qwen3.8 Flash-Next en RTX 5090 y Strix Halo: 100/100 en el canario exigente, cero descarga a RAM y 2,1 s de TTFT."
     },
     "benchmarkPart1": {
       "title": "Nuevo LLM Benchmark v4, parte 1: el proceso",
@@ -240,6 +264,34 @@
     "riemannProof": {
       "title": "Entendiendo la supuesta prueba de la hipótesis de Riemann",
       "summary": "Una prueba de 17,4 millones de líneas en Lean 4 hecha con Claude superó verificadores independientes, dejó millones de líneas de andamiaje muerto y casi nada cambia en la ingeniería diaria."
+    },
+    "jensenHuang": {
+      "title": "Por qué no me cae bien Jensen Huang",
+      "summary": "Desde la salida y restitución de Huang en Nvidia hasta las inversiones circulares, las brechas de exportación en el Sudeste Asiático y el mito de una Nvidia abierta con CUDA cerrado."
+    },
+    "vibecodedSecurity": {
+      "title": "Añadiendo seguridad real a tus apps GUI de Linux vibecoded",
+      "summary": "Guía paso a paso para endurecer una app financiera local: cifrado SQLCipher, clave sellada en TPM2 vía Polkit, sandbox de navegador con Bubblewrap y respaldos verificados."
+    },
+    "formalProofs": {
+      "title": "¿Por qué no escribimos pruebas formales definitivas para tener código sin bugs?",
+      "summary": "Anthropic probó que 123 bibliotecas abiertas nunca fallan usando 180 millones de líneas de prueba generadas por IA: qué cuesta la verificación formal, por qué seL4 tomó 20 años-persona y qué cambia Bend 2."
+    },
+    "noMoreHtmlCss": {
+      "title": "Vivimos en el futuro: los autos vuelan y ya no tenemos que escribir HTML/CSS",
+      "summary": "Rediseñé seis sitios en un día mientras los agentes se encargaban de web, móvil y escritorio. El trabajo mecánico de frontend pasó a ser automatización; las carreras tienen que adaptarse."
+    },
+    "trainedOwnModel": {
+      "title": "Entrené mi propio modelo de IA (Spoiler: es solo para estudiar)",
+      "summary": "Del microgpt de 200 líneas de Karpathy a un modelo de 337 millones de parámetros entrenado con 10.000 millones de tokens en 137 horas en una RTX 5090 por unos 80 reales de electricidad."
+    },
+    "btrfsNotExt4": {
+      "title": "Usuarios de Linux: elijan siempre BTRFS, no EXT4",
+      "summary": "Snapshots, subvolúmenes, deduplicación por reflink, compresión que ahorra 630 GB en 2,2 TB e higiene de disco para compilaciones Rust, Docker, cachés de modelos y worktrees de agentes."
+    },
+    "jevBenchmark": {
+      "title": "¿Qué modelo clasificador o de decisión de IA tipo Jev es mejor?",
+      "summary": "Más de 22.000 clasificaciones entre modelos alojados y abiertos: dos modelos de pesos abiertos empataron en 99,4 % mientras Microsoft Decision-1 igualó a Jev en 97,6 % por menos dinero."
     }
   },
   "related": {

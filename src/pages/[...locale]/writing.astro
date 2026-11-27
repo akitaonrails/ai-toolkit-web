@@ -15,10 +15,10 @@ export const getStaticPaths = localePaths;
 const { t, raw, locale, href } = useI18n(Astro, 'writing');
 // Which posts go under which heading. Adding a post: data in src/data/articles.ts, words in articles.json.
 const groups: { id: string; hue: 'mauve' | 'amethyst' | 'copper' | 'pennant'; posts: ArticleId[] }[] = [
-  { id: 'benchmarks', hue: 'mauve', posts: ['languages', 'benchmarkLatest', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
-  { id: 'agents', hue: 'amethyst', posts: ['skills', 'shipMore', 'openSourceAi', 'bestPractices', 'cleanCode', 'protect'] },
-  { id: 'experiments', hue: 'copper', posts: ['nesToSms', 'dayToDay', 'aiMemory2', 'chronicles'] },
-  { id: 'opinions', hue: 'pennant', posts: ['adobeRe', 'competentEnough', 'llmLimits', 'hotTake', 'aiKilled'] },
+  { id: 'benchmarks', hue: 'mauve', posts: ['benchmarkLatest', 'inkling2Mini', 'benchmarkV4Final', 'benchmarkHomeHw', 'languages', 'benchmarkPart1', 'benchmarkPart2', 'multiModel'] },
+  { id: 'agents', hue: 'amethyst', posts: ['vibecodedSecurity', 'formalProofs', 'skills', 'shipMore', 'openSourceAi', 'bestPractices', 'cleanCode', 'protect'] },
+  { id: 'experiments', hue: 'copper', posts: ['trainedOwnModel', 'jevBenchmark', 'nesToSms', 'dayToDay', 'aiMemory2', 'chronicles'] },
+  { id: 'opinions', hue: 'pennant', posts: ['riemannProof', 'jensenHuang', 'noMoreHtmlCss', 'adobeRe', 'competentEnough', 'llmLimits', 'hotTake', 'aiKilled'] },
 ];
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>

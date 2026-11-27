@@ -13,7 +13,7 @@
     "kicker": "LLM Benchmark v4",
     "title": "Todos os grandes modelos, testados no mesmo app sabotado",
     "text": "A versão 4 é um único app Rails que cresce ao longo de sete sprints enquanto um subagente isolado planta catorze sabotagens baseadas em CVEs reais. Os modelos são ranqueados por vigilância: perceberam o que estava quebrado e consertaram? Eu refiz o benchmark do zero pela terceira vez pra chegar nisso.",
-    "current": "Quando sai um grande modelo de fronteira, ele passa pela mesma tabela. A última rodada adicionou {n} modelos em {date}. É assim que eu escolho qual modelo usar pra quê, e quanto cada um custa por tarefa.",
+    "current": "Em novembro de 2026 fiz o Benchmark v5, testando {n} modelos comerciais Tier A num app Rails do zero em {date}: todos passaram sem empurrões, enquanto o custo variou 95x (de US$ 0,15 a US$ 14,19).",
     "facts": {
       "models": "modelos ranqueados",
       "sabotages": "sabotagens pra pegar",

@@ -130,7 +130,8 @@
         "La frontera se abarató entre 1,2 y 3 veces en tres años y medio, según sean tokens de entrada o de salida.",
         "Un nivel fijo de calidad se abarata más o menos entre 5 y 10 veces por año, según la estimación de Epoch AI, y esperan que eso se desacelere.",
         "Haz la cuenta con Bun: 165.000 dólares divididos entre 100 son 1.650 dólares, para un port con el código fuente, los tests y el autor a mano. Barato y trivial son cosas distintas.",
-        "Los modelos en sí convergieron, y las mejoras recientes vinieron de las herramientas de agentes que los rodean. Lo explico en la página de la AGI."
+        "Los modelos en sí convergieron, y las mejoras recientes vinieron de las herramientas de agentes que los rodean. Lo explico en la página de la AGI.",
+        "En mi Benchmark v5, los 16 modelos Tier A aprobaron mientras el costo varió 95x (0,15 a 14,19 dólares), principalmente por el prompt caching. Alquilar GPUs de datacenter para alojar modelos abiertos grandes siguió costando entre 218 y 864 dólares al día frente a cerca de 1 dólar por corrida en APIs en la nube."
       ],
       "sources": {
         "claude": "Anthropic: precios de la API",

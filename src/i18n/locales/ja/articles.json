@@ -2,8 +2,32 @@
   "readOn": "akitaonrails.comで読む",
   "items": {
     "benchmarkLatest": {
+      "title": "LLM Benchmark v5：「十分使える」コストはいくらか？",
+      "summary": "Tier Aの商用モデル16種で同じ新規Railsアプリを構築。全モデルが介入なしで合格した一方、プロンプトキャッシュが請求額を左右し、コストは95倍（0.15ドル〜14.19ドル）開きました。"
+    },
+    "benchmarkV4Sep23": {
       "title": "LLMベンチマークv4：Opus 5.5、GPT 6 SolとLuna、MiMo 2.6、Grok 4.7",
       "summary": "v4の表に新しく5つのモデルが加わりました。乗り換える価値はあるのか。そしてGrok 4.7が前のバージョンより後退した理由。"
+    },
+    "benchmarkV4Final": {
+      "title": "LLM Benchmark v4：Gemini 4 Argon、GPT-6.1 Sol/Terra、Kimi K3.1 Pro、Claude Sonnet 5.5",
+      "summary": "Muse Wonderが97.0の高い警戒度でv4を締めくくりましたが、クォータと停止で実働126分が約15日に延びました。上位勢は依然として団子状態です。"
+    },
+    "benchmarkHomeHw": {
+      "title": "LLM Benchmark：家庭用ハードウェアで最良のオープンソースLLMはどれか？",
+      "summary": "RTX 5090上のQwen3.8 Flash-NextでBasaltとStrataを比較。Q2_0は高難度6回すべてで100点を出し、Basaltでは400 tok/sに達しました。"
+    },
+    "benchmarkOsVerdict": {
+      "title": "LLM Benchmark v4：オープンソースの結論（2026年10月時点）",
+      "summary": "約70回の実行で上位オープンモデルはSonnet 5に迫りましたが、家庭用GPUの速度は商用APIに及ばず、データセンターGPUはサーバー並みの費用がかかります。"
+    },
+    "benchmarkB300": {
+      "title": "LLM Benchmark v4：B300で動かす上位オープンソースLLM",
+      "summary": "288 GBのNVIDIA B300で大型オープンモデル14種を検証。上位は92.5に到達しましたが、ポッドは1日218ドルかかり、クラウドAPIの1回約1ドルと対照的です。"
+    },
+    "inkling2Mini": {
+      "title": "Qwen 3.8 27Bの新たな対抗馬：Inkling 2 Mini",
+      "summary": "Thinking Machines Labのループ型Inkling 2 MiniをRTX 5090とStrix HaloでQwen3.8 Flash-Nextと比較。高難度カナリア100/100、RAMオフロードゼロ、TTFT 2.1秒。"
     },
     "benchmarkPart1": {
       "title": "新LLMベンチマークv4、パート1：進め方",
@@ -240,6 +264,34 @@
     "riemannProof": {
       "title": "リーマン予想の「証明」を理解する",
       "summary": "Claudeで作られた1,740万行のLean 4証明は独立した検証器を通過しましたが、使われない足場が何百万行も残り、日々のエンジニアリングはほとんど変わりません。"
+    },
+    "jensenHuang": {
+      "title": "私がジェンスン・フアンを好きではない理由",
+      "summary": "Nvidiaでの解任と復帰から循環投資、東南アジア経由の輸出抜け穴、そしてCUDAを囲い込んだままの「オープンソース支持」という神話まで。"
+    },
+    "vibecodedSecurity": {
+      "title": "バイブコーディングしたLinux GUIアプリに本物のセキュリティを入れる",
+      "summary": "ローカル財務アプリを堅牢化する手順：SQLCipher暗号化、Polkit経由のTPM2封印鍵、Bubblewrapブラウザサンドボックス、検証済みバックアップ。"
+    },
+    "formalProofs": {
+      "title": "なぜバグのないコードのために決定的な形式証明を書かないのか？",
+      "summary": "AnthropicはAIが書いた1.8億行の証明で123のOSSライブラリがクラッシュしないことを示しました。形式検証のコスト、seL4の20人年、Bend 2が変えるもの。"
+    },
+    "noMoreHtmlCss": {
+      "title": "私たちは未来にいる：車は飛び、もうHTML/CSSを書かなくていい",
+      "summary": "エージェントにWeb・モバイル・デスクトップを任せ、約1日で6サイトを再設計しました。機械的なフロントエンド作業は自動化され、キャリアも適応が求められます。"
+    },
+    "trainedOwnModel": {
+      "title": "自分のAIモデルを学習してみた（ネタバレ：勉強用です）",
+      "summary": "Karpathyの200行microgptから出発し、RTX 5090で100億トークンを137時間、電気代約80レアルで3.37億パラメータのモデルを学習した記録。"
+    },
+    "btrfsNotExt4": {
+      "title": "Linuxユーザーへ：EXT4ではなく常にBTRFSを選べ",
+      "summary": "スナップショット、サブボリューム、reflink重複排除、2.2 TBで630 GB節減する圧縮、そしてRustビルド・Docker・モデルキャッシュ・worktreeのディスク衛生管理。"
+    },
+    "jevBenchmark": {
+      "title": "Jev系のAI判定・分類モデルで最良なのはどれか？",
+      "summary": "クラウドとオープンモデルで22,000件超の分類を検証。オープンウェイト2モデルが99.4%で首位タイ、Microsoft Decision-1は97.6%でJevに並びより安価でした。"
     }
   },
   "related": {

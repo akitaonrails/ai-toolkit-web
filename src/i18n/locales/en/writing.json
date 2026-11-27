@@ -13,7 +13,7 @@
     "kicker": "LLM Benchmark v4",
     "title": "Every major model, tested on the same sabotaged app",
     "text": "Version 4 is one Rails app that grows over seven sprints while an isolated subagent plants fourteen sabotages based on real CVEs. Models are ranked by vigilance: did they notice what was broken and fix it? I rebuilt the benchmark from scratch for the third time to get there.",
-    "current": "When a major frontier model ships, it runs through the same table. The latest round added {n} models on {date}. That is how I pick which model to use for what, and what each one costs per task.",
+    "current": "In November 2026 I followed up with Benchmark v5, testing {n} Tier-A commercial models on a greenfield Rails app on {date}: all passed with zero nudges, while costs spanned 95x ($0.15 to $14.19).",
     "facts": {
       "models": "models ranked",
       "sabotages": "sabotages to catch",

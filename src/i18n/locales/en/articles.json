@@ -2,8 +2,32 @@
   "readOn": "Read on akitaonrails.com",
   "items": {
     "benchmarkLatest": {
+      "title": "LLM Benchmark v5: How Much Does It Cost to Be Competent Enough?",
+      "summary": "Sixteen Tier-A commercial models built the same greenfield Rails app: all passed with zero nudges, while costs spanned 95x ($0.15 to $14.19) with prompt caching driving the bill."
+    },
+    "benchmarkV4Sep23": {
       "title": "LLM Benchmark v4: Opus 5.5, GPT 6 Sol and Luna, MiMo 2.6, Grok 4.7",
       "summary": "Five new models go into the v4 table. Is upgrading worth it, and why Grok 4.7 regresses against its own predecessor."
+    },
+    "benchmarkV4Final": {
+      "title": "LLM Benchmark v4: Gemini 4 Argon, GPT-6.1 Sol and Terra, Kimi K3.1 Pro, Claude Sonnet 5.5",
+      "summary": "Muse Wonder closes out v4 at 97.0 with strong vigilance, while quotas and hangs stretched 126 productive minutes across nearly 15 days. The leaders remain packed together."
+    },
+    "benchmarkHomeHw": {
+      "title": "LLM Benchmark: What Are the Best Open Source LLMs for Home Hardware?",
+      "summary": "Basalt versus Strata serving Qwen3.8 Flash-Next on an RTX 5090: Q2_0 scored 100 across all six hard runs and reached 400 tokens per second on Basalt."
+    },
+    "benchmarkOsVerdict": {
+      "title": "LLM Benchmark v4: the open source verdict (as of Oct 2026)",
+      "summary": "Almost 70 runs put the top open-weight models close to Sonnet 5, though consumer speeds still lag commercial APIs and datacenter cards cost as much as a server."
+    },
+    "benchmarkB300": {
+      "title": "LLM Benchmark v4: the top open source LLMs on a B300",
+      "summary": "Fourteen large open-weight models tested on a 288 GB NVIDIA B300: top models reached 92.5, while the pod costs $218 a day against about $1 per run on cloud APIs."
+    },
+    "inkling2Mini": {
+      "title": "A New Challenger to Qwen 3.8 27B: Inkling 2 Mini",
+      "summary": "Thinking Machines Lab's looped Inkling 2 Mini against Qwen3.8 Flash-Next on an RTX 5090 and Strix Halo: 100/100 on the hard canary, zero RAM offload and 2.1 s TTFT."
     },
     "benchmarkPart1": {
       "title": "New LLM Benchmark v4, Part 1: the process",
@@ -240,6 +264,34 @@
     "riemannProof": {
       "title": "Understanding the Alleged Proof of the Riemann Hypothesis",
       "summary": "A 17.4-million-line Lean 4 proof built with Claude cleared independent checkers, left millions of lines of dead scaffolding, and changes almost nothing in everyday engineering."
+    },
+    "jensenHuang": {
+      "title": "Why I Don't Like Jensen Huang",
+      "summary": "From Huang's ouster and reinstatement at Nvidia to circular investments, Southeast Asia export loopholes, and the myth of an open-source Nvidia with CUDA locked down."
+    },
+    "vibecodedSecurity": {
+      "title": "Adding proper security to your vibecoded Linux GUI apps",
+      "summary": "Step-by-step hardening of a local financial app: SQLCipher encryption, a TPM2-sealed key via Polkit, a Bubblewrap browser sandbox and verified backups."
+    },
+    "formalProofs": {
+      "title": "Why Don't We Write Definitive Formal Proofs to Get Bug-Free Code?",
+      "summary": "Anthropic proved 123 open-source libraries never crash using 180 million lines of AI-written proof: what formal verification costs, why seL4 took 20 person-years, and what Bend 2 changes."
+    },
+    "noMoreHtmlCss": {
+      "title": "We're Living in the Future: Cars Fly and We Don't Have to Write HTML/CSS Anymore",
+      "summary": "I redesigned six sites in about a day while agents handled web, mobile and desktop layouts. Mechanical frontend work became automation; careers have to adapt."
+    },
+    "trainedOwnModel": {
+      "title": "I Trained My Own AI Model (Spoiler: It's Just for Study)",
+      "summary": "From Karpathy's 200-line microgpt to a 337-million-parameter model trained on 10 billion tokens in 137 hours on an RTX 5090 for around R$ 80 of electricity."
+    },
+    "btrfsNotExt4": {
+      "title": "Linux users: always choose BTRFS, not EXT4",
+      "summary": "Snapshots, subvolumes, reflink deduplication, compression saving 630 GB on 2.2 TB, and storage hygiene for Rust builds, Docker, model caches and agent worktrees."
+    },
+    "jevBenchmark": {
+      "title": "Which Jev-like AI Decision/Classifier Model Is Best?",
+      "summary": "Over 22,000 classifications across hosted and open decision models: two open-weight models tied at 99.4% while Microsoft Decision-1 matched Jev at 97.6% for less."
     }
   },
   "related": {

@@ -13,7 +13,13 @@ export const blogHome = (locale?: string) => (locale === 'pt-br' ? `${blog}/` : 
 export const blogArchive = (locale?: string) => `${blogHome(locale)}archives/`;
 
 export const articles = {
-  benchmarkLatest: { path: '/en/2026/09/23/llm-benchmark-v4-opus-5-5-gpt-6-sol-luna-mimo-2-6-grok-4-7/', ptPath: '/2026/09/23/llm-benchmark-v4-opus-5-5-gpt-6-sol-luna-mimo-2-6-grok-4-7/', date: '2026-09-23', hue: 'mauve' },
+  benchmarkLatest: { path: '/en/2026/11/20/llm-benchmark-v5-how-much-does-it-cost-to-be-competent-enough/', ptPath: '/2026/11/20/llm-benchmark-v5-quanto-custa-ser-competente-o-suficiente/', date: '2026-11-20', hue: 'mauve' },
+  benchmarkV4Sep23: { path: '/en/2026/09/23/llm-benchmark-v4-opus-5-5-gpt-6-sol-luna-mimo-2-6-grok-4-7/', ptPath: '/2026/09/23/llm-benchmark-v4-opus-5-5-gpt-6-sol-luna-mimo-2-6-grok-4-7/', date: '2026-09-23', hue: 'mauve' },
+  benchmarkV4Final: { path: '/en/2026/10/28/llm-benchmark-v4-gemini-4-argon-gpt-6-1-sol-terra-kimi-k3-1-pro-claude-sonnet-5-5/', ptPath: '/2026/10/28/llm-benchmark-v4-gemini-4-argon-gpt-sol-6-1-terra-kimi-k3-1-pro-claude-sonnet-5-5/', date: '2026-10-28', hue: 'mauve' },
+  benchmarkHomeHw: { path: '/en/2026/10/27/llm-benchmark-best-open-source-llms-for-home-hardware/', ptPath: '/2026/10/27/llm-benchmark-melhores-llms-open-source-hardware-caseiro/', date: '2026-10-27', hue: 'mauve' },
+  benchmarkOsVerdict: { path: '/en/2026/10/22/llm-benchmark-v4-the-open-source-verdict-as-of-oct-2026/', ptPath: '/2026/10/22/llm-benchmark-v4-o-veredito-de-open-source-ate-out-2026/', date: '2026-10-22', hue: 'mauve' },
+  benchmarkB300: { path: '/en/2026/10/19/llm-benchmark-v4-the-top-open-source-llms-on-a-b300/', ptPath: '/2026/10/19/llm-benchmark-v4-os-top-llms-open-source-numa-b300/', date: '2026-10-19', hue: 'mauve' },
+  inkling2Mini: { path: '/en/2026/11/27/a-new-challenger-to-qwen-3-8-27b-inkling-2-mini/', ptPath: '/2026/11/27/novo-competidor-do-qwen-3-8-27bi-inkling-2-mini/', date: '2026-11-27', hue: 'mauve' },
   benchmarkPart1: { path: '/en/2026/09/15/new-llm-benchmark-v4-retesting-all-top-llms-part-1/', ptPath: '/2026/09/15/novo-llm-benchmark-v4-retestando-todos-llms-parte-1/', date: '2026-09-15', hue: 'mauve' },
   benchmarkPart2: { path: '/en/2026/09/15/new-llm-benchmark-v4-retesting-39-llms-part-2/', ptPath: '/2026/09/15/novo-llm-benchmark-v4-retestando-todos-llms-parte-2/', date: '2026-09-15', hue: 'mauve' },
   shipMore: { path: '/en/2026/09/22/stop-making-excuses-and-ship-more-the-premise-changed/', ptPath: '/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/', date: '2026-09-22', hue: 'amethyst' },
@@ -73,6 +79,13 @@ export const articles = {
   languages: { path: '/en/2026/10/11/are-there-better-languages-for-programming-with-llms/', ptPath: '/2026/10/11/existem-linguagens-melhores-pra-programar-com-llms/', date: '2026-10-11', hue: 'mauve' },
   llmLimits: { path: '/en/2026/09/28/llms-are-good-at-reproducing-what-exists-what-about-new-things/', ptPath: '/2026/09/28/llms-sao-boas-em-reproduzir-o-que-existe-e-coisas-novas/', date: '2026-09-28', hue: 'pennant' },
   riemannProof: { path: '/en/2026/11/25/understanding-the-alleged-proof-of-the-riemann-hypothesis/', ptPath: '/2026/11/25/entendendo-a-suposta-prova-da-hipotese-de-riemann/', date: '2026-11-25', hue: 'pennant' },
+  jensenHuang: { path: '/en/2026/11/25/why-i-dont-like-jensen-huang/', ptPath: '/2026/11/25/por-que-eu-nao-gosto-do-jensen-huang/', date: '2026-11-25', hue: 'pennant' },
+  vibecodedSecurity: { path: '/en/2026/11/06/adding-proper-security-to-your-vibecoded-linux-gui-apps/', ptPath: '/2026/11/06/adicionando-seguranca-de-verdade-nos-seus-apps-gui-linux-vibecoded/', date: '2026-11-06', hue: 'copper' },
+  formalProofs: { path: '/en/2026/10/24/why-dont-we-write-definitive-formal-proofs-of-bug-free-code/', ptPath: '/2026/10/24/por-que-nao-fazemos-provas-formais-definitivas-de-codigo-sem-bug/', date: '2026-10-24', hue: 'amethyst' },
+  noMoreHtmlCss: { path: '/en/2026/10/16/living-in-the-future-cars-fly-no-more-html-css/', ptPath: '/2026/10/16/estamos-no-futuro-carros-voam-e-nao-temos-mais-que-fazer-html-css/', date: '2026-10-16', hue: 'pennant' },
+  trainedOwnModel: { path: '/en/2026/10/14/i-trained-my-own-ai-model-spoiler-its-just-for-study/', ptPath: '/2026/10/14/treinei-meu-proprio-modelo-de-ia-spoiler-e-so-pra-estudo/', date: '2026-10-14', hue: 'copper' },
+  btrfsNotExt4: { path: '/en/2026/10/12/linux-users-always-choose-btrfs-not-ext4/', ptPath: '/2026/10/12/usuarios-linux-sempre-escolham-btrfs-nao-ext4/', date: '2026-10-12', hue: 'cerulean' },
+  jevBenchmark: { path: '/en/2026/10/10/which-jev-like-ai-decision-classifier-model-is-best/', ptPath: '/2026/10/10/qual-modelo-de-decisao-classificador-de-ia-tipo-jev-e-melhor/', date: '2026-10-10', hue: 'mauve' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;
@@ -87,7 +100,7 @@ export const related = {
   tclock: ['dayToDay', 'bend2', 'tuiPost', 'skills'],
   workflow: ['skills', 'shipMore', 'hotTake', 'openSourceAi', 'marathon'],
   games: ['launcherSdk', 'racingLaunchers', 'cmr1Launcher', 'racingGames', 'emuDistrobox'],
-  omarchy: ['omarchyDualGpu', 'omarchyThinkpad', 'nwOmarchy'],
+  omarchy: ['vibecodedSecurity', 'btrfsNotExt4', 'omarchyDualGpu', 'omarchyThinkpad', 'nwOmarchy'],
   orchestration: ['hotTake', 'typesafe', 'toolkitTips'],
   memory: ['aiMemory2', 'memorySwitch', 'memoryPost'],
   jail: ['jailUpdate', 'protect'],
@@ -101,6 +114,6 @@ export const benchmark = {
   sprints: 7,
   costUsd: 4000,
   days: 9,
-  // The most recent round added to the v4 table, and when.
-  latestRound: { models: 5, date: '2026-09-23' },
+  // The most recent benchmark follow-up (v5 cost benchmark).
+  latestRound: { models: 16, date: '2026-11-20' },
 };

@@ -26,7 +26,7 @@
         "A IA pode multiplicar erros quando os fundamentos são fracos. Com fundamentos fortes, ela consegue multiplicar trabalho útil.",
         "Quem entende sistemas operacionais, bancos de dados, redes, estruturas de dados e compiladores usa agentes como exoesqueleto. Quem não entende usa como muleta. Exoesqueleto amplifica a força; muleta só esconde a fraqueza.",
         "O relatório DORA 2025 do Google viu a mesma coisa em times: \"a IA não conserta um time; ela amplifica o que já está lá.\"",
-        "E alguém tem que conferir o resultado. No teste da Veracode de 2025 com mais de 100 modelos, 45% das amostras de código falharam nos testes de segurança e introduziram vulnerabilidades do OWASP Top 10.",
+        "E alguém precisa revisar a saída. No teste de 2025 da Veracode com mais de 100 modelos, 45% das amostras de código falharam nos testes de segurança e introduziram vulnerabilidades do OWASP Top 10. Blindar um app local vibecoded ainda exige engenharia de verdade: SQLCipher, chaves TPM2 e sandbox com Bubblewrap.",
         "Se você é experiente e ainda está resistindo, pare. Não tem mérito nenhum em escrever um Dockerfile ou um Makefile na mão pela centésima vez. As tarefas chatas vão pra IA; os fundamentos não."
       ],
       "quote": "Programador bem preparado não vai ser substituído. Disse claramente: \"EU\" nunca vou ser.",

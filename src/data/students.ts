@@ -27,7 +27,7 @@ export const students = {
     '0TndL-Nh6Ok': 'https://akitaonrails.com/2022/07/01/akitando-121-entendendo-transferencia-de-sinais-digitais-introducao-a-redes-parte-1/',
   } as Record<string, string>,
   sections: [
-    { id: 'multiplier', figure: 'students-multiplier', x: 'https://x.com/AkitaOnRails/status/2104602262219771929', posts: ['zeroToPost', 'punchCard', 'shipMore'], sources: [
+    { id: 'multiplier', figure: 'students-multiplier', x: 'https://x.com/AkitaOnRails/status/2104602262219771929', posts: ['vibecodedSecurity', 'zeroToPost', 'punchCard', 'shipMore'], sources: [
       { id: 'dora', href: 'https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report' },
       { id: 'veracode', href: 'https://www.veracode.com/blog/genai-code-security-report/' },
     ] },
@@ -49,7 +49,7 @@ export const students = {
       { id: 'metr', href: 'https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/' },
       { id: 'mit', href: 'https://arxiv.org/abs/2506.08872' },
     ] },
-    { id: 'market', posts: ['aiKilled'], stats: [
+    { id: 'market', posts: ['noMoreHtmlCss', 'aiKilled'], stats: [
       { key: 'newGrads', n: 65, format: percent },
       { key: 'entry', n: 4.5, format: percent },
       { key: 'young', n: 19, format: percent },

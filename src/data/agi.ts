@@ -49,7 +49,7 @@ export const agi = {
       { id: 'sutherland', href: 'https://math.mit.edu/~drew/grh/' },
       { id: 'clay', href: 'https://www.claymath.org/millennium-problems/' },
     ] },
-    { id: 'plateau', figure: 'agi-plateau', posts: ['competentEnough', 'benchmarkLatest'], sources: [
+    { id: 'plateau', figure: 'agi-plateau', posts: ['competentEnough', 'benchmarkLatest', 'benchmarkHomeHw', 'inkling2Mini'], sources: [
       { id: 'reuters', href: 'https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11/' },
       { id: 'sutskever', href: 'https://www.youtube.com/watch?v=WQQdd6qGxNs' },
       { id: 'aiIndex', href: 'https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance' },
@@ -60,7 +60,7 @@ export const agi = {
       { id: 'alphazero', href: 'https://arxiv.org/abs/1712.01815' },
       { id: 'r1', href: 'https://arxiv.org/abs/2501.12948' },
     ] },
-    { id: 'marketing', figure: 'agi-money-loop', posts: ['misleadingAds', 'fableSoap', 'businessModels'], sources: [
+    { id: 'marketing', figure: 'agi-money-loop', posts: ['jensenHuang', 'misleadingAds', 'fableSoap', 'businessModels'], sources: [
       { id: 'huang', href: 'https://www.foxbusiness.com/technology/nvidia-ceo-jensen-huang-declares-agi-has-arrived-after-openai-unveils-gpt-6-astra' },
       { id: 'marcus', href: 'https://garymarcus.substack.com/p/sad-to-see-jensen-huang-claim-that' },
       { id: 'openaiRound', href: 'https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html' },
@@ -97,6 +97,6 @@ export const agi = {
       { id: 'lighthill', href: 'http://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm' },
     ] },
     { id: 'tool', figure: 'agi-tool', posts: ['shipMore', 'llmsFail', 'marathon'], sources: [], x: 'https://x.com/AkitaOnRails/status/2103930940179226812' },
-    { id: 'efficiency', figure: 'agi-efficiency', posts: ['fableSoap', 'benchmarkPart2', 'benchmarkLatest'], sources: [] },
+    { id: 'efficiency', figure: 'agi-efficiency', posts: ['benchmarkLatest', 'benchmarkHomeHw', 'inkling2Mini', 'fableSoap'], sources: [] },
   ] satisfies AgiSection[],
 };

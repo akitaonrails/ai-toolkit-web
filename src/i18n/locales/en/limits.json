@@ -130,7 +130,8 @@
         "The frontier got 1.2 to 3 times cheaper in three and a half years, depending on input or output tokens.",
         "A fixed level of quality gets roughly 5 to 10 times cheaper every year, by Epoch AI's estimate, and they expect that to slow down.",
         "Do the math on Bun: $165,000 divided by 100 is $1,650, for a port with the source, the tests and the author in hand. Cheap and trivial are different things.",
-        "The models themselves converged, and the recent gains came from the agent tools around them. I explain that on the AGI page."
+        "The models themselves converged, and the recent gains came from the agent tools around them. I explain that on the AGI page.",
+        "In my Benchmark v5, 16 Tier-A models all passed while costs spanned 95x ($0.15 to $14.19) mostly due to prompt caching. Renting datacenter GPUs to self-host large open models still ran $218 to $864 a day against about $1 a run on cloud APIs."
       ],
       "sources": {
         "claude": "Anthropic: API pricing",
