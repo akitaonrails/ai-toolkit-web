@@ -212,7 +212,7 @@
       "coverage": "line coverage of the SDK's own code, {tests} tests",
       "hours": "hours for each launcher made from the SDK, against 8 to 18 before it"
     },
-    "statsNote": "Counted in my post of {date}.",
+    "statsNote": "Counted across the repositories on {date}.",
     "howTitle": "Make a launcher for your own game",
     "how": "Clone the SDK, add REA to your agent, and point it at your installed game. The agent researches the community fixes, does the reverse engineering and writes the code. It stops at four checkpoints for your decisions and publishes nothing without your approval. It works with Claude Code, Codex, opencode or Cursor.",
     "codeTitle": "the tools",

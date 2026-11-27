@@ -46,16 +46,17 @@ export const launchers: Launcher[] = [
   { id: 'dirtrally', repo: 'launcherDirtRally', year: 2015, sdk: true, linuxOnly: true },
 ];
 
-/** rea-launcher-sdk numbers from the SDK post (2026-11-02): tests summed over the SDK and the ten projects in its
-    table (310 + 171 + 97 + 106 + 74 + 94 + 126 + 89 + 71 + 85), the SDK's own tests and line coverage, the rules in
-    `launcher-check`, and the hours each SDK-built launcher took (about 4) against the older ones (8 to 18). */
+/** rea-launcher-sdk numbers counted across the SDK (v0.12.7) and all 14 launchers on 2026-11-27: 42 games total
+    (Rad Mobile 1, Screamer trilogy 3, CMR1 1, Sega Arcade 7, Initial D 11, Nintendo Arcade 4, CMR3/4/2005 3,
+    OutRun 2006 1, DiRT 1, Sega Rally Revo 1, Wangan Midnight 8, DiRT Rally 1), 2,655 #[test] functions across
+    the SDK (778) and all 14 launchers, SDK line coverage, and ~4 hours per SDK-built launcher against 8 to 18 before. */
 export const launcherSdk = {
-  launchers: 9,
-  games: 11,
-  tests: 1223,
-  sdkTests: 310,
+  launchers: 14,
+  games: 42,
+  tests: 2655,
+  sdkTests: 778,
   sdkCoverage: 0.95,
   rules: 33,
   hours: 4,
-  readOn: '2026-11-02',
+  readOn: '2026-11-27',
 };

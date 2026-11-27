@@ -212,7 +212,7 @@
       "coverage": "de cobertura de linhas no código do próprio SDK, {tests} testes",
       "hours": "horas pra cada launcher feito a partir do SDK, contra 8 a 18 antes dele"
     },
-    "statsNote": "Contados no meu post de {date}.",
+    "statsNote": "Contado nos repositórios em {date}.",
     "howTitle": "Faça o launcher do seu jogo",
     "how": "Clone o SDK, instale o REA no seu agente e aponte pra pasta do jogo instalado. O agente pesquisa os fixes da comunidade, faz a engenharia reversa e escreve o código. Ele para em quatro pontos de checagem pra você decidir e não publica nada sem a sua aprovação. Funciona com Claude Code, Codex, opencode ou Cursor.",
     "codeTitle": "as ferramentas",
