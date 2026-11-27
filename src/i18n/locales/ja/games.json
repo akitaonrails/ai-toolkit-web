@@ -73,6 +73,17 @@
         "recomp": "Rustによるリコンプ",
         "story": "最初のランチャーの詳細"
       },
+      "sega": {
+        "name": "セガ・レーシングアーケードシリーズ",
+        "alt": "16:9ワイド画面のSEGA Racing Classic。ソニックの崖を駆け抜ける赤と青のホーネット。",
+        "was": "F355 Challenge 2やOutRun 2 SP SDXからSEGA Rally 3、SEGA Racing Classic、Daytona Championship USAまで7本のセガ製アーケードレース。筐体ごとに別々のローダーとWine調整が必要で、SEGA Racing Classicは素のWineで音声が落ち、OutRun 2 SP SDXは筐体チェックで止まりました。",
+        "adds": [
+          "オープンローダーのみ：lindbergh-loader、windowsarcadeloader、Flycast、xemu Chihiro",
+          "SEGA Racing Classic向けにネイティブXAudio2を同梱し、Daytona Championship USA専用プロファイルを用意",
+          "270°ハンドル切れ角、フォースフィードバック、パドルからHシフトへの割り当て",
+          "読み取り専用ダンプと最大4KのFSRスケーリングを1つのハブで管理"
+        ]
+      },
       "initiald": {
         "name": "Initial Dアーケードシリーズ",
         "alt": "Initial D THE ARCADE Season 5。夜の暗い峠道を駆け上がるトレノ。",
@@ -82,6 +93,17 @@
           "シリーズ全体をひとつのハブで、LinuxとWindowsに対応",
           "全作でハンコンとパッドに対応",
           "最大4K、LinuxではFSR 1とNVIDIA Image Scalingも"
+        ]
+      },
+      "nintendo": {
+        "name": "任天堂アーケードシリーズ",
+        "alt": "16:9のMario Kart Arcade GP DX。晴れたコースでトゲゾーこうらを構えるマリオ。",
+        "was": "F-Zero AX Monster Ride、Mario Kart Arcade GP 2、Mario Kart Arcade GP DX、Luigi's Mansion Arcadeの4筐体。TeknoParrotはTriforceに非公開のDolphinビルドを使い、Monster Rideは可動シート待ちで止まり、マリオカート2作はカメラエラーで止まります。",
+        "adds": [
+          "Triforce用の本家Dolphinと、GE-Proton同梱のwindowsarcadeloader",
+          "Monster RideのCyCraftシート待機とマリオカートのカメラエラーを自動で回避",
+          "ハンドル、パッドに加えLuigi's Mansion Arcadeのマウス・ライトガン照準に対応",
+          "Linuxでは最大4K描画とFSR 1、NVIDIA Image Scalingに対応"
         ]
       },
       "cmr3": {

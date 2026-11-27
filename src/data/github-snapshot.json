@@ -1,17 +1,17 @@
 {
-  "fetchedAt": "2026-11-14T20:36:51.671Z",
+  "fetchedAt": "2026-11-27T20:26:25.626Z",
   "repos": {
     "usagebar": {
-      "stars": 781,
+      "stars": 810,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v1.52.1",
-        "date": "2026-11-14T17:39:12Z"
+        "tag": "v1.55.2",
+        "date": "2026-11-27T16:59:57Z"
       }
     },
     "ghpending": {
-      "stars": 56,
+      "stars": 58,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -20,7 +20,7 @@
       }
     },
     "tclock": {
-      "stars": 86,
+      "stars": 88,
       "language": "Rust",
       "license": "MIT",
       "release": {
@@ -29,61 +29,61 @@
       }
     },
     "skills": {
-      "stars": 304,
+      "stars": 323,
       "language": "Python",
       "license": null,
       "release": null
     },
     "memory": {
-      "stars": 15869,
+      "stars": 16516,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v3.4.6",
-        "date": "2026-11-13T05:07:50Z"
+        "tag": "v3.6.4",
+        "date": "2026-11-27T17:26:35Z"
       }
     },
     "jail": {
-      "stars": 1508,
+      "stars": 1535,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
-        "tag": "v3.4.1",
-        "date": "2026-11-14T17:30:54Z"
+        "tag": "v3.7.1",
+        "date": "2026-11-26T15:53:18Z"
       }
     },
     "benchmark": {
-      "stars": 374,
+      "stars": 380,
       "language": "Python",
       "license": null,
       "release": null
     },
     "distrobox": {
-      "stars": 478,
+      "stars": 488,
       "language": "Shell",
       "license": null,
       "release": null
     },
     "gamesMenu": {
-      "stars": 37,
+      "stars": 40,
       "language": "Rust",
       "license": "MIT",
       "release": {
-        "tag": "v0.2.0",
-        "date": "2026-10-25T15:28:31Z"
+        "tag": "v0.2.1",
+        "date": "2026-11-19T20:58:29Z"
       }
     },
     "frankmd": {
-      "stars": 588,
+      "stars": 595,
       "language": "JavaScript",
       "license": null,
       "release": {
-        "tag": "v1.15.1",
-        "date": "2026-11-14T16:52:02Z"
+        "tag": "v1.16.0",
+        "date": "2026-11-23T16:51:03Z"
       }
     },
     "sherlock": {
-      "stars": 310,
+      "stars": 315,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
@@ -92,16 +92,16 @@
       }
     },
     "yomik": {
-      "stars": 215,
+      "stars": 217,
       "language": "Python",
       "license": "AGPL-3.0",
       "release": {
-        "tag": "v2.0.5",
-        "date": "2026-11-07T19:26:34Z"
+        "tag": "v2.1.0",
+        "date": "2026-11-27T16:39:29Z"
       }
     },
     "mega": {
-      "stars": 87,
+      "stars": 89,
       "language": "Ruby",
       "license": "AGPL-3.0",
       "release": {
@@ -164,7 +164,7 @@
       }
     },
     "lyrics": {
-      "stars": 13,
+      "stars": 14,
       "language": "JavaScript",
       "license": null,
       "release": {
@@ -182,39 +182,57 @@
       }
     },
     "launcherSdk": {
-      "stars": 53,
+      "stars": 57,
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
-        "tag": "v0.9.0",
-        "date": "2026-11-13T17:41:04Z"
+        "tag": "v0.12.7",
+        "date": "2026-11-22T19:30:36Z"
       }
     },
     "launcherRadMobile": {
-      "stars": 2,
+      "stars": 3,
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
-        "tag": "v0.6.0",
-        "date": "2026-11-13T00:22:47Z"
+        "tag": "v0.6.4",
+        "date": "2026-11-22T19:54:22Z"
       }
     },
     "launcherInitialD": {
-      "stars": 0,
+      "stars": 6,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
-        "tag": "v0.1.0",
-        "date": "2026-11-14T18:32:55Z"
+        "tag": "v0.6.7",
+        "date": "2026-11-26T15:08:58Z"
+      }
+    },
+    "launcherSega": {
+      "stars": 3,
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "release": {
+        "tag": "v0.7.5",
+        "date": "2026-11-23T17:25:13Z"
+      }
+    },
+    "launcherNintendo": {
+      "stars": 2,
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "release": {
+        "tag": "v0.5.5",
+        "date": "2026-11-23T17:50:45Z"
       }
     },
     "launcherWangan": {
-      "stars": 1,
+      "stars": 3,
       "language": "Rust",
       "license": "GPL-3.0",
       "release": {
-        "tag": "v0.1.0",
-        "date": "2026-11-13T21:10:43Z"
+        "tag": "v0.7.6",
+        "date": "2026-11-23T17:17:46Z"
       }
     },
     "launcherScreamer": {
@@ -222,80 +240,80 @@
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
-        "tag": "v0.9.0",
-        "date": "2026-11-10T01:19:33Z"
+        "tag": "v0.9.2",
+        "date": "2026-11-21T05:22:15Z"
       }
     },
     "launcherCmr1": {
-      "stars": 24,
+      "stars": 31,
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
-        "tag": "v0.10.5",
-        "date": "2026-11-10T02:48:15Z"
+        "tag": "v0.10.7",
+        "date": "2026-11-27T16:34:45Z"
       }
     },
     "cmr1Recomp": {
-      "stars": 7,
+      "stars": 8,
       "language": "Rust",
       "license": null,
       "release": {
-        "tag": "v0.1.1",
-        "date": "2026-11-07T22:45:17Z"
+        "tag": "v0.1.8",
+        "date": "2026-11-23T17:24:07Z"
       }
     },
     "launcherCmr3": {
-      "stars": 11,
+      "stars": 14,
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
-        "tag": "v0.5.0",
-        "date": "2026-11-13T18:01:14Z"
+        "tag": "v0.5.1",
+        "date": "2026-11-21T04:12:21Z"
       }
     },
     "launcherCmr4": {
-      "stars": 11,
-      "language": "Rust",
-      "license": "Apache-2.0",
-      "release": {
-        "tag": "v0.6.0",
-        "date": "2026-11-13T18:00:17Z"
-      }
-    },
-    "launcherCmr2005": {
-      "stars": 8,
-      "language": "Rust",
-      "license": "Apache-2.0",
-      "release": {
-        "tag": "v0.5.0",
-        "date": "2026-11-13T17:57:09Z"
-      }
-    },
-    "launcherOutrun": {
-      "stars": 17,
-      "language": "Rust",
-      "license": "Apache-2.0",
-      "release": {
-        "tag": "v0.3.7",
-        "date": "2026-11-10T06:18:40Z"
-      }
-    },
-    "launcherDirt": {
-      "stars": 7,
-      "language": "Rust",
-      "license": "Apache-2.0",
-      "release": {
-        "tag": "v0.3.5",
-        "date": "2026-11-09T20:56:16Z"
-      }
-    },
-    "launcherSegaRally": {
-      "stars": 13,
+      "stars": 15,
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
         "tag": "v0.6.1",
-        "date": "2026-11-10T04:51:35Z"
+        "date": "2026-11-21T04:11:36Z"
+      }
+    },
+    "launcherCmr2005": {
+      "stars": 11,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "release": {
+        "tag": "v0.6.2",
+        "date": "2026-11-21T04:11:13Z"
+      }
+    },
+    "launcherOutrun": {
+      "stars": 25,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "release": {
+        "tag": "v0.5.1",
+        "date": "2026-11-26T22:04:45Z"
+      }
+    },
+    "launcherDirt": {
+      "stars": 8,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "release": {
+        "tag": "v0.3.6",
+        "date": "2026-11-21T04:10:27Z"
+      }
+    },
+    "launcherSegaRally": {
+      "stars": 18,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "release": {
+        "tag": "v0.6.3",
+        "date": "2026-11-26T17:33:15Z"
       }
     },
     "launcherDirtRally": {
@@ -303,8 +321,8 @@
       "language": "Rust",
       "license": "Apache-2.0",
       "release": {
-        "tag": "v0.2.0",
-        "date": "2026-11-03T05:12:02Z"
+        "tag": "v0.2.1",
+        "date": "2026-11-21T04:16:50Z"
       }
     }
   }

@@ -73,6 +73,17 @@
         "recomp": "ה-recomp ב-Rust",
         "story": "המשגר הראשון, בפירוט"
       },
+      "sega": {
+        "name": "סדרת Sega Racing Arcade",
+        "alt": "SEGA Racing Classic ב-16:9 רחב: מכונית ה-Hornet האדומה-כחולה חולפת ליד צוק Sonic.",
+        "was": "שבעה משחקי מרוץ ארקייד של Sega, מ-F355 Challenge 2 ו-OutRun 2 SP SDX ועד SEGA Rally 3, SEGA Racing Classic ו-Daytona Championship USA. כל מכונה דרשה טוען והתאמות Wine משלה, הסאונד של SEGA Racing Classic קרס תחת Wine רגיל, ו-OutRun 2 SP SDX נעצר בבדיקת המכונה.",
+        "adds": [
+          "טוענים פתוחים בלבד: lindbergh-loader, windowsarcadeloader, Flycast ו-xemu Chihiro",
+          "XAudio2 מקורי משולב עבור SEGA Racing Classic ופרופיל ייעודי ל-Daytona Championship USA",
+          "נעילת הגה של 270°, force feedback ומיפוי משוטים להילוכים בתבנית H",
+          "מרכז אחד עם קבצי משחק לקריאה בלבד ושינוי קנה מידה ב-FSR עד 4K"
+        ]
+      },
       "initiald": {
         "name": "סדרת Initial D Arcade",
         "alt": "Initial D THE ARCADE Season 5: טרואנו עולה בכביש הררי חשוך בלילה.",
@@ -82,6 +93,17 @@
           "מרכז אחד לכל הסדרה, בלינוקס וב-Windows",
           "תמיכה בהגה ובבקר בכל משחק",
           "עד 4K, עם FSR 1 ו-NVIDIA Image Scaling בלינוקס"
+        ]
+      },
+      "nintendo": {
+        "name": "סדרת Nintendo Arcade",
+        "alt": "Mario Kart Arcade GP DX ב-16:9: מריו מחזיק שריון כחול על מסלול שטוף שמש.",
+        "was": "ארבע מכונות ארקייד של Nintendo: F-Zero AX Monster Ride, Mario Kart Arcade GP 2, Mario Kart Arcade GP DX ו-Luigi's Mansion Arcade. TeknoParrot משתמש בבנייה פרטית של Dolphin עבור Triforce, Monster Ride ממתין לנצח לכיסא התנועה שלו, ושני משחקי Mario Kart נעצרים על שגיאות מצלמה.",
+        "adds": [
+          "Dolphin רשמי עבור Triforce יחד עם windowsarcadeloader ו-GE-Proton משולב",
+          "עקיפה אוטומטית של כיסא ה-CyCraft ב-Monster Ride ושגיאות המצלמה ב-Mario Kart",
+          "תמיכה בהגה, שלט ועכבר או אקדח אור עבור Luigi's Mansion Arcade",
+          "רינדור עד 4K עם FSR 1 ו-NVIDIA Image Scaling בלינוקס"
         ]
       },
       "cmr3": {

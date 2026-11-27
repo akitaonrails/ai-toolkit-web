@@ -73,6 +73,17 @@
         "recomp": "Rust로 만든 리컴프",
         "story": "첫 번째 런처, 자세히"
       },
+      "sega": {
+        "name": "세가 레이싱 아케이드 시리즈",
+        "alt": "16:9 와이드스크린의 SEGA Racing Classic: 소닉 절벽 앞을 달리는 빨간색과 파란색 호넷 차량.",
+        "was": "F355 Challenge 2와 OutRun 2 SP SDX부터 SEGA Rally 3, SEGA Racing Classic, Daytona Championship USA까지 세가 아케이드 레이싱 7종입니다. 캐비닛마다 다른 로더와 Wine 조정이 필요했고, SEGA Racing Classic은 일반 Wine에서 사운드가 깨졌으며 OutRun 2 SP SDX는 캐비닛 검사에서 멈췄습니다.",
+        "adds": [
+          "오픈 로더만 사용: lindbergh-loader, windowsarcadeloader, Flycast, xemu Chihiro",
+          "SEGA Racing Classic용 네이티브 XAudio2 내장 및 Daytona Championship USA 전용 프로필",
+          "270° 휠 조향각, 포스 피드백, 패들을 H 시프터 기어로 매핑",
+          "읽기 전용 덤프와 최대 4K FSR 업스케일링을 하나의 허브에서 관리"
+        ]
+      },
       "initiald": {
         "name": "Initial D 아케이드 시리즈",
         "alt": "Initial D THE ARCADE Season 5: 밤의 어두운 산길을 오르는 트레노.",
@@ -82,6 +93,17 @@
           "시리즈 전체를 하나의 허브로, Linux와 Windows에서",
           "모든 게임에서 휠과 게임패드 지원",
           "최대 4K, Linux에서는 FSR 1과 NVIDIA Image Scaling까지"
+        ]
+      },
+      "nintendo": {
+        "name": "닌텐도 아케이드 시리즈",
+        "alt": "16:9 화면의 Mario Kart Arcade GP DX: 화창한 트랙에서 파란 등껍질을 든 마리오.",
+        "was": "F-Zero AX Monster Ride, Mario Kart Arcade GP 2, Mario Kart Arcade GP DX, Luigi's Mansion Arcade 등 닌텐도 아케이드 4종입니다. TeknoParrot은 Triforce에 비공개 Dolphin 빌드를 쓰며, Monster Ride는 모션 시트를 끝없이 기다리고 두 Mario Kart는 카메라 오류에서 멈춥니다.",
+        "adds": [
+          "Triforce용 공식 Dolphin과 GE-Proton이 내장된 windowsarcadeloader",
+          "Monster Ride의 CyCraft 시트 대기와 Mario Kart 카메라 오류 자동 우회",
+          "휠, 패드는 물론 Luigi's Mansion Arcade용 마우스·라이트건 조준 지원",
+          "리눅스에서 최대 4K 렌더링과 FSR 1, NVIDIA Image Scaling 지원"
         ]
       },
       "cmr3": {

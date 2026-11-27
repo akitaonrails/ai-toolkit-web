@@ -73,6 +73,17 @@
         "recomp": "El recomp en Rust",
         "story": "El primer lanzador, en detalle"
       },
+      "sega": {
+        "name": "Serie Sega Racing Arcade",
+        "alt": "SEGA Racing Classic en 16:9: el Hornet rojo y azul pasando frente al acantilado de Sonic.",
+        "was": "Siete juegos arcade de carreras de Sega, desde F355 Challenge 2 y OutRun 2 SP SDX hasta SEGA Rally 3, SEGA Racing Classic y Daytona Championship USA. Cada cabina requería su propio cargador y ajustes de Wine, el audio de SEGA Racing Classic fallaba en Wine simple y OutRun 2 SP SDX se detenía en la comprobación de cabina.",
+        "adds": [
+          "Solo cargadores abiertos: lindbergh-loader, windowsarcadeloader, Flycast y xemu Chihiro",
+          "XAudio2 nativo integrado para SEGA Racing Classic y perfil propio para Daytona Championship USA",
+          "Giro de volante a 270°, force feedback y levas mapeadas a la caja en H",
+          "Un solo hub con volcados en solo lectura y escalado FSR hasta 4K"
+        ]
+      },
       "initiald": {
         "name": "Serie Initial D Arcade",
         "alt": "Initial D THE ARCADE Season 5: un Trueno subiendo una carretera de montaña oscura, de noche.",
@@ -82,6 +93,17 @@
           "Un hub para toda la serie, en Linux y Windows",
           "Volante y mando en todos los juegos",
           "Hasta 4K, con FSR 1 y NVIDIA Image Scaling en Linux"
+        ]
+      },
+      "nintendo": {
+        "name": "Serie Nintendo Arcade",
+        "alt": "Mario Kart Arcade GP DX en 16:9: Mario sosteniendo un caparazón azul en una pista soleada.",
+        "was": "Cuatro cabinas arcade de Nintendo: F-Zero AX Monster Ride, Mario Kart Arcade GP 2, Mario Kart Arcade GP DX y Luigi's Mansion Arcade. TeknoParrot usa una versión privada de Dolphin para Triforce, Monster Ride espera indefinidamente su asiento móvil y ambos Mario Kart se detienen por errores de cámara.",
+        "adds": [
+          "Dolphin oficial para Triforce y windowsarcadeloader con GE-Proton incluido",
+          "Omisión automática del asiento CyCraft de Monster Ride y los errores de cámara de Mario Kart",
+          "Soporte de volante, mando y ratón o pistola óptica para Luigi's Mansion Arcade",
+          "Renderizado hasta 4K con FSR 1 y NVIDIA Image Scaling en Linux"
         ]
       },
       "cmr3": {

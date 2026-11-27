@@ -73,6 +73,17 @@
         "recomp": "The recomp in Rust",
         "story": "The first launcher, in detail"
       },
+      "sega": {
+        "name": "Sega Racing Arcade series",
+        "alt": "SEGA Racing Classic in 16:9 widescreen: the red-and-blue Hornet car speeding past the Sonic cliff.",
+        "was": "Seven Sega arcade racers, from F355 Challenge 2 and OutRun 2 SP SDX to SEGA Rally 3, SEGA Racing Classic and Daytona Championship USA. Each cabinet needed its own loader and Wine tweaks, SEGA Racing Classic's sound crashed under plain Wine, and OutRun 2 SP SDX stopped at its cabinet check.",
+        "adds": [
+          "Open loaders only: lindbergh-loader, windowsarcadeloader, Flycast and xemu Chihiro",
+          "Native XAudio2 bundled for SEGA Racing Classic and a custom profile for Daytona Championship USA",
+          "270° wheel steering lock, force feedback and paddle-to-H-shifter mapping",
+          "One hub with read-only dumps and FSR scaling up to 4K"
+        ]
+      },
       "initiald": {
         "name": "Initial D Arcade series",
         "alt": "Initial D THE ARCADE Season 5: a Trueno racing up a dark mountain road at night.",
@@ -82,6 +93,17 @@
           "One hub for the whole series, on Linux and Windows",
           "Wheel and pad support for every game",
           "Up to 4K, with FSR 1 and NVIDIA Image Scaling on Linux"
+        ]
+      },
+      "nintendo": {
+        "name": "Nintendo Arcade series",
+        "alt": "Mario Kart Arcade GP DX in 16:9: Mario holding a blue shell on a sunny track.",
+        "was": "Four Nintendo arcade cabinets: F-Zero AX Monster Ride, Mario Kart Arcade GP 2, Mario Kart Arcade GP DX and Luigi's Mansion Arcade. TeknoParrot uses a private Dolphin build for Triforce, Monster Ride waits forever for its motion seat, and both Mario Karts stall on missing camera checks.",
+        "adds": [
+          "Mainline Dolphin for Triforce plus windowsarcadeloader with bundled GE-Proton",
+          "Automatic bypasses for Monster Ride's CyCraft seat and Mario Kart's camera errors",
+          "Wheel, pad and mouse or lightgun support for Luigi's Mansion Arcade",
+          "Up to 4K rendering with FSR 1 and NVIDIA Image Scaling on Linux"
         ]
       },
       "cmr3": {

@@ -23,6 +23,8 @@
   "launcherSdk": "akitaonrails/rea-launcher-sdk",
   "launcherRadMobile": "akitaonrails/rea-rad-mobile",
   "launcherInitialD": "akitaonrails/rea-teknoparrot-initial-d-series",
+  "launcherSega": "akitaonrails/rea-teknoparrot-sega-series",
+  "launcherNintendo": "akitaonrails/rea-teknoparrot-nintendo-series",
   "launcherWangan": "akitaonrails/rea-teknoparrot-wangan-series",
   "launcherScreamer": "akitaonrails/rea-screamer-trilogy",
   "launcherCmr1": "akitaonrails/rea-colin-mcrae",
