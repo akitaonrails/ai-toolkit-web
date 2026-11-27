@@ -82,8 +82,30 @@
       },
       "more": "Los límites de los LLMs"
     },
+    "proofs": {
+      "kicker": "4. Las pruebas matemáticas",
+      "title": "Probar un teorema antiguo es otro juego",
+      "lede": "Un modelo que cierra un problema famoso de matemáticas da un titular ruidoso. Mira cómo se hizo y qué cambia de verdad.",
+      "alt": "Un camino horizontal sobre fondo azul marino: a la izquierda un faro de cobre llamado Nueva hipótesis ilumina el espacio oscuro; un largo puente de piedra turquesa llamado Décadas de matemáticas cruza casi toda la escena hasta una brecha corta a la derecha llamada Tramo final, donde una multitud de robots rojos llamada Fuerza bruta encaja bloques de latón bajo un medidor verde llamado Verificador formal.",
+      "stats": {
+        "agents": "agentes en paralelo durante 88 horas en la prueba de Navier-Stokes de OpenAI, unos 15 millones de dólares a precio de lista",
+        "lines": "líneas de código en Lean 4 en 175.187 archivos en la prueba de Riemann de noviembre de 2026"
+      },
+      "points": [
+        "La prueba forzada de Navier-Stokes de OpenAI usó unos 10.000 agentes durante 88 horas, alrededor de 15 millones de dólares en cómputo. Levent Alpöge, de Anthropic, y Claude produjeron una prueba de Riemann en Lean 4 de 17,4 millones de líneas llena de andamiaje muerto que los matemáticos aún deben desenredar.",
+        "Ambos resultados son logros computacionales reales, conseguidos mediante fuerza bruta industrial sobre un verificador formal. Lean y los verificadores automáticos avisan de inmediato cuando un paso es válido, así que lanzar millones de dólares de cómputo al espacio de búsqueda termina cerrando un hueco.",
+        "El efecto práctico en la ingeniería diaria es casi nulo. El software aeroespacial y meteorológico ya simula fluidos con aproximaciones de CFD, y la teoría de números ya diseñó algoritmos asumiendo que la Hipótesis de Riemann se cumple. Probarla cambia cero líneas de RSA o Bitcoin.",
+        "En mi opinión, cerrar el tramo final de un problema trazado durante 167 años pertenece a otra categoría frente a Bernhard Riemann inventando la hipótesis en 1859. Terminar un camino pavimentado con miles de agentes impresiona; originar el marco es otra cosa."
+      ],
+      "sources": {
+        "navier": "New Scientist: 15 millones de dólares en esfuerzo de IA para Navier-Stokes",
+        "leanStatement": "Lean FRO & Mathlib: comunicado conjunto sobre la prueba de Riemann",
+        "sutherland": "Andrew Sutherland (MIT): registro de verificación independiente",
+        "clay": "Clay Mathematics Institute: Problemas del Milenio"
+      }
+    },
     "plateau": {
-      "kicker": "4. La meseta",
+      "kicker": "5. La meseta",
       "title": "Los modelos dejaron de volverse mucho más inteligentes",
       "lede": "En mi lectura, el último gran salto de inteligencia bruta fue el razonamiento, en 2024. Lo que desde entonces pareció un salto vino de las herramientas alrededor del modelo.",
       "alt": "Una curva roja etiquetada Modelo base sube empinada hasta un punto etiquetado Razonamiento 2024 y luego sigue plana justo debajo de una línea discontinua etiquetada Techo. Debajo, una línea violeta etiquetada Harness sube en escalones, y una línea verde azulado etiquetada Modelos locales sube hacia el techo.",
@@ -105,7 +127,7 @@
       }
     },
     "static": {
-      "kicker": "5. Aprender",
+      "kicker": "6. Aprender",
       "title": "No aprende trabajando",
       "lede": "Un modelo es un archivo, cerrado después del entrenamiento. El datacenter corre copias de él.",
       "alt": "Un archivo rojo con candado etiquetado Archivo del modelo envía flechas de un solo sentido, etiquetadas Copias, a nueve cajas de servidor separadas; una contiene una terminal etiquetada Tu sesión. Ninguna flecha vuelve. Arriba, un camino sale del archivo, pasa por un engranaje etiquetado Próximo entrenamiento y termina en un segundo archivo con candado etiquetado Archivo nuevo.",
@@ -123,7 +145,7 @@
       }
     },
     "marketing": {
-      "kicker": "6. El dinero",
+      "kicker": "7. El dinero",
       "title": "Es una palabra de marketing",
       "lede": "En mi opinión, AGI es un término de marketing, vago a propósito, para poder anunciarlo cuando el dinero lo necesite.",
       "alt": "Un ciclo de cinco cajas alrededor de la palabra AGI: Hype, Valoración, IPO, Datacenters y GPUs, cada flecha alimenta a la siguiente y la última vuelve a Hype.",
@@ -144,7 +166,7 @@
       }
     },
     "attacks": {
-      "kicker": "7. Las historias de miedo",
+      "kicker": "8. Las historias de miedo",
       "title": "Los \"ataques de IA\" fueron decisiones humanas",
       "lede": "Los casos siguientes comparten un fallo operativo: personas concedieron acceso o dirigieron la herramienta sin controles adecuados.",
       "alt": "Una herramienta violeta dentro de un sandbox naranja con la puerta colgando, etiquetada Abierta; una terminal etiquetada Decisión humana está conectada a la puerta, una llave etiquetada Credenciales queda afuera y una línea va desde la herramienta, por la puerta abierta, hasta unos servidores etiquetados Servidores reales.",
@@ -175,7 +197,7 @@
       }
     },
     "doom": {
-      "kicker": "8. El apocalipsis",
+      "kicker": "9. El apocalipsis",
       "title": "Cómo evaluar pronósticos catastróficos",
       "lede": "Periódicamente, algunas personas dejan laboratorios de IA y advierten al mundo. Busqué pruebas que alguien de fuera pueda inspeccionar, reproducir o comprobar.",
       "points": [
@@ -201,7 +223,7 @@
       }
     },
     "history": {
-      "kicker": "9. La historia",
+      "kicker": "10. La historia",
       "title": "Ya vimos esta película",
       "lede": "Esta es la segunda burbuja de la IA. La primera hizo las mismas promesas y terminó en un invierno.",
       "alt": "Una línea de tiempo con un primer pico etiquetado 1958 Perceptrón, un largo valle etiquetado Invierno IA, una subida marcada 2017 y un pico más alto etiquetado 2026 que termina en un signo de interrogación.",
@@ -217,7 +239,7 @@
       }
     },
     "tool": {
-      "kicker": "10. Lo que importa",
+      "kicker": "11. Lo que importa",
       "title": "Una herramienta fantástica que hace lo que le digo",
       "lede": "No necesito que sea general. Necesito que haga lo que le pido, rápido, y eso ya lo hace.",
       "alt": "Una terminal etiquetada Yo decido envía trabajo a una máquina etiquetada Herramienta, que produce una pila de documentos etiquetada Resultado; una flecha etiquetada Revisión vuelve a la terminal.",
@@ -231,7 +253,7 @@
       "quoteCite": "Yo en X, 26 de septiembre de 2026"
     },
     "efficiency": {
-      "kicker": "11. Lo que falta",
+      "kicker": "12. Lo que falta",
       "title": "Lo que falta es eficiencia",
       "lede": "Hoy hacen falta prácticamente todos los datacenters del mundo, con medio billón de dólares de pedidos todavía por construir, y es un cuello de botella para todos los fabricantes de hardware para servidores.",
       "alt": "Filas de racks de datacenter etiquetadas Hoy a la izquierda, un solo chip pequeño etiquetado Necesario a la derecha y una flecha verde entre ellos etiquetada Menos cómputo y Menor precio.",
@@ -248,6 +270,7 @@
       "La AGI no tiene una definición acordada. La que se escribió en un contrato era una meta de ganancias, y la eliminaron.",
       "Sin definición no hay prueba. Los benchmarks se saturan y el siguiente los reemplaza.",
       "Los modelos reproducen lo público. El trabajo privado o nuevo necesita una comprobación objetiva, a menudo llamada oráculo, además de conocimiento aportado y dinero.",
+      "Probar teoremas antiguos con miles de agentes y verificadores formales es fuerza bruta cara con impacto práctico casi nulo. Cerrar el tramo final pertenece a una categoría distinta de inventar la hipótesis.",
       "Los modelos en bruto convergieron. Las mejoras recientes vinieron de las herramientas alrededor, y los modelos más pequeños siguen alcanzándolos.",
       "Los pesos del modelo no cambian durante tu sesión. El producto puede retener datos o devolver memoria guardada después, según su configuración.",
       "La palabra sirve para vender chips, rondas de inversión e IPOs. Por eso la siguen anunciando.",

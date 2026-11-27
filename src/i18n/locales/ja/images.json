@@ -198,5 +198,12 @@
     "Your session": "あなたのセッション",
     "Next training": "次の学習",
     "New file": "新しいファイル"
+  },
+  "agi-proofs": {
+    "New hypothesis": "新しい仮説",
+    "Decades of math": "数十年の数学",
+    "Last leg": "最後の区間",
+    "Brute force": "力技",
+    "Formal verifier": "形式検証器"
   }
 }

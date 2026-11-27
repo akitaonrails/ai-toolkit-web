@@ -198,5 +198,12 @@
     "Your session": "הסשן שלכם",
     "Next training": "האימון הבא",
     "New file": "קובץ חדש"
+  },
+  "agi-proofs": {
+    "New hypothesis": "השערה חדשה",
+    "Decades of math": "עשורים של מתמטיקה",
+    "Last leg": "הישורת האחרונה",
+    "Brute force": "כוח גס",
+    "Formal verifier": "מאמת פורמלי"
   }
 }

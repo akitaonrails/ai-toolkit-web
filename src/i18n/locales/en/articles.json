@@ -236,6 +236,10 @@
     "launcherSdk": {
       "title": "Creating a framework for AI with AI: REA Launcher SDK",
       "summary": "Apps first, framework after: how seven launchers became an SDK, the bugs the migration found, and how to make a launcher for your game."
+    },
+    "riemannProof": {
+      "title": "Understanding the Alleged Proof of the Riemann Hypothesis",
+      "summary": "A 17.4-million-line Lean 4 proof built with Claude cleared independent checkers, left millions of lines of dead scaffolding, and changes almost nothing in everyday engineering."
     }
   },
   "related": {

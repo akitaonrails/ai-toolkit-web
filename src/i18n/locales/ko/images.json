@@ -198,5 +198,12 @@
     "Your session": "내 세션",
     "Next training": "다음 학습",
     "New file": "새 파일"
+  },
+  "agi-proofs": {
+    "New hypothesis": "새 가설",
+    "Decades of math": "수십 년의 수학",
+    "Last leg": "마지막 구간",
+    "Brute force": "무차별 대입",
+    "Formal verifier": "형식 검증기"
   }
 }

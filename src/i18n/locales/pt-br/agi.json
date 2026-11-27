@@ -82,8 +82,30 @@
       },
       "more": "Os limites das LLMs"
     },
+    "proofs": {
+      "kicker": "4. As provas matemáticas",
+      "title": "Provar um teorema antigo é outro jogo",
+      "lede": "Um modelo fechando um problema famoso de matemática dá uma manchete barulhenta. Olhe como isso foi feito e o que realmente muda.",
+      "alt": "Uma estrada horizontal sobre fundo azul-marinho: à esquerda um farol cor de cobre chamado Nova hipótese ilumina o espaço escuro; uma longa ponte de pedra verde-azulada chamada Décadas de matemática cruza quase toda a cena até uma pequena lacuna à direita chamada Reta final, onde uma multidão de robôs vermelhos chamada Força bruta encaixa blocos de latão sob um medidor verde chamado Verificador formal.",
+      "stats": {
+        "agents": "agentes em paralelo por 88 horas na prova de Navier-Stokes da OpenAI, cerca de US$ 15 milhões a preço de tabela",
+        "lines": "linhas de código em Lean 4 em 175.187 arquivos na prova de Riemann de novembro de 2026"
+      },
+      "points": [
+        "A prova forçada de Navier-Stokes da OpenAI rodou cerca de 10.000 agentes por 88 horas, por volta de US$ 15 milhões em computação. Levent Alpöge, da Anthropic, e o Claude produziram uma prova de Riemann em Lean 4 com 17,4 milhões de linhas cheia de andaimes mortos que matemáticos ainda precisam desembaraçar.",
+        "Os dois resultados são feitos computacionais reais, obtidos por força bruta industrial sobre um verificador formal. O Lean e verificadores automáticos avisam na hora quando um passo fecha, então jogar milhões de dólares de computação no espaço de busca acaba fechando uma lacuna.",
+        "O efeito prático na engenharia do dia a dia é quase zero. Softwares aeroespaciais e de clima já simulam fluidos com aproximações de CFD, e a teoria dos números já construiu algoritmos assumindo que a Hipótese de Riemann vale. Prová-la muda zero linhas de RSA ou Bitcoin.",
+        "Na minha visão, fechar a reta final de um problema mapeado por 167 anos está em outra categoria em relação a Bernhard Riemann inventar a hipótese em 1859. Terminar uma estrada pavimentada com milhares de agentes impressiona; criar a estrutura do zero é outra coisa."
+      ],
+      "sources": {
+        "navier": "New Scientist: US$ 15 milhões em esforço de IA para Navier-Stokes",
+        "leanStatement": "Lean FRO & Mathlib: comunicado conjunto sobre a prova de Riemann",
+        "sutherland": "Andrew Sutherland (MIT): registro de verificação independente",
+        "clay": "Clay Mathematics Institute: Problemas do Prêmio do Milênio"
+      }
+    },
     "plateau": {
-      "kicker": "4. O platô",
+      "kicker": "5. O platô",
       "title": "Os modelos pararam de ficar muito mais inteligentes",
       "lede": "Na minha leitura, o último salto grande de inteligência bruta foi o raciocínio, em 2024. O que pareceu salto desde então veio das ferramentas em volta do modelo.",
       "alt": "Uma curva vermelha com o rótulo Modelo base sobe forte até um ponto com o rótulo Raciocínio 2024 e depois segue reta logo abaixo de uma linha tracejada com o rótulo Teto. Abaixo dela, uma linha violeta com o rótulo Harness sobe em degraus, e uma linha verde-azulada com o rótulo Modelos locais sobe em direção ao teto.",
@@ -105,7 +127,7 @@
       }
     },
     "static": {
-      "kicker": "5. Aprendizado",
+      "kicker": "6. Aprendizado",
       "title": "Ele não aprende trabalhando",
       "lede": "Um modelo é um arquivo, travado depois do treino. O datacenter roda cópias dele.",
       "alt": "Um arquivo vermelho trancado com o rótulo Arquivo do modelo manda setas de mão única, com o rótulo Cópias, pra nove caixas de servidor separadas; uma delas tem um terminal com o rótulo Sua sessão. Nenhuma seta volta. No alto, um caminho sai do arquivo, passa por uma engrenagem com o rótulo Próximo treino e termina num segundo arquivo trancado com o rótulo Arquivo novo.",
@@ -123,7 +145,7 @@
       }
     },
     "marketing": {
-      "kicker": "6. O dinheiro",
+      "kicker": "7. O dinheiro",
       "title": "É uma palavra de marketing",
       "lede": "Na minha opinião, AGI é um termo de marketing, vago de propósito, pra poder ser anunciado sempre que o dinheiro precisar.",
       "alt": "Um ciclo de cinco caixas em volta da palavra AGI: Hype, Valuation, IPO, Datacenters e GPUs, cada seta alimentando a próxima e a última voltando pro Hype.",
@@ -144,7 +166,7 @@
       }
     },
     "attacks": {
-      "kicker": "7. As histórias de terror",
+      "kicker": "8. As histórias de terror",
       "title": "Os \"ataques de IA\" foram decisões humanas",
       "lede": "Os casos abaixo têm a mesma falha operacional: pessoas concederam acesso ou apontaram a ferramenta sem controles adequados.",
       "alt": "Uma ferramenta violeta dentro de uma sandbox laranja com a porta aberta; um terminal com o rótulo Decisão humana está ligado à porta, uma chave com o rótulo Credenciais está do lado de fora, e uma linha sai da ferramenta, passa pela porta aberta e chega a servidores com o rótulo Servidores reais.",
@@ -175,7 +197,7 @@
       }
     },
     "doom": {
-      "kicker": "8. O apocalipse",
+      "kicker": "9. O apocalipse",
       "title": "Como avaliar previsões catastróficas",
       "lede": "De tempos em tempos, alguém sai de um laboratório de IA e alerta o mundo. Eu procurei evidências que alguém de fora consiga inspecionar, reproduzir ou testar.",
       "points": [
@@ -201,7 +223,7 @@
       }
     },
     "history": {
-      "kicker": "9. A história",
+      "kicker": "10. A história",
       "title": "Já vimos esse filme",
       "lede": "Esta é a segunda bolha de IA. A primeira fez as mesmas promessas e acabou num inverno.",
       "alt": "Uma linha do tempo com um primeiro pico chamado 1958 Perceptron, um vale longo chamado Inverno da IA, uma subida marcada 2017 e um pico mais alto chamado 2026 terminando num ponto de interrogação.",
@@ -217,7 +239,7 @@
       }
     },
     "tool": {
-      "kicker": "10. O que importa",
+      "kicker": "11. O que importa",
       "title": "Uma ferramenta fantástica, fazendo o que eu mando",
       "lede": "Não preciso que ela seja geral. Preciso que ela faça o que eu peço, rápido, e ela já faz.",
       "alt": "Um terminal com o rótulo Eu decido manda trabalho pra uma máquina com o rótulo Ferramenta, que produz uma pilha de documentos com o rótulo Resultado; uma seta com o rótulo Review volta pro terminal.",
@@ -231,7 +253,7 @@
       "quoteCite": "Eu no X, 26 de setembro de 2026"
     },
     "efficiency": {
-      "kicker": "11. O que falta",
+      "kicker": "12. O que falta",
       "title": "O que falta é eficiência",
       "lede": "Hoje isso exige praticamente todos os datacenters do mundo, com meio trilhão de dólares em backlog ainda por construir, e vira gargalo pra todo fabricante de hardware de servidor.",
       "alt": "Fileiras de racks de datacenter com o rótulo Hoje à esquerda, um único chip pequeno com o rótulo Necessário à direita, e uma seta verde entre eles com os rótulos Menos computação e Preço menor.",
@@ -248,6 +270,7 @@
       "AGI não tem definição aceita. A que foi escrita num contrato era uma meta de lucro, e caiu.",
       "Sem definição não tem teste. Os benchmarks enchem e são trocados pelo próximo.",
       "Modelos reproduzem o que é público. Trabalho privado ou novo exige uma verificação objetiva, muitas vezes chamada de oráculo, além de conhecimento fornecido e dinheiro.",
+      "Provar teoremas antigos com milhares de agentes e verificadores formais é força bruta cara com impacto prático quase nulo. Fechar a reta final é uma categoria diferente de inventar a hipótese.",
       "Os modelos brutos convergiram. Os ganhos recentes vieram das ferramentas em volta deles, e os modelos menores continuam alcançando.",
       "Os pesos do modelo não mudam durante a sua sessão. O produto ainda pode reter dados ou devolver memórias salvas depois, conforme as configurações.",
       "A palavra serve pra vender chips, rodadas de investimento e IPOs. Por isso ela continua sendo anunciada.",

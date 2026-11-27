@@ -40,6 +40,15 @@ export const agi = {
       { id: 'alphaevolve', href: 'https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/' },
       { id: 'navier', href: 'https://www.newscientist.com/article/2588063-openai-has-solved-the-navier-stokes-millennium-problem-using-15m-of-ai-effort/' },
     ] },
+    { id: 'proofs', figure: 'agi-proofs', posts: ['riemannProof', 'misleadingAds', 'llmLimits'], stats: [
+      { key: 'agents', n: 10000 },
+      { key: 'lines', n: 17.4e6, format: { notation: 'compact', maximumFractionDigits: 1 } },
+    ], sources: [
+      { id: 'navier', href: 'https://www.newscientist.com/article/2588063-openai-has-solved-the-navier-stokes-millennium-problem-using-15m-of-ai-effort/' },
+      { id: 'leanStatement', href: 'https://leanprover-community.github.io/blog/posts/riemann-hypothesis/' },
+      { id: 'sutherland', href: 'https://math.mit.edu/~drew/grh/' },
+      { id: 'clay', href: 'https://www.claymath.org/millennium-problems/' },
+    ] },
     { id: 'plateau', figure: 'agi-plateau', posts: ['competentEnough', 'benchmarkLatest'], sources: [
       { id: 'reuters', href: 'https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11/' },
       { id: 'sutskever', href: 'https://www.youtube.com/watch?v=WQQdd6qGxNs' },

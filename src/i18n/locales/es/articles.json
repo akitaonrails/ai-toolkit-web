@@ -236,6 +236,10 @@
     "launcherSdk": {
       "title": "Creando un framework para IA con IA: REA Launcher SDK",
       "summary": "Primero las apps, después el framework: cómo siete lanzadores se convirtieron en un SDK, los bugs que encontró la migración y cómo hacer el lanzador de tu juego."
+    },
+    "riemannProof": {
+      "title": "Entendiendo la supuesta prueba de la hipótesis de Riemann",
+      "summary": "Una prueba de 17,4 millones de líneas en Lean 4 hecha con Claude superó verificadores independientes, dejó millones de líneas de andamiaje muerto y casi nada cambia en la ingeniería diaria."
     }
   },
   "related": {

@@ -198,5 +198,12 @@
     "Your session": "Sua sessão",
     "Next training": "Próximo treino",
     "New file": "Arquivo novo"
+  },
+  "agi-proofs": {
+    "New hypothesis": "Nova hipótese",
+    "Decades of math": "Décadas de matemática",
+    "Last leg": "Reta final",
+    "Brute force": "Força bruta",
+    "Formal verifier": "Verificador formal"
   }
 }

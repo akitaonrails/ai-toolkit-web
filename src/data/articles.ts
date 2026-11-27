@@ -72,6 +72,7 @@ export const articles = {
   competentEnough: { path: '/en/2026/10/12/llms-agents-competent-enough/', ptPath: '/2026/10/12/llms-agentes-competente-o-suficiente/', date: '2026-10-12', hue: 'pennant' },
   languages: { path: '/en/2026/10/11/are-there-better-languages-for-programming-with-llms/', ptPath: '/2026/10/11/existem-linguagens-melhores-pra-programar-com-llms/', date: '2026-10-11', hue: 'mauve' },
   llmLimits: { path: '/en/2026/09/28/llms-are-good-at-reproducing-what-exists-what-about-new-things/', ptPath: '/2026/09/28/llms-sao-boas-em-reproduzir-o-que-existe-e-coisas-novas/', date: '2026-09-28', hue: 'pennant' },
+  riemannProof: { path: '/en/2026/11/25/understanding-the-alleged-proof-of-the-riemann-hypothesis/', ptPath: '/2026/11/25/entendendo-a-suposta-prova-da-hipotese-de-riemann/', date: '2026-11-25', hue: 'pennant' },
 } satisfies Record<string, Omit<Article, 'id'> & { ptPath: string }>;
 
 export type ArticleId = keyof typeof articles;
